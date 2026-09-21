@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 1139" role="img" aria-labelledby="ch06-storym-title ch06-storym-desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 1163" role="img" aria-labelledby="ch06-storym-title ch06-storym-desc">
   <title id="ch06-storym-title">从为退格键专门写一个方法，到两个通用方法管所有文本修改</title>
-  <desc id="ch06-storym-desc">本章回顾。从为退格键专门写一个方法，到两个通用方法管所有文本修改。起点：学生按界面操作给文本类加方法。退格键一个方法，删除键一个方法，删除所选区域再一个。许多方法只在一处调用，界面开发人员却要学一大堆方法；每加一种界面操作，还得去改文本类。；问题：专用化造成信息泄露，还是错误的抽象。退格键、所选区域这些界面概念出现在文本类里，两个类绑在一起，无法独立开发。backspace 方法想藏住删哪些字符，可界面恰恰需要知道这一点，只能去读它的代码。；转折：通用 API 只需 insert 和 delete。退格键写成删除光标前一个字符，删除键写成删除光标后一个字符。代码略长，但一眼能看出删的是什么；文本类总代码更少，还能直接用于查找替换程序。；做法：专用代码总会有，把它和通用代码分开。界面细节上移到界面层，设备差异下移到驱动程序。撤销机制中，History 类只管操作列表，各种具体操作由懂它的模块实现，将来加新操作不用改它。；细节：方法体里也一样：消除特殊情况。学生用一个状态变量表示有没有所选区域，结果到处都是检查。让所选区域始终存在，没有时就是起止相同的空选区，复制、删除的代码不用特殊处理也能正确。。这一章最想强调的：过度专用化可能是软件最大的复杂性来源；通用的模块更深、代码更少 要适度：功能反映当前需求，接口不局限于当前用途；对当前需求不好用，说明通用过头了</desc>
-  <rect width="420" height="1139" fill="var(--diagram-bg,#e7eae6)"/>
+  <desc id="ch06-storym-desc">本章回顾。从为退格键专门写一个方法，到两个通用方法管所有文本修改。起点：学生按界面操作给文本类加方法。退格键一个方法，删除键一个方法，删除所选区域再一个。许多方法只在一处调用，界面开发人员却要学一大堆方法；每加一种界面操作，还得去改文本类。；问题：专用化造成信息泄露，也是错误的抽象。退格键、所选区域这些界面概念出现在文本类里，两个类绑在一起，无法独立开发。backspace 方法想藏住删哪些字符，可界面恰恰需要知道这一点，只能去读它的代码。；转折：通用 API 只需 insert 和 delete。退格键写成删除光标前一个字符，删除键写成删除光标后一个字符。代码略长，但一眼能看出删的是什么；文本类总代码更少，还能用于查找替换程序。；做法：专用代码总会有，把它和通用代码分开。界面细节上移到界面层，设备差异下移到驱动程序。撤销机制中，History 类只管操作列表，各种具体操作由懂它的模块实现，将来加新操作不用改它。；细节：方法体里也一样：消除特殊情况。学生用一个状态变量表示有没有所选区域，结果到处都是检查。让所选区域始终存在，没有时就是起止相同的空选区，复制、删除的代码不用特殊处理也能正确。。这一章最想强调的：过度专用化可能是软件最大的复杂性来源；通用的模块更深、代码更少 要适度：功能反映当前需求，接口不局限于当前用途；对当前需求不好用，说明通用过头了</desc>
+  <rect width="420" height="1163" fill="var(--diagram-bg,#e7eae6)"/>
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <text x="22.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顾</text>
-    <path d="M40 168 V 800" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2"/>
+    <path d="M40 168 V 824" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2"/>
     <text x="22.0" y="62.0" font-size="21" font-weight="600">从为退格键专门写一个方法，到两个通</text>
     <text x="22.0" y="90.0" font-size="21" font-weight="600">用方法管所有文本修改</text>
     <circle cx="40.0" cy="146.0" r="18" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(31.0,137.0) scale(0.750)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></g>
@@ -16,38 +16,39 @@
     <text x="76.0" y="253.0" font-size="15">去改文本类。</text>
     <circle cx="40.0" cy="315.0" r="18" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" stroke-width="2"/><g transform="translate(31.0,306.0) scale(0.750)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></g>
     <text x="76.0" y="303.0" font-size="12" font-weight="600" fill="var(--diagram-danger,#a03946)">问题</text>
-    <text x="76.0" y="327.0" font-size="18" font-weight="600">专用化造成信息泄露，还是错误的抽象</text>
-    <text x="76.0" y="353.0" font-size="15">退格键、所选区域这些界面概念出现在文本类里，</text>
-    <text x="76.0" y="376.0" font-size="15">两个类绑在一起，无法独立开发。backspace 方</text>
-    <text x="76.0" y="399.0" font-size="15">法想藏住删哪些字符，可界面恰恰需要知道这一</text>
-    <text x="76.0" y="422.0" font-size="15">点，只能去读它的代码。</text>
+    <text x="76.0" y="327.0" font-size="18" font-weight="600">专用化造成信息泄露，也是错误的抽象</text>
+    <text x="76.0" y="353.0" font-size="15">退格键、所选区域这些界面概念出现在文本类</text>
+    <text x="76.0" y="376.0" font-size="15">里，两个类绑在一起，无法独立开发。</text>
+    <text x="76.0" y="399.0" font-size="15">backspace 方法想藏住删哪些字符，可界面恰</text>
+    <text x="76.0" y="422.0" font-size="15">恰需要知道这一点，只能去读它的代码。</text>
     <circle cx="40.0" cy="484.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,475.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></g>
     <text x="76.0" y="472.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">转折</text>
     <text x="76.0" y="496.0" font-size="18" font-weight="600">通用 API 只需 insert 和 delete</text>
     <text x="76.0" y="522.0" font-size="15">退格键写成删除光标前一个字符，删除键写成删</text>
-    <text x="76.0" y="545.0" font-size="15">除光标后一个字符。代码略长，但一眼能看出删</text>
-    <text x="76.0" y="568.0" font-size="15">的是什么；文本类总代码更少，还能直接用于查</text>
+    <text x="76.0" y="545.0" font-size="15">除光标后一个字符。代码略长，但一眼能看出</text>
+    <text x="76.0" y="568.0" font-size="15">删的是什么；文本类总代码更少，还能用于查</text>
     <text x="76.0" y="591.0" font-size="15">找替换程序。</text>
     <circle cx="40.0" cy="653.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,644.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"/><path d="m15 9 6-6"/></g>
     <text x="76.0" y="641.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">做法</text>
-    <text x="76.0" y="665.0" font-size="18" font-weight="600">专用代码总会有，把它和通用代码分开</text>
-    <text x="76.0" y="691.0" font-size="15">界面细节上移到界面层，设备差异下移到驱动程</text>
-    <text x="76.0" y="714.0" font-size="15">序。撤销机制中，History 类只管操作列表，各</text>
-    <text x="76.0" y="737.0" font-size="15">种具体操作由懂它的模块实现，将来加新操作不</text>
-    <text x="76.0" y="760.0" font-size="15">用改它。</text>
-    <circle cx="40.0" cy="822.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,813.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></g>
-    <text x="76.0" y="810.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">细节</text>
-    <text x="76.0" y="834.0" font-size="18" font-weight="600">方法体里也一样：消除特殊情况</text>
-    <text x="76.0" y="860.0" font-size="15">学生用一个状态变量表示有没有所选区域，结果</text>
-    <text x="76.0" y="883.0" font-size="15">到处都是检查。让所选区域始终存在，没有时就</text>
-    <text x="76.0" y="906.0" font-size="15">是起止相同的空选区，复制、删除的代码不用特</text>
-    <text x="76.0" y="929.0" font-size="15">殊处理也能正确。</text>
-    <rect x="22.0" y="967.0" width="376.0" height="144.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
-    <g transform="translate(40.0,987.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g>
-    <text x="78.0" y="995.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">这一章最想强调的</text>
-    <text x="78.0" y="1021.0" font-size="18" font-weight="600">过度专用化可能是软件最大的复杂性来</text>
-    <text x="78.0" y="1045.0" font-size="18" font-weight="600">源；通用的模块更深、代码更少</text>
-    <text x="78.0" y="1069.0" font-size="14" fill="var(--diagram-muted,#5c645d)">要适度：功能反映当前需求，接口不局限于当前</text>
-    <text x="78.0" y="1090.0" font-size="14" fill="var(--diagram-muted,#5c645d)">用途；对当前需求不好用，说明通用过头了</text>
+    <text x="76.0" y="665.0" font-size="18" font-weight="600">专用代码总会有，把它和通用代码</text>
+    <text x="76.0" y="689.0" font-size="18" font-weight="600">分开</text>
+    <text x="76.0" y="715.0" font-size="15">界面细节上移到界面层，设备差异下移到驱动程</text>
+    <text x="76.0" y="738.0" font-size="15">序。撤销机制中，History 类只管操作列表，</text>
+    <text x="76.0" y="761.0" font-size="15">各种具体操作由懂它的模块实现，将来加新操作</text>
+    <text x="76.0" y="784.0" font-size="15">不用改它。</text>
+    <circle cx="40.0" cy="846.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,837.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></g>
+    <text x="76.0" y="834.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">细节</text>
+    <text x="76.0" y="858.0" font-size="18" font-weight="600">方法体里也一样：消除特殊情况</text>
+    <text x="76.0" y="884.0" font-size="15">学生用一个状态变量表示有没有所选区域，结果</text>
+    <text x="76.0" y="907.0" font-size="15">到处都是检查。让所选区域始终存在，没有时就</text>
+    <text x="76.0" y="930.0" font-size="15">是起止相同的空选区，复制、删除的代码不用</text>
+    <text x="76.0" y="953.0" font-size="15">特殊处理也能正确。</text>
+    <rect x="22.0" y="991.0" width="376.0" height="144.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <g transform="translate(40.0,1011.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g>
+    <text x="78.0" y="1019.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">这一章最想强调的</text>
+    <text x="78.0" y="1045.0" font-size="18" font-weight="600">过度专用化可能是软件最大的复杂性</text>
+    <text x="78.0" y="1069.0" font-size="18" font-weight="600">来源；通用的模块更深、代码更少</text>
+    <text x="78.0" y="1093.0" font-size="14" fill="var(--diagram-muted,#5c645d)">要适度：功能反映当前需求，接口不局限于当前</text>
+    <text x="78.0" y="1114.0" font-size="14" fill="var(--diagram-muted,#5c645d)">用途；对当前需求不好用，说明通用过头了</text>
   </g>
 </svg>

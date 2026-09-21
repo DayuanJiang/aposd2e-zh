@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 719" role="img" aria-labelledby="ch22-story-title ch22-story-desc">
   <title id="ch22-story-title">从一本只讨论复杂性的书，到把更多时间用在有趣的设计上</title>
-  <desc id="ch22-story-desc">本章回顾。从一本只讨论复杂性的书，到把更多时间用在有趣的设计上。起点：全书只讨论一件事：复杂性。复杂性让系统难以构建和维护，也常常让它运行缓慢。全书讲了它的根源，例如依赖性和模糊性；识别它的危险信号，例如信息泄露；减少它的思路，例如深而通用的类和通过定义来规避错误。；代价：代价：项目早期要多投入，学的时候进度更慢。如果唯一关心的是让当前代码尽快正常工作，思考设计就会显得是额外负担，妨碍了真正的目标。作者承认这一点：还不习惯思考设计时，进度确实会慢一些。；转折：回报很快到来：好设计并不比草率的设计多花多少时间。项目开始时精心定义的模块，会在后续反复使用时省下时间；六个月前写下的清晰文档，会在你重读代码、加新功能时省下时间。设计技能也会随经验提升，做出好设计越来越快。；结论：优秀的设计师把更多时间花在有趣的设计阶段。设计是一个有趣的问题：怎样用尽可能简单的结构解决特定问题。整洁、简单、易理解的设计本身就是美的。糟糕的设计师则把大部分时间花在复杂而脆弱的代码里追查缺陷。。这一章最想强调的：应对复杂性是软件设计中最重要的挑战；对良好设计的投入很快就会得到回报 提高设计技能后，你能更快开发出更高质量的软件，也能更享受开发的过程</desc>
+  <desc id="ch22-story-desc">本章回顾。从一本只讨论复杂性的书，到把更多时间用在有趣的设计上。起点：全书只讨论一件事：复杂性。复杂性让系统难以构建和维护，也常让它运行缓慢。全书讲了它的根源，如依赖性和模糊性；识别它的危险信号，如信息泄露；减少它的思路，如深而通用的类、通过定义来规避错误。；代价：代价：项目早期要多投入，学的时候进度更慢。如果唯一关心的是让当前代码尽快正常工作，思考设计就会显得是额外负担，似乎妨碍了真正的目标。作者承认这一点：还不习惯思考设计时，进度确实会慢一些。；转折：回报很快到来：掌握方法后，好设计并不比草率的设计多花多少时间。项目开始时精心定义的模块，会在后续反复使用时省下时间；六个月前写下的清晰文档，会在你重读代码、加新功能时省下时间。设计技能也会随经验提升，做出好设计越来越快。；结论：优秀的设计师把更多时间花在有趣的设计阶段。设计是一个有趣的问题：怎样用尽可能简单的结构解决特定问题。整洁、简单、易理解的设计本身就是美的。糟糕的设计师则把大部分时间花在复杂而脆弱的代码里追查缺陷。。这一章最想强调的：应对复杂性是软件设计中最重要的挑战；对良好设计的投入很快就会得到回报 提高设计技能后，你能更快开发出更高质量的软件，也能更享受开发的过程</desc>
   <rect width="960" height="719" fill="var(--diagram-bg,#e7eae6)"/>
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <text x="32.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顾</text>
@@ -9,23 +9,23 @@
     <circle cx="74.0" cy="122.0" r="22" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(63.0,111.0) scale(0.917)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></g>
     <text x="118.0" y="110.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起点</text>
     <text x="118.0" y="134.0" font-size="19" font-weight="600">全书只讨论一件事：复杂性</text>
-    <text x="118.0" y="160.0" font-size="15">复杂性让系统难以构建和维护，也常常让它运行缓慢。全书讲了它的根源，例如依赖性和模糊性；识别它的危险信号，例如</text>
-    <text x="118.0" y="183.0" font-size="15">信息泄露；减少它的思路，例如深而通用的类和通过定义来规避错误。</text>
+    <text x="118.0" y="160.0" font-size="15">复杂性让系统难以构建和维护，也常让它运行缓慢。全书讲了它的根源，如依赖性和模糊性；识别它的危险信号，如信</text>
+    <text x="118.0" y="183.0" font-size="15">息泄露；减少它的思路，如深而通用的类、通过定义来规避错误。</text>
     <circle cx="74.0" cy="245.0" r="22" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2"/><g transform="translate(63.0,234.0) scale(0.917)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></g>
     <text x="118.0" y="233.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">代价</text>
     <text x="118.0" y="257.0" font-size="19" font-weight="600">代价：项目早期要多投入，学的时候进度更慢</text>
-    <text x="118.0" y="283.0" font-size="15">如果唯一关心的是让当前代码尽快正常工作，思考设计就会显得是额外负担，妨碍了真正的目标。作者承认这一点：还不习</text>
-    <text x="118.0" y="306.0" font-size="15">惯思考设计时，进度确实会慢一些。</text>
+    <text x="118.0" y="283.0" font-size="15">如果唯一关心的是让当前代码尽快正常工作，思考设计就会显得是额外负担，似乎妨碍了真正的目标。作者承认这一</text>
+    <text x="118.0" y="306.0" font-size="15">点：还不习惯思考设计时，进度确实会慢一些。</text>
     <circle cx="74.0" cy="368.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(63.0,357.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></g>
     <text x="118.0" y="356.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">转折</text>
-    <text x="118.0" y="380.0" font-size="19" font-weight="600">回报很快到来：好设计并不比草率的设计多花多少时间</text>
-    <text x="118.0" y="406.0" font-size="15">项目开始时精心定义的模块，会在后续反复使用时省下时间；六个月前写下的清晰文档，会在你重读代码、加新功能时省下</text>
-    <text x="118.0" y="429.0" font-size="15">时间。设计技能也会随经验提升，做出好设计越来越快。</text>
+    <text x="118.0" y="380.0" font-size="19" font-weight="600">回报很快到来：掌握方法后，好设计并不比草率的设计多花多少时间</text>
+    <text x="118.0" y="406.0" font-size="15">项目开始时精心定义的模块，会在后续反复使用时省下时间；六个月前写下的清晰文档，会在你重读代码、加新功能</text>
+    <text x="118.0" y="429.0" font-size="15">时省下时间。设计技能也会随经验提升，做出好设计越来越快。</text>
     <circle cx="74.0" cy="491.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(63.0,480.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></g>
     <text x="118.0" y="479.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">结论</text>
     <text x="118.0" y="503.0" font-size="19" font-weight="600">优秀的设计师把更多时间花在有趣的设计阶段</text>
-    <text x="118.0" y="529.0" font-size="15">设计是一个有趣的问题：怎样用尽可能简单的结构解决特定问题。整洁、简单、易理解的设计本身就是美的。糟糕的设计师</text>
-    <text x="118.0" y="552.0" font-size="15">则把大部分时间花在复杂而脆弱的代码里追查缺陷。</text>
+    <text x="118.0" y="529.0" font-size="15">设计是一个有趣的问题：怎样用尽可能简单的结构解决特定问题。整洁、简单、易理解的设计本身就是美的。糟糕的设</text>
+    <text x="118.0" y="552.0" font-size="15">计师则把大部分时间花在复杂而脆弱的代码里追查缺陷。</text>
     <rect x="32.0" y="590.0" width="896.0" height="101.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
     <g transform="translate(50.0,610.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g>
     <text x="92.0" y="618.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">这一章最想强调的</text>

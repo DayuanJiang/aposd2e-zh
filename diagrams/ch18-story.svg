@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 719" role="img" aria-labelledby="ch18-story-title ch18-story-desc">
   <title id="ch18-story-title">从一对叫 getKey 的返回值，到让读者始终掌握所需信息</title>
-  <desc id="ch18-story-desc">本章回顾。从一对叫 getKey 的返回值，到让读者始终掌握所需信息。起点：方法用 Pair 返回当前任期和一个布尔值。调用者只能写 result.getKey() 和 result.getValue()，这两个名字说不出值的含义。写的人省了几分钟，之后每个读者都要去查。；问题：危险信号：快速阅读却读不懂，说明读者缺了某条重要信息。List 变量实际是 ArrayList；事件处理函数由事件模块间接调用，看不出何时执行；RaftClient 的构造函数开了新线程，main 返回后程序仍在运行。；转折：写的时候多花几分钟，读的人少花很多时间。为返回值定义专门的类，元素就有了有意义的名字；让声明类型与分配类型一致；用空行分开代码块，让注释更醒目。如果读你代码的人说它难懂，它就是难懂。；结论：三种方式让读者始终掌握所需信息。最好的办法是用抽象、消除特殊情况等设计手段，减少读者需要知道的信息；其次是遵循约定、符合预期，用读者已有的知识；最后才是用好名称和有针对性的注释直接补上信息。。这一章最想强调的：软件应设计得易于阅读：写代码的人多花几分钟，每个读者都少花时间 事件驱动这类做法有时仍要用，这时用注释补上读者缺少的信息，例如说明处理函数何时会被调用</desc>
+  <desc id="ch18-story-desc">本章回顾。从一对叫 getKey 的返回值，到让读者始终掌握所需信息。起点：方法用 Pair 返回当前任期和一个布尔值。调用者只能写 result.getKey() 和 result.getValue()，这两个名字说不出值的含义。写的人省了几分钟，之后每个读者都要去查。；问题：危险信号：快速阅读却读不懂，通常说明读者缺了某条重要信息。List 变量实际是 ArrayList；事件处理函数由事件模块间接调用，看不出何时执行；RaftClient 的构造函数开了新线程，main 返回后程序仍在运行。；转折：写的时候多花几分钟，读的人都少花时间。为返回值定义专门的类，元素就有了有意义的名字；让声明类型与分配类型一致；用空行分开代码块，让注释更醒目。如果读你代码的人说它难懂，它就是难懂。；结论：三种方式让读者始终掌握所需信息。最好的办法是用抽象、消除特殊情况等设计手段，减少读者需要知道的信息；其次是遵循约定、符合预期，用读者已有的知识；最后才是用好名称和有针对性的注释直接补上信息。。这一章最想强调的：软件应设计得易于阅读：写代码的人多花几分钟，每个读者都少花时间 事件驱动这类做法有时仍要用，这时用注释补上读者缺少的信息，例如说明处理函数何时会被调用</desc>
   <rect width="960" height="719" fill="var(--diagram-bg,#e7eae6)"/>
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <text x="32.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顾</text>
@@ -9,23 +9,23 @@
     <circle cx="74.0" cy="122.0" r="22" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(63.0,111.0) scale(0.917)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></g>
     <text x="118.0" y="110.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起点</text>
     <text x="118.0" y="134.0" font-size="19" font-weight="600">方法用 Pair 返回当前任期和一个布尔值</text>
-    <text x="118.0" y="160.0" font-size="15">调用者只能写 result.getKey() 和 result.getValue()，这两个名字说不出值的含义。写的人省了几分钟，之后每个读</text>
-    <text x="118.0" y="183.0" font-size="15">者都要去查。</text>
+    <text x="118.0" y="160.0" font-size="15">调用者只能写 result.getKey() 和 result.getValue()，这两个名字说不出值的含义。写的人省了几分钟，之后每个</text>
+    <text x="118.0" y="183.0" font-size="15">读者都要去查。</text>
     <circle cx="74.0" cy="245.0" r="22" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2"/><g transform="translate(63.0,234.0) scale(0.917)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></g>
     <text x="118.0" y="233.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">问题</text>
-    <text x="118.0" y="257.0" font-size="19" font-weight="600">危险信号：快速阅读却读不懂，说明读者缺了某条重要信息</text>
-    <text x="118.0" y="283.0" font-size="15">List 变量实际是 ArrayList；事件处理函数由事件模块间接调用，看不出何时执行；RaftClient 的构造函数开了新线</text>
-    <text x="118.0" y="306.0" font-size="15">程，main 返回后程序仍在运行。</text>
+    <text x="118.0" y="257.0" font-size="19" font-weight="600">危险信号：快速阅读却读不懂，通常说明读者缺了某条重要信息</text>
+    <text x="118.0" y="283.0" font-size="15">List 变量实际是 ArrayList；事件处理函数由事件模块间接调用，看不出何时执行；RaftClient 的构造函数开了新</text>
+    <text x="118.0" y="306.0" font-size="15">线程，main 返回后程序仍在运行。</text>
     <circle cx="74.0" cy="368.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(63.0,357.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></g>
     <text x="118.0" y="356.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">转折</text>
-    <text x="118.0" y="380.0" font-size="19" font-weight="600">写的时候多花几分钟，读的人少花很多时间</text>
-    <text x="118.0" y="406.0" font-size="15">为返回值定义专门的类，元素就有了有意义的名字；让声明类型与分配类型一致；用空行分开代码块，让注释更醒目。如果</text>
-    <text x="118.0" y="429.0" font-size="15">读你代码的人说它难懂，它就是难懂。</text>
+    <text x="118.0" y="380.0" font-size="19" font-weight="600">写的时候多花几分钟，读的人都少花时间</text>
+    <text x="118.0" y="406.0" font-size="15">为返回值定义专门的类，元素就有了有意义的名字；让声明类型与分配类型一致；用空行分开代码块，让注释更醒</text>
+    <text x="118.0" y="429.0" font-size="15">目。如果读你代码的人说它难懂，它就是难懂。</text>
     <circle cx="74.0" cy="491.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(63.0,480.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></g>
     <text x="118.0" y="479.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">结论</text>
     <text x="118.0" y="503.0" font-size="19" font-weight="600">三种方式让读者始终掌握所需信息</text>
-    <text x="118.0" y="529.0" font-size="15">最好的办法是用抽象、消除特殊情况等设计手段，减少读者需要知道的信息；其次是遵循约定、符合预期，用读者已有的知</text>
-    <text x="118.0" y="552.0" font-size="15">识；最后才是用好名称和有针对性的注释直接补上信息。</text>
+    <text x="118.0" y="529.0" font-size="15">最好的办法是用抽象、消除特殊情况等设计手段，减少读者需要知道的信息；其次是遵循约定、符合预期，用读者已有</text>
+    <text x="118.0" y="552.0" font-size="15">的知识；最后才是用好名称和有针对性的注释直接补上信息。</text>
     <rect x="32.0" y="590.0" width="896.0" height="101.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
     <g transform="translate(50.0,610.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g>
     <text x="92.0" y="618.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">这一章最想强调的</text>

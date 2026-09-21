@@ -1,26 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 472" role="img" aria-labelledby="ch02-title ch02-desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 410" role="img" aria-labelledby="ch02-title ch02-desc">
   <title id="ch02-title">複雜性是什麼，怎麼看出來，從哪來？</title>
-  <desc id="ch02-desc">本章概覽。複雜性是什麼，怎麼看出來，從哪來？ 本章的主要部分：根源：依賴性、模糊性：改一段程式碼得顧及別的程式碼；重要資訊不明顯，例如變數名只叫 time；症狀：變更放大、認知負荷、未知的未知：改橫幅顏色要逐頁改；用完記憶體要記得釋放；不知道哪些頁面還用了強調色；結果：系統難以理解和修改：小改進也要花大量工作；讀者比作者更容易察覺這種困難。一句話：讓系統難以理解和修改的因素；根源是依賴性和模糊性，由無數小問題積累而成</desc>
-  <rect width="960" height="472" fill="var(--diagram-bg,#e7eae6)" />
+  <desc id="ch02-desc">本章概覽。複雜性是什麼，怎麼看出來，從哪來？ 本章的主要部分：根源：依賴性、模糊性：改一處得顧及別處；重要資訊不明顯；症狀：變更放大、認知負荷、未知的未知：一改牽連多處；要記的太多；不知該改哪；結果：難理解、難修改：小改進也要花大量工作。一句話：讓系統難以理解和修改的因素；根源是依賴性和模糊性，由成百上千個小問題積累而成</desc>
+  <rect width="960" height="410" fill="var(--diagram-bg,#e7eae6)" />
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <defs><marker id="ch02-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)" /></marker></defs>
     <text x="32.0" y="52.0" font-size="30" font-weight="600">複雜性是什麼，怎麼看出來，從哪來？</text>
-    <text x="32.0" y="94.0" font-size="15" fill="var(--diagram-muted,#5c645d)">兩個根源引起三種症狀，症狀讓系統難以理解和修改，這就是複雜性</text>
-    <rect x="108.0" y="114.0" width="744.0" height="64.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)" />
-    <g transform="translate(126.0,132.0) scale(1.167)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 2 1.88 1.88" /><path d="M14.12 3.88 16 2" /><path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1" /><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6" /><path d="M12 20v-9" /><path d="M6.53 9C4.6 8.8 3 7.1 3 5" /><path d="M6 13H2" /><path d="M3 21c0-2.1 1.7-3.9 3.8-4" /><path d="M20.97 5c0 2.1-1.6 3.8-3.5 4" /><path d="M22 13h-4" /><path d="M17.2 17c2.1.1 3.8 1.9 3.8 4" /></g>
-    <text x="168.0" y="142.0" font-size="18" font-weight="600">結果：系統難以理解和修改</text>
-    <text x="168.0" y="164.0" font-size="15" fill="var(--diagram-muted,#5c645d)">小改進也要花大量工作；讀者比作者更容易察覺這種困難</text>
-    <rect x="70.0" y="186.0" width="820.0" height="64.0" rx="10" fill="var(--diagram-warm-soft,#eae2cf)" />
-    <g transform="translate(88.0,204.0) scale(1.167)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></g>
-    <text x="130.0" y="214.0" font-size="18" font-weight="600">症狀：變更放大、認知負荷、未知的未知</text>
-    <text x="130.0" y="236.0" font-size="15" fill="var(--diagram-muted,#5c645d)">改橫幅顏色要逐頁改；用完記憶體要記得釋放；不知道哪些頁面還用了強調色</text>
-    <rect x="32.0" y="258.0" width="896.0" height="64.0" rx="10" fill="var(--diagram-danger-soft,#ead9dc)" />
-    <g transform="translate(50.0,276.0) scale(1.167)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1" /><rect x="2" y="16" width="6" height="6" rx="1" /><rect x="9" y="2" width="6" height="6" rx="1" /><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" /><path d="M12 12V8" /></g>
-    <text x="92.0" y="286.0" font-size="18" font-weight="600">根源：依賴性、模糊性</text>
-    <text x="92.0" y="308.0" font-size="15" fill="var(--diagram-muted,#5c645d)">改一段程式碼得顧及別的程式碼；重要資訊不明顯，例如變數名只叫 time</text>
-    <text x="32.0" y="348.0" font-size="14" fill="var(--diagram-muted,#5c645d)">複雜性是增量產生的：單個依賴或模糊處影響不大，成百上千個積累起來，每次修改都會碰到幾個</text>
-    <rect x="32.0" y="376.0" width="896.0" height="68.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
-    <text x="50.0" y="397.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
-    <text x="50.0" y="427.0" font-size="21" font-weight="600">讓系統難以理解和修改的因素；根源是依賴性和模糊性，由無數小問題積累而成</text>
+    <rect x="108.0" y="84.0" width="744.0" height="64.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)" />
+    <g transform="translate(126.0,102.0) scale(1.167)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></g>
+    <text x="168.0" y="112.0" font-size="18" font-weight="600">結果：難理解、難修改</text>
+    <text x="168.0" y="134.0" font-size="15" fill="var(--diagram-muted,#5c645d)">小改進也要花大量工作</text>
+    <rect x="70.0" y="156.0" width="820.0" height="64.0" rx="10" fill="var(--diagram-warm-soft,#eae2cf)" />
+    <g transform="translate(88.0,174.0) scale(1.167)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></g>
+    <text x="130.0" y="184.0" font-size="18" font-weight="600">症狀：變更放大、認知負荷、未知的未知</text>
+    <text x="130.0" y="206.0" font-size="15" fill="var(--diagram-muted,#5c645d)">一改牽連多處；要記的太多；不知該改哪</text>
+    <rect x="32.0" y="228.0" width="896.0" height="64.0" rx="10" fill="var(--diagram-danger-soft,#ead9dc)" />
+    <g transform="translate(50.0,246.0) scale(1.167)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1" /><rect x="2" y="16" width="6" height="6" rx="1" /><rect x="9" y="2" width="6" height="6" rx="1" /><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" /><path d="M12 12V8" /></g>
+    <text x="92.0" y="256.0" font-size="18" font-weight="600">根源：依賴性、模糊性</text>
+    <text x="92.0" y="278.0" font-size="15" fill="var(--diagram-muted,#5c645d)">改一處得顧及別處；重要資訊不明顯</text>
+    <rect x="32.0" y="314.0" width="896.0" height="68.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <text x="50.0" y="335.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
+    <text x="50.0" y="365.0" font-size="21" font-weight="600">讓系統難以理解和修改的因素；根源是依賴性和模糊性，由成百上千個小問題積累而成</text>
   </g>
 </svg>

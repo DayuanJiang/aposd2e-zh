@@ -1,42 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 441" role="img" aria-labelledby="ch06-title ch06-desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 452" role="img" aria-labelledby="ch06-title ch06-desc">
   <title id="ch06-title">接口要多通用才合适？</title>
-  <desc id="ch06-desc">本章概览。接口要多通用才合适？ 本章的主要部分：找最简单的接口：满足当前需求的最简接口是什么？方法能变少就更通用；数一数用途：每个方法用在几种情况？只有一种用途是危险信号；当前需求好用吗：用起来要写大量额外代码，就是通用过头了；专用代码上移下移：退格键逻辑上移到界面层；设备差异下移到驱动程序；消除特殊情况：没有选区时用空选区表示，就不用到处检查有没有选区。一句话：适度通用：功能反映当前需求，接口不局限于当前用途；专用代码与通用代码分开</desc>
-  <rect width="960" height="441" fill="var(--diagram-bg,#e7eae6)"/>
+  <desc id="ch06-desc">本章概览。接口要多通用才合适？ 本章的主要部分：接口足够通用：两个通用方法，替代大量专用方法；三个自问：最简单的接口？几种用途？当前好用吗？；专用代码上移下移：界面细节上移，设备差异下移到驱动；消除特殊情况：用空选区表示没有选区，省去检查。一句话：适度通用：功能反映当前需求，接口不局限于当前用途；专用代码与通用代码分开</desc>
+  <rect width="960" height="452" fill="var(--diagram-bg,#e7eae6)"/>
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <defs><marker id="ch06-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)"/></marker></defs>
     <text x="32.0" y="52.0" font-size="30" font-weight="600">接口要多通用才合适？</text>
-    <text x="32.0" y="94.0" font-size="15" fill="var(--diagram-muted,#5c645d)">文本编辑器的文本类：给退格键、删除键各写一个方法太专用；用 insert 和 delete 两个通用方法反而更简单</text>
-    <circle cx="111.2" cy="150.0" r="30" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(96.2,135.0) scale(1.250)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></g>
-    <text x="111.2" y="210.0" font-size="18" font-weight="600" text-anchor="middle">找最简单的接口</text>
-    <text x="111.2" y="236.0" font-size="14" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">满足当前需求的最简接</text>
-    <text x="111.2" y="257.0" font-size="14" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">口是什么？方法能变少</text>
-    <text x="111.2" y="278.0" font-size="14" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">就更通用</text>
-    <path d="M194.4 150.0 L212.4 150.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch06-arrow)"/>
-    <circle cx="295.6" cy="150.0" r="30" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(280.6,135.0) scale(1.250)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></g>
-    <text x="295.6" y="210.0" font-size="18" font-weight="600" text-anchor="middle">数一数用途</text>
-    <text x="295.6" y="236.0" font-size="14" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">每个方法用在几种情</text>
-    <text x="295.6" y="257.0" font-size="14" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">况？只有一种用途是危</text>
-    <text x="295.6" y="278.0" font-size="14" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">险信号</text>
-    <path d="M378.8 150.0 L396.8 150.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch06-arrow)"/>
-    <circle cx="480.0" cy="150.0" r="30" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(465.0,135.0) scale(1.250)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></g>
-    <text x="480.0" y="210.0" font-size="18" font-weight="600" text-anchor="middle">当前需求好用吗</text>
-    <text x="480.0" y="236.0" font-size="14" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">用起来要写大量额外代</text>
-    <text x="480.0" y="257.0" font-size="14" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">码，就是通用过头了</text>
-    <path d="M563.2 150.0 L581.2 150.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch06-arrow)"/>
-    <circle cx="664.4" cy="150.0" r="30" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(649.4,135.0) scale(1.250)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"/><path d="m15 9 6-6"/></g>
-    <text x="664.4" y="210.0" font-size="18" font-weight="600" text-anchor="middle">专用代码上移下移</text>
-    <text x="664.4" y="236.0" font-size="14" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">退格键逻辑上移到界面</text>
-    <text x="664.4" y="257.0" font-size="14" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">层；设备差异下移到驱</text>
-    <text x="664.4" y="278.0" font-size="14" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">动程序</text>
-    <path d="M747.6 150.0 L765.6 150.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch06-arrow)"/>
-    <circle cx="848.8" cy="150.0" r="30" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(833.8,135.0) scale(1.250)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></g>
-    <text x="848.8" y="210.0" font-size="18" font-weight="600" text-anchor="middle">消除特殊情况</text>
-    <text x="848.8" y="236.0" font-size="14" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">没有选区时用空选区表</text>
-    <text x="848.8" y="257.0" font-size="14" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">示，就不用到处检查有</text>
-    <text x="848.8" y="278.0" font-size="14" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">没有选区</text>
-    <text x="32.0" y="313.0" font-size="14" fill="var(--diagram-muted,#5c645d)">作者教了几轮课后发现，通用类几乎总是优于专用类，代码还更少；History 类把撤销的通用核心与专用操作分开就是例子</text>
-    <rect x="32.0" y="345.0" width="896.0" height="68.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)"/>
-    <text x="50.0" y="366.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句话</text>
-    <text x="50.0" y="396.0" font-size="21" font-weight="600">适度通用：功能反映当前需求，接口不局限于当前用途；专用代码与通用代码分开</text>
+    <rect x="32.0" y="84.0" width="896.0" height="70.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <g transform="translate(52.0,105.0) scale(1.167)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></g>
+    <text x="94.0" y="114.0" font-size="20" font-weight="600">目标：接口适度通用</text>
+    <text x="94.0" y="138.0" font-size="15" fill="var(--diagram-muted,#5c645d)">作者教几轮课后发现，通用类几乎总是优于专用类，代码更少</text>
+    <rect x="32.0" y="172.0" width="210.5" height="162.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <rect x="46.0" y="260" width="182.5" height="1" fill="var(--diagram-line,#aebbad)"/>
+    <g transform="translate(46.0,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></g>
+    <text x="46.0" y="248.0" font-size="18" font-weight="600">接口足够通用</text>
+    <text x="46.0" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">两个通用方法，替代大量</text>
+    <text x="46.0" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">专用方法</text>
+    <rect x="260.5" y="172.0" width="210.5" height="162.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <rect x="274.5" y="260" width="182.5" height="1" fill="var(--diagram-line,#aebbad)"/>
+    <g transform="translate(274.5,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></g>
+    <text x="274.5" y="248.0" font-size="18" font-weight="600">三个自问</text>
+    <text x="274.5" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">最简单的接口？几种用途？</text>
+    <text x="274.5" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">当前好用吗？</text>
+    <rect x="489.0" y="172.0" width="210.5" height="162.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <rect x="503.0" y="260" width="182.5" height="1" fill="var(--diagram-line,#aebbad)"/>
+    <g transform="translate(503.0,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"/><path d="m15 9 6-6"/></g>
+    <text x="503.0" y="248.0" font-size="18" font-weight="600">专用代码上移下移</text>
+    <text x="503.0" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">界面细节上移，设备差异</text>
+    <text x="503.0" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">下移到驱动</text>
+    <rect x="717.5" y="172.0" width="210.5" height="162.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <rect x="731.5" y="260" width="182.5" height="1" fill="var(--diagram-line,#aebbad)"/>
+    <g transform="translate(731.5,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></g>
+    <text x="731.5" y="248.0" font-size="18" font-weight="600">消除特殊情况</text>
+    <text x="731.5" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">用空选区表示没有选区，</text>
+    <text x="731.5" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">省去检查</text>
+    <rect x="32.0" y="356.0" width="896.0" height="68.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="50.0" y="377.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句话</text>
+    <text x="50.0" y="407.0" font-size="21" font-weight="600">适度通用：功能反映当前需求，接口不局限于当前用途；专用代码与通用代码分开</text>
   </g>
 </svg>

@@ -1,31 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 719" role="img" aria-labelledby="ch17-story-title ch17-story-desc">
-  <title id="ch17-story-title">從行終止符的反覆出錯，到讀者理解一處就能理解全部</title>
-  <desc id="ch17-story-desc">本章回顧。從行終止符的反覆出錯，到讀者理解一處就能理解全部。起點：同一套程式碼，Unix 用換行，Windows 用回車加換行。編輯器有時會把整個檔案的行終止符改成當前系統的格式，於是每一行都顯示為已修改，真正的改動反而難以辨認。每來一個新成員，問題就重演一遍。；問題：缺乏一致性時，讀者要逐一學習每種情況，還會做出錯誤假設。兩種實際不同的情況看起來一樣，開發人員按熟悉的模式猜測，就會猜錯。系統一致時，相似的事採用相似做法，理解了一處就能理解其他地方。；做法：寫下約定、用工具強制、入鄉隨俗、不輕易改舊約定。作者寫了一個提交前自動執行的腳本，只要有一行含回車符就中止提交，問題一下就解決了。寫新程式碼前先看現有程式碼怎麼組織並照著做；有更好的想法也不足以引入不一致。；限定：一致也要求不同的事採用不同做法。給確實不同的事物用同一個變數名，或把設計模式套在不適合的任務上，只會增加混亂。保持一致是一種投資：定約定、寫檢查工具都要花時間，回報是程式碼更快、更準確地被看懂。。這一章最想強調的：相似的事用相似做法：保持一致的收益，幾乎總是大於新舊做法之間的優劣差距 一致也要求不同的事採用不同做法；只有當開發人員確信“如果它看起來像 x，它確實是 x”時，一致性才有益</desc>
+  <title id="ch17-story-title">從行終止符的反覆出錯，到理解一處就能理解其他地方</title>
+  <desc id="ch17-story-desc">本章回顧。從行終止符的反覆出錯，到理解一處就能理解其他地方。起點：同一套程式碼，Unix 用換行，Windows 用回車加換行。編輯器有時會把整個檔案的行終止符改成當前系統的格式，於是每一行都顯示為已修改，真正的改動反而難以辨認。每來一個新成員，問題就重演一遍。；問題：缺乏一致性時，讀者要逐一學習每種情況，還會做出錯誤假設。兩種實際不同的情況看起來一樣，開發人員按熟悉的模式猜測，可能猜錯。系統一致時，相似的事採用相似做法，理解了一處就能理解其他地方。；做法：寫下約定、用工具強制、入鄉隨俗、不輕易改舊約定。作者寫了一個提交前自動執行的腳本，只要有一行含回車符就中止提交，問題一下就解決了。寫新程式碼前先看現有程式碼怎麼組織並照著做；有更好的想法也不足以引入不一致。；限定：一致也要求不同的事採用不同做法。給確實不同的事物用同一個變數名，或把設計模式套在不適合的任務上，只會增加混亂。保持一致是一種投資：定約定、寫檢查工具都要花時間，回報是程式碼更快、更準確地被看懂。。這一章最想強調的：相似的事用相似做法：保持一致的收益，幾乎總是大於新舊做法之間的優劣差距 一致也要求不同的事採用不同做法；只有當開發人員確信“如果它看起來像 x，它確實是 x”時，一致性才有益</desc>
   <rect width="960" height="719" fill="var(--diagram-bg,#e7eae6)" />
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <text x="32.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顧</text>
     <path d="M74 144 V 469" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" />
-    <text x="32.0" y="62.0" font-size="26" font-weight="600">從行終止符的反覆出錯，到讀者理解一處就能理解全部</text>
+    <text x="32.0" y="62.0" font-size="26" font-weight="600">從行終止符的反覆出錯，到理解一處就能理解其他地方</text>
     <circle cx="74.0" cy="122.0" r="22" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(63.0,111.0) scale(0.917)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 14 4 4-4 4" /><path d="m18 2 4 4-4 4" /><path d="M2 18h1.973a4 4 0 0 0 3.3-1.7l5.454-8.6a4 4 0 0 1 3.3-1.7H22" /><path d="M2 6h1.972a4 4 0 0 1 3.6 2.2" /><path d="M22 18h-6.041a4 4 0 0 1-3.3-1.8l-.359-.45" /></g>
     <text x="118.0" y="110.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起點</text>
     <text x="118.0" y="134.0" font-size="19" font-weight="600">同一套程式碼，Unix 用換行，Windows 用回車加換行</text>
-    <text x="118.0" y="160.0" font-size="15">編輯器有時會把整個檔案的行終止符改成當前系統的格式，於是每一行都顯示為已修改，真正的改動反而難以辨認。每來一</text>
-    <text x="118.0" y="183.0" font-size="15">個新成員，問題就重演一遍。</text>
+    <text x="118.0" y="160.0" font-size="15">編輯器有時會把整個檔案的行終止符改成當前系統的格式，於是每一行都顯示為已修改，真正的改動反而難以辨認。每</text>
+    <text x="118.0" y="183.0" font-size="15">來一個新成員，問題就重演一遍。</text>
     <circle cx="74.0" cy="245.0" r="22" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2" /><g transform="translate(63.0,234.0) scale(0.917)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></g>
     <text x="118.0" y="233.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">問題</text>
     <text x="118.0" y="257.0" font-size="19" font-weight="600">缺乏一致性時，讀者要逐一學習每種情況，還會做出錯誤假設</text>
-    <text x="118.0" y="283.0" font-size="15">兩種實際不同的情況看起來一樣，開發人員按熟悉的模式猜測，就會猜錯。系統一致時，相似的事採用相似做法，理解了一</text>
-    <text x="118.0" y="306.0" font-size="15">處就能理解其他地方。</text>
+    <text x="118.0" y="283.0" font-size="15">兩種實際不同的情況看起來一樣，開發人員按熟悉的模式猜測，可能猜錯。系統一致時，相似的事採用相似做法，理解</text>
+    <text x="118.0" y="306.0" font-size="15">了一處就能理解其他地方。</text>
     <circle cx="74.0" cy="368.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,357.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></g>
     <text x="118.0" y="356.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">做法</text>
     <text x="118.0" y="380.0" font-size="19" font-weight="600">寫下約定、用工具強制、入鄉隨俗、不輕易改舊約定</text>
-    <text x="118.0" y="406.0" font-size="15">作者寫了一個提交前自動執行的腳本，只要有一行含回車符就中止提交，問題一下就解決了。寫新程式碼前先看現有程式碼怎麼</text>
-    <text x="118.0" y="429.0" font-size="15">組織並照著做；有更好的想法也不足以引入不一致。</text>
+    <text x="118.0" y="406.0" font-size="15">作者寫了一個提交前自動執行的腳本，只要有一行含回車符就中止提交，問題一下就解決了。寫新程式碼前先看現有代</text>
+    <text x="118.0" y="429.0" font-size="15">碼怎麼組織並照著做；有更好的想法也不足以引入不一致。</text>
     <circle cx="74.0" cy="491.0" r="22" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2" /><g transform="translate(63.0,480.0) scale(0.917)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="M7 21h10" /><path d="M12 3v18" /><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" /></g>
     <text x="118.0" y="479.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">限定</text>
     <text x="118.0" y="503.0" font-size="19" font-weight="600">一致也要求不同的事採用不同做法</text>
-    <text x="118.0" y="529.0" font-size="15">給確實不同的事物用同一個變數名，或把設計模式套在不適合的任務上，只會增加混亂。保持一致是一種投資：定約定、寫</text>
-    <text x="118.0" y="552.0" font-size="15">檢查工具都要花時間，回報是程式碼更快、更準確地被看懂。</text>
+    <text x="118.0" y="529.0" font-size="15">給確實不同的事物用同一個變數名，或把設計模式套在不適合的任務上，只會增加混亂。保持一致是一種投資：定約</text>
+    <text x="118.0" y="552.0" font-size="15">定、寫檢查工具都要花時間，回報是程式碼更快、更準確地被看懂。</text>
     <rect x="32.0" y="590.0" width="896.0" height="101.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
     <g transform="translate(50.0,610.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
     <text x="92.0" y="618.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">這一章最想強調的</text>

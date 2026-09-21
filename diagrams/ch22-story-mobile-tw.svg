@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 1066" role="img" aria-labelledby="ch22-storym-title ch22-storym-desc">
   <title id="ch22-storym-title">從一本只討論複雜性的書，到把更多時間用在有趣的設計上</title>
-  <desc id="ch22-storym-desc">本章回顧。從一本只討論複雜性的書，到把更多時間用在有趣的設計上。起點：全書只討論一件事：複雜性。複雜性讓系統難以構建和維護，也常常讓它執行緩慢。全書講了它的根源，例如依賴性和模糊性；識別它的危險訊號，例如資訊洩露；減少它的思路，例如深而通用的類和透過定義來規避錯誤。；代價：代價：專案早期要多投入，學的時候進度更慢。如果唯一關心的是讓當前程式碼儘快正常工作，思考設計就會顯得是額外負擔，妨礙了真正的目標。作者承認這一點：還不習慣思考設計時，進度確實會慢一些。；轉折：回報很快到來：好設計並不比草率的設計多花多少時間。專案開始時精心定義的模組，會在後續反覆使用時省下時間；六個月前寫下的清晰文件，會在你重讀程式碼、加新功能時省下時間。設計技能也會隨經驗提升，做出好設計越來越快。；結論：優秀的設計師把更多時間花在有趣的設計階段。設計是一個有趣的問題：怎樣用盡可能簡單的結構解決特定問題。整潔、簡單、易理解的設計本身就是美的。糟糕的設計師則把大部分時間花在複雜而脆弱的程式碼裡追查缺陷。。這一章最想強調的：應對複雜性是軟體設計中最重要的挑戰；對良好設計的投入很快就會得到回報 提高設計技能後，你能更快開發出更高品質的軟體，也能更享受開發的過程</desc>
+  <desc id="ch22-storym-desc">本章回顧。從一本只討論複雜性的書，到把更多時間用在有趣的設計上。起點：全書只討論一件事：複雜性。複雜性讓系統難以構建和維護，也常讓它執行緩慢。全書講了它的根源，如依賴性和模糊性；識別它的危險訊號，如資訊洩露；減少它的思路，如深而通用的類、透過定義來規避錯誤。；代價：代價：專案早期要多投入，學的時候進度更慢。如果唯一關心的是讓當前程式碼儘快正常工作，思考設計就會顯得是額外負擔，似乎妨礙了真正的目標。作者承認這一點：還不習慣思考設計時，進度確實會慢一些。；轉折：回報很快到來：掌握方法後，好設計並不比草率的設計多花多少時間。專案開始時精心定義的模組，會在後續反覆使用時省下時間；六個月前寫下的清晰文件，會在你重讀程式碼、加新功能時省下時間。設計技能也會隨經驗提升，做出好設計越來越快。；結論：優秀的設計師把更多時間花在有趣的設計階段。設計是一個有趣的問題：怎樣用盡可能簡單的結構解決特定問題。整潔、簡單、易理解的設計本身就是美的。糟糕的設計師則把大部分時間花在複雜而脆弱的程式碼裡追查缺陷。。這一章最想強調的：應對複雜性是軟體設計中最重要的挑戰；對良好設計的投入很快就會得到回報 提高設計技能後，你能更快開發出更高品質的軟體，也能更享受開發的過程</desc>
   <rect width="420" height="1066" fill="var(--diagram-bg,#e7eae6)" />
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <text x="22.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顧</text>
@@ -10,30 +10,30 @@
     <circle cx="40.0" cy="146.0" r="18" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(31.0,137.0) scale(0.750)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14" /><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /></g>
     <text x="76.0" y="134.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起點</text>
     <text x="76.0" y="158.0" font-size="18" font-weight="600">全書只討論一件事：複雜性</text>
-    <text x="76.0" y="184.0" font-size="15">複雜性讓系統難以構建和維護，也常常讓它執行</text>
-    <text x="76.0" y="207.0" font-size="15">緩慢。全書講了它的根源，例如依賴性和模糊性；</text>
-    <text x="76.0" y="230.0" font-size="15">識別它的危險訊號，例如資訊洩露；減少它的思</text>
-    <text x="76.0" y="253.0" font-size="15">路，例如深而通用的類和透過定義來規避錯誤。</text>
+    <text x="76.0" y="184.0" font-size="15">複雜性讓系統難以構建和維護，也常讓它執行緩</text>
+    <text x="76.0" y="207.0" font-size="15">慢。全書講了它的根源，如依賴性和模糊性；識</text>
+    <text x="76.0" y="230.0" font-size="15">別它的危險訊號，如資訊洩露；減少它的思路，</text>
+    <text x="76.0" y="253.0" font-size="15">如深而通用的類、透過定義來規避錯誤。</text>
     <circle cx="40.0" cy="315.0" r="18" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2" /><g transform="translate(31.0,306.0) scale(0.750)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14" /><path d="M5 2h14" /><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" /><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" /></g>
     <text x="76.0" y="303.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">代價</text>
-    <text x="76.0" y="327.0" font-size="18" font-weight="600">代價：專案早期要多投入，學的時候進度</text>
-    <text x="76.0" y="351.0" font-size="18" font-weight="600">更慢</text>
-    <text x="76.0" y="377.0" font-size="15">如果唯一關心的是讓當前程式碼儘快正常工作，思</text>
-    <text x="76.0" y="400.0" font-size="15">考設計就會顯得是額外負擔，妨礙了真正的目標。</text>
-    <text x="76.0" y="423.0" font-size="15">作者承認這一點：還不習慣思考設計時，進度確</text>
-    <text x="76.0" y="446.0" font-size="15">實會慢一些。</text>
+    <text x="76.0" y="327.0" font-size="18" font-weight="600">代價：專案早期要多投入，學的時候進</text>
+    <text x="76.0" y="351.0" font-size="18" font-weight="600">度更慢</text>
+    <text x="76.0" y="377.0" font-size="15">如果唯一關心的是讓當前程式碼儘快正常工作，</text>
+    <text x="76.0" y="400.0" font-size="15">思考設計就會顯得是額外負擔，似乎妨礙了真正</text>
+    <text x="76.0" y="423.0" font-size="15">的目標。作者承認這一點：還不習慣思考設計</text>
+    <text x="76.0" y="446.0" font-size="15">時，進度確實會慢一些。</text>
     <circle cx="40.0" cy="508.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(31.0,499.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></g>
     <text x="76.0" y="496.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">轉折</text>
-    <text x="76.0" y="520.0" font-size="18" font-weight="600">回報很快到來：好設計並不比草率的設計</text>
-    <text x="76.0" y="544.0" font-size="18" font-weight="600">多花多少時間</text>
+    <text x="76.0" y="520.0" font-size="18" font-weight="600">回報很快到來：掌握方法後，好設計並</text>
+    <text x="76.0" y="544.0" font-size="18" font-weight="600">不比草率的設計多花多少時間</text>
     <text x="76.0" y="570.0" font-size="15">專案開始時精心定義的模組，會在後續反覆使用</text>
     <text x="76.0" y="593.0" font-size="15">時省下時間；六個月前寫下的清晰文件，會在你</text>
-    <text x="76.0" y="616.0" font-size="15">重讀程式碼、加新功能時省下時間。設計技能也會</text>
-    <text x="76.0" y="639.0" font-size="15">隨經驗提升，做出好設計越來越快。</text>
+    <text x="76.0" y="616.0" font-size="15">重讀程式碼、加新功能時省下時間。設計技能也</text>
+    <text x="76.0" y="639.0" font-size="15">會隨經驗提升，做出好設計越來越快。</text>
     <circle cx="40.0" cy="701.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(31.0,692.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></g>
     <text x="76.0" y="689.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">結論</text>
-    <text x="76.0" y="713.0" font-size="18" font-weight="600">優秀的設計師把更多時間花在有趣的設計</text>
-    <text x="76.0" y="737.0" font-size="18" font-weight="600">階段</text>
+    <text x="76.0" y="713.0" font-size="18" font-weight="600">優秀的設計師把更多時間花在有趣的設</text>
+    <text x="76.0" y="737.0" font-size="18" font-weight="600">計階段</text>
     <text x="76.0" y="763.0" font-size="15">設計是一個有趣的問題：怎樣用盡可能簡單的結</text>
     <text x="76.0" y="786.0" font-size="15">構解決特定問題。整潔、簡單、易理解的設計本</text>
     <text x="76.0" y="809.0" font-size="15">身就是美的。糟糕的設計師則把大部分時間花在</text>
@@ -42,8 +42,8 @@
     <g transform="translate(40.0,890.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
     <text x="78.0" y="898.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">這一章最想強調的</text>
     <text x="78.0" y="924.0" font-size="18" font-weight="600">應對複雜性是軟體設計中最重要的挑</text>
-    <text x="78.0" y="948.0" font-size="18" font-weight="600">戰；對良好設計的投入很快就會得到回</text>
-    <text x="78.0" y="972.0" font-size="18" font-weight="600">報</text>
+    <text x="78.0" y="948.0" font-size="18" font-weight="600">戰；對良好設計的投入很快就會得到</text>
+    <text x="78.0" y="972.0" font-size="18" font-weight="600">回報</text>
     <text x="78.0" y="996.0" font-size="14" fill="var(--diagram-muted,#5c645d)">提高設計技能後，你能更快開發出更高品質的軟</text>
     <text x="78.0" y="1017.0" font-size="14" fill="var(--diagram-muted,#5c645d)">件，也能更享受開發的過程</text>
   </g>

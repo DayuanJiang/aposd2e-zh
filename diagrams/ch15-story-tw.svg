@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 719" role="img" aria-labelledby="ch15-story-title ch15-story-desc">
   <title id="ch15-story-title">從拖到最後補的註解，到用註解檢驗設計</title>
-  <desc id="ch15-story-desc">本章回顧。從拖到最後補的註解，到用註解檢驗設計。起點：幾乎所有人都把註解推遲到編碼和測試完成之後。理由是程式碼還在變，等穩定了再寫。結果往往是拖到最後根本不寫；即使回頭補，心思已在下一個專案上，設計時的考慮也記不清了，寫出來的多半只是在重複程式碼。；做法：作者的順序：類介面註解、方法介面註解和簽名、實例變數、方法體。方法體先留空，反覆修改介面註解直到基本結構合理。寫每個方法體之前先寫它的介面註解，這樣能專注於抽象和介面，程式碼寫完時註解也寫完了。；發現：註解是設計工具：方法需要很長的註解，就是抽象不夠好的危險訊號。註解是完整描述抽象的唯一方式。介面註解簡短又完整，說明介面簡單；介面註解必須描述實作的主要特性，說明方法是淺的。先寫註解，就能在寫實作之前檢查和調整抽象。；算賬：先寫註解不貴，還可能更省時間，而且更有趣。鍵入程式碼和註解的時間不到開發總時間的 10%，註解很可能不到 5%，推遲只省下其中一小部分。先寫註解讓抽象在編碼前更穩定，改動更少；作者也覺得這一階段最有趣。。這一章最想強調的：編寫註解的最佳時機是開發之初；先寫註解，文件就成了設計過程的一部分 只有完整、清晰的註解才能反映複雜性；描述方法或變數的註解若很難寫得簡單而完整，設計可能有問題</desc>
+  <desc id="ch15-story-desc">本章回顧。從拖到最後補的註解，到用註解檢驗設計。起點：作者見過的開發人員幾乎都把註解推遲到編碼和測試之後。理由是程式碼還在變，等穩定了再寫。結果往往是拖到最後根本不寫；即使回頭補，心思已在下一個專案上，設計時的考慮也記不清了，寫出來的多半只是在重複程式碼。；做法：作者的順序：類介面註解、方法介面註解和簽名、實例變數、方法體。方法體先留空，反覆修改介面註解直到基本結構合理。寫每個方法體之前先寫它的介面註解，這樣能專注於抽象和介面，程式碼寫完時註解也寫完了。；發現：註解是設計工具：方法需要很長的註解，就是抽象不夠好的危險訊號。註解是完整描述抽象的唯一方式。介面註解簡短又完整，說明介面簡單；介面註解必須描述實作的主要特性，說明方法是淺的。先寫註解，就能在寫實作之前檢查和調整抽象。；算賬：先寫註解不貴，還可能更省時間，而且更有趣。鍵入程式碼和註解不太可能超過開發總時間的約 10%；即使一半程式碼行是註解，寫註解也很可能不到 5%，推遲只省一小部分。先寫註解讓抽象更早穩定、改動更少；作者也覺得最有趣。。這一章最想強調的：編寫註解的最佳時機是開發之初；先寫註解，文件就成了設計過程的一部分 只有完整、清晰的註解才能反映複雜性；描述方法或變數的註解若很難寫得簡單而完整，設計可能有問題</desc>
   <rect width="960" height="719" fill="var(--diagram-bg,#e7eae6)" />
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <text x="32.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顧</text>
@@ -8,24 +8,24 @@
     <text x="32.0" y="62.0" font-size="26" font-weight="600">從拖到最後補的註解，到用註解檢驗設計</text>
     <circle cx="74.0" cy="122.0" r="22" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" stroke-width="2" /><g transform="translate(63.0,111.0) scale(0.917)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14" /><path d="M5 2h14" /><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" /><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" /></g>
     <text x="118.0" y="110.0" font-size="12" font-weight="600" fill="var(--diagram-danger,#a03946)">起點</text>
-    <text x="118.0" y="134.0" font-size="19" font-weight="600">幾乎所有人都把註解推遲到編碼和測試完成之後</text>
-    <text x="118.0" y="160.0" font-size="15">理由是程式碼還在變，等穩定了再寫。結果往往是拖到最後根本不寫；即使回頭補，心思已在下一個專案上，設計時的考慮也</text>
-    <text x="118.0" y="183.0" font-size="15">記不清了，寫出來的多半只是在重複程式碼。</text>
+    <text x="118.0" y="134.0" font-size="19" font-weight="600">作者見過的開發人員幾乎都把註解推遲到編碼和測試之後</text>
+    <text x="118.0" y="160.0" font-size="15">理由是程式碼還在變，等穩定了再寫。結果往往是拖到最後根本不寫；即使回頭補，心思已在下一個專案上，設計時的</text>
+    <text x="118.0" y="183.0" font-size="15">考慮也記不清了，寫出來的多半只是在重複程式碼。</text>
     <circle cx="74.0" cy="245.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,234.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9" /><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z" /></g>
     <text x="118.0" y="233.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">做法</text>
     <text x="118.0" y="257.0" font-size="19" font-weight="600">作者的順序：類介面註解、方法介面註解和簽名、實例變數、方法體</text>
-    <text x="118.0" y="283.0" font-size="15">方法體先留空，反覆修改介面註解直到基本結構合理。寫每個方法體之前先寫它的介面註解，這樣能專注於抽象和介面，代</text>
-    <text x="118.0" y="306.0" font-size="15">碼寫完時註解也寫完了。</text>
+    <text x="118.0" y="283.0" font-size="15">方法體先留空，反覆修改介面註解直到基本結構合理。寫每個方法體之前先寫它的介面註解，這樣能專注於抽象和接</text>
+    <text x="118.0" y="306.0" font-size="15">口，程式碼寫完時註解也寫完了。</text>
     <circle cx="74.0" cy="368.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,357.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></g>
     <text x="118.0" y="356.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">發現</text>
     <text x="118.0" y="380.0" font-size="19" font-weight="600">註解是設計工具：方法需要很長的註解，就是抽象不夠好的危險訊號</text>
-    <text x="118.0" y="406.0" font-size="15">註解是完整描述抽象的唯一方式。介面註解簡短又完整，說明介面簡單；介面註解必須描述實作的主要特性，說明方法是淺</text>
-    <text x="118.0" y="429.0" font-size="15">的。先寫註解，就能在寫實作之前檢查和調整抽象。</text>
+    <text x="118.0" y="406.0" font-size="15">註解是完整描述抽象的唯一方式。介面註解簡短又完整，說明介面簡單；介面註解必須描述實作的主要特性，說明方法</text>
+    <text x="118.0" y="429.0" font-size="15">是淺的。先寫註解，就能在寫實作之前檢查和調整抽象。</text>
     <circle cx="74.0" cy="491.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,480.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></g>
     <text x="118.0" y="479.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">算賬</text>
     <text x="118.0" y="503.0" font-size="19" font-weight="600">先寫註解不貴，還可能更省時間，而且更有趣</text>
-    <text x="118.0" y="529.0" font-size="15">鍵入程式碼和註解的時間不到開發總時間的 10%，註解很可能不到 5%，推遲只省下其中一小部分。先寫註解讓抽象在編碼前</text>
-    <text x="118.0" y="552.0" font-size="15">更穩定，改動更少；作者也覺得這一階段最有趣。</text>
+    <text x="118.0" y="529.0" font-size="15">鍵入程式碼和註解不太可能超過開發總時間的約 10%；即使一半程式碼行是註解，寫註解也很可能不到 5%，推遲只省一</text>
+    <text x="118.0" y="552.0" font-size="15">小部分。先寫註解讓抽象更早穩定、改動更少；作者也覺得最有趣。</text>
     <rect x="32.0" y="590.0" width="896.0" height="101.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
     <g transform="translate(50.0,610.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
     <text x="92.0" y="618.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">這一章最想強調的</text>

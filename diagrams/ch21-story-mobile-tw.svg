@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 1042" role="img" aria-labelledby="ch21-storym-title ch21-storym-desc">
   <title id="ch21-storym-title">從一個介面該不該知道退格鍵，到什麼是好品味</title>
-  <desc id="ch21-storym-desc">本章回顧。從一個介面該不該知道退格鍵，到什麼是好品味。起點：文字類需要知道使用者按了退格鍵嗎？。文字類只需要知道要刪除一段字元；呼叫者是因為退格還是別的原因並不重要。通用的插入刪除介面解決很多問題，專用的退格方法只解決一個：收益更廣的做法，往往更重要。；問題：兩類錯誤：把太多事看成重要，或漏掉真正重要的事。Java 的 I/O 介面迫使開發人員區分緩衝與非緩衝，而這個區別幾乎從來不重要，結果是淺類。沒認出重要的事，則會隱藏重要資訊或缺少重要功能，開發人員只能反覆實作。；做法：重要的事要少，而且醒目、重複、處於核心地位。先減少要關注的事：構造物件少要參數、給預設值，例外在低層處理完。真正重要的，放進介面文件、名稱、常用參數，讓它反覆出現，並處於核心地位，例如裝置驅動介面。；結論：看不出什麼重要時，先假設，再從結果中學。先提出“我認為這是最重要的”，據此構建系統看效果。對了，想想當時有什麼線索；錯了也沒關係，想想哪些線索本可以避免這個選擇。區分重要與不重要的能力，就是“好品味”。。這一章最想強調的：圍繞重要的事設計系統：重要的加以強調，不重要的儘可能隱藏 這個想法也適用於寫文件和生活：先確定幾件最重要的事，把精力盡可能放在上面</desc>
+  <desc id="ch21-storym-desc">本章回顧。從一個介面該不該知道退格鍵，到什麼是好品味。起點：文字類需要知道使用者按了退格鍵嗎？。文字類只需要知道要刪除一段字元；呼叫者是因為退格還是別的原因並不重要。通用的插入刪除介面解決很多問題，專用的退格方法只解決一個：收益更廣的做法，往往更重要。；問題：兩類錯誤：把太多事看成重要，或漏掉真正重要的事。Java 的 I/O 介面迫使開發人員區分緩衝與非緩衝，而這個區別幾乎從來不重要，往往導致淺類。沒認出重要的事，則會隱藏重要資訊或缺少重要功能，開發人員只能反覆實作。；做法：重要的事要少，而且醒目、重複、處於核心地位。先減少要關注的事：構造物件少要參數、給預設值，例外在低層處理完。真正重要的，放進介面文件、名稱、常用參數，讓它反覆出現，並處於核心地位，例如裝置驅動介面。；結論：看不出什麼重要時，先假設，再從結果中學。先提出“我認為這是最重要的”，據此構建系統看效果。對了，想想當時有什麼線索；錯了也沒關係，想想哪些線索本可以避免這個選擇。區分重要與不重要的能力，就是“好品味”。。這一章最想強調的：圍繞重要的事設計系統：重要的加以強調，不重要的儘可能隱藏 這個想法也適用於寫文件和生活：先確定幾件最重要的事，把精力盡可能放在上面</desc>
   <rect width="420" height="1042" fill="var(--diagram-bg,#e7eae6)" />
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <text x="22.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顧</text>
@@ -12,28 +12,28 @@
     <text x="76.0" y="158.0" font-size="18" font-weight="600">文字類需要知道使用者按了退格鍵嗎？</text>
     <text x="76.0" y="184.0" font-size="15">文字類只需要知道要刪除一段字元；呼叫者是因</text>
     <text x="76.0" y="207.0" font-size="15">為退格還是別的原因並不重要。通用的插入刪除</text>
-    <text x="76.0" y="230.0" font-size="15">介面解決很多問題，專用的退格方法只解決一個：</text>
-    <text x="76.0" y="253.0" font-size="15">收益更廣的做法，往往更重要。</text>
+    <text x="76.0" y="230.0" font-size="15">介面解決很多問題，專用的退格方法只解決一</text>
+    <text x="76.0" y="253.0" font-size="15">個：收益更廣的做法，往往更重要。</text>
     <circle cx="40.0" cy="315.0" r="18" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2" /><g transform="translate(31.0,306.0) scale(0.750)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></g>
     <text x="76.0" y="303.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">問題</text>
-    <text x="76.0" y="327.0" font-size="18" font-weight="600">兩類錯誤：把太多事看成重要，或漏掉真</text>
-    <text x="76.0" y="351.0" font-size="18" font-weight="600">正重要的事</text>
+    <text x="76.0" y="327.0" font-size="18" font-weight="600">兩類錯誤：把太多事看成重要，或漏掉</text>
+    <text x="76.0" y="351.0" font-size="18" font-weight="600">真正重要的事</text>
     <text x="76.0" y="377.0" font-size="15">Java 的 I/O 介面迫使開發人員區分緩衝與非緩</text>
-    <text x="76.0" y="400.0" font-size="15">衝，而這個區別幾乎從來不重要，結果是淺類。</text>
-    <text x="76.0" y="423.0" font-size="15">沒認出重要的事，則會隱藏重要資訊或缺少重要</text>
-    <text x="76.0" y="446.0" font-size="15">功能，開發人員只能反覆實作。</text>
+    <text x="76.0" y="400.0" font-size="15">衝，而這個區別幾乎從來不重要，往往導致淺</text>
+    <text x="76.0" y="423.0" font-size="15">類。沒認出重要的事，則會隱藏重要資訊或缺少</text>
+    <text x="76.0" y="446.0" font-size="15">重要功能，開發人員只能反覆實作。</text>
     <circle cx="40.0" cy="508.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(31.0,499.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
     <text x="76.0" y="496.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">做法</text>
-    <text x="76.0" y="520.0" font-size="18" font-weight="600">重要的事要少，而且醒目、重複、處於核</text>
-    <text x="76.0" y="544.0" font-size="18" font-weight="600">心地位</text>
+    <text x="76.0" y="520.0" font-size="18" font-weight="600">重要的事要少，而且醒目、重複、處於</text>
+    <text x="76.0" y="544.0" font-size="18" font-weight="600">核心地位</text>
     <text x="76.0" y="570.0" font-size="15">先減少要關注的事：構造物件少要參數、給預設</text>
     <text x="76.0" y="593.0" font-size="15">值，例外在低層處理完。真正重要的，放進介面</text>
     <text x="76.0" y="616.0" font-size="15">文件、名稱、常用參數，讓它反覆出現，並處於</text>
     <text x="76.0" y="639.0" font-size="15">核心地位，例如裝置驅動介面。</text>
     <circle cx="40.0" cy="701.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(31.0,692.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></g>
     <text x="76.0" y="689.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">結論</text>
-    <text x="76.0" y="713.0" font-size="18" font-weight="600">看不出什麼重要時，先假設，再從結果中</text>
-    <text x="76.0" y="737.0" font-size="18" font-weight="600">學</text>
+    <text x="76.0" y="713.0" font-size="18" font-weight="600">看不出什麼重要時，先假設，再從結果</text>
+    <text x="76.0" y="737.0" font-size="18" font-weight="600">中學</text>
     <text x="76.0" y="763.0" font-size="15">先提出“我認為這是最重要的”，據此構建系統</text>
     <text x="76.0" y="786.0" font-size="15">看效果。對了，想想當時有什麼線索；錯了也沒</text>
     <text x="76.0" y="809.0" font-size="15">關係，想想哪些線索本可以避免這個選擇。區分</text>
@@ -41,8 +41,8 @@
     <rect x="22.0" y="870.0" width="376.0" height="144.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
     <g transform="translate(40.0,890.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
     <text x="78.0" y="898.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">這一章最想強調的</text>
-    <text x="78.0" y="924.0" font-size="18" font-weight="600">圍繞重要的事設計系統：重要的加以強</text>
-    <text x="78.0" y="948.0" font-size="18" font-weight="600">調，不重要的儘可能隱藏</text>
+    <text x="78.0" y="924.0" font-size="18" font-weight="600">圍繞重要的事設計系統：重要的加以</text>
+    <text x="78.0" y="948.0" font-size="18" font-weight="600">強調，不重要的儘可能隱藏</text>
     <text x="78.0" y="972.0" font-size="14" fill="var(--diagram-muted,#5c645d)">這個想法也適用於寫文件和生活：先確定幾件最</text>
     <text x="78.0" y="993.0" font-size="14" fill="var(--diagram-muted,#5c645d)">重要的事，把精力盡可能放在上面</text>
   </g>

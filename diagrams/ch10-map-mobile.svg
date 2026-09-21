@@ -1,42 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 804" role="img" aria-labelledby="ch10m-title ch10m-desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 578" role="img" aria-labelledby="ch10m-title ch10m-desc">
   <title id="ch10m-title">怎样减少必须处理异常的地方？</title>
-  <desc id="ch10m-desc">本章概览。怎样减少必须处理异常的地方？ 本章的主要部分：在定义上规避：让错误根本不发生：Tcl 的 unset 改为“确保变量不再存在”，Unix 删除正在使用的文件时先标记、等关闭再释放；在底层屏蔽：高层不必知道：TCP 在内部重发丢失的数据包；NFS 服务器无响应时客户端一直重试，应用程序挂起等待，恢复后继续；在顶层聚合：一个处理程序捕获多种异常：Web 服务器让参数缺失等异常一路传到顶层分发器，由一个处理程序统一生成错误响应；让程序崩溃：难处理又少见的错误：内存耗尽、磁盘硬错误这类错误很少发生又几乎无法恢复，打印诊断信息后中止程序。一句话：最好重新定义语义让错误不发生；规避不了的在底层屏蔽，或传到顶层聚合处理；难处理又少见的让程序崩溃</desc>
-  <rect width="420" height="804" fill="var(--diagram-bg,#e7eae6)"/>
+  <desc id="ch10m-desc">本章概览。怎样减少必须处理异常的地方？ 本章的主要部分：通过定义来规避：改一下操作的定义，就没有错误可报；在底层处理掉：TCP 内部重发丢失的包，高层不必知道；顶层集中处理：多种异常传到顶层，交给一个处理程序；让程序崩溃：少见又难处理的错误，例如内存耗尽。一句话：最好重新定义让错误不发生；规避不了的在底层处理掉或顶层集中处理；少见又难办的让程序崩溃</desc>
+  <rect width="420" height="578" fill="var(--diagram-bg,#e7eae6)"/>
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <defs><marker id="ch10m-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)"/></marker></defs>
     <text x="22.0" y="44.0" font-size="23" font-weight="600">怎样减少必须处理异常的地方？</text>
-    <text x="22.0" y="80.0" font-size="13" fill="var(--diagram-muted,#5c645d)">抛异常容易，处理异常难，复杂性来自处理代码。四种办法，按</text>
-    <text x="22.0" y="100.0" font-size="13" fill="var(--diagram-muted,#5c645d)">错误走多远排列：从根本不发生，到离开整个程序</text>
-    <text x="22.0" y="132.0" font-size="16" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">从上到下</text>
-    <rect x="22.0" y="148.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-warm-soft,#eae2cf)"/>
-    <circle cx="50.0" cy="174.0" r="14" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2"/><g transform="translate(42.0,166.0) scale(0.667)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18v-6a5 5 0 1 1 10 0v6"/><path d="M5 21a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z"/><path d="M21 12h1"/><path d="M18.5 4.5 18 5"/><path d="M2 12h1"/><path d="M12 2v1"/><path d="m4.929 4.929.707.707"/><path d="M12 12v6"/></g>
-    <text x="74.0" y="179.0" font-size="18" font-weight="600">让程序崩溃：难处理又少见的错误</text>
-    <text x="74.0" y="204.0" font-size="15" fill="var(--diagram-muted,#5c645d)">内存耗尽、磁盘硬错误这类错误很少发生又几</text>
-    <text x="74.0" y="226.0" font-size="15" fill="var(--diagram-muted,#5c645d)">乎无法恢复，打印诊断信息后中止程序</text>
-    <rect x="22.0" y="246.0" width="376.0" height="112.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)"/>
-    <circle cx="50.0" cy="272.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(42.0,264.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/></g>
-    <text x="74.0" y="277.0" font-size="18" font-weight="600">在顶层聚合：一个处理程序捕获多种</text>
-    <text x="74.0" y="301.0" font-size="18" font-weight="600">异常</text>
-    <text x="74.0" y="326.0" font-size="15" fill="var(--diagram-muted,#5c645d)">Web 服务器让参数缺失等异常一路传到顶层分</text>
-    <text x="74.0" y="348.0" font-size="15" fill="var(--diagram-muted,#5c645d)">发器，由一个处理程序统一生成错误响应</text>
-    <rect x="22.0" y="368.0" width="376.0" height="110.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)"/>
-    <circle cx="50.0" cy="394.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(42.0,386.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></g>
-    <text x="74.0" y="399.0" font-size="18" font-weight="600">在底层屏蔽：高层不必知道</text>
-    <text x="74.0" y="424.0" font-size="15" fill="var(--diagram-muted,#5c645d)">TCP 在内部重发丢失的数据包；NFS 服务器</text>
-    <text x="74.0" y="446.0" font-size="15" fill="var(--diagram-muted,#5c645d)">无响应时客户端一直重试，应用程序挂起等</text>
-    <text x="74.0" y="468.0" font-size="15" fill="var(--diagram-muted,#5c645d)">待，恢复后继续</text>
-    <rect x="22.0" y="488.0" width="376.0" height="110.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)"/>
-    <circle cx="50.0" cy="514.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(42.0,506.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></g>
-    <text x="74.0" y="519.0" font-size="18" font-weight="600">在定义上规避：让错误根本不发生</text>
-    <text x="74.0" y="544.0" font-size="15" fill="var(--diagram-muted,#5c645d)">Tcl 的 unset 改为“确保变量不再存在”，</text>
-    <text x="74.0" y="566.0" font-size="15" fill="var(--diagram-muted,#5c645d)">Unix 删除正在使用的文件时先标记、等关闭</text>
-    <text x="74.0" y="588.0" font-size="15" fill="var(--diagram-muted,#5c645d)">再释放</text>
-    <text x="22.0" y="620.0" font-size="13" fill="var(--diagram-muted,#5c645d)">做过头了：一个学生团队屏蔽了所有网络异常，应用程序再也无</text>
-    <text x="22.0" y="640.0" font-size="13" fill="var(--diagram-muted,#5c645d)">法知道消息是否丢失。调用者需要的信息必须暴露</text>
-    <rect x="22.0" y="666.0" width="376.0" height="116.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)"/>
-    <text x="36.0" y="687.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句话</text>
-    <text x="36.0" y="713.0" font-size="17" font-weight="600">最好重新定义语义让错误不发生；规避不了的</text>
-    <text x="36.0" y="739.0" font-size="17" font-weight="600">在底层屏蔽，或传到顶层聚合处理；难处理又</text>
-    <text x="36.0" y="765.0" font-size="17" font-weight="600">少见的让程序崩溃</text>
+    <text x="22.0" y="80.0" font-size="13" fill="var(--diagram-muted,#5c645d)">按错误走多远排列：顶部中止程序，底部根本不发生</text>
+    <text x="22.0" y="112.0" font-size="16" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">从上到下</text>
+    <rect x="22.0" y="128.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-warm-soft,#eae2cf)"/>
+    <circle cx="50.0" cy="154.0" r="14" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2"/><g transform="translate(42.0,146.0) scale(0.667)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18v-6a5 5 0 1 1 10 0v6"/><path d="M5 21a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z"/><path d="M21 12h1"/><path d="M18.5 4.5 18 5"/><path d="M2 12h1"/><path d="M12 2v1"/><path d="m4.929 4.929.707.707"/><path d="M12 12v6"/></g>
+    <text x="74.0" y="159.0" font-size="18" font-weight="600">让程序崩溃</text>
+    <text x="74.0" y="184.0" font-size="15" fill="var(--diagram-muted,#5c645d)">少见又难处理的错误，例如内存耗尽</text>
+    <rect x="22.0" y="204.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <circle cx="50.0" cy="230.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(42.0,222.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/></g>
+    <text x="74.0" y="235.0" font-size="18" font-weight="600">顶层集中处理</text>
+    <text x="74.0" y="260.0" font-size="15" fill="var(--diagram-muted,#5c645d)">多种异常传到顶层，交给一个处理程序</text>
+    <rect x="22.0" y="280.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <circle cx="50.0" cy="306.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(42.0,298.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></g>
+    <text x="74.0" y="311.0" font-size="18" font-weight="600">在底层处理掉</text>
+    <text x="74.0" y="336.0" font-size="15" fill="var(--diagram-muted,#5c645d)">TCP 内部重发丢失的包，高层不必知道</text>
+    <rect x="22.0" y="356.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <circle cx="50.0" cy="382.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(42.0,374.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></g>
+    <text x="74.0" y="387.0" font-size="18" font-weight="600">通过定义来规避</text>
+    <text x="74.0" y="412.0" font-size="15" fill="var(--diagram-muted,#5c645d)">改一下操作的定义，就没有错误可报</text>
+    <rect x="22.0" y="440.0" width="376.0" height="116.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="36.0" y="461.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句话</text>
+    <text x="36.0" y="487.0" font-size="17" font-weight="600">最好重新定义让错误不发生；规避不了的在</text>
+    <text x="36.0" y="513.0" font-size="17" font-weight="600">底层处理掉或顶层集中处理；少见又难办的</text>
+    <text x="36.0" y="539.0" font-size="17" font-weight="600">让程序崩溃</text>
   </g>
 </svg>

@@ -1,49 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 526" role="img" aria-labelledby="ch14-title ch14-desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 482" role="img" aria-labelledby="ch14-title ch14-desc">
   <title id="ch14-title">怎样为变量和方法选一个好名称？</title>
-  <desc id="ch14-desc">本章概览。怎样为变量和方法选一个好名称？ 本章的主要部分：精确：block 既指磁盘块也指文件块，引出追查六个月的缺陷；fileBlock、diskBlock 就分得开；一致：同一种用途始终用同一个名称，且这个名称不用于别的用途；循环变量 i 总在外层，j 总在内层；去掉多余的词：fileObject 里的 Object、匈牙利命名法的类型前缀、File 类里的 fileBlock，都没有提供新信息；起名难是危险信号：想不出精确、直观又不长的名称，说明变量的定义或用途可能不清楚；也许它表示了多个事物，该拆开。一句话：好名称让读者第一次遇到就能正确猜出它指什么：精确、一致、没有多余的词，起名困难就是设计的危险信号</desc>
-  <rect width="960" height="526" fill="var(--diagram-bg,#e7eae6)"/>
+  <desc id="ch14-desc">本章概览。怎样为变量和方法选一个好名称？ 本章的主要部分：精确：block 一词指两种块，引出追查六个月的缺陷；一致：同一用途始终用同一名称，不作他用；去掉多余的词：每个词都要提供信息，fileObject 里的 Object 就多余。一句话：读者第一次遇到就能正确猜出它指什么：精确、一致、没有多余的词；起名困难则是设计的危险信号</desc>
+  <rect width="960" height="482" fill="var(--diagram-bg,#e7eae6)"/>
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <defs><marker id="ch14-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)"/></marker></defs>
     <text x="32.0" y="52.0" font-size="30" font-weight="600">怎样为变量和方法选一个好名称？</text>
     <rect x="32.0" y="84.0" width="896.0" height="70.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
     <g transform="translate(52.0,105.0) scale(1.167)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></g>
-    <text x="94.0" y="114.0" font-size="20" font-weight="600">目标：读者只看名称，就能对它指的东西形成清晰的印象</text>
-    <text x="94.0" y="138.0" font-size="15" fill="var(--diagram-muted,#5c645d)">名称本身就是一种文档；成千上万个变量都选好名称，系统的复杂性就会明显不同</text>
-    <rect x="32.0" y="172.0" width="210.5" height="206.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)"/>
-    <rect x="46.0" y="260" width="182.5" height="1" fill="var(--diagram-line,#aebbad)"/>
-    <g transform="translate(46.0,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></g>
+    <text x="94.0" y="114.0" font-size="20" font-weight="600">目标：读者只看名称，就能对所指事物形成清晰印象</text>
+    <text x="94.0" y="138.0" font-size="15" fill="var(--diagram-muted,#5c645d)">名称本身就是一种文档</text>
+    <rect x="32.0" y="172.0" width="286.7" height="162.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <rect x="46.0" y="260" width="258.7" height="1" fill="var(--diagram-line,#aebbad)"/>
+    <g transform="translate(46.0,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/></g>
     <text x="46.0" y="248.0" font-size="18" font-weight="600">精确</text>
-    <text x="46.0" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">block 既指磁盘块也指文件</text>
-    <text x="46.0" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">块，引出追查六个月的缺</text>
-    <text x="46.0" y="326.0" font-size="15" fill="var(--diagram-muted,#5c645d)">陷；fileBlock、</text>
-    <text x="46.0" y="348.0" font-size="15" fill="var(--diagram-muted,#5c645d)">diskBlock 就分得开</text>
-    <rect x="260.5" y="172.0" width="210.5" height="206.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)"/>
-    <rect x="274.5" y="260" width="182.5" height="1" fill="var(--diagram-line,#aebbad)"/>
-    <g transform="translate(274.5,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></g>
-    <text x="274.5" y="248.0" font-size="18" font-weight="600">一致</text>
-    <text x="274.5" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">同一种用途始终用同一个名</text>
-    <text x="274.5" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">称，且这个名称不用于别的</text>
-    <text x="274.5" y="326.0" font-size="15" fill="var(--diagram-muted,#5c645d)">用途；循环变量 i 总在外</text>
-    <text x="274.5" y="348.0" font-size="15" fill="var(--diagram-muted,#5c645d)">层，j 总在内层</text>
-    <rect x="489.0" y="172.0" width="210.5" height="206.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)"/>
-    <rect x="503.0" y="260" width="182.5" height="1" fill="var(--diagram-line,#aebbad)"/>
-    <g transform="translate(503.0,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></g>
-    <text x="503.0" y="248.0" font-size="18" font-weight="600">去掉多余的词</text>
-    <text x="503.0" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">fileObject 里的 Object、</text>
-    <text x="503.0" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">匈牙利命名法的类型前缀、</text>
-    <text x="503.0" y="326.0" font-size="15" fill="var(--diagram-muted,#5c645d)">File 类里的 fileBlock，</text>
-    <text x="503.0" y="348.0" font-size="15" fill="var(--diagram-muted,#5c645d)">都没有提供新信息</text>
-    <rect x="717.5" y="172.0" width="210.5" height="206.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)"/>
-    <rect x="731.5" y="260" width="182.5" height="1" fill="var(--diagram-line,#aebbad)"/>
-    <g transform="translate(731.5,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></g>
-    <text x="731.5" y="248.0" font-size="18" font-weight="600">起名难是危险信号</text>
-    <text x="731.5" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">想不出精确、直观又不长的</text>
-    <text x="731.5" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">名称，说明变量的定义或用</text>
-    <text x="731.5" y="326.0" font-size="15" fill="var(--diagram-muted,#5c645d)">途可能不清楚；也许它表示</text>
-    <text x="731.5" y="348.0" font-size="15" fill="var(--diagram-muted,#5c645d)">了多个事物，该拆开</text>
-    <rect x="32.0" y="400.0" width="896.0" height="98.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)"/>
-    <text x="50.0" y="421.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句话</text>
-    <text x="50.0" y="451.0" font-size="21" font-weight="600">好名称让读者第一次遇到就能正确猜出它指什么：精确、一致、没有多余的词，起名困难就</text>
-    <text x="50.0" y="481.0" font-size="21" font-weight="600">是设计的危险信号</text>
+    <text x="46.0" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">block 一词指两种块，引出追查六个</text>
+    <text x="46.0" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">月的缺陷</text>
+    <rect x="336.7" y="172.0" width="286.7" height="162.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <rect x="350.7" y="260" width="258.7" height="1" fill="var(--diagram-line,#aebbad)"/>
+    <g transform="translate(350.7,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></g>
+    <text x="350.7" y="248.0" font-size="18" font-weight="600">一致</text>
+    <text x="350.7" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">同一用途始终用同一名称，不作他用</text>
+    <rect x="641.3" y="172.0" width="286.7" height="162.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <rect x="655.3" y="260" width="258.7" height="1" fill="var(--diagram-line,#aebbad)"/>
+    <g transform="translate(655.3,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></g>
+    <text x="655.3" y="248.0" font-size="18" font-weight="600">去掉多余的词</text>
+    <text x="655.3" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">每个词都要提供信息，fileObject</text>
+    <text x="655.3" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">里的 Object 就多余</text>
+    <rect x="32.0" y="356.0" width="896.0" height="98.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="50.0" y="377.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句话</text>
+    <text x="50.0" y="407.0" font-size="21" font-weight="600">读者第一次遇到就能正确猜出它指什么：精确、一致、没有多余的词；起名困难则是设计</text>
+    <text x="50.0" y="437.0" font-size="21" font-weight="600">的危险信号</text>
   </g>
 </svg>

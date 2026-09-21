@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 842" role="img" aria-labelledby="ch06-story-title ch06-story-desc">
   <title id="ch06-story-title">從為退格鍵專門寫一個方法，到兩個通用方法管所有文字修改</title>
-  <desc id="ch06-story-desc">本章回顧。從為退格鍵專門寫一個方法，到兩個通用方法管所有文字修改。起點：學生按介面操作給文字類加方法。退格鍵一個方法，刪除鍵一個方法，刪除所選區域再一個。許多方法只在一處呼叫，介面開發人員卻要學一大堆方法；每加一種介面操作，還得去改文字類。；問題：專用化造成資訊洩露，還是錯誤的抽象。退格鍵、所選區域這些介面概念出現在文字類裡，兩個類綁在一起，無法獨立開發。backspace 方法想藏住刪哪些字元，可介面恰恰需要知道這一點，只能去讀它的程式碼。；轉折：通用 API 只需 insert 和 delete。退格鍵寫成刪除游標前一個字元，刪除鍵寫成刪除游標後一個字元。程式碼略長，但一眼能看出刪的是什麼；文字類總程式碼更少，還能直接用於查詢替換程式。；做法：專用程式碼總會有，把它和通用程式碼分開。介面細節上移到介面層，裝置差異下移到驅動程式。撤銷機制中，History 類只管操作列表，各種具體操作由懂它的模組實作，將來加新操作不用改它。；細節：方法體裡也一樣：消除特殊情況。學生用一個狀態變量表示有沒有所選區域，結果到處都是檢查。讓所選區域始終存在，沒有時就是起止相同的空選區，複製、刪除的程式碼不用特殊處理也能正確。。這一章最想強調的：過度專用化可能是軟體最大的複雜性來源；通用的模組更深、程式碼更少 要適度：功能反映當前需求，介面不侷限於當前用途；對當前需求不好用，說明通用過頭了</desc>
+  <desc id="ch06-story-desc">本章回顧。從為退格鍵專門寫一個方法，到兩個通用方法管所有文字修改。起點：學生按介面操作給文字類加方法。退格鍵一個方法，刪除鍵一個方法，刪除所選區域再一個。許多方法只在一處呼叫，介面開發人員卻要學一大堆方法；每加一種介面操作，還得去改文字類。；問題：專用化造成資訊洩露，也是錯誤的抽象。退格鍵、所選區域這些介面概念出現在文字類裡，兩個類綁在一起，無法獨立開發。backspace 方法想藏住刪哪些字元，可介面恰恰需要知道這一點，只能去讀它的程式碼。；轉折：通用 API 只需 insert 和 delete。退格鍵寫成刪除游標前一個字元，刪除鍵寫成刪除游標後一個字元。程式碼略長，但一眼能看出刪的是什麼；文字類總程式碼更少，還能用於查詢替換程式。；做法：專用程式碼總會有，把它和通用程式碼分開。介面細節上移到介面層，裝置差異下移到驅動程式。撤銷機制中，History 類只管操作列表，各種具體操作由懂它的模組實作，將來加新操作不用改它。；細節：方法體裡也一樣：消除特殊情況。學生用一個狀態變量表示有沒有所選區域，結果到處都是檢查。讓所選區域始終存在，沒有時就是起止相同的空選區，複製、刪除的程式碼不用特殊處理也能正確。。這一章最想強調的：過度專用化可能是軟體最大的複雜性來源；通用的模組更深、程式碼更少 要適度：功能反映當前需求，介面不侷限於當前用途；對當前需求不好用，說明通用過頭了</desc>
   <rect width="960" height="842" fill="var(--diagram-bg,#e7eae6)" />
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <text x="32.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顧</text>
@@ -9,28 +9,28 @@
     <circle cx="74.0" cy="122.0" r="22" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(63.0,111.0) scale(0.917)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9" /><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z" /></g>
     <text x="118.0" y="110.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起點</text>
     <text x="118.0" y="134.0" font-size="19" font-weight="600">學生按介面操作給文字類加方法</text>
-    <text x="118.0" y="160.0" font-size="15">退格鍵一個方法，刪除鍵一個方法，刪除所選區域再一個。許多方法只在一處呼叫，介面開發人員卻要學一大堆方法；每加</text>
-    <text x="118.0" y="183.0" font-size="15">一種介面操作，還得去改文字類。</text>
+    <text x="118.0" y="160.0" font-size="15">退格鍵一個方法，刪除鍵一個方法，刪除所選區域再一個。許多方法只在一處呼叫，介面開發人員卻要學一大堆方法；</text>
+    <text x="118.0" y="183.0" font-size="15">每加一種介面操作，還得去改文字類。</text>
     <circle cx="74.0" cy="245.0" r="22" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" stroke-width="2" /><g transform="translate(63.0,234.0) scale(0.917)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /><circle cx="12" cy="12" r="3" /></g>
     <text x="118.0" y="233.0" font-size="12" font-weight="600" fill="var(--diagram-danger,#a03946)">問題</text>
-    <text x="118.0" y="257.0" font-size="19" font-weight="600">專用化造成資訊洩露，還是錯誤的抽象</text>
-    <text x="118.0" y="283.0" font-size="15">退格鍵、所選區域這些介面概念出現在文字類裡，兩個類綁在一起，無法獨立開發。backspace 方法想藏住刪哪些字元，</text>
-    <text x="118.0" y="306.0" font-size="15">可介面恰恰需要知道這一點，只能去讀它的程式碼。</text>
+    <text x="118.0" y="257.0" font-size="19" font-weight="600">專用化造成資訊洩露，也是錯誤的抽象</text>
+    <text x="118.0" y="283.0" font-size="15">退格鍵、所選區域這些介面概念出現在文字類裡，兩個類綁在一起，無法獨立開發。backspace 方法想藏住刪哪些字</text>
+    <text x="118.0" y="306.0" font-size="15">符，可介面恰恰需要知道這一點，只能去讀它的程式碼。</text>
     <circle cx="74.0" cy="368.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,357.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></g>
     <text x="118.0" y="356.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">轉折</text>
     <text x="118.0" y="380.0" font-size="19" font-weight="600">通用 API 只需 insert 和 delete</text>
-    <text x="118.0" y="406.0" font-size="15">退格鍵寫成刪除游標前一個字元，刪除鍵寫成刪除游標後一個字元。程式碼略長，但一眼能看出刪的是什麼；文字類總程式碼更</text>
-    <text x="118.0" y="429.0" font-size="15">少，還能直接用於查詢替換程式。</text>
+    <text x="118.0" y="406.0" font-size="15">退格鍵寫成刪除游標前一個字元，刪除鍵寫成刪除游標後一個字元。程式碼略長，但一眼能看出刪的是什麼；文字類總</text>
+    <text x="118.0" y="429.0" font-size="15">程式碼更少，還能用於查詢替換程式。</text>
     <circle cx="74.0" cy="491.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,480.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5" /><path d="M8 3H3v5" /><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3" /><path d="m15 9 6-6" /></g>
     <text x="118.0" y="479.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">做法</text>
     <text x="118.0" y="503.0" font-size="19" font-weight="600">專用程式碼總會有，把它和通用程式碼分開</text>
-    <text x="118.0" y="529.0" font-size="15">介面細節上移到介面層，裝置差異下移到驅動程式。撤銷機制中，History 類只管操作列表，各種具體操作由懂它的模組</text>
-    <text x="118.0" y="552.0" font-size="15">實作，將來加新操作不用改它。</text>
+    <text x="118.0" y="529.0" font-size="15">介面細節上移到介面層，裝置差異下移到驅動程式。撤銷機制中，History 類只管操作列表，各種具體操作由懂它的模</text>
+    <text x="118.0" y="552.0" font-size="15">塊實作，將來加新操作不用改它。</text>
     <circle cx="74.0" cy="614.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,603.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></g>
     <text x="118.0" y="602.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">細節</text>
     <text x="118.0" y="626.0" font-size="19" font-weight="600">方法體裡也一樣：消除特殊情況</text>
-    <text x="118.0" y="652.0" font-size="15">學生用一個狀態變量表示有沒有所選區域，結果到處都是檢查。讓所選區域始終存在，沒有時就是起止相同的空選區，復</text>
-    <text x="118.0" y="675.0" font-size="15">制、刪除的程式碼不用特殊處理也能正確。</text>
+    <text x="118.0" y="652.0" font-size="15">學生用一個狀態變量表示有沒有所選區域，結果到處都是檢查。讓所選區域始終存在，沒有時就是起止相同的空選區，</text>
+    <text x="118.0" y="675.0" font-size="15">複製、刪除的程式碼不用特殊處理也能正確。</text>
     <rect x="32.0" y="713.0" width="896.0" height="101.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
     <g transform="translate(50.0,733.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
     <text x="92.0" y="741.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">這一章最想強調的</text>

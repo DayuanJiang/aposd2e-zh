@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 968" role="img" aria-labelledby="ch02-storym-title ch02-storym-desc">
-  <title id="ch02-storym-title">從改一個橫幅顏色要改上千個頁面，到複雜性的兩個根源</title>
-  <desc id="ch02-storym-desc">本章回顧。從改一個橫幅顏色要改上千個頁面，到複雜性的兩個根源。起點：複雜性：讓系統難以理解和修改的因素。軟體系統結構中，任何讓系統難以理解和修改的因素都是複雜性。它和規模、功能多少沒有必然聯絡，小系統也可能很複雜。讀者比作者更容易察覺複雜性。；症狀：變更放大、認知負荷、未知的未知。改橫幅顏色要逐頁修改；用某個 C 函式得記住釋放它分配的記憶體；改了中心變數，卻不知道哪些頁面還單獨寫了強調色。最後一種最糟，你連該改哪裡都不知道。；根源：兩個根源：依賴性和模糊性。依賴性：改一段程式碼，別的程式碼也得跟著改，例如方法加了參數，所有呼叫都要改。模糊性：重要資訊不明顯，例如變數叫 time 卻沒說單位。；結論：複雜性是一點點積累出來的。單個依賴或一處模糊，本身影響不大。麻煩的是每個人對每次修改都覺得這一點沒什麼大不了，成百上千個小問題積累後，每次修改都會碰到好幾個，也很難再消除。。這一章最想強調的：複雜性來自依賴性和模糊性的積累，讓修改現有程式碼變得困難而危險 依賴無法完全消除，目標是讓它更少、更簡單、更明顯；把複雜性隔離到不必接觸的地方，幾乎等於消除</desc>
-  <rect width="420" height="968" fill="var(--diagram-bg,#e7eae6)" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 991" role="img" aria-labelledby="ch02-storym-title ch02-storym-desc">
+  <title id="ch02-storym-title">從改一個橫幅顏色要改數千個頁面，到複雜性的兩個根源</title>
+  <desc id="ch02-storym-desc">本章回顧。從改一個橫幅顏色要改數千個頁面，到複雜性的兩個根源。起點：複雜性：讓系統難以理解和修改的因素。軟體系統結構中，任何讓系統難以理解和修改的因素都是複雜性。它和規模、功能多少沒有必然聯絡，小系統也可能很複雜。讀者比作者更容易察覺複雜性。；症狀：變更放大、認知負荷、未知的未知。改橫幅顏色要逐頁修改；用某個 C 函式得記住釋放它分配的記憶體；改了中心變數，卻不知道哪些頁面還單獨寫了強調色。最後一種最糟，你連該改哪裡都不知道。；根源：兩個根源：依賴性和模糊性。依賴性：改一段程式碼，得顧及甚至修改別的程式碼，例如方法加了參數，所有呼叫都要改。模糊性：重要資訊不明顯，例如變數叫 time 卻沒說單位。；結論：複雜性是一點點積累出來的。單個依賴或一處模糊，本身影響不大。麻煩的是每個人對每次修改都覺得這一點沒什麼大不了，成百上千個小問題積累後，每次修改都會碰到好幾個，也很難再消除。。這一章最想強調的：複雜性來自依賴性和模糊性的積累，讓修改現有程式碼變得困難而危險 依賴無法完全消除，目標是讓它更少、更簡單、更明顯；把複雜性隔離到不必接觸的地方，幾乎等於消除</desc>
+  <rect width="420" height="991" fill="var(--diagram-bg,#e7eae6)" />
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <text x="22.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顧</text>
-    <path d="M40 168 V 608" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" />
-    <text x="22.0" y="62.0" font-size="21" font-weight="600">從改一個橫幅顏色要改上千個頁面，到</text>
+    <path d="M40 168 V 631" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" />
+    <text x="22.0" y="62.0" font-size="21" font-weight="600">從改一個橫幅顏色要改數千個頁面，到</text>
     <text x="22.0" y="90.0" font-size="21" font-weight="600">複雜性的兩個根源</text>
     <circle cx="40.0" cy="146.0" r="18" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(31.0,137.0) scale(0.750)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></g>
     <text x="76.0" y="134.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起點</text>
@@ -17,30 +17,31 @@
     <circle cx="40.0" cy="315.0" r="18" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2" /><g transform="translate(31.0,306.0) scale(0.750)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></g>
     <text x="76.0" y="303.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">症狀</text>
     <text x="76.0" y="327.0" font-size="18" font-weight="600">變更放大、認知負荷、未知的未知</text>
-    <text x="76.0" y="353.0" font-size="15">改橫幅顏色要逐頁修改；用某個 C 函式得記住釋</text>
-    <text x="76.0" y="376.0" font-size="15">放它分配的記憶體；改了中心變數，卻不知道哪些</text>
-    <text x="76.0" y="399.0" font-size="15">頁面還單獨寫了強調色。最後一種最糟，你連該</text>
-    <text x="76.0" y="422.0" font-size="15">改哪裡都不知道。</text>
+    <text x="76.0" y="353.0" font-size="15">改橫幅顏色要逐頁修改；用某個 C 函式得記住</text>
+    <text x="76.0" y="376.0" font-size="15">釋放它分配的記憶體；改了中心變數，卻不知道</text>
+    <text x="76.0" y="399.0" font-size="15">哪些頁面還單獨寫了強調色。最後一種最糟，你</text>
+    <text x="76.0" y="422.0" font-size="15">連該改哪裡都不知道。</text>
     <circle cx="40.0" cy="484.0" r="18" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" stroke-width="2" /><g transform="translate(31.0,475.0) scale(0.750)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1" /><rect x="2" y="16" width="6" height="6" rx="1" /><rect x="9" y="2" width="6" height="6" rx="1" /><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" /><path d="M12 12V8" /></g>
     <text x="76.0" y="472.0" font-size="12" font-weight="600" fill="var(--diagram-danger,#a03946)">根源</text>
     <text x="76.0" y="496.0" font-size="18" font-weight="600">兩個根源：依賴性和模糊性</text>
-    <text x="76.0" y="522.0" font-size="15">依賴性：改一段程式碼，別的程式碼也得跟著改，例</text>
-    <text x="76.0" y="545.0" font-size="15">如方法加了參數，所有呼叫都要改。模糊性：重</text>
-    <text x="76.0" y="568.0" font-size="15">要資訊不明顯，例如變數叫 time 卻沒說單位。</text>
-    <circle cx="40.0" cy="630.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(31.0,621.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14" /><path d="M5 2h14" /><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" /><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" /></g>
-    <text x="76.0" y="618.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">結論</text>
-    <text x="76.0" y="642.0" font-size="18" font-weight="600">複雜性是一點點積累出來的</text>
-    <text x="76.0" y="668.0" font-size="15">單個依賴或一處模糊，本身影響不大。麻煩的是</text>
-    <text x="76.0" y="691.0" font-size="15">每個人對每次修改都覺得這一點沒什麼大不了，</text>
-    <text x="76.0" y="714.0" font-size="15">成百上千個小問題積累後，每次修改都會碰到好</text>
-    <text x="76.0" y="737.0" font-size="15">幾個，也很難再消除。</text>
-    <rect x="22.0" y="775.0" width="376.0" height="165.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
-    <g transform="translate(40.0,795.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
-    <text x="78.0" y="803.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">這一章最想強調的</text>
-    <text x="78.0" y="829.0" font-size="18" font-weight="600">複雜性來自依賴性和模糊性的積累，讓</text>
-    <text x="78.0" y="853.0" font-size="18" font-weight="600">修改現有程式碼變得困難而危險</text>
-    <text x="78.0" y="877.0" font-size="14" fill="var(--diagram-muted,#5c645d)">依賴無法完全消除，目標是讓它更少、更簡單、</text>
-    <text x="78.0" y="898.0" font-size="14" fill="var(--diagram-muted,#5c645d)">更明顯；把複雜性隔離到不必接觸的地方，幾乎</text>
-    <text x="78.0" y="919.0" font-size="14" fill="var(--diagram-muted,#5c645d)">等於消除</text>
+    <text x="76.0" y="522.0" font-size="15">依賴性：改一段程式碼，得顧及甚至修改別的代</text>
+    <text x="76.0" y="545.0" font-size="15">碼，例如方法加了參數，所有呼叫都要改。模糊</text>
+    <text x="76.0" y="568.0" font-size="15">性：重要資訊不明顯，例如變數叫 time 卻沒說</text>
+    <text x="76.0" y="591.0" font-size="15">單位。</text>
+    <circle cx="40.0" cy="653.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(31.0,644.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14" /><path d="M5 2h14" /><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" /><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" /></g>
+    <text x="76.0" y="641.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">結論</text>
+    <text x="76.0" y="665.0" font-size="18" font-weight="600">複雜性是一點點積累出來的</text>
+    <text x="76.0" y="691.0" font-size="15">單個依賴或一處模糊，本身影響不大。麻煩的是</text>
+    <text x="76.0" y="714.0" font-size="15">每個人對每次修改都覺得這一點沒什麼大不了，</text>
+    <text x="76.0" y="737.0" font-size="15">成百上千個小問題積累後，每次修改都會碰到好</text>
+    <text x="76.0" y="760.0" font-size="15">幾個，也很難再消除。</text>
+    <rect x="22.0" y="798.0" width="376.0" height="165.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <g transform="translate(40.0,818.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
+    <text x="78.0" y="826.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">這一章最想強調的</text>
+    <text x="78.0" y="852.0" font-size="18" font-weight="600">複雜性來自依賴性和模糊性的積累，</text>
+    <text x="78.0" y="876.0" font-size="18" font-weight="600">讓修改現有程式碼變得困難而危險</text>
+    <text x="78.0" y="900.0" font-size="14" fill="var(--diagram-muted,#5c645d)">依賴無法完全消除，目標是讓它更少、更簡單、</text>
+    <text x="78.0" y="921.0" font-size="14" fill="var(--diagram-muted,#5c645d)">更明顯；把複雜性隔離到不必接觸的地方，幾乎</text>
+    <text x="78.0" y="942.0" font-size="14" fill="var(--diagram-muted,#5c645d)">等於消除</text>
   </g>
 </svg>

@@ -1,41 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 754" role="img" aria-labelledby="ch21m-title ch21m-desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 596" role="img" aria-labelledby="ch21m-title ch21m-desc">
   <title id="ch21m-title">怎樣分清什麼重要、什麼不重要？</title>
-  <desc id="ch21m-desc">本章概覽。怎樣分清什麼重要、什麼不重要？ 本章的主要部分：判斷什麼重要：看收益是否廣泛：通用的插入刪除介面解決很多問題，退格專用方法只解決一個；減少重要的事：構造物件時少要參數，提供預設值；例外在低層處理完，上層不必關心；強調重要的事：讓它醒目、反覆出現、處於核心地位，例如眾多驅動都依賴的裝置驅動介面；隱藏不重要的事：儘量隱藏，不讓開發人員頻繁接觸，也不讓它影響系統結構。一句話：看哪種做法收益更廣；重要的事要少，並放在醒目、核心的位置；不重要的事藏起來，不讓它影響結構</desc>
-  <rect width="420" height="754" fill="var(--diagram-bg,#e7eae6)" />
+  <desc id="ch21m-desc">本章概覽。怎樣分清什麼重要、什麼不重要？ 本章的主要部分：判斷什麼重要：看收益是否廣泛：通用介面解決更多問題；減少重要的事：少要參數、給預設值；例外在低層處理完；強調重要的事：讓它醒目、反覆出現、處於核心地位；同時隱藏不重要的事：不讓開發人員頻繁接觸，也不影響結構。一句話：看哪種做法收益更廣；重要的事要少，並放在醒目、核心的位置；不重要的事儘量藏起來</desc>
+  <rect width="420" height="596" fill="var(--diagram-bg,#e7eae6)" />
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <defs><marker id="ch21m-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)" /></marker></defs>
     <text x="22.0" y="44.0" font-size="23" font-weight="600">怎樣分清什麼重要、什麼不重要？</text>
-    <text x="22.0" y="80.0" font-size="13" fill="var(--diagram-muted,#5c645d)">前面各章的抽象、命名、效能設計，核心都是這個區分：介面只</text>
-    <text x="22.0" y="100.0" font-size="13" fill="var(--diagram-muted,#5c645d)">留對使用者重要的資訊，其餘隱藏在實作裡</text>
-    <rect x="22.0" y="118.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
-    <circle cx="50.0" cy="144.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,136.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="M7 21h10" /><path d="M12 3v18" /><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" /></g>
-    <text x="74.0" y="149.0" font-size="18" font-weight="600">判斷什麼重要</text>
-    <text x="74.0" y="174.0" font-size="15" fill="var(--diagram-muted,#5c645d)">看收益是否廣泛：通用的插入刪除介面解決很</text>
-    <text x="74.0" y="196.0" font-size="15" fill="var(--diagram-muted,#5c645d)">多問題，退格專用方法只解決一個</text>
-    <path d="M210.0 208.0 L210.0 224.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch21m-arrow)" />
-    <rect x="22.0" y="232.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
-    <circle cx="50.0" cy="258.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,250.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3" /><path d="M3 7V5a2 2 0 0 1 2-2h2" /><path d="M17 3h2a2 2 0 0 1 2 2v2" /><path d="M21 17v2a2 2 0 0 1-2 2h-2" /><path d="M7 21H5a2 2 0 0 1-2-2v-2" /></g>
-    <text x="74.0" y="263.0" font-size="18" font-weight="600">減少重要的事</text>
-    <text x="74.0" y="288.0" font-size="15" fill="var(--diagram-muted,#5c645d)">構造物件時少要參數，提供預設值；例外在低</text>
-    <text x="74.0" y="310.0" font-size="15" fill="var(--diagram-muted,#5c645d)">層處理完，上層不必關心</text>
-    <path d="M210.0 322.0 L210.0 338.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch21m-arrow)" />
-    <rect x="22.0" y="346.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
-    <circle cx="50.0" cy="372.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,364.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
-    <text x="74.0" y="377.0" font-size="18" font-weight="600">強調重要的事</text>
-    <text x="74.0" y="402.0" font-size="15" fill="var(--diagram-muted,#5c645d)">讓它醒目、反覆出現、處於核心地位，例如眾</text>
-    <text x="74.0" y="424.0" font-size="15" fill="var(--diagram-muted,#5c645d)">多驅動都依賴的裝置驅動介面</text>
-    <path d="M210.0 436.0 L210.0 452.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch21m-arrow)" />
-    <rect x="22.0" y="460.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
-    <circle cx="50.0" cy="486.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,478.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49" /><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242" /><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143" /><path d="m2 2 20 20" /></g>
-    <text x="74.0" y="491.0" font-size="18" font-weight="600">隱藏不重要的事</text>
-    <text x="74.0" y="516.0" font-size="15" fill="var(--diagram-muted,#5c645d)">儘量隱藏，不讓開發人員頻繁接觸，也不讓它</text>
-    <text x="74.0" y="538.0" font-size="15" fill="var(--diagram-muted,#5c645d)">影響系統結構</text>
-    <text x="22.0" y="570.0" font-size="13" fill="var(--diagram-muted,#5c645d)">兩類錯誤：把太多事看成重要，例如 Java I/O 迫使開發人員區分</text>
-    <text x="22.0" y="590.0" font-size="13" fill="var(--diagram-muted,#5c645d)">緩衝與非緩衝；漏掉重要的事，功能就會被反覆實作</text>
-    <rect x="22.0" y="616.0" width="376.0" height="116.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
-    <text x="36.0" y="637.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
-    <text x="36.0" y="663.0" font-size="17" font-weight="600">看哪種做法收益更廣；重要的事要少，並放在</text>
-    <text x="36.0" y="689.0" font-size="17" font-weight="600">醒目、核心的位置；不重要的事藏起來，不讓</text>
-    <text x="36.0" y="715.0" font-size="17" font-weight="600">它影響結構</text>
+    <text x="22.0" y="80.0" font-size="13" fill="var(--diagram-muted,#5c645d)">抽象、命名、效能設計，核心都是區分重要與不重要</text>
+    <rect x="22.0" y="98.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <circle cx="50.0" cy="124.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,116.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="M7 21h10" /><path d="M12 3v18" /><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" /></g>
+    <text x="74.0" y="129.0" font-size="18" font-weight="600">判斷什麼重要</text>
+    <text x="74.0" y="154.0" font-size="15" fill="var(--diagram-muted,#5c645d)">看收益是否廣泛：通用介面解決更多問題</text>
+    <path d="M210.0 166.0 L210.0 182.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch21m-arrow)" />
+    <rect x="22.0" y="190.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <circle cx="50.0" cy="216.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,208.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3" /><path d="M3 7V5a2 2 0 0 1 2-2h2" /><path d="M17 3h2a2 2 0 0 1 2 2v2" /><path d="M21 17v2a2 2 0 0 1-2 2h-2" /><path d="M7 21H5a2 2 0 0 1-2-2v-2" /></g>
+    <text x="74.0" y="221.0" font-size="18" font-weight="600">減少重要的事</text>
+    <text x="74.0" y="246.0" font-size="15" fill="var(--diagram-muted,#5c645d)">少要參數、給預設值；例外在低層處理完</text>
+    <path d="M210.0 258.0 L210.0 274.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch21m-arrow)" />
+    <rect x="22.0" y="282.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <circle cx="50.0" cy="308.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,300.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
+    <text x="74.0" y="313.0" font-size="18" font-weight="600">強調重要的事</text>
+    <text x="74.0" y="338.0" font-size="15" fill="var(--diagram-muted,#5c645d)">讓它醒目、反覆出現、處於核心地位</text>
+    <path d="M210.0 350.0 L210.0 366.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch21m-arrow)" />
+    <rect x="22.0" y="374.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <circle cx="50.0" cy="400.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,392.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49" /><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242" /><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143" /><path d="m2 2 20 20" /></g>
+    <text x="74.0" y="405.0" font-size="18" font-weight="600">同時隱藏不重要的事</text>
+    <text x="74.0" y="430.0" font-size="15" fill="var(--diagram-muted,#5c645d)">不讓開發人員頻繁接觸，也不影響結構</text>
+    <rect x="22.0" y="458.0" width="376.0" height="116.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <text x="36.0" y="479.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
+    <text x="36.0" y="505.0" font-size="17" font-weight="600">看哪種做法收益更廣；重要的事要少，並放</text>
+    <text x="36.0" y="531.0" font-size="17" font-weight="600">在醒目、核心的位置；不重要的事儘量藏起</text>
+    <text x="36.0" y="557.0" font-size="17" font-weight="600">來</text>
   </g>
 </svg>

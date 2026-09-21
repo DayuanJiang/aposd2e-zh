@@ -1,39 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 484" role="img" aria-labelledby="ch12-title ch12-desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 394" role="img" aria-labelledby="ch12-title ch12-desc">
   <title id="ch12-title">不寫註解的四個藉口，站得住嗎？</title>
-  <desc id="ch12-desc">本章概覽。不寫註解的四個藉口，站得住嗎？ 本章的主要部分：四個藉口：程式碼自解釋、沒時間、註解會過時、見過的註解都沒用；作者的回應：介面的含義只能靠註解說明；寫註解最多多花約 10% 時間；放在程式碼附近就容易更新；寫法可以學。一句話：四個藉口都站不住：註解記錄設計者知道、卻無法用程式碼表達的資訊，沒有註解就無法隱藏複雜性</desc>
-  <rect width="960" height="484" fill="var(--diagram-bg,#e7eae6)" />
+  <desc id="ch12-desc">本章概覽。不寫註解的四個藉口，站得住嗎？ 本章的主要部分：四個藉口：程式碼自解釋、沒時間、會過時、沒用；作者的回應：逐條回應，都站不住。一句話：四個藉口都站不住：註解記錄設計者知道、卻無法用程式碼表達的資訊</desc>
+  <rect width="960" height="394" fill="var(--diagram-bg,#e7eae6)" />
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <defs><marker id="ch12-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)" /></marker></defs>
     <text x="32.0" y="52.0" font-size="30" font-weight="600">不寫註解的四個藉口，站得住嗎？</text>
-    <text x="32.0" y="94.0" font-size="15" fill="var(--diagram-muted,#5c645d)">開發人員用四個藉口解釋為什麼不寫註解，這一章逐個回應，再說明好註解的價值</text>
-    <rect x="32.0" y="114.0" width="418.0" height="192.0" rx="12" fill="var(--diagram-danger-soft,#ead9dc)" />
-    <g transform="translate(52.0,132.0) scale(1.083)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49" /><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242" /><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143" /><path d="m2 2 20 20" /></g>
-    <text x="88.0" y="152.0" font-size="20" font-weight="600">不寫註解的四個藉口</text>
+    <rect x="32.0" y="84.0" width="418.0" height="192.0" rx="12" fill="var(--diagram-danger-soft,#ead9dc)" />
+    <g transform="translate(52.0,102.0) scale(1.083)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49" /><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242" /><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143" /><path d="m2 2 20 20" /></g>
+    <text x="88.0" y="122.0" font-size="20" font-weight="600">四個藉口</text>
+    <g transform="translate(52.0,146.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></g>
+    <text x="76.0" y="159.0" font-size="15">好的程式碼是自解釋的</text>
     <g transform="translate(52.0,176.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></g>
-    <text x="76.0" y="189.0" font-size="15">好的程式碼是自解釋的</text>
+    <text x="76.0" y="189.0" font-size="15">我沒有時間寫註解</text>
     <g transform="translate(52.0,206.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></g>
-    <text x="76.0" y="219.0" font-size="15">我沒有時間寫註解</text>
+    <text x="76.0" y="219.0" font-size="15">註解很容易過時</text>
     <g transform="translate(52.0,236.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></g>
-    <text x="76.0" y="249.0" font-size="15">註解很容易過時，並會產生誤導</text>
-    <g transform="translate(52.0,266.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></g>
-    <text x="76.0" y="279.0" font-size="15">我所看到的註解都毫無價值</text>
-    <rect x="510.0" y="114.0" width="418.0" height="192.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
-    <g transform="translate(530.0,132.0) scale(1.083)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9" /><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z" /></g>
-    <text x="566.0" y="152.0" font-size="20" font-weight="600">作者的回應</text>
+    <text x="76.0" y="249.0" font-size="15">見過的註解都毫無價值</text>
+    <rect x="510.0" y="84.0" width="418.0" height="192.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <g transform="translate(530.0,102.0) scale(1.083)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9" /><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z" /></g>
+    <text x="566.0" y="122.0" font-size="20" font-weight="600">作者的回應</text>
+    <g transform="translate(530.0,146.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></g>
+    <text x="554.0" y="159.0" font-size="15">介面含義只能靠註解說明</text>
     <g transform="translate(530.0,176.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></g>
-    <text x="554.0" y="189.0" font-size="15">方法做什麼、結果代表什麼，只能靠註解說明</text>
+    <text x="554.0" y="189.0" font-size="15">最多多花約 10% 的開發時間</text>
     <g transform="translate(530.0,206.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></g>
-    <text x="554.0" y="219.0" font-size="15">鍵入註解最多增加約 10% 的開發時間</text>
+    <text x="554.0" y="219.0" font-size="15">放在程式碼附近就容易更新</text>
     <g transform="translate(530.0,236.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></g>
-    <text x="554.0" y="249.0" font-size="15">放在程式碼附近、避免重複，註解就容易更新</text>
-    <g transform="translate(530.0,266.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></g>
-    <text x="554.0" y="279.0" font-size="15">掌握方法後，寫出有用的註解並不難</text>
-    <path d="M462.0 210.0 L498.0 210.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch12-arrow)" />
-    <text x="480.0" y="196.0" font-size="13" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">回應</text>
-    <text x="32.0" y="330.0" font-size="14" fill="var(--diagram-muted,#5c645d)">對《程式碼整潔之道》“註解是一種失敗”的說法，作者認為好註解提升程式碼價值，是定義抽象的基礎</text>
-    <rect x="32.0" y="358.0" width="896.0" height="98.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
-    <text x="50.0" y="379.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
-    <text x="50.0" y="409.0" font-size="21" font-weight="600">四個藉口都站不住：註解記錄設計者知道、卻無法用程式碼表達的資訊，沒有註解就無法隱藏</text>
-    <text x="50.0" y="439.0" font-size="21" font-weight="600">複雜性</text>
+    <text x="554.0" y="249.0" font-size="15">有用的註解怎麼寫，可以學</text>
+    <path d="M462.0 180.0 L498.0 180.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch12-arrow)" />
+    <text x="480.0" y="166.0" font-size="13" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">回應</text>
+    <rect x="32.0" y="298.0" width="896.0" height="68.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <text x="50.0" y="319.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
+    <text x="50.0" y="349.0" font-size="21" font-weight="600">四個藉口都站不住：註解記錄設計者知道、卻無法用程式碼表達的資訊</text>
   </g>
 </svg>
