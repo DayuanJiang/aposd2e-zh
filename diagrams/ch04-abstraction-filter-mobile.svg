@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 684" role="img" aria-labelledby="ch04-abstraction-filter-m-title ch04-abstraction-filter-m-desc">
+  <title id="ch04-abstraction-filter-m-title">这个细节能从接口中省掉吗？</title>
+  <desc id="ch04-abstraction-filter-m-desc">教学模型中缓存易失，持久存储不受本次崩溃影响。A 缓存 v1、存储 v0，崩溃后仅有 v0；B 存储已为 v1，崩溃后仍有 v1。需要公开持久化保证。性能足够且机制与需求无关时可隐藏块选择。</desc>
+  <defs><marker id="ch04-abstraction-filter-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="684" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="32" font-size="19" font-weight="600">这个细节能从接口中省掉吗？</text>
+    <text x="16" y="58" font-size="14" fill="var(--diagram-muted,#5c645d)">教学模型：旧值 v0，新值 v1</text>
+    <text x="16" y="85" font-size="14">缓存易失；存储不受本次崩溃影响。</text>
+    <text x="16" y="119" font-weight="600">需求：确认保存后，崩溃不丢 v1。</text>
+    <text x="16" y="156" font-weight="600">A　尚无持久化保证</text>
+    <text x="16" y="185" font-size="14">崩溃前</text>
+    <rect x="16" y="197" width="154" height="40" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="30" y="222">缓存：v1</text>
+    <rect x="190" y="197" width="154" height="40" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="204" y="222">存储：v0</text>
+    <path d="M180 245V271" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch04-abstraction-filter-m-arrow)"/><text x="198" y="264" font-size="13">崩溃后</text>
+    <rect x="16" y="283" width="154" height="40" fill="var(--diagram-danger-soft,#ead9dc)"/><text x="30" y="309">缓存：丢失</text>
+    <rect x="190" y="283" width="154" height="40" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="204" y="309">存储：仍是 v0</text>
+    <text x="16" y="362" font-weight="600">B　按契约确认已持久化 v1</text>
+    <text x="16" y="391" font-size="14">崩溃前</text>
+    <rect x="16" y="403" width="154" height="40" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="30" y="428">缓存：v1</text>
+    <rect x="190" y="403" width="154" height="40" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="204" y="428">存储：v1</text>
+    <path d="M180 451V477" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch04-abstraction-filter-m-arrow)"/><text x="198" y="470" font-size="13">崩溃后</text>
+    <rect x="16" y="489" width="154" height="40" fill="var(--diagram-danger-soft,#ead9dc)"/><text x="30" y="515">缓存：丢失</text>
+    <rect x="190" y="489" width="154" height="40" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="204" y="515">存储：仍是 v1</text>
+    <text x="16" y="566" font-weight="600">块选择可隐藏：性能足够、细节无关。</text>
+    <text x="16" y="595" fill="var(--diagram-danger,#a03946)">漏掉所需保证，会形成错误抽象。</text>
+    <text x="16" y="628" font-size="13" fill="var(--diagram-muted,#5c645d)">不指定 flush API 或事务提交协议，</text>
+    <text x="16" y="651" font-size="13" fill="var(--diagram-muted,#5c645d)">不预测真实文件系统的崩溃结果。</text>
+  </g>
+</svg>

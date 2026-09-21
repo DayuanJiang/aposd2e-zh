@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 434" role="img" aria-labelledby="ch13-length-map-t ch13-length-map-d">
+  <title id="ch13-length-map-t">一条映射记录与一个缺席条目</title><desc id="ch13-length-map-d">教学文本a换行长度2，bb换行和cc换行各长度3，按长度汇总为2到1、3到2。长度4没有条目，表示没有长度4的行，而不是统计未知。</desc>
+  <defs><marker id="ch13-length-map-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="680" height="434" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">一条映射记录与一个缺席条目</text>
+    <text x="24" y="71" font-family="monospace" font-size="17">numLinesWithLength</text><text x="285" y="71">键 = 含换行的字符数；值 = 行数</text>
+    <text x="24" y="117" font-weight="600">教学文本</text><text x="168" y="117" font-weight="600">长度</text><text x="448" y="117" font-weight="600">length</text><text x="572" y="117" font-weight="600">count</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><rect x="24" y="138" width="211" height="42" rx="4"/><rect x="24" y="210" width="211" height="42" rx="4"/><rect x="24" y="282" width="211" height="42" rx="4"/></g>
+    <g font-family="monospace" font-size="19"><text x="43" y="166">a\n</text><text x="179" y="166">2</text><text x="43" y="238">bb\n</text><text x="179" y="238">3</text><text x="43" y="310">cc\n</text><text x="179" y="310">3</text></g>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch13-length-map-a)"><path d="M236 159H416"/><path d="M236 231H416"/><path d="M236 303H337V243H416"/></g>
+    <text x="270" y="144" font-size="13">一行</text><text x="270" y="218" font-size="13">两行汇合</text>
+    <rect x="424" y="138" width="232" height="42" fill="var(--diagram-primary-soft,#d6e5dc)"/><rect x="424" y="210" width="232" height="42" fill="var(--diagram-primary-soft,#d6e5dc)"/><path d="M539 138V180M539 210V252" stroke="var(--diagram-line,#aebbad)"/>
+    <g font-family="monospace" font-size="20"><text x="474" y="166">2</text><text x="589" y="166">1</text><text x="474" y="238">3</text><text x="589" y="238">2</text></g>
+    <text x="424" y="296" fill="var(--diagram-warm,#80531b)">没有键 4</text><text x="424" y="322" font-size="14">表示没有长度为 4 的行</text>
+    <path d="M24 350H656" stroke="var(--diagram-line,#aebbad)"/><text x="24" y="379">不是像素宽度；缺席条目也不是“统计未知”。</text>
+    <text x="24" y="411" font-size="13" fill="var(--diagram-muted,#58636b)">数据为教学自拟；每个 \n 表示一个换行字符，必须计入长度。</text>
+  </g>
+</svg>

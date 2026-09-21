@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 684" role="img" aria-labelledby="ch04-abstraction-filter-m-title ch04-abstraction-filter-m-desc">
+  <title id="ch04-abstraction-filter-m-title">這個細節能從介面中省掉嗎？</title>
+  <desc id="ch04-abstraction-filter-m-desc">教學模型中快取易失，持久儲存不受本次崩潰影響。A 快取 v1、儲存 v0，崩潰後僅有 v0；B 儲存已為 v1，崩潰後仍有 v1。需要公開持久化保證。效能足夠且機制與需求無關時可隱藏塊選擇。</desc>
+  <defs><marker id="ch04-abstraction-filter-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="360" height="684" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="32" font-size="19" font-weight="600">這個細節能從介面中省掉嗎？</text>
+    <text x="16" y="58" font-size="14" fill="var(--diagram-muted,#5c645d)">教學模型：舊值 v0，新值 v1</text>
+    <text x="16" y="85" font-size="14">快取易失；儲存不受本次崩潰影響。</text>
+    <text x="16" y="119" font-weight="600">需求：確認儲存後，崩潰不丟 v1。</text>
+    <text x="16" y="156" font-weight="600">A　尚無持久化保證</text>
+    <text x="16" y="185" font-size="14">崩潰前</text>
+    <rect x="16" y="197" width="154" height="40" fill="var(--diagram-secondary-soft,#dce4ed)" /><text x="30" y="222">快取：v1</text>
+    <rect x="190" y="197" width="154" height="40" fill="var(--diagram-warm-soft,#eae2cf)" /><text x="204" y="222">儲存：v0</text>
+    <path d="M180 245V271" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch04-abstraction-filter-m-arrow)" /><text x="198" y="264" font-size="13">崩潰後</text>
+    <rect x="16" y="283" width="154" height="40" fill="var(--diagram-danger-soft,#ead9dc)" /><text x="30" y="309">快取：丟失</text>
+    <rect x="190" y="283" width="154" height="40" fill="var(--diagram-warm-soft,#eae2cf)" /><text x="204" y="309">儲存：仍是 v0</text>
+    <text x="16" y="362" font-weight="600">B　按契約確認已持久化 v1</text>
+    <text x="16" y="391" font-size="14">崩潰前</text>
+    <rect x="16" y="403" width="154" height="40" fill="var(--diagram-secondary-soft,#dce4ed)" /><text x="30" y="428">快取：v1</text>
+    <rect x="190" y="403" width="154" height="40" fill="var(--diagram-primary-soft,#d6e5dc)" /><text x="204" y="428">儲存：v1</text>
+    <path d="M180 451V477" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch04-abstraction-filter-m-arrow)" /><text x="198" y="470" font-size="13">崩潰後</text>
+    <rect x="16" y="489" width="154" height="40" fill="var(--diagram-danger-soft,#ead9dc)" /><text x="30" y="515">快取：丟失</text>
+    <rect x="190" y="489" width="154" height="40" fill="var(--diagram-primary-soft,#d6e5dc)" /><text x="204" y="515">儲存：仍是 v1</text>
+    <text x="16" y="566" font-weight="600">塊選擇可隱藏：效能足夠、細節無關。</text>
+    <text x="16" y="595" fill="var(--diagram-danger,#a03946)">漏掉所需保證，會形成錯誤抽象。</text>
+    <text x="16" y="628" font-size="13" fill="var(--diagram-muted,#5c645d)">不指定 flush API 或事務提交協議，</text>
+    <text x="16" y="651" font-size="13" fill="var(--diagram-muted,#5c645d)">不預測真實檔案系統的崩潰結果。</text>
+  </g>
+</svg>

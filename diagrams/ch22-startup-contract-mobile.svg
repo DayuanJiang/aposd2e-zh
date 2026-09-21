@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 940" role="img" aria-labelledby="c22m-title c22m-desc">
+  <title id="c22m-title">接口更短，就更容易用对吗？</title>
+  <desc id="c22m-desc">自拟的两个独立演示中，Indexer(config) 都保存调用方提供的配置对象引用，起点均为 config.root 为空。要求先配置再读取，读取期间不再改配置。A 展示违反要求的可能顺序：隐式启动后先读到空值，再完成配置。B 展示先配置、再 start、再读取且未继续改配置的顺序，读到 /docs。多出的调用不自动保证顺序正确；还可以先配好独立 config，再传给启动型构造函数。</desc>
+  <defs><marker id="c22m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="940" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <text x="18" y="30" font-size="19" font-weight="600">接口更短，</text>
+    <text x="18" y="56" font-size="19" font-weight="600">就更容易用对吗？</text>
+    <text x="18" y="84" font-size="13">自拟例：两种方案分别演示。</text>
+    <text x="18" y="106" font-size="13">Indexer(config) 持有传入配置的引用。</text>
+    <text x="18" y="128" font-size="13" fill="var(--diagram-muted,#5c645d)">起点：config.root 为空。</text>
+    <text x="18" y="154" font-size="14">要求：先完成配置再读取；</text>
+    <text x="18" y="176" font-size="14">读取期间不再改配置。</text>
+    <path d="M18 192H342" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="18" y="218" font-size="16" font-weight="600">A　隐式启动：可能违反要求</text>
+    <g stroke="var(--diagram-muted,#5c645d)" stroke-width="1.5" marker-end="url(#c22m-arrow)"><path d="M180 278V294"/><path d="M180 342V358"/></g>
+    <rect x="36" y="238" width="288" height="40" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="50" y="264" font-size="15">构造 Indexer(config)，启动线程</text>
+    <rect x="36" y="302" width="288" height="40" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="50" y="328" font-size="15">线程先读到 root = ""</text>
+    <rect x="36" y="366" width="288" height="40" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="50" y="392" font-size="15">调用方才设置 root = "/docs"</text>
+    <path d="M18 428H342" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="18" y="454" font-size="16" font-weight="600">B　显式启动：一种满足要求的顺序</text>
+    <text x="18" y="477" font-size="13">不是唯一方案；多一次调用仍须遵守契约。</text>
+    <g stroke="var(--diagram-muted,#5c645d)" stroke-width="1.5" marker-end="url(#c22m-arrow)"><path d="M180 532V548"/><path d="M180 596V612"/><path d="M180 660V676"/></g>
+    <rect x="36" y="492" width="288" height="40" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="50" y="518" font-size="15">构造 Indexer(config)，尚未启动</text>
+    <rect x="36" y="556" width="288" height="40" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="50" y="582" font-size="15">调用方先设置 root = "/docs"</text>
+    <rect x="36" y="620" width="288" height="40" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="50" y="646" font-size="15">调用 start()，现在才启动</text>
+    <rect x="36" y="684" width="288" height="40" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="50" y="710" font-size="15">线程读到 root = "/docs"</text>
+    <text x="18" y="751" font-size="14">start 让启动时机可见，</text>
+    <text x="18" y="773" font-size="14">但不会自动保证调用顺序正确。</text>
+    <text x="18" y="806" font-size="15" font-weight="600">另一种可能的设计：</text>
+    <text x="18" y="831" font-size="13">先设好 config.root，再把 config</text>
+    <text x="18" y="853" font-size="13">传给启动型构造函数，也可能满足要求。</text>
+    <path d="M18 872H342" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="18" y="897" font-size="15" font-weight="600">显露启动时机，不等于暴露线程细节。</text>
+    <text x="18" y="922" font-size="13" fill="var(--diagram-muted,#5c645d)">顺序示意，非实测；不能按接口数量判断优劣。</text>
+  </g>
+</svg>

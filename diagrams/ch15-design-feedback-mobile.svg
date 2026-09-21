@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 557" role="img" aria-labelledby="ch15-design-feedback-m-title ch15-design-feedback-m-desc">
+  <title id="ch15-design-feedback-m-title">先写注释不是冻结设计</title>
+  <desc id="ch15-design-feedback-m-desc">这是作者设计新类的顺序：先接口说明，再变量和实现。右侧回路把编码测试发现的问题送回接口说明。应随变化维护注释，不把这个顺序当成每种任务的要求或自动消除积压的保证。</desc>
+  <defs><marker id="ch15-design-feedback-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="557" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">先写注释，仍然持续迭代</text>
+    <text x="16" y="58" font-size="14">15.2 · 作者设计新类的做法，非通则</text>
+    <rect x="16" y="82" width="294" height="158" rx="5" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="32" y="112" font-weight="600">先看抽象</text><text x="32" y="142">类接口说明</text><text x="32" y="170">主要公有方法：说明 + 签名</text><text x="32" y="198">方法体留空</text><text x="32" y="224" font-size="14">反复调整，直到基本结构合理</text>
+    <path d="M163 240V290" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch15-design-feedback-m-arrow)"/>
+    <rect x="16" y="290" width="294" height="140" rx="5" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="32" y="320" font-weight="600">再写实现并检验</text><text x="32" y="350">主要变量：声明 + 注释</text><text x="32" y="378">方法体 + 所需实现注释</text><text x="32" y="406">编码、测试中发现问题</text>
+    <path d="M310 382H334V135H310" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch15-design-feedback-m-arrow)"/>
+    <text x="16" y="465">回路：修正接口说明</text><text x="16" y="492">新方法也先写说明，再写方法体</text>
+    <path d="M16 511H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="539">设计改变时，也要同步维护注释。</text>
+  </g>
+</svg>

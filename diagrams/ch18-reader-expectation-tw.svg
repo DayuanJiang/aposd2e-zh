@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 380" role="img" aria-labelledby="ch18-reader-expectation-title ch18-reader-expectation-desc">
+  <title id="ch18-reader-expectation-title">RaftClient 的其他執行緒在 main 回傳後繼續執行</title>
+  <desc id="ch18-reader-expectation-desc">主執行緒經過構造 RaftClient 到 main 回傳就結束；建構函式建立的其他執行緒軌道繼續延伸。兩處註解應分別記錄執行緒建立和後續執行。距離不是時間尺度。</desc>
+  <defs><marker id="ch18-reader-expectation-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-primary,#0b6f5d)" /></marker></defs>
+  <rect width="680" height="380" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="21" font-weight="600">主執行緒結束，其他執行緒仍在執行</text><text x="24" y="61" font-size="14">18.2 · 原文 RaftClient 案例；軌道不按時間比例繪製</text>
+    <text x="24" y="129">主執行緒</text><path d="M128 123H438" stroke="var(--diagram-secondary,#2c6096)" stroke-width="4" /><path d="M438 110V136" stroke="var(--diagram-secondary,#2c6096)" stroke-width="4" />
+    <circle cx="237" cy="123" r="7" fill="var(--diagram-secondary,#2c6096)" /><text x="237" y="99" text-anchor="middle">構造 RaftClient</text><text x="438" y="99" text-anchor="middle">main 回傳</text>
+    <path d="M237 131V201H643" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="3" marker-end="url(#ch18-reader-expectation-arrow)" />
+    <text x="24" y="207">其他執行緒</text><text x="253" y="168">建構函式建立</text><text x="484" y="187">繼續執行</text>
+    <path d="M438 140V232" stroke="var(--diagram-line,#aebbad)" stroke-dasharray="5 4" />
+    <text x="24" y="267" fill="var(--diagram-danger,#a03946)">誤判：main 回傳 → 整個程式退出</text>
+    <path d="M24 290H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="24" y="319">建構函式介面：記錄建立執行緒的行為。</text><text x="24" y="347">main 末尾：提醒程式將繼續在其他執行緒中執行。</text>
+  </g>
+</svg>

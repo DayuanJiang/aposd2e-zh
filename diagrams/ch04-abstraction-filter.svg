@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 560" role="img" aria-labelledby="ch04-abstraction-filter-title ch04-abstraction-filter-desc">
+  <title id="ch04-abstraction-filter-title">这个细节能从接口中省掉吗？</title>
+  <desc id="ch04-abstraction-filter-desc">教学模型假设缓存易失、持久存储不受本次崩溃影响，原有值为 v0，新值为 v1。仅缓存 v1 时崩溃后剩 v0；按契约确认存储已是 v1 时崩溃后仍有 v1。数据库需要持久化保证，不一定需要块选择算法；隐藏该算法的前提是性能足够且细节无关。</desc>
+  <defs><marker id="ch04-abstraction-filter-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="560" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="20" font-weight="600">这个细节能从接口中省掉吗？</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">教学状态：旧值 v0、新值 v1；缓存易失，存储不受本次崩溃影响</text>
+    <text x="24" y="97" font-weight="600">数据库需要知道：何时能依赖“崩溃后仍保留 v1”？</text>
+    <text x="24" y="137" font-weight="600">A　v1 仅在缓存中，未取得持久化保证</text>
+    <text x="92" y="170">崩溃前</text><text x="472" y="170">崩溃后</text>
+    <rect x="24" y="182" width="256" height="40" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="40" y="208">易失缓存：v1</text>
+    <rect x="24" y="232" width="256" height="40" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="40" y="258">持久存储：v0</text>
+    <path d="M295 227H385" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch04-abstraction-filter-arrow)"/><text x="310" y="214" font-size="14">崩溃</text>
+    <rect x="400" y="182" width="256" height="40" fill="var(--diagram-danger-soft,#ead9dc)"/><text x="416" y="208">易失缓存：丢失</text>
+    <rect x="400" y="232" width="256" height="40" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="416" y="258">持久存储：v0（不是 v1）</text>
+    <text x="24" y="310" font-weight="600">B　按接口契约，已能确认 v1 进入持久存储</text>
+    <rect x="24" y="328" width="256" height="40" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="40" y="354">易失缓存：v1</text>
+    <rect x="24" y="378" width="256" height="40" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="40" y="404">持久存储：v1</text>
+    <path d="M295 373H385" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch04-abstraction-filter-arrow)"/><text x="310" y="360" font-size="14">崩溃</text>
+    <rect x="400" y="328" width="256" height="40" fill="var(--diagram-danger-soft,#ead9dc)"/><text x="416" y="354">易失缓存：丢失</text>
+    <rect x="400" y="378" width="256" height="40" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="416" y="404">持久存储：v1（仍可用）</text>
+    <path d="M24 441H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="470" font-weight="600">可以隐藏块选择算法，但前提是性能足够、细节与需求无关。</text>
+    <text x="24" y="500" fill="var(--diagram-danger,#a03946)">不能隐藏所需的持久化保证；否则短签名也可能是错误抽象。</text>
+    <text x="24" y="534" font-size="13" fill="var(--diagram-muted,#5c645d)">本图不指定 flush API、事务提交协议或真实文件系统的崩溃结果。</text>
+  </g>
+</svg>

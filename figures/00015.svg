@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="684" height="410" viewBox="0 0 684 410" role="img" aria-labelledby="fig-00015-title fig-00015-desc">
+  <title id="fig-00015-title">Figure 7.1: Pass-through methods</title>
+  <desc id="fig-00015-desc">Four panels preserve the original method-signature symbols and calls. In (a), C1 has a green square, blue star, yellow circle, and purple pentagon; the last three call identical methods in C2, which also has a red four-point star. In (b), callers access C2 directly. In (c), the five methods are divided between C1 and C2 without calls between the classes. In (d), all five methods belong to C1.</desc>
+  <defs>
+    <marker id="fig-00015-arrow" markerWidth="9" markerHeight="5" refX="8" refY="2.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L8 2.5 L0 5 L2 2.5 Z" fill="#111"/>
+    </marker>
+    <g id="fig-00015-square">
+      <rect x="-5.5" y="-5.5" width="11" height="11" rx="2" fill="#e4f7d3" stroke="#111" stroke-width="1"/>
+    </g>
+    <g id="fig-00015-star">
+      <path d="M0 -7 L2.1 -2.4 L7 -2 L3.4 1.5 L4.3 6.5 L0 4 L-4.3 6.5 L-3.4 1.5 L-7 -2 L-2.1 -2.4 Z" fill="#c5dcf7" stroke="#111" stroke-width="1"/>
+    </g>
+    <g id="fig-00015-circle">
+      <circle r="6" fill="#ffffbe" stroke="#111" stroke-width="1"/>
+    </g>
+    <g id="fig-00015-pentagon">
+      <path d="M0 -6.5 L6.2 -2 L3.8 5.5 L-3.8 5.5 L-6.2 -2 Z" fill="#a45cf2" stroke="#111" stroke-width="1"/>
+    </g>
+    <g id="fig-00015-four-point-star">
+      <path d="M-6 -6 L0 -3.5 L6 -6 L3.5 0 L6 6 L0 3.5 L-6 6 L-3.5 0 Z" fill="#ffa0a5" stroke="#111" stroke-width="1"/>
+    </g>
+  </defs>
+  <rect width="684" height="410" fill="#fff"/>
+  <g transform="translate(12 12) scale(2)" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#111">
+    <g id="fig-00015-panel-a">
+      <g fill="none" stroke="#111" stroke-width="0.8">
+        <rect x="36" y="19" width="88" height="18"/>
+        <path d="M58 19 V37 M80 19 V37 M102 19 V37"/>
+        <rect x="58" y="55" width="88" height="19"/>
+        <path d="M80 55 V74 M102 55 V74 M124 55 V74"/>
+      </g>
+      <text x="18" y="32">C1</text>
+      <text x="38" y="69">C2</text>
+      <use href="#fig-00015-square" x="47" y="28"/>
+      <use href="#fig-00015-star" x="69" y="28"/>
+      <use href="#fig-00015-circle" x="91" y="28"/>
+      <use href="#fig-00015-pentagon" x="113" y="28"/>
+      <use href="#fig-00015-star" x="69" y="64.5"/>
+      <use href="#fig-00015-circle" x="91" y="64.5"/>
+      <use href="#fig-00015-pentagon" x="113" y="64.5"/>
+      <use href="#fig-00015-four-point-star" x="135" y="64.5"/>
+      <g fill="none" stroke="#111" stroke-width="0.8" marker-end="url(#fig-00015-arrow)">
+        <path d="M47 0 V16"/>
+        <path d="M69 0 V16"/>
+        <path d="M91 0 V16"/>
+        <path d="M113 0 V16"/>
+        <path d="M135 0 V52"/>
+        <path d="M69 37 V52"/>
+        <path d="M91 37 V52"/>
+        <path d="M113 37 V52"/>
+      </g>
+      <text x="81" y="94" text-anchor="middle">(a)</text>
+    </g>
+    <g id="fig-00015-panel-b">
+      <g fill="none" stroke="#111" stroke-width="0.8">
+        <rect x="219" y="19" width="22" height="18"/>
+        <rect x="241" y="55" width="88" height="19"/>
+        <path d="M263 55 V74 M285 55 V74 M307 55 V74"/>
+      </g>
+      <text x="201" y="32">C1</text>
+      <text x="221" y="69">C2</text>
+      <use href="#fig-00015-square" x="230" y="28"/>
+      <use href="#fig-00015-star" x="252" y="64.5"/>
+      <use href="#fig-00015-circle" x="274" y="64.5"/>
+      <use href="#fig-00015-pentagon" x="296" y="64.5"/>
+      <use href="#fig-00015-four-point-star" x="318" y="64.5"/>
+      <g fill="none" stroke="#111" stroke-width="0.8" marker-end="url(#fig-00015-arrow)">
+        <path d="M230 0 V16"/>
+        <path d="M252 0 V52"/>
+        <path d="M274 0 V52"/>
+        <path d="M296 0 V52"/>
+        <path d="M318 0 V52"/>
+      </g>
+      <text x="265" y="94" text-anchor="middle">(b)</text>
+    </g>
+    <g id="fig-00015-panel-c">
+      <g fill="none" stroke="#111" stroke-width="0.8">
+        <rect x="17" y="151" width="44" height="18"/>
+        <path d="M39 151 V169"/>
+        <rect x="98" y="151" width="66" height="18"/>
+        <path d="M120 151 V169 M142 151 V169"/>
+      </g>
+      <text x="-1" y="165">C1</text>
+      <text x="78" y="165">C2</text>
+      <use href="#fig-00015-square" x="28" y="160"/>
+      <use href="#fig-00015-star" x="50" y="160"/>
+      <use href="#fig-00015-circle" x="109" y="160"/>
+      <use href="#fig-00015-pentagon" x="131" y="160"/>
+      <use href="#fig-00015-four-point-star" x="153" y="160"/>
+      <g fill="none" stroke="#111" stroke-width="0.8" marker-end="url(#fig-00015-arrow)">
+        <path d="M28 121 V148"/>
+        <path d="M50 121 V148"/>
+        <path d="M109 121 V148"/>
+        <path d="M131 121 V148"/>
+        <path d="M153 121 V148"/>
+      </g>
+      <text x="81" y="189" text-anchor="middle">(c)</text>
+    </g>
+    <g id="fig-00015-panel-d">
+      <g fill="none" stroke="#111" stroke-width="0.8">
+        <rect x="219" y="151" width="110" height="18"/>
+        <path d="M241 151 V169 M263 151 V169 M285 151 V169 M307 151 V169"/>
+      </g>
+      <text x="201" y="165">C1</text>
+      <use href="#fig-00015-square" x="230" y="160"/>
+      <use href="#fig-00015-star" x="252" y="160"/>
+      <use href="#fig-00015-circle" x="274" y="160"/>
+      <use href="#fig-00015-pentagon" x="296" y="160"/>
+      <use href="#fig-00015-four-point-star" x="318" y="160"/>
+      <g fill="none" stroke="#111" stroke-width="0.8" marker-end="url(#fig-00015-arrow)">
+        <path d="M230 121 V148"/>
+        <path d="M252 121 V148"/>
+        <path d="M274 121 V148"/>
+        <path d="M296 121 V148"/>
+        <path d="M318 121 V148"/>
+      </g>
+      <text x="265" y="189" text-anchor="middle">(d)</text>
+    </g>
+  </g>
+</svg>

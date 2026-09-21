@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 875" role="img" aria-labelledby="ch11-interface-alternatives-m-t ch11-interface-alternatives-m-d">
+  <title id="ch11-interface-alternatives-m-t">用同一操作檢驗三個介面</title><desc id="ch11-interface-alternatives-m-d">同一教學輸入abcd換行efgh，刪去cd換行ef，得到abgh。整行操作合併保留的ab和gh；逐字元迴圈五次刪除當前索引2，圖列出每次刪去的字元和中間文字；範圍介面一次指定零基範圍2至7，不包含7。具體API簽名與效能沒有規定。</desc>
+  <defs><marker id="ch11-interface-alternatives-m-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)" /></marker></defs>
+  <rect width="360" height="875" fill="var(--diagram-bg,#f5f7f8)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="20" y="32" font-size="18" font-weight="600">用同一操作檢驗三個介面</text><text x="20" y="65" font-size="13">刪去著色範圍；↵ 是一個換行，索引從0開始。</text>
+    <rect x="66" y="84" width="65" height="26" fill="var(--diagram-danger-soft,#ead9dc)" /><rect x="26" y="113" width="40" height="26" fill="var(--diagram-danger-soft,#ead9dc)" />
+    <g font-family="monospace" font-size="22"><text x="30" y="106">a</text><text x="50" y="106">b</text><text x="70" y="106">c</text><text x="90" y="106">d</text><text x="110" y="106">↵</text><text x="30" y="135">e</text><text x="50" y="135">f</text><text x="70" y="135">g</text><text x="90" y="135">h</text><text x="245" y="119">abgh</text></g>
+    <path d="M155 112H229" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch11-interface-alternatives-m-a)" />
+    <path d="M20 160H340" stroke="var(--diagram-line,#aebbad)" />
+    <text x="20" y="190" font-weight="600">整行：呼叫者拆出兩側保留片段</text>
+    <text x="20" y="215" font-size="13">首行字首</text><text x="20" y="285" font-size="13">末行字尾</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><rect x="20" y="225" width="62" height="40" rx="4" /><rect x="20" y="295" width="62" height="40" rx="4" /></g><text x="38" y="252" font-family="monospace" font-size="20">ab</text><text x="38" y="322" font-family="monospace" font-size="20">gh</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch11-interface-alternatives-m-a)"><path d="M83 245H158V280H229" /><path d="M83 315H158V280" /></g><text x="182" y="268" font-size="14">合併</text>
+    <rect x="236" y="259" width="104" height="43" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" /><text x="263" y="288" font-family="monospace" font-size="20">abgh</text>
+    <text x="20" y="363" font-size="13">再用整行操作寫回，不指定具體 API 簽名。</text>
+    <path d="M20 382H340" stroke="var(--diagram-line,#aebbad)" />
+    <text x="20" y="412" font-weight="600">逐字元：從上到下執行五次呼叫</text><text x="20" y="437" font-size="13">每次都刪除當前索引2；右側是刪除後的文字。</text>
+    <g font-size="14"><text x="20" y="476">1 刪 c</text><text x="20" y="510">2 刪 d</text><text x="20" y="544">3 刪 ↵</text><text x="20" y="578">4 刪 e</text><text x="20" y="612">5 刪 f</text></g>
+    <g stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch11-interface-alternatives-m-a)"><path d="M81 471H121" /><path d="M81 505H121" /><path d="M81 539H121" /><path d="M81 573H121" /><path d="M81 607H121" /></g>
+    <g font-family="monospace" font-size="17"><text x="138" y="476">abd↵efgh</text><text x="138" y="510">ab↵efgh</text><text x="138" y="544">abefgh</text><text x="138" y="578">abfgh</text></g>
+    <rect x="130" y="589" width="110" height="30" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" /><text x="138" y="612" font-family="monospace" font-size="17">abgh</text>
+    <text x="20" y="648" font-size="13">換行只刪一次；後續字元向前移動。</text>
+    <path d="M20 668H340" stroke="var(--diagram-line,#aebbad)" /><text x="20" y="699" font-weight="600">任意範圍：直接表達同一操作</text>
+    <rect x="20" y="722" width="128" height="43" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" /><text x="45" y="750" font-family="monospace">[2, 7)</text>
+    <path d="M149 744H205" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch11-interface-alternatives-m-a)" /><text x="160" y="730" font-size="12">一次</text>
+    <rect x="213" y="722" width="127" height="43" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" /><text x="251" y="751" font-family="monospace" font-size="20">abgh</text>
+    <text x="20" y="799" font-size="13" fill="var(--diagram-muted,#58636b)">字母、索引、軌跡是教學例；不是效能測量。</text><text x="20" y="823" font-size="13" fill="var(--diagram-muted,#58636b)">五次呼叫不等於五倍耗時。</text><text x="20" y="847" font-size="13" fill="var(--diagram-muted,#58636b)">第8章“字元導向”指任意範圍，與此處的</text><text x="20" y="866" font-size="13" fill="var(--diagram-muted,#58636b)">單字元候選粒度不同。</text>
+  </g>
+</svg>

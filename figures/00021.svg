@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1018" height="536" viewBox="0 0 1018 536" role="img" aria-labelledby="fig-00021-title fig-00021-desc">
+  <title id="fig-00021-title">Figure 10.2: Aggregated exception handling</title>
+  <desc id="fig-00021-desc">The Dispatcher box contains one try block around dispatch to handleUrl1, handleUrl2, and handleUrl3, followed by catch (NoSuchParameter e) and the italic pseudocode send error response;. Three short method boxes below contain the original getParameter calls for photo_id, message, user_id, login, and password without local exception handlers. The original code omissions, ellipses, box placement, and lack of connecting arrows are preserved.</desc>
+  <style>
+    #fig-00021-code text { white-space: pre; }
+  </style>
+  <rect width="1018" height="536" fill="#fff"/>
+  <g transform="translate(12 12) scale(2)" fill="#111">
+    <g font-family="Arial, Helvetica, sans-serif" font-size="11">
+      <text x="161" y="9">Dispatcher:</text>
+      <text x="0" y="209">handleUrl1:</text>
+      <text x="170" y="209">handleUrl2:</text>
+      <text x="335" y="209">handleUrl3:</text>
+    </g>
+    <g fill="#f8f8f8" stroke="#111" stroke-width="0.8">
+      <rect x="161" y="13" width="174" height="174"/>
+      <rect x="1" y="214" width="160" height="41"/>
+      <rect x="170" y="214" width="156" height="32"/>
+      <rect x="335" y="214" width="161" height="41"/>
+    </g>
+    <g id="fig-00021-code" font-family="'Courier New', Courier, monospace" font-size="9.3" xml:space="preserve">
+      <text id="fig-00021-dispatcher"><tspan x="167" y="21">...</tspan><tspan x="167" y="32">try {</tspan><tspan x="167" y="44">  if (...) {</tspan><tspan x="167" y="55">    handleUrl1(...);</tspan><tspan x="167" y="67">  } else if (...) {</tspan><tspan x="167" y="78">    handleUrl2(...);</tspan><tspan x="167" y="90">  } else if (...) {</tspan><tspan x="167" y="101">    handleUrl3(...);</tspan><tspan x="167" y="113">  } else if (...)</tspan><tspan x="167" y="124">    ...</tspan><tspan x="167" y="136">  }</tspan><tspan x="167" y="147">} catch (NoSuchParameter e) {</tspan><tspan x="167" y="159" font-style="italic">  send error response;</tspan><tspan x="167" y="170">}</tspan><tspan x="167" y="182">...</tspan></text>
+      <text id="fig-00021-handler-1"><tspan x="4" y="227">... getParameter("photo_id")</tspan><tspan x="4" y="238">... getParameter("message")</tspan><tspan x="4" y="250">...</tspan></text>
+      <text id="fig-00021-handler-2"><tspan x="173" y="227">... getParameter("user_id")</tspan><tspan x="173" y="238">...</tspan></text>
+      <text id="fig-00021-handler-3"><tspan x="338" y="227">... getParameter("login")</tspan><tspan x="338" y="238">... getParameter("password")</tspan><tspan x="338" y="250">...</tspan></text>
+    </g>
+  </g>
+</svg>

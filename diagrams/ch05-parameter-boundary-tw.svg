@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 490" role="img" aria-labelledby="ch05-parameter-boundary-title ch05-parameter-boundary-desc">
+  <title id="ch05-parameter-boundary-title">回傳參數，還是洩露容器？</title>
+  <desc id="ch05-parameter-boundary-desc">getParams 回傳內部 Map 引用，呼叫者必須查詢、轉換，並避免修改容器。getIntParameter 將表示、查詢和轉換隱藏在 HTTPRequest 內，回傳整數 246，缺失或轉換失敗則拋例外。private 本身不能阻止資訊洩露。</desc>
+  <defs><marker id="ch05-parameter-boundary-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="680" height="490" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="24" y="34" font-size="20" font-weight="600">回傳參數，還是洩露容器？</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">同樣讀取 photo_id，比較邊界兩側必須知道什麼</text>
+    <text x="24" y="103" font-weight="600">呼叫者</text><text x="415" y="103" font-weight="600">HTTPRequest 內部</text>
+    <path d="M360 90V421" stroke="var(--diagram-line,#aebbad)" stroke-dasharray="5 4" />
+    <text x="24" y="142" font-family="ui-monospace,monospace">getParams()</text>
+    <path d="M163 138H399" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-parameter-boundary-arrow)" />
+    <rect x="410" y="125" width="246" height="100" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" />
+    <text x="426" y="155" font-family="ui-monospace,monospace">private Map</text><text x="426" y="185">回傳內部容器的引用</text><text x="426" y="210" font-size="14">內部狀態可被外部誤改</text>
+    <path d="M399 184H242" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-parameter-boundary-arrow)" />
+    <text x="24" y="185">拿到 Map → 按名查詢</text><text x="24" y="215">→ 轉為整數；還要記住別改容器</text>
+    <path d="M24 252H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="24" y="287" font-family="ui-monospace,monospace" font-size="14">getIntParameter("photo_id")</text>
+    <path d="M265 281H399" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-parameter-boundary-arrow)" />
+    <rect x="410" y="269" width="246" height="136" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="426" y="307" font-weight="600">儲存表示留在內部</text><text x="426" y="338">查詢 + 字串轉整數</text><text x="426" y="374" font-size="14">必要的失敗規則仍屬於介面</text>
+    <path d="M399 348H197" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-parameter-boundary-arrow)" />
+    <text x="24" y="348" font-weight="600">成功：整數 246</text><text x="24" y="380">失敗：缺失／轉換例外</text>
+    <text x="24" y="453" font-weight="600">隱藏表示，不隱藏呼叫者必須處理的結果與失敗條件。</text>
+    <text x="24" y="478" font-size="13" fill="var(--diagram-muted,#5c645d)">介面與 photo_id 來自原書；箭頭省略其他請求處理步驟。</text>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 736" role="img" aria-labelledby="ch05-format-ownership-m-title ch05-format-ownership-m-desc">
+  <title id="ch05-format-ownership-m-title">執行順序不等於模組邊界</title>
+  <desc id="ch05-format-ownership-m-desc">教學 K 表示格式知識。上方編號 1、2、3 只表示階段先後，讀取和寫入各自呼叫不同實作，同一格式變更 K 虛線指向兩個實作。下方階段仍是 1 讀、2 改、3 寫，讀寫實線呼叫共用實作，同一 K 變更只指向該模組。</desc>
+  <defs><marker id="ch05-format-ownership-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="360" height="736" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="32" font-size="19" font-weight="600">執行順序不等於模組邊界</text>
+    <text x="16" y="58" font-size="13" fill="var(--diagram-muted,#5c645d)">教學 K = 格式知識；編號僅表階段先後</text>
+    <text x="16" y="88" font-size="13">實線：呼叫；虛線：變更所需修改。</text>
+    <text x="16" y="125" font-weight="600">分離實作：兩個修改目標</text>
+    <text x="16" y="166">1　讀取</text><text x="16" y="238">2　修改</text><text x="16" y="310">3　寫入</text>
+    <rect x="161" y="138" width="183" height="59" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" />
+    <text x="177" y="162" font-weight="600">讀實作</text><text x="177" y="186">K：解釋格式</text>
+    <rect x="161" y="282" width="183" height="59" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" />
+    <text x="177" y="306" font-weight="600">寫實作</text><text x="177" y="330">K：生成格式</text>
+    <g stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-format-ownership-m-arrow)"><path d="M91 162H150" /><path d="M91 306H150" /></g>
+    <text x="200" y="242" font-weight="600">格式變更 K</text>
+    <g stroke="var(--diagram-muted,#5c645d)" stroke-dasharray="5 4" marker-end="url(#ch05-format-ownership-m-arrow)"><path d="M252 221V205" /><path d="M252 250V274" /></g>
+    <path d="M16 366H344" stroke="var(--diagram-line,#aebbad)" />
+    <text x="16" y="399" font-weight="600">共用實作：一個修改目標</text>
+    <text x="16" y="429" font-size="14">應用階段與順序均不變</text>
+    <text x="16" y="471">1　讀取</text><text x="16" y="532">2　修改</text><text x="16" y="593">3　寫入</text>
+    <rect x="164" y="484" width="180" height="92" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="180" y="514" font-weight="600">共用格式實作</text><text x="180" y="545">K：讀寫規則</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-format-ownership-m-arrow)"><path d="M95 467H136V505H154" /><path d="M95 589H136V556H154" /></g>
+    <text x="206" y="644" font-weight="600">格式變更 K</text>
+    <path d="M254 625V584" stroke="var(--diagram-muted,#5c645d)" stroke-dasharray="5 4" marker-end="url(#ch05-format-ownership-m-arrow)" />
+    <text x="16" y="683" font-size="14">前提：介面確實隱藏 K。</text>
+    <text x="16" y="711" font-size="13" fill="var(--diagram-muted,#5c645d)">不是合併所有階段，也不能再公開格式細節。</text>
+  </g>
+</svg>

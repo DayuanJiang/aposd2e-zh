@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 455" role="img" aria-labelledby="ch13-padding-information-m-t ch13-padding-information-m-d">
+  <title id="ch13-padding-information-m-t">4 是多少，留在哪一邊？</title><desc id="ch13-padding-information-m-d">從只重複水平填充的原註解，到說明單位畫素及左右各4的修訂註解。文字兩側分別有4px尺寸線，空白放大顯示。</desc>
+  <defs><marker id="ch13-padding-information-m-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-primary,#0b6f5d)" /></marker></defs>
+  <rect width="360" height="455" fill="var(--diagram-bg,#f5f7f8)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="20" y="32" font-size="18" font-weight="600">4 是多少，留在哪一邊？</text>
+    <text x="20" y="72" font-family="monospace" font-size="15">textHorizontalPadding = 4</text><text x="20" y="102">原註解：“文字的水平填充”</text>
+    <text x="20" y="138" fill="var(--diagram-danger,#a03946)">單位？畫素還是字元？</text><text x="20" y="165" fill="var(--diagram-danger,#a03946)">位置？一側還是兩側？</text>
+    <path d="M20 188H340" stroke="var(--diagram-line,#aebbad)" /><text x="20" y="219" font-weight="600">修訂：每行左右兩側留白，單位畫素</text>
+    <rect x="20" y="245" width="52" height="60" fill="var(--diagram-primary-soft,#d6e5dc)" /><rect x="72" y="245" width="216" height="60" fill="var(--diagram-secondary-soft,#dce4ed)" /><rect x="288" y="245" width="52" height="60" fill="var(--diagram-primary-soft,#d6e5dc)" /><text x="149" y="281">一行文字</text>
+    <path d="M20 245V355M72 245V355M288 245V355M340 245V355" stroke="var(--diagram-line,#aebbad)" />
+    <path d="M23 342H69" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="1.5" marker-start="url(#ch13-padding-information-m-a)" marker-end="url(#ch13-padding-information-m-a)" />
+    <path d="M291 342H337" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="1.5" marker-start="url(#ch13-padding-information-m-a)" marker-end="url(#ch13-padding-information-m-a)" />
+    <text x="27" y="331" font-weight="600">4 px</text><text x="295" y="331" font-weight="600">4 px</text>
+    <text x="53" y="383">兩側各 4 px，不是合計 4 px</text>
+    <text x="20" y="414" font-size="13" fill="var(--diagram-muted,#58636b)">常量4來自原文。為辨認而放大留白區域，</text><text x="20" y="437" font-size="13" fill="var(--diagram-muted,#58636b)">不按實際螢幕畫素比例繪製。</text>
+  </g>
+</svg>

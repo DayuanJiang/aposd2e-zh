@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 940" role="img" aria-labelledby="c22m-title c22m-desc">
+  <title id="c22m-title">介面更短，就更容易用對嗎？</title>
+  <desc id="c22m-desc">自擬的兩個獨立演示中，Indexer(config) 都儲存呼叫方提供的設定物件引用，起點均為 config.root 為空。要求先設定再讀取，讀取期間不再改設定。A 展示違反要求的可能順序：隱式啟動後先讀到空值，再完成設定。B 展示先設定、再 start、再讀取且未繼續改設定的順序，讀到 /docs。多出的呼叫不自動保證順序正確；還可以先配好獨立 config，再傳給啟動型建構函式。</desc>
+  <defs><marker id="c22m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="360" height="940" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <text x="18" y="30" font-size="19" font-weight="600">介面更短，</text>
+    <text x="18" y="56" font-size="19" font-weight="600">就更容易用對嗎？</text>
+    <text x="18" y="84" font-size="13">自擬例：兩種方案分別演示。</text>
+    <text x="18" y="106" font-size="13">Indexer(config) 持有傳入設定的引用。</text>
+    <text x="18" y="128" font-size="13" fill="var(--diagram-muted,#5c645d)">起點：config.root 為空。</text>
+    <text x="18" y="154" font-size="14">要求：先完成設定再讀取；</text>
+    <text x="18" y="176" font-size="14">讀取期間不再改設定。</text>
+    <path d="M18 192H342" stroke="var(--diagram-line,#aebbad)" />
+    <text x="18" y="218" font-size="16" font-weight="600">A　隱式啟動：可能違反要求</text>
+    <g stroke="var(--diagram-muted,#5c645d)" stroke-width="1.5" marker-end="url(#c22m-arrow)"><path d="M180 278V294" /><path d="M180 342V358" /></g>
+    <rect x="36" y="238" width="288" height="40" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" />
+    <text x="50" y="264" font-size="15">構造 Indexer(config)，啟動執行緒</text>
+    <rect x="36" y="302" width="288" height="40" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" />
+    <text x="50" y="328" font-size="15">執行緒先讀到 root = ""</text>
+    <rect x="36" y="366" width="288" height="40" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" />
+    <text x="50" y="392" font-size="15">呼叫方才設定 root = "/docs"</text>
+    <path d="M18 428H342" stroke="var(--diagram-line,#aebbad)" />
+    <text x="18" y="454" font-size="16" font-weight="600">B　顯式啟動：一種滿足要求的順序</text>
+    <text x="18" y="477" font-size="13">不是唯一方案；多一次呼叫仍須遵守契約。</text>
+    <g stroke="var(--diagram-muted,#5c645d)" stroke-width="1.5" marker-end="url(#c22m-arrow)"><path d="M180 532V548" /><path d="M180 596V612" /><path d="M180 660V676" /></g>
+    <rect x="36" y="492" width="288" height="40" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" />
+    <text x="50" y="518" font-size="15">構造 Indexer(config)，尚未啟動</text>
+    <rect x="36" y="556" width="288" height="40" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" />
+    <text x="50" y="582" font-size="15">呼叫方先設定 root = "/docs"</text>
+    <rect x="36" y="620" width="288" height="40" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" />
+    <text x="50" y="646" font-size="15">呼叫 start()，現在才啟動</text>
+    <rect x="36" y="684" width="288" height="40" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="50" y="710" font-size="15">執行緒讀到 root = "/docs"</text>
+    <text x="18" y="751" font-size="14">start 讓啟動時機可見，</text>
+    <text x="18" y="773" font-size="14">但不會自動保證呼叫順序正確。</text>
+    <text x="18" y="806" font-size="15" font-weight="600">另一種可能的設計：</text>
+    <text x="18" y="831" font-size="13">先設好 config.root，再把 config</text>
+    <text x="18" y="853" font-size="13">傳給啟動型建構函式，也可能滿足要求。</text>
+    <path d="M18 872H342" stroke="var(--diagram-line,#aebbad)" />
+    <text x="18" y="897" font-size="15" font-weight="600">顯露啟動時機，不等於暴露執行緒細節。</text>
+    <text x="18" y="922" font-size="13" fill="var(--diagram-muted,#5c645d)">順序示意，非實測；不能按介面數量判斷優劣。</text>
+  </g>
+</svg>

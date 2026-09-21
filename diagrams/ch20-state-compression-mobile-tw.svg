@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 768" role="img" aria-labelledby="ch20-state-compression-m-title ch20-state-compression-m-desc">
+  <title id="ch20-state-compression-m-title">維護容量不變條件後再供每次追加讀取</title>
+  <desc id="ch20-state-compression-m-desc">上方給出 C 等於 availableAppendBytes 的儲存含義：無末塊或外部末塊或無緊鄰空間則為零，否則記錄緊鄰可用位元組數。下方自擬一次呼叫讀到 8，請求 3 後寫回 5；下一次請求 6 不足。定義與執行用分界線區分，所有推論限定正大小與正確維護狀態。</desc>
+  <defs><marker id="ch20-state-compression-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="360" height="768" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">一次比較，依賴持續維護狀態</text><text x="16" y="57" font-size="14">20.4 · C = availableAppendBytes</text>
+    <text x="16" y="84" font-size="14">僅討論 numBytes &gt; 0，且儲存狀態正確</text>
+    <text x="16" y="119" font-weight="600">不變條件含義，不是每次重算：</text>
+    <text x="16" y="148">無末塊，或末塊外部，或無緊鄰空間</text><text x="16" y="180" fill="var(--diagram-warm,#80531b)">任一成立（OR）→ C = 0</text>
+    <text x="16" y="213">否則，C = 內部末塊的緊鄰可用位元組數</text>
+    <text x="16" y="243" font-size="14">改變塊或空間時須維持此含義。</text>
+    <path d="M16 263H344" stroke="var(--diagram-line,#aebbad)" stroke-width="2" stroke-dasharray="5 4" />
+    <text x="16" y="293" font-weight="600">呼叫與寫回：教學自擬位元組數</text>
+    <rect x="40" y="315" width="280" height="51" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" /><text x="180" y="347" text-anchor="middle">讀取已存值 C = 8</text>
+    <path d="M180 366V405" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch20-state-compression-m-arrow)" />
+    <text x="180" y="431" text-anchor="middle">請求 n = 3：8 ≥ 3，擴充末塊</text>
+    <path d="M180 445V482" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch20-state-compression-m-arrow)" /><text x="199" y="468" font-size="14">維護寫回</text>
+    <rect x="40" y="482" width="280" height="51" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" /><text x="180" y="514" text-anchor="middle">C = 8 − 3 = 5</text>
+    <path d="M180 533V570" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch20-state-compression-m-arrow)" />
+    <text x="180" y="596" text-anchor="middle">下一次請求 n = 6</text><text x="180" y="625" text-anchor="middle" fill="var(--diagram-warm,#80531b)">5 &lt; 6 → 不走擴充末塊路徑</text>
+    <path d="M16 648H344" stroke="var(--diagram-line,#aebbad)" />
+    <text x="16" y="676" font-size="14">漏寫回而仍用 8，會錯誤放行這次請求。</text><text x="16" y="701" font-size="14">成功追加也要更新末塊長度與總長度。</text>
+    <text x="16" y="733" font-size="14">不推論零/負大小、溢位、分配失敗；</text><text x="16" y="756" font-size="14">容量範例不是效能資料或完整實作。</text>
+  </g>
+</svg>

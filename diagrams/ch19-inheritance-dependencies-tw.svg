@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 490" role="img" aria-labelledby="ch19-inheritance-dependencies-title ch19-inheritance-dependencies-desc">
+  <title id="ch19-inheritance-dependencies-title">子類讀到了父類表示，才產生這條修改依賴</title>
+  <desc id="ch19-inheritance-dependencies-desc">教學佇列原用 head 陣列下標，子類透過 data[head] 讀取首項。父類把 head 改成節點引用時，該讀取點可能需要複核。備選封裝 Queue 的 peek 回傳首項、size 回傳數量，只有保持這些契約且不暴露表示時才能隔離此變化；組合本身不保證解耦，也不指定共享實例。</desc>
+  <defs><marker id="ch19-inheritance-dependencies-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="680" height="490" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="33" font-size="21" font-weight="600">依賴的理由：子類把 head 當成陣列下標</text>
+    <text x="24" y="60" font-size="14">19.1 · 自擬佇列 [A, B] 與 API；虛線表示可能需要複核，不是呼叫</text>
+    <text x="24" y="100" font-weight="600">表示暴露給子類</text><text x="367" y="100" font-weight="600">若封裝表示，可考慮此備選</text>
+    <rect x="24" y="119" width="296" height="100" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" />
+    <text x="40" y="147">父類 QueueBase</text><text x="40" y="176" font-family="ui-monospace,monospace" font-size="14">head: index 0 → Node(A)</text><text x="40" y="202" font-size="14">同樣叫 head，表示含義已經改變</text>
+    <path d="M172 219V304" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ch19-inheritance-dependencies-arrow)" />
+    <text x="190" y="252" font-size="14">這處讀取</text><text x="190" y="278" font-size="14">可能需複核</text>
+    <rect x="24" y="304" width="296" height="79" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" />
+    <text x="40" y="332">子類的首項讀取</text><text x="40" y="362" font-family="ui-monospace,monospace">return data[head]</text>
+    <path d="M344 85V410" stroke="var(--diagram-line,#aebbad)" />
+    <text x="381" y="139">呼叫者只用 peek() / size()</text>
+    <path d="M512 152V180" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch19-inheritance-dependencies-arrow)" />
+    <rect x="367" y="180" width="289" height="183" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="383" y="207">Queue 的介面契約（本例）</text><text x="383" y="236">peek() → 首項 A</text><text x="383" y="263">size() → 項數 2</text>
+    <path d="M367 280H656" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="383" y="309">內部：下標 → 節點表示</text><text x="383" y="340" font-size="14">前提：不外露表示，並維持上方契約</text>
+    <text x="367" y="393" font-size="14">這是封裝條件，不是組合自動帶來的結果。</text>
+    <path d="M24 420H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="24" y="449">必須繼承時，也可以在繼承體系內部隔離狀態。</text><text x="24" y="475" font-size="14">圖示是型別與功能關係，不要求各呼叫者共享同一輔助類實例。</text>
+  </g>
+</svg>

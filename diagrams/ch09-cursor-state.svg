@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 470" role="img" aria-labelledby="ch09-cursor-state-t ch09-cursor-state-d">
+  <title id="ch09-cursor-state-t">合并对象为何反而增加一次判断？</title><desc id="ch09-cursor-state-d">左侧以存在选区的情况展示组合表示如何依布尔值选择端点。右侧独立读取cursor Position，并分别画出无选区仍有光标、有选区时光标位于端点两种状态。不规定无选区的编码。</desc>
+  <defs><marker id="ch09-cursor-state-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="680" height="470" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">合并对象为何反而增加一次判断？</text>
+    <text x="24" y="77" font-weight="600">组合表示（这里以有选区为例）</text><text x="377" y="77" font-weight="600">分开表示：直接存储位置</text>
+    <rect x="24" y="100" width="298" height="46" rx="4" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="48" y="129">选区两端 + 在哪端 + 有无选区</text>
+    <path d="M173 147V169" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch09-cursor-state-a)"/>
+    <path d="M173 175 255 210 173 245 91 210Z" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="128" y="215">光标在哪端？</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch09-cursor-state-a)"><path d="M91 210H59V279"/><path d="M255 210H289V279"/></g>
+    <text x="70" y="260" font-size="13">起点端</text><text x="237" y="260" font-size="13">终点端</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><rect x="24" y="286" width="120" height="40" rx="4"/><rect x="203" y="286" width="120" height="40" rx="4"/></g>
+    <text x="53" y="312">取起点</text><text x="232" y="312">取终点</text>
+    <rect x="377" y="100" width="279" height="65" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="397" y="126">cursor: Position</text><text x="397" y="150" font-size="14">直接读取，不经端点选择分支</text>
+    <text x="397" y="190" font-size="14" font-weight="600">无选区：光标仍存在</text>
+    <g font-family="monospace" font-size="20"><text x="417" y="217">a</text><text x="449" y="217">b</text><text x="481" y="217">c</text><text x="513" y="217">d</text><text x="545" y="217">e</text><text x="577" y="217">f</text></g>
+    <path d="M567 196V224" stroke="var(--diagram-secondary,#2c6096)" stroke-width="4"/>
+    <text x="397" y="252" font-size="14" font-weight="600">有选区：另用两个 Position 表示范围</text>
+    <rect x="439" y="276" width="128" height="38" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <g font-family="monospace" font-size="20"><text x="417" y="302">a</text><text x="449" y="302">b</text><text x="481" y="302">c</text><text x="513" y="302">d</text><text x="545" y="302">e</text><text x="577" y="302">f</text></g>
+    <path d="M439 271V322" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><path d="M567 267V326" stroke="var(--diagram-secondary,#2c6096)" stroke-width="4"/>
+    <text x="416" y="351" font-size="13">起点</text><text x="543" y="351" font-size="13">终点 / 光标</text>
+    <path d="M24 380H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="408">分开表示不取消约束：有选区时，光标仍在选区一端。</text>
+    <text x="24" y="435" font-size="13" fill="var(--diagram-muted,#58636b)">高层仍分别操作选区和光标；组合对象没省掉这些操作。字母与位置为教学示意。</text>
+    <text x="24" y="456" font-size="13" fill="var(--diagram-muted,#58636b)">不规定无选区的编码；没有新增专用光标类或选区类，也不作性能测量结论。</text>
+  </g>
+</svg>

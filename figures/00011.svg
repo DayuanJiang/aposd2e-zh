@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="268" height="164" viewBox="-4 -4 268 164" role="img" aria-labelledby="figure-00011-title figure-00011-desc">
+  <title id="figure-00011-title">Figure 3.1: Strategic and tactical programming</title>
+  <desc id="figure-00011-desc">Total Progress is plotted vertically against Time horizontally, without ticks or numeric scales. The dashed Tactical curve leads initially, then flattens. The solid Strategic curve starts below it, crosses it, and continues upward to substantially greater progress. The curves are qualitative illustrations, not measured data or a quantified crossover time.</desc>
+  <rect x="-4" y="-4" width="268" height="164" fill="#fff"/>
+  <path d="M58 7V141H252" fill="none" stroke="#000" stroke-width="1.8"/>
+  <path d="M58 0.5L54.8 10H61.2ZM259 141L249.5 137.8V144.2Z" fill="#000"/>
+  <path d="M59 139C95 85 159 54 259 40" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="5 2"/>
+  <path d="M58 141C125 74 192 41 259 7" fill="none" stroke="#000" stroke-width="1.5"/>
+  <g fill="#000" font-family="Arial, Helvetica, sans-serif" font-size="12">
+    <text x="0" y="53">Total<tspan x="0" dy="12">Progress</tspan></text>
+    <text x="174" y="22">Strategic</text>
+    <text x="207" y="63">Tactical</text>
+    <text x="145" y="155.5">Time</text>
+  </g>
+</svg>

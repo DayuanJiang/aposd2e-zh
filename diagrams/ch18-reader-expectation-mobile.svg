@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 604" role="img" aria-labelledby="ch18-reader-expectation-m-title ch18-reader-expectation-m-desc">
+  <title id="ch18-reader-expectation-m-title">main 返回不代表此例全部执行结束</title>
+  <desc id="ch18-reader-expectation-m-desc">竖向主线程轨道在 main 返回处终止，从构造 RaftClient 分出的其他线程轨道继续向下。构造函数接口和 main 末尾分别补充创建线程与继续执行的信息。</desc>
+  <defs><marker id="ch18-reader-expectation-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-primary,#0b6f5d)"/></marker></defs>
+  <rect width="360" height="604" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">主线程结束，执行仍在继续</text><text x="16" y="57" font-size="14">18.2 · RaftClient 原例；无时间刻度</text>
+    <text x="45" y="96">主线程</text><text x="222" y="96">其他线程</text>
+    <path d="M75 115V282" stroke="var(--diagram-secondary,#2c6096)" stroke-width="4"/><path d="M63 282H87" stroke="var(--diagram-secondary,#2c6096)" stroke-width="4"/>
+    <circle cx="75" cy="151" r="7" fill="var(--diagram-secondary,#2c6096)"/>
+    <path d="M82 151H273V389" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="3" marker-end="url(#ch18-reader-expectation-m-arrow)"/>
+    <text x="104" y="133">构造 RaftClient</text><text x="106" y="182" font-size="14">创建其他线程</text>
+    <text x="16" y="314">main 返回</text><text x="254" y="314" text-anchor="end">继续运行</text>
+    <path d="M96 282H330" stroke="var(--diagram-line,#aebbad)" stroke-dasharray="5 4"/>
+    <text x="16" y="350" fill="var(--diagram-danger,#a03946)">不等于整个</text><text x="16" y="375" fill="var(--diagram-danger,#a03946)">程序退出</text>
+    <path d="M16 417H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="449" font-weight="600">构造函数接口</text><text x="16" y="477">记录创建线程的行为。</text>
+    <text x="16" y="517" font-weight="600">main 末尾</text><text x="16" y="545">提醒程序将在其他线程继续执行。</text>
+    <text x="16" y="584" font-size="14">此图只解释本例，不泛化所有程序。</text>
+  </g>
+</svg>

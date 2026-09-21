@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 741" role="img" aria-labelledby="ch19-inheritance-dependencies-m-title ch19-inheritance-dependencies-m-desc">
+  <title id="ch19-inheritance-dependencies-m-title">父类表示改变为何可能牵动子类</title>
+  <desc id="ch19-inheritance-dependencies-m-desc">教学例上半部显示 head 从下标改成节点引用，子类 data[head] 的假设不再成立，虚线表示可能需复核。下半部是保持 peek 和 size 契约且隐藏表示的备选，不保证所有组合设计都能解耦，也不指定实例共享。</desc>
+  <defs><marker id="ch19-inheritance-dependencies-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="741" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">表示改变，可能牵动哪些假设？</text><text x="16" y="57" font-size="14">19.1 · 自拟队列 [A, B] 与 API</text>
+    <rect x="16" y="82" width="328" height="91" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="32" y="110">父类 QueueBase 改了表示</text><text x="32" y="140" font-family="ui-monospace,monospace" font-size="14">head: index 0 → Node(A)</text><text x="32" y="161" font-size="14">head 不再是数组下标</text>
+    <path d="M89 173V234" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ch19-inheritance-dependencies-m-arrow)"/><text x="110" y="210" font-size="14">此读取点可能需要复核</text>
+    <rect x="16" y="234" width="328" height="70" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/><text x="32" y="261">子类仍按下标取首项</text><text x="32" y="290" font-family="ui-monospace,monospace">return data[head]</text>
+    <path d="M16 329H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="360" font-weight="600">备选：本例把表示藏在 Queue 内</text><text x="16" y="391">调用者只用 peek() / size()</text>
+    <path d="M180 402V430" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch19-inheritance-dependencies-m-arrow)"/>
+    <rect x="16" y="430" width="328" height="166" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="32" y="458">契约保持：peek() → 首项 A</text><text x="32" y="486">契约保持：size() → 项数 2</text>
+    <path d="M16 505H344" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="32" y="533">内部表示：下标 → 节点</text><text x="32" y="560" font-size="14">前提：表示不外露，接口契约仍成立</text><text x="32" y="584" font-size="14">组合本身不保证这些条件。</text>
+    <text x="16" y="629">继承体系内也可以隔离状态。</text><text x="16" y="663" font-size="14">虚线是可能的修改复核范围，实线是调用。</text><text x="16" y="689" font-size="14">这是类型/功能关系，不要求多个调用者</text><text x="16" y="714" font-size="14">共用同一辅助类实例。</text>
+  </g>
+</svg>

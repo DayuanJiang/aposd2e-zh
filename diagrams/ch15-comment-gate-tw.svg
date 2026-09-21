@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 566" role="img" aria-labelledby="ch15-comment-gate-title ch15-comment-gate-desc">
+  <title id="ch15-comment-gate-title">刪掉註解條件與真正遷移呼叫義務不同</title>
+  <desc id="ch15-comment-gate-desc">教學例 saveReport：原設計要求呼叫者先建父目錄，內部只 write。刪掉這個註解條件而保持實作不變，缺目錄時直接呼叫仍失敗。真正把 ensureParent 移進實作後，呼叫者只提交路徑和文字，模組建目錄再寫入。比較限定為目錄可建立且寫入成功的情形，不主張所有錯誤行為等價，也不憑字數判定方法深度。</desc>
+  <defs><marker id="ch15-comment-gate-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="680" height="566" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="33" font-size="21" font-weight="600">刪掉呼叫條件，不會刪掉呼叫義務</text>
+    <text x="24" y="60" font-size="14">15.3 · 教學自擬 saveReport(path, text)，不是作者的 API</text>
+    <text x="24" y="91" font-size="14">共同起點：父目錄不存在。假定目錄可建立，寫入操作能夠成功。</text>
+    <text x="24" y="128" font-weight="600">A · 完整說明</text><text x="240" y="128" font-weight="600">B · 只刪註解條件</text><text x="456" y="128" font-weight="600">C · 真正改變設計</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><rect x="24" y="143" width="194" height="69" /><rect x="240" y="143" width="194" height="69" /><rect x="456" y="143" width="200" height="69" /></g>
+    <text x="36" y="170">儲存文字。</text><text x="36" y="197">呼叫前須建立父目錄。</text>
+    <text x="252" y="170">儲存文字。</text><path d="M252 190H414" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-dasharray="4 4" />
+    <text x="468" y="170">儲存文字。</text><text x="468" y="197">按需建立父目錄。</text>
+    <text x="24" y="243">呼叫者先建目錄</text><text x="24" y="270">再呼叫 saveReport</text>
+    <text x="240" y="243" fill="var(--diagram-danger,#a03946)">義務仍在，但說明缺失</text><text x="240" y="270">直接呼叫會怎樣？</text>
+    <text x="456" y="243">呼叫者只給路徑、文字</text><text x="456" y="270">不再負責建目錄</text>
+    <path d="M24 289H656" stroke="var(--diagram-line,#aebbad)" stroke-dasharray="5 4" />
+    <text x="24" y="315" font-size="14">模組內部的實際工作</text>
+    <g font-family="ui-monospace,SFMono-Regular,monospace" font-size="14">
+      <text x="36" y="359">write(path, text)</text><text x="252" y="359">write(path, text)</text>
+      <text x="470" y="341">ensureParent(path)</text><text x="470" y="387">write(path, text)</text>
+    </g>
+    <path d="M553 350V367" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch15-comment-gate-arrow)" />
+    <path d="M36 375V393H422V375" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" />
+    <text x="229" y="417" text-anchor="middle" font-size="14">A 與 B：方法和實作完全未改</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch15-comment-gate-arrow)"><path d="M120 426V445" /><path d="M337 426V445" /><path d="M553 403V445" /></g>
+    <text x="121" y="468" text-anchor="middle" fill="var(--diagram-primary,#0b6f5d)">儲存同一路徑、文字</text>
+    <text x="337" y="468" text-anchor="middle" fill="var(--diagram-danger,#a03946)">缺目錄，直接呼叫失敗</text>
+    <text x="556" y="468" text-anchor="middle" fill="var(--diagram-primary,#0b6f5d)">儲存同一路徑、文字</text>
+    <path d="M24 491H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="24" y="519" font-size="14">C 減少了呼叫義務，因為工作移入了模組，不是因為註解字數變少。</text>
+    <text x="24" y="544" font-size="14">簡單介面不自動等於深方法；若介面必須暴露全部主要實作，方法仍淺。</text>
+  </g>
+</svg>

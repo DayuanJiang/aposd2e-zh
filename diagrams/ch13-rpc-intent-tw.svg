@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 655" role="img" aria-labelledby="ch13-rpc-intent-t ch13-rpc-intent-d">
+  <title id="ch13-rpc-intent-t">從追加意圖讀懂判斷，但不越過未知條件</title><desc id="ch13-rpc-intent-d">rpc是當前readRpc[i]的教學縮寫。會話相等很可能是在確認目標伺服器；LOADING暗示狀態約束；雜湊數小於上限暗示容量限制。這三項滿足後，仍必須滿足rpc.maxPos小於assignPos才能選中候選供追加，高層註解沒有解釋這一條件的理由。圖是邏輯條件組合，不是實際判斷或迴圈順序。</desc>
+  <defs><marker id="ch13-rpc-intent-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)" /></marker></defs>
+  <rect width="680" height="655" fill="var(--diagram-bg,#f5f7f8)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">從追加意圖讀懂判斷，但不越過未知條件</text>
+    <text x="24" y="68">意圖：嘗試追加到發往目標伺服器、尚未發出的既有 RPC。</text>
+    <text x="24" y="94" font-size="13" fill="var(--diagram-muted,#58636b)">rpc 指當前 readRpc[i]，僅為教學縮寫；右側保留作者“很可能 / 暗示”的推斷語氣。</text>
+    <text x="24" y="127" font-weight="600">原始碼判斷（使用上述縮寫）</text><text x="454" y="127" font-weight="600">由意圖推斷其作用</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><rect x="24" y="144" width="400" height="64" rx="4" /><rect x="24" y="232" width="400" height="64" rx="4" /><rect x="24" y="320" width="400" height="78" rx="4" /></g>
+    <g font-family="monospace" font-size="14"><text x="42" y="180">session == rpc.session</text><text x="42" y="268">rpc.status == LOADING</text><text x="42" y="350">rpc.numHashes</text><text x="42" y="378">&lt; MAX_PKHASHES_PERRPC</text></g>
+    <g stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch13-rpc-intent-a)"><path d="M425 176H444" /><path d="M425 264H444" /><path d="M425 359H444" /></g>
+    <g font-size="14"><text x="454" y="170">很可能在確認</text><text x="454" y="194">是否發往正確伺服器</text><text x="454" y="258">暗示狀態約束，</text><text x="454" y="282">呼應“尚未發出”的意圖</text><text x="454" y="347">暗示容量有上限，</text><text x="454" y="375">不填寫原文未給出的數值</text></g>
+    <rect x="24" y="435" width="173" height="48" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" /><text x="49" y="465">前三項均滿足</text>
+    <path d="M198 459H229" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch13-rpc-intent-a)" />
+    <path d="M365 408 493 459 365 510 237 459Z" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" />
+    <text x="282" y="464" font-family="monospace" font-size="13">rpc.maxPos &lt; assignPos</text>
+    <path d="M494 459H535" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch13-rpc-intent-a)" /><text x="501" y="440" font-size="13">滿足</text>
+    <rect x="543" y="431" width="113" height="58" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" /><text x="556" y="455" font-size="13">選中此 RPC</text><text x="556" y="480" font-size="13">供後續追加</text>
+    <path d="M365 511V560H209" fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch13-rpc-intent-a)" /><text x="375" y="581" font-size="13">不滿足</text>
+    <rect x="24" y="540" width="178" height="42" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" /><text x="54" y="568">此候選不選中</text>
+    <text x="433" y="533" font-size="14">為什麼要檢查 maxPos？</text><text x="433" y="555" font-size="14">高層註解沒有解釋。</text>
+    <path d="M24 602H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="24" y="627" font-size="13" fill="var(--diagram-muted,#58636b)">所有條件均須滿足；圖是邏輯組合，不規定短路判斷或迴圈順序，也不展示完整演算法。</text>
+    <text x="24" y="647" font-size="13" fill="var(--diagram-muted,#58636b)">選中候選供後續追加，不把前三項滿足誤畫成已經完成追加。</text>
+  </g>
+</svg>

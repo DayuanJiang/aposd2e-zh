@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 597" role="img" aria-labelledby="ch19-abstraction-increment-title ch19-abstraction-increment-desc">
+  <title id="ch19-abstraction-increment-title">聯絡人與庫存匯出共享行編碼契約才可複用</title>
+  <desc id="ch19-abstraction-increment-desc">教學例當前聯絡人匯出需要編碼 Li, Ming 和 Tokyo，後來庫存匯出需要編碼 red, pen 和 2。兩者都要給含逗號欄位加引號，再用逗號串接欄位。當前需求可建立 emitRow 契約，後來相同契約的需求才接入；分別內聯會保留兩份相同規則。PDF 排版是另一個責任，不因複用而併入。</desc>
+  <defs><marker id="ch19-abstraction-increment-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="680" height="597" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="33" font-size="21" font-weight="600">先建立共同契約，再談複用</text><text x="24" y="60" font-size="14">19.2 / 19.4 · 教學自擬匯出場景，用來解釋作者的抽象增量建議</text>
+    <rect x="24" y="83" width="288" height="107" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" />
+    <text x="40" y="112" font-weight="600">當前：聯絡人匯出需要一行編碼</text><text x="40" y="143" font-family="ui-monospace,monospace" font-size="14">["Li, Ming", "Tokyo"]</text><text x="40" y="172" font-size="14">此時已經需要處理欄位內的逗號</text>
+    <rect x="368" y="83" width="288" height="107" rx="4" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-dasharray="5 4" />
+    <text x="384" y="112" font-weight="600">後來：庫存匯出有同一種需求</text><text x="384" y="143" font-family="ui-monospace,monospace" font-size="14">["red, pen", "2"]</text><text x="384" y="172" font-size="14">只在契約相符時複用，不保證永遠適配</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch19-abstraction-increment-arrow)"><path d="M168 190V243" /><path d="M512 190V243" stroke-dasharray="5 4" /></g>
+    <text x="183" y="219" font-size="14">定義所需核心</text><text x="526" y="219" font-size="14">後來接入</text>
+    <rect x="24" y="243" width="632" height="155" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="40" y="272" font-weight="600">emitRow(fields)：欄位編碼為一行</text>
+    <text x="40" y="301">含逗號欄位 → 兩端加引號；欄位之間 → 加分隔逗號</text>
+    <path d="M24 316H656" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="40" y="343" font-size="14">當前輸入的輸出</text><text x="384" y="343" font-size="14">後來相容輸入的輸出</text>
+    <text x="40" y="377" font-family="ui-monospace,monospace" font-size="16">"Li, Ming",Tokyo</text><text x="384" y="377" font-family="ui-monospace,monospace" font-size="16">"red, pen",2</text>
+    <text x="24" y="427" font-size="14">對照：若各自內聯，會留下兩份相同欄位規則（教學虛擬碼）</text>
+    <text x="24" y="456" font-family="ui-monospace,monospace" font-size="14">聯絡人: if comma(f): quote(f)</text>
+    <text x="368" y="456" font-family="ui-monospace,monospace" font-size="14">庫存: if comma(f): quote(f)</text>
+    <path d="M24 465V472H656V465" fill="none" stroke="var(--diagram-warm,#80531b)" />
+    <path d="M24 490H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="24" y="519">抽象外：PDF 分頁、圖表排版；尚無需求時不必預建。</text>
+    <text x="24" y="549" font-size="14">這裡只演示字母、空格、數字與逗號欄位，不是完整 CSV 規範或實作。</text>
+    <text x="24" y="576" font-size="14">作者的建議不是“所有功能合一”，也不是對所有敏捷實踐的必然結論。</text>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 370" role="img" aria-labelledby="ch16-comment-scope-title ch16-comment-scope-desc">
+  <title id="ch16-comment-scope-title">说明的跨度应匹配代码的范围</title>
+  <desc id="ch16-comment-scope-desc">整体策略横跨三个阶段；候选、评分、选择并移除的细节各自贴近对应代码。长括线表示抽象策略，短括线表示局部说明。灰线只是代码占位。</desc>
+  <rect width="680" height="370" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="21" font-weight="600">整体策略跨阶段，局部细节贴代码</text>
+    <text x="24" y="61" font-size="14">16.2 · 原文三阶段；短线为代码占位，不是具体实现</text>
+    <text x="340" y="99" text-anchor="middle" fill="var(--diagram-secondary,#2c6096)">方法开头：找候选 → 评分 → 选择并移除</text>
+    <path d="M40 133V117H640V133" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/>
+    <g fill="var(--diagram-primary-soft,#d6e5dc)">
+      <rect x="40" y="154" width="176" height="39"/><rect x="252" y="154" width="176" height="39"/><rect x="464" y="154" width="176" height="39"/>
+    </g>
+    <text x="55" y="180">候选阶段的说明</text><text x="267" y="180">评分阶段的说明</text><text x="479" y="180">选择阶段的说明</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="3">
+      <path d="M55 217H176M55 237H198M55 257H158"/><path d="M267 217H397M267 237H373M267 257H410"/><path d="M479 217H621M479 237H591M479 257H607"/>
+    </g>
+    <g fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2">
+      <path d="M32 154H24V270H32"/><path d="M244 154H236V270H244"/><path d="M456 154H448V270H456"/>
+    </g>
+    <text x="128" y="295" text-anchor="middle" font-size="14">只解释候选阶段</text><text x="340" y="295" text-anchor="middle" font-size="14">只解释评分阶段</text><text x="552" y="295" text-anchor="middle" font-size="14">只解释选择阶段</text>
+    <path d="M24 317H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="346">离所述代码越远，注释越应抽象；细节下移到最小相关范围。</text>
+  </g>
+</svg>

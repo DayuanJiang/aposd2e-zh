@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 641" role="img" aria-labelledby="ch10-unset-semantics-m-t ch10-unset-semantics-m-d">
+  <title id="ch10-unset-semantics-m-t">改變成功條件，而不是忽略失敗</title><desc id="ch10-unset-semantics-m-d">上方原定義的兩種初態分別產生成功和錯誤；下方建議語義的兩種初態匯合到變數不存在且成功回傳。</desc>
+  <defs><marker id="ch10-unset-semantics-m-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)" /></marker></defs>
+  <rect width="360" height="641" fill="var(--diagram-bg,#f5f7f8)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="20" y="32" font-size="18" font-weight="600">改變成功條件，而不是忽略失敗</text><text x="20" y="74" font-weight="600">原定義：刪除變數</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><circle cx="91" cy="132" r="36" /><circle cx="269" cy="132" r="36" /></g><text x="76" y="137">存在</text><text x="247" y="137">不存在</text>
+    <g stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch10-unset-semantics-m-a)"><path d="M91 169V220" /><path d="M269 169V220" /></g><text x="112" y="200" font-size="13">刪除</text><text x="285" y="200" font-size="13">報錯</text>
+    <rect x="20" y="227" width="142" height="63" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" /><text x="62" y="252">不存在</text><text x="62" y="277">成功回傳</text>
+    <rect x="198" y="227" width="142" height="63" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" /><text x="231" y="252">丟擲錯誤</text><text x="214" y="277" font-size="14">呼叫者 catch</text>
+    <path d="M20 316H340" stroke="var(--diagram-line,#aebbad)" />
+    <text x="20" y="349" font-weight="600">作者建議：確保變數不存在</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><circle cx="91" cy="406" r="36" /><circle cx="269" cy="406" r="36" /></g><text x="76" y="411">存在</text><text x="247" y="411">不存在</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch10-unset-semantics-m-a)"><path d="M91 443V479L150 511" /><path d="M269 443V479L210 511" /></g><text x="22" y="471" font-size="13">執行刪除</text><text x="281" y="471" font-size="13">無需操作</text>
+    <rect x="20" y="518" width="320" height="59" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" /><text x="74" y="553">變數不存在，成功回傳</text>
+    <text x="20" y="608" font-size="13" fill="var(--diagram-muted,#58636b)">Tcl 原設計與作者建議的語義對照。</text><text x="20" y="631" font-size="13" fill="var(--diagram-muted,#58636b)">不表示現有 unset 已按建議改變。</text>
+  </g>
+</svg>

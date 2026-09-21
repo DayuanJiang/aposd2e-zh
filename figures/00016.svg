@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="888" height="854" viewBox="0 0 888 854" role="img" aria-labelledby="fig-00016-title fig-00016-desc">
+  <title id="fig-00016-title">Figure 7.2: Techniques for dealing with a pass-through variable</title>
+  <desc id="fig-00016-desc">Four panels show main calling m1, m2, then m3. Panel (a) passes cert through every method to openSocket. Panel (b) shows dotted links from main and m3 to a shared object containing x, y, and cert, and calls openSocket(obj.cert, ...). Panel (c) uses a global variable. Panel (d) links main and m3 to a context object containing timeout, metrics, cert, and other fields, and calls openSocket(context.cert, ...). Solid downward arrows are calls; dotted lines have no arrowheads.</desc>
+  <defs>
+    <marker id="fig-00016-arrow" markerWidth="9" markerHeight="5" refX="8" refY="2.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L8 2.5 L0 5 L2 2.5 Z" fill="#111"/>
+    </marker>
+  </defs>
+  <rect width="888" height="854" fill="#fff"/>
+  <g transform="translate(12 12) scale(2)" fill="#111">
+    <g font-family="'Courier New', Courier, monospace" font-size="11.5" style="white-space:pre">
+      <g id="fig-00016-panel-a">
+        <text x="0" y="10">main(argc, argv)</text>
+        <text x="0" y="47">m1(... cert, ...)</text>
+        <text x="0" y="84">m2(... cert, ...)</text>
+        <text xml:space="preserve"><tspan x="0" y="121">m3(... cert, ...) {</tspan><tspan x="0" y="134">  ...</tspan><tspan x="0" y="147">  openSocket(cert, ...)</tspan><tspan x="0" y="160">  ...</tspan><tspan x="0" y="173">}</tspan></text>
+        <g fill="none" stroke="#111" stroke-width="0.9" marker-end="url(#fig-00016-arrow)">
+          <path d="M63 15 V35"/>
+          <path d="M63 52 V72"/>
+          <path d="M63 89 V109"/>
+        </g>
+      </g>
+      <g id="fig-00016-panel-b">
+        <text x="213" y="10">main(argc, argv)</text>
+        <text x="213" y="47">m1(...)</text>
+        <text x="213" y="84">m2(...)</text>
+        <text xml:space="preserve"><tspan x="213" y="121">m3(...) {</tspan><tspan x="213" y="134">  ...</tspan><tspan x="213" y="147">  openSocket(obj.cert, ...)</tspan><tspan x="213" y="160">  ...</tspan><tspan x="213" y="173">}</tspan></text>
+        <rect x="299" y="39" width="54" height="41" fill="#f2f2f2" stroke="#111" stroke-width="0.9"/>
+        <text><tspan x="304" y="50">x</tspan><tspan x="304" y="63">y</tspan><tspan x="304" y="76">cert</tspan></text>
+        <g fill="none" stroke="#111" stroke-width="0.9" marker-end="url(#fig-00016-arrow)">
+          <path d="M243 15 V35"/>
+          <path d="M243 52 V72"/>
+          <path d="M243 89 V109"/>
+        </g>
+        <path d="M280 15 L306 36 M280 105 L306 84" fill="none" stroke="#555" stroke-width="0.9" stroke-dasharray="0.6 1.7" stroke-linecap="round"/>
+      </g>
+      <g id="fig-00016-panel-c">
+        <text x="0" y="230">main(argc, argv)</text>
+        <text x="0" y="267">m1(...)</text>
+        <text x="0" y="304">m2(...)</text>
+        <text xml:space="preserve"><tspan x="0" y="341">m3(...) {</tspan><tspan x="0" y="354">  ...</tspan><tspan x="0" y="367">  openSocket(cert, ...)</tspan><tspan x="0" y="380">  ...</tspan><tspan x="0" y="393">}</tspan></text>
+        <g fill="none" stroke="#111" stroke-width="0.9" marker-end="url(#fig-00016-arrow)">
+          <path d="M30 235 V255"/>
+          <path d="M30 272 V292"/>
+          <path d="M30 309 V329"/>
+        </g>
+        <path d="M66 235 L89 265 M66 326 L89 296" fill="none" stroke="#555" stroke-width="0.9" stroke-dasharray="0.6 1.7" stroke-linecap="round"/>
+      </g>
+      <g id="fig-00016-panel-d">
+        <text x="213" y="230">main(argc, argv)</text>
+        <text x="213" y="267">m1(...)</text>
+        <text x="213" y="304">m2(...)</text>
+        <text xml:space="preserve"><tspan x="213" y="341">m3(...) {</tspan><tspan x="213" y="354">  ...</tspan><tspan x="213" y="367">  openSocket(context.cert, ...)</tspan><tspan x="213" y="380">  ...</tspan><tspan x="213" y="393">}</tspan></text>
+        <rect x="302" y="252" width="70" height="56" fill="#f2f2f2" stroke="#111" stroke-width="0.9"/>
+        <text><tspan x="308" y="265">timeout</tspan><tspan x="308" y="278">metrics</tspan><tspan x="308" y="291">cert</tspan><tspan x="308" y="304">...</tspan></text>
+        <g fill="none" stroke="#111" stroke-width="0.9" marker-end="url(#fig-00016-arrow)">
+          <path d="M243 235 V255"/>
+          <path d="M243 272 V292"/>
+          <path d="M243 309 V329"/>
+        </g>
+        <path d="M280 235 L309 249 M280 326 L309 312" fill="none" stroke="#555" stroke-width="0.9" stroke-dasharray="0.6 1.7" stroke-linecap="round"/>
+      </g>
+    </g>
+    <g font-family="'Times New Roman', Times, serif" font-style="italic" font-size="15">
+      <text><tspan x="357" y="56">shared</tspan><tspan x="357" y="72">object</tspan></text>
+      <text text-anchor="middle"><tspan x="104" y="278">global</tspan><tspan x="104" y="294">variable</tspan></text>
+      <text><tspan x="376" y="277">context</tspan><tspan x="376" y="293">object</tspan></text>
+    </g>
+    <g font-family="Arial, Helvetica, sans-serif" font-size="12" text-anchor="middle">
+      <text x="67" y="193">(a)</text>
+      <text x="281" y="193">(b)</text>
+      <text x="67" y="413">(c)</text>
+      <text x="281" y="413">(d)</text>
+    </g>
+  </g>
+</svg>

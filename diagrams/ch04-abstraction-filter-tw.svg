@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 560" role="img" aria-labelledby="ch04-abstraction-filter-title ch04-abstraction-filter-desc">
+  <title id="ch04-abstraction-filter-title">這個細節能從介面中省掉嗎？</title>
+  <desc id="ch04-abstraction-filter-desc">教學模型假設快取易失、持久儲存不受本次崩潰影響，原有值為 v0，新值為 v1。僅快取 v1 時崩潰後剩 v0；按契約確認儲存已是 v1 時崩潰後仍有 v1。資料庫需要持久化保證，不一定需要塊選擇演算法；隱藏該演算法的前提是效能足夠且細節無關。</desc>
+  <defs><marker id="ch04-abstraction-filter-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="680" height="560" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="20" font-weight="600">這個細節能從介面中省掉嗎？</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">教學狀態：舊值 v0、新值 v1；快取易失，儲存不受本次崩潰影響</text>
+    <text x="24" y="97" font-weight="600">資料庫需要知道：何時能依賴“崩潰後仍保留 v1”？</text>
+    <text x="24" y="137" font-weight="600">A　v1 僅在快取中，未取得持久化保證</text>
+    <text x="92" y="170">崩潰前</text><text x="472" y="170">崩潰後</text>
+    <rect x="24" y="182" width="256" height="40" fill="var(--diagram-secondary-soft,#dce4ed)" /><text x="40" y="208">易失快取：v1</text>
+    <rect x="24" y="232" width="256" height="40" fill="var(--diagram-warm-soft,#eae2cf)" /><text x="40" y="258">持久儲存：v0</text>
+    <path d="M295 227H385" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch04-abstraction-filter-arrow)" /><text x="310" y="214" font-size="14">崩潰</text>
+    <rect x="400" y="182" width="256" height="40" fill="var(--diagram-danger-soft,#ead9dc)" /><text x="416" y="208">易失快取：丟失</text>
+    <rect x="400" y="232" width="256" height="40" fill="var(--diagram-warm-soft,#eae2cf)" /><text x="416" y="258">持久儲存：v0（不是 v1）</text>
+    <text x="24" y="310" font-weight="600">B　按介面契約，已能確認 v1 進入持久儲存</text>
+    <rect x="24" y="328" width="256" height="40" fill="var(--diagram-secondary-soft,#dce4ed)" /><text x="40" y="354">易失快取：v1</text>
+    <rect x="24" y="378" width="256" height="40" fill="var(--diagram-primary-soft,#d6e5dc)" /><text x="40" y="404">持久儲存：v1</text>
+    <path d="M295 373H385" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch04-abstraction-filter-arrow)" /><text x="310" y="360" font-size="14">崩潰</text>
+    <rect x="400" y="328" width="256" height="40" fill="var(--diagram-danger-soft,#ead9dc)" /><text x="416" y="354">易失快取：丟失</text>
+    <rect x="400" y="378" width="256" height="40" fill="var(--diagram-primary-soft,#d6e5dc)" /><text x="416" y="404">持久儲存：v1（仍可用）</text>
+    <path d="M24 441H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="24" y="470" font-weight="600">可以隱藏塊選擇演算法，但前提是效能足夠、細節與需求無關。</text>
+    <text x="24" y="500" fill="var(--diagram-danger,#a03946)">不能隱藏所需的持久化保證；否則短簽名也可能是錯誤抽象。</text>
+    <text x="24" y="534" font-size="13" fill="var(--diagram-muted,#5c645d)">本圖不指定 flush API、事務提交協議或真實檔案系統的崩潰結果。</text>
+  </g>
+</svg>

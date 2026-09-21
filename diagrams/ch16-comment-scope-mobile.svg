@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 600" role="img" aria-labelledby="ch16-comment-scope-m-title ch16-comment-scope-m-desc">
+  <title id="ch16-comment-scope-m-title">整体策略和局部细节的覆盖范围</title>
+  <desc id="ch16-comment-scope-m-desc">左侧长括线覆盖三个阶段，表示方法开头的整体策略；三个短括线各覆盖一个阶段的细节注释和代码，说明应紧邻相关代码。</desc>
+  <rect width="360" height="600" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">注释覆盖的范围，应当匹配</text>
+    <text x="16" y="57" font-size="14">16.2 · 原文三阶段；灰线是代码占位</text>
+    <text x="16" y="94" fill="var(--diagram-secondary,#2c6096)">整体策略：候选 → 评分 → 选择</text>
+    <path d="M34 115H22V490H34" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/>
+    <g fill="var(--diagram-primary-soft,#d6e5dc)">
+      <rect x="63" y="122" width="273" height="39"/><rect x="63" y="253" width="273" height="39"/><rect x="63" y="384" width="273" height="39"/>
+    </g>
+    <text x="77" y="148">找候选：本阶段的细节说明</text><text x="77" y="279">评分：本阶段的细节说明</text><text x="77" y="410">选择并移除：本阶段的说明</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="3">
+      <path d="M77 184H307M77 205H258M77 226H282"/><path d="M77 315H273M77 336H310M77 357H251"/><path d="M77 446H297M77 467H260M77 488H313"/>
+    </g>
+    <g fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"><path d="M58 122H48V231H58"/><path d="M58 253H48V362H58"/><path d="M58 384H48V493H58"/></g>
+    <path d="M16 518H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="546">长括线：概述整个方法的策略</text><text x="16" y="574">短括线：细节紧贴最小相关范围</text>
+  </g>
+</svg>

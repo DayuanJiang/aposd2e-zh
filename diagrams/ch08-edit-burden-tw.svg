@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 450" role="img" aria-labelledby="ch08-edit-burden-t ch08-edit-burden-d">
+  <title id="ch08-edit-burden-t">拆行與合併行應該由誰負責？</title>
+  <desc id="ch08-edit-burden-d">前：輸入與選區操作各自處理拆分與合併行，再呼叫整行介面。後：兩類操作呼叫任意字元範圍介面，共享文字類內部的拆分與合併行。內部按行儲存是條件。</desc>
+  <defs><marker id="ch08-edit-burden-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)" /></marker></defs>
+  <rect width="680" height="450" fill="var(--diagram-bg,#f5f7f8)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">拆行與合併行應該由誰負責？</text>
+    <text x="24" y="62" fill="var(--diagram-muted,#58636b)">同一文字機制：分散給多個呼叫者，還是封裝在一處</text>
+    <text x="24" y="100" font-weight="600">整行介面</text><text x="362" y="100" font-weight="600">任意字元範圍介面</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><rect x="24" y="118" width="134" height="42" rx="4" /><rect x="180" y="118" width="134" height="42" rx="4" /><rect x="362" y="118" width="134" height="42" rx="4" /><rect x="518" y="118" width="138" height="42" rx="4" /></g>
+    <text x="60" y="145">輸入操作</text><text x="216" y="145">選區操作</text><text x="398" y="145">輸入操作</text><text x="555" y="145">選區操作</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch08-edit-burden-a)"><path d="M91 160V186" /><path d="M247 160V186" /><path d="M429 160V244H509V263" /><path d="M587 160V244H509" /></g>
+    <g fill="var(--diagram-warm-soft,#eae2cf)"><rect x="24" y="190" width="134" height="48" rx="4" /><rect x="180" y="190" width="134" height="48" rx="4" /></g>
+    <text x="40" y="219">拆分 / 合併行</text><text x="196" y="219">拆分 / 合併行</text>
+    <text x="447" y="196" fill="var(--diagram-muted,#58636b)">介面只表達</text><text x="447" y="220" fill="var(--diagram-muted,#58636b)">編輯範圍</text>
+    <path d="M24 253H314M362 253H656" stroke="var(--diagram-line,#aebbad)" stroke-dasharray="5 4" />
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch08-edit-burden-a)"><path d="M91 238V265" /><path d="M247 238V265" /></g>
+    <rect x="24" y="269" width="290" height="48" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" /><text x="78" y="299">讀取 / 插入 / 刪除整行</text>
+    <rect x="362" y="269" width="294" height="48" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" /><text x="411" y="299">插入 / 刪除任意字元範圍</text>
+    <path d="M509 318V338" fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch08-edit-burden-a)" />
+    <rect x="362" y="342" width="294" height="48" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" /><text x="433" y="372">拆分 / 合併行</text>
+    <text x="24" y="352" font-size="14" fill="var(--diagram-muted,#58636b)">虛線以上：使用者介面</text><text x="24" y="378" font-size="14" fill="var(--diagram-muted,#58636b)">虛線以下：文字類</text>
+    <text x="24" y="422" font-size="13" fill="var(--diagram-muted,#58636b)">責任路徑示意；若內部按行儲存，文字類仍須拆分與合併行，不再分散給呼叫者。</text>
+  </g>
+</svg>

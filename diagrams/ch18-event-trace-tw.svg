@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 507" role="img" aria-labelledby="ch18-event-trace-title ch18-event-trace-desc">
+  <title id="ch18-event-trace-title">同一派發點在不同登記狀態下呼叫不同處理函式</title>
+  <desc id="ch18-event-trace-desc">教學例的應用初始化程式碼為獨立執行甲登記 E 到 A，為獨立執行乙登記 E 到 B。兩次執行的同一事件派發程式碼收到 E 後查詢各自關係，分別呼叫 A 和 B；沒有處理函式自注冊。failed 原註解補充觸發、呼叫者和執行緒，不替代這些登記資料。</desc>
+  <defs><marker id="ch18-event-trace-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="680" height="507" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="33" font-size="21" font-weight="600">呼叫點相同，登記的目標可以不同</text>
+    <text x="24" y="60" font-size="14">18.2 · E、A/B 為教學自擬；兩次獨立執行，不是同時登記兩個目標</text>
+    <rect x="145" y="84" width="390" height="47" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" /><text x="340" y="114" text-anchor="middle">應用初始化程式碼登記事件與處理函式關係</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ch18-event-trace-arrow)"><path d="M252 131V149H168V174" /><path d="M428 131V149H512V174" /></g>
+    <rect x="24" y="174" width="288" height="56" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" /><rect x="368" y="174" width="288" height="56" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" />
+    <text x="168" y="208" text-anchor="middle">執行甲的登記資料：E → A</text><text x="512" y="208" text-anchor="middle">執行乙的登記資料：E → B</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch18-event-trace-arrow)"><path d="M168 230V276" /><path d="M512 230V276" /><path d="M168 330V369" /><path d="M512 330V369" /></g>
+    <text x="186" y="257" font-size="14">讀取</text><text x="530" y="257" font-size="14">讀取</text>
+    <rect x="24" y="276" width="288" height="54" rx="4" fill="none" stroke="var(--diagram-secondary,#2c6096)" /><rect x="368" y="276" width="288" height="54" rx="4" fill="none" stroke="var(--diagram-secondary,#2c6096)" />
+    <text x="168" y="299" text-anchor="middle">相同派發程式碼收到 E</text><text x="168" y="321" text-anchor="middle" font-size="14">查已登記目標，再呼叫</text>
+    <text x="512" y="299" text-anchor="middle">相同派發程式碼收到 E</text><text x="512" y="321" text-anchor="middle" font-size="14">查已登記目標，再呼叫</text>
+    <text x="168" y="395" text-anchor="middle" fill="var(--diagram-primary,#0b6f5d)">呼叫處理函式 A</text><text x="512" y="395" text-anchor="middle" fill="var(--diagram-primary,#0b6f5d)">呼叫處理函式 B</text>
+    <path d="M24 417H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="24" y="444" font-size="14">原例 failed() 註解：傳輸錯誤阻止 RPC 完成時，transport 在 dispatch thread 呼叫。</text>
+    <text x="24" y="470" font-size="14">這是觸發與上下文資訊，不替代執行時登記資料；圖中沒有假定 RAMCloud 註冊 API。</text>
+    <text x="24" y="496" font-size="14">虛線：初始化寫入關係。實線：派發時讀取關係並呼叫。</text>
+  </g>
+</svg>

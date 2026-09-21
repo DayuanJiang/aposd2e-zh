@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 507" role="img" aria-labelledby="ch18-event-trace-title ch18-event-trace-desc">
+  <title id="ch18-event-trace-title">同一派发点在不同登记状态下调用不同处理函数</title>
+  <desc id="ch18-event-trace-desc">教学例的应用初始化代码为独立运行甲登记 E 到 A，为独立运行乙登记 E 到 B。两次运行的同一事件派发代码收到 E 后查询各自关系，分别调用 A 和 B；没有处理函数自注册。failed 原注释补充触发、调用者和线程，不替代这些登记数据。</desc>
+  <defs><marker id="ch18-event-trace-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="507" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="33" font-size="21" font-weight="600">调用点相同，登记的目标可以不同</text>
+    <text x="24" y="60" font-size="14">18.2 · E、A/B 为教学自拟；两次独立运行，不是同时登记两个目标</text>
+    <rect x="145" y="84" width="390" height="47" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/><text x="340" y="114" text-anchor="middle">应用初始化代码登记事件与处理函数关系</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ch18-event-trace-arrow)"><path d="M252 131V149H168V174"/><path d="M428 131V149H512V174"/></g>
+    <rect x="24" y="174" width="288" height="56" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/><rect x="368" y="174" width="288" height="56" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="168" y="208" text-anchor="middle">运行甲的登记数据：E → A</text><text x="512" y="208" text-anchor="middle">运行乙的登记数据：E → B</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch18-event-trace-arrow)"><path d="M168 230V276"/><path d="M512 230V276"/><path d="M168 330V369"/><path d="M512 330V369"/></g>
+    <text x="186" y="257" font-size="14">读取</text><text x="530" y="257" font-size="14">读取</text>
+    <rect x="24" y="276" width="288" height="54" rx="4" fill="none" stroke="var(--diagram-secondary,#2c6096)"/><rect x="368" y="276" width="288" height="54" rx="4" fill="none" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="168" y="299" text-anchor="middle">相同派发代码收到 E</text><text x="168" y="321" text-anchor="middle" font-size="14">查已登记目标，再调用</text>
+    <text x="512" y="299" text-anchor="middle">相同派发代码收到 E</text><text x="512" y="321" text-anchor="middle" font-size="14">查已登记目标，再调用</text>
+    <text x="168" y="395" text-anchor="middle" fill="var(--diagram-primary,#0b6f5d)">调用处理函数 A</text><text x="512" y="395" text-anchor="middle" fill="var(--diagram-primary,#0b6f5d)">调用处理函数 B</text>
+    <path d="M24 417H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="444" font-size="14">原例 failed() 注释：传输错误阻止 RPC 完成时，transport 在 dispatch thread 调用。</text>
+    <text x="24" y="470" font-size="14">这是触发与上下文信息，不替代运行时登记数据；图中没有假定 RAMCloud 注册 API。</text>
+    <text x="24" y="496" font-size="14">虚线：初始化写入关系。实线：派发时读取关系并调用。</text>
+  </g>
+</svg>

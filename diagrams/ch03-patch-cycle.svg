@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 472" role="img" aria-labelledby="ch03-patch-cycle-title ch03-patch-cycle-desc">
+  <title id="ch03-patch-cycle-title">一次捷径如何变成持续负担？</title>
+  <desc id="ch03-patch-cycle-desc">赶任务时接受小补丁，补丁累积复杂性，下一次修改受阻；因清理影响眼前进度而再次绕过问题，回到赶任务的状态。后续维护者也承担理解和清理成本。箭头是因果关系而非量化预测。</desc>
+  <defs><marker id="ch03-patch-cycle-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="472" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="24" y="34" font-size="20" font-weight="600">一次捷径如何变成持续负担？</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">战术式编程的因果回路，不是进度曲线</text>
+    <rect x="40" y="93" width="244" height="74" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="56" y="122" font-weight="600">① 赶当前任务</text><text x="56" y="149">优先让功能尽快工作</text>
+    <rect x="396" y="93" width="244" height="74" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="412" y="122" font-weight="600">② 接受小补丁</text><text x="412" y="149">“这点复杂性没关系”</text>
+    <rect x="396" y="252" width="244" height="74" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="412" y="281" font-weight="600">③ 复杂性累积</text><text x="412" y="308">依赖与特殊处理越来越多</text>
+    <rect x="40" y="252" width="244" height="74" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="56" y="281" font-weight="600">④ 下次修改受阻</text><text x="56" y="308">清理更难，只好再绕过去</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="1.5" marker-end="url(#ch03-patch-cycle-arrow)">
+      <path d="M292 130H386"/><path d="M518 176V242"/><path d="M386 289H294"/><path d="M162 242V176"/>
+    </g>
+    <text x="536" y="213" font-size="14">多次叠加</text><text x="48" y="213" font-size="14">又要赶进度</text>
+    <path d="M24 364H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="396" font-weight="600">当前提交者省下的时间，可能由后续维护者支付。</text>
+    <text x="24" y="423">只看本次产出速度，会漏掉重新理解和清理的成本。</text>
+    <text x="24" y="450" font-size="13" fill="var(--diagram-muted,#5c645d)">因果示意，不为每个补丁指定固定成本或必然结果。</text>
+  </g>
+</svg>

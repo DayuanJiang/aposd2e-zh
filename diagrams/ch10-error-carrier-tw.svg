@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 634" role="img" aria-labelledby="ch10-error-carrier-t ch10-error-carrier-d">
+  <title id="ch10-error-carrier-t">兩條錯誤訊息，同一段響應邏輯</title>
+  <desc id="ch10-error-carrier-d">兩個獨立請求在參數提取和參數校驗處分別產生原文的quantity缺失訊息與xyz格式錯誤訊息。兩條例外記錄遵守共同基類加message的約定，同一段頂層邏輯讀取各自訊息並放入各自錯誤響應。A和B不會合成一個響應；圖不規定HTTP狀態碼、響應格式或清理先後。</desc>
+  <defs><marker id="ch10-error-carrier-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)" /></marker></defs>
+  <rect width="680" height="634" fill="var(--diagram-bg,#f5f7f8)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">兩條錯誤訊息，同一段響應邏輯</text>
+    <text x="24" y="65">A、B 是兩個獨立請求；複用處理邏輯，不合併兩條訊息。</text>
+    <text x="24" y="104" font-weight="600">A：getParameter 找不到參數</text><text x="374" y="104" font-weight="600">B：參數校驗發現值為 xyz</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch10-error-carrier-a)"><path d="M165 113V137" /><path d="M515 113V137" /></g>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><rect x="24" y="144" width="282" height="126" rx="4" /><rect x="374" y="144" width="282" height="126" rx="4" /></g>
+    <text x="42" y="170">基類：共同例外基類</text><text x="392" y="170">基類：共同例外基類</text>
+    <path d="M24 183H306M374 183H656" stroke="var(--diagram-line,#aebbad)" />
+    <g font-size="14"><text x="42" y="205" font-family="monospace">message:</text><text x="42" y="235">URL 中不存在參數 'quantity'</text><text x="392" y="205" font-family="monospace">message:</text><text x="392" y="235">'quantity' 參數的值 'xyz' 不正確；</text><text x="392" y="257">必須為正整數</text></g>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch10-error-carrier-a)"><path d="M165 271V293H224V315" /><path d="M515 271V293H456V315" /></g>
+    <text x="24" y="300" font-size="13">檢測點給出原因</text>
+    <rect x="144" y="322" width="392" height="75" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <text x="164" y="349" font-weight="600">同一段頂層邏輯，無須新增錯誤類別分支</text><text x="164" y="379">取出這次例外的 message，放入錯誤響應。</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch10-error-carrier-a)"><path d="M224 398V419H165V438" /><path d="M456 398V419H515V438" /></g>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><rect x="24" y="445" width="282" height="99" rx="4" /><rect x="374" y="445" width="282" height="99" rx="4" /></g>
+    <text x="42" y="472" font-weight="600">請求 A 的響應中的錯誤訊息</text><text x="392" y="472" font-weight="600">請求 B 的響應中的錯誤訊息</text>
+    <text x="42" y="508" font-size="14">URL 中不存在參數 'quantity'</text><text x="392" y="508" font-size="14">'quantity' 參數的值 'xyz' 不正確；</text><text x="392" y="531" font-size="14">必須為正整數</text>
+    <text x="24" y="575" font-size="13" fill="var(--diagram-muted,#58636b)">訊息內容來自原文；A/B 和 message 欄位名為教學記號，未規定響應的具體格式。</text>
+    <text x="24" y="598" font-size="13" fill="var(--diagram-muted,#58636b)">僅請求級錯誤：中止本請求、清理狀態、繼續下一請求；系統級致命錯誤不屬於此例。</text>
+    <text x="24" y="621" font-size="13" fill="var(--diagram-muted,#58636b)">不規定清理與生成響應的先後，不增加 HTTP 狀態碼規則。</text>
+  </g>
+</svg>

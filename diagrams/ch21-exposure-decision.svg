@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 553" role="img" aria-labelledby="ch21-exposure-decision-title ch21-exposure-decision-desc">
+  <title id="ch21-exposure-decision-title">以普通文件导出调用者为参照区分必要信息和日常配置</title>
+  <desc id="ch21-exposure-decision-desc">自拟契约中 finish 成功前输出可能仍不完整。导出后需要读取结果的调用者若知道契约，可等 finish 成功再读；若只知道 write 而过早读取，可能读到不完整内容。普通导出通常可默认缓冲，不必每次指定；特殊需求仍可显式控制，信息必要性取决于调用者和场景。</desc>
+  <defs><marker id="ch21-exposure-decision-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="553" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="33" font-size="21" font-weight="600">对这位调用者，什么信息不能隐藏？</text><text x="24" y="60" font-size="14">21.2–21.4 · 场景：普通文件导出，随后读取结果</text>
+    <text x="24" y="88" font-size="14">教学自拟契约：finish() 成功返回后，输出才保证完整可读；不是 Java API。</text>
+    <text x="290" y="130" text-anchor="middle" font-weight="600">接口显露</text><text x="547" y="130" text-anchor="middle" font-weight="600">内部隐藏</text>
+    <text x="24" y="204">需要知道</text><text x="24" y="231">何时可读</text>
+    <rect x="169" y="148" width="240" height="168" fill="var(--diagram-primary-soft,#d6e5dc)"/><rect x="423" y="148" width="233" height="168" fill="var(--diagram-danger-soft,#ead9dc)"/>
+    <text x="185" y="178">知道 finish() 的完成契约</text><text x="185" y="210">等待 finish() 成功</text>
+    <path d="M289 221V247" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch21-exposure-decision-arrow)"/><text x="185" y="272">再读取完整输出</text><text x="185" y="301" font-size="14">动作依赖的事实可见</text>
+    <text x="439" y="178">只知道 write()，不知完成点</text><text x="439" y="210">写后立即读取</text>
+    <path d="M539 221V247" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch21-exposure-decision-arrow)"/><text x="439" y="272">可能读到不完整内容</text><text x="439" y="301" font-size="14">必要事实被隐藏</text>
+    <text x="24" y="374">普通导出</text><text x="24" y="401">的缓冲选择</text><text x="24" y="430" font-size="14">通常可默认</text>
+    <rect x="169" y="332" width="240" height="126" fill="var(--diagram-danger-soft,#ead9dc)"/><rect x="423" y="332" width="233" height="126" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="185" y="362">每次显式指定</text><text x="185" y="393" font-family="ui-monospace,monospace">buffered = true</text><text x="185" y="430">日常反复做相同配置</text>
+    <text x="439" y="362">默认使用缓冲</text><text x="439" y="393">常规调用无需设置</text><text x="439" y="430" font-size="14">不是取消所有控制入口</text>
+    <path d="M155 116V467M155 324H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="493">有不同需求的调用者仍可显式选择模式；必要性随场景而变。</text>
+    <text x="24" y="524" font-size="14">finish 契约不声称磁盘持久性；默认缓冲依据作者对多数调用者的论述。</text>
+  </g>
+</svg>

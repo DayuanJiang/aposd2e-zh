@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 729" role="img" aria-labelledby="ch20-measurement-loop-m-title ch20-measurement-loop-m-desc">
+  <title id="ch20-measurement-loop-m-title">基線比較之後還要權衡收益與複雜性</title>
+  <desc id="ch20-measurement-loop-m-desc">儲存基線與定位熱點分為兩路，修改熱點後的測量與基線進入同條件比較，判斷實測收益是否值得新增複雜性。不值得包含無收益和收益不足。獨立簡化設計可另作保留依據，但不豁免行為要求，不使用數字閾值。</desc>
+  <defs><marker id="ch20-measurement-loop-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="360" height="729" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">有可測提升，還要問是否值得</text><text x="16" y="57" font-size="14">20.2 · 定位熱點 + 同條件前後比較</text>
+    <rect x="62" y="80" width="236" height="49" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" /><text x="180" y="111" text-anchor="middle">測量當前系統</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch20-measurement-loop-m-arrow)"><path d="M180 129V151H90V175" /><path d="M180 151H268V175" /></g>
+    <rect x="16" y="175" width="148" height="64" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" /><text x="90" y="201" text-anchor="middle">儲存修改前</text><text x="90" y="227" text-anchor="middle">基線</text>
+    <rect x="194" y="175" width="148" height="64" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" /><text x="268" y="201" text-anchor="middle">深入測量</text><text x="268" y="227" text-anchor="middle">定位具體熱點</text>
+    <path d="M268 239V284" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch20-measurement-loop-m-arrow)" />
+    <rect x="194" y="284" width="148" height="64" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" /><text x="268" y="310" text-anchor="middle">修改熱點</text><text x="268" y="336" text-anchor="middle">再測量</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch20-measurement-loop-m-arrow)"><path d="M90 239V378H116V408" /><path d="M268 348V378H244V408" /></g>
+    <text x="16" y="296" font-size="14">基線留作</text><text x="16" y="320" font-size="14">可比參照</text>
+    <rect x="16" y="408" width="328" height="72" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" />
+    <text x="180" y="436" text-anchor="middle">同條件比較後，實測收益</text><text x="180" y="465" text-anchor="middle" font-weight="600">值得新增複雜性嗎？</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch20-measurement-loop-m-arrow)"><path d="M98 480V519" /><path d="M266 480V519" /></g>
+    <text x="98" y="544" text-anchor="middle" fill="var(--diagram-primary,#0b6f5d)">是</text><text x="98" y="571" text-anchor="middle">有理由保留</text>
+    <text x="266" y="544" text-anchor="middle" fill="var(--diagram-danger,#a03946)">否：無收益</text><text x="266" y="569" text-anchor="middle" fill="var(--diagram-danger,#a03946)">或收益不足</text><text x="266" y="596" text-anchor="middle">撤銷新增複雜性</text>
+    <path d="M16 617H344" stroke="var(--diagram-line,#aebbad)" />
+    <text x="16" y="645" font-size="14">獨立簡化設計可另作保留依據，</text><text x="16" y="669" font-size="14">仍須滿足行為要求；不設固定數值閾值。</text>
+    <text x="16" y="697" font-size="14">可測但不值得的提升，也屬於“收益不足”。</text>
+  </g>
+</svg>

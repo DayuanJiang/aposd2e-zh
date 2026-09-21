@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 457" role="img" aria-labelledby="ch14-name-domains-t ch14-name-domains-d">
+  <title id="ch14-name-domains-t">名称的范围要与概念的范围吻合</title><desc id="ch14-name-domains-d">过宽的x可以解释为像素坐标或字符索引，charIndex排除前一种误解。过窄的selection仅指选区，但delete可操作所有文本范围，应该用range。</desc>
+  <defs><marker id="ch14-name-domains-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="680" height="457" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">名称的范围要与概念的范围吻合</text>
+    <text x="24" y="78" font-weight="600">过宽：x 容许不同坐标域的猜测</text>
+    <circle cx="58" cy="147" r="23" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="54" y="153" font-family="monospace" font-size="20">x</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch14-name-domains-a)"><path d="M81 147H124V118H170"/><path d="M124 147V179H170"/></g>
+    <text x="187" y="124">屏幕像素坐标？</text><text x="187" y="185">行内字符索引？</text>
+    <rect x="457" y="154" width="199" height="47" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="500" y="184" font-family="monospace">charIndex</text>
+    <path d="M456 179H312" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" marker-end="url(#ch14-name-domains-a)"/>
+    <text x="454" y="124" font-size="14">把名称收窄到真实概念</text>
+    <path d="M24 226H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="257" font-weight="600">过窄：selection 暗示只能删除当前选区</text>
+    <rect x="24" y="279" width="398" height="112" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="42" y="306">任意文本范围 range：delete 的实际能力</text>
+    <ellipse cx="167" cy="352" rx="106" ry="27" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="89" y="357">当前选区 selection</text>
+    <text x="286" y="355" font-size="14">未选中的范围</text>
+    <path d="M439 281H456V390H439" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/>
+    <text x="479" y="326" font-family="monospace">delete(range)</text><text x="479" y="357" font-size="14">名称覆盖整个能力范围</text>
+    <text x="24" y="427" font-size="13" fill="var(--diagram-muted,#58636b)">集合为教学示意，不表示概率或比例。精确不等于越具体越好。</text>
+  </g>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="545" height="256" viewBox="-4 -4 545 256" role="img" aria-labelledby="figure-00010-title figure-00010-desc">
+  <title id="figure-00010-title">Figure 2.1: Web-page background dependencies</title>
+  <desc id="figure-00010-desc">Three groups of web pages. In (a), every page specifies bg = "red". In (b), every page specifies bg = bannerBg and dotted links lead to the shared bannerBg value "red". In (c), the same shared background is used, but the first and last shown pages also specify emph = "darkred" locally. Vertical ellipses indicate omitted pages. The links are dotted lines without arrowheads.</desc>
+  <rect x="-4" y="-4" width="545" height="256" fill="#fff"/>
+  <g fill="#f2f2f2" stroke="#000" stroke-width="0.9">
+    <rect x="32.5" y="2.5" width="89" height="40"/>
+    <rect x="32.5" y="54.5" width="89" height="40"/>
+    <rect x="32.5" y="106.5" width="89" height="40"/>
+    <rect x="32.5" y="179.5" width="89" height="40"/>
+    <rect x="148.5" y="2.5" width="89" height="40"/>
+    <rect x="148.5" y="54.5" width="89" height="40"/>
+    <rect x="148.5" y="106.5" width="89" height="40"/>
+    <rect x="148.5" y="179.5" width="89" height="40"/>
+    <rect x="356.5" y="2.5" width="89" height="40"/>
+    <rect x="356.5" y="54.5" width="89" height="40"/>
+    <rect x="356.5" y="106.5" width="89" height="40"/>
+    <rect x="356.5" y="179.5" width="89" height="40"/>
+  </g>
+  <g fill="none" stroke="#555" stroke-width="0.8" stroke-dasharray="1 2">
+    <path d="M224 10H246L265 104M224 62H239L265 110M224 114H266M224 187H246L265 124"/>
+    <path d="M432 10H454L473 104M432 62H447L473 110M432 114H474M432 187H454L473 124"/>
+  </g>
+  <g fill="#fff" stroke="#000" stroke-width="0.9">
+    <rect x="267.5" y="106.5" width="61" height="15"/>
+    <rect x="475.5" y="106.5" width="61" height="15"/>
+  </g>
+  <path d="M23 1C13 1 18 44 19 75C20 96 20 107 15 111C20 115 20 128 19 149C18 181 13 221 23 221" fill="none" stroke="#000" stroke-width="0.8"/>
+  <g fill="#000" font-family="Arial, Helvetica, sans-serif" font-size="10.3">
+    <text x="35" y="13.5">bg = "red"</text>
+    <text x="35" y="65.5">bg = "red"</text>
+    <text x="35" y="117.5">bg = "red"</text>
+    <text x="35" y="190.5">bg = "red"</text>
+    <text x="151" y="13.5">bg = bannerBg</text>
+    <text x="151" y="65.5">bg = bannerBg</text>
+    <text x="151" y="117.5">bg = bannerBg</text>
+    <text x="151" y="190.5">bg = bannerBg</text>
+    <text x="359" y="13.5">bg = bannerBg</text>
+    <text x="359" y="26.5">emph = "darkred"</text>
+    <text x="359" y="65.5">bg = bannerBg</text>
+    <text x="359" y="117.5">bg = bannerBg</text>
+    <text x="359" y="190.5">bg = bannerBg</text>
+    <text x="359" y="203.5">emph = "darkred"</text>
+    <g text-anchor="middle">
+      <text x="298" y="102">bannerBg</text>
+      <text x="298" y="118.5">"red"</text>
+      <text x="506" y="102">bannerBg</text>
+      <text x="506" y="118.5">"red"</text>
+      <text x="77" y="246.5">(a)</text>
+      <text x="193" y="246.5">(b)</text>
+      <text x="403" y="246.5">(c)</text>
+      <text transform="translate(8.5 111) rotate(-90)" font-size="11">Web pages</text>
+    </g>
+  </g>
+  <g fill="#000">
+    <circle cx="75.5" cy="156.5" r="0.9"/>
+    <circle cx="75.5" cy="163.5" r="0.9"/>
+    <circle cx="75.5" cy="170.5" r="0.9"/>
+    <circle cx="191.5" cy="156.5" r="0.9"/>
+    <circle cx="191.5" cy="163.5" r="0.9"/>
+    <circle cx="191.5" cy="170.5" r="0.9"/>
+    <circle cx="402.5" cy="156.5" r="0.9"/>
+    <circle cx="402.5" cy="163.5" r="0.9"/>
+    <circle cx="402.5" cy="170.5" r="0.9"/>
+  </g>
+</svg>

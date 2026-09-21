@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 745" role="img" aria-labelledby="ch05-http-read-m-title ch05-http-read-m-desc">
+  <title id="ch05-http-read-m-title">還沒解析，怎麼知道讀完了？</title>
+  <desc id="ch05-http-read-m-desc">教學 Content-Length: 4 的長度依賴虛線指向四個 ASCII 位元組 a=12 的邊界。讀取類先用 K 識別空行解釋長度，隨後解析類再次使用相同知識 K；合併後同一模組擁有 K。實線表示處理順序，不是長度依賴。並非完整 HTTP 演算法。</desc>
+  <defs><marker id="ch05-http-read-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="360" height="745" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="32" font-size="19" font-weight="600">還沒解析，怎麼知道讀完了？</text>
+    <text x="16" y="58" font-size="13" fill="var(--diagram-muted,#5c645d)">教學片段：僅示顯式 Content-Length 場景</text>
+    <text x="16" y="96" font-family="ui-monospace,monospace">Content-Length: 4</text>
+    <text x="16" y="124" font-size="14">頭部以空行結束</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-line,#aebbad)"><rect x="40" y="153" width="60" height="40" /><rect x="100" y="153" width="60" height="40" /><rect x="160" y="153" width="60" height="40" /><rect x="220" y="153" width="60" height="40" /></g>
+    <g font-family="ui-monospace,monospace" text-anchor="middle" font-size="19"><text x="70" y="180">a</text><text x="130" y="180">=</text><text x="190" y="180">1</text><text x="250" y="180">2</text></g>
+    <path d="M40 201V214H280V201" fill="none" stroke="var(--diagram-secondary,#2c6096)" />
+    <path d="M191 91H327V214H289" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-dasharray="5 4" marker-end="url(#ch05-http-read-m-arrow)" />
+    <text x="40" y="240" font-size="14">長度約束：4 個 ASCII 請求體位元組</text>
+    <text x="16" y="275" font-weight="600">K = 識別空行 + 解釋長度</text>
+    <rect x="16" y="293" width="328" height="79" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" />
+    <text x="32" y="321" font-weight="600">讀取類：包含 K</text><text x="32" y="350">用 K 定界、讀取，回傳請求字串</text>
+    <path d="M180 380V403" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-http-read-m-arrow)" /><text x="198" y="396" font-size="13">再解析</text>
+    <rect x="16" y="415" width="328" height="78" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" />
+    <text x="32" y="443" font-weight="600">解析類：也包含 K</text><text x="32" y="472">再次解釋頭部與請求體邊界</text>
+    <rect x="16" y="523" width="328" height="99" rx="4" fill="none" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="32" y="551" font-weight="600">合併後：一個模組儲存 K</text>
+    <text x="32" y="579">接收請求 → K 定界並讀取</text><text x="32" y="606">→ 形成請求物件</text>
+    <text x="16" y="653" font-size="13">實線：處理順序；虛線：長度依賴。</text>
+    <text x="16" y="680" font-size="13">可能多次讀取；其他定界、校驗、錯誤未畫出。</text>
+    <text x="16" y="710" font-size="13" fill="var(--diagram-muted,#5c645d)">並非所有協議都應合成一個類，</text><text x="16" y="732" font-size="13" fill="var(--diagram-muted,#5c645d)">也不是完整 HTTP 演算法。</text>
+  </g>
+</svg>

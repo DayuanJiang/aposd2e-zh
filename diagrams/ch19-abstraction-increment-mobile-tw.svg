@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 858" role="img" aria-labelledby="ch19-abstraction-increment-m-title ch19-abstraction-increment-m-desc">
+  <title id="ch19-abstraction-increment-m-title">當前建立行編碼，後來同契約需求才複用</title>
+  <desc id="ch19-abstraction-increment-m-desc">自擬例從當前聯絡人欄位開始，定義 emitRow 的含逗號欄位加引號和分隔規則，得到聯絡人輸出。後來庫存欄位滿足同一契約，回到同一編碼器得到庫存輸出。並排內聯會重複該規則；PDF 排版不屬於這個抽象。不是預建所有未來功能。</desc>
+  <defs><marker id="ch19-abstraction-increment-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="360" height="858" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">共同契約，才是複用的理由</text><text x="16" y="57" font-size="14">19.2 / 19.4 · 教學自擬，不是作者專案</text>
+    <rect x="16" y="80" width="296" height="83" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" />
+    <text x="32" y="110" font-weight="600">當前：聯絡人匯出</text><text x="32" y="143" font-family="ui-monospace,monospace" font-size="14">["Li, Ming", "Tokyo"]</text>
+    <path d="M164 163V206" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch19-abstraction-increment-m-arrow)" /><text x="183" y="190" font-size="14">此時設計所需核心</text>
+    <rect x="16" y="206" width="296" height="171" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="32" y="235" font-weight="600">emitRow(fields)</text><text x="32" y="264">含逗號欄位 → 兩端加引號</text><text x="32" y="292">欄位之間 → 加分隔逗號</text><path d="M16 307H312" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="32" y="333" font-size="14">當前得到</text><text x="32" y="361" font-family="ui-monospace,monospace" font-size="16">"Li, Ming",Tokyo</text>
+    <rect x="16" y="411" width="296" height="118" rx="4" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-dasharray="5 4" />
+    <text x="32" y="440" font-weight="600">後來：庫存匯出</text><text x="32" y="470" font-family="ui-monospace,monospace" font-size="14">["red, pen", "2"]</text><text x="32" y="505" font-size="14">也需要同樣的欄位編碼，才接入此核心</text>
+    <path d="M312 470H336V250H312" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ch19-abstraction-increment-m-arrow)" />
+    <text x="16" y="564">複用同一契約，得到</text><text x="16" y="593" font-family="ui-monospace,monospace" font-size="16">"red, pen",2</text>
+    <text x="16" y="627" font-size="14">若各自內聯同一規則（教學虛擬碼）：</text>
+    <text x="16" y="654" font-family="ui-monospace,monospace" font-size="14">聯絡人: if comma(f): quote(f)</text>
+    <text x="16" y="680" font-family="ui-monospace,monospace" font-size="14">庫存: if comma(f): quote(f)</text>
+    <path d="M16 700H344" stroke="var(--diagram-line,#aebbad)" />
+    <text x="16" y="729">PDF 分頁不屬於這個抽象。</text><text x="16" y="760" font-size="14">作者建議所需抽象形成完整核心，</text><text x="16" y="785" font-size="14">不要求所有功能合一，也不預建未知需求。</text>
+    <text x="16" y="815" font-size="14">只示意字母、空格、數字、逗號欄位；</text><text x="16" y="839" font-size="14">非完整 CSV 規範，也非敏捷的必然結果。</text>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 490" role="img" aria-labelledby="ch19-inheritance-dependencies-title ch19-inheritance-dependencies-desc">
+  <title id="ch19-inheritance-dependencies-title">子类读到了父类表示，才产生这条修改依赖</title>
+  <desc id="ch19-inheritance-dependencies-desc">教学队列原用 head 数组下标，子类通过 data[head] 读取首项。父类把 head 改成节点引用时，该读取点可能需要复核。备选封装 Queue 的 peek 返回首项、size 返回数量，只有保持这些契约且不暴露表示时才能隔离此变化；组合本身不保证解耦，也不指定共享实例。</desc>
+  <defs><marker id="ch19-inheritance-dependencies-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="490" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="33" font-size="21" font-weight="600">依赖的理由：子类把 head 当成数组下标</text>
+    <text x="24" y="60" font-size="14">19.1 · 自拟队列 [A, B] 与 API；虚线表示可能需要复核，不是调用</text>
+    <text x="24" y="100" font-weight="600">表示暴露给子类</text><text x="367" y="100" font-weight="600">若封装表示，可考虑此备选</text>
+    <rect x="24" y="119" width="296" height="100" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="40" y="147">父类 QueueBase</text><text x="40" y="176" font-family="ui-monospace,monospace" font-size="14">head: index 0 → Node(A)</text><text x="40" y="202" font-size="14">同样叫 head，表示含义已经改变</text>
+    <path d="M172 219V304" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ch19-inheritance-dependencies-arrow)"/>
+    <text x="190" y="252" font-size="14">这处读取</text><text x="190" y="278" font-size="14">可能需复核</text>
+    <rect x="24" y="304" width="296" height="79" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="40" y="332">子类的首项读取</text><text x="40" y="362" font-family="ui-monospace,monospace">return data[head]</text>
+    <path d="M344 85V410" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="381" y="139">调用者只用 peek() / size()</text>
+    <path d="M512 152V180" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch19-inheritance-dependencies-arrow)"/>
+    <rect x="367" y="180" width="289" height="183" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="383" y="207">Queue 的接口契约（本例）</text><text x="383" y="236">peek() → 首项 A</text><text x="383" y="263">size() → 项数 2</text>
+    <path d="M367 280H656" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="383" y="309">内部：下标 → 节点表示</text><text x="383" y="340" font-size="14">前提：不外露表示，并维持上方契约</text>
+    <text x="367" y="393" font-size="14">这是封装条件，不是组合自动带来的结果。</text>
+    <path d="M24 420H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="449">必须继承时，也可以在继承体系内部隔离状态。</text><text x="24" y="475" font-size="14">图示是类型与功能关系，不要求各调用者共享同一辅助类实例。</text>
+  </g>
+</svg>

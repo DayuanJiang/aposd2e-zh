@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 394" role="img" aria-labelledby="ch17-trustworthy-patterns-title ch17-trustworthy-patterns-desc">
+  <title id="ch17-trustworthy-patterns-title">相同外觀應支援可靠的含義推斷</title>
+  <desc id="ch17-trustworthy-patterns-desc">教學例中，兩處 timeoutSeconds 都表示秒，知識可以複用。兩處 timeout 卻分別表示秒和毫秒，會把熟悉的外觀誤認為相同單位；明確區分單位恢復差異。</desc>
+  <defs><marker id="ch17-trustworthy-patterns-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="680" height="394" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="21" font-weight="600">外觀相似，含義也必須相符</text><text x="24" y="61" font-size="14">17.3 · 教學自擬的單位反例，不是作者專案或命名規範</text>
+    <text x="24" y="100" font-weight="600">可複用</text><text x="24" y="221" font-weight="600" fill="var(--diagram-danger,#a03946)">反例</text>
+    <g fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"><rect x="122" y="81" width="216" height="64" rx="5" /><rect x="440" y="81" width="216" height="64" rx="5" /></g>
+    <text x="230" y="107" text-anchor="middle" font-family="ui-monospace,monospace">timeoutSeconds</text><text x="230" y="133" text-anchor="middle">含義：秒</text>
+    <text x="548" y="107" text-anchor="middle" font-family="ui-monospace,monospace">timeoutSeconds</text><text x="548" y="133" text-anchor="middle">含義：秒</text>
+    <path d="M338 114H440" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch17-trustworthy-patterns-arrow)" /><text x="389" y="166" text-anchor="middle" font-size="14">秒的知識可複用</text>
+    <g fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"><rect x="122" y="200" width="216" height="64" rx="5" /><rect x="440" y="200" width="216" height="64" rx="5" /></g>
+    <text x="230" y="226" text-anchor="middle" font-family="ui-monospace,monospace">timeout</text><text x="230" y="252" text-anchor="middle">實際：秒</text>
+    <text x="548" y="226" text-anchor="middle" font-family="ui-monospace,monospace">timeout</text><text x="548" y="252" text-anchor="middle">實際：毫秒</text>
+    <path d="M338 232H440" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ch17-trustworthy-patterns-arrow)" /><path d="M380 223L398 241M398 223L380 241" stroke="var(--diagram-danger,#a03946)" stroke-width="3" />
+    <text x="389" y="291" text-anchor="middle" fill="var(--diagram-danger,#a03946)">“看起來一樣，所以也是秒”是錯誤推斷</text>
+    <path d="M24 320H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="24" y="349">修正：明確區分單位，讓不同含義顯出差異。</text><text x="24" y="377" font-size="14">一致性不是把不同事物強行包裝成同一個模式。</text>
+  </g>
+</svg>

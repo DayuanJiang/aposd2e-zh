@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 476" role="img" aria-labelledby="ch13-ready-contract-t ch13-ready-contract-d">
+  <title id="ch13-ready-contract-t">ready 不等於一定有物件</title><desc id="ch13-ready-contract-d">先執行本次isReady，包括它在呼叫期間承擔的推進工作；表格描述它回傳時的情況，而非呼叫前的狀態。有物件與已結束對應true，下一次getNext不阻塞，分別回傳物件或NULL。false只表示可能阻塞；呼叫前沒有物件不決定回傳值，也不保證每次呼叫都產生物件。</desc>
+  <defs><marker id="ch13-ready-contract-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)" /></marker></defs>
+  <rect width="680" height="476" fill="var(--diagram-bg,#f5f7f8)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">ready 不等於一定有物件</text><text x="24" y="70">先執行本次 isReady 的推進工作；下列情況在它回傳時觀察。</text>
+    <text x="24" y="111" font-weight="600">本次呼叫回傳時</text><text x="274" y="111" font-weight="600">回傳值</text><text x="438" y="111" font-weight="600">下一次 getNext()</text>
+    <g fill="var(--diagram-primary-soft,#d6e5dc)"><rect x="24" y="130" width="209" height="43" rx="4" /><rect x="24" y="195" width="209" height="43" rx="4" /></g>
+    <text x="44" y="158">至少一個物件可回傳</text><text x="44" y="223">查詢已經結束</text>
+    <rect x="24" y="260" width="209" height="43" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" /><text x="44" y="288">尚未保證可立即回傳</text>
+    <g stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch13-ready-contract-a)"><path d="M234 152H272" /><path d="M234 217H272" /><path d="M234 282H272" /><path d="M340 152H424" /><path d="M340 217H424" /><path d="M340 282H424" /></g>
+    <text x="281" y="158" font-family="monospace" font-size="18">true</text><text x="281" y="223" font-family="monospace" font-size="18">true</text><text x="281" y="288" font-family="monospace" font-size="18">false</text>
+    <text x="439" y="158">不阻塞，回傳物件</text><text x="439" y="223">不阻塞，回傳 NULL</text><text x="439" y="288" font-weight="600">可能阻塞，不是必然阻塞</text>
+    <path d="M24 328H656" stroke="var(--diagram-line,#aebbad)" /><text x="24" y="359" font-weight="600">另一個介面義務：呼叫才能推進查詢</text>
+    <text x="24" y="397">直接呼叫 isReady</text><text x="24" y="428">或呼叫 getNext</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch13-ready-contract-a)"><path d="M183 393H364" /><path d="M164 424H265V404H364" /></g>
+    <rect x="372" y="375" width="284" height="65" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" /><text x="391" y="402">執行 isReady，推動查詢</text><text x="391" y="428" font-size="13">getNext 可以間接呼叫它</text>
+    <text x="24" y="464" font-size="13" fill="var(--diagram-muted,#58636b)">呼叫前沒有就緒物件，不決定回傳值；也不保證每次呼叫都產生物件或固定進展。</text>
+  </g>
+</svg>

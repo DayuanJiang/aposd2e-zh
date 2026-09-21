@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 470" role="img" aria-labelledby="ch06-range-api-title ch06-range-api-desc">
+  <title id="ch06-range-api-title">三個刪除動作，一種文字機制</title>
+  <desc id="ch06-range-api-desc">教學文字 ABCDE，游標在位置 3，即 C 與 D 之間。UI 將退格對映到區間 2 到 3，結果 ABDE；Delete 對映到 3 到 4，結果 ABCE；選區 1 到 4 刪除後為 AE。均使用 delete(start,end)，含起點不含終點。</desc>
+  <defs><marker id="ch06-range-api-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="680" height="470" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="24" y="34" font-size="20" font-weight="600">三個刪除動作，一種文字機制</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">教學範例：數字代表字元間隙，不規定 Position 的實作</text>
+    <text x="24" y="135" font-weight="600">初始文字</text>
+    <rect x="220" y="109" width="240" height="44" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-line,#aebbad)" />
+    <path d="M268 109V153M316 109V153M364 105V162M412 109V153" stroke="var(--diagram-line,#aebbad)" />
+    <g font-family="ui-monospace,monospace" font-size="19" text-anchor="middle"><text x="244" y="138">A</text><text x="292" y="138">B</text><text x="340" y="138">C</text><text x="388" y="138">D</text><text x="436" y="138">E</text></g>
+    <g font-size="13" text-anchor="middle"><text x="220" y="97">0</text><text x="268" y="97">1</text><text x="316" y="97">2</text><text x="364" y="97">3</text><text x="412" y="97">4</text><text x="460" y="97">5</text></g>
+    <path d="M364 105V161" stroke="var(--diagram-danger,#a03946)" stroke-width="3" />
+    <text x="490" y="135">游標在 3</text>
+    <text x="40" y="203" font-weight="600">UI 意圖</text><text x="236" y="203" font-weight="600">UI 決定的範圍</text><text x="520" y="203" font-weight="600">獨立執行的結果</text>
+    <path d="M24 216H656M24 264H656M24 312H656M24 360H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="40" y="246">退格：刪左側字元</text><text x="236" y="246">[2, 3)　刪除 C</text><text x="540" y="246" font-family="ui-monospace,monospace">ABDE</text>
+    <text x="40" y="294">Delete：刪右側字元</text><text x="236" y="294">[3, 4)　刪除 D</text><text x="540" y="294" font-family="ui-monospace,monospace">ABCE</text>
+    <text x="40" y="342">刪除選區</text><text x="236" y="342">[1, 4)　刪除 BCD</text><text x="540" y="342" font-family="ui-monospace,monospace">AE</text>
+    <g stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch06-range-api-arrow)"><path d="M425 240H506" /><path d="M425 288H506" /><path d="M425 336H506" /></g>
+    <rect x="24" y="378" width="632" height="44" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="40" y="406">文字類只需一種機制：delete(start, end)　[含起點，不含終點)</text>
+    <text x="24" y="450" font-size="13" fill="var(--diagram-muted,#5c645d)">範例均從原始文字獨立執行；UI 決定範圍，不把按鍵概念塞進文字類。</text>
+  </g>
+</svg>

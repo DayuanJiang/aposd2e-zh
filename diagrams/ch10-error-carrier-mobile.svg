@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 891" role="img" aria-labelledby="ch10-error-carrier-m-t ch10-error-carrier-m-d">
+  <title id="ch10-error-carrier-m-t">两条错误消息，同一段响应逻辑</title>
+  <desc id="ch10-error-carrier-m-d">请求A缺少quantity，请求B的quantity值xyz不是正整数。两个检测点产生相同形状的共同基类加message记录，分别交给同一段顶层响应逻辑，再分别得到包含原消息的错误响应。不是把两个请求聚合成一个响应，不规定清理与响应的先后。</desc>
+  <defs><marker id="ch10-error-carrier-m-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="360" height="891" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="20" y="32" font-size="18" font-weight="600">两条错误消息，同一段响应逻辑</text><text x="20" y="63" font-size="14">A、B 是独立请求，不合并两条消息。</text>
+    <text x="20" y="102" font-weight="600">A：getParameter 找不到参数</text>
+    <rect x="20" y="120" width="294" height="126" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <text x="36" y="147">基类：共同异常基类</text><path d="M20 160H314" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="36" y="184" font-family="monospace" font-size="14">message:</text><text x="36" y="212" font-size="14">URL 中不存在参数 'quantity'</text>
+    <text x="20" y="277" font-weight="600">B：参数校验发现值为 xyz</text>
+    <rect x="20" y="295" width="294" height="126" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <text x="36" y="322">基类：共同异常基类</text><path d="M20 335H314" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="36" y="359" font-family="monospace" font-size="14">message:</text><text x="36" y="388" font-size="14">'quantity' 参数的值 'xyz' 不正确；</text><text x="36" y="409" font-size="14">必须为正整数</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch10-error-carrier-m-a)"><path d="M315 177H338V441H256V462"/><path d="M150 422V462"/></g><text x="20" y="450" font-size="13">各自的消息</text>
+    <rect x="20" y="469" width="320" height="88" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="36" y="496" font-weight="600">同一段顶层响应逻辑</text><text x="36" y="522" font-size="14">读取这次异常的 message，放入响应。</text><text x="36" y="544" font-size="13">不用为 A、B 各写一个错误类别分支。</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch10-error-carrier-m-a)"><path d="M162 558V587"/><path d="M340 513H349V733H322"/></g>
+    <rect x="20" y="594" width="294" height="81" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <text x="36" y="622" font-weight="600">请求 A 的响应中的错误消息</text><text x="36" y="653" font-size="14">URL 中不存在参数 'quantity'</text>
+    <rect x="20" y="699" width="294" height="92" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <text x="36" y="726" font-weight="600">请求 B 的响应中的错误消息</text><text x="36" y="755" font-size="14">'quantity' 参数的值 'xyz' 不正确；</text><text x="36" y="778" font-size="14">必须为正整数</text>
+    <text x="20" y="818" font-size="12" fill="var(--diagram-muted,#58636b)">原文消息；A/B、message 为教学记号，非响应格式。</text><text x="20" y="840" font-size="12" fill="var(--diagram-muted,#58636b)">仅请求级：中止本请求、清理状态、继续下一请求。</text>
+    <text x="20" y="862" font-size="12" fill="var(--diagram-muted,#58636b)">不含系统致命错误，不规定清理与响应的先后，</text><text x="20" y="881" font-size="12" fill="var(--diagram-muted,#58636b)">也不增加 HTTP 状态码规则。</text>
+  </g>
+</svg>
