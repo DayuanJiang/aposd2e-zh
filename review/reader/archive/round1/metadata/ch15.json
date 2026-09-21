@@ -1,0 +1,60 @@
+[
+  {
+    "id": "ch15-delay-loop",
+    "chapter": "ch15",
+    "title": "为什么越等越难补注释？",
+    "question": "等待代码稳定，为什么可能让注释一直写不出来？",
+    "answer": "推迟让未记录的代码增多，补写任务随之变大，继续推迟就更有吸引力；即使后来补写，设计记忆也可能已经丢失。",
+    "summary": "闭环表示积压如何推动进一步拖延，旁支表示等待还会损失无法从代码恢复的设计信息；这不是时间或概率模型。",
+    "alt": "推迟注释、未记录代码增加、补写任务变大、转做下一项工作依次相连并回到推迟注释；推迟还有一条支路通向设计记忆模糊和注释重复代码。",
+    "kind": "feedback-loop",
+    "desktop": "/diagrams/ch15-delay-loop.svg",
+    "mobile": "/diagrams/ch15-delay-loop-mobile.svg",
+    "anchor": { "section": "15.1", "placement": "end" },
+    "sources": [
+      { "section": "15.1", "epub": "OEBPS/part0019.xhtml#p7:a3722f7256", "reason": "积压使补写更不吸引人，转做功能又增加未记录的代码，构成强化循环。" },
+      { "section": "15.1", "epub": "OEBPS/part0019.xhtml#p8:f9dda67b49", "reason": "延迟使设计记忆模糊；对照代码补写容易重复代码并遗漏设计思路。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch15-design-feedback",
+    "chapter": "ch15",
+    "title": "先写注释不是写完就冻结",
+    "question": "实现尚未开始时写注释，后来发现设计不对怎么办？",
+    "answer": "先用接口注释与签名检验抽象，再写变量和方法体；编码与测试发现的问题继续反馈到注释，新方法仍从接口注释开始。",
+    "summary": "前向箭头是作者的设计顺序，回箭头是编码、测试带来的修正。先写注释改变的是开始顺序，不是取消迭代。",
+    "alt": "类接口、主要公有方法注释与空方法体、反复调整基本结构、实例变量、实现与测试依次推进；实现与测试回到接口说明，新方法也先写接口说明。",
+    "kind": "workflow-feedback",
+    "desktop": "/diagrams/ch15-design-feedback.svg",
+    "mobile": "/diagrams/ch15-design-feedback-mobile.svg",
+    "anchor": { "section": "15.2", "placement": "end" },
+    "sources": [
+      { "section": "15.2", "epub": "OEBPS/part0019.xhtml#p11:533d9fefe2", "reason": "从类接口注释开始。" },
+      { "section": "15.2", "epub": "OEBPS/part0019.xhtml#p12:def8d84a40", "reason": "主要公有方法先写接口注释和签名，方法体留空。" },
+      { "section": "15.2", "epub": "OEBPS/part0019.xhtml#p13:644d81305f", "reason": "通过反复修改注释调整基本结构。" },
+      { "section": "15.2", "epub": "OEBPS/part0019.xhtml#p14:3c56f054d7", "reason": "随后写主要实例变量的声明和注释。" },
+      { "section": "15.2", "epub": "OEBPS/part0019.xhtml#p16:b5b78e3408", "reason": "实现中新发现的方法仍先写接口注释。" },
+      { "section": "15.2", "epub": "OEBPS/part0019.xhtml#p18:1106ac3f0c", "reason": "编码与测试会发现并修正注释问题；反馈不是单向瀑布流程。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch15-comment-gate",
+    "chapter": "ch15",
+    "title": "短注释能证明接口简单吗？",
+    "question": "把接口注释缩短，是否就能让方法变深？",
+    "answer": "不能。必须先确认注释清晰而且完整；在此前提下，仍难以简洁描述才是设计预警，描述覆盖全部实现要点则提示方法浅。",
+    "summary": "完整性是诊断入口，不是可被省掉的内容。图中分支区分文档缺陷与设计信号，避免把字数当成深度指标。",
+    "alt": "接口说明先经过完整清晰检查；未通过则补信息，不能判定深度；通过后，简洁说明支持接口简单，难以简洁说明要求重看设计，必须解释全部实现要点提示浅方法。",
+    "kind": "diagnostic-gate",
+    "desktop": "/diagrams/ch15-comment-gate.svg",
+    "mobile": "/diagrams/ch15-comment-gate-mobile.svg",
+    "anchor": { "section": "15.3", "placement": "end" },
+    "sources": [
+      { "section": "15.3", "epub": "OEBPS/part0019.xhtml#p21:349a38a4ea", "reason": "完整而简单的接口说明支持接口简单；难以描述是预警；说明涉及全部主要实现特性提示方法浅。" },
+      { "section": "15.3", "epub": "OEBPS/part0019.xhtml#p24:4075191347", "reason": "不完整或晦涩的注释不能用来衡量方法深度。" }
+    ],
+    "status": "awaiting-independent-review"
+  }
+]

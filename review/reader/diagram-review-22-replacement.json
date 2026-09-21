@@ -1,0 +1,165 @@
+{
+  "id": "ch22-startup-contract",
+  "verdict": "revise",
+  "decision": "revise",
+  "summary": "Retain the bounded worked-example concept, but do not accept this exact revision yet. The ordered reads of an actual configuration value add explanatory value and are distinct from the chapter 18 lifecycle trace. The main defect is that a shared premise forbids the post-read configuration change that A explicitly depicts. A smaller clarification is needed for the preconfigured-construction alternative. Removal of the old figures is not a reason for this verdict.",
+  "reviewScope": {
+    "role": "Independent explanatory-design review; not the author of the replacement.",
+    "subject": "Only the new ch22-startup-contract metadata and two SVGs. Chapter 18 lifecycle materials were inspected solely for comparison, and chapter 18/21 source passages for the cited anchors.",
+    "method": "Read the latest metadata and both complete SVG sources; read chapter 22 and its supplied English original, plus all cited chapter 18/21 passages. Viewed the exact new light/dark sheets with view_image, including both desktop and mobile designs. Verified current SVG and reader CSS SHA-256 values against both index entries. No builds, asset edits, source edits, or reader experiments.",
+    "full15To21SecondPass": "Not performed and not implied by this review.",
+    "retiredPredecessors": "The current ch22 manifest contains only this replacement, and all four old public SVG files are absent. This confirms scope only, not explanatory quality."
+  },
+  "question": "当配置必须先于后台读取时，隐藏启动动作为什么可能使短接口更难用？",
+  "expectedAnswer": {
+    "suppliedAssessment": "The supplied answer correctly limits A to one possible execution order, describes B's particular caller sequence, acknowledges an extra call and contract, and rejects a universal constructor policy. The intended answer is supported as an invented example. Its phrase referring to the pictured premises becomes problematic because the visible shared premise excludes A.",
+    "accepted": "In this invented example, the requirement is that the first background read see the completed root configuration. A can start reading during construction, so a caller who configures afterward can be too late; the shown read observes the empty value. B exposes startup and, when the caller completes configuration before start and leaves it unchanged during the illustrated work, the shown read observes /docs. B adds a required call and ordering obligation rather than automatically enforcing correct configuration. Supplying completed configuration to a startup-enabled constructor is another possible design.",
+    "questionAlignment": "The graph genuinely explains the possible error mechanism behind the question. It does not establish that B is easier for real readers, globally simpler, or the only correct design. Keep the question's possibility wording."
+  },
+  "graphicReasoning": {
+    "actualInference": "In A, the reader can compare the position of the worker read with the later root assignment and infer why that read sees an empty value. In B, the assignment precedes start and the worker read, which explains the different observed value under the stated example model. Those value/order relationships do explanatory work beyond the prose labels.",
+    "notMerelyBoxedParaphrase": "Mobile uses boxes, but the boxes carry distinct events and concrete read/write values, connected in meaningful order. Desktop places the same events on two directed timelines. Removing the event order would remove the explanation; this is not simply a set of conclusions decorated with arrows.",
+    "causalityAndOrder": "The arrows are explicitly defined as the listed event order, not measured time. A is visibly labeled one possible order, so its worker read before configuration is not presented as inevitable. A's single timeline mixes caller and worker events, but the actor labels make it a readable interleaving rather than an asserted single-thread call chain.",
+    "outcomeQualification": "The observed outcome is only the root value at the illustrated read. The figure does not invent an indexing crash, data loss, speedup, ROI, or automatic design score. B is called a caller convention, and its extra call and remaining configuration obligation are stated. Correct the premise scope rather than adding broad concurrency or success guarantees.",
+    "tradeoff": "The extra start call and ordering obligation are meaningful costs, and the 'not universally better' qualification is appropriate. The trace also visibly shows an object that exists but has not started yet. It is unnecessary to add a complete restart, shutdown, error-handling, or thread-management policy to teach this example.",
+    "constructorPolicy": "Both SVGs explicitly reject a rule that constructors must never start threads. They also mention preconfigured construction. That alternative needs a more concrete description of where configuration exists before the Indexer exists; it does not require a third full diagram.",
+    "addedValueOverSources": "The cited source passages discuss unexpected constructor behavior, missing information, and comparing designs for a particular problem. They do not contain this configuration-order example. The invented read values and alternative startup order supply a new worked application without pretending to be the author's code.",
+    "differenceFromChapter18": "ch18-reader-expectation follows one RaftClient construction into concurrent lifetimes and demonstrates that execution can continue after main returns. This replacement compares two startup contracts and demonstrates a configuration read occurring before or after initialization. It has no main-return endpoint and makes a different inference. Shared use of background threads does not make it redundant.",
+    "closingPlacement": "An explicitly editorial worked example after the conclusion is defensible and materially different from an ROI or general diagnostic loop. Its authority remains that of an invented exercise applying earlier ideas, not a missing author-supplied final rule. The mobile footprint should remain proportionate to this narrow purpose."
+  },
+  "sourceEvidence": [
+    {
+      "anchor": "OEBPS/part0026.xhtml#p5:d725d3ec10",
+      "files": ["docs/ch22.md:7", "/tmp/aposd2e-polish.GHV1eo/original/ch22.md:13-14"],
+      "supports": "The author describes exploring different approaches to a particular problem and finding a simple structure.",
+      "doesNotEstablish": "Any Indexer API, root configuration requirement, threading schedule, or preferred constructor policy."
+    },
+    {
+      "anchor": "OEBPS/part0022.xhtml#p96:cd1197eff7",
+      "files": ["docs/ch18.md:141-150", "/tmp/aposd2e-polish.GHV1eo/original/ch18.md:271-287"],
+      "supports": "Unexpected constructor-created threads should be documented at the constructor interface, with a reminder at the relevant main endpoint in the RaftClient example.",
+      "doesNotEstablish": "That RaftClient suffers this configuration error, has a start method, or should be redesigned to use explicit startup."
+    },
+    {
+      "anchor": "OEBPS/part0022.xhtml#p99:5b421f05ed",
+      "files": ["docs/ch18.md:154-156", "/tmp/aposd2e-polish.GHV1eo/original/ch18.md:292-296"],
+      "supports": "Reduce needed information where possible, reuse knowledge, and expose necessary information through names and comments.",
+      "doesNotEstablish": "That adding a named start method by itself enforces correct ordering or improves every interface."
+    },
+    {
+      "anchor": "OEBPS/part0025.xhtml#p18:dfaf0db169",
+      "files": ["docs/ch21.md:33", "/tmp/aposd2e-polish.GHV1eo/original/ch21.md:52-53"],
+      "supports": "Hiding important information can cause unknown unknowns; startup timing can serve as an explicitly invented instance of that problem.",
+      "doesNotEstablish": "That all startup internals must be public, or that startup timing is equally important for every caller."
+    },
+    {
+      "files": ["docs/.vuepress/reader/diagrams/ch22.json:6-9", "docs/.vuepress/reader/diagrams/ch22.json:14-33"],
+      "supports": "Metadata clearly identifies the editorial provenance and distinguishes this example from RaftClient. Its summary scopes the no-later-change assumption to B more clearly than the SVG header does."
+    }
+  ],
+  "issues": [
+    {
+      "id": "ch22-startup-contract-R1",
+      "priority": "P1",
+      "required": true,
+      "title": "A violates a condition currently presented as a shared premise",
+      "evidence": [
+        "Desktop SVG line 9 labels root initially empty and no caller changes after reading begins as premises applying above both traces.",
+        "Desktop SVG lines 16-21 then show the worker read followed by the caller setting root to /docs.",
+        "Mobile SVG line 10 repeats the global no-later-change condition, while lines 18-23 show the same read-then-write sequence.",
+        "Desktop desc line 3 and mobile desc line 3 also combine the requirement/premise with a trace that violates it."
+      ],
+      "whyItMatters": "A is a useful counterexample to the desired contract, but it is not a possible trace under a premise that configuration never changes after reading begins. Readers must be able to distinguish the initial state, the requirement under test, and B's assumptions. Otherwise the comparison appears internally inconsistent before its teaching point can be evaluated.",
+      "requestedChange": "Make the shared text state the initial state and desired requirement, not an assumed invariant: root starts empty; the first background read must see completed configuration. Mark A as a possible trace that violates that requirement. Scope the no-further-configuration-change assumption explicitly to B's illustrated successful sequence, or state it as a requirement that A violates. Apply the distinction consistently to both visible SVGs, desc text, metadata answer, summary, and alt.",
+      "acceptanceCheck": "Reading the header and then A must not produce a contradiction. Reading B must reveal the actual conditions for the shown /docs result without suggesting that naming a method start enforces them."
+    },
+    {
+      "id": "ch22-startup-contract-R2",
+      "priority": "P2",
+      "required": true,
+      "title": "Specify how the preconstruction configuration reaches the alternative object",
+      "evidence": [
+        "Desktop SVG lines 41-42 and mobile SVG lines 41-42 say to configure first and then construct a startup-enabled object.",
+        "The worked traces show root being configured after construction and do not identify a separate configuration value or object.",
+        "Metadata answer line 7 repeats the abbreviated alternative."
+      ],
+      "whyItMatters": "The alternative is valuable because it prevents a false explicit-start versus constructor-start dichotomy. However, 'configure before constructing' is underspecified when the only visible configuration belongs to an Indexer that does not yet exist. A novice should not have to invent the missing ownership/input relationship for the anti-universal-policy qualification to make sense.",
+      "requestedChange": "Use a compact concrete phrase such as preparing a configuration value with root=/docs and passing that completed configuration into a constructor that starts the worker. Identify it as another possible API design, not an operation available on the unconstructed A object. Keep the explicit statement that constructor-started work is not categorically forbidden.",
+      "acceptanceCheck": "The reader can name what is configured before construction and how the new object receives it. No third full timeline or language-specific constructor implementation is necessary."
+    },
+    {
+      "id": "ch22-startup-contract-R3",
+      "priority": "P3",
+      "required": false,
+      "title": "Reduce the distance between the mobile comparison and its qualifications",
+      "evidence": [
+        "Mobile viewBox is 360 by 1100.",
+        "B's successful read is near y=814-837; the alternative constructor design is near y=974-996.",
+        "Repeated actor/action wording occupies seven full-width event boxes, followed by multiple explanatory footer lines."
+      ],
+      "whyItMatters": "The full-height sheet is readable and contains all qualifications, but a reader scanning the red A and green B outcomes encounters the balancing alternative considerably later. This is an editorial scanning risk, not a demonstrated mobile clipping or comprehension failure.",
+      "requestedChange": "Consider bringing a short 'one option, not the only option' qualification beside B and reducing repeated labels/vertical padding. Preserve event order, observed values, the extra-call cost, and the caller obligation. Do not shorten the figure by shrinking the essential text or removing its scope limits.",
+      "acceptanceCheck": "The comparison remains readable at its existing mobile width, and the design alternative/tradeoff is associated visibly with B rather than functioning only as a distant disclaimer."
+    }
+  ],
+  "requestedChanges": [
+    "Required R1: distinguish a contract requirement violated by A from assumptions under which B's read is illustrated.",
+    "Required R2: make preconfigured construction concrete by identifying completed configuration supplied to the new object.",
+    "Optional R3: tighten mobile presentation and bring the nonexclusive-choice qualification closer to B.",
+    "Retain the concrete read-value/order comparison, the extra-call and caller-ordering tradeoff, the invented Indexer attribution, and the absence of ROI or universal diagnostic claims.",
+    "Seek another bounded check of the changed metadata and both SVG layouts; this verdict is not an unconditional keep."
+  ],
+  "viewEvidence": {
+    "exactSheetsViewed": [
+      "/tmp/aposd2e-ch22-revision/gallery-light-000.png",
+      "/tmp/aposd2e-ch22-revision/gallery-dark-000.png"
+    ],
+    "desktop": "Two left-to-right event traces show A's read before configuration and B's configuration before start/read. Empty and /docs values are legible, with sufficient room around their labels. The single shared premise is visible above both traces and creates R1.",
+    "mobile": "Both traces become top-to-bottom event chains, preserving all events, actor labels, values, possible-order wording, extra-call cost, and the alternative-construction caveat. No change of causal direction or omitted outcome was found. The same premise-scope problem remains.",
+    "themeReadability": "Light and dark versions are readable in the supplied sheets. No visible text overlap or clipping was found. Color is reinforced by explicit read values and labels. This is visual inspection, not a formal contrast audit.",
+    "indexGeometry": "Both theme entries report empty outside and overlaps lists; these were treated as supporting evidence, not as a substitute for viewing the images.",
+    "comparisonSheetsViewed": [
+      "/tmp/aposd2e-reader-qa/gallery-light-050.png",
+      "/tmp/aposd2e-reader-qa/gallery-dark-050.png"
+    ],
+    "comparisonProvenance": "The current desktop and mobile ch18-reader-expectation SVGs byte-match the first-round snapshots associated with those comparison sheets. The old gallery is used for the narrow lifecycle-content comparison, not as current CSS verification."
+  },
+  "snapshotIdentity": {
+    "algorithm": "SHA-256",
+    "metadata": {
+      "path": "docs/.vuepress/reader/diagrams/ch22.json",
+      "sha256": "74cfcc90508bb437193f8aafc70765ac76fac673376ad8fcd7ab429e5cd74ec5"
+    },
+    "desktop": {
+      "path": "docs/.vuepress/public/diagrams/ch22-startup-contract.svg",
+      "sha256": "7eb978cc3ab08df547e054acb13530cb67c0198d7aaa6e682788ccc42a7ca8eb",
+      "matchesBothGalleryEntries": true
+    },
+    "mobile": {
+      "path": "docs/.vuepress/public/diagrams/ch22-startup-contract-mobile.svg",
+      "sha256": "758c5cdd0f77d5fdad74cf15e1a75cfaaf39f5a9cc687901b5edf7b42c17b245",
+      "matchesBothGalleryEntries": true
+    },
+    "readerCss": {
+      "path": "docs/.vuepress/reader/reader.css",
+      "sha256": "5d3ef34e2d5da059238251eef0c4e1ece7528f8065dd45ced03726cdf373c289",
+      "matchesBothGalleryEntries": true
+    },
+    "index": {
+      "path": "/tmp/aposd2e-ch22-revision/gallery-index.json",
+      "sha256": "4aec5d62da3c27d02f0a354b4da878067a9d7d71b5fe7d457982e29ad0f8afce"
+    },
+    "chapter18Comparison": {
+      "desktopSha256": "3bc07003cd4d805ee37a92e98585330d81efdeb5db6808779ebe5fbd6d025115",
+      "mobileSha256": "3eeed9d234b94c83bdfcfa546a04016ee9edddde7ec1a0af4d554ca7409cf016"
+    }
+  },
+  "limitations": [
+    "This is explanatory-design judgment, not a real reader experiment. No comprehension, ease-of-use, or error-rate effect was measured.",
+    "The exact sheets display 680-unit desktop and 360-unit mobile SVGs side by side on a gallery page. No fresh integrated chapter rendering, physical mobile viewport, zoom behavior, or screen-reader output was tested.",
+    "The invented traces are an abstract event-order model, not evidence that a particular implementation is thread-safe or that a start method alone establishes all required runtime guarantees.",
+    "The indexed hashes identify the reviewed asset/CSS inputs. The index is not an independent cryptographic attestation of the PNG generation.",
+    "The preconfigured-construction alternative remains an editorial design possibility, not a recommendation attributed to the author or an evaluated implementation.",
+    "Chapter 15-21 revisions are outside this turn's review. Reading the chapter 18 comparison metadata does not constitute their second-pass approval."
+  ]
+}

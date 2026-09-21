@@ -1,0 +1,153 @@
+file	section	en_blocks	zh_blocks	status	en_locations	zh_locations
+README.md	intro	1	1	same_count_not_yet_verified	docs/en/README.md:9	docs/README.md:5
+preface.md	intro	13	13	same_count_not_yet_verified	docs/en/preface.md:3; docs/en/preface.md:5; docs/en/preface.md:7; docs/en/preface.md:9; docs/en/preface.md:11; docs/en/preface.md:13; docs/en/preface.md:15; docs/en/preface.md:17; docs/en/preface.md:19; docs/en/preface.md:23; docs/en/preface.md:25; docs/en/preface.md:27; docs/en/preface.md:29	docs/preface.md:3; docs/preface.md:5; docs/preface.md:7; docs/preface.md:9; docs/preface.md:11; docs/preface.md:13; docs/preface.md:15; docs/preface.md:17; docs/preface.md:19; docs/preface.md:23; docs/preface.md:25; docs/preface.md:27; docs/preface.md:29
+ch01.md	intro	13	12	alignment_required	docs/en/ch01.md:2; docs/en/ch01.md:4; docs/en/ch01.md:6; docs/en/ch01.md:8; docs/en/ch01.md:10; docs/en/ch01.md:12; docs/en/ch01.md:14; docs/en/ch01.md:16; docs/en/ch01.md:18; docs/en/ch01.md:20; docs/en/ch01.md:22; docs/en/ch01.md:24; docs/en/ch01.md:26	docs/ch01.md:3; docs/ch01.md:5; docs/ch01.md:7; docs/ch01.md:9; docs/ch01.md:11; docs/ch01.md:13; docs/ch01.md:15; docs/ch01.md:17; docs/ch01.md:19; docs/ch01.md:21; docs/ch01.md:23; docs/ch01.md:25
+ch01.md	1.1	6	6	same_count_not_yet_verified	docs/en/ch01.md:30; docs/en/ch01.md:32; docs/en/ch01.md:34; docs/en/ch01.md:36; docs/en/ch01.md:38; docs/en/ch01.md:40	docs/ch01.md:29; docs/ch01.md:31; docs/ch01.md:33; docs/ch01.md:35; docs/ch01.md:37; docs/ch01.md:39
+ch02.md	intro	3	3	same_count_not_yet_verified	docs/en/ch02.md:3; docs/en/ch02.md:5; docs/en/ch02.md:7	docs/ch02.md:3; docs/ch02.md:5; docs/ch02.md:7
+ch02.md	2.1	0	6	no_english		docs/ch02.md:11; docs/ch02.md:13; docs/ch02.md:15; docs/ch02.md:17; docs/ch02.md:21; docs/ch02.md:23
+ch02.md	2.2	0	8	no_english		docs/ch02.md:27; docs/ch02.md:29; docs/ch02.md:31; docs/ch02.md:33; docs/ch02.md:37; docs/ch02.md:39; docs/ch02.md:41; docs/ch02.md:43
+ch02.md	2.3	0	7	no_english		docs/ch02.md:47; docs/ch02.md:49; docs/ch02.md:51; docs/ch02.md:53; docs/ch02.md:55; docs/ch02.md:57; docs/ch02.md:59
+ch02.md	2.4	0	2	no_english		docs/ch02.md:63; docs/ch02.md:65
+ch02.md	2.5	1	1	same_count_not_yet_verified	docs/en/ch02.md:19	docs/ch02.md:69
+ch03.md	intro	1	2	alignment_required	docs/en/ch03.md:3	docs/ch03.md:2; docs/ch03.md:4
+ch03.md	3.1	0	6	no_english		docs/ch03.md:8; docs/ch03.md:10; docs/ch03.md:12; docs/ch03.md:14; docs/ch03.md:16; docs/ch03.md:18
+ch03.md	3.2	0	4	no_english		docs/ch03.md:22; docs/ch03.md:24; docs/ch03.md:26; docs/ch03.md:28
+ch03.md	3.3	0	5	no_english		docs/ch03.md:32; docs/ch03.md:36; docs/ch03.md:38; docs/ch03.md:40; docs/ch03.md:42
+ch03.md	3.4	0	8	no_english		docs/ch03.md:46; docs/ch03.md:48; docs/ch03.md:50; docs/ch03.md:52; docs/ch03.md:54; docs/ch03.md:56; docs/ch03.md:58; docs/ch03.md:60
+ch03.md	3.5	2	2	same_count_not_yet_verified	docs/en/ch03.md:15; docs/en/ch03.md:17	docs/ch03.md:64; docs/ch03.md:66
+ch04.md	intro	1	1	same_count_not_yet_verified	docs/en/ch04.md:3	docs/ch04.md:3
+ch04.md	4.1	0	6	no_english		docs/ch04.md:7; docs/ch04.md:9; docs/ch04.md:11; docs/ch04.md:13; docs/ch04.md:15; docs/ch04.md:17
+ch04.md	4.2	0	3	no_english		docs/ch04.md:21; docs/ch04.md:23; docs/ch04.md:25
+ch04.md	4.3	0	5	no_english		docs/ch04.md:29; docs/ch04.md:31; docs/ch04.md:33; docs/ch04.md:35; docs/ch04.md:37
+ch04.md	4.4	0	16	no_english		docs/ch04.md:41; docs/ch04.md:45; docs/ch04.md:47; docs/ch04.md:49; docs/ch04.md:59; docs/ch04.md:61; docs/ch04.md:63; docs/ch04.md:64; docs/ch04.md:65; docs/ch04.md:66; docs/ch04.md:67; docs/ch04.md:68; docs/ch04.md:69; docs/ch04.md:71; docs/ch04.md:73; docs/ch04.md:75
+ch04.md	4.5	0	5	no_english		docs/ch04.md:79; docs/ch04.md:81; docs/ch04.md:89; docs/ch04.md:91; docs/ch04.md:93
+ch04.md	4.6	0	2	no_english		docs/ch04.md:97; docs/ch04.md:99
+ch04.md	4.7	0	4	no_english		docs/ch04.md:103; docs/ch04.md:113; docs/ch04.md:115; docs/ch04.md:117
+ch04.md	4.8	2	2	same_count_not_yet_verified	docs/en/ch04.md:21; docs/en/ch04.md:23	docs/ch04.md:121; docs/ch04.md:123
+ch05.md	intro	1	1	same_count_not_yet_verified	docs/en/ch05.md:3	docs/ch05.md:3
+ch05.md	5.1	0	12	no_english		docs/ch05.md:7; docs/ch05.md:9; docs/ch05.md:11; docs/ch05.md:12; docs/ch05.md:13; docs/ch05.md:14; docs/ch05.md:15; docs/ch05.md:17; docs/ch05.md:19; docs/ch05.md:21; docs/ch05.md:23; docs/ch05.md:25
+ch05.md	5.2	0	4	no_english		docs/ch05.md:29; docs/ch05.md:31; docs/ch05.md:33; docs/ch05.md:35
+ch05.md	5.3	0	4	no_english		docs/ch05.md:39; docs/ch05.md:41; docs/ch05.md:43; docs/ch05.md:45
+ch05.md	5.4	0	3	no_english		docs/ch05.md:49; docs/ch05.md:51; docs/ch05.md:55
+ch05.md	5.5	0	4	no_english		docs/ch05.md:59; docs/ch05.md:61; docs/ch05.md:63; docs/ch05.md:65
+ch05.md	5.6	0	6	no_english		docs/ch05.md:69; docs/ch05.md:71; docs/ch05.md:73; docs/ch05.md:81; docs/ch05.md:83; docs/ch05.md:91
+ch05.md	5.7	0	5	no_english		docs/ch05.md:95; docs/ch05.md:97; docs/ch05.md:99; docs/ch05.md:101; docs/ch05.md:103
+ch05.md	5.8	0	1	no_english		docs/ch05.md:107
+ch05.md	5.9	0	1	no_english		docs/ch05.md:111
+ch05.md	5.10	3	4	alignment_required	docs/en/ch05.md:25; docs/en/ch05.md:27; docs/en/ch05.md:29	docs/ch05.md:115; docs/ch05.md:117; docs/ch05.md:119; docs/ch05.md:121
+ch06.md	intro	3	3	same_count_not_yet_verified	docs/en/ch06.md:3; docs/en/ch06.md:5; docs/en/ch06.md:7	docs/ch06.md:3; docs/ch06.md:5; docs/ch06.md:7
+ch06.md	6.1	4	4	same_count_not_yet_verified	docs/en/ch06.md:11; docs/en/ch06.md:13; docs/en/ch06.md:15; docs/en/ch06.md:17	docs/ch06.md:11; docs/ch06.md:13; docs/ch06.md:15; docs/ch06.md:17
+ch06.md	6.2	7	6	alignment_required	docs/en/ch06.md:21; docs/en/ch06.md:23; docs/en/ch06.md:25; docs/en/ch06.md:27; docs/en/ch06.md:35; docs/en/ch06.md:41; docs/en/ch06.md:43	docs/ch06.md:21; docs/ch06.md:23; docs/ch06.md:25; docs/ch06.md:33; docs/ch06.md:39; docs/ch06.md:41
+ch06.md	6.3	7	7	same_count_not_yet_verified	docs/en/ch06.md:47; docs/en/ch06.md:55; docs/en/ch06.md:61; docs/en/ch06.md:67; docs/en/ch06.md:73; docs/en/ch06.md:75; docs/en/ch06.md:81	docs/ch06.md:45; docs/ch06.md:53; docs/ch06.md:59; docs/ch06.md:65; docs/ch06.md:71; docs/ch06.md:73; docs/ch06.md:79
+ch06.md	6.4	2	2	same_count_not_yet_verified	docs/en/ch06.md:85; docs/en/ch06.md:87	docs/ch06.md:83; docs/ch06.md:85
+ch06.md	6.5	4	4	same_count_not_yet_verified	docs/en/ch06.md:91; docs/en/ch06.md:93; docs/en/ch06.md:95; docs/en/ch06.md:97	docs/ch06.md:89; docs/ch06.md:91; docs/ch06.md:93; docs/ch06.md:95
+ch06.md	6.6	3	3	same_count_not_yet_verified	docs/en/ch06.md:101; docs/en/ch06.md:103; docs/en/ch06.md:105	docs/ch06.md:99; docs/ch06.md:101; docs/ch06.md:103
+ch06.md	6.7	14	14	same_count_not_yet_verified	docs/en/ch06.md:109; docs/en/ch06.md:111; docs/en/ch06.md:113; docs/en/ch06.md:115; docs/en/ch06.md:133; docs/en/ch06.md:135; docs/en/ch06.md:137; docs/en/ch06.md:139; docs/en/ch06.md:141; docs/en/ch06.md:142; docs/en/ch06.md:143; docs/en/ch06.md:145; docs/en/ch06.md:147; docs/en/ch06.md:149	docs/ch06.md:107; docs/ch06.md:109; docs/ch06.md:111; docs/ch06.md:113; docs/ch06.md:131; docs/ch06.md:133; docs/ch06.md:135; docs/ch06.md:137; docs/ch06.md:139; docs/ch06.md:140; docs/ch06.md:141; docs/ch06.md:143; docs/ch06.md:145; docs/ch06.md:147
+ch06.md	6.8	4	4	same_count_not_yet_verified	docs/en/ch06.md:153; docs/en/ch06.md:155; docs/en/ch06.md:157; docs/en/ch06.md:159	docs/ch06.md:151; docs/ch06.md:153; docs/ch06.md:155; docs/ch06.md:157
+ch06.md	6.9	1	1	same_count_not_yet_verified	docs/en/ch06.md:163	docs/ch06.md:161
+ch07.md	intro	4	4	same_count_not_yet_verified	docs/en/ch07.md:3; docs/en/ch07.md:5; docs/en/ch07.md:6; docs/en/ch07.md:8	docs/ch07.md:3; docs/ch07.md:5; docs/ch07.md:6; docs/ch07.md:8
+ch07.md	7.1	0	9	no_english		docs/ch07.md:12; docs/ch07.md:38; docs/ch07.md:40; docs/ch07.md:42; docs/ch07.md:44; docs/ch07.md:46; docs/ch07.md:48; docs/ch07.md:52; docs/ch07.md:54
+ch07.md	7.2	0	4	no_english		docs/ch07.md:58; docs/ch07.md:60; docs/ch07.md:62; docs/ch07.md:64
+ch07.md	7.3	0	8	no_english		docs/ch07.md:68; docs/ch07.md:70; docs/ch07.md:72; docs/ch07.md:74; docs/ch07.md:75; docs/ch07.md:76; docs/ch07.md:77; docs/ch07.md:79
+ch07.md	7.4	0	2	no_english		docs/ch07.md:83; docs/ch07.md:85
+ch07.md	7.5	0	9	no_english		docs/ch07.md:89; docs/ch07.md:91; docs/ch07.md:93; docs/ch07.md:95; docs/ch07.md:97; docs/ch07.md:101; docs/ch07.md:103; docs/ch07.md:105; docs/ch07.md:107
+ch07.md	7.6	2	2	same_count_not_yet_verified	docs/en/ch07.md:22; docs/en/ch07.md:24	docs/ch07.md:111; docs/ch07.md:113
+ch08.md	intro	3	3	same_count_not_yet_verified	docs/en/ch08.md:3; docs/en/ch08.md:5; docs/en/ch08.md:7	docs/ch08.md:3; docs/ch08.md:5; docs/ch08.md:7
+ch08.md	8.1	0	2	no_english		docs/ch08.md:11; docs/ch08.md:13
+ch08.md	8.2	0	4	no_english		docs/ch08.md:17; docs/ch08.md:19; docs/ch08.md:21; docs/ch08.md:23
+ch08.md	8.3	0	2	no_english		docs/ch08.md:27; docs/ch08.md:29
+ch08.md	8.4	1	1	same_count_not_yet_verified	docs/en/ch08.md:17	docs/ch08.md:33
+ch09.md	intro	12	12	same_count_not_yet_verified	docs/en/ch09.md:3; docs/en/ch09.md:5; docs/en/ch09.md:7; docs/en/ch09.md:8; docs/en/ch09.md:9; docs/en/ch09.md:10; docs/en/ch09.md:12; docs/en/ch09.md:14; docs/en/ch09.md:15; docs/en/ch09.md:16; docs/en/ch09.md:17; docs/en/ch09.md:19	docs/ch09.md:3; docs/ch09.md:5; docs/ch09.md:7; docs/ch09.md:8; docs/ch09.md:9; docs/ch09.md:10; docs/ch09.md:12; docs/ch09.md:14; docs/ch09.md:15; docs/ch09.md:16; docs/ch09.md:17; docs/ch09.md:19
+ch09.md	9.1	0	1	no_english		docs/ch09.md:23
+ch09.md	9.2	0	2	no_english		docs/ch09.md:27; docs/ch09.md:29
+ch09.md	9.3	0	4	no_english		docs/ch09.md:33; docs/ch09.md:35; docs/ch09.md:72; docs/ch09.md:101
+ch09.md	9.4	0	3	no_english		docs/ch09.md:105; docs/ch09.md:107; docs/ch09.md:109
+ch09.md	9.5	0	7	no_english		docs/ch09.md:113; docs/ch09.md:115; docs/ch09.md:117; docs/ch09.md:119; docs/ch09.md:121; docs/ch09.md:123; docs/ch09.md:125
+ch09.md	9.6	0	5	no_english		docs/ch09.md:129; docs/ch09.md:140; docs/ch09.md:163; docs/ch09.md:165; docs/ch09.md:167
+ch09.md	9.7	0	11	no_english		docs/ch09.md:171; docs/ch09.md:173; docs/ch09.md:175; docs/ch09.md:177; docs/ch09.md:179; docs/ch09.md:183; docs/ch09.md:185; docs/ch09.md:187; docs/ch09.md:189; docs/ch09.md:191; docs/ch09.md:193
+ch09.md	9.8	3	3	same_count_not_yet_verified	docs/en/ch09.md:37; docs/en/ch09.md:39; docs/en/ch09.md:41	docs/ch09.md:197; docs/ch09.md:199; docs/ch09.md:201
+ch09.md	9.9	2	2	same_count_not_yet_verified	docs/en/ch09.md:45; docs/en/ch09.md:47	docs/ch09.md:205; docs/ch09.md:207
+ch10.md	intro	1	1	same_count_not_yet_verified	docs/en/ch10.md:3	docs/ch10.md:3
+ch10.md	10.1	0	12	no_english		docs/ch10.md:7; docs/ch10.md:9; docs/ch10.md:11; docs/ch10.md:12; docs/ch10.md:13; docs/ch10.md:14; docs/ch10.md:16; docs/ch10.md:18; docs/ch10.md:20; docs/ch10.md:22; docs/ch10.md:52; docs/ch10.md:54
+ch10.md	10.2	0	5	no_english		docs/ch10.md:58; docs/ch10.md:60; docs/ch10.md:62; docs/ch10.md:64; docs/ch10.md:66
+ch10.md	10.3	0	1	no_english		docs/ch10.md:70
+ch10.md	10.4	0	4	no_english		docs/ch10.md:74; docs/ch10.md:76; docs/ch10.md:78; docs/ch10.md:80
+ch10.md	10.5	0	4	no_english		docs/ch10.md:84; docs/ch10.md:86; docs/ch10.md:88; docs/ch10.md:90
+ch10.md	10.6	0	5	no_english		docs/ch10.md:94; docs/ch10.md:96; docs/ch10.md:98; docs/ch10.md:100; docs/ch10.md:102
+ch10.md	10.7	0	14	no_english		docs/ch10.md:106; docs/ch10.md:108; docs/ch10.md:110; docs/ch10.md:114; docs/ch10.md:116; docs/ch10.md:120; docs/ch10.md:122; docs/ch10.md:124; docs/ch10.md:126; docs/ch10.md:128; docs/ch10.md:130; docs/ch10.md:132; docs/ch10.md:134; docs/ch10.md:136
+ch10.md	10.8	0	7	no_english		docs/ch10.md:140; docs/ch10.md:142; docs/ch10.md:144; docs/ch10.md:146; docs/ch10.md:148; docs/ch10.md:150; docs/ch10.md:152
+ch10.md	10.9	0	3	no_english		docs/ch10.md:156; docs/ch10.md:158; docs/ch10.md:160
+ch10.md	10.10	2	2	same_count_not_yet_verified	docs/en/ch10.md:25; docs/en/ch10.md:27	docs/ch10.md:164; docs/ch10.md:166
+ch11.md	intro	14	14	same_count_not_yet_verified	docs/en/ch11.md:3; docs/en/ch11.md:5; docs/en/ch11.md:7; docs/en/ch11.md:9; docs/en/ch11.md:11; docs/en/ch11.md:12; docs/en/ch11.md:13; docs/en/ch11.md:15; docs/en/ch11.md:17; docs/en/ch11.md:19; docs/en/ch11.md:21; docs/en/ch11.md:23; docs/en/ch11.md:25; docs/en/ch11.md:27	docs/ch11.md:3; docs/ch11.md:5; docs/ch11.md:7; docs/ch11.md:9; docs/ch11.md:11; docs/ch11.md:12; docs/ch11.md:13; docs/ch11.md:15; docs/ch11.md:17; docs/ch11.md:19; docs/ch11.md:21; docs/ch11.md:23; docs/ch11.md:25; docs/ch11.md:27
+ch12.md	intro	8	9	alignment_required	docs/en/ch12.md:3; docs/en/ch12.md:5; docs/en/ch12.md:7; docs/en/ch12.md:9; docs/en/ch12.md:11; docs/en/ch12.md:12; docs/en/ch12.md:13; docs/en/ch12.md:14	docs/ch12.md:3; docs/ch12.md:5; docs/ch12.md:7; docs/ch12.md:9; docs/ch12.md:11; docs/ch12.md:12; docs/ch12.md:13; docs/ch12.md:14; docs/ch12.md:16
+ch12.md	12.1	0	3	no_english		docs/ch12.md:20; docs/ch12.md:22; docs/ch12.md:24
+ch12.md	12.2	0	3	no_english		docs/ch12.md:28; docs/ch12.md:30; docs/ch12.md:32
+ch12.md	12.3	0	1	no_english		docs/ch12.md:36
+ch12.md	12.4	0	1	no_english		docs/ch12.md:40
+ch12.md	12.5	0	8	no_english		docs/ch12.md:44; docs/ch12.md:46; docs/ch12.md:48; docs/ch12.md:49; docs/ch12.md:50; docs/ch12.md:52; docs/ch12.md:54; docs/ch12.md:56
+ch12.md	12.6	7	7	same_count_not_yet_verified	docs/en/ch12.md:28; docs/en/ch12.md:30; docs/en/ch12.md:32; docs/en/ch12.md:34; docs/en/ch12.md:36; docs/en/ch12.md:38; docs/en/ch12.md:40	docs/ch12.md:60; docs/ch12.md:62; docs/ch12.md:64; docs/ch12.md:66; docs/ch12.md:68; docs/ch12.md:70; docs/ch12.md:72
+ch13.md	intro	4	4	same_count_not_yet_verified	docs/en/ch13.md:3; docs/en/ch13.md:5; docs/en/ch13.md:7; docs/en/ch13.md:9	docs/ch13.md:3; docs/ch13.md:5; docs/ch13.md:7; docs/ch13.md:9
+ch13.md	13.1	0	8	no_english		docs/ch13.md:13; docs/ch13.md:15; docs/ch13.md:17; docs/ch13.md:19; docs/ch13.md:21; docs/ch13.md:23; docs/ch13.md:25; docs/ch13.md:27
+ch13.md	13.2	0	12	no_english		docs/ch13.md:31; docs/ch13.md:44; docs/ch13.md:46; docs/ch13.md:63; docs/ch13.md:65; docs/ch13.md:67; docs/ch13.md:84; docs/ch13.md:86; docs/ch13.md:88; docs/ch13.md:90; docs/ch13.md:92; docs/ch13.md:102
+ch13.md	13.3	0	14	no_english		docs/ch13.md:106; docs/ch13.md:108; docs/ch13.md:110; docs/ch13.md:111; docs/ch13.md:112; docs/ch13.md:113; docs/ch13.md:114; docs/ch13.md:116; docs/ch13.md:118; docs/ch13.md:129; docs/ch13.md:144; docs/ch13.md:146; docs/ch13.md:158; docs/ch13.md:168
+ch13.md	13.4	0	8	no_english		docs/ch13.md:172; docs/ch13.md:191; docs/ch13.md:193; docs/ch13.md:200; docs/ch13.md:202; docs/ch13.md:204; docs/ch13.md:206; docs/ch13.md:230
+ch13.md	13.5	0	32	no_english		docs/ch13.md:234; docs/ch13.md:236; docs/ch13.md:238; docs/ch13.md:252; docs/ch13.md:254; docs/ch13.md:256; docs/ch13.md:257; docs/ch13.md:258; docs/ch13.md:259; docs/ch13.md:260; docs/ch13.md:262; docs/ch13.md:289; docs/ch13.md:291; docs/ch13.md:293; docs/ch13.md:306; docs/ch13.md:308; docs/ch13.md:310; docs/ch13.md:311; docs/ch13.md:312; docs/ch13.md:313; docs/ch13.md:314; docs/ch13.md:316; docs/ch13.md:350; docs/ch13.md:352; docs/ch13.md:353; docs/ch13.md:355; docs/ch13.md:370; docs/ch13.md:372; docs/ch13.md:374; docs/ch13.md:376; docs/ch13.md:396; docs/ch13.md:413
+ch13.md	13.6	0	6	no_english		docs/ch13.md:417; docs/ch13.md:419; docs/ch13.md:425; docs/ch13.md:433; docs/ch13.md:435; docs/ch13.md:437
+ch13.md	13.7	0	7	no_english		docs/ch13.md:441; docs/ch13.md:443; docs/ch13.md:476; docs/ch13.md:478; docs/ch13.md:480; docs/ch13.md:503; docs/ch13.md:509
+ch13.md	13.8	2	2	same_count_not_yet_verified	docs/en/ch13.md:27; docs/en/ch13.md:29	docs/ch13.md:513; docs/ch13.md:515
+ch13.md	13.9	0	6	no_english		docs/ch13.md:519; docs/ch13.md:521; docs/ch13.md:522; docs/ch13.md:523; docs/ch13.md:524; docs/ch13.md:525
+ch14.md	intro	1	1	same_count_not_yet_verified	docs/en/ch14.md:3	docs/ch14.md:3
+ch14.md	14.1	0	4	no_english		docs/ch14.md:7; docs/ch14.md:9; docs/ch14.md:11; docs/ch14.md:13
+ch14.md	14.2	0	2	no_english		docs/ch14.md:17; docs/ch14.md:19
+ch14.md	14.3	0	20	no_english		docs/ch14.md:23; docs/ch14.md:32; docs/ch14.md:34; docs/ch14.md:36; docs/ch14.md:38; docs/ch14.md:40; docs/ch14.md:42; docs/ch14.md:49; docs/ch14.md:57; docs/ch14.md:59; docs/ch14.md:67; docs/ch14.md:69; docs/ch14.md:71; docs/ch14.md:73; docs/ch14.md:81; docs/ch14.md:83; docs/ch14.md:89; docs/ch14.md:91; docs/ch14.md:93; docs/ch14.md:95
+ch14.md	14.4	0	4	no_english		docs/ch14.md:99; docs/ch14.md:101; docs/ch14.md:103; docs/ch14.md:105
+ch14.md	14.5	0	3	no_english		docs/ch14.md:109; docs/ch14.md:111; docs/ch14.md:113
+ch14.md	14.6	0	6	no_english		docs/ch14.md:117; docs/ch14.md:135; docs/ch14.md:153; docs/ch14.md:155; docs/ch14.md:157; docs/ch14.md:159
+ch14.md	14.7	2	2	same_count_not_yet_verified	docs/en/ch14.md:17; docs/en/ch14.md:19	docs/ch14.md:163; docs/ch14.md:165
+ch15.md	intro	2	2	same_count_not_yet_verified	docs/en/ch15.md:2; docs/en/ch15.md:4	docs/ch15.md:2; docs/ch15.md:4
+ch15.md	15.1	0	3	no_english		docs/ch15.md:8; docs/ch15.md:10; docs/ch15.md:12
+ch15.md	15.2	0	9	no_english		docs/ch15.md:16; docs/ch15.md:18; docs/ch15.md:19; docs/ch15.md:20; docs/ch15.md:21; docs/ch15.md:22; docs/ch15.md:23; docs/ch15.md:25; docs/ch15.md:27
+ch15.md	15.3	0	5	no_english		docs/ch15.md:31; docs/ch15.md:33; docs/ch15.md:35; docs/ch15.md:37; docs/ch15.md:39
+ch15.md	15.4	0	1	no_english		docs/ch15.md:43
+ch15.md	15.5	0	2	no_english		docs/ch15.md:47; docs/ch15.md:49
+ch15.md	15.6	1	1	same_count_not_yet_verified	docs/en/ch15.md:18	docs/ch15.md:53
+ch16.md	intro	1	1	same_count_not_yet_verified	docs/en/ch16.md:3	docs/ch16.md:3
+ch16.md	16.1	0	6	no_english		docs/ch16.md:7; docs/ch16.md:9; docs/ch16.md:11; docs/ch16.md:13; docs/ch16.md:15; docs/ch16.md:17
+ch16.md	16.2	0	6	no_english		docs/ch16.md:21; docs/ch16.md:23; docs/ch16.md:25; docs/ch16.md:27; docs/ch16.md:36; docs/ch16.md:38
+ch16.md	16.3	0	2	no_english		docs/ch16.md:42; docs/ch16.md:44
+ch16.md	16.4	0	5	no_english		docs/ch16.md:48; docs/ch16.md:50; docs/ch16.md:52; docs/ch16.md:54; docs/ch16.md:60
+ch16.md	16.5	0	1	no_english		docs/ch16.md:64
+ch16.md	16.6	0	1	no_english		docs/ch16.md:68
+ch17.md	intro	2	2	same_count_not_yet_verified	docs/en/ch17.md:3; docs/en/ch17.md:5	docs/ch17.md:3; docs/ch17.md:5
+ch17.md	17.1	0	6	no_english		docs/ch17.md:9; docs/ch17.md:11; docs/ch17.md:13; docs/ch17.md:15; docs/ch17.md:17; docs/ch17.md:19
+ch17.md	17.2	0	9	no_english		docs/ch17.md:23; docs/ch17.md:25; docs/ch17.md:27; docs/ch17.md:29; docs/ch17.md:31; docs/ch17.md:33; docs/ch17.md:35; docs/ch17.md:37; docs/ch17.md:39
+ch17.md	17.3	0	1	no_english		docs/ch17.md:43
+ch17.md	17.4	1	1	same_count_not_yet_verified	docs/en/ch17.md:15	docs/ch17.md:47
+ch18.md	intro	3	3	same_count_not_yet_verified	docs/en/ch18.md:3; docs/en/ch18.md:5; docs/en/ch18.md:7	docs/ch18.md:3; docs/ch18.md:5; docs/ch18.md:7
+ch18.md	18.1	0	8	no_english		docs/ch18.md:11; docs/ch18.md:13; docs/ch18.md:15; docs/ch18.md:32; docs/ch18.md:51; docs/ch18.md:81; docs/ch18.md:83; docs/ch18.md:91
+ch18.md	18.2	0	14	no_english		docs/ch18.md:95; docs/ch18.md:97; docs/ch18.md:99; docs/ch18.md:101; docs/ch18.md:113; docs/ch18.md:115; docs/ch18.md:117; docs/ch18.md:123; docs/ch18.md:125; docs/ch18.md:127; docs/ch18.md:129; docs/ch18.md:137; docs/ch18.md:139; docs/ch18.md:148
+ch18.md	18.3	2	2	same_count_not_yet_verified	docs/en/ch18.md:15; docs/en/ch18.md:17	docs/ch18.md:152; docs/ch18.md:154
+ch19.md	intro	1	1	same_count_not_yet_verified	docs/en/ch19.md:3	docs/ch19.md:3
+ch19.md	19.1	0	8	no_english		docs/ch19.md:7; docs/ch19.md:9; docs/ch19.md:11; docs/ch19.md:13; docs/ch19.md:15; docs/ch19.md:17; docs/ch19.md:19; docs/ch19.md:21
+ch19.md	19.2	0	4	no_english		docs/ch19.md:25; docs/ch19.md:27; docs/ch19.md:29; docs/ch19.md:31
+ch19.md	19.3	0	4	no_english		docs/ch19.md:35; docs/ch19.md:37; docs/ch19.md:39; docs/ch19.md:41
+ch19.md	19.4	0	4	no_english		docs/ch19.md:45; docs/ch19.md:47; docs/ch19.md:49; docs/ch19.md:51
+ch19.md	19.5	0	3	no_english		docs/ch19.md:55; docs/ch19.md:57; docs/ch19.md:59
+ch19.md	19.6	0	4	no_english		docs/ch19.md:63; docs/ch19.md:65; docs/ch19.md:67; docs/ch19.md:69
+ch19.md	19.7	1	1	same_count_not_yet_verified	docs/en/ch19.md:19	docs/ch19.md:73
+ch20.md	intro	1	1	same_count_not_yet_verified	docs/en/ch20.md:3	docs/ch20.md:3
+ch20.md	20.1	0	12	no_english		docs/ch20.md:7; docs/ch20.md:9; docs/ch20.md:11; docs/ch20.md:12; docs/ch20.md:13; docs/ch20.md:14; docs/ch20.md:16; docs/ch20.md:18; docs/ch20.md:20; docs/ch20.md:22; docs/ch20.md:24; docs/ch20.md:26
+ch20.md	20.2	0	2	no_english		docs/ch20.md:30; docs/ch20.md:32
+ch20.md	20.3	0	5	no_english		docs/ch20.md:36; docs/ch20.md:38; docs/ch20.md:40; docs/ch20.md:42; docs/ch20.md:44
+ch20.md	20.4	0	15	no_english		docs/ch20.md:48; docs/ch20.md:50; docs/ch20.md:54; docs/ch20.md:56; docs/ch20.md:58; docs/ch20.md:60; docs/ch20.md:62; docs/ch20.md:64; docs/ch20.md:111; docs/ch20.md:113; docs/ch20.md:115; docs/ch20.md:117; docs/ch20.md:136; docs/ch20.md:138; docs/ch20.md:140
+ch20.md	20.5	1	1	same_count_not_yet_verified	docs/en/ch20.md:15	docs/ch20.md:144
+ch21.md	intro	2	2	same_count_not_yet_verified	docs/en/ch21.md:3; docs/en/ch21.md:5	docs/ch21.md:3; docs/ch21.md:5
+ch21.md	21.1	4	4	same_count_not_yet_verified	docs/en/ch21.md:9; docs/en/ch21.md:11; docs/en/ch21.md:13; docs/en/ch21.md:15	docs/ch21.md:9; docs/ch21.md:11; docs/ch21.md:13; docs/ch21.md:15
+ch21.md	21.2	1	1	same_count_not_yet_verified	docs/en/ch21.md:19	docs/ch21.md:19
+ch21.md	21.3	3	3	same_count_not_yet_verified	docs/en/ch21.md:23; docs/en/ch21.md:25; docs/en/ch21.md:27	docs/ch21.md:23; docs/ch21.md:25; docs/ch21.md:27
+ch21.md	21.4	2	2	same_count_not_yet_verified	docs/en/ch21.md:31; docs/en/ch21.md:33	docs/ch21.md:31; docs/ch21.md:33
+ch21.md	21.5	3	3	same_count_not_yet_verified	docs/en/ch21.md:37; docs/en/ch21.md:39; docs/en/ch21.md:41	docs/ch21.md:37; docs/ch21.md:39; docs/ch21.md:41
+ch22.md	intro	5	5	same_count_not_yet_verified	docs/en/ch22.md:3; docs/en/ch22.md:5; docs/en/ch22.md:7; docs/en/ch22.md:9; docs/en/ch22.md:11	docs/ch22.md:3; docs/ch22.md:5; docs/ch22.md:7; docs/ch22.md:9; docs/ch22.md:11
+summary.md	section_1	17	17	same_count_not_yet_verified	docs/en/summary.md:5; docs/en/summary.md:7; docs/en/summary.md:8; docs/en/summary.md:9; docs/en/summary.md:10; docs/en/summary.md:11; docs/en/summary.md:12; docs/en/summary.md:13; docs/en/summary.md:14; docs/en/summary.md:15; docs/en/summary.md:16; docs/en/summary.md:17; docs/en/summary.md:18; docs/en/summary.md:19; docs/en/summary.md:20; docs/en/summary.md:21; docs/en/summary.md:22	docs/summary.md:5; docs/summary.md:7; docs/summary.md:8; docs/summary.md:9; docs/summary.md:10; docs/summary.md:11; docs/summary.md:12; docs/summary.md:13; docs/summary.md:14; docs/summary.md:15; docs/summary.md:16; docs/summary.md:17; docs/summary.md:18; docs/summary.md:19; docs/summary.md:20; docs/summary.md:21; docs/summary.md:22
+summary.md	section_2	15	15	same_count_not_yet_verified	docs/en/summary.md:26; docs/en/summary.md:28; docs/en/summary.md:29; docs/en/summary.md:30; docs/en/summary.md:31; docs/en/summary.md:32; docs/en/summary.md:33; docs/en/summary.md:34; docs/en/summary.md:35; docs/en/summary.md:36; docs/en/summary.md:37; docs/en/summary.md:38; docs/en/summary.md:39; docs/en/summary.md:40; docs/en/summary.md:41	docs/summary.md:26; docs/summary.md:28; docs/summary.md:29; docs/summary.md:30; docs/summary.md:31; docs/summary.md:32; docs/summary.md:33; docs/summary.md:34; docs/summary.md:35; docs/summary.md:36; docs/summary.md:37; docs/summary.md:38; docs/summary.md:39; docs/summary.md:40; docs/summary.md:41
+summary.md	section_3	1	1	same_count_not_yet_verified	docs/en/summary.md:45	docs/summary.md:45

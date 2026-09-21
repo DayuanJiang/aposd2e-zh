@@ -1,0 +1,77 @@
+[
+  {
+    "id": "ch10-unset-semantics",
+    "chapter": "ch10",
+    "title": "改变成功条件，而不是忽略失败",
+    "question": "怎样让删除不存在的变量成为正常情况？",
+    "answer": "将操作定义为确保变量不存在：已有变量被删除，不存在的变量保持不存在，两条路径都满足同一个成功条件。",
+    "summary": "图示对照 Tcl 原设计与作者提出的替代语义，不声称现有 unset 已按建议改变。",
+    "alt": "原定义中，存在变量通向删除成功，不存在通向错误与调用者catch；建议定义中，存在和不存在两种初态都通向变量不存在且成功返回。",
+    "kind": "state-transition",
+    "desktop": "/diagrams/ch10-unset-semantics.svg",
+    "mobile": "/diagrams/ch10-unset-semantics-mobile.svg",
+    "anchor": { "section": "10.3", "placement": "end" },
+    "sources": [
+      { "section": "10.2", "epub": "OEBPS/part0014.xhtml#p48:cb85625e5f", "reason": "清理临时状态时难以预测已创建的变量，原unset迫使调用者捕获并忽略不存在错误。" },
+      { "section": "10.3", "epub": "OEBPS/part0014.xhtml#p53:8bdaca4870", "reason": "作者建议以确保变量不再存在取代删除变量的定义；两条状态路径是该语义的直接展开。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch10-range-overlap",
+    "chapter": "ch10",
+    "title": "用范围交集定义正常结果",
+    "question": "索引越界或起点大于终点时，怎样仍给出明确结果？",
+    "answer": "按作者建议，只返回满足 beginIndex ≤ i < endIndex 的现有字符；没有满足条件的字符就返回空结果。",
+    "summary": "字母与索引为教学示例。这是作者建议的 API，不是 Java substring 的现有行为，也不是 Python 负索引规则。",
+    "alt": "字符串ABCDE的字符索引为0至4。请求负2至2与有效范围交于0至2，得到AB；请求3至8得到DE；请求4至2没有满足条件的索引，得到空结果。",
+    "kind": "interval-intersection",
+    "desktop": "/diagrams/ch10-range-overlap.svg",
+    "mobile": "/diagrams/ch10-range-overlap-mobile.svg",
+    "anchor": { "section": "10.5", "placement": "end" },
+    "sources": [
+      { "section": "10.5", "epub": "OEBPS/part0014.xhtml#p60:50f41da8bc", "reason": "原Java接口边界检查给调用者带来额外代码。" },
+      { "section": "10.5", "epub": "OEBPS/part0014.xhtml#p61:ee472e4f26", "reason": "建议的字符集合语义包含越界及起点大于终点。ABCDE与具体索引是教学自拟；不采用原段对Python切片的过度概括。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch10-error-carrier",
+    "chapter": "ch10",
+    "title": "聚合错误处理，分开两种知识",
+    "question": "统一处理程序如何处理新错误，又不理解每种错误的细节？",
+    "answer": "检测点提供具体错误消息，异常遵循共同基类约定；顶层只负责把消息写入错误响应，随后继续处理下一请求。",
+    "summary": "这张图追踪异常携带的信息与请求生命周期，不重复原图10.1和10.2的调用树。系统级致命错误不属于这条恢复路径。",
+    "alt": "请求处理分为正常响应和请求级异常两路。参数检测点把错误原因封装为共同异常契约中的消息，顶层生成错误响应并清理请求状态，两路最终汇合到下一请求。",
+    "kind": "message-contract",
+    "desktop": "/diagrams/ch10-error-carrier.svg",
+    "mobile": "/diagrams/ch10-error-carrier-mobile.svg",
+    "anchor": { "section": "10.7", "placement": "end" },
+    "sources": [
+      { "section": "10.7", "epub": "OEBPS/part0014.xhtml#p76:cd21be3ccb", "reason": "缺参数、参数格式错误等在抛出时生成消息，由顶层提取并写入响应。" },
+      { "section": "10.7", "epub": "OEBPS/part0014.xhtml#p78:8790376374", "reason": "提取参数知识与响应语法分离；新异常遵守共同基类加消息的约定即可接入。" },
+      { "section": "10.7", "epub": "OEBPS/part0014.xhtml#p79:b101a537cb", "reason": "请求级异常中止当前请求、清理状态、继续下一个，与系统致命错误区分；图不规定清理和生成响应的内部先后。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch10-mask-obligation",
+    "chapter": "ch10",
+    "title": "屏蔽异常不能丢掉完成义务",
+    "question": "重试后完成操作，与吞掉错误后假装成功，有什么区别？",
+    "answer": "前者在内部处理异常并完成承诺；后者既未完成操作，又剥夺了调用者处理失败所需的信息。",
+    "summary": "仅当异常信息不需要由模块外部处理时才适合隐藏。图中的成功路径以重试确实完成操作为前提，不保证网络永远恢复。",
+    "alt": "可恢复的错误经过内部重试，只有完成操作才到达成功；不可恢复且调用者需要知道的失败向上暴露。被划掉的路径从错误直接通向假装成功，没有完成操作。",
+    "kind": "error-normal-path",
+    "desktop": "/diagrams/ch10-mask-obligation.svg",
+    "mobile": "/diagrams/ch10-mask-obligation-mobile.svg",
+    "anchor": { "section": "10.9", "placement": "end" },
+    "sources": [
+      { "section": "10.6", "epub": "OEBPS/part0014.xhtml#p65:07e841a7ad", "reason": "底层重传是内部处理异常的例子。图仅表达重试成功的条件路径，不把最终交付表述为无条件保证。" },
+      { "section": "10.6", "epub": "OEBPS/part0014.xhtml#p69:f220fa6840", "reason": "异常屏蔽并非适用于所有情况。" },
+      { "section": "10.9", "epub": "OEBPS/part0014.xhtml#p94:b0272bf74a", "reason": "外部不需要异常信息才适合规避或屏蔽。" },
+      { "section": "10.9", "epub": "OEBPS/part0014.xhtml#p95:d3bb5d85eb", "reason": "学生模块吞掉网络错误，使上层无法判断消息丢失或对端失败，是反例。图为条件路径教学归纳。" }
+    ],
+    "status": "awaiting-independent-review"
+  }
+]

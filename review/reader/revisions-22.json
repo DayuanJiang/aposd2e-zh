@@ -1,0 +1,36 @@
+[
+  {
+    "id": "ch22-complexity-diagnosis",
+    "action": "retire",
+    "review": "diagram-review-15-22.json",
+    "changes": "Removed both SVG variants and active metadata. Preserved the original concluding prose. Did not reuse the fewer-locations/fewer-facts success gate.",
+    "before": "/tmp/aposd2e-viz-review-round1",
+    "reason": "Unsupported generic diagnosis and success criteria, with inconsistent feedback paths.",
+    "status": "removed; page integration verification pending"
+  },
+  {
+    "id": "ch22-investment-return",
+    "action": "retire",
+    "review": "diagram-review-15-22.json",
+    "changes": "Removed both SVG variants and active metadata. The author's investment discussion remains in the unchanged chapter text.",
+    "before": "/tmp/aposd2e-viz-review-round1",
+    "reason": "Unsupported savings-to-skills causality and redundant paraphrase.",
+    "status": "removed; page integration verification pending"
+  },
+  {
+    "id": "ch22-startup-contract",
+    "action": "new bounded synthesis",
+    "changes": "Added a situated, explicitly invented startup/configuration trace. Shows actual root values and call order, states the constraint, charges the explicit-start design an extra caller obligation, and names another potentially valid construction order.",
+    "reason": "Preserves useful final-chapter visualization coverage without repackaging the retired generic workflows.",
+    "boundary": "Not the author's Indexer API, not RaftClient implementation, not a universal lifecycle prescription, not an empirical concurrency benchmark. B assumes the shown ordering and no configuration changes after reading begins.",
+    "status": "awaiting independent second review and rendering"
+  },
+  {
+    "id": "ch22-startup-contract-followup",
+    "action": "revise",
+    "review": "diagram-review-22-replacement.json",
+    "changes": "Changed the globally assumed invariant into a desired requirement that A can violate. Identified caller-created config and Indexer(config)'s stored reference, including the preconfigured-construction alternative. B is a shown compliant ordering, not an automatic guarantee. Mobile reduced from 1100 to 940 units without reducing event font size; nonexclusive-choice/caller-obligation wording now sits directly under B.",
+    "before": "/tmp/aposd2e-ch22-before-followup",
+    "status": "awaiting exact-render recheck and independent followup"
+  }
+]

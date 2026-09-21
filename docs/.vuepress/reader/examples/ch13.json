@@ -1,0 +1,119 @@
+[
+  {
+    "id": "ch13-f2",
+    "sourceHash": "435a1cab2f44ccb4ecf1ee9aae0629f2985ec349b7ff27287350cef231e0e67a",
+    "python": "import tkinter as tk\n\n# Add a horizontal scroll bar\nhScrollBar = tk.Scrollbar(parent, orient=tk.HORIZONTAL)\nhScrollBar.pack(side=tk.BOTTOM, fill=tk.X)\n\n# Add a vertical scroll bar\nvScrollBar = tk.Scrollbar(parent, orient=tk.VERTICAL)\nvScrollBar.pack(side=tk.RIGHT, fill=tk.Y)\n\n# Initialize the caret-position related values\ncaretX = 0\ncaretY = 0\ncaretMemX = None\n",
+    "note": "故意保留重复代码、缺少信息的英文注释及原变量名。以 tkinter 示意已有 parent 容器中的初始化；布局不等同于 Swing，未实现滚动联动或完整编辑器。",
+    "noteEn": "Deliberately retains the redundant, uninformative English comments and original names. Uses tkinter to illustrate initialization in an existing parent container; its layout is not equivalent to Swing, and scrolling integration and a complete editor are not implemented.",
+    "originalLanguage": "java",
+    "noteTw": "故意保留重複程式碼、缺少資訊的英文註解及原變數名。以 tkinter 示意已有 parent 容器中的初始化；佈局不等同於 Swing，未實作滾動聯動或完整編輯器。"
+  },
+  {
+    "id": "ch13-f3",
+    "sourceHash": "a739fcfd439382014fbe4b6465be07aa04f8d19982b6f3ee45f17c91796747d9",
+    "python": "def getNormalizedResourceNames(req: \"HTTPRequest\") -> list[str]:\n    \"\"\"Obtain a normalized resource name from REQ.\"\"\"\n    ...\n\n\ndef downCastParameter(parameter: str, type: str) -> object:\n    \"\"\"Downcast PARAMETER to TYPE.\"\"\"\n    ...\n\n\n# The horizontal padding of each line in the text.\ntextHorizontalPadding = 4\n",
+    "note": "保留重复名称的英文措辞、未解释的概念和 type 参数名，不补写缺失的接口说明。方法改为函数声明示意，省略号不是实现；未定义 HTTPRequest，也不模拟 Java 的访问控制或 static/final 约束。",
+    "noteEn": "Preserves the repetitive English wording, unexplained concepts, and parameter name type without filling in missing documentation. Methods become illustrative function declarations; ellipses are not implementations. HTTPRequest is undefined, and Java access control and static/final constraints are not modeled.",
+    "originalLanguage": "java",
+    "noteTw": "保留重複名稱的英文措辭、未解釋的概念和 type 參數名，不補寫缺失的介面說明。方法改為函式宣告示意，省略號不是實作；未定義 HTTPRequest，也不模擬 Java 的存取控制或 static/final 約束。"
+  },
+  {
+    "id": "ch13-f4",
+    "sourceHash": "c560692a2f4f484acf8f86b561f293e67e254ab52a51292303da5957e16ba725",
+    "python": "# The amount of blank space to leave on the left and\n# right sides of each line of text, in pixels.\ntextHorizontalPadding = 4\n",
+    "note": "与 ch13-f3 保持相同名称和值，只保留原文改进后的注释：明确像素单位和左右两侧。Python 赋值不强制执行 Java 的 final 约束。",
+    "noteEn": "Keeps the same name and value as ch13-f3, retaining only the original improvement to the comment: pixels and both sides are explicit. Python assignment does not enforce Java's final constraint.",
+    "originalLanguage": "java",
+    "noteTw": "與 ch13-f3 保持相同名稱和值，只保留原文改進後的註解：明確畫素單位和左右兩側。Python 賦值不強制執行 Java 的 final 約束。"
+  },
+  {
+    "id": "ch13-f5",
+    "sourceHash": "48aadb244856f05f6df544366030c9e857cf014c669650d9f6fa9efe369af5fa",
+    "python": "# Current offset in resp Buffer\noffset: int\n\n# Contains all line-widths inside the document and\n# number of appearances.\nlineWidths: dict[int, int]\n",
+    "note": "保留 Current、lineWidths 和单位、键值含义不明的反例。原块混合 C++ 的 uint32_t 与 Java 的 TreeMap。这里只作声明示意：int 不保留无符号 32 位存储约束，dict 不复现 TreeMap 的按键排序，类型注解不初始化变量。",
+    "noteEn": "Preserves Current, lineWidths, and the ambiguous units and key/value meanings. The source mixes C++ uint32_t with Java TreeMap. These are declaration sketches: int lacks unsigned 32-bit storage constraints, dict lacks TreeMap key ordering, and annotations do not initialize variables.",
+    "originalLanguage": "C++ / Java",
+    "noteTw": "保留 Current、lineWidths 和單位、鍵值含義不明的反例。原塊混合 C++ 的 uint32_t 與 Java 的 TreeMap。這裡只作宣告示意：int 不保留無符號 32 位儲存約束，dict 不復現 TreeMap 的按鍵排序，型別註解不初始化變數。"
+  },
+  {
+    "id": "ch13-f6",
+    "sourceHash": "fbc742c5288527fa23172a80bde1c8f3dab0777fb3471786c3816dce9c1ece3b",
+    "python": "# Position in this buffer of the first object that hasn't\n# been returned to the client.\noffset: int\n\n# Holds statistics about line lengths of the form <length, count>\n# where length is the number of characters in a line (including\n# the newline), and count is the number of lines with\n# exactly that many characters. If there are no lines with\n# a particular length, then there is no entry for that length.\nnumLinesWithLength: dict[int, int]\n",
+    "note": "保留与 ch13-f5 的对照，包括改名、换行符计入长度及缺失条目的含义。原块同样混合 C++ 与 Java。声明示意不初始化变量；int 不保留无符号 32 位存储约束，dict 不复现 TreeMap 的按键排序。",
+    "noteEn": "Retains the contrast with ch13-f5, including the renamed field, newline-inclusive lengths, and meaning of absent entries. The source again mixes C++ and Java. The declaration sketch does not initialize variables; int lacks unsigned 32-bit storage constraints, and dict lacks TreeMap key ordering.",
+    "originalLanguage": "C++ / Java",
+    "noteTw": "保留與 ch13-f5 的對照，包括改名、換行符計入長度及缺失條目的含義。原塊同樣混合 C++ 與 Java。宣告示意不初始化變數；int 不保留無符號 32 位儲存約束，dict 不復現 TreeMap 的按鍵排序。"
+  },
+  {
+    "id": "ch13-f7",
+    "sourceHash": "af218eedb61b9ae07121d7a2f3720ac657c2b06e885c16c3c993ffeef5f5aca2",
+    "python": "# FOLLOWER VARIABLE: indicator variable that allows the Receiver and the\n# PeriodicTasks thread to communicate about whether a heartbeat has been\n# received within the follower's election timeout window.\n# Toggled to TRUE when a valid heartbeat is received.\n# Toggled to FALSE when the election timeout window is reset.\nreceivedValidHeartbeat: bool\n",
+    "note": "故意保留围绕修改过程展开的冗长英文注释，包括 Toggled to TRUE/FALSE，供下一例对照。这里只展示字段注解，不初始化变量，也不实现线程同步。",
+    "noteEn": "Deliberately retains the verbose, operation-focused English comment, including Toggled to TRUE/FALSE, for comparison with the next example. This is only a field annotation, without initialization or thread synchronization.",
+    "originalLanguage": "java",
+    "noteTw": "故意保留圍繞修改過程展開的冗長英文註解，包括 Toggled to TRUE/FALSE，供下一例對照。這裡只展示欄位註解，不初始化變數，也不實作執行緒同步。"
+  },
+  {
+    "id": "ch13-f8",
+    "sourceHash": "f3c827af11acafa1aa8d5bb5dae3f22a6a1e05e0dbf515b961c7ec7ef8632a2b",
+    "python": "# True means that a heartbeat has been received since the last time\n# the election timer was reset. Used for communication between the\n# Receiver and PeriodicTasks threads.\nreceivedValidHeartbeat: bool\n",
+    "note": "保留原文从“如何修改”转向“状态表示什么”的改进，字段声明与 ch13-f7 相同。类型注解不初始化变量，也不提供线程同步保证。",
+    "noteEn": "Retains the original improvement from describing modifications to describing the state's meaning, with the same field declaration as ch13-f7. The annotation neither initializes the variable nor provides thread-synchronization guarantees.",
+    "originalLanguage": "java",
+    "noteTw": "保留原文從“如何修改”轉向“狀態表示什麼”的改進，欄位宣告與 ch13-f7 相同。型別註解不初始化變數，也不提供執行緒同步保證。"
+  },
+  {
+    "id": "ch13-f9",
+    "sourceHash": "3ed6d2d9e15a8a5e6e8580a1d050470f3c2542127ba89e170454f1a5d3fd0d0e",
+    "python": "# If there is a LOADING readRpc using the same session\n# as PKHash pointed to by assignPos, and the last PKHash\n# in that readRPC is smaller than current assigning\n# PKHash, then we put assigning PKHash into that readRPC.\nreadActiveRpcId = RPC_ID_NOT_ASSIGNED\nfor i in range(NUM_READ_RPC):\n    if (\n        session == readRpc[i].session\n        and readRpc[i].status == LOADING\n        and readRpc[i].maxPos < assignPos\n        and readRpc[i].numHashes < MAX_PKHASHES_PERRPC\n    ):\n        readActiveRpcId = i\n        break\n",
+    "note": "这是 C++ RPC 片段，故意保留低层级坏注释、大小写和全部判断。仅以 Python 对象、容器和整数位置示意；不复现 C++ 指针身份、所有权或缓冲区存储语义，session 的相等规则需由外围代码提供。未实现 RPC 环境。",
+    "noteEn": "This C++ RPC fragment deliberately retains the low-level bad comment, capitalization, and every condition. Python objects, containers, and integer positions are illustrative: C++ pointer identity, ownership, and buffer storage semantics are not reproduced, and session equality must be supplied by surrounding code. No RPC environment is implemented.",
+    "originalLanguage": "cpp",
+    "noteTw": "這是 C++ RPC 片段，故意保留低層級壞註解、大小寫和全部判斷。僅以 Python 物件、容器和整數位置示意；不復現 C++ 指標身份、所有權或緩衝區儲存語義，session 的相等規則需由外圍程式碼提供。未實作 RPC 環境。"
+  },
+  {
+    "id": "ch13-f10",
+    "sourceHash": "e7f59e09d5928ead7e8eb42140fafd0399e8d5a7d628d05e5cc588eb1f7232d1",
+    "python": "# Try to append the current key hash onto an existing\n# RPC to the desired server that hasn't been sent yet.\n",
+    "note": "这是 ch13-f9 中 C++ 片段的替换注释，只把注释符号改为 #，保留高层级目的描述。原文没有附带实现，此处不补写 RPC 代码。",
+    "noteEn": "This is the replacement comment for the C++ fragment in ch13-f9. Only the comment markers change to #, preserving the high-level intent. The source supplies no implementation here, so no RPC code is invented.",
+    "originalLanguage": "cpp",
+    "noteTw": "這是 ch13-f9 中 C++ 片段的替換註解，只把註解符號改為 #，保留高層級目的描述。原文沒有附帶實作，此處不補寫 RPC 程式碼。"
+  },
+  {
+    "id": "ch13-f11",
+    "sourceHash": "fb511f2b62b14bd7a47d0b7b2fa33d025dd9f1a750462d4debcf7db8d27abd90",
+    "python": "if numProcessedPKHashes < readRpc[i].numHashes:\n    # Some of the key hashes couldn't be looked up in\n    # this request (either because they aren't stored\n    # on the server, the server crashed, or there\n    # wasn't enough space in the response message).\n    # Mark the unprocessed hashes so they will get\n    # reassigned to new RPCs.\n    for p in range(removePos, insertPos):\n        if activeRpcId[p] == i:\n            if numProcessedPKHashes > 0:\n                numProcessedPKHashes -= 1\n            else:\n                if p < assignPos:\n                    assignPos = p\n                activeRpcId[p] = RPC_ID_NOT_ASSIGNED\n",
+    "note": "保留 C++ 原例解释原因和目的的英文注释，以及嵌套分支、计数递减和重新分配标记。range 的终点不包含在内；整数和可变序列只示意控制流程，不复现 size_t 的存储宽度、C++ 指针或环形缓冲区语义。依赖外围 RPC 状态，并非完整实现。",
+    "noteEn": "Preserves the C++ example's English explanation of why and what, nested branches, decrement, and reassignment marker. range excludes its stop; integers and a mutable sequence illustrate control flow without reproducing size_t storage width, C++ pointers, or circular-buffer semantics. This fragment requires surrounding RPC state and is not a complete implementation.",
+    "originalLanguage": "cpp",
+    "noteTw": "保留 C++ 原例解釋原因和目的的英文註解，以及巢狀分支、計數遞減和重新分配標記。range 的終點不包含在內；整數和可變序列只示意控制流程，不復現 size_t 的儲存寬度、C++ 指標或環形緩衝區語義。依賴外圍 RPC 狀態，並非完整實作。"
+  },
+  {
+    "id": "ch13-f12",
+    "sourceHash": "f3032db247aefe5764dc4548b35bf9e2b75ebfdc621fe35683e00afe87895313",
+    "python": "class Http:\n    \"\"\"This class implements a simple server-side interface to the HTTP\n    protocol: by using this class, an application can receive HTTP\n    requests, process them, and return responses. Each instance of\n    this class corresponds to a particular socket used to receive\n    requests. The current implementation is single-threaded and\n    processes one request at a time.\n    \"\"\"\n\n    ...\n",
+    "note": "将原英文接口说明放入类文档字符串，保留每个实例对应一个套接字、单线程和逐个处理请求的限制。类体仅为占位，未实现 HTTP 服务器或套接字操作。",
+    "noteEn": "Moves the original English interface description into a class docstring, preserving one socket per instance, single-threading, and one-request-at-a-time processing. The class body is a placeholder, not an HTTP server or socket implementation.",
+    "originalLanguage": "java",
+    "noteTw": "將原英文介面說明放入類文件字串，保留每個實例對應一個套接字、單執行緒和逐個處理請求的限制。類體僅為佔位，未實作 HTTP 伺服器或套接字操作。"
+  },
+  {
+    "id": "ch13-f19",
+    "sourceHash": "270cbca2ba675cc515c0c3a0326add3f531fdeb7d95092d5f39d40f416f2365a",
+    "python": "# Phase 1: Scan active RPCs to see if any have completed.\n",
+    "note": "原文仅提供阶段注释，按本章 RPC 实现语境标为 C++；注释本身没有专属语言语法。保留英文阶段描述，不虚构扫描实现。",
+    "noteEn": "The source supplies only a phase comment, labeled C++ from the chapter's RPC implementation context; the comment itself has no language-specific syntax. Preserves the English phase description without inventing a scanning implementation.",
+    "originalLanguage": "cpp",
+    "noteTw": "原文僅提供階段註解，按本章 RPC 實作語境標為 C++；註解本身沒有專屬語言語法。保留英文階段描述，不虛構掃描實作。"
+  },
+  {
+    "id": "ch13-f20",
+    "sourceHash": "15581ce6d217d5918e3bf37f27b839c04efdf3cc1334d5d7e06e40fdd22b6687",
+    "python": "# Each iteration of the following loop extracts one request from\n# the request message, increments the corresponding object, and\n# appends a response to the response message.\n",
+    "note": "原文仅提供循环前的注释，按相邻存储系统实现语境标为 C++；注释本身没有专属语言语法。保留每轮工作内容的高层级描述，不补造循环、消息格式或对象存储实现。",
+    "noteEn": "The source supplies only a loop comment, labeled C++ from the surrounding storage-system implementation context; the comment itself has no language-specific syntax. Preserves the high-level description of each iteration without inventing a loop, message format, or object-storage implementation.",
+    "originalLanguage": "cpp",
+    "noteTw": "原文僅提供迴圈前的註解，按相鄰儲存系統實作語境標為 C++；註解本身沒有專屬語言語法。保留每輪工作內容的高層級描述，不補造迴圈、訊息格式或物件儲存實作。"
+  }
+]

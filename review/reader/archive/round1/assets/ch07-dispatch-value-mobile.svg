@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 726" role="img" aria-labelledby="ch07-dispatch-value-m-title ch07-dispatch-value-m-desc">
+  <title id="ch07-dispatch-value-m-title">签名相同，就一定是透传吗？</title>
+  <desc id="ch07-dispatch-value-m-desc">上方教学 handle(request) 原样转发，未增加任务功能。下方同样的入口按教学 URL 规则分支到文件或动态处理者，增加选择职责。接口签名重复不自动代表无价值。</desc>
+  <defs><marker id="ch07-dispatch-value-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="726" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="16" y="32" font-size="19" font-weight="600">签名相同，就一定是透传吗？</text>
+    <text x="16" y="59" font-size="14" fill="var(--diagram-muted,#5c645d)">教学接口与路由，不是完整路由算法</text>
+    <text x="16" y="98" font-weight="600">纯透传：固定下一站</text>
+    <rect x="16" y="115" width="328" height="48" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="32" y="145" font-family="ui-monospace,monospace">handle(request)</text>
+    <path d="M180 171V209" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch07-dispatch-value-m-arrow)"/><text x="196" y="194" font-size="14">原样转交</text>
+    <rect x="16" y="221" width="328" height="48" rx="4" fill="none" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="32" y="251" font-family="ui-monospace,monospace">handle(request)</text>
+    <text x="16" y="299" fill="var(--diagram-danger,#a03946)">增加接口，却没新增任务功能</text>
+    <path d="M16 320H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="352" font-weight="600">分发器：决定下一站</text>
+    <rect x="16" y="369" width="328" height="48" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="32" y="399" font-family="ui-monospace,monospace">handle(request)</text>
+    <path d="M180 425V449" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch07-dispatch-value-m-arrow)"/>
+    <path d="M40 462H320L340 494L320 526H40L20 494Z" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="68" y="500">URL 是否匹配 /static/*？</text>
+    <g stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch07-dispatch-value-m-arrow)"><path d="M92 534V566"/><path d="M269 534V566"/></g>
+    <text x="107" y="554" font-size="13">是</text><text x="284" y="554" font-size="13">否</text>
+    <text x="48" y="593">文件处理者</text><text x="224" y="593">动态处理者</text>
+    <text x="30" y="620" font-family="ui-monospace,monospace" font-size="13">handle(request)</text>
+    <text x="208" y="620" font-family="ui-monospace,monospace" font-size="13">handle(request)</text>
+    <text x="16" y="657" font-weight="600">选择处理者，本身就是新增职责。</text>
+    <text x="16" y="689" font-size="13" fill="var(--diagram-muted,#5c645d)">同层驱动也可共享接口、各自实现功能；</text>
+    <text x="16" y="710" font-size="13" fill="var(--diagram-muted,#5c645d)">相同签名，不等于透传链。</text>
+  </g>
+</svg>

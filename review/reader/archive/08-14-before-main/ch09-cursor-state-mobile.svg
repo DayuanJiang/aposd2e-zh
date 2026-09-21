@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 673" role="img" aria-labelledby="ch09-cursor-state-m-t ch09-cursor-state-m-d">
+  <title id="ch09-cursor-state-m-t">合并对象为何反而增加一次判断？</title><desc id="ch09-cursor-state-m-d">上方组合对象依据布尔值选择起点或终点。下方直接存储光标Position，选区单独使用两个Position；有选区时光标仍须在一端。</desc>
+  <defs><marker id="ch09-cursor-state-m-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="360" height="673" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="20" y="32" font-size="18" font-weight="600">合并对象为何反而增加一次判断？</text>
+    <text x="20" y="74" font-weight="600">组合：光标藏在“某一端”</text>
+    <rect x="20" y="94" width="320" height="46" rx="4" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="42" y="123">选区两端 + 在哪端 + 有无选区</text>
+    <path d="M180 141V161" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch09-cursor-state-m-a)"/>
+    <path d="M180 168 267 207 180 246 93 207Z" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="134" y="212">光标在哪端？</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch09-cursor-state-m-a)"><path d="M93 207H62V283"/><path d="M267 207H300V283"/></g>
+    <text x="77" y="266" font-size="13">起点端</text><text x="248" y="266" font-size="13">终点端</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><rect x="20" y="290" width="137" height="40" rx="4"/><rect x="203" y="290" width="137" height="40" rx="4"/></g><text x="64" y="316">取起点</text><text x="247" y="316">取终点</text>
+    <path d="M20 355H340" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="20" y="387" font-weight="600">分开：直接存储光标位置</text>
+    <rect x="20" y="407" width="320" height="62" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="40" y="433">cursor: Position</text><text x="40" y="456" font-size="14">直接读取，无需判断在哪端</text>
+    <text x="20" y="504">选区：另外两个 Position</text>
+    <rect x="110" y="526" width="128" height="36" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <g font-family="monospace" font-size="20"><text x="88" y="552">a</text><text x="120" y="552">b</text><text x="152" y="552">c</text><text x="184" y="552">d</text><text x="216" y="552">e</text><text x="248" y="552">f</text></g>
+    <path d="M110 522V570" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><path d="M238 518V574" stroke="var(--diagram-secondary,#2c6096)" stroke-width="4"/>
+    <text x="88" y="594" font-size="13">起点</text><text x="212" y="594" font-size="13">终点 / 光标</text>
+    <text x="20" y="626" font-size="13" fill="var(--diagram-muted,#58636b)">有选区时光标仍在一端；高层仍分别操作两者。</text><text x="20" y="650" font-size="13" fill="var(--diagram-muted,#58636b)">字母为教学示意；无需专用光标类或选区类。</text>
+  </g>
+</svg>

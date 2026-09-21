@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 679" role="img" aria-labelledby="ch22-investment-return-m-title ch22-investment-return-m-desc">
+  <title id="ch22-investment-return-m-title">投入通过后续使用返回下一轮设计</title>
+  <desc id="ch22-investment-return-m-desc">左路精心定义模块，经复用减少重复设计；右路清晰文档，经重读修改减少恢复上下文。后续精力和实践积累通向更熟练的下一轮设计。没有数值收益宣称。</desc>
+  <defs><marker id="ch22-investment-return-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="679" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">设计投入，怎样返回后续工作</text><text x="16" y="57" font-size="14">第 22 章 · 定性关系，不保证回本日期</text>
+    <text x="16" y="94" font-weight="600">现在投入</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"><rect x="24" y="112" width="143" height="69" rx="5"/><rect x="193" y="112" width="143" height="69" rx="5"/></g>
+    <text x="95" y="140" text-anchor="middle">精心定义</text><text x="95" y="166" text-anchor="middle">模块</text><text x="264" y="140" text-anchor="middle">写清接口</text><text x="264" y="166" text-anchor="middle">与设计理由</text>
+    <g stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch22-investment-return-m-arrow)"><path d="M95 181V221"/><path d="M264 181V221"/></g>
+    <text x="95" y="246" text-anchor="middle">反复复用</text><text x="95" y="272" text-anchor="middle">模块</text><text x="264" y="246" text-anchor="middle">重读代码</text><text x="264" y="272" text-anchor="middle">添加功能</text>
+    <g stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch22-investment-return-m-arrow)"><path d="M95 285V319"/><path d="M264 285V319"/></g>
+    <g fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"><rect x="24" y="319" width="143" height="69" rx="5"/><rect x="193" y="319" width="143" height="69" rx="5"/></g>
+    <text x="95" y="347" text-anchor="middle">减少</text><text x="95" y="373" text-anchor="middle">重复设计</text><text x="264" y="347" text-anchor="middle">减少</text><text x="264" y="373" text-anchor="middle">恢复上下文</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2"><path d="M95 388V424H264V388"/><path d="M180 424V459" marker-end="url(#ch22-investment-return-m-arrow)"/></g>
+    <text x="193" y="448" font-size="14">释放后续精力</text>
+    <rect x="32" y="459" width="296" height="57" rx="5" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/><text x="180" y="482" text-anchor="middle">实践、经验积累</text><text x="180" y="506" text-anchor="middle">设计逐渐更熟练</text>
+    <path d="M180 516V551" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch22-investment-return-m-arrow)"/><text x="180" y="578" text-anchor="middle" font-weight="600">下一轮设计</text>
+    <path d="M66 572H12V146H24" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ch22-investment-return-m-arrow)"/>
+    <text x="16" y="624">早期投入，换来后续不必从头开始。</text><text x="16" y="655" font-size="14">回路为技能复用，不是数值收益曲线。</text>
+  </g>
+</svg>

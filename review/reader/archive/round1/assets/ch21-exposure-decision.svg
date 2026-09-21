@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" role="img" aria-labelledby="ch21-exposure-decision-title ch21-exposure-decision-desc">
+  <title id="ch21-exposure-decision-title">必要性与暴露方式共同决定接口是否简化</title>
+  <desc id="ch21-exposure-decision-desc">二乘二矩阵以调用者是否需要信息为行、显露还是隐藏为列。必要信息应显露，无关选择可隐藏。隐藏必要信息产生未知的未知，暴露无关选择增加负担。</desc>
+  <rect width="680" height="420" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="21" font-weight="600">少暴露信息，未必就更简单</text><text x="24" y="61" font-size="14">21.2–21.4 · 先判断调用者是否需要，再决定显露还是隐藏</text>
+    <text x="24" y="112" font-size="14">调用者需要？</text><text x="282" y="112" text-anchor="middle" font-weight="600">接口显露</text><text x="530" y="112" text-anchor="middle" font-weight="600">内部隐藏</text>
+    <text x="62" y="182">需要</text><text x="62" y="290">不需要</text>
+    <rect x="158" y="131" width="240" height="95" fill="var(--diagram-primary-soft,#d6e5dc)"/><rect x="412" y="131" width="244" height="95" fill="var(--diagram-danger-soft,#ead9dc)"/>
+    <rect x="158" y="240" width="240" height="95" fill="var(--diagram-danger-soft,#ead9dc)"/><rect x="412" y="240" width="244" height="95" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="174" y="159" font-weight="600">支持正确调用</text><text x="174" y="185">必要参数、名称、契约</text><text x="174" y="212" font-size="14">例：必须知道的调用前提</text>
+    <text x="428" y="159" font-weight="600">未知的未知</text><text x="428" y="185">需要的信息却看不见</text><text x="428" y="212" font-size="14">不能靠“信息隐藏”辩护</text>
+    <text x="174" y="268" font-weight="600">增加认知负荷</text><text x="174" y="294">强迫调用者做无关选择</text><text x="174" y="321" font-size="14">原例：反复显式选择缓冲</text>
+    <text x="428" y="268" font-weight="600">减少使用者负担</text><text x="428" y="294">默认、自动计算、局部处理</text><text x="428" y="321" font-size="14">不让细节传播到调用者</text>
+    <path d="M144 119V344M144 233H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="374">目标不是隐藏得最多，而是让必要信息可见、无关细节不外溢。</text><text x="24" y="401" font-size="14">“调用前提”为教学示意；缓冲选择来自本章对 Java I/O 的讨论。</text>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 710" role="img" aria-labelledby="ch13-ready-contract-m-t ch13-ready-contract-m-d">
+  <title id="ch13-ready-contract-m-t">ready 不等于一定有对象</title><desc id="ch13-ready-contract-m-d">三个分支均描述本次isReady返回时、计入调用期间推进工作后的情况，而不是调用前的输入状态。有对象或已结束均可返回true，下一次getNext分别立即返回对象或NULL；false仅表示可能阻塞。调用是推进所必需，不保证每次产出对象。</desc>
+  <defs><marker id="ch13-ready-contract-m-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="360" height="710" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="20" y="32" font-size="18" font-weight="600">ready 不等于一定有对象</text><text x="20" y="65" font-size="14">下列情况均指本次 isReady 返回时，</text><text x="20" y="87" font-size="14">已考虑调用期间所做的推进工作。</text>
+    <rect x="20" y="112" width="320" height="91" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="38" y="141" font-weight="600">至少一个对象可返回</text>
+    <text x="38" y="177" font-family="monospace">true</text><path d="M86 172H128" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch13-ready-contract-m-a)"/><text x="143" y="177">不阻塞，返回对象</text>
+    <rect x="20" y="228" width="320" height="91" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="38" y="257" font-weight="600">查询已经结束</text>
+    <text x="38" y="293" font-family="monospace">true</text><path d="M86 288H128" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch13-ready-contract-m-a)"/><text x="143" y="293">不阻塞，返回 NULL</text>
+    <rect x="20" y="344" width="320" height="91" rx="4" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="38" y="373" font-weight="600">尚未保证可立即返回</text>
+    <text x="38" y="409" font-family="monospace">false</text><path d="M90 404H128" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch13-ready-contract-m-a)"/><text x="143" y="409">可能阻塞，非必然</text>
+    <path d="M20 461H340" stroke="var(--diagram-line,#aebbad)"/><text x="20" y="493" font-weight="600">另一项义务：调用才能推进查询</text>
+    <text x="20" y="525">直接调用 isReady，或通过 getNext</text><path d="M180 538V562" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch13-ready-contract-m-a)"/>
+    <rect x="20" y="569" width="320" height="43" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="72" y="597">执行 isReady，推动查询</text>
+    <text x="20" y="646" font-size="13" fill="var(--diagram-muted,#58636b)">调用前没有就绪对象，并不决定返回值。</text><text x="20" y="670" font-size="13" fill="var(--diagram-muted,#58636b)">调用不保证每次都产生对象或固定进展。</text><text x="20" y="694" font-size="13" fill="var(--diagram-muted,#58636b)">不引入内部调度或并发协议。</text>
+  </g>
+</svg>

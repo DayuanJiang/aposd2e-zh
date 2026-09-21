@@ -1,0 +1,102 @@
+[
+  {
+    "id": "ch13-padding-information",
+    "chapter": "ch13",
+    "title": "4 是多少，留在哪一边？",
+    "question": "为什么“文本的水平填充”没有解释 textHorizontalPadding？",
+    "answer": "它只是复述名称；有用的注释补上单位为像素，并明确每行左、右两侧分别留白。",
+    "summary": "尺寸线把两项缺失信息对应到具体几何位置。4像素来自原文；留白区域为便于辨认而放大，不按实际屏幕像素绘制。",
+    "alt": "原注释对单位和单侧双侧都留下问号；修订注释对应到文本左右两条独立尺寸线，每侧均标4px，明确不是两侧合计4px。",
+    "kind": "annotated-dimension",
+    "desktop": "/diagrams/ch13-padding-information.svg",
+    "mobile": "/diagrams/ch13-padding-information-mobile.svg",
+    "anchor": { "section": "13.2", "placement": "end" },
+    "sources": [
+      { "section": "13.2", "epub": "OEBPS/part0017.xhtml#p49:d89461d329", "reason": "原注释遗漏单位及留白位于一侧还是两侧。" },
+      { "section": "13.2", "epub": "OEBPS/part0017.xhtml#p52:4c58df9c7c", "reason": "修订注释明确左右两侧的空白。" },
+      { "section": "13.2", "epub": "OEBPS/part0017.xhtml#p53:5e2c836232", "reason": "单位为像素。" },
+      { "section": "13.2", "epub": "OEBPS/part0017.xhtml#p55:c06f7433be", "reason": "常量值4；放大的几何是教学示意，不是像素比例测量。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch13-length-map",
+    "chapter": "ch13",
+    "title": "一条映射记录与一个缺席条目",
+    "question": "怎样把变量注释写到无需追查所有用法就能理解？",
+    "answer": "说明键是含换行的字符数，值是该长度的行数；某长度没有条目，表示不存在这种长度的行。",
+    "summary": "教学数据 a\\n、bb\\n、cc\\n 映射成 {2:1, 3:2}。这里的长度不是像素宽度，缺席条目也不是缺失统计。",
+    "alt": "三行教学文本分别长度2、3、3，箭头按长度汇合成映射2到1、3到2；长度4没有任何输入行，因此不存储键4，而不是存储4到0。",
+    "kind": "data-to-map",
+    "desktop": "/diagrams/ch13-length-map.svg",
+    "mobile": "/diagrams/ch13-length-map-mobile.svg",
+    "anchor": { "section": "13.3", "placement": "end" },
+    "sources": [
+      { "section": "13.3", "epub": "OEBPS/part0017.xhtml#p72:156d407aa2", "reason": "旧lineWidths注释遗漏键值含义及单位。" },
+      { "section": "13.3", "epub": "OEBPS/part0017.xhtml#p76:f9f9aac689", "reason": "条目格式为length,count。" },
+      { "section": "13.3", "epub": "OEBPS/part0017.xhtml#p77:065899d1a8", "reason": "length为含换行的字符数；具体三行及计数是教学自拟。" },
+      { "section": "13.3", "epub": "OEBPS/part0017.xhtml#p82:23aa83f202", "reason": "应说明缺少条目的含义；原代码p79-p80明确无该长度行就没有对应条目。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch13-rpc-intent",
+    "chapter": "ch13",
+    "title": "先看要装进哪个请求，再读条件",
+    "question": "高层注释怎样把几个局部判断连接成一个意图？",
+    "answer": "“尝试追加到发往目标服务器且尚未发出的 RPC”提供共同目的，帮助理解会话、状态和容量检查；它并未解释全部条件。",
+    "summary": "请求内容与服务器字母为教学示意。图特意保留 maxPos 检查的解释缺口，不把高层注释冒充完整算法说明。",
+    "alt": "当前键哈希尝试加入发往目标服务器的RPC。发错服务器和已发出请求不能接收；目标服务器上尚未发出且有容量的请求是候选，但仍须满足maxPos小于assignPos，原文高层注释没有解释该条件。",
+    "kind": "intent-and-constraints",
+    "desktop": "/diagrams/ch13-rpc-intent.svg",
+    "mobile": "/diagrams/ch13-rpc-intent-mobile.svg",
+    "anchor": { "section": "13.4", "placement": "end" },
+    "sources": [
+      { "section": "13.4", "epub": "OEBPS/part0017.xhtml#p112:aa4ea17b1c", "reason": "低层注释复述条件，未提供整段目的。" },
+      { "section": "13.4", "epub": "OEBPS/part0017.xhtml#p114:7b82743463", "reason": "修订注释描述将当前键哈希尝试追加到既有RPC的意图；完整句延续至p115。" },
+      { "section": "13.4", "epub": "OEBPS/part0017.xhtml#p106:c361eb5fed", "reason": "代码仍检查maxPos<assignPos；图不得把方向、状态和容量当成全部充分条件。" },
+      { "section": "13.4", "epub": "OEBPS/part0017.xhtml#p107:faf82ddd9f", "reason": "容量检查来自原代码；候选请求及哈希槽位是教学示意。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch13-ready-contract",
+    "chapter": "ch13",
+    "title": "ready 不等于一定有对象",
+    "question": "isReady 返回 true，能保证下一次 getNext 得到对象吗？",
+    "answer": "不能。true 保证下一次 getNext 不阻塞：可能有对象，也可能已经结束；false 仅表示可能阻塞。",
+    "summary": "接口还必须说明推进义务：直接调用 isReady，或通过 getNext 间接调用，查询才会向前推进。内部规则如何调度不属于这个契约。",
+    "alt": "三种状态映射到可观察行为：有对象和查询结束都使isReady为true，getNext分别得到对象或NULL；尚需等待使isReady为false，getNext可能阻塞。调用箭头另外标明推进查询的副作用。",
+    "kind": "observable-state-contract",
+    "desktop": "/diagrams/ch13-ready-contract.svg",
+    "mobile": "/diagrams/ch13-ready-contract-mobile.svg",
+    "anchor": { "section": "13.5", "placement": "end" },
+    "sources": [
+      { "section": "13.5", "epub": "OEBPS/part0017.xhtml#p263:1446c997c6", "reason": "初稿混入实现且遗漏接口信息。" },
+      { "section": "13.5", "epub": "OEBPS/part0017.xhtml#p268:b83514b38f", "reason": "必须直接或经getNext间接调用isReady，才能推进查询。" },
+      { "section": "13.5", "epub": "OEBPS/part0017.xhtml#p272:c15a306ea3", "reason": "true保证下一次getNext不阻塞。" },
+      { "section": "13.5", "epub": "OEBPS/part0017.xhtml#p273:647cc0a00b", "reason": "true可对应有对象或查询结束；p274明确false意味着可能阻塞，而非必然阻塞。" },
+      { "section": "13.5", "epub": "OEBPS/part0017.xhtml#p244:b6ce39a7bc", "reason": "getNext的NULL返回由单方法契约描述，类注释只介绍高层用法。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch13-status-discovery",
+    "chapter": "ch13",
+    "title": "把跨模块清单放在必经之处",
+    "question": "新增一个状态值时，怎样让维护者发现所有同步修改点？",
+    "answer": "在必定要编辑的 Status 枚举末尾放置注释，将状态值与消息、异常映射及 Java 绑定的更新连接起来。",
+    "summary": "图按责任分组展示原注释的七项更新，不表示自动同步。文档让跨文件义务可发现，并没有消除依赖。",
+    "alt": "新增状态值的必经位置是Status枚举末尾，清单从此分出四组连接：最大值、消息和符号表、C++异常类与映射、Java异常类映射及枚举；各组保留原注释七项更新的编号。",
+    "kind": "change-dependency-map",
+    "desktop": "/diagrams/ch13-status-discovery.svg",
+    "mobile": "/diagrams/ch13-status-discovery-mobile.svg",
+    "anchor": { "section": "13.7", "placement": "end" },
+    "sources": [
+      { "section": "13.7", "epub": "OEBPS/part0017.xhtml#p290:09247b9d63", "reason": "新增Status必须访问枚举声明，适合放置跨模块变更说明。" },
+      { "section": "13.7", "epub": "OEBPS/part0017.xhtml#p301:9fb8fb0ebe", "reason": "原清单第1项至p317第7项：最大值、消息/符号、C++异常/映射、Java异常/映射/枚举；图保留全部义务，并按责任分组。" },
+      { "section": "13.7", "epub": "OEBPS/part0017.xhtml#p319:2254da773a", "reason": "新值添加在列表末尾，所以注释也放在末尾，形成自然发现路径。" }
+    ],
+    "status": "awaiting-independent-review"
+  }
+]

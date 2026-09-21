@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 562" role="img" aria-labelledby="ch21-leverage-boundary-m-title ch21-leverage-boundary-m-desc">
+  <title id="ch21-leverage-boundary-m-title">不同删除动作汇入字符范围</title>
+  <desc id="ch21-leverage-boundary-m-desc">上方三个动作汇合，编辑层决定范围后越过水平模块边界。下方文本模块只执行删除范围，不关心按键来源。选区和命令为教学自拟。</desc>
+  <defs><marker id="ch21-leverage-boundary-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="562" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">文本接口只需知道删哪里</text><text x="16" y="57" font-size="14">21.1 · 选区与命令场景为教学自拟</text>
+    <text x="16" y="95" font-weight="600">编辑动作层</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"><rect x="16" y="115" width="98" height="55" rx="4"/><rect x="131" y="115" width="98" height="55" rx="4"/><rect x="246" y="115" width="98" height="55" rx="4"/></g>
+    <text x="65" y="148" text-anchor="middle">退格</text><text x="180" y="148" text-anchor="middle">删除选区</text><text x="295" y="148" text-anchor="middle">删除命令</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2"><path d="M65 170V203H295V170M180 170V203"/><path d="M180 203V239" marker-end="url(#ch21-leverage-boundary-m-arrow)"/></g>
+    <text x="180" y="264" text-anchor="middle">决定删哪里，得到字符范围</text>
+    <path d="M180 282V390" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch21-leverage-boundary-m-arrow)"/>
+    <text x="196" y="311" font-size="14">只传范围</text>
+    <path d="M16 331H344" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-dasharray="6 4"/>
+    <text x="16" y="361" font-weight="600">文本模块</text>
+    <rect x="48" y="390" width="264" height="60" rx="5" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/><text x="180" y="426" text-anchor="middle">统一删除字符范围</text>
+    <text x="180" y="482" text-anchor="middle">无需知道按键来源</text><path d="M16 507H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="536">复用的是本质操作，不是按钮名称。</text>
+  </g>
+</svg>

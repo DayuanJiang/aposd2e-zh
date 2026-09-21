@@ -1,0 +1,1719 @@
+candidate	count	files	forms	first_source
+code	592	22	"{""code"": 581, ""Code"": 11}"	epub/preface.md:13
+method	460	22	"{""methods"": 177, ""method"": 276, ""Methods"": 6, ""Method"": 1}"	epub/ch01.md:61
+class	397	23	"{""class"": 285, ""classes"": 110, ""Class"": 2}"	epub/preface.md:7
+comment	361	10	"{""comments"": 208, ""Comments"": 21, ""comment"": 131, ""Comment"": 1}"	epub/preface.md:43
+design	327	23	"{""design"": 292, ""designs"": 25, ""Design"": 10}"	epub/preface.md:4
+system	296	24	"{""systems"": 52, ""Systems"": 3, ""system"": 237, ""System"": 4}"	epub/preface.md:4
+interface	278	20	"{""interfaces"": 32, ""interface"": 239, ""Interfaces"": 3, ""Interface"": 4}"	epub/preface.md:43
+example	232	21	"{""example"": 209, ""examples"": 23}"	epub/preface.md:10
+information	230	20	"{""information"": 221, ""Information"": 9}"	epub/ch02.md:46
+complexity	214	22	"{""complexity"": 196, ""Complexity"": 14, ""complexities"": 4}"	epub/preface.md:25
+module	177	17	"{""Modules"": 5, ""modules"": 57, ""module"": 113, ""Module"": 2}"	epub/preface.md:4
+name	161	14	"{""name"": 95, ""names"": 61, ""Name"": 3, ""Names"": 2}"	epub/ch02.md:76
+developer	160	20	"{""developers"": 99, ""developer"": 58, ""Developers"": 3}"	epub/ch01.md:28
+approach	158	21	"{""approaches"": 10, ""approach"": 147, ""Approaches"": 1}"	epub/preface.md:19
+software	155	23	"{""software"": 150, ""Software"": 5}"	epub/preface.md:4
+exception	143	10	"{""exceptions"": 63, ""exception"": 71, ""Exception"": 7, ""Exceptions"": 2}"	epub/ch01.md:58
+file	142	14	"{""file"": 121, ""files"": 20, ""File"": 1}"	epub/preface.md:19
+problem	124	24	"{""problem"": 60, ""Problem"": 1, ""problems"": 62, ""Problems"": 1}"	epub/preface.md:4
+time	123	22	"{""times"": 12, ""time"": 111}"	epub/preface.md:16
+implementation	122	20	"{""implementation"": 101, ""implementations"": 14, ""Implementations"": 1, ""Implementation"": 6}"	epub/ch01.md:28
+way	120	23	"{""way"": 90, ""ways"": 30}"	epub/preface.md:13
+text	113	10	"{""text"": 113}"	epub/preface.md:19
+documentation	111	15	"{""documentation"": 107, ""Documentation"": 4}"	epub/ch02.md:79
+variable	110	16	"{""variables"": 55, ""variable"": 55}"	epub/ch02.md:46
+thing	109	23	"{""things"": 73, ""thing"": 34, ""Things"": 2}"	epub/preface.md:25
+abstraction	103	14	"{""abstraction"": 59, ""Abstractions"": 2, ""abstractions"": 42}"	epub/ch04.md:46
+case	98	17	"{""cases"": 43, ""case"": 55}"	epub/ch01.md:19
+change	95	14	"{""changes"": 56, ""Change"": 3, ""change"": 36}"	epub/ch01.md:28
+user	92	13	"{""users"": 51, ""Users"": 4, ""user"": 37}"	epub/ch04.md:22
+line	90	18	"{""lines"": 46, ""line"": 44}"	epub/preface.md:19
+object	86	11	"{""objects"": 31, ""object"": 55}"	epub/ch04.md:121
+chapter	85	20	"{""chapters"": 14, ""chapter"": 31, ""Chapter"": 39, ""Chapters"": 1}"	epub/ch01.md:58
+error	84	9	"{""errors"": 40, ""error"": 43, ""Errors"": 1}"	epub/ch01.md:43
+value	80	16	"{""value"": 56, ""values"": 24}"	epub/ch02.md:43
+application	72	11	"{""applications"": 19, ""application"": 52, ""Applications"": 1}"	epub/ch02.md:49
+place	69	14	"{""place"": 40, ""places"": 29}"	epub/ch01.md:58
+development	68	13	"{""development"": 68}"	epub/preface.md:4
+order	65	18	"{""order"": 65}"	epub/ch02.md:43
+request	65	9	"{""requests"": 13, ""request"": 52}"	epub/ch04.md:25
+feature	64	15	"{""features"": 47, ""feature"": 17}"	epub/ch01.md:13
+functionality	64	11	"{""functionality"": 64}"	epub/ch01.md:31
+operation	64	11	"{""operations"": 36, ""operation"": 28}"	epub/ch04.md:22
+detail	63	15	"{""details"": 48, ""detail"": 15}"	epub/ch01.md:22
+parameter	63	8	"{""parameter"": 23, ""parameters"": 39, ""Parameters"": 1}"	epub/ch02.md:70
+text class	63	6	"{""text class"": 61, ""text classes"": 2}"	epub/ch06.md:37
+result	60	19	"{""result"": 31, ""results"": 29}"	epub/preface.md:13
+structure	60	17	"{""structure"": 48, ""structures"": 11, ""Structure"": 1}"	epub/ch02.md:19
+figure	60	9	"{""Figure"": 57, ""figure"": 3}"	epub/ch02.md:43
+idea	59	19	"{""ideas"": 23, ""idea"": 36}"	epub/preface.md:16
+bug	59	15	"{""bugs"": 31, ""bug"": 27, ""Bugs"": 1}"	epub/preface.md:34
+piece	58	18	"{""pieces"": 27, ""piece"": 31}"	epub/preface.md:7
+server	58	5	"{""servers"": 21, ""server"": 37}"	epub/ch05.md:79
+mechanism	57	9	"{""mechanisms"": 12, ""mechanism"": 45}"	epub/ch04.md:22
+reader	56	9	"{""readers"": 36, ""reader"": 20}"	epub/preface.md:25
+number	53	17	"{""number"": 48, ""numbers"": 5}"	epub/ch01.md:34
+caller	53	13	"{""caller"": 28, ""callers"": 25}"	epub/ch02.md:46
+software design	52	16	"{""software design"": 50, ""software designs"": 2}"	epub/preface.md:4
+dependency	52	12	"{""dependencies"": 38, ""dependency"": 11, ""Dependencies"": 3}"	epub/ch01.md:13
+data	52	11	"{""data"": 51, ""Data"": 1}"	epub/ch03.md:64
+test	52	6	"{""tests"": 24, ""test"": 26, ""Tests"": 2}"	epub/ch03.md:82
+performance	51	11	"{""performance"": 51}"	epub/preface.md:10
+block	51	12	"{""blocks"": 21, ""block"": 29, ""Blocks"": 1}"	epub/ch04.md:55
+it's	50	19	"{""It's"": 34, ""it's"": 16}"	epub/ch01.md:7
+programming	48	11	"{""programming"": 47, ""Programming"": 1}"	epub/preface.md:4
+function	48	12	"{""functions"": 26, ""function"": 22}"	epub/ch01.md:61
+selection	48	4	"{""Selection"": 1, ""selection"": 47}"	epub/ch06.md:49
+level	46	13	"{""level"": 37, ""levels"": 9}"	epub/preface.md:16
+project	45	16	"{""projects"": 15, ""project"": 30}"	epub/preface.md:13
+book	45	10	"{""book"": 45}"	epub/preface.md:16
+buffer	45	3	"{""buffer"": 2, ""Buffer"": 40, ""Buffers"": 3}"	epub/ch04.md:91
+behavior	43	15	"{""behaviors"": 3, ""behavior"": 40}"	epub/ch01.md:10
+work	42	18	"{""work"": 38, ""works"": 4}"	epub/preface.md:7
+situation	42	14	"{""situations"": 33, ""situation"": 9}"	epub/ch02.md:34
+memory	42	9	"{""memory"": 40, ""memories"": 2}"	epub/ch02.md:46
+part	41	14	"{""parts"": 15, ""part"": 25, ""Part"": 1}"	epub/ch02.md:19
+user interface	40	6	"{""user interface"": 40}"	epub/ch06.md:55
+process	39	14	"{""process"": 34, ""processes"": 4, ""Process"": 1}"	epub/preface.md:13
+chunk	39	2	"{""chunks"": 18, ""chunk"": 21}"	epub/ch02.md:91
+web	38	9	"{""Web"": 38}"	epub/preface.md:37
+HTTP	38	6	"{""HTTP"": 38}"	epub/ch04.md:25
+character	38	12	"{""character"": 19, ""characters"": 19}"	epub/ch05.md:109
+interface comment	38	6	"{""interface comment"": 24, ""interface comments"": 13, ""Interface comments"": 1}"	epub/ch12.md:112
+student	37	9	"{""Students"": 4, ""students"": 21, ""student"": 12}"	epub/preface.md:13
+form	37	12	"{""forms"": 9, ""form"": 28}"	epub/ch02.md:19
+language	36	15	"{""languages"": 10, ""language"": 26}"	epub/preface.md:19
+argument	35	13	"{""arguments"": 22, ""argument"": 13}"	epub/ch04.md:16
+storage	34	8	"{""storage"": 34}"	epub/preface.md:19
+goal	34	18	"{""goal"": 26, ""goals"": 8}"	epub/preface.md:40
+sense	34	10	"{""sense"": 34}"	epub/ch05.md:55
+convention	34	3	"{""conventions"": 25, ""Conventions"": 1, ""convention"": 8}"	epub/ch13.md:19
+people	33	13	"{""People"": 3, ""people"": 30}"	epub/preface.md:4
+technique	33	12	"{""techniques"": 26, ""technique"": 7}"	epub/preface.md:4
+benefit	33	15	"{""benefit"": 15, ""benefits"": 18}"	epub/ch02.md:22
+pattern	32	8	"{""patterns"": 14, ""pattern"": 17, ""Patterns"": 1}"	epub/preface.md:4
+need	32	13	"{""need"": 23, ""needs"": 9}"	epub/ch02.md:25
+declaration	32	9	"{""declaration"": 25, ""declarations"": 7}"	epub/ch02.md:79
+type	32	9	"{""types"": 15, ""type"": 17}"	epub/ch04.md:34
+response	32	6	"{""response"": 27, ""responses"": 5}"	epub/ch05.md:79
+cursor	32	3	"{""cursor"": 32}"	epub/ch06.md:40
+context	32	5	"{""context"": 27, ""Contexts"": 2, ""contexts"": 3}"	epub/ch06.md:220
+word	31	12	"{""word"": 11, ""words"": 20}"	epub/preface.md:25
+page	31	9	"{""page"": 18, ""pages"": 13}"	epub/preface.md:37
+network	31	12	"{""network"": 30, ""Network"": 1}"	epub/ch01.md:61
+API	31	7	"{""API"": 31}"	epub/ch02.md:73
+amount	30	14	"{""amount"": 29, ""amounts"": 1}"	epub/preface.md:19
+simpler	30	15	"{""simpler"": 30}"	epub/ch01.md:16
+special case	30	8	"{""special cases"": 23, ""Special cases"": 2, ""special case"": 5}"	epub/ch01.md:19
+path	30	6	"{""path"": 24, ""paths"": 6}"	epub/ch03.md:28
+call	30	9	"{""call"": 20, ""calls"": 10}"	epub/ch04.md:91
+instance	30	10	"{""instance"": 27, ""instances"": 3}"	epub/ch05.md:37
+issue	29	14	"{""issues"": 20, ""issue"": 9}"	epub/preface.md:13
+one	29	17	"{""ones"": 21, ""one"": 8}"	epub/preface.md:13
+principle	29	14	"{""principles"": 14, ""principle"": 15}"	epub/preface.md:13
+point	29	16	"{""point"": 24, ""points"": 5}"	epub/preface.md:19
+decision	29	14	"{""decision"": 16, ""decisions"": 13}"	epub/ch02.md:43
+message	29	7	"{""messages"": 8, ""message"": 21}"	epub/ch02.md:79
+matter	29	8	"{""matter"": 20, ""matters"": 9}"	epub/ch03.md:46
+position	29	10	"{""position"": 22, ""positions"": 6, ""Positions"": 1}"	epub/ch04.md:91
+program	28	10	"{""programs"": 7, ""program"": 21}"	epub/preface.md:4
+lot	28	14	"{""lot"": 20, ""lots"": 8}"	epub/ch02.md:10
+purpose	28	10	"{""purposes"": 16, ""purpose"": 12}"	epub/ch02.md:19
+investment	28	9	"{""investment"": 17, ""investments"": 11}"	epub/ch03.md:40
+editor	27	8	"{""editors"": 1, ""editor"": 26}"	epub/preface.md:19
+red flag	27	14	"{""red flags"": 8, ""red flag"": 19}"	epub/ch01.md:52
+flag	27	14	"{""flags"": 8, ""flag"": 19}"	epub/ch01.md:52
+range	27	12	"{""range"": 22, ""ranges"": 5}"	epub/ch03.md:64
+hiding	27	6	"{""hiding"": 27}"	epub/ch05.md:37
+software system	26	15	"{""software system"": 11, ""Software systems"": 2, ""software systems"": 12, ""Software System"": 1}"	epub/ch01.md:22
+section	26	12	"{""sections"": 4, ""section"": 8, ""Section"": 14}"	epub/ch01.md:58
+java	26	11	"{""Java"": 26}"	epub/ch01.md:61
+signature	26	9	"{""signature"": 19, ""signatures"": 7}"	epub/ch02.md:70
+information hiding	26	6	"{""Information hiding"": 2, ""information hiding"": 24}"	epub/ch05.md:37
+layer	26	4	"{""layers"": 15, ""layer"": 11}"	epub/ch07.md:7
+doesn't	25	15	"{""doesn't"": 25}"	epub/preface.md:40
+term	25	13	"{""terms"": 13, ""term"": 12}"	epub/preface.md:43
+leakage	25	6	"{""leakage"": 25}"	epub/ch05.md:52
+index	25	3	"{""indexes"": 8, ""index"": 13, ""indices"": 4}"	epub/ch10.md:178
+programmer	24	10	"{""programmers"": 15, ""Programmers"": 3, ""programmer"": 6}"	epub/preface.md:7
+best way	24	15	"{""best way"": 22, ""best ways"": 2}"	epub/preface.md:28
+alternative	24	10	"{""alternatives"": 15, ""alternative"": 9}"	epub/ch01.md:43
+load	24	8	"{""load"": 24}"	epub/ch02.md:46
+kind	24	11	"{""kind"": 12, ""kinds"": 12}"	epub/ch03.md:25
+list	24	7	"{""lists"": 2, ""list"": 22}"	epub/ch04.md:130
+condition	24	9	"{""conditions"": 15, ""condition"": 8, ""Conditions"": 1}"	epub/ch05.md:103
+design pattern	23	5	"{""design patterns"": 8, ""design pattern"": 11, ""Design patterns"": 3, ""Design Patterns"": 1}"	epub/preface.md:4
+cognitive load	23	8	"{""Cognitive load"": 3, ""cognitive load"": 20}"	epub/ch02.md:46
+obscurity	23	6	"{""obscurity"": 16, ""Obscurity"": 5, ""obscurities"": 2}"	epub/ch02.md:67
+unit	23	5	"{""units"": 6, ""unit"": 13, ""Unit"": 4}"	epub/ch02.md:79
+handler	23	4	"{""handlers"": 9, ""handler"": 14}"	epub/ch04.md:106
+use	23	13	"{""use"": 21, ""Use"": 2}"	epub/ch04.md:199
+knowledge	23	9	"{""knowledge"": 23}"	epub/ch05.md:13
+element	22	12	"{""element"": 9, ""elements"": 12, ""Elements"": 1}"	epub/ch01.md:40
+color	22	1	"{""color"": 22}"	epub/ch02.md:43
+good design	22	7	"{""good design"": 15, ""better designs"": 2, ""Good design"": 2, ""better design"": 2, ""good designs"": 1}"	epub/ch02.md:43
+software development	21	11	"{""software development"": 21}"	epub/preface.md:4
+version	21	8	"{""version"": 21}"	epub/preface.md:4
+task	21	10	"{""task"": 17, ""tasks"": 4}"	epub/preface.md:7
+end	21	10	"{""end"": 21}"	epub/ch01.md:25
+someone	21	8	"{""someone"": 20, ""Someone"": 1}"	epub/ch01.md:52
+rule	21	10	"{""rule"": 12, ""rules"": 9}"	epub/ch01.md:58
+design decision	21	12	"{""design decision"": 11, ""design decisions"": 10}"	epub/ch02.md:43
+string	21	8	"{""string"": 19, ""strings"": 2}"	epub/ch02.md:79
+access	21	6	"{""access"": 17, ""accesses"": 4}"	epub/ch04.md:91
+information leakage	21	6	"{""information leakage"": 17, ""Information leakage"": 4}"	epub/ch05.md:52
+configuration	21	6	"{""configuration"": 19, ""Configuration"": 2}"	epub/ch05.md:169
+bit	20	11	"{""bit"": 18, ""bits"": 2}"	epub/preface.md:10
+existence	20	11	"{""existence"": 20}"	epub/preface.md:16
+mistake	20	10	"{""mistakes"": 10, ""mistake"": 10}"	epub/preface.md:16
+cost	20	8	"{""cost"": 13, ""costs"": 7}"	epub/ch01.md:13
+something	20	12	"{""something"": 20}"	epub/ch02.md:46
+entity	20	8	"{""entity"": 18, ""entities"": 2}"	epub/ch04.md:46
+device	20	4	"{""device"": 15, ""devices"": 5}"	epub/ch04.md:55
+packet	20	6	"{""packets"": 12, ""packet"": 8}"	epub/ch07.md:13
+parent	20	2	"{""parent"": 20}"	epub/ch09.md:226
+consistency	20	5	"{""consistency"": 10, ""Consistency"": 10}"	epub/ch10.md:34
+ramcloud	20	3	"{""RAMCloud"": 20}"	epub/ch10.md:241
+high level	19	8	"{""high level"": 6, ""higher level"": 11, ""higher levels"": 2}"	epub/preface.md:16
+future	19	10	"{""future"": 19}"	epub/preface.md:37
+space	19	4	"{""space"": 19}"	epub/ch01.md:43
+variable name	19	6	"{""variable name"": 12, ""variable names"": 7}"	epub/ch02.md:79
+disk	19	9	"{""disk"": 18, ""disks"": 1}"	epub/ch04.md:97
+critical path	19	1	"{""critical path"": 16, ""critical paths"": 3}"	epub/ch20.md:64
+addition	18	11	"{""addition"": 17, ""additions"": 1}"	epub/preface.md:10
+course	18	12	"{""course"": 18}"	epub/preface.md:13
+team	18	10	"{""teams"": 10, ""team"": 8}"	epub/preface.md:19
+component	18	2	"{""components"": 14, ""component"": 4}"	epub/ch01.md:13
+protocol	18	8	"{""protocols"": 1, ""protocol"": 17}"	epub/ch02.md:70
+instance variable	18	7	"{""instance variable"": 7, ""instance variables"": 11}"	epub/ch05.md:163
+action	18	3	"{""actions"": 13, ""action"": 5}"	epub/ch06.md:148
+statement	18	7	"{""statements"": 11, ""statement"": 7}"	epub/ch06.md:220
+pass-through method	18	2	"{""pass-through methods"": 9, ""pass-through method"": 3, ""Pass-through methods"": 5, ""Pass-Through Method"": 1}"	epub/ch07.md:22
+tool	17	8	"{""tools"": 10, ""tool"": 7}"	epub/preface.md:4
+state	17	9	"{""state"": 14, ""states"": 3}"	epub/preface.md:4
+experience	17	9	"{""experience"": 14, ""experiences"": 3}"	epub/preface.md:19
+modification	17	9	"{""modifications"": 14, ""modification"": 3}"	epub/ch02.md:43
+return	17	8	"{""return"": 13, ""returns"": 4}"	epub/ch04.md:34
+file system	17	5	"{""file system"": 16, ""file systems"": 1}"	epub/ch04.md:55
+configuration parameter	17	4	"{""configuration parameters"": 12, ""Configuration parameters"": 2, ""configuration parameter"": 3}"	epub/ch05.md:169
+subclass	17	5	"{""subclasses"": 10, ""subclass"": 6, ""Subclasses"": 1}"	epub/ch06.md:211
+phase	16	5	"{""phases"": 5, ""phase"": 11}"	epub/ch01.md:25
+collection	16	11	"{""collection"": 16}"	epub/ch01.md:43
+site	16	2	"{""site"": 14, ""sites"": 2}"	epub/ch02.md:43
+solution	16	12	"{""solution"": 13, ""solutions"": 3}"	epub/ch02.md:58
+tactical programming	16	3	"{""Tactical Programming"": 1, ""tactical programming"": 14, ""Tactical programming"": 1}"	epub/ch03.md:7
+engineer	16	2	"{""engineers"": 12, ""Engineers"": 2, ""engineer"": 2}"	epub/ch03.md:31
+HTTP request	16	5	"{""HTTP requests"": 5, ""HTTP request"": 11}"	epub/ch04.md:25
+data structure	16	6	"{""data structures"": 6, ""data structure"": 9, ""Data structure"": 1}"	epub/ch05.md:34
+body	16	6	"{""body"": 11, ""bodies"": 5}"	epub/ch05.md:88
+loop	16	5	"{""loops"": 8, ""loop"": 7, ""Loops"": 1}"	epub/ch06.md:124
+meaning	16	5	"{""meaning"": 16}"	epub/ch12.md:37
+inheritance	16	1	"{""inheritance"": 15, ""Inheritance"": 1}"	epub/ch19.md:13
+decomposition	15	6	"{""decomposition"": 14, ""Decomposition"": 1}"	epub/preface.md:7
+question	15	9	"{""questions"": 7, ""question"": 8}"	epub/preface.md:13
+don't	15	10	"{""don't"": 9, ""Don't"": 6}"	epub/preface.md:25
+definition	15	8	"{""definition"": 15}"	epub/ch01.md:25
+designer	15	9	"{""designers"": 6, ""designer"": 9}"	epub/ch01.md:28
+background	15	3	"{""background"": 15}"	epub/ch01.md:64
+choice	15	8	"{""choices"": 5, ""choice"": 10}"	epub/ch02.md:10
+rest	15	10	"{""rest"": 15}"	epub/ch02.md:13
+view	15	7	"{""view"": 13, ""views"": 2}"	epub/ch02.md:49
+simple interface	15	7	"{""simple interface"": 10, ""simple interfaces"": 3, ""simpler interfaces"": 1, ""simplest interface"": 1}"	epub/ch04.md:22
+key	15	7	"{""key"": 14, ""keys"": 1}"	epub/ch04.md:22
+crash	15	3	"{""crashes"": 12, ""crash"": 3}"	epub/ch04.md:55
+URL	15	4	"{""URL"": 15}"	epub/ch05.md:88
+insertion	15	3	"{""insertion"": 13, ""insertions"": 2}"	epub/ch06.md:142
+copy	15	7	"{""copy"": 8, ""copies"": 7}"	epub/ch08.md:19
+improvement	14	7	"{""improvements"": 8, ""improvement"": 6}"	epub/preface.md:13
+others	14	11	"{""others"": 14}"	epub/ch02.md:10
+web site	14	1	"{""Web site"": 12, ""Web sites"": 2}"	epub/ch02.md:43
+isn't	14	9	"{""isn't"": 14}"	epub/ch02.md:82
+system design	14	6	"{""system design"": 13, ""System Design"": 1}"	epub/ch02.md:82
+company	14	2	"{""companies"": 7, ""company"": 7}"	epub/ch03.md:70
+unix	14	3	"{""Unix"": 14}"	epub/ch04.md:73
+header	14	4	"{""headers"": 3, ""header"": 11}"	epub/ch05.md:88
+allocation	14	3	"{""allocation"": 12, ""allocations"": 2}"	epub/ch10.md:259
+good comment	14	3	"{""good comments"": 8, ""Good comments"": 1, ""better comment"": 2, ""better comments"": 2, ""good comment"": 1}"	epub/ch12.md:13
+good name	14	3	"{""good names"": 11, ""Good names"": 2, ""good name"": 1}"	epub/ch13.md:859
+fix	13	6	"{""fixes"": 3, ""fix"": 9, ""Fixes"": 1}"	epub/preface.md:16
+storage system	13	5	"{""storage systems"": 2, ""storage system"": 11}"	epub/preface.md:19
+reason	13	9	"{""reason"": 10, ""reasons"": 3}"	epub/preface.md:37
+mind	13	10	"{""mind"": 11, ""minds"": 2}"	epub/ch01.md:10
+anything	13	11	"{""anything"": 13}"	epub/ch01.md:28
+new class	13	11	"{""new class"": 12, ""new classes"": 1}"	epub/ch02.md:73
+mindset	13	8	"{""mindset"": 13}"	epub/ch03.md:10
+first	13	8	"{""First"": 13}"	epub/ch04.md:28
+O	13	6	"{""O"": 13}"	epub/ch04.md:73
+default	13	6	"{""default"": 9, ""defaults"": 2, ""Defaults"": 2}"	epub/ch04.md:91
+format	13	3	"{""format"": 13}"	epub/ch05.md:52
+us	13	10	"{""uses"": 13}"	epub/ch05.md:169
+specialization	13	1	"{""specialization"": 11, ""Specialization"": 2}"	epub/ch06.md:7
+new method	13	7	"{""new method"": 6, ""new methods"": 7}"	epub/ch06.md:58
+decorator	13	1	"{""decorator"": 10, ""decorators"": 2, ""Decorator"": 1}"	epub/ch07.md:133
+core	12	7	"{""core"": 12}"	epub/preface.md:4
+quality	12	6	"{""quality"": 12}"	epub/preface.md:10
+skill	12	7	"{""skills"": 7, ""skill"": 5}"	epub/preface.md:10
+C	12	9	"{""C"": 12}"	epub/ch01.md:61
+table	12	4	"{""table"": 9, ""tables"": 3}"	epub/ch02.md:79
+length	12	4	"{""length"": 12}"	epub/ch04.md:67
+subdivision	12	1	"{""subdivision"": 8, ""Subdivision"": 4}"	epub/ch09.md:10
+recovery	12	2	"{""recovery"": 12}"	epub/ch10.md:37
+unit test	12	1	"{""unit tests"": 4, ""Unit tests"": 4, ""unit test"": 4}"	epub/ch19.md:55
+year	11	6	"{""years"": 11}"	epub/preface.md:4
+cannot	11	9	"{""cannot"": 11}"	epub/preface.md:10
+variety	11	7	"{""variety"": 11}"	epub/preface.md:19
+factor	11	8	"{""factors"": 10, ""factor"": 1}"	epub/ch01.md:13
+effort	11	6	"{""efforts"": 1, ""effort"": 10}"	epub/ch01.md:16
+step	11	7	"{""step"": 9, ""steps"": 2}"	epub/ch02.md:7
+hand	11	9	"{""hand"": 11}"	epub/ch02.md:43
+c	11	4	"{""c"": 11}"	epub/ch02.md:52
+strategic approach	11	2	"{""strategic approach"": 11}"	epub/ch03.md:10
+system's	11	8	"{""system's"": 11}"	epub/ch03.md:58
+aspect	11	6	"{""aspects"": 11}"	epub/ch04.md:28
+return value	11	5	"{""return value"": 8, ""return values"": 3}"	epub/ch04.md:34
+document	11	5	"{""documents"": 2, ""document"": 8, ""Document"": 1}"	epub/ch05.md:31
+setter	11	3	"{""setter"": 4, ""setters"": 7}"	epub/ch05.md:43
+separate method	11	3	"{""separate methods"": 5, ""separate method"": 6}"	epub/ch05.md:46
+method's	11	5	"{""method's"": 11}"	epub/ch09.md:229
+fashion	10	8	"{""fashion"": 10}"	epub/preface.md:13
+life	10	7	"{""life"": 9, ""lives"": 1}"	epub/ch01.md:13
+beginning	10	7	"{""beginning"": 10}"	epub/ch01.md:25
+today	10	7	"{""today"": 10}"	epub/ch01.md:31
+fraction	10	8	"{""fraction"": 10}"	epub/ch01.md:37
+service	10	5	"{""services"": 4, ""service"": 6}"	epub/ch01.md:61
+impact	10	6	"{""impact"": 10}"	epub/ch02.md:28
+b	10	4	"{""b"": 10}"	epub/ch02.md:43
+reference	10	6	"{""reference"": 10}"	epub/ch02.md:43
+invocation	10	7	"{""invocations"": 3, ""invocation"": 7}"	epub/ch02.md:70
+important information	10	4	"{""important information"": 10}"	epub/ch02.md:79
+new feature	10	8	"{""new feature"": 8, ""new features"": 2}"	epub/ch02.md:100
+base	10	4	"{""base"": 10}"	epub/ch02.md:100
+tactical approach	10	2	"{""tactical approach"": 10}"	epub/ch03.md:10
+notion	10	5	"{""notion"": 9, ""notions"": 1}"	epub/ch04.md:67
+large number	10	8	"{""large numbers"": 1, ""large number"": 9}"	epub/ch04.md:157
+style	10	6	"{""style"": 9, ""styles"": 1}"	epub/ch04.md:160
+web server	10	3	"{""Web servers"": 2, ""Web server"": 8}"	epub/ch05.md:79
+backspace	10	3	"{""backspace"": 10}"	epub/ch06.md:40
+new code	10	4	"{""new code"": 10}"	epub/ch06.md:91
+driver	10	4	"{""drivers"": 6, ""driver"": 4}"	epub/ch06.md:136
+general-purpose mechanism	10	4	"{""general-purpose mechanism"": 7, ""general-purpose mechanisms"": 3}"	epub/ch06.md:148
+nothing	10	6	"{""nothing"": 10}"	epub/ch06.md:148
+category	10	4	"{""categories"": 5, ""category"": 5}"	epub/ch06.md:196
+byte	10	4	"{""bytes"": 8, ""byte"": 2}"	epub/ch06.md:226
+method call	10	6	"{""method call"": 7, ""method calls"": 3}"	epub/ch07.md:7
+array	10	4	"{""array"": 9, ""arrays"": 1}"	epub/ch07.md:10
+original method	10	1	"{""original methods"": 2, ""original method"": 8}"	epub/ch09.md:52
+source	10	6	"{""source"": 6, ""sources"": 4}"	epub/ch09.md:133
+failure	10	3	"{""failures"": 6, ""Failures"": 2, ""failure"": 2}"	epub/ch10.md:133
+tcl	10	3	"{""Tcl"": 10}"	epub/ch10.md:142
+implementation comment	10	3	"{""Implementation comments"": 3, ""implementation comments"": 7}"	epub/ch13.md:40
+parent class	10	1	"{""parent class"": 10}"	epub/ch19.md:16
+discussion	9	7	"{""discussion"": 7, ""discussions"": 2}"	epub/preface.md:4
+agile	9	3	"{""agile"": 6, ""Agile"": 3}"	epub/preface.md:4
+agile development	9	3	"{""agile development"": 6, ""Agile development"": 3}"	epub/preface.md:4
+single class	9	5	"{""single class"": 9}"	epub/preface.md:7
+reading	9	5	"{""reading"": 9}"	epub/preface.md:19
+GUI	9	7	"{""GUI"": 9}"	epub/preface.md:19
+thought	9	8	"{""thoughts"": 5, ""thought"": 4}"	epub/preface.md:34
+C++	9	6	"{""C++"": 9}"	epub/ch01.md:61
+assumption	9	6	"{""assumptions"": 6, ""assumption"": 3}"	epub/ch02.md:13
+size	9	6	"{""size"": 9}"	epub/ch02.md:25
+background color	9	1	"{""background color"": 9}"	epub/ch02.md:43
+unknown	9	4	"{""unknowns"": 9}"	epub/ch02.md:58
+can't	9	6	"{""can't"": 9}"	epub/ch02.md:73
+entry	9	3	"{""entry"": 4, ""entries"": 5}"	epub/ch02.md:79
+there's	9	6	"{""There's"": 7, ""there's"": 2}"	epub/ch03.md:25
+progress	9	4	"{""progress"": 9}"	epub/ch03.md:31
+important thing	9	9	"{""important thing"": 5, ""important things"": 4}"	epub/ch03.md:37
+extra time	9	5	"{""extra time"": 9}"	epub/ch03.md:43
+good documentation	9	5	"{""good documentation"": 6, ""Good documentation"": 2, ""better documentation"": 1}"	epub/ch03.md:43
+second	9	7	"{""Second"": 8, ""second"": 1}"	epub/ch04.md:28
+module's	9	6	"{""module's"": 9}"	epub/ch04.md:28
+class's	9	6	"{""class's"": 9}"	epub/ch04.md:37
+cache	9	5	"{""cache"": 7, ""caches"": 1, ""Cache"": 1}"	epub/ch04.md:55
+other hand	9	8	"{""other hand"": 9}"	epub/ch04.md:130
+buffering	9	4	"{""buffering"": 8, ""Buffering"": 1}"	epub/ch04.md:190
+temporal decomposition	9	2	"{""temporal decomposition"": 8, ""Temporal Decomposition"": 1}"	epub/ch05.md:61
+text editor	9	5	"{""text editor"": 9}"	epub/ch06.md:34
+deletion	9	3	"{""deletions"": 3, ""deletion"": 6}"	epub/ch06.md:49
+operating	9	5	"{""operating"": 8, ""Operating"": 1}"	epub/ch06.md:136
+command	9	3	"{""command"": 7, ""commands"": 2}"	epub/ch06.md:136
+check	9	5	"{""checks"": 6, ""check"": 3}"	epub/ch06.md:223
+new functionality	9	2	"{""new functionality"": 9}"	epub/ch07.md:115
+property	9	8	"{""property"": 3, ""properties"": 6}"	epub/ch07.md:127
+pass-through variable	9	1	"{""pass-through variable"": 5, ""Pass-through variables"": 1, ""pass-through variables"": 3}"	epub/ch07.md:169
+handling	9	3	"{""handling"": 9}"	epub/ch07.md:190
+NFS	9	1	"{""NFS"": 9}"	epub/ch10.md:196
+commit	9	3	"{""commit"": 9}"	epub/ch16.md:67
+control	8	7	"{""control"": 8}"	epub/preface.md:4
+set	8	6	"{""set"": 8}"	epub/preface.md:13
+thread	8	4	"{""threads"": 6, ""thread"": 2}"	epub/preface.md:22
+paragraph	8	5	"{""paragraph"": 7, ""paragraphs"": 1}"	epub/preface.md:34
+modular design	8	2	"{""modular design"": 8}"	epub/ch01.md:22
+other module	8	3	"{""other modules"": 7, ""other module"": 1}"	epub/ch01.md:22
+role	8	4	"{""role"": 7, ""roles"": 1}"	epub/ch01.md:25
+concept	8	5	"{""concepts"": 8}"	epub/ch01.md:43
+best design	8	6	"{""best design"": 7, ""best designs"": 1}"	epub/ch01.md:43
+fact	8	6	"{""fact"": 8}"	epub/ch02.md:25
+thousand	8	6	"{""thousands"": 7, ""thousand"": 1}"	epub/ch02.md:43
+risk	8	6	"{""risk"": 6, ""risks"": 2}"	epub/ch02.md:46
+responsibility	8	2	"{""responsibility"": 5, ""responsibilities"": 3}"	epub/ch02.md:46
+apis	8	5	"{""APIs"": 8}"	epub/ch02.md:46
+global variable	8	2	"{""global variables"": 5, ""global variable"": 3}"	epub/ch02.md:46
+unknown unknown	8	4	"{""unknown unknowns"": 8}"	epub/ch02.md:58
+design process	8	4	"{""design process"": 7, ""Design Process"": 1}"	epub/ch02.md:73
+cause	8	6	"{""cause"": 5, ""causes"": 3}"	epub/ch02.md:79
+difference	8	6	"{""difference"": 8}"	epub/ch02.md:94
+code base	8	2	"{""code base"": 8}"	epub/ch02.md:100
+good software	8	4	"{""good software"": 6, ""better software"": 2}"	epub/ch03.md:10
+month	8	4	"{""months"": 7, ""month"": 1}"	epub/ch03.md:25
+investment mindset	8	7	"{""investment mindset"": 8}"	epub/ch03.md:40
+facebook	8	1	"{""Facebook"": 8}"	epub/ch03.md:79
+fun	8	4	"{""fun"": 8}"	epub/ch03.md:91
+ideal	8	3	"{""ideal"": 8}"	epub/ch04.md:16
+programming language	8	4	"{""programming language"": 6, ""programming languages"": 2}"	epub/ch04.md:25
+module's interface	8	4	"{""module's interface"": 8}"	epub/ch04.md:28
+constraint	8	6	"{""constraints"": 7, ""constraint"": 1}"	epub/ch04.md:37
+usage	8	7	"{""usage"": 7, ""usages"": 1}"	epub/ch04.md:37
+socket	8	6	"{""socket"": 6, ""sockets"": 2}"	epub/ch05.md:88
+support	8	5	"{""support"": 7, ""supports"": 1}"	epub/ch05.md:145
+communication	8	6	"{""Communications"": 1, ""communication"": 7}"	epub/ch05.md:181
+window	8	4	"{""windows"": 1, ""window"": 3, ""Window"": 1, ""Windows"": 3}"	epub/ch06.md:34
+redo	8	1	"{""redo"": 8}"	epub/ch06.md:34
+user interface code	8	2	"{""user interface code"": 8}"	epub/ch06.md:55
+interface code	8	2	"{""interface code"": 8}"	epub/ch06.md:55
+following code	8	5	"{""following code"": 8}"	epub/ch06.md:79
+operating system	8	4	"{""operating system"": 7, ""Operating System"": 1}"	epub/ch06.md:136
+insertion cursor	8	2	"{""insertion cursor"": 8}"	epub/ch06.md:142
+pas	8	5	"{""pass"": 8}"	epub/ch07.md:94
+hash	8	3	"{""hash"": 6, ""hashes"": 2}"	epub/ch09.md:31
+exception handler	8	1	"{""exception handlers"": 1, ""exception handler"": 7}"	epub/ch10.md:151
+server crash	8	2	"{""server crashes"": 6, ""server crash"": 2}"	epub/ch10.md:196
+aggregation	8	1	"{""aggregation"": 8}"	epub/ch10.md:211
+error response	8	1	"{""error response"": 6, ""error responses"": 2}"	epub/ch10.md:217
+invariant	8	3	"{""invariants"": 2, ""Invariants"": 2, ""invariant"": 4}"	epub/ch13.md:190
+implementation inheritance	8	1	"{""implementation inheritance"": 8}"	epub/ch19.md:22
+computer	7	3	"{""computers"": 1, ""computer"": 3, ""Computer"": 3}"	epub/preface.md:4
+design skill	7	5	"{""design skill"": 3, ""design skills"": 4}"	epub/preface.md:10
+field	7	3	"{""fields"": 2, ""field"": 5}"	epub/preface.md:10
+ability	7	5	"{""ability"": 7}"	epub/preface.md:10
+only way	7	5	"{""only way"": 7}"	epub/preface.md:13
+i'm	7	3	"{""I'm"": 7}"	epub/preface.md:25
+suggestion	7	3	"{""suggestions"": 6, ""suggestion"": 1}"	epub/preface.md:25
+history	7	3	"{""history"": 7}"	epub/ch01.md:10
+initial design	7	3	"{""initial design"": 7}"	epub/ch01.md:28
+opportunity	7	6	"{""opportunities"": 5, ""opportunity"": 2}"	epub/ch01.md:37
+low level	7	5	"{""lower level"": 3, ""low level"": 4}"	epub/ch02.md:7
+banner	7	1	"{""banner"": 7}"	epub/ch02.md:43
+more time	7	5	"{""more time"": 7}"	epub/ch02.md:46
+framework	7	4	"{""frameworks"": 1, ""framework"": 6}"	epub/ch02.md:49
+emphasis	7	2	"{""emphasis"": 7}"	epub/ch02.md:52
+useful information	7	5	"{""useful information"": 7}"	epub/ch02.md:79
+hundred	7	7	"{""hundreds"": 7}"	epub/ch02.md:91
+organization	7	3	"{""organizations"": 4, ""organization"": 3}"	epub/ch03.md:10
+clean design	7	5	"{""clean designs"": 2, ""clean design"": 5}"	epub/ch03.md:10
+tactical tornado	7	1	"{""tactical tornado"": 5, ""tactical tornadoes"": 2}"	epub/ch03.md:31
+tornado	7	1	"{""tornado"": 5, ""tornadoes"": 2}"	epub/ch03.md:31
+environment	7	6	"{""environments"": 2, ""environment"": 5}"	epub/ch03.md:70
+side	7	2	"{""side"": 6, ""sides"": 1}"	epub/ch03.md:79
+other method	7	6	"{""other method"": 2, ""other methods"": 5}"	epub/ch04.md:16
+everything	7	4	"{""everything"": 7}"	epub/ch04.md:19
+tree	7	3	"{""trees"": 1, ""tree"": 6}"	epub/ch04.md:22
+deep module	7	2	"{""deep module"": 2, ""Deep modules"": 1, ""deep modules"": 4}"	epub/ch04.md:67
+integer	7	5	"{""integer"": 4, ""integers"": 3}"	epub/ch04.md:91
+leverage	7	4	"{""leverage"": 7}"	epub/ch04.md:130
+shallow method	7	5	"{""shallow method"": 1, ""shallow methods"": 6}"	epub/ch04.md:133
+overall system	7	5	"{""overall system"": 7}"	epub/ch04.md:157
+common case	7	3	"{""common case"": 7}"	epub/ch04.md:190
+constructor	7	3	"{""constructor"": 6, ""constructors"": 1}"	epub/ch04.md:190
+TCP	7	3	"{""TCP"": 7}"	epub/ch05.md:25
+HTTP protocol	7	2	"{""HTTP protocol"": 7}"	epub/ch05.md:76
+student project	7	5	"{""student projects"": 5, ""student project"": 2}"	epub/ch05.md:112
+location	7	5	"{""locations"": 2, ""location"": 5}"	epub/ch05.md:112
+special-purpose code	7	3	"{""special-purpose code"": 6, ""Special-purpose code"": 1}"	epub/ch06.md:13
+general-purpose interface	7	3	"{""general-purpose interfaces"": 1, ""general-purpose interface"": 6}"	epub/ch06.md:25
+undo	7	1	"{""undo"": 7}"	epub/ch06.md:34
+backspace key	7	3	"{""backspace key"": 7}"	epub/ch06.md:40
+cursor position	7	2	"{""cursor position"": 7}"	epub/ch06.md:49
+different kind	7	5	"{""different kinds"": 4, ""different kind"": 3}"	epub/ch06.md:136
+d	7	2	"{""d"": 7}"	epub/ch07.md:106
+dispatcher	7	2	"{""dispatcher"": 7}"	epub/ch07.md:118
+duplication	7	4	"{""duplication"": 7}"	epub/ch07.md:133
+small amount	7	3	"{""small amount"": 5, ""smallest amount"": 2}"	epub/ch07.md:136
+excuse	7	3	"{""excuse"": 3, ""excuses"": 4}"	epub/ch08.md:34
+harder	7	4	"{""harder"": 7}"	epub/ch09.md:13
+split	7	1	"{""Split"": 1, ""split"": 5, ""Splits"": 1}"	epub/ch09.md:211
+child	7	2	"{""child"": 7}"	epub/ch09.md:226
+exception handling	7	1	"{""Exception handling"": 1, ""exception handling"": 6}"	epub/ch10.md:7
+error message	7	1	"{""error message"": 7}"	epub/ch10.md:226
+implementation detail	7	3	"{""implementation details"": 6, ""implementation detail"": 1}"	epub/ch12.md:43
+getters	7	2	"{""getters"": 5, ""Getters"": 2}"	epub/ch13.md:40
+block number	7	1	"{""block number"": 6, ""block numbers"": 1}"	epub/ch14.md:16
+event	7	1	"{""events"": 3, ""event"": 4}"	epub/ch18.md:202
+container	7	1	"{""containers"": 4, ""container"": 3}"	epub/ch18.md:241
+internal chunk	7	1	"{""Internal chunks"": 2, ""internal chunks"": 1, ""internal chunk"": 4}"	epub/ch20.md:85
+object-oriented programming	6	3	"{""object-oriented programming"": 5, ""Object-oriented programming"": 1}"	epub/preface.md:4
+day	6	6	"{""day"": 1, ""days"": 5}"	epub/preface.md:7
+advantage	6	6	"{""advantage"": 5, ""advantages"": 1}"	epub/preface.md:10
+many people	6	5	"{""Many people"": 3, ""many people"": 3}"	epub/preface.md:10
+review	6	5	"{""reviews"": 5, ""review"": 1}"	epub/preface.md:13
+design problem	6	4	"{""design problems"": 4, ""design problem"": 2}"	epub/preface.md:13
+answer	6	5	"{""answers"": 3, ""answer"": 3}"	epub/preface.md:19
+infrastructure	6	5	"{""infrastructure"": 6}"	epub/preface.md:19
+design technique	6	6	"{""design techniques"": 6}"	epub/preface.md:19
+software complexity	6	5	"{""software complexity"": 6}"	epub/preface.md:25
+group	6	3	"{""Group"": 2, ""groups"": 1, ""group"": 3}"	epub/preface.md:34
+simple design	6	5	"{""simpler designs"": 2, ""simple design"": 3, ""simple designs"": 1}"	epub/ch01.md:16
+requirement	6	5	"{""requirements"": 5, ""requirement"": 1}"	epub/ch01.md:25
+iteration	6	4	"{""iteration"": 5, ""iterations"": 1}"	epub/ch01.md:31
+contrast	6	6	"{""contrast"": 6}"	epub/ch01.md:34
+design issue	6	4	"{""design issues"": 4, ""design issue"": 2}"	epub/ch01.md:37
+more detail	6	4	"{""more detail"": 5, ""more details"": 1}"	epub/ch01.md:64
+first step	6	4	"{""first step"": 6}"	epub/ch02.md:7
+simplicity	6	2	"{""simplicity"": 6}"	epub/ch02.md:10
+overall complexity	6	5	"{""overall complexity"": 6}"	epub/ch02.md:28
+amplification	6	3	"{""amplification"": 6}"	epub/ch02.md:43
+high cognitive load	6	2	"{""higher cognitive load"": 1, ""high cognitive load"": 5}"	epub/ch02.md:46
+inconsistency	6	4	"{""inconsistencies"": 3, ""Inconsistency"": 1, ""inconsistency"": 2}"	epub/ch02.md:46
+few line	6	4	"{""few lines"": 6}"	epub/ch02.md:49
+web page	6	4	"{""Web pages"": 3, ""Web page"": 3}"	epub/ch02.md:55
+e	6	6	"{""e"": 6}"	epub/ch02.md:79
+status	6	3	"{""status"": 6}"	epub/ch02.md:79
+good software design	6	4	"{""good software design"": 4, ""better software design"": 1, ""better software designs"": 1}"	epub/ch03.md:10
+previous chapter	6	5	"{""previous chapter"": 1, ""previous chapters"": 4, ""Previous chapters"": 1}"	epub/ch03.md:22
+everyone	6	6	"{""everyone"": 6}"	epub/ch03.md:22
+development time	6	3	"{""development time"": 6}"	epub/ch03.md:52
+good chance	6	4	"{""good chance"": 6}"	epub/ch03.md:73
+chance	6	4	"{""chance"": 6}"	epub/ch03.md:73
+production	6	5	"{""production"": 5, ""Production"": 1}"	epub/ch03.md:79
+class's interface	6	5	"{""class's interface"": 6}"	epub/ch04.md:37
+description	6	3	"{""description"": 5, ""descriptions"": 1}"	epub/ch04.md:37
+storage device	6	3	"{""storage device"": 3, ""storage devices"": 3}"	epub/ch04.md:55
+secondary storage	6	4	"{""secondary storage"": 6}"	epub/ch04.md:55
+shallow module	6	3	"{""shallow modules"": 2, ""shallow module"": 3, ""Shallow Module"": 1}"	epub/ch04.md:61
+complex interface	6	6	"{""complex interface"": 4, ""complex interfaces"": 2}"	epub/ch04.md:61
+depth	6	4	"{""depth"": 5, ""Depth"": 1}"	epub/ch04.md:67
+area	6	4	"{""area"": 3, ""areas"": 3}"	epub/ch04.md:67
+system complexity	6	4	"{""system complexity"": 6}"	epub/ch04.md:70
+policy	6	3	"{""policies"": 1, ""policy"": 5}"	epub/ch04.md:109
+shallow class	6	5	"{""Shallow classes"": 3, ""shallow classes"": 3}"	epub/ch04.md:130
+use case	6	4	"{""use cases"": 2, ""use case"": 4}"	epub/ch04.md:199
+higher-level code	6	4	"{""higher-level code"": 6}"	epub/ch05.md:37
+deeper	6	4	"{""deeper"": 6}"	epub/ch05.md:40
+capability	6	4	"{""capability"": 3, ""capabilities"": 3}"	epub/ch05.md:100
+representation	6	3	"{""representation"": 5, ""representations"": 1}"	epub/ch05.md:127
+general-purpose code	6	1	"{""general-purpose code"": 6}"	epub/ch06.md:13
+single place	6	4	"{""single place"": 6}"	epub/ch06.md:55
+particular use	6	4	"{""particular use"": 6}"	epub/ch06.md:121
+single character	6	4	"{""single character"": 5, ""single characters"": 1}"	epub/ch06.md:124
+device driver	6	3	"{""device drivers"": 4, ""device driver"": 2}"	epub/ch06.md:136
+refers	6	3	"{""refers"": 6}"	epub/ch06.md:214
+confusion	6	4	"{""confusion"": 6}"	epub/ch07.md:103
+several method	6	4	"{""several methods"": 5, ""several method"": 1}"	epub/ch07.md:127
+date	6	4	"{""date"": 6}"	epub/ch08.md:34
+hash table	6	2	"{""hash table"": 4, ""hash tables"": 2}"	epub/ch09.md:31
+snippet	6	1	"{""snippets"": 1, ""snippet"": 5}"	epub/ch09.md:61
+network packet	6	3	"{""network packets"": 3, ""network packet"": 3}"	epub/ch09.md:79
+different way	6	4	"{""different ways"": 4, ""different way"": 2}"	epub/ch10.md:16
+ramcloud storage	6	3	"{""RAMCloud storage"": 6}"	epub/ch10.md:241
+ramcloud storage system	6	3	"{""RAMCloud storage system"": 6}"	epub/ch10.md:241
+s	6	4	"{""s"": 6}"	epub/ch11.md:31
+code change	6	4	"{""code changes"": 5, ""code change"": 1}"	epub/ch12.md:61
+clue	6	4	"{""clues"": 3, ""clue"": 3}"	epub/ch13.md:424
+interface documentation	6	3	"{""interface documentation"": 6}"	epub/ch13.md:736
+refactoring	6	2	"{""refactoring"": 6}"	epub/ch16.md:22
+buffer class	6	1	"{""Buffer class"": 6}"	epub/ch20.md:79
+science	5	2	"{""science"": 1, ""Science"": 4}"	epub/preface.md:7
+university	5	2	"{""university"": 1, ""University"": 4}"	epub/preface.md:7
+topic	5	5	"{""topic"": 5}"	epub/preface.md:7
+practice	5	4	"{""practice"": 5}"	epub/preface.md:10
+code review	5	4	"{""code reviews"": 5}"	epub/preface.md:13
+design principle	5	3	"{""design principles"": 4, ""design principle"": 1}"	epub/preface.md:13
+i've	5	1	"{""I've"": 5}"	epub/preface.md:19
+other people	5	4	"{""other people"": 5}"	epub/preface.md:19
+opinion	5	4	"{""opinion"": 5}"	epub/preface.md:25
+instruction	5	2	"{""instructions"": 1, ""instruction"": 4}"	epub/preface.md:37
+world	5	3	"{""worlds"": 1, ""world"": 4}"	epub/ch01.md:10
+extreme	5	4	"{""extreme"": 4, ""extremes"": 1}"	epub/ch01.md:25
+waterfall	5	2	"{""waterfall"": 5}"	epub/ch01.md:25
+many case	5	5	"{""many cases"": 5}"	epub/ch01.md:25
+large software	5	5	"{""large software"": 5}"	epub/ch01.md:28
+design change	5	3	"{""design changes"": 4, ""design change"": 1}"	epub/ch01.md:28
+important element	5	5	"{""important element"": 1, ""important elements"": 4}"	epub/ch01.md:40
+other developer	5	5	"{""other developers"": 5}"	epub/ch02.md:34
+job	5	4	"{""job"": 5}"	epub/ch02.md:34
+symptom	5	2	"{""symptom"": 3, ""symptoms"": 2}"	epub/ch02.md:43
+code modification	5	2	"{""code modifications"": 5}"	epub/ch02.md:43
+different place	5	4	"{""different places"": 3, ""different place"": 2}"	epub/ch02.md:43
+central place	5	2	"{""central place"": 5}"	epub/ch02.md:43
+pointer	5	5	"{""pointer"": 4, ""pointers"": 1}"	epub/ch02.md:46
+isolation	5	4	"{""isolation"": 5}"	epub/ch02.md:70
+compiler	5	4	"{""compilers"": 2, ""compiler"": 3}"	epub/ch02.md:76
+g	5	5	"{""g"": 5}"	epub/ch02.md:79
+bug fix	5	4	"{""bug fix"": 3, ""bug fixes"": 2}"	epub/ch03.md:16
+software designer	5	4	"{""software designer"": 4, ""software designers"": 1}"	epub/ch03.md:37
+strategic programming	5	2	"{""strategic programming"": 4, ""Strategic programming"": 1}"	epub/ch03.md:37
+best approach	5	5	"{""best approach"": 5}"	epub/ch03.md:52
+startup	5	1	"{""startups"": 4, ""startup"": 1}"	epub/ch03.md:70
+cleanup	5	3	"{""cleanup"": 4, ""cleanups"": 1}"	epub/ch03.md:70
+culture	5	3	"{""culture"": 4, ""cultures"": 1}"	epub/ch03.md:82
+easy	5	5	"{""easy"": 5}"	epub/ch03.md:100
+kernel	5	3	"{""kernel"": 5}"	epub/ch04.md:25
+best module	5	1	"{""best modules"": 5}"	epub/ch04.md:28
+simplified view	5	3	"{""simplified view"": 5}"	epub/ch04.md:46
+standpoint	5	4	"{""standpoint"": 5}"	epub/ch04.md:49
+garbage	5	2	"{""garbage"": 5}"	epub/ch04.md:121
+go	5	3	"{""Go"": 5}"	epub/ch04.md:121
+comparison	5	2	"{""comparison"": 5}"	epub/ch04.md:130
+deep class	5	5	"{""deep classes"": 2, ""deeper classes"": 2, ""Deep classes"": 1}"	epub/ch04.md:157
+classitis	5	1	"{""classitis"": 4, ""Classitis"": 1}"	epub/ch04.md:160
+library	5	3	"{""library"": 4, ""libraries"": 1}"	epub/ch04.md:166
+specification	5	2	"{""specification"": 5}"	epub/ch04.md:202
+item	5	3	"{""items"": 4, ""item"": 1}"	epub/ch05.md:43
+different class	5	2	"{""different classes"": 5}"	epub/ch05.md:67
+browser	5	2	"{""browsers"": 1, ""browser"": 4}"	epub/ch05.md:79
+common mistake	5	4	"{""common mistake"": 5}"	epub/ch05.md:94
+much information	5	3	"{""much information"": 5}"	epub/ch05.md:97
+simpler interface	5	3	"{""simpler interface"": 5}"	epub/ch05.md:97
+single method	5	3	"{""single method"": 5}"	epub/ch05.md:100
+general-purpose approach	5	1	"{""general-purpose approach"": 5}"	epub/ch06.md:19
+let's	5	4	"{""Let's"": 4, ""let's"": 1}"	epub/ch06.md:34
+GUI text	5	5	"{""GUI text"": 5}"	epub/ch06.md:34
+GUI text editor	5	5	"{""GUI text editor"": 5}"	epub/ch06.md:34
+specific feature	5	2	"{""specific features"": 5}"	epub/ch06.md:40
+right	5	3	"{""right"": 5}"	epub/ch06.md:40
+text API	5	2	"{""text API"": 5}"	epub/ch06.md:91
+separation	5	2	"{""separation"": 4, ""Separation"": 1}"	epub/ch06.md:106
+editor project	5	4	"{""editor project"": 5}"	epub/ch06.md:142
+forth	5	2	"{""forth"": 5}"	epub/ch06.md:148
+text insertion	5	2	"{""text insertion"": 4, ""text insertions"": 1}"	epub/ch06.md:187
+history list	5	1	"{""history list"": 5}"	epub/ch06.md:187
+same signature	5	2	"{""same signature"": 5}"	epub/ch07.md:115
+procedure	5	3	"{""procedure"": 5}"	epub/ch07.md:124
+decorator class	5	1	"{""decorator classes"": 1, ""Decorator classes"": 1, ""decorator class"": 3}"	epub/ch07.md:136
+character-oriented interface	5	3	"{""character-oriented interface"": 5}"	epub/ch07.md:163
+datacenter	5	3	"{""datacenter"": 5}"	epub/ch07.md:169
+network communication	5	4	"{""network communication"": 4, ""Network communication"": 1}"	epub/ch07.md:175
+context object	5	1	"{""context object"": 5}"	epub/ch07.md:181
+extra work	5	4	"{""extra work"": 5}"	epub/ch08.md:7
+administrator	5	2	"{""administrator"": 3, ""administrators"": 2}"	epub/ch08.md:10
+high level software	5	2	"{""higher level software"": 5}"	epub/ch08.md:19
+level software	5	2	"{""level software"": 5}"	epub/ch08.md:19
+retry	5	2	"{""retry"": 5}"	epub/ch08.md:34
+exceptional condition	5	2	"{""exceptional conditions"": 2, ""exceptional condition"": 3}"	epub/ch08.md:37
+network socket	5	4	"{""network socket"": 3, ""network sockets"": 2}"	epub/ch09.md:46
+combined object	5	1	"{""combined object"": 5}"	epub/ch09.md:97
+good idea	5	4	"{""good idea"": 4, ""better idea"": 1}"	epub/ch09.md:229
+martin	5	2	"{""Martin"": 5}"	epub/ch09.md:247
+client	5	2	"{""clients"": 2, ""client"": 3}"	epub/ch10.md:193
+possibility	5	3	"{""possibility"": 4, ""possibilities"": 1}"	epub/ch10.md:199
+exception aggregation	5	1	"{""exception aggregation"": 4, ""Exception aggregation"": 1}"	epub/ch10.md:211
+none	5	3	"{""none"": 1, ""None"": 4}"	epub/ch11.md:31
+system's design	5	4	"{""system's design"": 5}"	epub/ch12.md:7
+new developer	5	3	"{""new developer"": 2, ""new developers"": 3}"	epub/ch12.md:73
+long name	5	2	"{""long names"": 2, ""long name"": 1, ""longer names"": 2}"	epub/ch12.md:112
+many thing	5	4	"{""many things"": 5}"	epub/ch13.md:7
+side effect	5	1	"{""side effects"": 2, ""side effect"": 3}"	epub/ch13.md:28
+effect	5	1	"{""effects"": 2, ""effect"": 3}"	epub/ch13.md:28
+sentence	5	1	"{""sentence"": 5}"	epub/ch13.md:142
+precision	5	2	"{""precision"": 4, ""Precision"": 1}"	epub/ch13.md:172
+intuition	5	2	"{""intuition"": 3, ""intuitions"": 2}"	epub/ch13.md:172
+short comment	5	3	"{""shorter comment"": 1, ""short comment"": 3, ""short comments"": 1}"	epub/ch13.md:697
+x	5	4	"{""x"": 5}"	epub/ch13.md:856
+physical block	5	1	"{""physical block"": 5}"	epub/ch14.md:16
+commit message	5	1	"{""commit message"": 4, ""commit messages"": 1}"	epub/ch16.md:67
+log	5	1	"{""log"": 5}"	epub/ch16.md:67
+generic container	5	1	"{""Generic containers"": 2, ""generic containers"": 2, ""generic container"": 1}"	epub/ch18.md:241
+hierarchy	5	1	"{""hierarchy"": 4, ""hierarchies"": 1}"	epub/ch19.md:25
+last chunk	5	1	"{""last chunk"": 5}"	epub/ch20.md:100
+award	5	1	"{""awards"": 1, ""Award"": 4}"	epub/summary.md:106
+coverage	4	2	"{""coverage"": 4}"	epub/preface.md:4
+paper	4	3	"{""paper"": 4}"	epub/preface.md:4
+computer science	4	2	"{""computer science"": 1, ""Computer Science"": 3}"	epub/preface.md:7
+productivity	4	3	"{""productivity"": 4}"	epub/preface.md:10
+talent	4	3	"{""talent"": 3, ""Talent"": 1}"	epub/preface.md:10
+many year	4	4	"{""many years"": 4}"	epub/preface.md:13
+series	4	4	"{""series"": 4}"	epub/preface.md:13
+software design class	4	4	"{""software design class"": 4}"	epub/preface.md:16
+design class	4	4	"{""design class"": 4}"	epub/preface.md:16
+abstract	4	3	"{""abstract"": 4}"	epub/preface.md:16
+scripting language	4	4	"{""scripting language"": 4}"	epub/preface.md:19
+large system	4	4	"{""large systems"": 3, ""Large systems"": 1}"	epub/preface.md:19
+coding	4	4	"{""coding"": 4}"	epub/preface.md:22
+bad idea	4	3	"{""bad ideas"": 1, ""bad idea"": 3}"	epub/preface.md:25
+long run	4	3	"{""long run"": 4}"	epub/preface.md:25
+run	4	3	"{""run"": 4}"	epub/preface.md:25
+email	4	1	"{""email"": 4}"	epub/preface.md:28
+overall goal	4	4	"{""overall goal"": 2, ""overall goals"": 2}"	epub/preface.md:40
+ousterhout	4	2	"{""Ousterhout"": 4}"	epub/preface.md:43
+limit	4	3	"{""limit"": 3, ""limits"": 1}"	epub/ch01.md:16
+waterfall model	4	1	"{""waterfall model"": 4}"	epub/ch01.md:25
+model	4	1	"{""model"": 4}"	epub/ch01.md:25
+large software system	4	4	"{""large software system"": 2, ""large software systems"": 2}"	epub/ch01.md:28
+major design	4	2	"{""major design"": 4}"	epub/ch01.md:28
+incremental approach	4	3	"{""incremental approach"": 4}"	epub/ch01.md:31
+software developer	4	2	"{""software developer"": 2, ""software developers"": 2}"	epub/ch01.md:37
+nature	4	4	"{""nature"": 4}"	epub/ch01.md:43
+unnecessary complexity	4	4	"{""unnecessary complexity"": 3, ""unnecessary complexities"": 1}"	epub/ch01.md:43
+development process	4	4	"{""development process"": 4}"	epub/ch01.md:43
+challenge	4	4	"{""challenge"": 4}"	epub/ch01.md:49
+new design	4	3	"{""new design"": 4}"	epub/ch01.md:52
+design idea	4	3	"{""design idea"": 1, ""design ideas"": 3}"	epub/ch01.md:58
+domain	4	3	"{""domains"": 4}"	epub/ch01.md:61
+subsystem	4	3	"{""subsystems"": 4}"	epub/ch01.md:61
+philosophy	4	3	"{""philosophy"": 4}"	epub/ch02.md:10
+different approach	4	4	"{""different approach"": 3, ""different approaches"": 1}"	epub/ch02.md:10
+much impact	4	4	"{""much impact"": 4}"	epub/ch02.md:28
+change amplification	4	3	"{""Change amplification"": 3, ""change amplification"": 1}"	epub/ch02.md:43
+emphasis color	4	1	"{""emphasis color"": 4}"	epub/ch02.md:52
+important goal	4	4	"{""important goals"": 1, ""important goal"": 3}"	epub/ch02.md:61
+opposite	4	4	"{""opposite"": 4}"	epub/ch02.md:61
+guess	4	3	"{""guess"": 3, ""guesses"": 1}"	epub/ch02.md:61
+code cannot	4	4	"{""code cannot"": 4}"	epub/ch02.md:70
+occurs	4	3	"{""occurs"": 4}"	epub/ch02.md:70
+network protocol	4	4	"{""network protocols"": 1, ""network protocol"": 3}"	epub/ch02.md:70
+sender	4	3	"{""sender"": 4}"	epub/ch02.md:70
+new web	4	2	"{""new Web"": 4}"	epub/ch02.md:76
+furthermore	4	3	"{""Furthermore"": 4}"	epub/ch02.md:76
+little bit	4	4	"{""little bit"": 4}"	epub/ch02.md:94
+deal	4	3	"{""deal"": 2, ""deals"": 2}"	epub/ch02.md:94
+focus	4	3	"{""focus"": 4}"	epub/ch03.md:16
+much time	4	4	"{""much time"": 4}"	epub/ch03.md:19
+current task	4	1	"{""current task"": 4}"	epub/ch03.md:19
+little extra time	4	3	"{""little extra time"": 4}"	epub/ch03.md:43
+first idea	4	2	"{""first idea"": 3, ""first ideas"": 1}"	epub/ch03.md:43
+measurement	4	2	"{""measurements"": 4}"	epub/ch03.md:55
+debt	4	1	"{""debt"": 4}"	epub/ch03.md:61
+you'll	4	3	"{""you'll"": 4}"	epub/ch03.md:61
+other word	4	4	"{""other words"": 4}"	epub/ch03.md:64
+new	4	4	"{""New"": 4}"	epub/ch03.md:79
+week	4	4	"{""week"": 1, ""weeks"": 3}"	epub/ch03.md:79
+same time	4	4	"{""same time"": 4}"	epub/ch03.md:88
+it's easy	4	4	"{""it's easy"": 4}"	epub/ch03.md:100
+node	4	2	"{""nodes"": 3, ""node"": 1}"	epub/ch04.md:22
+public method	4	4	"{""public methods"": 4}"	epub/ch04.md:34
+particular piece	4	4	"{""particular piece"": 4}"	epub/ch04.md:37
+reality	4	4	"{""reality"": 3, ""realities"": 1}"	epub/ch04.md:52
+new data	4	2	"{""new data"": 4}"	epub/ch04.md:55
+much functionality	4	3	"{""much functionality"": 4}"	epub/ch04.md:61
+edge	4	2	"{""edge"": 4}"	epub/ch04.md:67
+good abstraction	4	3	"{""good abstraction"": 2, ""good abstractions"": 2}"	epub/ch04.md:67
+system call	4	2	"{""system call"": 4}"	epub/ch04.md:91
+new file	4	3	"{""new file"": 4}"	epub/ch04.md:91
+secondary storage device	4	3	"{""secondary storage devices"": 3, ""secondary storage device"": 1}"	epub/ch04.md:115
+more class	4	3	"{""more classes"": 4}"	epub/ch04.md:160
+small class	4	2	"{""Small classes"": 2, ""small classes"": 1, ""smaller classes"": 1}"	epub/ch04.md:160
+error-prone	4	3	"{""error-prone"": 4}"	epub/ch04.md:190
+simple	4	4	"{""simple"": 4}"	epub/ch04.md:193
+disk block	4	4	"{""disk block"": 2, ""disk blocks"": 2}"	epub/ch05.md:22
+logical block	4	2	"{""logical block"": 4}"	epub/ch05.md:22
+new module	4	4	"{""new module"": 3, ""new modules"": 1}"	epub/ch05.md:40
+more information	4	4	"{""more information"": 4}"	epub/ch05.md:40
+getter	4	2	"{""getter"": 4}"	epub/ch05.md:43
+good information	4	2	"{""better information"": 4}"	epub/ch05.md:52
+good information hiding	4	2	"{""better information hiding"": 4}"	epub/ch05.md:52
+content	4	3	"{""contents"": 4}"	epub/ch05.md:61
+multiple place	4	3	"{""multiple places"": 4}"	epub/ch05.md:67
+stage	4	3	"{""stages"": 3, ""stage"": 1}"	epub/ch05.md:70
+sample	4	3	"{""sample"": 4}"	epub/ch05.md:79
+code structure	4	4	"{""code structure"": 4}"	epub/ch05.md:85
+distinction	4	3	"{""distinction"": 4}"	epub/ch05.md:112
+additional method	4	4	"{""Additional methods"": 1, ""additional methods"": 2, ""additional method"": 1}"	epub/ch05.md:139
+normal case	4	4	"{""normal case"": 3, ""normal cases"": 1}"	epub/ch05.md:148
+private method	4	2	"{""private methods"": 4}"	epub/ch05.md:163
+facility	4	2	"{""facilities"": 4}"	epub/ch06.md:22
+current need	4	1	"{""current needs"": 4}"	epub/ch06.md:28
+first method	4	2	"{""first method"": 4}"	epub/ch06.md:73
+specific	4	3	"{""specifics"": 3, ""specific"": 1}"	epub/ch06.md:106
+additional code	4	3	"{""additional code"": 4}"	epub/ch06.md:124
+stack	4	3	"{""stack"": 4}"	epub/ch06.md:130
+upwards	4	3	"{""upwards"": 4}"	epub/ch06.md:133
+undo redo	4	1	"{""undo redo"": 4}"	epub/ch06.md:142
+separate class	4	3	"{""separate class"": 4}"	epub/ch06.md:151
+method body	4	3	"{""method bodies"": 4}"	epub/ch06.md:220
+copying	4	3	"{""copying"": 4}"	epub/ch06.md:223
+single line	4	4	"{""single line"": 3, ""single lines"": 1}"	epub/ch06.md:226
+different abstraction	4	2	"{""different abstraction"": 3, ""different abstractions"": 1}"	epub/ch07.md:7
+different layer	4	2	"{""different layer"": 2, ""different layers"": 1, ""Different layers"": 1}"	epub/ch07.md:160
+newlines	4	2	"{""newlines"": 4}"	epub/ch07.md:163
+other problem	4	4	"{""other problems"": 4}"	epub/ch07.md:178
+multiple variable	4	3	"{""multiple variables"": 4}"	epub/ch07.md:181
+option	4	3	"{""options"": 3, ""option"": 1}"	epub/ch07.md:181
+disadvantage	4	4	"{""disadvantages"": 2, ""disadvantage"": 2}"	epub/ch07.md:193
+line-oriented interface	4	2	"{""line-oriented interface"": 4}"	epub/ch08.md:19
+retry interval	4	1	"{""retry interval"": 4}"	epub/ch08.md:34
+interval	4	1	"{""interval"": 4}"	epub/ch08.md:34
+same place	4	2	"{""same place"": 4}"	epub/ch09.md:7
+act	4	4	"{""act"": 4}"	epub/ch09.md:10
+syntax	4	3	"{""syntax"": 4}"	epub/ch09.md:28
+manipulation	4	2	"{""manipulation"": 2, ""manipulations"": 2}"	epub/ch09.md:34
+logging	4	1	"{""logging"": 4}"	epub/ch09.md:202
+applies	4	4	"{""applies"": 4}"	epub/ch09.md:211
+small method	4	2	"{""smaller methods"": 4}"	epub/ch09.md:211
+subtask	4	1	"{""subtask"": 4}"	epub/ch09.md:220
+child method	4	1	"{""child method"": 4}"	epub/ch09.md:226
+parent method	4	1	"{""parent method"": 4}"	epub/ch09.md:226
+flow	4	2	"{""flow"": 4}"	epub/ch10.md:13
+peer	4	1	"{""peers"": 1, ""peer"": 3}"	epub/ch10.md:25
+particular situation	4	3	"{""particular situation"": 4}"	epub/ch10.md:145
+won't	4	3	"{""won't"": 4}"	epub/ch10.md:145
+likelihood	4	3	"{""likelihood"": 4}"	epub/ch10.md:184
+service method	4	1	"{""service method"": 3, ""service methods"": 1}"	epub/ch10.md:214
+top	4	2	"{""top"": 4}"	epub/ch10.md:235
+crash recovery	4	2	"{""crash recovery"": 4}"	epub/ch10.md:241
+recovery mechanism	4	1	"{""recovery mechanisms"": 3, ""recovery mechanism"": 1}"	epub/ch10.md:244
+testing	4	3	"{""Testing"": 1, ""testing"": 3}"	epub/ch10.md:295
+smart people	4	1	"{""smart people"": 4}"	epub/ch11.md:40
+few word	4	4	"{""few words"": 3, ""fewest words"": 1}"	epub/ch13.md:142
+pixel	4	2	"{""pixels"": 4}"	epub/ch13.md:166
+common problem	4	4	"{""common problem"": 2, ""common problems"": 2}"	epub/ch13.md:196
+count	4	2	"{""counts"": 2, ""count"": 2}"	epub/ch13.md:214
+remote procedure	4	2	"{""remote procedure"": 4}"	epub/ch13.md:346
+RPC	4	1	"{""RPC"": 4}"	epub/ch13.md:346
+higher-level comment	4	1	"{""Higher-level comments"": 1, ""higher-level comments"": 1, ""higher-level comment"": 2}"	epub/ch13.md:349
+name choice	4	1	"{""name choices"": 1, ""Name choice"": 1, ""name choice"": 2}"	epub/ch14.md:7
+physical block number	4	1	"{""physical block number"": 4}"	epub/ch14.md:16
+underlying entity	4	1	"{""underlying entity"": 4}"	epub/ch14.md:28
+revision	4	3	"{""revisions"": 2, ""revision"": 2}"	epub/ch15.md:85
+repository	4	2	"{""repository"": 4}"	epub/ch16.md:67
+few example	4	3	"{""few examples"": 4}"	epub/ch17.md:16
+event-driven programming	4	1	"{""event-driven programming"": 2, ""Event-driven programming"": 2}"	epub/ch18.md:199
+trend	4	1	"{""trends"": 1, ""trend"": 3}"	epub/ch19.md:7
+increment	4	2	"{""increments"": 3, ""increment"": 1}"	epub/ch19.md:43
+system test	4	1	"{""system tests"": 3, ""System tests"": 1}"	epub/ch19.md:55
+test suite	4	1	"{""test suite"": 3, ""test suites"": 1}"	epub/ch19.md:61
+suite	4	1	"{""suite"": 3, ""suites"": 1}"	epub/ch19.md:61
+test-driven development	4	1	"{""Test-driven development"": 2, ""test-driven development"": 2}"	epub/ch19.md:73
+instruction time	4	1	"{""instruction times"": 4}"	epub/ch20.md:19
+overhead	4	1	"{""overhead"": 3, ""overheads"": 1}"	epub/ch20.md:25
+micro-benchmarks	4	1	"{""micro-benchmarks"": 4}"	epub/ch20.md:31
+fundamental fix	4	1	"{""fundamental fix"": 4}"	epub/ch20.md:61
+current code	4	2	"{""current code"": 4}"	epub/ch20.md:67
+new space	4	1	"{""new space"": 4}"	epub/ch20.md:100
+hypothesis	4	1	"{""hypothesis"": 4}"	epub/ch21.md:25
+conversation	3	1	"{""conversation"": 2, ""conversations"": 1}"	epub/preface.md:4
+development tool	3	3	"{""development tools"": 3}"	epub/preface.md:4
+test coverage	3	2	"{""test coverage"": 3}"	epub/preface.md:4
+david	3	2	"{""David"": 3}"	epub/preface.md:4
+criterion	3	3	"{""Criteria"": 2, ""criteria"": 1}"	epub/preface.md:4
+problem decomposition	3	1	"{""problem decomposition"": 2, ""Problem decomposition"": 1}"	epub/preface.md:7
+CS	3	1	"{""CS"": 3}"	epub/preface.md:13
+writing	3	2	"{""writing"": 3}"	epub/preface.md:13
+feedback	3	1	"{""feedback"": 3}"	epub/preface.md:13
+scratch	3	2	"{""scratch"": 3}"	epub/preface.md:13
+interactive editor	3	2	"{""interactive editors"": 1, ""interactive editor"": 2}"	epub/preface.md:19
+address	3	1	"{""address"": 3}"	epub/preface.md:28
+important design	3	3	"{""important design"": 3}"	epub/preface.md:34
+google	3	2	"{""Google"": 3}"	epub/preface.md:34
+search	3	3	"{""search"": 3}"	epub/preface.md:37
+limitation	3	2	"{""limitations"": 2, ""limitation"": 1}"	epub/ch01.md:10
+complexity accumulates	3	3	"{""complexity accumulates"": 3}"	epub/ch01.md:13
+accumulates	3	3	"{""accumulates"": 3}"	epub/ch01.md:13
+second approach	3	3	"{""second approach"": 3}"	epub/ch01.md:22
+physical system	3	1	"{""physical systems"": 3}"	epub/ch01.md:25
+discipline	3	3	"{""disciplines"": 1, ""discipline"": 2}"	epub/ch01.md:25
+entire system	3	3	"{""entire system"": 3}"	epub/ch01.md:25
+design phase	3	3	"{""design phase"": 3}"	epub/ch01.md:25
+incremental	3	2	"{""Incremental"": 2, ""incremental"": 1}"	epub/ch01.md:37
+lifetime	3	3	"{""lifetime"": 3}"	epub/ch01.md:40
+design alternative	3	2	"{""design alternatives"": 3}"	epub/ch01.md:43
+sign	3	3	"{""signs"": 1, ""sign"": 2}"	epub/ch01.md:55
+look	3	3	"{""look"": 3}"	epub/ch01.md:55
+system simpler	3	3	"{""systems simpler"": 1, ""system simpler"": 2}"	epub/ch01.md:64
+good choice	3	3	"{""good choices"": 2, ""better choices"": 1}"	epub/ch02.md:10
+towards	3	3	"{""towards"": 3}"	epub/ch02.md:10
+code work	3	2	"{""code works"": 2, ""code work"": 1}"	epub/ch02.md:19
+small improvement	3	2	"{""small improvement"": 1, ""small improvements"": 2}"	epub/ch02.md:19
+lesson	3	3	"{""lessons"": 1, ""lesson"": 2}"	epub/ch02.md:34
+manifestation	3	1	"{""manifestations"": 3}"	epub/ch02.md:40
+individual page	3	1	"{""individual pages"": 3}"	epub/ch02.md:43
+great risk	3	3	"{""greater risk"": 2, ""greatest risk"": 1}"	epub/ch02.md:46
+more line	3	3	"{""more lines"": 3}"	epub/ch02.md:49
+darker	3	1	"{""darker"": 3}"	epub/ch02.md:52
+receiver	3	2	"{""receiver"": 3}"	epub/ch02.md:70
+new web site	3	1	"{""new Web site"": 3}"	epub/ch02.md:76
+new error	3	3	"{""new error"": 2, ""new errors"": 1}"	epub/ch02.md:79
+different purpose	3	3	"{""different purposes"": 3}"	epub/ch02.md:79
+account	3	3	"{""account"": 2, ""accounts"": 1}"	epub/ch02.md:85
+small chunk	3	2	"{""small chunks"": 2, ""small chunk"": 1}"	epub/ch02.md:91
+big difference	3	3	"{""big difference"": 3}"	epub/ch02.md:94
+accumulation	3	3	"{""accumulation"": 3}"	epub/ch02.md:100
+deadline	3	2	"{""deadline"": 3}"	epub/ch03.md:19
+priority	3	3	"{""priority"": 3}"	epub/ch03.md:19
+dozen	3	3	"{""dozens"": 2, ""dozen"": 1}"	epub/ch03.md:22
+refactor	3	3	"{""refactor"": 3}"	epub/ch03.md:25
+mess	3	2	"{""mess"": 2, ""messes"": 1}"	epub/ch03.md:25
+schedule	3	2	"{""schedule"": 1, ""schedules"": 2}"	epub/ch03.md:25
+development organization	3	3	"{""development organization"": 2, ""development organizations"": 1}"	epub/ch03.md:31
+management	3	3	"{""management"": 3}"	epub/ch03.md:31
+hero	3	1	"{""heroes"": 3}"	epub/ch03.md:31
+primary goal	3	2	"{""primary goal"": 3}"	epub/ch03.md:37
+couple	3	2	"{""couple"": 3}"	epub/ch03.md:43
+doesn't work	3	2	"{""doesn't work"": 3}"	epub/ch03.md:52
+small investment	3	2	"{""small investments"": 3}"	epub/ch03.md:52
+basis	3	3	"{""basis"": 3}"	epub/ch03.md:52
+you're	3	3	"{""you're"": 3}"	epub/ch03.md:58
+release	3	2	"{""releases"": 1, ""release"": 2}"	epub/ch03.md:70
+product	3	1	"{""product"": 2, ""products"": 1}"	epub/ch03.md:73
+company's	3	1	"{""company's"": 3}"	epub/ch03.md:79
+clean code	3	3	"{""clean code"": 1, ""Clean Code"": 2}"	epub/ch03.md:91
+crunch	3	1	"{""crunch"": 3}"	epub/ch03.md:100
+important technique	3	3	"{""important techniques"": 3}"	epub/ch04.md:7
+small fraction	3	2	"{""small fraction"": 3}"	epub/ch04.md:7
+create	3	3	"{""create"": 3}"	epub/ch04.md:16
+other form	3	3	"{""other forms"": 3}"	epub/ch04.md:16
+different module	3	3	"{""different module"": 2, ""different modules"": 1}"	epub/ch04.md:19
+implement	3	3	"{""implements"": 3}"	epub/ch04.md:22
+splitting	3	3	"{""splitting"": 3}"	epub/ch04.md:22
+informal aspect	3	2	"{""informal aspects"": 3}"	epub/ch04.md:37
+module's functionality	3	3	"{""module's functionality"": 3}"	epub/ch04.md:49
+database	3	2	"{""databases"": 1, ""database"": 2}"	epub/ch04.md:55
+rectangle	3	1	"{""rectangle"": 3}"	epub/ch04.md:67
+versus	3	3	"{""versus"": 3}"	epub/ch04.md:70
+linux	3	3	"{""Linux"": 3}"	epub/ch04.md:73
+deep interface	3	3	"{""deep interface"": 1, ""deeper interface"": 1, ""deepest interfaces"": 1}"	epub/ch04.md:73
+simple signature	3	2	"{""simple signatures"": 1, ""simple signature"": 2}"	epub/ch04.md:73
+permission	3	2	"{""permissions"": 2, ""permission"": 1}"	epub/ch04.md:91
+file data	3	3	"{""file data"": 3}"	epub/ch04.md:112
+garbage collector	3	1	"{""garbage collector"": 2, ""garbage collectors"": 1}"	epub/ch04.md:121
+collector	3	1	"{""collector"": 2, ""collectors"": 1}"	epub/ch04.md:121
+new interface	3	3	"{""new interface"": 3}"	epub/ch04.md:145
+shallow	3	3	"{""Shallow"": 2, ""shallow"": 1}"	epub/ch04.md:151
+class design	3	2	"{""class design"": 3}"	epub/ch04.md:157
+advice	3	3	"{""advice"": 3}"	epub/ch04.md:157
+multiple method	3	2	"{""multiple methods"": 3}"	epub/ch04.md:157
+overall system complexity	3	3	"{""overall system complexity"": 3}"	epub/ch04.md:157
+boilerplate	3	3	"{""boilerplate"": 3}"	epub/ch04.md:160
+community	3	2	"{""community"": 3}"	epub/ch04.md:166
+java developer	3	2	"{""Java developers"": 3}"	epub/ch04.md:166
+serialized object	3	1	"{""serialized objects"": 3}"	epub/ch04.md:166
+separate object	3	2	"{""separate object"": 1, ""separate objects"": 1, ""Separate objects"": 1}"	epub/ch04.md:190
+most developer	3	2	"{""most developers"": 3}"	epub/ch04.md:190
+important issue	3	3	"{""important issue"": 2, ""important issues"": 1}"	epub/ch04.md:199
+research	3	3	"{""research"": 3}"	epub/ch04.md:202
+overall behavior	3	3	"{""overall behavior"": 3}"	epub/ch04.md:202
+reduces	3	3	"{""reduces"": 3}"	epub/ch05.md:37
+new mechanism	3	3	"{""new mechanism"": 3}"	epub/ch05.md:37
+note	3	3	"{""Note"": 2, ""note"": 1}"	epub/ch05.md:43
+setter method	3	2	"{""setter methods"": 2, ""setter method"": 1}"	epub/ch05.md:43
+file format	3	1	"{""file format"": 3}"	epub/ch05.md:52
+that's	3	3	"{""that's"": 3}"	epub/ch05.md:70
+software design course	3	2	"{""software design course"": 3}"	epub/ch05.md:76
+design course	3	2	"{""design course"": 3}"	epub/ch05.md:76
+web browser	3	2	"{""Web browsers"": 1, ""Web browser"": 2}"	epub/ch05.md:79
+execution	3	2	"{""execution"": 3}"	epub/ch05.md:85
+header line	3	2	"{""header line"": 2, ""header lines"": 1}"	epub/ch05.md:88
+entire application	3	3	"{""entire application"": 3}"	epub/ch05.md:103
+first line	3	3	"{""first line"": 3}"	epub/ch05.md:109
+internal data	3	2	"{""internal data"": 3}"	epub/ch05.md:127
+internal data structure	3	2	"{""internal data structures"": 2, ""internal data structure"": 1}"	epub/ch05.md:127
+invoke	3	3	"{""invoke"": 3}"	epub/ch05.md:127
+right thing	3	2	"{""right thing"": 3}"	epub/ch05.md:151
+runtime	3	3	"{""runtime"": 3}"	epub/ch05.md:178
+ACM	3	2	"{""ACM"": 3}"	epub/ch05.md:181
+different level	3	2	"{""different levels"": 1, ""different level"": 2}"	epub/ch06.md:10
+guideline	3	2	"{""guidelines"": 3}"	epub/ch06.md:13
+today's	3	2	"{""today's"": 2, ""Today's"": 1}"	epub/ch06.md:22
+spot	3	2	"{""spot"": 3}"	epub/ch06.md:28
+user interface operation	3	2	"{""user interface operation"": 2, ""user interface operations"": 1}"	epub/ch06.md:55
+interface operation	3	2	"{""interface operation"": 2, ""interface operations"": 1}"	epub/ch06.md:55
+good approach	3	2	"{""better approach"": 3}"	epub/ch06.md:64
+arbitrary position	3	2	"{""arbitrary position"": 2, ""arbitrary positions"": 1}"	epub/ch06.md:73
+new position	3	1	"{""new position"": 3}"	epub/ch06.md:79
+general-purpose text	3	1	"{""general-purpose text"": 3}"	epub/ch06.md:91
+old code	3	2	"{""old code"": 3}"	epub/ch06.md:91
+user interface module	3	2	"{""user interface module"": 3}"	epub/ch06.md:91
+interface module	3	2	"{""interface module"": 3}"	epub/ch06.md:91
+small number	3	2	"{""smaller number"": 1, ""small number"": 2}"	epub/ch06.md:91
+occurrence	3	2	"{""occurrences"": 2, ""occurrence"": 1}"	epub/ch06.md:94
+original version	3	3	"{""original version"": 3}"	epub/ch06.md:109
+individual method	3	2	"{""individual method"": 1, ""individual methods"": 2}"	epub/ch06.md:118
+thus	3	3	"{""Thus"": 3}"	epub/ch06.md:124
+specialized code	3	1	"{""specialized code"": 3}"	epub/ch06.md:130
+characteristic	3	2	"{""characteristics"": 3}"	epub/ch06.md:136
+system code	3	3	"{""system code"": 3}"	epub/ch06.md:136
+GUI editor	3	2	"{""GUI editor"": 3}"	epub/ch06.md:142
+deleted text	3	1	"{""deleted text"": 3}"	epub/ch06.md:142
+other thing	3	3	"{""other things"": 3}"	epub/ch06.md:145
+single operation	3	3	"{""single operation"": 3}"	epub/ch06.md:187
+particular kind	3	2	"{""particular kind"": 2, ""particular kinds"": 1}"	epub/ch06.md:190
+new object	3	2	"{""new object"": 3}"	epub/ch06.md:190
+fence	3	1	"{""fences"": 2, ""fence"": 1}"	epub/ch06.md:193
+undo code	3	1	"{""undo code"": 3}"	epub/ch06.md:214
+screen	3	2	"{""screen"": 3}"	epub/ch06.md:223
+low layer	3	1	"{""lower layers"": 1, ""lower layer"": 1, ""lowest layer"": 1}"	epub/ch07.md:7
+transport	3	3	"{""transport"": 3}"	epub/ch07.md:13
+transport protocol	3	3	"{""transport protocol"": 3}"	epub/ch07.md:13
+machine	3	2	"{""machine"": 1, ""machines"": 2}"	epub/ch07.md:13
+similar abstraction	3	1	"{""similar abstractions"": 3}"	epub/ch07.md:16
+level class	3	1	"{""level class"": 3}"	epub/ch07.md:106
+C2	3	1	"{""C2"": 3}"	epub/ch07.md:121
+particular method	3	3	"{""particular method"": 2, ""particular methods"": 1}"	epub/ch07.md:121
+incoming	3	2	"{""incoming"": 3}"	epub/ch07.md:124
+dispatch	3	2	"{""dispatch"": 2, ""dispatches"": 1}"	epub/ch07.md:124
+same interface	3	2	"{""same interface"": 3}"	epub/ch07.md:127
+large amount	3	2	"{""large amount"": 2, ""large amounts"": 1}"	epub/ch07.md:136
+underlying class	3	1	"{""underlying class"": 3}"	epub/ch07.md:142
+certificate	3	1	"{""certificates"": 2, ""certificate"": 1}"	epub/ch07.md:169
+low-level method	3	2	"{""low-level method"": 3}"	epub/ch07.md:169
+store	3	2	"{""stores"": 3}"	epub/ch07.md:181
+global state	3	1	"{""global state"": 3}"	epub/ch07.md:181
+most application	3	3	"{""Most applications"": 2, ""most applications"": 1}"	epub/ch07.md:181
+particular variable	3	2	"{""particular variable"": 3}"	epub/ch07.md:193
+simple implementation	3	2	"{""simple implementation"": 3}"	epub/ch08.md:7
+person	3	2	"{""person"": 3}"	epub/ch08.md:13
+whole line	3	2	"{""whole lines"": 3}"	epub/ch08.md:19
+text interface	3	2	"{""text interface"": 2, ""text interfaces"": 1}"	epub/ch08.md:19
+single object	3	2	"{""single object"": 3}"	epub/ch09.md:16
+different file	3	3	"{""different files"": 2, ""different file"": 1}"	epub/ch09.md:19
+substring	3	2	"{""substring"": 3}"	epub/ch09.md:34
+repetition	3	3	"{""repetition"": 2, ""Repetition"": 1}"	epub/ch09.md:61
+repeated code	3	1	"{""repeated code"": 3}"	epub/ch09.md:61
+replacement	3	2	"{""replacement"": 3}"	epub/ch09.md:61
+local variable	3	2	"{""local variables"": 3}"	epub/ch09.md:61
+early design	3	3	"{""earlier design"": 1, ""earlier designs"": 1, ""early design"": 1}"	epub/ch09.md:70
+different type	3	3	"{""different types"": 2, ""Different types"": 1}"	epub/ch09.md:79
+next section	3	3	"{""next sections"": 1, ""next section"": 2}"	epub/ch09.md:88
+first example	3	2	"{""first example"": 3}"	epub/ch09.md:88
+second example	3	2	"{""second example"": 3}"	epub/ch09.md:88
+mouse	3	3	"{""mouse"": 3}"	epub/ch09.md:94
+boolean	3	1	"{""boolean"": 3}"	epub/ch09.md:97
+logging method	3	1	"{""logging method"": 1, ""logging methods"": 2}"	epub/ch09.md:202
+long method	3	2	"{""Long methods"": 1, ""Longer methods"": 1, ""longer methods"": 1}"	epub/ch09.md:211
+code harder	3	3	"{""code harder"": 3}"	epub/ch09.md:214
+clean abstraction	3	2	"{""clean abstractions"": 2, ""cleaner abstractions"": 1}"	epub/ch09.md:223
+robert	3	2	"{""Robert"": 3}"	epub/ch09.md:247
+resource	3	2	"{""resource"": 3}"	epub/ch10.md:22
+redundant copy	3	1	"{""redundant copy"": 3}"	epub/ch10.md:34
+more exception	3	1	"{""more exceptions"": 3}"	epub/ch10.md:37
+fails	3	2	"{""fails"": 3}"	epub/ch10.md:133
+tcl scripting	3	3	"{""Tcl scripting"": 3}"	epub/ch10.md:142
+tcl scripting language	3	3	"{""Tcl scripting language"": 3}"	epub/ch10.md:142
+scripting	3	3	"{""scripting"": 3}"	epub/ch10.md:142
+simple thing	3	2	"{""simplest thing"": 3}"	epub/ch10.md:142
+few exception	3	2	"{""fewer exceptions"": 2, ""few exceptions"": 1}"	epub/ch10.md:148
+file deletion	3	1	"{""File deletion"": 1, ""file deletion"": 2}"	epub/ch10.md:163
+second technique	3	3	"{""second technique"": 3}"	epub/ch10.md:193
+masking	3	1	"{""masking"": 3}"	epub/ch10.md:193
+corruption	3	2	"{""corruption"": 3}"	epub/ch10.md:193
+file server	3	1	"{""file server"": 3}"	epub/ch10.md:196
+hang	3	1	"{""hangs"": 1, ""hang"": 2}"	epub/ch10.md:196
+xyz	3	2	"{""xyz"": 3}"	epub/ch10.md:226
+quantity	3	1	"{""quantity"": 3}"	epub/ch10.md:226
+record	3	3	"{""record"": 3}"	epub/ch10.md:226
+more method	3	2	"{""more methods"": 3}"	epub/ch10.md:238
+corrupted object	3	1	"{""corrupted object"": 3}"	epub/ch10.md:244
+first place	3	3	"{""first place"": 3}"	epub/ch10.md:262
+other example	3	3	"{""other examples"": 3}"	epub/ch10.md:271
+whether	3	2	"{""Whether"": 3}"	epub/ch10.md:274
+error condition	3	3	"{""error conditions"": 2, ""error condition"": 1}"	epub/ch10.md:292
+consideration	3	2	"{""consideration"": 2, ""considerations"": 1}"	epub/ch11.md:16
+ease	3	3	"{""ease"": 3}"	epub/ch11.md:16
+text manipulation	3	1	"{""text manipulations"": 2, ""text manipulation"": 1}"	epub/ch11.md:31
+first time	3	3	"{""first time"": 3}"	epub/ch11.md:43
+important role	3	3	"{""important role"": 2, ""important roles"": 1}"	epub/ch12.md:7
+many developer	3	2	"{""Many developers"": 2, ""many developers"": 1}"	epub/ch12.md:10
+drudge	3	3	"{""drudge"": 3}"	epub/ch12.md:10
+drudge work	3	3	"{""drudge work"": 3}"	epub/ch12.md:10
+good code	3	3	"{""Good code"": 1, ""better code"": 2}"	epub/ch12.md:19
+expectation	3	2	"{""expectation"": 1, ""expectations"": 2}"	epub/ch12.md:40
+essential information	3	2	"{""essential information"": 3}"	epub/ch12.md:43
+additional information	3	2	"{""additional information"": 3}"	epub/ch12.md:43
+large change	3	2	"{""Large changes"": 1, ""large changes"": 1, ""larger changes"": 1}"	epub/ch12.md:61
+key idea	3	3	"{""key ideas"": 2, ""key idea"": 1}"	epub/ch12.md:61
+low-level detail	3	2	"{""low-level details"": 3}"	epub/ch12.md:73
+intent	3	2	"{""intent"": 3}"	epub/ch12.md:103
+what's	3	3	"{""What's"": 1, ""what's"": 2}"	epub/ch12.md:115
+doxygen	3	2	"{""Doxygen"": 3}"	epub/ch13.md:19
+energy	3	3	"{""energy"": 3}"	epub/ch13.md:40
+code sample	3	2	"{""code sample"": 3}"	epub/ch13.md:46
+notice	3	1	"{""Notice"": 3}"	epub/ch13.md:49
+comment doesn't	3	1	"{""comment doesn't"": 3}"	epub/ch13.md:85
+argument name	3	2	"{""argument names"": 1, ""argument name"": 2}"	epub/ch13.md:142
+only thing	3	2	"{""only thing"": 3}"	epub/ch13.md:142
+padding	3	1	"{""padding"": 3}"	epub/ch13.md:145
+variable declaration	3	2	"{""variable declarations"": 1, ""variable declaration"": 2}"	epub/ch13.md:175
+class instance	3	3	"{""class instance"": 2, ""Class instance"": 1}"	epub/ch13.md:175
+class instance variable	3	3	"{""class instance variables"": 2, ""Class instance variables"": 1}"	epub/ch13.md:175
+following	3	3	"{""following"": 3}"	epub/ch13.md:289
+code's	3	2	"{""code's"": 3}"	epub/ch13.md:346
+hard	3	2	"{""hard"": 1, ""Hard"": 2}"	epub/ch13.md:346
+consequence	3	3	"{""consequence"": 1, ""consequences"": 2}"	epub/ch13.md:469
+method's interface comment	3	3	"{""method's interface comment"": 3}"	epub/ch13.md:472
+desired range	3	1	"{""desired range"": 3}"	epub/ch13.md:577
+implementation documentation	3	3	"{""implementation documentation"": 2, ""Implementation Documentation"": 1}"	epub/ch13.md:787
+different thing	3	2	"{""different things"": 3}"	epub/ch13.md:835
+variable's	3	3	"{""variable's"": 3}"	epub/ch13.md:859
+obvious central place	3	1	"{""obvious central place"": 3}"	epub/ch13.md:868
+map	3	2	"{""maps"": 1, ""map"": 2}"	epub/ch13.md:868
+other place	3	3	"{""other places"": 3}"	epub/ch13.md:868
+attention	3	2	"{""attention"": 3}"	epub/ch14.md:22
+name refers	3	1	"{""name refers"": 3}"	epub/ch14.md:28
+start	3	3	"{""start"": 2, ""Start"": 1}"	epub/ch14.md:37
+fine	3	2	"{""fine"": 3}"	epub/ch14.md:112
+common usage	3	3	"{""common usages"": 1, ""common usage"": 2}"	epub/ch14.md:148
+common name	3	1	"{""common name"": 3}"	epub/ch14.md:151
+type information	3	1	"{""type information"": 3}"	epub/ch14.md:166
+short name	3	1	"{""short name"": 2, ""short names"": 1}"	epub/ch14.md:259
+complaint	3	1	"{""complaints"": 3}"	epub/ch14.md:265
+unit testing	3	2	"{""unit testing"": 3}"	epub/ch15.md:10
+while	3	2	"{""while"": 3}"	epub/ch15.md:22
+header file	3	1	"{""header files"": 3}"	epub/ch16.md:40
+minute	3	3	"{""minutes"": 3}"	epub/ch16.md:97
+similar thing	3	2	"{""similar things"": 3}"	epub/ch17.md:7
+similar way	3	2	"{""similar ways"": 3}"	epub/ch17.md:7
+dissimilar thing	3	1	"{""dissimilar things"": 3}"	epub/ch17.md:7
+same approach	3	1	"{""same approach"": 3}"	epub/ch17.md:7
+style guide	3	1	"{""style guides"": 3}"	epub/ch17.md:22
+guide	3	1	"{""guides"": 3}"	epub/ch17.md:22
+checker	3	1	"{""checker"": 1, ""checkers"": 2}"	epub/ch17.md:46
+script	3	1	"{""script"": 3}"	epub/ch17.md:52
+efficiency	3	2	"{""efficiency"": 3}"	epub/ch18.md:10
+nonobvious code	3	2	"{""nonobvious code"": 2, ""Nonobvious Code"": 1}"	epub/ch18.md:10
+whitespace	3	1	"{""whitespace"": 3}"	epub/ch18.md:25
+blank line	3	1	"{""Blank lines"": 1, ""blank line"": 1, ""blank lines"": 1}"	epub/ch18.md:109
+event module	3	1	"{""event module"": 3}"	epub/ch18.md:202
+heart	3	2	"{""heart"": 3}"	epub/ch19.md:19
+class hierarchy	3	1	"{""class hierarchy"": 2, ""Class hierarchies"": 1}"	epub/ch19.md:25
+degree	3	2	"{""degree"": 3}"	epub/ch19.md:46
+engine	3	1	"{""engine"": 3}"	epub/ch19.md:67
+test pas	3	1	"{""tests pass"": 2, ""test pass"": 1}"	epub/ch19.md:73
+proposal	3	1	"{""proposal"": 2, ""proposals"": 1}"	epub/ch19.md:115
+system performance	3	1	"{""system performance"": 3}"	epub/ch20.md:55
+ideal code	3	1	"{""ideal code"": 3}"	epub/ch20.md:70
+common operation	3	1	"{""common operations"": 1, ""common operation"": 2}"	epub/ch20.md:79
+response message	3	1	"{""response messages"": 2, ""response message"": 1}"	epub/ch20.md:82
+internal storage	3	1	"{""internal storage"": 3}"	epub/ch20.md:82
+original code	3	1	"{""original code"": 3}"	epub/ch20.md:100
+buffer length	3	1	"{""Buffer length"": 3}"	epub/ch20.md:118
+doesn't matter	3	2	"{""doesn't matter"": 3}"	epub/ch21.md:7
+pp	3	1	"{""pp"": 3}"	epub/summary.md:22
+debugger	2	1	"{""debuggers"": 2}"	epub/preface.md:4
+control system	2	2	"{""control systems"": 1, ""control system"": 1}"	epub/preface.md:4
+test coverage tool	2	2	"{""test coverage tools"": 1, ""test coverage tool"": 1}"	epub/preface.md:4
+coverage tool	2	2	"{""coverage tools"": 1, ""coverage tool"": 1}"	epub/preface.md:4
+analysis	2	2	"{""analysis"": 1, ""Analysis"": 1}"	epub/preface.md:4
+david parnas	2	2	"{""David Parnas"": 2}"	epub/preface.md:4
+parnas	2	2	"{""Parnas"": 2}"	epub/preface.md:4
+classic paper	2	2	"{""classic paper"": 2}"	epub/preface.md:4
+complex problem	2	2	"{""complex problem"": 1, ""complex problems"": 1}"	epub/preface.md:7
+attempt	2	2	"{""attempt"": 1, ""attempts"": 1}"	epub/preface.md:10
+several people	2	2	"{""several people"": 2}"	epub/preface.md:10
+great programmer	2	1	"{""great programmers"": 2}"	epub/preface.md:10
+specific technique	2	2	"{""specific techniques"": 2}"	epub/preface.md:10
+evidence	2	2	"{""evidence"": 2}"	epub/preface.md:10
+stanford	2	2	"{""Stanford"": 2}"	epub/preface.md:13
+stanford university	2	2	"{""Stanford University"": 2}"	epub/preface.md:13
+draft	2	1	"{""draft"": 1, ""drafts"": 1}"	epub/preface.md:13
+define	2	2	"{""Define"": 2}"	epub/preface.md:16
+relate	2	2	"{""relate"": 2}"	epub/preface.md:16
+presentation	2	2	"{""presentations"": 1, ""presentation"": 1}"	epub/preface.md:19
+considerable amount	2	2	"{""considerable amount"": 2}"	epub/preface.md:19
+understanding	2	2	"{""understanding"": 2}"	epub/preface.md:25
+future edition	2	1	"{""future editions"": 2}"	epub/preface.md:25
+edition	2	1	"{""editions"": 2}"	epub/preface.md:25
+email address	2	1	"{""email address"": 2}"	epub/preface.md:34
+google group	2	1	"{""Google Group"": 2}"	epub/preface.md:34
+feel	2	2	"{""feel"": 1, ""feels"": 1}"	epub/preface.md:40
+i'd	2	2	"{""I'd"": 2}"	epub/preface.md:40
+criticism	2	2	"{""criticisms"": 1, ""criticism"": 1}"	epub/preface.md:43
+john	2	2	"{""John"": 2}"	epub/preface.md:43
+activity	2	2	"{""activities"": 2}"	epub/ch01.md:10
+physic	2	2	"{""physics"": 1, ""Physics"": 1}"	epub/ch01.md:10
+more feature	2	1	"{""more features"": 2}"	epub/ch01.md:13
+lead	2	2	"{""leads"": 1, ""lead"": 1}"	epub/ch01.md:13
+good development	2	2	"{""Good development"": 2}"	epub/ch01.md:16
+good development tool	2	2	"{""Good development tools"": 2}"	epub/ch01.md:16
+decade	2	2	"{""decades"": 2}"	epub/ch01.md:16
+powerful system	2	1	"{""powerful systems"": 2}"	epub/ch01.md:16
+software simpler	2	2	"{""software simpler"": 2}"	epub/ch01.md:16
+spite	2	2	"{""spite"": 2}"	epub/ch01.md:16
+first approach	2	2	"{""first approach"": 2}"	epub/ch01.md:19
+consistent fashion	2	2	"{""consistent fashion"": 2}"	epub/ch01.md:19
+object-oriented language	2	1	"{""object-oriented language"": 2}"	epub/ch01.md:22
+building	2	2	"{""buildings"": 1, ""building"": 1}"	epub/ch01.md:25
+bridge	2	1	"{""bridges"": 1, ""bridge"": 1}"	epub/ch01.md:25
+engineering	2	2	"{""engineering"": 1, ""Engineering"": 1}"	epub/ch01.md:25
+implication	2	2	"{""implications"": 2}"	epub/ch01.md:28
+many problem	2	2	"{""many problems"": 2}"	epub/ch01.md:28
+major design change	2	1	"{""major design changes"": 2}"	epub/ch01.md:28
+overall design	2	2	"{""overall design"": 2}"	epub/ch01.md:28
+explosion	2	2	"{""explosion"": 2}"	epub/ch01.md:28
+most software	2	2	"{""most software"": 1, ""Most software"": 1}"	epub/ch01.md:31
+subset	2	1	"{""subset"": 2}"	epub/ch01.md:31
+original design	2	2	"{""original design"": 2}"	epub/ch01.md:31
+middle	2	2	"{""middle"": 2}"	epub/ch01.md:34
+incremental development	2	1	"{""Incremental development"": 2}"	epub/ch01.md:37
+lookout	2	2	"{""lookout"": 2}"	epub/ch01.md:37
+design improvement	2	2	"{""design improvements"": 2}"	epub/ch01.md:37
+mean	2	2	"{""mean"": 1, ""means"": 1}"	epub/ch01.md:43
+software development process	2	2	"{""software development process"": 2}"	epub/ch01.md:43
+great software	2	2	"{""great software"": 2}"	epub/ch01.md:43
+higher-level concept	2	2	"{""higher-level concepts"": 2}"	epub/ch01.md:43
+define error	2	2	"{""define errors"": 2}"	epub/ch01.md:43
+exploration	2	2	"{""exploration"": 1, ""explorations"": 1}"	epub/ch01.md:43
+real system	2	2	"{""real systems"": 2}"	epub/ch01.md:49
+conjunction	2	2	"{""conjunction"": 2}"	epub/ch01.md:52
+someone else's	2	2	"{""someone else's"": 2}"	epub/ch01.md:52
+someone else's code	2	2	"{""someone else's code"": 2}"	epub/ch01.md:52
+else's	2	2	"{""else's"": 2}"	epub/ch01.md:52
+else's code	2	2	"{""else's code"": 2}"	epub/ch01.md:52
+discretion	2	2	"{""discretion"": 2}"	epub/ch01.md:58
+balance	2	2	"{""balance"": 2}"	epub/ch01.md:58
+good thing	2	2	"{""good thing"": 2}"	epub/ch01.md:58
+other domain	2	2	"{""other domains"": 2}"	epub/ch01.md:61
+discus	2	2	"{""discuss"": 2}"	epub/ch01.md:64
+subsequent chapter	2	1	"{""subsequent chapters"": 2}"	epub/ch02.md:7
+foundation	2	2	"{""foundation"": 1, ""Foundation"": 1}"	epub/ch02.md:13
+conclusion	2	2	"{""conclusions"": 2}"	epub/ch02.md:13
+many form	2	2	"{""many forms"": 2}"	epub/ch02.md:19
+complex system	2	2	"{""complex system"": 2}"	epub/ch02.md:22
+writer	2	2	"{""writers"": 2}"	epub/ch02.md:34
+development task	2	2	"{""development tasks"": 2}"	epub/ch02.md:40
+simple change	2	2	"{""simple change"": 2}"	epub/ch02.md:43
+banner color	2	1	"{""banner color"": 2}"	epub/ch02.md:43
+darker shade	2	1	"{""darker shade"": 2}"	epub/ch02.md:52
+shade	2	1	"{""shade"": 2}"	epub/ch02.md:52
+background color change	2	1	"{""background color changes"": 2}"	epub/ch02.md:52
+color change	2	1	"{""color changes"": 2}"	epub/ch02.md:52
+central variable	2	1	"{""central variable"": 2}"	epub/ch02.md:55
+obvious system	2	1	"{""obvious system"": 2}"	epub/ch02.md:61
+next step	2	2	"{""next step"": 2}"	epub/ch02.md:67
+other code	2	1	"{""other code"": 2}"	epub/ch02.md:70
+web site example	2	1	"{""Web site example"": 2}"	epub/ch02.md:70
+site example	2	1	"{""site example"": 2}"	epub/ch02.md:70
+separate code	2	2	"{""separate code"": 2}"	epub/ch02.md:70
+new dependency	2	1	"{""new dependency"": 2}"	epub/ch02.md:76
+variable change	2	2	"{""variable changes"": 2}"	epub/ch02.md:76
+compilation	2	2	"{""compilation"": 2}"	epub/ch02.md:76
+much useful information	2	2	"{""much useful information"": 2}"	epub/ch02.md:79
+contributor	2	2	"{""contributor"": 2}"	epub/ch02.md:79
+same variable name	2	2	"{""same variable name"": 2}"	epub/ch02.md:79
+inadequate documentation	2	2	"{""inadequate documentation"": 1, ""Inadequate documentation"": 1}"	epub/ch02.md:82
+obvious design	2	2	"{""obvious design"": 2}"	epub/ch02.md:82
+single dependency	2	1	"{""single dependency"": 2}"	epub/ch02.md:91
+maintainability	2	2	"{""maintainability"": 2}"	epub/ch02.md:91
+possible change	2	2	"{""possible change"": 2}"	epub/ch02.md:91
+enough information	2	2	"{""enough information"": 2}"	epub/ch02.md:100
+bad case	2	2	"{""worst case"": 2}"	epub/ch02.md:100
+strategic	2	1	"{""Strategic"": 2}"	epub/ch03.md:7
+v	2	2	"{""vs"": 2}"	epub/ch03.md:7
+most programmer	2	2	"{""Most programmers"": 2}"	epub/ch03.md:16
+good system	2	2	"{""good system"": 2}"	epub/ch03.md:16
+good system design	2	2	"{""good system design"": 2}"	epub/ch03.md:16
+compromise	2	2	"{""compromise"": 1, ""compromises"": 1}"	epub/ch03.md:22
+next feature	2	2	"{""next feature"": 2}"	epub/ch03.md:25
+patch	2	1	"{""patches"": 2}"	epub/ch03.md:25
+delay	2	1	"{""delay"": 1, ""delays"": 1}"	epub/ch03.md:25
+software project	2	2	"{""software project"": 1, ""software projects"": 1}"	epub/ch03.md:28
+first step towards	2	2	"{""first step towards"": 2}"	epub/ch03.md:37
+step towards	2	2	"{""step towards"": 2}"	epub/ch03.md:37
+good software designer	2	2	"{""good software designer"": 2}"	epub/ch03.md:37
+extension	2	2	"{""extensions"": 2}"	epub/ch03.md:37
+great design	2	2	"{""great design"": 2}"	epub/ch03.md:37
+short term	2	2	"{""short term"": 2}"	epub/ch03.md:40
+alternative design	2	2	"{""alternative designs"": 2}"	epub/ch03.md:43
+total development	2	2	"{""total development"": 2}"	epub/ch03.md:52
+total development time	2	2	"{""total development time"": 2}"	epub/ch03.md:52
+few month	2	1	"{""few months"": 2}"	epub/ch03.md:52
+approach result	2	2	"{""approach results"": 2}"	epub/ch03.md:55
+illustration	2	2	"{""illustration"": 2}"	epub/ch03.md:55
+curve	2	1	"{""curves"": 2}"	epub/ch03.md:55
+speed	2	2	"{""speed"": 2}"	epub/ch03.md:58
+talk	2	2	"{""talk"": 1, ""talks"": 1}"	epub/ch03.md:58
+technical debt	2	1	"{""technical debt"": 2}"	epub/ch03.md:61
+financial debt	2	1	"{""financial debt"": 2}"	epub/ch03.md:61
+experiment	2	2	"{""experiment"": 1, ""experiments"": 1}"	epub/ch03.md:64
+gain	2	2	"{""gains"": 1, ""gain"": 1}"	epub/ch03.md:64
+force	2	2	"{""forces"": 2}"	epub/ch03.md:70
+pressure	2	2	"{""pressure"": 2}"	epub/ch03.md:70
+development cost	2	1	"{""development costs"": 2}"	epub/ch03.md:73
+success	2	2	"{""success"": 2}"	epub/ch03.md:76
+mediocre engineer	2	1	"{""mediocre engineers"": 2}"	epub/ch03.md:76
+motto	2	1	"{""motto"": 2}"	epub/ch03.md:79
+move	2	1	"{""Move"": 2}"	epub/ch03.md:79
+restriction	2	2	"{""restrictions"": 2}"	epub/ch03.md:79
+few comment	2	2	"{""few comments"": 1, ""fewer comments"": 1}"	epub/ch03.md:82
+visible example	2	2	"{""visible example"": 1, ""visible examples"": 1}"	epub/ch03.md:85
+silicon	2	1	"{""Silicon"": 2}"	epub/ch03.md:88
+silicon valley	2	1	"{""Silicon Valley"": 2}"	epub/ch03.md:88
+valley	2	1	"{""Valley"": 2}"	epub/ch03.md:88
+high quality	2	2	"{""high quality"": 1, ""higher quality"": 1}"	epub/ch03.md:88
+more fun	2	2	"{""more fun"": 2}"	epub/ch03.md:91
+other kind	2	2	"{""other kinds"": 2}"	epub/ch04.md:25
+such module	2	1	"{""Such modules"": 1, ""such modules"": 1}"	epub/ch04.md:28
+formal interface	2	1	"{""formal interface"": 2}"	epub/ch04.md:34
+public variable	2	2	"{""public variables"": 2}"	epub/ch04.md:34
+informal part	2	1	"{""informal parts"": 2}"	epub/ch04.md:37
+unimportant detail	2	1	"{""unimportant details"": 2}"	epub/ch04.md:46
+false abstraction	2	2	"{""false abstraction"": 2}"	epub/ch04.md:52
+many detail	2	1	"{""many details"": 2}"	epub/ch04.md:55
+file system's	2	1	"{""file system's"": 2}"	epub/ch04.md:55
+contains	2	2	"{""contains"": 2}"	epub/ch04.md:58
+microwave	2	1	"{""microwave"": 1, ""microwaves"": 1}"	epub/ch04.md:58
+radiation	2	1	"{""radiation"": 2}"	epub/ch04.md:58
+simple abstraction	2	1	"{""simpler abstraction"": 1, ""simple abstraction"": 1}"	epub/ch04.md:58
+button	2	2	"{""buttons"": 1, ""button"": 1}"	epub/ch04.md:58
+power	2	2	"{""power"": 2}"	epub/ch04.md:58
+much complexity	2	2	"{""much complexity"": 2}"	epub/ch04.md:61
+file name	2	2	"{""file name"": 2}"	epub/ch04.md:91
+open file	2	2	"{""open file"": 2}"	epub/ch04.md:91
+most file	2	2	"{""Most files"": 1, ""most files"": 1}"	epub/ch04.md:91
+random access	2	1	"{""random access"": 1, ""Random access"": 1}"	epub/ch04.md:91
+O interface	2	2	"{""O interface"": 2}"	epub/ch04.md:94
+efficient access	2	2	"{""efficient access"": 2}"	epub/ch04.md:97
+directory	2	2	"{""directories"": 1, ""directory"": 1}"	epub/ch04.md:100
+concurrent access	2	2	"{""concurrent accesses"": 1, ""concurrent access"": 1}"	epub/ch04.md:109
+system implementation	2	2	"{""system implementation"": 2}"	epub/ch04.md:118
+garbage collection	2	2	"{""garbage collection"": 2}"	epub/ch04.md:121
+implementation complexity	2	2	"{""implementation complexity"": 2}"	epub/ch04.md:124
+linked list	2	2	"{""linked list"": 2}"	epub/ch04.md:130
+extreme example	2	2	"{""extreme example"": 2}"	epub/ch04.md:133
+keystroke	2	2	"{""keystrokes"": 2}"	epub/ch04.md:145
+help	2	2	"{""help"": 2}"	epub/ch04.md:151
+small module	2	2	"{""Small modules"": 1, ""smaller module"": 1}"	epub/ch04.md:151
+large class	2	2	"{""larger classes"": 2}"	epub/ch04.md:157
+N	2	1	"{""N"": 2}"	epub/ch04.md:157
+java class	2	2	"{""Java class"": 2}"	epub/ch04.md:166
+root	2	2	"{""root"": 2}"	epub/ch04.md:166
+java programming	2	2	"{""Java programming"": 2}"	epub/ch04.md:166
+java programming community	2	2	"{""Java programming community"": 2}"	epub/ch04.md:166
+programming community	2	2	"{""programming community"": 2}"	epub/ch04.md:166
+common use	2	2	"{""common use"": 2}"	epub/ch04.md:199
+common use case	2	2	"{""common use cases"": 2}"	epub/ch04.md:199
+significant functionality	2	2	"{""significant functionality"": 2}"	epub/ch04.md:199
+specification language	2	1	"{""specification language"": 2}"	epub/ch04.md:202
+formal specification	2	1	"{""formal specification"": 2}"	epub/ch04.md:202
+english	2	2	"{""English"": 2}"	epub/ch04.md:202
+processor	2	2	"{""processor"": 2}"	epub/ch05.md:28
+lower-level detail	2	2	"{""lower-level details"": 2}"	epub/ch05.md:34
+congestion	2	2	"{""congestion"": 2}"	epub/ch05.md:37
+module deeper	2	1	"{""module deeper"": 2}"	epub/ch05.md:40
+same thing	2	2	"{""same thing"": 2}"	epub/ch05.md:43
+partial information	2	1	"{""partial information"": 2}"	epub/ch05.md:46
+partial information hiding	2	1	"{""partial information hiding"": 2}"	epub/ch05.md:46
+few dependency	2	2	"{""fewer dependencies"": 1, ""fewest dependencies"": 1}"	epub/ch05.md:46
+multiple module	2	2	"{""multiple modules"": 2}"	epub/ch05.md:52
+back-door leakage	2	1	"{""Back-door leakage"": 1, ""back-door leakage"": 1}"	epub/ch05.md:52
+important red flag	2	2	"{""important red flags"": 2}"	epub/ch05.md:55
+affected class	2	1	"{""affected classes"": 2}"	epub/ch05.md:55
+possible approach	2	2	"{""possible approach"": 2}"	epub/ch05.md:55
+different time	2	1	"{""different times"": 2}"	epub/ch05.md:61
+same knowledge	2	1	"{""same knowledge"": 2}"	epub/ch05.md:67
+particular type	2	2	"{""particular type"": 2}"	epub/ch05.md:67
+click	2	2	"{""clicks"": 1, ""click"": 1}"	epub/ch05.md:79
+different method	2	2	"{""different methods"": 2}"	epub/ch05.md:85
+different point	2	2	"{""different points"": 2}"	epub/ch05.md:85
+initial line	2	1	"{""initial line"": 2}"	epub/ch05.md:88
+HTTP protocol version	2	1	"{""HTTP protocol version"": 2}"	epub/ch05.md:88
+protocol version	2	1	"{""protocol version"": 2}"	epub/ch05.md:88
+request length	2	2	"{""request length"": 2}"	epub/ch05.md:94
+parsing	2	2	"{""parsing"": 2}"	epub/ch05.md:97
+design information	2	2	"{""design information"": 2}"	epub/ch05.md:100
+computation	2	1	"{""computation"": 2}"	epub/ch05.md:100
+combined class	2	2	"{""combined class"": 2}"	epub/ch05.md:100
+original class	2	2	"{""original classes"": 2}"	epub/ch05.md:100
+encoding	2	1	"{""encoding"": 2}"	epub/ch05.md:109
+cute baby	2	1	"{""cute baby"": 2}"	epub/ch05.md:112
+baby	2	1	"{""baby"": 2}"	epub/ch05.md:112
+internal representation	2	1	"{""internal representation"": 2}"	epub/ch05.md:127
+internal state	2	2	"{""internal state"": 2}"	epub/ch05.md:127
+parameter value	2	1	"{""parameter values"": 1, ""parameter value"": 1}"	epub/ch05.md:130
+conversion	2	2	"{""conversion"": 2}"	epub/ch05.md:139
+hide	2	1	"{""hides"": 2}"	epub/ch05.md:139
+additional	2	2	"{""Additional"": 2}"	epub/ch05.md:139
+desired parameter	2	2	"{""desired parameter"": 2}"	epub/ch05.md:139
+HTTP response	2	1	"{""HTTP responses"": 1, ""HTTP response"": 1}"	epub/ch05.md:145
+response version	2	1	"{""response version"": 2}"	epub/ch05.md:145
+HTTP library	2	1	"{""HTTP library"": 2}"	epub/ch05.md:145
+used feature	2	1	"{""used feature"": 1, ""used features"": 1}"	epub/ch05.md:157
+module doesn't	2	2	"{""module doesn't"": 2}"	epub/ch05.md:175
+several way	2	2	"{""several ways"": 2}"	epub/ch06.md:7
+generality	2	1	"{""generality"": 2}"	epub/ch06.md:7
+cleaner	2	2	"{""cleaner"": 2}"	epub/ch06.md:7
+particular problem	2	2	"{""particular problem"": 2}"	epub/ch06.md:22
+today's need	2	1	"{""today's needs"": 2}"	epub/ch06.md:22
+special-purpose approach	2	1	"{""special-purpose approach"": 2}"	epub/ch06.md:22
+general-purpose class	2	1	"{""general-purpose classes"": 1, ""general-purpose class"": 1}"	epub/ch06.md:25
+less code	2	1	"{""less code"": 2}"	epub/ch06.md:25
+other purpose	2	1	"{""other purposes"": 2}"	epub/ch06.md:25
+phrase	2	2	"{""phrase"": 2}"	epub/ch06.md:28
+many	2	1	"{""Many"": 2}"	epub/ch06.md:37
+student team	2	2	"{""student teams"": 1, ""student team"": 1}"	epub/ch06.md:37
+delete key	2	1	"{""delete key"": 2}"	epub/ch06.md:40
+little benefit	2	2	"{""little benefit"": 2}"	epub/ch06.md:55
+new user interface	2	1	"{""new user interface"": 1, ""New user interface"": 1}"	epub/ch06.md:58
+specialized approach	2	1	"{""specialized approach"": 2}"	epub/ch06.md:58
+arbitrary string	2	2	"{""arbitrary string"": 2}"	epub/ch06.md:73
+second method	2	2	"{""second method"": 2}"	epub/ch06.md:73
+delete	2	2	"{""delete"": 2}"	epub/ch06.md:91
+specialized text	2	1	"{""specialized text"": 2}"	epub/ch06.md:91
+special-purpose method	2	1	"{""special-purpose methods"": 2}"	epub/ch06.md:91
+user interface class	2	1	"{""user interface classes"": 1, ""user interface class"": 1}"	epub/ch06.md:106
+interface class	2	1	"{""interface classes"": 1, ""interface class"": 1}"	epub/ch06.md:106
+user interface developer	2	1	"{""user interface developers"": 2}"	epub/ch06.md:109
+interface developer	2	1	"{""interface developers"": 2}"	epub/ch06.md:109
+overall capability	2	2	"{""overall capabilities"": 2}"	epub/ch06.md:118
+general-purpose method	2	1	"{""general-purpose methods"": 1, ""general-purpose method"": 1}"	epub/ch06.md:118
+many situation	2	2	"{""many situations"": 2}"	epub/ch06.md:121
+software stack	2	2	"{""software stack"": 2}"	epub/ch06.md:130
+different device	2	1	"{""different device"": 2}"	epub/ch06.md:136
+device type	2	1	"{""device types"": 2}"	epub/ch06.md:136
+device characteristic	2	1	"{""device characteristics"": 2}"	epub/ch06.md:136
+main operating	2	1	"{""main operating"": 2}"	epub/ch06.md:136
+main operating system	2	1	"{""main operating system"": 2}"	epub/ch06.md:136
+GUI editor project	2	2	"{""GUI editor project"": 2}"	epub/ch06.md:142
+invokes	2	1	"{""invokes"": 2}"	epub/ch06.md:142
+visible	2	1	"{""visible"": 2}"	epub/ch06.md:142
+undo mechanism	2	1	"{""undo mechanism"": 2}"	epub/ch06.md:145
+undo list	2	1	"{""undo list"": 2}"	epub/ch06.md:145
+redo operation	2	1	"{""redo operations"": 2}"	epub/ch06.md:148
+extra method	2	2	"{""extra methods"": 1, ""extra method"": 1}"	epub/ch06.md:148
+sort	2	2	"{""sort"": 2}"	epub/ch06.md:148
+backwards	2	1	"{""backwards"": 2}"	epub/ch06.md:187
+placement	2	2	"{""placement"": 2}"	epub/ch06.md:193
+key design	2	2	"{""key design"": 2}"	epub/ch06.md:211
+general-purpose part	2	1	"{""general-purpose part"": 2}"	epub/ch06.md:211
+special-purpose part	2	1	"{""special-purpose parts"": 2}"	epub/ch06.md:211
+code refers	2	2	"{""code refers"": 2}"	epub/ch06.md:214
+extra code	2	2	"{""extra code"": 2}"	epub/ch06.md:220
+text editor project	2	2	"{""text editor project"": 2}"	epub/ch06.md:223
+special-case check	2	2	"{""special-case checks"": 2}"	epub/ch06.md:226
+portion	2	1	"{""portion"": 2}"	epub/ch06.md:226
+obvious code	2	2	"{""obvious code"": 1, ""Obvious code"": 1}"	epub/ch06.md:235
+variable-length array	2	2	"{""variable-length array"": 1, ""variable-length arrays"": 1}"	epub/ch07.md:10
+network transport	2	2	"{""network transport"": 2}"	epub/ch07.md:13
+network transport protocol	2	2	"{""network transport protocol"": 2}"	epub/ch07.md:13
+topmost	2	1	"{""topmost"": 2}"	epub/ch07.md:13
+adjacent layer	2	1	"{""adjacent layers"": 2}"	epub/ch07.md:16
+same API	2	1	"{""same API"": 2}"	epub/ch07.md:94
+division	2	1	"{""division"": 2}"	epub/ch07.md:94
+high level class	2	1	"{""higher level class"": 2}"	epub/ch07.md:106
+several other method	2	1	"{""several other methods"": 2}"	epub/ch07.md:118
+C1	2	1	"{""C1"": 2}"	epub/ch07.md:121
+url	2	2	"{""URLs"": 2}"	epub/ch07.md:124
+incoming URL	2	2	"{""incoming URL"": 2}"	epub/ch07.md:124
+multiple implementation	2	2	"{""multiple implementations"": 2}"	epub/ch07.md:127
+different implementation	2	2	"{""different implementations"": 2}"	epub/ch07.md:127
+wrapper	2	1	"{""wrapper"": 1, ""wrappers"": 1}"	epub/ch07.md:133
+API duplication	2	1	"{""API duplication"": 2}"	epub/ch07.md:133
+large block	2	2	"{""larger block"": 1, ""large block"": 1}"	epub/ch07.md:133
+scrollbars	2	1	"{""scrollbars"": 2}"	epub/ch07.md:133
+particular use case	2	2	"{""particular use case"": 2}"	epub/ch07.md:145
+shallow one	2	2	"{""shallow ones"": 2}"	epub/ch07.md:148
+wrapper class	2	1	"{""wrapper class"": 2}"	epub/ch07.md:154
+different abstraction rule	2	1	"{""different abstraction rule"": 2}"	epub/ch07.md:160
+abstraction rule	2	1	"{""abstraction rule"": 2}"	epub/ch07.md:160
+text module	2	2	"{""text module"": 2}"	epub/ch07.md:160
+datacenter service	2	1	"{""datacenter service"": 2}"	epub/ch07.md:169
+library method	2	2	"{""library method"": 2}"	epub/ch07.md:169
+intermediate method	2	1	"{""intermediate methods"": 2}"	epub/ch07.md:169
+multiple instance	2	1	"{""multiple instances"": 2}"	epub/ch07.md:178
+application's	2	2	"{""application's"": 2}"	epub/ch07.md:181
+performance counter	2	1	"{""performance counters"": 2}"	epub/ch07.md:181
+counter	2	1	"{""counters"": 2}"	epub/ch07.md:181
+many place	2	2	"{""many places"": 2}"	epub/ch07.md:187
+thread-safety	2	2	"{""thread-safety"": 2}"	epub/ch07.md:193
+same abstraction	2	2	"{""same abstraction"": 2}"	epub/ch07.md:202
+easy problem	2	2	"{""easy problems"": 1, ""easy problem"": 1}"	epub/ch08.md:10
+handle	2	2	"{""handle"": 1, ""handles"": 1}"	epub/ch08.md:10
+system administrator	2	1	"{""system administrator"": 2}"	epub/ch08.md:10
+delete whole line	2	2	"{""delete whole lines"": 2}"	epub/ch08.md:19
+individual character	2	2	"{""individual characters"": 1, ""individual character"": 1}"	epub/ch08.md:19
+pull	2	2	"{""pulls"": 1, ""Pull"": 1}"	epub/ch08.md:22
+pull complexity	2	2	"{""pulls complexity"": 1, ""Pull complexity"": 1}"	epub/ch08.md:22
+arbitrary range	2	2	"{""arbitrary ranges"": 2}"	epub/ch08.md:22
+advocate	2	2	"{""Advocates"": 1, ""advocate"": 1}"	epub/ch08.md:31
+high priority	2	2	"{""higher priority"": 2}"	epub/ch08.md:31
+right value	2	1	"{""right values"": 2}"	epub/ch08.md:34
+simplifies	2	2	"{""simplifies"": 2}"	epub/ch08.md:43
+remember	2	2	"{""Remember"": 2}"	epub/ch08.md:43
+core function	2	2	"{""core functions"": 2}"	epub/ch08.md:46
+multiple class	2	2	"{""multiple classes"": 2}"	epub/ch09.md:7
+creates	2	2	"{""creates"": 2}"	epub/ch09.md:10
+additional complexity	2	2	"{""additional complexity"": 2}"	epub/ch09.md:10
+track	2	2	"{""track"": 2}"	epub/ch09.md:13
+large collection	2	2	"{""large collection"": 2}"	epub/ch09.md:13
+more interface	2	1	"{""more interfaces"": 2}"	epub/ch09.md:13
+subdivided component	2	1	"{""subdivided components"": 2}"	epub/ch09.md:19
+indication	2	2	"{""indications"": 1, ""indication"": 1}"	epub/ch09.md:25
+share	2	2	"{""share"": 1, ""shares"": 1}"	epub/ch09.md:28
+anyone	2	2	"{""anyone"": 2}"	epub/ch09.md:31
+relationship	2	2	"{""relationship"": 2}"	epub/ch09.md:31
+block cache	2	1	"{""block cache"": 1, ""block caches"": 1}"	epub/ch09.md:31
+fall	2	1	"{""fall"": 2}"	epub/ch09.md:34
+HTTP server	2	1	"{""HTTP server"": 2}"	epub/ch09.md:46
+repeated code snippet	2	1	"{""repeated code snippets"": 1, ""repeated code snippet"": 1}"	epub/ch09.md:61
+code snippet	2	1	"{""code snippets"": 1, ""code snippet"": 1}"	epub/ch09.md:61
+replacement method	2	1	"{""replacement method"": 2}"	epub/ch09.md:61
+much benefit	2	1	"{""much benefit"": 2}"	epub/ch09.md:61
+additional interface	2	1	"{""additional interfaces"": 2}"	epub/ch09.md:70
+new text	2	1	"{""new text"": 2}"	epub/ch09.md:94
+sequence	2	2	"{""sequences"": 2}"	epub/ch09.md:112
+short one	2	2	"{""shorter ones"": 2}"	epub/ch09.md:211
+i'll	2	2	"{""I'll"": 2}"	epub/ch09.md:214
+remainder	2	2	"{""remainder"": 2}"	epub/ch09.md:226
+method doesn't	2	1	"{""method doesn't"": 2}"	epub/ch09.md:226
+second way	2	2	"{""second way"": 2}"	epub/ch09.md:229
+method's functionality	2	1	"{""method's functionality"": 2}"	epub/ch09.md:229
+most caller	2	2	"{""most callers"": 2}"	epub/ch09.md:229
+other situation	2	2	"{""other situations"": 2}"	epub/ch09.md:229
+encapsulation	2	2	"{""encapsulation"": 2}"	epub/ch09.md:235
+other context	2	2	"{""other contexts"": 2}"	epub/ch09.md:241
+book clean	2	2	"{""book Clean"": 2}"	epub/ch09.md:247
+clean	2	2	"{""Clean"": 2}"	epub/ch09.md:247
+robert martin	2	2	"{""Robert Martin"": 2}"	epub/ch09.md:247
+short function	2	1	"{""shorter functions"": 1, ""short functions"": 1}"	epub/ch09.md:253
+readability	2	2	"{""readability"": 2}"	epub/ch09.md:253
+large function	2	1	"{""larger function"": 2}"	epub/ch09.md:253
+overall lesson	2	2	"{""overall lesson"": 2}"	epub/ch10.md:7
+semantics	2	1	"{""semantics"": 2}"	epub/ch10.md:7
+normal behavior	2	1	"{""normal behavior"": 2}"	epub/ch10.md:7
+normal flow	2	1	"{""normal flow"": 2}"	epub/ch10.md:13
+formal exception	2	1	"{""formal exception"": 2}"	epub/ch10.md:13
+requested operation	2	1	"{""requested operation"": 2}"	epub/ch10.md:22
+distributed system	2	1	"{""distributed system"": 1, ""distributed systems"": 1}"	epub/ch10.md:25
+significant fraction	2	2	"{""significant fraction"": 2}"	epub/ch10.md:31
+normal-case code	2	1	"{""normal-case code"": 2}"	epub/ch10.md:34
+wasn't	2	2	"{""wasn't"": 2}"	epub/ch10.md:37
+alternative approach	2	2	"{""alternative approach"": 2}"	epub/ch10.md:127
+multiple block	2	2	"{""multiple blocks"": 2}"	epub/ch10.md:127
+long time	2	2	"{""long time"": 2}"	epub/ch10.md:130
+distributed data-intensive system	2	1	"{""distributed data-intensive systems"": 1, ""Distributed Data-Intensive Systems"": 1}"	epub/ch10.md:133
+data-intensive system	2	1	"{""data-intensive systems"": 1, ""Data-Intensive Systems"": 1}"	epub/ch10.md:133
+unnecessary exception	2	1	"{""unnecessary exceptions"": 2}"	epub/ch10.md:139
+variable doesn't	2	1	"{""variable doesn't"": 2}"	epub/ch10.md:142
+common us	2	2	"{""common uses"": 2}"	epub/ch10.md:142
+trouble	2	2	"{""trouble"": 2}"	epub/ch10.md:145
+tcl command	2	1	"{""Tcl command"": 2}"	epub/ch10.md:157
+defines	2	1	"{""defines"": 2}"	epub/ch10.md:166
+delete operation	2	1	"{""delete operation"": 2}"	epub/ch10.md:166
+other process	2	1	"{""other processes"": 2}"	epub/ch10.md:166
+same name	2	2	"{""same name"": 2}"	epub/ch10.md:166
+java method	2	1	"{""Java method"": 2}"	epub/ch10.md:181
+other language	2	2	"{""other languages"": 1, ""other language"": 1}"	epub/ch10.md:181
+error-ful approach	2	1	"{""error-ful approach"": 2}"	epub/ch10.md:184
+exception masking	2	1	"{""Exception masking"": 2}"	epub/ch10.md:193
+file system code	2	2	"{""file system code"": 2}"	epub/ch10.md:196
+NFS server	2	1	"{""NFS server"": 2}"	epub/ch10.md:196
+powerful tool	2	2	"{""powerful tool"": 2}"	epub/ch10.md:205
+single handler	2	1	"{""single handler"": 2}"	epub/ch10.md:211
+separate exception	2	1	"{""separate exception"": 2}"	epub/ch10.md:217
+separate exception handler	2	1	"{""separate exception handler"": 2}"	epub/ch10.md:217
+parameter quantity	2	1	"{""parameter quantity"": 2}"	epub/ch10.md:226
+top-level exception	2	1	"{""top-level exception"": 2}"	epub/ch10.md:226
+top-level exception handler	2	1	"{""top-level exception handler"": 2}"	epub/ch10.md:226
+top-level handler	2	1	"{""top-level handler"": 2}"	epub/ch10.md:226
+same way	2	2	"{""same way"": 2}"	epub/ch10.md:232
+superclass	2	2	"{""superclass"": 2}"	epub/ch10.md:232
+different subclass	2	2	"{""different subclasses"": 2}"	epub/ch10.md:235
+ramcloud system	2	2	"{""RAMCloud system"": 2}"	epub/ch10.md:241
+special-purpose mechanism	2	2	"{""special-purpose mechanisms"": 1, ""special-purpose mechanism"": 1}"	epub/ch10.md:250
+storage allocation	2	2	"{""storage allocation"": 2}"	epub/ch10.md:259
+unneeded memory	2	1	"{""unneeded memory"": 2}"	epub/ch10.md:262
+out-of-memory error	2	1	"{""out-of-memory error"": 1, ""out-of-memory errors"": 1}"	epub/ch10.md:262
+many other example	2	2	"{""many other examples"": 2}"	epub/ch10.md:271
+meant	2	2	"{""meant"": 2}"	epub/ch10.md:283
+make	2	2	"{""make"": 1, ""Make"": 1}"	epub/ch10.md:292
+special-case code	2	2	"{""special-case code"": 2}"	epub/ch10.md:292
+significant impact	2	2	"{""significant impact"": 2}"	epub/ch10.md:292
+multiple option	2	2	"{""multiple options"": 2}"	epub/ch11.md:7
+suppose	2	2	"{""Suppose"": 2}"	epub/ch11.md:10
+boundary	2	2	"{""boundaries"": 2}"	epub/ch11.md:10
+weakness	2	2	"{""weaknesses"": 2}"	epub/ch11.md:13
+text example	2	1	"{""text example"": 2}"	epub/ch11.md:19
+character-oriented approach	2	1	"{""character-oriented approach"": 1, ""character-oriented approaches"": 1}"	epub/ch11.md:25
+additional text	2	1	"{""additional text"": 2}"	epub/ch11.md:31
+additional text manipulation	2	1	"{""additional text manipulations"": 2}"	epub/ch11.md:31
+design-it-twice principle	2	1	"{""design-it-twice principle"": 2}"	epub/ch11.md:34
+many level	2	2	"{""many levels"": 2}"	epub/ch11.md:34
+gap	2	2	"{""gap"": 1, ""gaps"": 1}"	epub/ch11.md:34
+multiple design	2	1	"{""multiple designs"": 2}"	epub/ch11.md:34
+hour	2	2	"{""hour"": 1, ""hours"": 1}"	epub/ch11.md:37
+try	2	2	"{""try"": 2}"	epub/ch11.md:40
+waste	2	2	"{""waste"": 2}"	epub/ch12.md:10
+next few chapter	2	1	"{""next few chapters"": 2}"	epub/ch12.md:13
+few chapter	2	1	"{""few chapters"": 2}"	epub/ch12.md:13
+turn	2	2	"{""turn"": 2}"	epub/ch12.md:31
+significant amount	2	2	"{""significant amount"": 2}"	epub/ch12.md:37
+high-level description	2	2	"{""high-level description"": 2}"	epub/ch12.md:37
+rationale	2	1	"{""rationale"": 2}"	epub/ch12.md:37
+method implementation	2	2	"{""method implementations"": 1, ""method implementation"": 1}"	epub/ch12.md:40
+you'll end	2	2	"{""you'll end"": 2}"	epub/ch12.md:49
+important comment	2	2	"{""important comments"": 2}"	epub/ch12.md:55
+stale comment	2	2	"{""stale comments"": 1, ""Stale comments"": 1}"	epub/ch12.md:61
+couldn't	2	2	"{""couldn't"": 2}"	epub/ch12.md:73
+low-level	2	2	"{""low-level"": 2}"	epub/ch12.md:73
+hardware	2	2	"{""hardware"": 2}"	epub/ch12.md:73
+additional time	2	2	"{""additional time"": 2}"	epub/ch12.md:73
+designer's	2	1	"{""designer's"": 2}"	epub/ch12.md:73
+well-written comment	2	1	"{""well-written comment"": 1, ""Well-written comments"": 1}"	epub/ch12.md:112
+good designer	2	2	"{""good designers"": 1, ""good designer"": 1}"	epub/ch12.md:115
+simple way	2	1	"{""simple way"": 2}"	epub/ch13.md:10
+javadoc	2	2	"{""Javadoc"": 2}"	epub/ch13.md:19
+member	2	2	"{""member"": 2}"	epub/ch13.md:31
+cross-module comment	2	1	"{""Cross-module comment"": 1, ""Cross-module comments"": 1}"	epub/ch13.md:37
+same level	2	1	"{""same level"": 2}"	epub/ch13.md:49
+same word	2	1	"{""same words"": 2}"	epub/ch13.md:91
+second comment	2	1	"{""second comment"": 2}"	epub/ch13.md:142
+width	2	1	"{""widths"": 1, ""width"": 1}"	epub/ch13.md:214
+additional detail	2	2	"{""additional details"": 1, ""Additional details"": 1}"	epub/ch13.md:214
+noun	2	2	"{""nouns"": 1, ""noun"": 1}"	epub/ch13.md:247
+overall intent	2	1	"{""overall intent"": 2}"	epub/ch13.md:289
+high-level information	2	1	"{""high-level information"": 2}"	epub/ch13.md:346
+rpcs	2	1	"{""RPCs"": 2}"	epub/ch13.md:346
+new comment	2	1	"{""new comment"": 2}"	epub/ch13.md:346
+didn't	2	2	"{""didn't"": 2}"	epub/ch13.md:346
+essence	2	2	"{""essence"": 2}"	epub/ch13.md:352
+good higher-level comment	2	1	"{""good higher-level comment"": 2}"	epub/ch13.md:352
+first sentence	2	1	"{""first sentence"": 2}"	epub/ch13.md:415
+code isn't	2	2	"{""Code isn't"": 1, ""code isn't"": 1}"	epub/ch13.md:421
+method work	2	1	"{""method works"": 1, ""methods work"": 1}"	epub/ch13.md:424
+precondition	2	1	"{""preconditions"": 2}"	epub/ch13.md:475
+C++ code	2	1	"{""C++ code"": 2}"	epub/ch13.md:544
+particular name	2	2	"{""particular name"": 2}"	epub/ch13.md:547
+lookup	2	2	"{""lookups"": 1, ""lookup"": 1}"	epub/ch13.md:550
+age	2	1	"{""age"": 1, ""ages"": 1}"	epub/ch13.md:577
+comparison function	2	1	"{""comparison function"": 2}"	epub/ch13.md:586
+particular object	2	1	"{""particular object"": 2}"	epub/ch13.md:586
+floating-point number	2	1	"{""floating-point numbers"": 2}"	epub/ch13.md:586
+different server	2	1	"{""different servers"": 2}"	epub/ch13.md:592
+excerpt	2	1	"{""excerpt"": 2}"	epub/ch13.md:598
+first paragraph	2	1	"{""first paragraph"": 2}"	epub/ch13.md:691
+half	2	2	"{""half"": 2}"	epub/ch13.md:691
+private variable	2	2	"{""private variables"": 2}"	epub/ch13.md:691
+several thing	2	2	"{""several things"": 2}"	epub/ch13.md:694
+recovers	2	1	"{""recovers"": 2}"	epub/ch13.md:730
+first version	2	2	"{""first version"": 2}"	epub/ch13.md:739
+main goal	2	2	"{""main goal"": 2}"	epub/ch13.md:835
+major block	2	2	"{""major blocks"": 2}"	epub/ch13.md:835
+more abstract	2	2	"{""more abstract"": 2}"	epub/ch13.md:835
+cross-module documentation	2	1	"{""cross-module documentation"": 2}"	epub/ch13.md:868
+such documentation	2	1	"{""such documentation"": 2}"	epub/ch13.md:868
+new status	2	1	"{""new status"": 1, ""New status"": 1}"	epub/ch13.md:868
+new status value	2	1	"{""new status value"": 1, ""New status values"": 1}"	epub/ch13.md:868
+status value	2	1	"{""status value"": 1, ""status values"": 1}"	epub/ch13.md:868
+enum	2	1	"{""enum"": 2}"	epub/ch13.md:868
+zombie server	2	1	"{""zombie servers"": 2}"	epub/ch13.md:958
+confidence	2	2	"{""confidence"": 2}"	epub/ch13.md:1000
+reviewer	2	2	"{""reviewer"": 1, ""reviewers"": 1}"	epub/ch13.md:1003
+argue	2	2	"{""argue"": 2}"	epub/ch13.md:1003
+poor name	2	1	"{""poor name"": 2}"	epub/ch14.md:7
+poor name choice	2	1	"{""poor name choices"": 1, ""poor name choice"": 1}"	epub/ch14.md:7
+mediocre	2	1	"{""mediocre"": 2}"	epub/ch14.md:7
+mediocre name	2	1	"{""mediocre name"": 1, ""mediocre names"": 1}"	epub/ch14.md:7
+late s	2	2	"{""late s"": 2}"	epub/ch14.md:13
+graduate	2	1	"{""graduate"": 2}"	epub/ch14.md:13
+graduate student	2	1	"{""graduate students"": 2}"	epub/ch14.md:13
+zero	2	1	"{""zeroes"": 2}"	epub/ch14.md:13
+logical block number	2	1	"{""logical block number"": 2}"	epub/ch14.md:16
+match	2	2	"{""match"": 1, ""matches"": 1}"	epub/ch14.md:22
+image	2	1	"{""image"": 2}"	epub/ch14.md:28
+important aspect	2	2	"{""important aspects"": 2}"	epub/ch14.md:28
+precise name	2	1	"{""precise name"": 1, ""precise names"": 1}"	epub/ch14.md:52
+word blink	2	1	"{""word blink"": 2}"	epub/ch14.md:76
+blink	2	1	"{""blink"": 2}"	epub/ch14.md:76
+general rule	2	2	"{""general rule"": 2}"	epub/ch14.md:88
+iteration variable	2	1	"{""iteration variables"": 1, ""iteration variable"": 1}"	epub/ch14.md:112
+single variable	2	2	"{""single variable"": 2}"	epub/ch14.md:136
+prefix	2	1	"{""prefix"": 2}"	epub/ch14.md:154
+naming	2	1	"{""naming"": 2}"	epub/ch14.md:157
+loop variable	2	1	"{""loop variables"": 2}"	epub/ch14.md:157
+clutter	2	2	"{""clutter"": 2}"	epub/ch14.md:163
+hungarian notation	2	1	"{""Hungarian Notation"": 2}"	epub/ch14.md:166
+notation	2	1	"{""Notation"": 2}"	epub/ch14.md:166
+ides	2	2	"{""IDEs"": 2}"	epub/ch14.md:166
+class name	2	1	"{""class name"": 2}"	epub/ch14.md:169
+go language	2	1	"{""Go language"": 1, ""go language"": 1}"	epub/ch14.md:175
+gerrand	2	1	"{""Gerrand"": 2}"	epub/ch14.md:175
+second version	2	1	"{""second version"": 2}"	epub/ch14.md:259
+distance	2	1	"{""distance"": 2}"	epub/ch14.md:262
+that's fine	2	2	"{""that's fine"": 2}"	epub/ch14.md:265
+first guess	2	2	"{""first guess"": 1, ""first guesses"": 1}"	epub/ch14.md:274
+much thought	2	2	"{""much thought"": 2}"	epub/ch14.md:274
+few day	2	2	"{""few days"": 2}"	epub/ch15.md:19
+class interface	2	2	"{""class interface"": 2}"	epub/ch15.md:31
+comments-first approach	2	1	"{""comments-first approach"": 2}"	epub/ch15.md:52
+mine	2	1	"{""mine"": 2}"	epub/ch15.md:61
+long comment	2	1	"{""long comment"": 2}"	epub/ch15.md:61
+indicator	2	1	"{""indicator"": 2}"	epub/ch15.md:67
+measure	2	2	"{""measure"": 2}"	epub/ch15.md:70
+outset	2	2	"{""outset"": 2}"	epub/ch16.md:7
+system's evolution	2	1	"{""system's evolution"": 2}"	epub/ch16.md:7
+evolution	2	1	"{""evolution"": 2}"	epub/ch16.md:7
+farther	2	1	"{""farther"": 2}"	epub/ch16.md:37
+code file	2	1	"{""code file"": 2}"	epub/ch16.md:37
+method's name	2	1	"{""method's name"": 2}"	epub/ch16.md:40
+source code	2	2	"{""source code"": 2}"	epub/ch16.md:67
+source code repository	2	2	"{""source code repository"": 2}"	epub/ch16.md:67
+code repository	2	2	"{""code repository"": 2}"	epub/ch16.md:67
+obvious single place	2	1	"{""obvious single place"": 2}"	epub/ch16.md:76
+revision control	2	1	"{""revision control"": 2}"	epub/ch16.md:79
+user manual	2	1	"{""user manual"": 2}"	epub/ch16.md:85
+manual	2	1	"{""manual"": 2}"	epub/ch16.md:85
+style guideline	2	1	"{""Style guidelines"": 1, ""style guidelines"": 1}"	epub/ch17.md:22
+code's behavior	2	1	"{""code's behavior"": 2}"	epub/ch17.md:31
+new convention	2	1	"{""new conventions"": 1, ""new convention"": 1}"	epub/ch17.md:37
+automated checker	2	1	"{""Automated checkers"": 1, ""automated checkers"": 1}"	epub/ch17.md:46
+line termination	2	1	"{""line termination"": 2}"	epub/ch17.md:49
+termination	2	1	"{""termination"": 2}"	epub/ch17.md:49
+rome	2	1	"{""Rome"": 2}"	epub/ch17.md:58
+new idea	2	2	"{""new idea"": 1, ""new ideas"": 1}"	epub/ch17.md:61
+new information	2	2	"{""new information"": 2}"	epub/ch17.md:61
+old convention	2	1	"{""old convention"": 2}"	epub/ch17.md:61
+own code	2	2	"{""own code"": 2}"	epub/ch18.md:13
+obviousness	2	1	"{""obviousness"": 2}"	epub/ch18.md:13
+precise	2	2	"{""Precise"": 1, ""precise"": 1}"	epub/ch18.md:19
+meaningful name	2	1	"{""meaningful names"": 2}"	epub/ch18.md:19
+white space	2	1	"{""white space"": 1, ""White space"": 1}"	epub/ch18.md:25
+handler function	2	1	"{""handler functions"": 1, ""handler function"": 1}"	epub/ch18.md:205
+java example	2	1	"{""Java example"": 2}"	epub/ch18.md:241
+main program	2	1	"{""main program"": 1, ""main programs"": 1}"	epub/ch18.md:271
+interface inheritance	2	1	"{""interface inheritance"": 1, ""Interface inheritance"": 1}"	epub/ch19.md:16
+same method	2	1	"{""same methods"": 1, ""same method"": 1}"	epub/ch19.md:16
+disk file	2	1	"{""disk files"": 2}"	epub/ch19.md:16
+high complexity	2	1	"{""high complexity"": 2}"	epub/ch19.md:25
+helper	2	1	"{""helper"": 2}"	epub/ch19.md:28
+helper class	2	1	"{""helper classes"": 2}"	epub/ch19.md:28
+practitioner	2	1	"{""practitioners"": 2}"	epub/ch19.md:40
+customer	2	1	"{""customers"": 1, ""customer"": 1}"	epub/ch19.md:40
+separate QA	2	1	"{""separate QA"": 2}"	epub/ch19.md:55
+QA	2	1	"{""QA"": 2}"	epub/ch19.md:55
+second kind	2	2	"{""second kind"": 2}"	epub/ch19.md:58
+byte-code compiler	2	1	"{""byte-code compiler"": 2}"	epub/ch19.md:67
+object-oriented software	2	1	"{""Object-Oriented Software"": 1, ""object-oriented software"": 1}"	epub/ch19.md:88
+new software	2	2	"{""new software"": 2}"	epub/ch19.md:115
+high performance	2	1	"{""high performance"": 2}"	epub/ch20.md:7
+optimization	2	1	"{""optimizations"": 1, ""optimization"": 1}"	epub/ch20.md:13
+m	2	1	"{""ms"": 2}"	epub/ch20.md:19
+overall performance	2	1	"{""overall performance"": 2}"	epub/ch20.md:28
+ramcloud project	2	1	"{""RAMCloud project"": 2}"	epub/ch20.md:31
+latency	2	2	"{""latency"": 1, ""latencies"": 1}"	epub/ch20.md:43
+networking	2	1	"{""networking"": 2}"	epub/ch20.md:43
+many other thing	2	2	"{""many other things"": 2}"	epub/ch20.md:43
+simple code	2	1	"{""simpler code"": 1, ""simple code"": 1}"	epub/ch20.md:46
+speedup	2	1	"{""speedup"": 2}"	epub/ch20.md:55
+overall system performance	2	1	"{""overall system performance"": 2}"	epub/ch20.md:61
+simplest	2	1	"{""simplest"": 2}"	epub/ch20.md:70
+memory copying	2	1	"{""memory copying"": 2}"	epub/ch20.md:82
+linear array	2	1	"{""linear array"": 2}"	epub/ch20.md:82
+discontiguous chunk	2	1	"{""discontiguous chunks"": 2}"	epub/ch20.md:82
+external chunk	2	1	"{""External chunks"": 1, ""external chunks"": 1}"	epub/ch20.md:82
+memory copy	2	1	"{""memory copies"": 2}"	epub/ch20.md:82
+first chunk	2	1	"{""first chunk"": 2}"	epub/ch20.md:88
+large object	2	1	"{""large object"": 2}"	epub/ch20.md:91
+possible case	2	1	"{""possible case"": 2}"	epub/ch20.md:97
+last existing chunk	2	1	"{""last existing chunk"": 2}"	epub/ch20.md:97
+existing chunk	2	1	"{""existing chunk"": 2}"	epub/ch20.md:97
+performance-critical path	2	2	"{""performance-critical paths"": 1, ""performance-critical path"": 1}"	epub/ch20.md:106
+total buffer	2	1	"{""total Buffer"": 2}"	epub/ch20.md:118
+total buffer length	2	1	"{""total Buffer length"": 2}"	epub/ch20.md:118
+n	2	1	"{""ns"": 2}"	epub/ch20.md:121
+external constraint	2	1	"{""external constraints"": 2}"	epub/ch21.md:16
+good taste	2	1	"{""good taste"": 2}"	epub/ch21.md:64
+taste	2	1	"{""taste"": 2}"	epub/ch21.md:64
+professor	2	1	"{""Professor"": 2}"	epub/summary.md:106
+U	2	1	"{""U"": 2}"	epub/summary.md:106
+berkeley	2	1	"{""Berkeley"": 2}"	epub/summary.md:106
+national	2	1	"{""National"": 2}"	epub/summary.md:106

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "ch02-weighted-work", "chapter": "ch02", "title": "先简化最难的，还是常改的？",
+    "question": "为什么只看局部复杂性高低，不足以安排改进优先级？",
+    "answer": "整体负担还取决于开发者在各部分花费的时间。相同的局部简化，作用于常接触的部分时，加权影响可以更大。",
+    "summary": "用固定时间权重的教学算例展开原书公式：两处复杂性都降低 1，整体指标分别下降 0.8 和 0.2。不是工时预测。",
+    "alt": "A 复杂性为 2、时间占比 80%，B 为 8、占比 20%，贡献同为 1.6。A 降低 1 后总和为 2.4，B 降低 1 后为 3.0。",
+    "kind": "worked-matrix", "desktop": "/diagrams/ch02-weighted-work.svg", "mobile": "/diagrams/ch02-weighted-work-mobile.svg",
+    "anchor": { "section": "2.1", "placement": "end" },
+    "sources": [
+      { "section": "2.1", "epub": "OEBPS/part0006.xhtml#p10:857fd96bed", "reason": "复杂性与常见开发活动有关，罕少触及的复杂部分影响有限。" },
+      { "section": "2.1", "epub": "OEBPS/part0006.xhtml#p11:4407ac13f2", "reason": "整体复杂性按开发时间比例加权；图展开算例而非复制公式图。" }
+    ],
+    "teachingExample": "A/B、复杂性分值、80%/20% 和固定权重均为教学假设；不是测量方法或投资收益预测。",
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch02-memory-owner", "chapter": "ch02", "title": "少写一行，为何仍然难用？",
+    "question": "返回指针的函数把什么额外责任交给了调用者？",
+    "answer": "调用者除了使用数据，还必须知道由谁、何时释放内存。把释放责任收回分配模块，才能减轻这部分认知负荷。",
+    "summary": "沿分配、使用、释放追踪责任跨越的边界。第二条轨迹是责任重组示意，不规定具体的 C API 或生命周期方案。",
+    "alt": "第一条轨迹从模块分配内存、返回指针，到调用者使用并负责释放；漏掉最后一步会泄漏。第二条轨迹中分配和最终释放都由同一模块负责。",
+    "kind": "ownership-trace", "desktop": "/diagrams/ch02-memory-owner.svg", "mobile": "/diagrams/ch02-memory-owner-mobile.svg",
+    "anchor": { "section": "2.2", "placement": "end" },
+    "sources": [
+      { "section": "2.2", "epub": "OEBPS/part0006.xhtml#p16:a109901f0e", "reason": "分配函数假定调用者释放内存增加认知负荷；原书建议分配模块承担释放责任。" },
+      { "section": "2.2", "epub": "OEBPS/part0006.xhtml#p17:e51597de57", "reason": "代码行数不能代表理解调用所需知识的成本。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch02-cause-symptom", "chapter": "ch02", "title": "依赖与模糊性如何叠加？",
+    "question": "同样是新增错误状态，知道消息表的存在与不知道有何不同？",
+    "answer": "状态声明与消息表的依赖带来联动修改；若消息表不明显，还会出现不知道要改它的风险。认知负荷可同时来自依赖和模糊性。",
+    "summary": "矩阵区分三种症状，再以错误状态和消息表展示隐藏依赖。让依赖明显不会自动消除联动修改。",
+    "alt": "依赖连接到变更放大和认知负荷，模糊性连接到认知负荷和未知的未知。新增状态时，知道消息表就可同步修改，不知道则可能遗漏。",
+    "kind": "cause-matrix", "desktop": "/diagrams/ch02-cause-symptom.svg", "mobile": "/diagrams/ch02-cause-symptom-mobile.svg",
+    "anchor": { "section": "2.3", "placement": "end" },
+    "sources": [
+      { "section": "2.3", "epub": "OEBPS/part0006.xhtml#p27:3c809c76e1", "reason": "新增错误状态还需更新消息表，但该表的存在可能不明显。" },
+      { "section": "2.3", "epub": "OEBPS/part0006.xhtml#p29:ab0367e05b", "reason": "明确列出依赖、模糊性分别导致的三种症状。" },
+      { "section": "2.3", "epub": "OEBPS/part0006.xhtml#p25:d90f87f2bd", "reason": "依赖不能全部消除，应尽量简单且明显。" }
+    ],
+    "status": "awaiting-independent-review"
+  }
+]

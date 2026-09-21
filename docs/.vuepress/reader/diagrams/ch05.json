@@ -1,0 +1,151 @@
+[
+  {
+    "id": "ch05-format-ownership",
+    "chapter": "ch05",
+    "title": "运行顺序不等于模块边界",
+    "question": "读文件和写文件发生在不同时间，为什么仍应共享一个格式实现？",
+    "answer": "两步使用同一份格式知识。把它们分成各自掌握格式的模块，会让格式变化传播到两处；同一模块可以在不同阶段被调用。",
+    "summary": "执行依旧是读、修改、写，改变的是格式知识的归属。合并或提取只有真正隐藏格式细节才有效。",
+    "alt": "两组都按编号 1 读取、2 修改、3 写入。合并前格式变更 K 分别连到读和写两个实现；合并后相同事件 K 只连到共用格式实现，读取和写入通过独立调用箭头连接该模块，应用阶段保持不变。",
+    "kind": "change-propagation",
+    "desktop": "/diagrams/ch05-format-ownership.svg",
+    "mobile": "/diagrams/ch05-format-ownership-mobile.svg",
+    "anchor": {
+      "section": "5.3",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "5.2",
+        "epub": "OEBPS/part0009.xhtml#p18:4f98927335",
+        "reason": "读写类即使不在接口公开格式，也会后门泄露相同知识。"
+      },
+      {
+        "section": "5.2",
+        "epub": "OEBPS/part0009.xhtml#p19:8b5ba3fcd6",
+        "reason": "合并或提取格式知识必须配合真正隐藏细节的简单接口。"
+      },
+      {
+        "section": "5.3",
+        "epub": "OEBPS/part0009.xhtml#p21:3ec818d82b",
+        "reason": "原书读、修改、写示例建议合并读写核心机制。"
+      },
+      {
+        "section": "5.3",
+        "epub": "OEBPS/part0009.xhtml#p24:d201909363",
+        "reason": "时间顺序仍有意义，但不能单凭时间决定模块结构。"
+      }
+    ],
+    "teachingExample": "K 只是文件格式知识的教学记号；编号 1、2、3 表示原书读改写阶段，不假定三个阶段互相调用，也不指定具体文件格式。",
+    "status": "content-reviewed",
+    "titleTw": "執行順序不等於模組邊界",
+    "questionTw": "讀檔案和寫檔案發生在不同時間，為什麼仍應共享一個格式實作？",
+    "answerTw": "兩步使用同一份格式知識。把它們分成各自掌握格式的模組，會讓格式變化傳播到兩處；同一模組可以在不同階段被呼叫。",
+    "summaryTw": "執行依舊是讀、修改、寫，改變的是格式知識的歸屬。合併或提取只有真正隱藏格式細節才有效。",
+    "altTw": "兩組都按編號 1 讀取、2 修改、3 寫入。合併前格式變更 K 分別連到讀和寫兩個實作；合併後相同事件 K 只連到共用格式實作，讀取和寫入透過獨立呼叫箭頭連線該模組，應用階段保持不變。",
+    "desktopTw": "/diagrams/ch05-format-ownership-tw.svg",
+    "mobileTw": "/diagrams/ch05-format-ownership-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-01-07-followup.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  },
+  {
+    "id": "ch05-http-read",
+    "chapter": "ch05",
+    "title": "还没解析，怎么知道读完了？",
+    "question": "为什么书中的 HTTP 请求不能简单拆成先完整读取、再解析？",
+    "answer": "读取者也必须理解请求结构，例如解析 Content-Length 才知道请求体应读多长；将读取和解析彻底分开会复制这份知识。",
+    "summary": "长度字段连到四个 ASCII 字节的边界；在被批评的拆分类设计中，读取类和解析类各自包含同一份定界知识 K，合并后由一个模块保存。",
+    "alt": "Content-Length: 4 的依赖箭头指向 a、=、1、2 四字节范围。拆分方案的读取类先使用 K 识别头部与长度，随后解析类再次使用 K；合并方案只有一份 K，并在模块内依次完成定界读取和形成请求。",
+    "kind": "protocol-trace",
+    "desktop": "/diagrams/ch05-http-read.svg",
+    "mobile": "/diagrams/ch05-http-read-mobile.svg",
+    "anchor": {
+      "section": "5.5",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "5.5",
+        "epub": "OEBPS/part0009.xhtml#p32:1fb3f4cb4e",
+        "reason": "读取者须解析 Content-Length 等结构，读取类与解析类发生知识重复。"
+      },
+      {
+        "section": "5.5",
+        "epub": "OEBPS/part0009.xhtml#p33:bc4302405d",
+        "reason": "合并读取和解析隔离格式知识，并减少调用者的操作。"
+      }
+    ],
+    "teachingExample": "Content-Length: 4 和 ASCII 请求体 a=12 为教学示例；仅讨论这种长度定界情形，非完整 HTTP 算法，也不表示一次 socket read 必然取得全部字节。",
+    "status": "content-reviewed",
+    "titleTw": "還沒解析，怎麼知道讀完了？",
+    "questionTw": "為什麼書中的 HTTP 請求不能簡單拆成先完整讀取、再解析？",
+    "answerTw": "讀取者也必須理解請求結構，例如解析 Content-Length 才知道請求體應讀多長；將讀取和解析徹底分開會複製這份知識。",
+    "summaryTw": "長度欄位連到四個 ASCII 位元組的邊界；在被批評的拆分類設計中，讀取類和解析類各自包含同一份定界知識 K，合併後由一個模組儲存。",
+    "altTw": "Content-Length: 4 的依賴箭頭指向 a、=、1、2 四位元組範圍。拆分方案的讀取類先使用 K 識別頭部與長度，隨後解析類再次使用 K；合併方案只有一份 K，並在模組內依次完成定界讀取和形成請求。",
+    "desktopTw": "/diagrams/ch05-http-read-tw.svg",
+    "mobileTw": "/diagrams/ch05-http-read-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-01-07-followup.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  },
+  {
+    "id": "ch05-parameter-boundary",
+    "chapter": "ch05",
+    "title": "返回参数，还是泄露容器？",
+    "question": "为什么 private Map 加上 getParams，仍没有隐藏内部表示？",
+    "answer": "返回内部 Map 引用让调用者依赖容器、承担查找转换并避免误改状态；按名称返回值才能把表示和转换留在请求对象内部。",
+    "summary": "以 photo_id 的整数读取对比两条调用路径，同时保留参数缺失或转换失败会抛异常这一接口责任。",
+    "alt": "getParams 暴露内部 Map，调用者查找 photo_id、转换整数且不能随意修改容器。getIntParameter 在模块内部查找和转换，只返回整数 246 或异常。",
+    "kind": "boundary-trace",
+    "desktop": "/diagrams/ch05-parameter-boundary.svg",
+    "mobile": "/diagrams/ch05-parameter-boundary-mobile.svg",
+    "anchor": {
+      "section": "5.6",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "5.1",
+        "epub": "OEBPS/part0009.xhtml#p15:d39bc8123a",
+        "reason": "private 不等于信息隐藏，getter 仍可暴露表示。"
+      },
+      {
+        "section": "5.6",
+        "epub": "OEBPS/part0009.xhtml#p43:5c5eb3299a",
+        "reason": "返回内部 Map 暴露表示、增加调用步骤，并带来误改内部状态的风险。"
+      },
+      {
+        "section": "5.6",
+        "epub": "OEBPS/part0009.xhtml#p47:45a97e3759",
+        "reason": "按名取值和类型转换隐藏实现；缺失或无法转换时抛异常。"
+      }
+    ],
+    "status": "content-reviewed",
+    "titleTw": "回傳參數，還是洩露容器？",
+    "questionTw": "為什麼 private Map 加上 getParams，仍沒有隱藏內部表示？",
+    "answerTw": "回傳內部 Map 引用讓呼叫者依賴容器、承擔查詢轉換並避免誤改狀態；按名稱回傳值才能把表示和轉換留在請求物件內部。",
+    "summaryTw": "以 photo_id 的整數讀取對比兩條呼叫路徑，同時保留參數缺失或轉換失敗會拋例外這一介面責任。",
+    "altTw": "getParams 暴露內部 Map，呼叫者查詢 photo_id、轉換整數且不能隨意修改容器。getIntParameter 在模組內部查詢和轉換，只回傳整數 246 或例外。",
+    "desktopTw": "/diagrams/ch05-parameter-boundary-tw.svg",
+    "mobileTw": "/diagrams/ch05-parameter-boundary-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-01-07-followup.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  }
+]

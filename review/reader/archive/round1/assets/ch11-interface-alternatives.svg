@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 446" role="img" aria-labelledby="ch11-interface-alternatives-t ch11-interface-alternatives-d">
+  <title id="ch11-interface-alternatives-t">用同一操作检验三个接口</title><desc id="ch11-interface-alternatives-d">教学例从abcd换行efgh中删除cd、换行和ef，留下abgh。整行接口要求拆并行，逐字符接口要求五次调用，范围接口表达一次操作。</desc>
+  <defs><marker id="ch11-interface-alternatives-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="680" height="446" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">用同一操作检验三个接口</text>
+    <text x="24" y="72">教学任务：删除跨行范围</text>
+    <rect x="196" y="87" width="75" height="26" fill="var(--diagram-danger-soft,#ead9dc)"/><rect x="164" y="116" width="33" height="26" fill="var(--diagram-danger-soft,#ead9dc)"/>
+    <g font-family="monospace" font-size="22"><text x="164" y="109">abcd ↵</text><text x="164" y="138">efgh</text><text x="424" y="121">abgh</text></g>
+    <path d="M292 115H398" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch11-interface-alternatives-a)"/><text x="521" y="110" font-size="14">删除 4 个字母</text><text x="521" y="134" font-size="14">和 1 个换行</text>
+    <path d="M24 164H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="194" font-weight="600">候选接口</text><text x="200" y="194" font-weight="600">调用者还需要做什么？</text><text x="541" y="194" font-weight="600">进入文本类</text>
+    <text x="24" y="240">整行操作</text><rect x="196" y="213" width="306" height="46" rx="4" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="213" y="241">拆出前后保留部分，再合成一行</text><path d="M502 236H544" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch11-interface-alternatives-a)"/><text x="558" y="242">整行接口</text>
+    <text x="24" y="303">逐字符操作</text><rect x="196" y="277" width="306" height="46" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="213" y="305">循环：5 次字符删除（含换行）</text><path d="M502 300H544" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch11-interface-alternatives-a)"/><text x="558" y="306">字符接口</text>
+    <text x="24" y="367">任意范围操作</text><path d="M147 362H544" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" marker-end="url(#ch11-interface-alternatives-a)"/><text x="224" y="348" fill="var(--diagram-primary,#0b6f5d)">一次表达所需的文本范围</text><text x="558" y="368">范围接口</text>
+    <text x="24" y="410" font-size="13" fill="var(--diagram-muted,#58636b)">比较任务适配，不按接口名称打分。字母、调用轨迹为教学例，不是性能测量。</text><text x="24" y="432" font-size="13" fill="var(--diagram-muted,#58636b)">本章“逐字符”指单字符操作；第8章“面向字符”指任意字符范围，粒度不同。</text>
+  </g>
+</svg>

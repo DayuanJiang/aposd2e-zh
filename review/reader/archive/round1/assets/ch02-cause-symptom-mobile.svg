@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 636" role="img" aria-labelledby="ch02-cause-symptom-m-title ch02-cause-symptom-m-desc">
+  <title id="ch02-cause-symptom-m-title">依赖与模糊性如何叠加？</title>
+  <desc id="ch02-cause-symptom-m-desc">移动布局按症状重排矩阵：变更放大源于依赖，认知负荷可来自依赖和模糊性，未知的未知来自模糊性。新增错误状态时，若看不到消息表的依赖就可能漏改。</desc>
+  <rect width="360" height="636" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="16" y="32" font-size="19" font-weight="600">依赖与模糊性如何叠加？</text>
+    <text x="16" y="59" font-size="14" fill="var(--diagram-muted,#5c645d)">按症状读：本节指出哪些来源？</text>
+    <text x="30" y="99" font-weight="600">症状</text><text x="174" y="99" font-weight="600">原文归因</text>
+    <path d="M16 112H344M16 173H344M16 247H344M16 308H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="30" y="148">变更放大</text><text x="174" y="148" fill="var(--diagram-secondary,#2c6096)">依赖</text>
+    <text x="30" y="211">认知负荷</text><text x="174" y="201" fill="var(--diagram-secondary,#2c6096)">依赖</text><text x="174" y="229" fill="var(--diagram-warm,#80531b)">模糊性</text>
+    <text x="30" y="284">未知的未知</text><text x="174" y="284" fill="var(--diagram-warm,#80531b)">模糊性</text>
+    <text x="16" y="338" font-size="14" fill="var(--diagram-muted,#5c645d)">三种症状可以叠加，不是互斥类别。</text>
+    <text x="16" y="381" font-weight="600">原书例子：新增错误状态</text>
+    <text x="16" y="409">状态声明与消息表需要同步。</text>
+    <rect x="16" y="433" width="328" height="65" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="32" y="459">知道消息表 → 同步修改</text><text x="32" y="484" font-size="14">依赖仍在，仍有变更放大</text>
+    <rect x="16" y="513" width="328" height="65" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="32" y="539">表不明显 → 可能漏改</text><text x="32" y="564" font-size="14">再添“不知道还要改哪里”的风险</text>
+    <text x="16" y="613" font-weight="600">让依赖可见，不等于消除依赖。</text>
+  </g>
+</svg>

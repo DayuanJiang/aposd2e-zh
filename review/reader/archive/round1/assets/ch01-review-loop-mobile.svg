@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 668" role="img" aria-labelledby="ch01-review-loop-m-title ch01-review-loop-m-desc">
+  <title id="ch01-review-loop-m-title">危险信号如何变成设计改进？</title>
+  <desc id="ch01-review-loop-m-desc">纵向流程从阅读代码到发现信号、尝试备选，再检查理解和修改的负担。虚线回路表示仍有问题就返回探索；通过权衡则采用并继续审查。</desc>
+  <defs><marker id="ch01-review-loop-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="668" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="16" y="32" font-size="19" font-weight="600">危险信号如何变成设计改进？</text>
+    <text x="16" y="59" font-size="14" fill="var(--diagram-muted,#5c645d)">信号是探索起点，不是自动判决</text>
+    <rect x="36" y="83" width="252" height="64" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="52" y="109" font-weight="600">阅读实际代码</text><text x="52" y="133">哪里难理解、难修改？</text>
+    <rect x="36" y="183" width="252" height="64" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="52" y="209" font-weight="600">发现危险信号</text><text x="52" y="233">停下来，提出备选</text>
+    <rect x="36" y="283" width="252" height="64" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="52" y="309" font-weight="600">尝试替代设计</text><text x="52" y="333">回到代码检验</text>
+    <path d="M56 391H268L288 431L268 471H56L36 431Z" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="68" y="423" font-weight="600">更易理解、修改？</text><text x="68" y="449">有没有新的代价？</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="1.5" marker-end="url(#ch01-review-loop-m-arrow)">
+      <path d="M162 154V174"/><path d="M162 254V274"/><path d="M162 354V382"/><path d="M162 478V528"/>
+      <path d="M296 431H326V215H297" stroke-dasharray="5 4"/>
+    </g>
+    <text x="178" y="510" font-size="14">权衡后可取</text>
+    <text x="230" y="372" font-size="13">再找方案</text>
+    <rect x="36" y="537" width="252" height="64" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="52" y="563" font-weight="600">改进成立：采用</text><text x="52" y="587">后续继续审查</text>
+    <text x="16" y="639" font-size="14" font-weight="600">原则有例外，应用时仍须权衡代价。</text>
+  </g>
+</svg>

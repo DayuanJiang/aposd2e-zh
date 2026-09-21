@@ -1,0 +1,58 @@
+[
+  {
+    "id": "ch08-edit-burden",
+    "chapter": "ch08",
+    "title": "拆行与并行应该由谁负责？",
+    "question": "同样的文本编辑工作，为什么换接口能减少调用者的负担？",
+    "answer": "整行接口让界面中的多种操作各自拆分、合并行；任意字符范围接口把这项责任封装进文本类。",
+    "summary": "下沉的是文本操作的实现复杂性，不是用户界面的知识。文本类内部若按行存储，仍须处理拆行与并行。",
+    "alt": "前后责任图：输入和选区操作原本分别负责拆行并行，再调用整行接口；改用任意字符范围接口后，两条调用路径共享文本类内部的拆行并行处理。",
+    "kind": "responsibility-flow",
+    "desktop": "/diagrams/ch08-edit-burden.svg",
+    "mobile": "/diagrams/ch08-edit-burden-mobile.svg",
+    "anchor": { "section": "8.1", "placement": "end" },
+    "sources": [
+      { "section": "8.1", "epub": "OEBPS/part0012.xhtml#p7:c85469890e", "reason": "整行接口使按键与跨行选区操作需要在高层拆分、合并行。图中两条调用路径是原文操作类别的教学展开，不表示实测调用次数。" },
+      { "section": "8.1", "epub": "OEBPS/part0012.xhtml#p8:b454c63498", "reason": "任意字符范围接口封装拆行与并行；内部按行存储是条件，不是固定实现。沿用本节粒度，不与第11章的逐字符接口混淆。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch08-retry-feedback",
+    "chapter": "ch08",
+    "title": "重试间隔的知识在哪里？",
+    "question": "哪些参数适合由模块自己确定，哪些知识仍应由用户提供？",
+    "answer": "协议可以测量成功请求的响应时间并动态确定重试间隔；请求的业务紧迫性则可能只有用户知道。",
+    "summary": "判断点是用户能否比模块确定更好的值。图中的反馈回路解释自动调整，不给出原文未指定的倍数或完整传输算法。",
+    "alt": "固定配置路径从管理员进入重试计时器，运行条件改变却不会自动更新它。动态路径由成功响应测量时间，再计算合理间隔并供后续请求使用；业务优先级另由用户提供。",
+    "kind": "feedback-loop",
+    "desktop": "/diagrams/ch08-retry-feedback.svg",
+    "mobile": "/diagrams/ch08-retry-feedback-mobile.svg",
+    "anchor": { "section": "8.2", "placement": "end" },
+    "sources": [
+      { "section": "8.2", "epub": "OEBPS/part0012.xhtml#p12:80a902d43a", "reason": "测量成功请求响应时间并取某个倍数，动态调整重试间隔；未指定算法常数。反馈布局为教学示意。" },
+      { "section": "8.2", "epub": "OEBPS/part0012.xhtml#p11:b68410a287", "reason": "用户可能更了解请求的紧迫性，支持由用户指定优先级的反例。" },
+      { "section": "8.2", "epub": "OEBPS/part0012.xhtml#p13:1a1560a5d7", "reason": "先问用户能否确定更好的值，并尽可能提供合理默认值；不是禁止所有配置。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch08-semantic-boundary",
+    "chapter": "ch08",
+    "title": "下沉文本机制，不下沉按键含义",
+    "question": "为什么移动拆行逻辑是封装，移动退格键逻辑却可能是信息泄露？",
+    "answer": "拆行属于文本管理；将按键、光标和选区解释成文本范围属于界面策略。范围接口让两种知识留在各自模块。",
+    "summary": "下沉复杂性须与类的核心职责相关，并确实简化其他代码及接口；不是把全部功能塞进底层。",
+    "alt": "用户界面把退格事件解释成删除范围，跨越边界的只有范围；文本类在边界下处理删除和拆行并行。另一条虚线路径把退格键含义直接传入文本类，被标为信息泄露。",
+    "kind": "knowledge-boundary",
+    "desktop": "/diagrams/ch08-semantic-boundary.svg",
+    "mobile": "/diagrams/ch08-semantic-boundary-mobile.svg",
+    "anchor": { "section": "8.3", "placement": "end" },
+    "sources": [
+      { "section": "8.3", "epub": "OEBPS/part0012.xhtml#p15:0a9b8dd9a6", "reason": "保留下沉复杂性的三个适用条件与降低整体复杂性的目标。" },
+      { "section": "8.3", "epub": "OEBPS/part0012.xhtml#p16:38ed91cc62", "reason": "文本类实现退格键功能会引入不属于核心职责的界面知识。范围转换路径为结合8.1的教学分解，不规定退格键的具体规则。" },
+      { "section": "8.1", "epub": "OEBPS/part0012.xhtml#p8:b454c63498", "reason": "范围文本接口支持在文本类中封装拆分和合并行。" }
+    ],
+    "status": "awaiting-independent-review"
+  }
+]

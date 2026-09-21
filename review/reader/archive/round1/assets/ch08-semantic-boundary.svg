@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 432" role="img" aria-labelledby="ch08-semantic-boundary-t ch08-semantic-boundary-d">
+  <title id="ch08-semantic-boundary-t">下沉文本机制，不下沉按键含义</title><desc id="ch08-semantic-boundary-d">界面解释退格事件和光标选区，传入待删除范围；文本类只负责范围编辑及内部行处理。把退格策略直接移入文本类会泄露界面知识。</desc>
+  <defs><marker id="ch08-semantic-boundary-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="680" height="432" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">下沉文本机制，不下沉按键含义</text>
+    <text x="24" y="64" fill="var(--diagram-muted,#58636b)">教学分解：区分“要删哪里”与“怎样修改文本”</text>
+    <text x="24" y="108" font-weight="600">用户界面的知识</text><text x="407" y="108" font-weight="600">文本类的知识</text>
+    <rect x="24" y="128" width="224" height="86" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <text x="42" y="157">退格事件、光标、选区</text><text x="42" y="188">按界面策略确定删除范围</text>
+    <rect x="407" y="128" width="249" height="86" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="427" y="157">执行范围删除</text><text x="427" y="188">内部按需拆分 / 合并行</text>
+    <path d="M248 171H399" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch08-semantic-boundary-a)"/>
+    <text x="271" y="152" font-weight="600">文本范围</text>
+    <path d="M350 96V337" stroke="var(--diagram-line,#aebbad)" stroke-dasharray="5 4"/>
+    <text x="272" y="239" font-size="13" fill="var(--diagram-muted,#58636b)">模块边界</text>
+    <path d="M137 215V281H399" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-dasharray="5 4"/>
+    <path d="M326 267L344 295M344 267L326 295" stroke="var(--diagram-danger,#a03946)" stroke-width="3"/>
+    <text x="24" y="320" fill="var(--diagram-danger,#a03946)">不应只为“下沉”而移动退格策略</text>
+    <text x="408" y="279">若文本类必须理解按键，</text><text x="408" y="305">界面知识就越过了边界。</text>
+    <path d="M24 350H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="379">判断：与核心功能相关，并让其他代码及接口更简单。</text>
+    <text x="24" y="409" font-size="13" fill="var(--diagram-muted,#58636b)">不规定具体退格规则；不主张将所有应用功能集中进一个类。</text>
+  </g>
+</svg>

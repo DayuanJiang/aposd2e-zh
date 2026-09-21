@@ -1,0 +1,20 @@
+[
+  {
+    "id": "ch04-f2",
+    "sourceHash": "239aa6a1ed326c0812767f3a60f7130da29e57364800a6b45aea7ae922ad4853",
+    "python": "def addNullValueForAttribute(self, attribute: str) -> None:\n    self.data[attribute] = None\n",
+    "note": "教学改写：类中方法的片段，data 假定为字典。刻意保留只包装一次赋值的浅方法及原名；None 对应此处的 null，不复现 Java 的 private 访问限制。",
+    "noteEn": "Teaching adaptation: a method excerpt with data assumed to be a dictionary. The shallow assignment wrapper and original name are deliberate; None stands for null here, without Java's private access restriction.",
+    "originalLanguage": "java",
+    "noteTw": "教學改寫：類中方法的片段，data 假定為字典。刻意保留只包裝一次賦值的淺方法及原名；None 對應此處的 null，不復現 Java 的 private 存取限制。"
+  },
+  {
+    "id": "ch04-f3",
+    "sourceHash": "20dac20a810d1a3541270fe151ef3247f7390f8a477ac436c8b3df27f38f6a5d",
+    "python": "import io\nimport pickle\n\nfileStream = io.FileIO(fileName, \"r\")\n\nbufferedStream = io.BufferedReader(fileStream)\n\nobjectStream = pickle.Unpickler(bufferedStream)\n",
+    "note": "教学改写：刻意保留手动组装三层对象的反例；Python 的 open(..., \"rb\") 默认已有缓冲。这里只展示构造，关闭流的代码省略。Unpickler 只读取可信的 Python pickle 数据，不兼容 Java 序列化，也不提供写入或流关闭接口。",
+    "noteEn": "Teaching adaptation: deliberately retains the three manually assembled layers; Python's open(..., \"rb\") already buffers by default. Only construction is shown; stream cleanup is omitted. Unpickler reads trusted Python pickle data only, not Java serialization, and has no write or stream-closing API.",
+    "originalLanguage": "java",
+    "noteTw": "教學改寫：刻意保留手動組裝三層物件的反例；Python 的 open(..., \"rb\") 預設已有緩衝。這裡只展示構造，關閉流的程式碼省略。Unpickler 只讀取可信的 Python pickle 資料，不相容 Java 序列化，也不提供寫入或流關閉介面。"
+  }
+]

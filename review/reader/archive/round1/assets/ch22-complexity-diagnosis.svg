@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 453" role="img" aria-labelledby="ch22-complexity-diagnosis-title ch22-complexity-diagnosis-desc">
+  <title id="ch22-complexity-diagnosis-title">从修改困难追到设计动作，再验证范围是否缩小</title>
+  <desc id="ch22-complexity-diagnosis-desc">同一决策牵动多处时检查依赖与信息泄露，收拢责任。调用契约和条件难找时检查模糊性，减少无关信息并显露必要契约。两类原因可并存，两路最后回到原修改任务检验。流程为译者综合。</desc>
+  <defs><marker id="ch22-complexity-diagnosis-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="453" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="21" font-weight="600">一次修改很困难，先追查困难来自哪里</text><text x="24" y="61" font-size="14">第 22 章综合图 · 路径为译者组织；两种原因可能同时存在</text>
+    <text x="24" y="107" font-weight="600">观察此次修改</text><text x="267" y="107" font-weight="600">检查原因</text><text x="454" y="107" font-weight="600">选择设计动作</text>
+    <rect x="24" y="127" width="211" height="76" rx="5" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/><text x="40" y="156">同一决策改变</text><text x="40" y="184">却要改多个位置</text>
+    <text x="299" y="158">依赖</text><text x="265" y="185" font-size="14">泄露 / 重复决策</text>
+    <rect x="454" y="127" width="202" height="76" rx="5" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/><text x="470" y="156">收拢责任与说明</text><text x="470" y="184">把变化藏进模块</text>
+    <rect x="24" y="232" width="211" height="76" rx="5" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/><text x="40" y="261">调用条件、契约</text><text x="40" y="289">需要到处猜、到处找</text>
+    <text x="291" y="263">模糊性</text><text x="266" y="290" font-size="14">必要信息不明显</text>
+    <rect x="454" y="232" width="202" height="76" rx="5" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/><text x="470" y="261">隐藏无关信息</text><text x="470" y="289">显露必要契约</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch22-complexity-diagnosis-arrow)"><path d="M235 165H259"/><path d="M389 165H454"/><path d="M235 270H259"/><path d="M389 270H454"/><path d="M656 165H668V339H340V359"/><path d="M656 270H668"/><path d="M24 386H12V165H24" stroke-dasharray="5 4"/></g>
+    <rect x="24" y="359" width="632" height="61" rx="5" fill="none" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="340" y="384" text-anchor="middle">回到原任务：需要触及的位置、需要理解的信息，减少了吗？</text><text x="340" y="409" text-anchor="middle" font-size="14">没有改善就继续追查；不是只给代码贴上“复杂”的标签。</text>
+    <text x="24" y="442" font-size="14">依据：结论首段；16.4 决策单处记录；18.3 必要信息；21.4 隐藏错误。</text>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 650" role="img" aria-labelledby="ch06-history-boundary-title ch06-history-boundary-desc">
+  <title id="ch06-history-boundary-title">撤销时，谁知道要恢复什么？</title>
+  <desc id="ch06-history-boundary-desc">中性教学动作 A1 由文本模块创建，A2 由 UI 模块创建，虚线 addAction 将其引用注册到 History。高层 UI 通过 addFence 划出 F0、F1。History 只保存 Action 引用，撤销先经 A2 引用调用 UI 模块内的 A2.undo，再调用文本模块内的 A1.undo，到 F0 停。对象私有状态对 History 不透明。</desc>
+  <defs><marker id="ch06-history-boundary-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="650" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="20" font-weight="600">撤销时，谁知道要恢复什么？</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">教学 A1/A2 只示注册与遍历，不声称是完整编辑器恢复顺序</text>
+    <text x="24" y="99" font-weight="600">高层 UI 决定分组：调用 addFence() 放置 F0、F1</text>
+    <rect x="24" y="123" width="268" height="84" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="40" y="152" font-weight="600">文本模块创建 A1 对象</text><text x="40" y="181">私有状态 + undo/redo 实现</text>
+    <rect x="388" y="123" width="268" height="84" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="404" y="152" font-weight="600">UI 模块创建 A2 对象</text><text x="404" y="181">私有状态 + undo/redo 实现</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-dasharray="5 4" marker-end="url(#ch06-history-boundary-arrow)"><path d="M158 215V249H238V297"/><path d="M522 215V249H436V297"/></g>
+    <text x="26" y="239" font-size="14">addAction(A1)</text><text x="541" y="239" font-size="14">addAction(A2)</text>
+    <text x="299" y="284" font-weight="600">History</text>
+    <rect x="24" y="307" width="632" height="54" fill="none" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <path d="M145 307V361M335 307V361M529 307V361" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="46" y="340">F0 栅栏</text><text x="188" y="340">A1: Action 引用</text><text x="382" y="340">A2: Action 引用</text><text x="552" y="340">F1 栅栏</text>
+    <text x="24" y="390" font-size="14">History 看见引用、栅栏与接口；看不见对象的私有状态。</text>
+    <text x="24" y="429" font-weight="600">组内 undo 逆序：A2 → A1 → 到 F0 停止</text>
+    <text x="24" y="470">1　A2 引用</text><text x="392" y="470">A2 对象：UI 模块私有实现</text>
+    <text x="24" y="511">2　A1 引用</text><text x="392" y="511">A1 对象：文本模块私有实现</text>
+    <path d="M138 465H380M138 506H380" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch06-history-boundary-arrow)"/>
+    <text x="227" y="453" font-size="14">undo()</text><text x="227" y="494" font-size="14">undo()</text>
+    <text x="24" y="550" font-size="13">虚线是注册，实线是调用；redo 正序调用 A1、A2，而不读取私有状态。</text>
+    <text x="24" y="583" font-size="13" fill="var(--diagram-muted,#5c645d)">原文将逆序撤销误写为 redo；此处按 6.7 定义和已有译者注标为 undo。</text>
+    <text x="24" y="611" font-size="13">分离针对同一种机制；专用文本撤销代码仍可与通用文本代码同处一模块。</text>
+    <text x="24" y="638" font-size="12" fill="var(--diagram-muted,#5c645d)">没有给出具体保存值或跨动作约束，不能据此推断真实文本／选区的恢复顺序。</text>
+  </g>
+</svg>

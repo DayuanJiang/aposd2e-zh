@@ -1,0 +1,20 @@
+[
+  {
+    "id": "ch09-f3",
+    "sourceHash": "325172efae6bf5783a3fb72ad7648eb7f17a3884e93d5ca0a47ad2051daf2297",
+    "python": "def send_rpc(req, dest, connectionPool):\n    try:\n        rpcConn = connectionPool.getConnection(dest)\n    except OSError as e:\n        NetworkErrorLogger.logRpcOpenError(req, dest, e)\n        return None\n\n    ...  # Remaining RPC logic omitted.\n",
+    "note": "教学改写：外围 send_rpc 函数仅为 return 提供作用域，后续 RPC 逻辑省略。假定应用的连接池以 OSError 报告 I/O 失败；保留调用独立日志类的反例，不改成就地记录。",
+    "noteEn": "Teaching adaptation: send_rpc only supplies an enclosing scope for return; subsequent RPC logic is omitted. The application's connection pool is assumed to report I/O failures as OSError. The separate logging-class call is deliberately retained rather than inlined.",
+    "originalLanguage": "java",
+    "noteTw": "教學改寫：外圍 send_rpc 函式僅為 return 提供作用域，後續 RPC 邏輯省略。假定應用的連線池以 OSError 報告 I/O 失敗；保留呼叫獨立日誌類的反例，不改成就地記錄。"
+  },
+  {
+    "id": "ch09-f4",
+    "sourceHash": "36708e402c741a2841ef5dd298f6dbc759b0fd2648bcc5f5bad52b1b717b0715",
+    "python": "import logging\n\nlogger = logging.getLogger(__name__)\n\n\nclass NetworkErrorLogger:\n    @staticmethod\n    def logRpcOpenError(\n        req: \"RpcRequest\", dest: \"AddrPortTuple\", e: Exception\n    ) -> None:\n        \"\"\"Log details of a failure to open a connection for an RPC.\n\n        Args:\n            req: The RPC request that would have used the connection.\n            dest: The destination of the RPC.\n            e: The caught error.\n        \"\"\"\n        logger.warning(\n            \"Cannot send message: %s. \\n\"\n            \"Unable to find or open connection to %s :%s\",\n            req, dest, e,\n        )\n\n    ...\n",
+    "note": "教学改写：保留浅静态包装类和参数文档这一反例，以标准库 logging 记录相同的信息项。应用类型和日志配置省略；不复现 Java 私有嵌套类的访问限制或对象字符串格式。",
+    "noteEn": "Teaching adaptation: preserves the shallow static wrapper and parameter documentation as the counterexample, using standard-library logging for the same information fields. Application types and logging configuration are omitted; Java's private nested-class restrictions and object string formats are not reproduced.",
+    "originalLanguage": "java",
+    "noteTw": "教學改寫：保留淺靜態包裝類和參數文件這一反例，以標準函式庫 logging 記錄相同的資訊項。應用型別和日誌設定省略；不復現 Java 私有巢狀類的存取限制或物件字串格式。"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "id": "ch07-dispatch-value", "chapter": "ch07", "title": "签名相同，就一定是透传吗？",
+    "question": "分发器和纯转发器都调用同签名方法，价值差在哪里？",
+    "answer": "纯转发器不增加任务功能；分发器根据规则选择处理者，隐藏选择逻辑。应比较新增职责，而不只比较签名。",
+    "summary": "对照固定转发路径和按 URL 选择处理者的分支。相同接口的同层实现也不是透传链。",
+    "alt": "handle(request) 固定原样转发到同名方法；另一路根据 URL 分支到文件处理或动态处理，增加选择职责。同层驱动实现也各自提供功能。",
+    "kind": "decision-comparison", "desktop": "/diagrams/ch07-dispatch-value.svg", "mobile": "/diagrams/ch07-dispatch-value-mobile.svg",
+    "anchor": { "section": "7.2", "placement": "end" },
+    "sources": [
+      { "section": "7.1", "epub": "OEBPS/part0011.xhtml#p34:0eec2ca984", "reason": "透传增加接口复杂性与签名依赖而不增加功能。" },
+      { "section": "7.2", "epub": "OEBPS/part0011.xhtml#p40:76d55e43e9", "reason": "分发器提供选择处理者的功能。" },
+      { "section": "7.2", "epub": "OEBPS/part0011.xhtml#p42:2ea1eb54ca", "reason": "原书 Web URL 分发到文件或程序的例子。" },
+      { "section": "7.2", "epub": "OEBPS/part0011.xhtml#p43:96ba0ef9b8", "reason": "同层多实现共享接口可降低认知负荷。" }
+    ],
+    "teachingExample": "handle(request) 和 /static/* 为教学记号，不是原书接口或完整路由算法。",
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch07-line-boundary", "chapter": "ch07", "title": "按行存储，不必按行暴露",
+    "question": "删除跨行文本时，拆行与拼接应由谁负责？",
+    "answer": "字符范围接口让文本类承担拆分和拼接，UI 只指定范围；内部仍可按行存储，无需迫使调用者重复实现存储操作。",
+    "summary": "以两行文本的跨行删除展示接口与实现的抽象差异。这是责任分配演算，不是完整数据结构代码。",
+    "alt": "第一行 ABcd、第二行 efGH，删除 cd、换行及 ef 后得到 ABGH。按行 API 使 UI 取行、保留片段、拼接和替换；范围 API 将步骤留在文本类。",
+    "kind": "representation-trace", "desktop": "/diagrams/ch07-line-boundary.svg", "mobile": "/diagrams/ch07-line-boundary-mobile.svg",
+    "anchor": { "section": "7.4", "placement": "end" },
+    "sources": [
+      { "section": "7.4", "epub": "OEBPS/part0011.xhtml#p54:fb13061723", "reason": "getLine/putLine 接口迫使 UI 处理跨行拆分拼接并导致重复。" },
+      { "section": "7.4", "epub": "OEBPS/part0011.xhtml#p55:bbef5efd83", "reason": "字符范围接口隐藏按行存储的复杂性。" }
+    ],
+    "teachingExample": "ABcd、efGH、ABGH 及位置为教学示例；范围包含第一行后缀、换行和第二行前缀。",
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch07-context-instances", "chapter": "ch07", "title": "不透传之后，两实例会串值吗？",
+    "question": "把证书改放全局变量与放入每实例 Context，区别在哪里？",
+    "answer": "进程全局位置被两个实例共享；每实例 Context 保留独立配置，引用在对象构造时传入，但仍需管理隐藏依赖和可变状态。",
+    "summary": "以同进程的两个教学实例检查隔离性，不复刻原书四方案图。Context 减少参数传播，不等于消除依赖。",
+    "alt": "实例 A、B 写入同一个 globalCert 时，B 可能覆盖 A；Context A 和 B 各自保存证书，其网络对象读取自己的配置。构造传引用，日常不再层层传 cert。",
+    "kind": "instance-isolation", "desktop": "/diagrams/ch07-context-instances.svg", "mobile": "/diagrams/ch07-context-instances-mobile.svg",
+    "anchor": { "section": "7.5", "placement": "end" },
+    "sources": [
+      { "section": "7.5", "epub": "OEBPS/part0011.xhtml#p60:33b6affaf2", "reason": "全局变量使同进程独立系统实例发生冲突。" },
+      { "section": "7.5", "epub": "OEBPS/part0011.xhtml#p61:c2dc1be9e0", "reason": "每个系统实例拥有自己的上下文，允许多实例共存。" },
+      { "section": "7.5", "epub": "OEBPS/part0011.xhtml#p63:2c82872bba", "reason": "对象保存 Context 引用，在构造时显式传递，减少方法透传。" },
+      { "section": "7.5", "epub": "OEBPS/part0011.xhtml#p65:e9a745736f", "reason": "上下文仍有隐蔽依赖和线程安全风险，不可变字段可减轻共享可变状态问题。" }
+    ],
+    "teachingExample": "A/B、cert-A/cert-B 和 globalCert 为教学场景与名称，不是原书程序。",
+    "status": "awaiting-independent-review"
+  }
+]

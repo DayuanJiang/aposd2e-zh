@@ -1,0 +1,51 @@
+[
+  {
+    "id": "ch06-range-api", "chapter": "ch06", "title": "三个删除动作，一种文本机制",
+    "question": "合并删除方法后，退格与 Delete 的区别放在哪里？",
+    "answer": "UI 决定删除范围，文本类执行通用的半开区间删除。不同 UI 意图转为不同 Position 参数，不必变成文本类的新方法。",
+    "summary": "用同一个字符串跟踪退格、Delete 和选区删除。示例位置是字符间隙，区间包含起点、不包含终点。",
+    "alt": "ABCDE 光标在 C 与 D 之间。退格删除 [2,3) 得 ABDE，Delete 删除 [3,4) 得 ABCE，选区删除 [1,4) 得 AE，都调用 delete(start,end)。",
+    "kind": "range-trace", "desktop": "/diagrams/ch06-range-api.svg", "mobile": "/diagrams/ch06-range-api-mobile.svg",
+    "anchor": { "section": "6.4", "placement": "end" },
+    "sources": [
+      { "section": "6.3", "epub": "OEBPS/part0010.xhtml#p25:485d9a0327", "reason": "通用删除使用包含起点、不包含终点的 Position 范围。" },
+      { "section": "6.3", "epub": "OEBPS/part0010.xhtml#p27:3bc06f5c57", "reason": "changePosition 可计算前后位置，必要时跨行。" },
+      { "section": "6.4", "epub": "OEBPS/part0010.xhtml#p36:b5999bc8fc", "reason": "UI 保留专用行为，文本类不必随每种 UI 功能添加方法。" },
+      { "section": "6.4", "epub": "OEBPS/part0010.xhtml#p37:1b75d1a398", "reason": "删除哪些字符是 UI 需要知道的信息，不应藏进文本类。" }
+    ],
+    "teachingExample": "ABCDE、数字位置和选区为教学示例；不规定 Position 必须用整数实现，也不讨论文件端点越界策略。",
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch06-history-boundary", "chapter": "ch06", "title": "撤销时，谁知道要恢复什么？",
+    "question": "History 为什么不必知道文本、光标和选区的具体结构？",
+    "answer": "高层 UI 决定动作分组，History 管理列表与遍历，具体 Action 实现恢复细节。新增动作类型不必让通用核心理解它的状态。",
+    "summary": "展示策略、机制、动作实现的边界，并用一个教学动作组演示 undo 的逆序调用。原文 redo/undo 笔误按已有译者注显式说明。",
+    "alt": "UI 用 addFence 定义分组；History 管理 Action 列表；文本与 UI 模块实现具体 Action。教学列表先文本动作后选区动作，撤销先选区后文本，停在栅栏。",
+    "kind": "boundary-and-trace", "desktop": "/diagrams/ch06-history-boundary.svg", "mobile": "/diagrams/ch06-history-boundary-mobile.svg",
+    "anchor": { "section": "6.7", "placement": "end" },
+    "sources": [
+      { "section": "6.7", "epub": "OEBPS/part0010.xhtml#p63:08a7d39ba6", "reason": "History 不理解动作内部信息，通过接口向后撤销、向前重做。" },
+      { "section": "6.7", "epub": "OEBPS/part0010.xhtml#p64:749e4ecf03", "reason": "Action 在理解具体操作的模块中实现。" },
+      { "section": "6.7", "epub": "OEBPS/part0010.xhtml#p65:6193a44efc", "reason": "高层设置栅栏分组；本段把逆序撤销写成 redo，图按 p63 和现有译者注显式标为 undo，不悄改原文。" },
+      { "section": "6.7", "epub": "OEBPS/part0010.xhtml#p70:84283ebcc2", "reason": "History 和 Action 无需掌握分组策略。" }
+    ],
+    "teachingExample": "两条动作及次序仅演示遍历方向，不是完整编辑器删除、滚动和恢复流程。",
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch06-empty-selection", "chapter": "ch06", "title": "没有选区，也能走同一条路径",
+    "question": "起点等于终点时，为什么删除逻辑不需要另一个分支？",
+    "answer": "把无可见选区表示为空区间后，同一条前缀加后缀的规则会重新生成原文本，不必先判断选区是否存在。",
+    "summary": "对单行 ABCDE 演算普通选区和空选区。统一表示消除了存在性分支，但不免除合法范围等其他约束。",
+    "alt": "删除 [1,4) 时前缀 A 加后缀 E 得 AE；空区间 [2,2) 时前缀 AB 加后缀 CDE 得原文 ABCDE，两者使用同一拼接规则。",
+    "kind": "worked-trace", "desktop": "/diagrams/ch06-empty-selection.svg", "mobile": "/diagrams/ch06-empty-selection-mobile.svg",
+    "anchor": { "section": "6.8", "placement": "end" },
+    "sources": [
+      { "section": "6.8", "epub": "OEBPS/part0010.xhtml#p75:b92f21622f", "reason": "选区存在变量导致各处检查特殊状态。" },
+      { "section": "6.8", "epub": "OEBPS/part0010.xhtml#p76:c3c2a216e8", "reason": "空选区起止相同，单行前后拼接算法自然生成原文。" }
+    ],
+    "teachingExample": "ABCDE、[1,4) 和 [2,2) 为教学演算；仅展示合法单行范围，非完整文本编辑算法。",
+    "status": "awaiting-independent-review"
+  }
+]

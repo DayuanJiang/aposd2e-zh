@@ -1,0 +1,157 @@
+[
+  {
+    "id": "ch07-dispatch-value",
+    "chapter": "ch07",
+    "title": "签名相同，就一定是透传吗？",
+    "question": "分发器和纯转发器都调用同签名方法，价值差在哪里？",
+    "answer": "纯转发器不增加任务功能；分发器根据规则选择处理者，隐藏选择逻辑。应比较新增职责，而不只比较签名。",
+    "summary": "两个教学请求 /static/a.txt 与 /report 被纯转发器送到同一目标，而分发器按规则分别选择文件和动态处理者。入口及每个目标都显示相同的 handle(request) 签名。",
+    "alt": "请求 S 为 /static/a.txt，请求 D 为 /report。左侧纯转发器将 S 和 D 原样交给同一目标；右侧 /static/* 分支让 S 进入文件处理者，D 进入动态处理者，三个入口和目标均标有 handle(request)。固定目标本身不等于无价值。",
+    "kind": "decision-comparison",
+    "desktop": "/diagrams/ch07-dispatch-value.svg",
+    "mobile": "/diagrams/ch07-dispatch-value-mobile.svg",
+    "anchor": {
+      "section": "7.2",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "7.1",
+        "epub": "OEBPS/part0011.xhtml#p34:0eec2ca984",
+        "reason": "透传增加接口复杂性与签名依赖而不增加功能。"
+      },
+      {
+        "section": "7.2",
+        "epub": "OEBPS/part0011.xhtml#p40:76d55e43e9",
+        "reason": "分发器提供选择处理者的功能。"
+      },
+      {
+        "section": "7.2",
+        "epub": "OEBPS/part0011.xhtml#p42:2ea1eb54ca",
+        "reason": "原书 Web URL 分发到文件或程序的例子。"
+      },
+      {
+        "section": "7.2",
+        "epub": "OEBPS/part0011.xhtml#p43:96ba0ef9b8",
+        "reason": "同层多实现共享接口可降低认知负荷。"
+      }
+    ],
+    "teachingExample": "S/D、/static/a.txt、/report、handle(request) 和 /static/* 均为教学记号，只展示一条简化路由规则；左侧明示不做其他工作的纯转发，不把固定目标当作无价值的充分条件。",
+    "status": "content-reviewed",
+    "titleTw": "簽名相同，就一定是透傳嗎？",
+    "questionTw": "分發器和純轉發器都呼叫同簽名方法，價值差在哪裡？",
+    "answerTw": "純轉發器不增加任務功能；分發器根據規則選擇處理者，隱藏選擇邏輯。應比較新增職責，而不只比較簽名。",
+    "summaryTw": "兩個教學請求 /static/a.txt 與 /report 被純轉發器送到同一目標，而分發器按規則分別選擇檔案和動態處理者。入口及每個目標都顯示相同的 handle(request) 簽名。",
+    "altTw": "請求 S 為 /static/a.txt，請求 D 為 /report。左側純轉發器將 S 和 D 原樣交給同一目標；右側 /static/* 分支讓 S 進入檔案處理者，D 進入動態處理者，三個入口和目標均標有 handle(request)。固定目標本身不等於無價值。",
+    "desktopTw": "/diagrams/ch07-dispatch-value-tw.svg",
+    "mobileTw": "/diagrams/ch07-dispatch-value-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-01-07-followup.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  },
+  {
+    "id": "ch07-line-boundary",
+    "chapter": "ch07",
+    "title": "按行存储，不必按行暴露",
+    "question": "删除跨行文本时，拆行与拼接应由谁负责？",
+    "answer": "字符范围接口让文本类承担拆分和拼接，UI 只指定范围；内部仍可按行存储，无需迫使调用者重复实现存储操作。",
+    "summary": "将 start/end 标在字符间隙，显式删除 cd、换行 NL、ef。两种接口都在文本模块内保留按行存储，但取行、回写与拼接责任是否越界不同。",
+    "alt": "教学 start 在 AB 与 cd 之间、end 在 ef 与 GH 之间，划掉 cd、NL 和 ef，保留 AB、GH。两组边界图右侧均显示存储行 1 ABcd、行 2 efGH 变为行 1 ABGH；行接口让 UI 取行拼接并回写，范围接口只接收 delete(start,end)，在模块内拼接。",
+    "kind": "representation-trace",
+    "desktop": "/diagrams/ch07-line-boundary.svg",
+    "mobile": "/diagrams/ch07-line-boundary-mobile.svg",
+    "anchor": {
+      "section": "7.4",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "7.4",
+        "epub": "OEBPS/part0011.xhtml#p54:fb13061723",
+        "reason": "getLine/putLine 接口迫使 UI 处理跨行拆分拼接并导致重复。"
+      },
+      {
+        "section": "7.4",
+        "epub": "OEBPS/part0011.xhtml#p55:bbef5efd83",
+        "reason": "字符范围接口隐藏按行存储的复杂性。"
+      }
+    ],
+    "teachingExample": "ABcd、efGH、ABGH、NL 和字符间隙位置为教学记号；NL 表示换行，不规定存储编码。getLine/putLine 交互只展示职责，不规定操作次数或完整删除行算法。",
+    "status": "content-reviewed",
+    "titleTw": "按行儲存，不必按行暴露",
+    "questionTw": "刪除跨行文字時，拆行與拼接應由誰負責？",
+    "answerTw": "字元範圍介面讓文字類承擔拆分和拼接，UI 只指定範圍；內部仍可按行儲存，無需迫使呼叫者重複實作儲存操作。",
+    "summaryTw": "將 start/end 標在字元間隙，顯式刪除 cd、換行 NL、ef。兩種介面都在文字模組內保留按行儲存，但取行、回寫與拼接責任是否越界不同。",
+    "altTw": "教學 start 在 AB 與 cd 之間、end 在 ef 與 GH 之間，劃掉 cd、NL 和 ef，保留 AB、GH。兩組邊界圖右側均顯示儲存行 1 ABcd、行 2 efGH 變為行 1 ABGH；行介面讓 UI 取行拼接並回寫，範圍介面只接收 delete(start,end)，在模組內拼接。",
+    "desktopTw": "/diagrams/ch07-line-boundary-tw.svg",
+    "mobileTw": "/diagrams/ch07-line-boundary-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-01-07-followup.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  },
+  {
+    "id": "ch07-context-instances",
+    "chapter": "ch07",
+    "title": "不透传之后，两实例会串值吗？",
+    "question": "把证书改放全局变量与放入每实例 Context，区别在哪里？",
+    "answer": "在 A 写、B 写、A 再读的教学顺序下，共享全局槽返回 cert-B。只有使用两个独立 Context 且网络对象正确保存各自引用时，A 才读取 cert-A。Context 类型本身不保证隔离、不可变或线程安全。",
+    "summary": "两组采用相同的写、写、读顺序和状态表；另画构造者提供引用、网络对象保存 ctx 字段以及运行时沿字段查找的区别。",
+    "alt": "序号 1 A 写 cert-A，2 B 写 cert-B，3 A 读：全局槽依次为 cert-A、cert-B，最终 A 读得 cert-B；Context A/B 则在第二步后分别保留 cert-A/cert-B，A 经 netA.ctx 读取 cert-A。构造时分别提供 ctxA 与 ctxB。",
+    "kind": "instance-isolation",
+    "desktop": "/diagrams/ch07-context-instances.svg",
+    "mobile": "/diagrams/ch07-context-instances-mobile.svg",
+    "anchor": {
+      "section": "7.5",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "7.5",
+        "epub": "OEBPS/part0011.xhtml#p60:33b6affaf2",
+        "reason": "全局变量使同进程独立系统实例发生冲突。"
+      },
+      {
+        "section": "7.5",
+        "epub": "OEBPS/part0011.xhtml#p61:c2dc1be9e0",
+        "reason": "每个系统实例拥有自己的上下文，允许多实例共存。"
+      },
+      {
+        "section": "7.5",
+        "epub": "OEBPS/part0011.xhtml#p63:2c82872bba",
+        "reason": "对象保存 Context 引用，在构造时显式传递，减少方法透传。"
+      },
+      {
+        "section": "7.5",
+        "epub": "OEBPS/part0011.xhtml#p65:e9a745736f",
+        "reason": "上下文仍有隐蔽依赖和线程安全风险，不可变字段可减轻共享可变状态问题。"
+      }
+    ],
+    "teachingExample": "A/B、cert-A/cert-B、globalCert、netA/netB 为单进程顺序教学场景，不是竞态演示；两个 Context 是不同对象，构造关联正确，网络对象在本例只读，不代表所有 Context 都不可变。",
+    "status": "content-reviewed",
+    "titleTw": "不透傳之後，兩實例會串值嗎？",
+    "questionTw": "把證書改放全域變數與放入每實例 Context，區別在哪裡？",
+    "answerTw": "在 A 寫、B 寫、A 再讀的教學順序下，共享全域槽回傳 cert-B。只有使用兩個獨立 Context 且網路物件正確儲存各自引用時，A 才讀取 cert-A。Context 型別本身不保證隔離、不可變或執行緒安全。",
+    "summaryTw": "兩組採用相同的寫、寫、讀順序和狀態表；另畫構造者提供引用、網路物件儲存 ctx 欄位以及執行時沿欄位查詢的區別。",
+    "altTw": "序號 1 A 寫 cert-A，2 B 寫 cert-B，3 A 讀：全域槽依次為 cert-A、cert-B，最終 A 讀得 cert-B；Context A/B 則在第二步後分別保留 cert-A/cert-B，A 經 netA.ctx 讀取 cert-A。構造時分別提供 ctxA 與 ctxB。",
+    "desktopTw": "/diagrams/ch07-context-instances-tw.svg",
+    "mobileTw": "/diagrams/ch07-context-instances-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-01-07-followup.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  }
+]

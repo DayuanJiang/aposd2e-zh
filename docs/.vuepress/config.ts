@@ -2,11 +2,25 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { createSidebar } from './sidebar'
+import { readerPlugin } from './reader/plugin'
+
+const base = '/aposd2e-zh/'
+const favicon = { rel: 'icon', type: 'image/png', href: `${base}favicon.png` }
 
 export default defineUserConfig({
-	bundler: viteBundler({}),
+  bundler: viteBundler({
+    viteOptions: {
+      plugins: [{
+        name: 'aposd-dev-favicon',
+        apply: 'serve',
+        transformIndexHtml: () => [{ tag: 'link', attrs: favicon, injectTo: 'head-prepend' }],
+      }],
+    },
+  }),
 
-  base: "/aposd2e-zh/",
+  base,
+  head: [['link', favicon]],
+  plugins: [readerPlugin()],
 
   locales: {
     '/': {
@@ -24,8 +38,10 @@ export default defineUserConfig({
   },
 
   theme: defaultTheme({
-    repo: "yingang/aposd2e-zh",
-    docsRepo: "yingang/aposd2e-zh",
+    colorMode: 'light',
+    colorModeSwitch: false,
+    repo: "DayuanJiang/aposd2e-zh",
+    docsRepo: "DayuanJiang/aposd2e-zh",
     docsBranch: "main",
     docsDir: "docs",
     contributors: false,

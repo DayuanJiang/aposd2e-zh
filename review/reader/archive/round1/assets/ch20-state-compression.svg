@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 446" role="img" aria-labelledby="ch20-state-compression-title ch20-state-compression-desc">
+  <title id="ch20-state-compression-title">availableAppendBytes 把多种状态映射为一次比较</title>
+  <desc id="ch20-state-compression-desc">无块、末块外部、无紧邻可用空间都映射到零；内部末块有空间则记录实际可用字节数。对正大小请求比较后，足够就扩展末块并更新状态，不足走特殊处理。</desc>
+  <defs><marker id="ch20-state-compression-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="446" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="21" font-weight="600">先把状态含义集中，再简化常见路径</text><text x="24" y="61" font-size="14">20.4 · 原文 Buffer 机制；本图仅讨论 numBytes &gt; 0</text>
+    <text x="24" y="102">没有任何块</text><text x="24" y="137">末块是外部块</text><text x="24" y="172">没有紧邻可用空间</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2"><path d="M170 96H197V166H170M170 131H197"/><path d="M197 131H240" marker-end="url(#ch20-state-compression-arrow)"/></g>
+    <rect x="240" y="102" width="115" height="60" rx="5" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/><text x="297" y="139" text-anchor="middle">记为 0</text>
+    <text x="416" y="102">末块是内部块</text><text x="416" y="128">且紧邻空间可用</text>
+    <path d="M513 142V173" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch20-state-compression-arrow)"/><text x="513" y="197" text-anchor="middle">记为可用字节数</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2"><path d="M297 162V216H513V207"/><path d="M340 216V239" marker-end="url(#ch20-state-compression-arrow)"/></g>
+    <rect x="97" y="239" width="486" height="56" rx="5" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="340" y="273" text-anchor="middle" font-family="ui-monospace,monospace">availableAppendBytes &gt;= numBytes</text>
+    <g stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch20-state-compression-arrow)"><path d="M235 295V333"/><path d="M478 295V333"/></g>
+    <text x="206" y="320">是</text><text x="490" y="320">否</text>
+    <text x="235" y="358" text-anchor="middle" fill="var(--diagram-primary,#0b6f5d)">扩展末块，更新计数</text><text x="478" y="358" text-anchor="middle">转入特殊处理</text>
+    <path d="M24 383H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="410">维护状态的工作仍存在；减少的是每次常见追加时的分散检查。</text>
+    <text x="24" y="435" font-size="14">totalLength 同时更新，让另一条常见的长度读取路径无需遍历各块。</text>
+  </g>
+</svg>

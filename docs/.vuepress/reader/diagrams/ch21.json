@@ -1,0 +1,56 @@
+[
+  {
+    "id": "ch21-exposure-decision",
+    "chapter": "ch21",
+    "title": "隐藏什么，必须先问谁需要知道",
+    "question": "减少接口信息，何时是简化，何时会制造未知的未知？",
+    "answer": "应针对具体调用者和使用场景判断。教学例中，导出后要读取文件的调用者必须知道先等 finish() 成功返回；隐藏这一事实可能导致提前读取。普通导出的缓冲选择可提供常用默认值，减少日常配置，但有不同需求的调用者仍可保留显式控制。",
+    "summary": "矩阵固定在“普通文件导出，随后读取结果”的场景。finish() 成功前输出可能不完整是自拟契约，不是 Java API 或持久性保证；常用缓冲默认值依据本章的多数调用者论述，不把缓冲视为永远无关。",
+    "alt": "需要知道何时可读的行中，公开 finish() 成功后再读的契约支持等待后读取；隐藏它则可能在 write 后过早读取到不完整内容。普通导出缓冲选择一行中，强制每次指定缓冲增加日常负担，默认缓冲减少这项配置；例外场景仍可显式选择。",
+    "kind": "exposure-decision-matrix",
+    "desktop": "/diagrams/ch21-exposure-decision.svg",
+    "mobile": "/diagrams/ch21-exposure-decision-mobile.svg",
+    "anchor": {
+      "section": "21.4",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "21.2",
+        "epub": "OEBPS/part0025.xhtml#p11:f8b4f0d81a",
+        "reason": "默认值、局部处理、自动计算可减少需关注的信息及位置。"
+      },
+      {
+        "section": "21.3",
+        "epub": "OEBPS/part0025.xhtml#p13:1b411f63b7",
+        "reason": "必要信息应明显；finish() 成功后再读取文件为自拟的具体契约与调用者动作，不是原书 API。"
+      },
+      {
+        "section": "21.4",
+        "epub": "OEBPS/part0025.xhtml#p17:586fcd4557",
+        "reason": "作者说多数调用者通常需要缓冲，而非所有场景都无需控制缓冲；按普通导出语境说明默认值与例外控制可以并存。"
+      },
+      {
+        "section": "21.4",
+        "epub": "OEBPS/part0025.xhtml#p18:dfaf0db169",
+        "reason": "隐藏必要信息可造成未知的未知；自拟的提前读取风险使所需信息可检验，但不扩展为完整文件系统保证。"
+      }
+    ],
+    "status": "content-reviewed",
+    "titleTw": "隱藏什麼，必須先問誰需要知道",
+    "questionTw": "減少介面資訊，何時是簡化，何時會製造未知的未知？",
+    "answerTw": "應針對具體呼叫者和使用場景判斷。教學例中，匯出後要讀取檔案的呼叫者必須知道先等 finish() 成功回傳；隱藏這一事實可能導致提前讀取。普通匯出的緩衝選擇可提供常用預設值，減少日常設定，但有不同需求的呼叫者仍可保留顯式控制。",
+    "summaryTw": "矩陣固定在“普通檔案匯出，隨後讀取結果”的場景。finish() 成功前輸出可能不完整是自擬契約，不是 Java API 或永續性保證；常用緩衝預設值依據本章的多數呼叫者論述，不把緩衝視為永遠無關。",
+    "altTw": "需要知道何時可讀的行中，公開 finish() 成功後再讀的契約支援等待後讀取；隱藏它則可能在 write 後過早讀取到不完整內容。普通匯出緩衝選擇一行中，強制每次指定緩衝增加日常負擔，預設緩衝減少這項設定；例外場景仍可顯式選擇。",
+    "desktopTw": "/diagrams/ch21-exposure-decision-tw.svg",
+    "mobileTw": "/diagrams/ch21-exposure-decision-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-15-21-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  }
+]

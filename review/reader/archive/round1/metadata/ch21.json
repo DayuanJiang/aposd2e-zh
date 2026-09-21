@@ -1,0 +1,39 @@
+[
+  {
+    "id": "ch21-leverage-boundary",
+    "chapter": "ch21",
+    "title": "删除的原因，不必成为文本接口的一部分",
+    "question": "为什么删除字符范围，比专用 backspace 方法有更广的作用？",
+    "answer": "不同编辑动作可以先转成要删除的范围，再复用文本层的删除能力；文本模块需要知道删哪里，不需要知道按了哪个键。",
+    "summary": "退格和范围删除关系来自本节；删除选区、删除命令作为教学自拟调用场景。图中的多入一出表示复用，不表示需要预先实现这些功能。",
+    "alt": "退格、删除选区、删除命令在编辑动作层决定范围，穿过模块边界时只留下删除范围；文本模块统一执行删除，不接收具体按键来源。",
+    "kind": "many-to-one-abstraction",
+    "desktop": "/diagrams/ch21-leverage-boundary.svg",
+    "mobile": "/diagrams/ch21-leverage-boundary-mobile.svg",
+    "anchor": { "section": "21.1", "placement": "end" },
+    "sources": [
+      { "section": "21.1", "epub": "OEBPS/part0025.xhtml#p7:37c373eec3", "reason": "字符范围插入删除可解决多类问题；文本接口层不关心是否由 backspace 触发。删除选区与删除命令为教学自拟场景。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch21-exposure-decision",
+    "chapter": "ch21",
+    "title": "隐藏什么，必须先问谁需要知道",
+    "question": "减少接口信息，何时是简化，何时会制造未知的未知？",
+    "answer": "对调用者不重要的选择可由默认值或模块内部处理；调用者确实需要的信息必须显露。两类信息颠倒，分别造成认知负荷或未知的未知。",
+    "summary": "以本节的缓冲选择为不必要暴露的例子，以抽象的调用前提作另一类教学示意。判断依据是使用者的需要，不是信息越少越好。",
+    "alt": "矩阵按调用者是否需要该信息分行，按接口暴露还是内部隐藏分列。必要且暴露支持正确调用，不必要却暴露增加负担；必要却隐藏制造未知的未知，不必要且隐藏则减少使用者负担。",
+    "kind": "exposure-decision-matrix",
+    "desktop": "/diagrams/ch21-exposure-decision.svg",
+    "mobile": "/diagrams/ch21-exposure-decision-mobile.svg",
+    "anchor": { "section": "21.4", "placement": "end" },
+    "sources": [
+      { "section": "21.2", "epub": "OEBPS/part0025.xhtml#p11:f8b4f0d81a", "reason": "默认值、局部处理、自动计算可减少需关注的信息及位置。" },
+      { "section": "21.3", "epub": "OEBPS/part0025.xhtml#p13:1b411f63b7", "reason": "重要信息应出现在接口文档、名称或常用方法参数等醒目位置。" },
+      { "section": "21.4", "epub": "OEBPS/part0025.xhtml#p17:586fcd4557", "reason": "把缓冲选择等不重要细节暴露给调用者会增加认知负荷。" },
+      { "section": "21.4", "epub": "OEBPS/part0025.xhtml#p18:dfaf0db169", "reason": "隐藏重要信息会产生未知的未知；调用前提为此机制的教学示意，不是新增作者案例。" }
+    ],
+    "status": "awaiting-independent-review"
+  }
+]

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 376" role="img" aria-labelledby="ch15-design-feedback-title ch15-design-feedback-desc">
+  <title id="ch15-design-feedback-title">先寫註解，再讓實作反饋到設計</title>
+  <desc id="ch15-design-feedback-desc">作者設計新類時，先寫介面說明與簽名，再寫變數和實作。編碼測試發現的問題可回到介面說明，新方法仍先寫註解。這是作者的做法，不是所有程式碼變更的必需順序；應隨設計變化同步維護註解。</desc>
+  <defs><marker id="ch15-design-feedback-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="680" height="376" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="21" font-weight="600">先寫註解，仍然持續迭代</text>
+    <text x="24" y="61" font-size="14">15.2 · 作者設計新類的做法；不是所有程式碼修改的必需順序</text>
+    <rect x="24" y="92" width="290" height="135" rx="5" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="42" y="122" font-weight="600">先看抽象，不陷入實作</text>
+    <text x="42" y="151">類介面說明</text><text x="42" y="178">主要公有方法：說明 + 簽名</text><text x="42" y="207" font-size="14">方法體留空；反覆調整基本結構</text>
+    <rect x="368" y="92" width="288" height="135" rx="5" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" />
+    <text x="386" y="122" font-weight="600">再寫實作，並檢驗設計</text>
+    <text x="386" y="151">主要變數：宣告 + 註解</text><text x="386" y="178">方法體 + 所需實作註解</text><text x="386" y="207" font-size="14">編碼、測試中發現新的問題</text>
+    <path d="M314 160H368" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch15-design-feedback-arrow)" />
+    <path d="M512 227V285H169V227" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch15-design-feedback-arrow)" />
+    <text x="340" y="269" text-anchor="middle">修正介面說明；新方法也從說明開始</text>
+    <path d="M24 320H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="24" y="349">設計改變時，同步修正註解；順序本身不會自動保證文件完整。</text>
+  </g>
+</svg>

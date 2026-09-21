@@ -1,0 +1,604 @@
+{
+  "review": "Independent ch01-ch07 second pass",
+  "overallVerdict": "targeted_changes_required",
+  "reviewedVersion": {
+    "firstReport": {
+      "path": "review/reader/diagram-review-01-07.json",
+      "sha256": "8452ce9f1471cb6f3d5680ec39c3c7eaf3d850c6cfa170e4313221dc76487b5f",
+      "matchesWriterReviewSourceHash": true
+    },
+    "writerHandoff": {
+      "path": "review/reader/revisions-01-07.json",
+      "sha256": "84edd3b40432ac4d558bb6be83ae3a05a0f643a95345ea1d32541801d13633b7",
+      "treatment": "Read as a statement of intended changes, not as independent evidence that those changes work."
+    },
+    "gallery": {
+      "directory": "/tmp/aposd2e-viz-round2-01-07",
+      "indexSha256": "813384af9dba4166d981071035e409ba96461afe780dba54626f246510268c43",
+      "readerCssSha256": "5d3ef34e2d5da059238251eef0c4e1ece7528f8065dd45ced03726cdf373c289",
+      "verification": "At the initial evidence check, independently computed all 32 live SVG hashes and reader.css hash; each matched the light and dark index entries. Viewed all 32 gallery PNGs, each containing desktop and mobile. PNG hashes below identify the exact images viewed; the supplied gallery index itself does not contain PNG hashes. Final verification still matches every SVG and PNG, but the shared CSS has changed as recorded separately.",
+      "lateWorkspaceDrift": {
+        "path": "docs/.vuepress/reader/reader.css",
+        "galleryAndInitialReviewSha256": "5d3ef34e2d5da059238251eef0c4e1ece7528f8065dd45ced03726cdf373c289",
+        "finalObservedWorkspaceSha256": "fc8eff8a3b087d71331cbc62324e1e953093e431be3401d86cb808831bbad5ec",
+        "otherEvidence": "Of 90 rechecked source/evidence hashes, 89 remained unchanged; only reader.css differed. All 32 SVGs, 32 PNGs, seven metadata files, seven chapter Markdown files, seven English originals, both reports, gallery index and insertion code retained their reviewed hashes.",
+        "effectOnVerdict": "Visual observations apply to the supplied gallery CSS version, not a fresh rendering of the newer stylesheet. No CSS was changed by this reviewer and no new render was produced. MAIN should use current-CSS captures for final integrated acceptance."
+      }
+    },
+    "paragraphInsertionCode": {
+      "path": "docs/.vuepress/reader/content.mjs",
+      "sha256": "e89779196a8631c89c075e030d6e9fc33c6048890824e83a66a76d0f4b4e38a8",
+      "verification": "Read the paragraph-anchor implementation and evaluated diagramInsertions against current simplified Markdown and metadata without a build. All 16 placements resolve to the source lines recorded below."
+    },
+    "chapterHashes": {
+      "ch01": {
+        "metadataSha256": "04dd7c14893825f07dc2c189b5327e69378cc25d2bc0d5c7ccbde4b83a92ea81",
+        "markdownSha256": "4df92f5a8f757d90ddbeeaeb478438889322c263669f16ac59921604585e93aa",
+        "englishOriginalSha256": "e6c2b59af994332557b31674392e66f1dc842f07bc83cc759b9700a6cdcb6462"
+      },
+      "ch02": {
+        "metadataSha256": "c4c5287779f36a7dea93c74e80f47535c0b3a352bc63be8908af57d198df1d8a",
+        "markdownSha256": "b4b67e4f598a9bd3660dd44810d37518104c2f0dfc6d8c291cc60529b12e58d6",
+        "englishOriginalSha256": "97e011f4ad48e013112cc68b341c38dc289e8349febf1471d3dcdcd50b31f2a2"
+      },
+      "ch03": {
+        "metadataSha256": "3b0e11906184c96d97badc6c900cce333bd39f6cffdaa823e347dc717182c8a2",
+        "markdownSha256": "1e5f7f85a8aa3102d39310f204b80214e5e4918ce69134e7ca94e07d022677cf",
+        "englishOriginalSha256": "c2b9f797efe95eb21d5bf228d4dd2d106d1f5194bb581b5f68325ac27e6e4939"
+      },
+      "ch04": {
+        "metadataSha256": "a0a3cbbe52efcbcf47aadd5d2f58bdba5635d3b07045df8cba563e72751cab1c",
+        "markdownSha256": "bfe95aaca8e217d4491cccd76452a20429f6e4c0f317aa08a3280955b3af6390",
+        "englishOriginalSha256": "599ea728fb1c6bc56a2fc4ea2ccf38219529349e4e1fdc48aef6a88c3a6fcf22"
+      },
+      "ch05": {
+        "metadataSha256": "76200c1fb20134574616293928777ea63a5a8e76ec4fb57b6456983ae67fbc36",
+        "markdownSha256": "b0e6ac931b4cbf86d820cde88098ea471558b283c566eadf407df669f3cb86a8",
+        "englishOriginalSha256": "661e2f6c112e8d0de9849017ed62f8fd22770a71613f21d4163fd60d230fbf40"
+      },
+      "ch06": {
+        "metadataSha256": "c7dfd92c1d4f45836d2319af8443d4d61fcd3765be7cf95878757b869c741775",
+        "markdownSha256": "a38430c80261daeba498d6c4fc34dc89564da27d63f255ee5b7e890c6ab2c1e0",
+        "englishOriginalSha256": "9993c6c6775d665d6018143fca6da6f2bea36962034f9e0ed06b2dc321399863"
+      },
+      "ch07": {
+        "metadataSha256": "3e7b4e091aee8b49badc896848eabe2552662d1f2ce9d45116ff72117876ddfc",
+        "markdownSha256": "31e76da9da9342776b62e05591082f03fbbfbb4a278cf24635d363c3f7d0fc03",
+        "englishOriginalSha256": "d6720e3865484ba8e72a9b1ed67cd206f00ce54f0297d452488845b6efc063a0"
+      }
+    },
+    "pathConventions": {
+      "metadata": "docs/.vuepress/reader/diagrams/<chapter>.json",
+      "markdown": "docs/<chapter>.md",
+      "englishOriginal": "/tmp/aposd2e-polish.GHV1eo/original/<chapter>.md",
+      "activeSvg": "docs/.vuepress/public/diagrams/<id>.svg and <id>-mobile.svg",
+      "archivedRound1Svg": "/tmp/aposd2e-viz-review-round1/assets/<id>.svg and <id>-mobile.svg"
+    }
+  },
+  "scopeAndMethod": {
+    "originalIds": 19,
+    "activeIds": 16,
+    "svgSourcesRead": 32,
+    "galleryPngsViewedWithViewImage": 32,
+    "renderedLayoutThemeStatesInspected": 64,
+    "retirementsVerified": 3,
+    "independentChecks": [
+      "Compared current metadata, SVG source and visible graphic relationships with the first report, not only the writer's resolution fields.",
+      "Read relevant current Chinese paragraphs and supplied English source conditions and captions.",
+      "Checked original-ID coverage, removed metadata entries, absent simplified retired assets, and retained round1 archive files.",
+      "Checked weighted arithmetic, four ASCII body bytes, half-open deletions, empty-range reconstruction, two-byte read positions, reverse Action order, and distinct Context-reference values with independent read-only assertions.",
+      "Confirmed the supplied geometry index contains zero outside, overlap and container candidates, but did not treat that as a test of arrow direction or explanatory design."
+    ],
+    "notPerformed": [
+      "No asset, metadata, Markdown, shared-reader or build edits.",
+      "No new render, build, browser interaction test or screenshot generation.",
+      "No independent execution of the writer's full geometry suite.",
+      "No rerender under the shared reader.css revision detected during final verification.",
+      "No integrated reader, production bundle, cache invalidation or Traditional-Chinese derivative acceptance.",
+      "No reader learning, retention or transfer experiment."
+    ],
+    "verdictMeaning": "accept means the current explanatory design is acceptable within this source/gallery scope. revise means a specific repair remains, not that another redesign is needed. retirement_confirmed applies to active source metadata and simplified assets, not deployed bundles.",
+    "learningEvidence": "All effectiveness statements are judgments about available reasoning operations. Correct arithmetic and readable screenshots are not empirical evidence that readers learned."
+  },
+  "summary": {
+    "accept": 10,
+    "revise": 6,
+    "retirement_confirmed": 3,
+    "sourceConditionResult": "The requested adequate-performance, conditional memory ownership, bounded HTTP framing, neutral Action traversal and correctly associated distinct Context assumptions are now present. No new contradictory source condition was found.",
+    "placementResult": "All 16 current source placements are acceptable. ch01-two-levers is now after the two-approach passage, not stacked at the end of section 1.1.",
+    "mainRemainingIssue": "Nine SVGs contain eleven intended directed segments that visibly lack arrowheads. The affected segments are first subpaths in compound paths. Later segments in the same paths retain their heads. This is visible in the exact new captures, so it is not the round1 screenshot/source mismatch.",
+    "affectedIds": ["ch02-memory-owner", "ch05-format-ownership", "ch05-http-read", "ch06-history-boundary", "ch07-dispatch-value", "ch07-context-instances"],
+    "repairBoundary": "Separate the independent directed connectors into individual paths, preserve intentionally undirected association lines, then inspect fresh hash-matched captures. Do not redraw the sound examples merely because a connector repair remains."
+  },
+  "priorityFindings": [
+    {
+      "priority": "medium",
+      "ids": ["ch05-format-ownership", "ch06-history-boundary", "ch07-dispatch-value"],
+      "finding": "Missing arrowheads weaken central relational evidence: the mobile format-change event visibly points only toward the writer; Action registration/callback direction is asymmetric; the dispatcher's S branch lacks the head shown on D. Exact paths and endpoints are listed per record.",
+      "acceptanceCheck": "Both change targets, both Action registrations/callbacks and both selected dispatcher destinations must have the intended direction visible in desktop and mobile."
+    },
+    {
+      "priority": "low",
+      "ids": ["ch02-memory-owner", "ch05-http-read", "ch07-context-instances"],
+      "finding": "The same compound-path pattern drops one desktop time-axis, processing-step or constructor-delivery arrowhead. Labels still make the intended explanation recoverable, but the visual grammar is inconsistent.",
+      "acceptanceCheck": "Repair the three first segments without changing the examples or converting the intentionally undirected Context association into a runtime read."
+    },
+    {
+      "priority": "low",
+      "ids": ["ch07-context-instances"],
+      "finding": "The lower panel's before-step-1 heading covers reference construction while its Context boxes display post-write values and its A arrow is step 3. The step-3 label makes the overlay recoverable, but the times should be explicitly separated.",
+      "acceptanceCheck": "Label the lower Context values as the state after step 2, or retitle the panel to distinguish construction-time association from later lookup."
+    }
+  ],
+  "records": [
+    {
+      "id": "ch01-two-levers",
+      "firstDecision": "revise",
+      "verdict": "accept",
+      "question": "Which knowledge disappears, and which remains but changes owner?",
+      "expectedAnswer": "The duplicate naming distinction disappears. R recognition and D decoding remain inside the file module instead of the caller. The two techniques can be combined without a prescribed order.",
+      "firstPassResolution": "The missing before-state is now drawn. Both layouts use the same R/D identities and non-sequential conclusion. The paragraph anchor resolves to the requested passage.",
+      "graphicReasoning": "The upper two-name-to-one-name transformation removes an item. In the lower comparison, readers can find the same R and D under different enclosing owners. The after-state caller has load(file), and the labeled call crosses into the module containing those tasks. Those are inspectable transformations, not simply a shorter outline.",
+      "sourceConditions": [
+        {"source": "docs/ch01.md:10-12; original/ch01.md:19-23, p7-p8", "check": "Elimination versus encapsulation retained. The example is explicitly invented; remaining module dependencies and lack of required ordering are visible."}
+      ],
+      "placement": {"anchor": {"section": "intro", "paragraph": 6}, "afterLine": 12, "beforeLine": 14, "verdict": "accept", "reason": "Immediately follows encapsulation and precedes the shift to continuous design. The late round1 end-of-1.1 stacking issue is resolved."},
+      "evidence": {
+        "desktopSha256": "18743dd680a4e3cb1417005e8f9248f0566148dbb8250fe7afe184ea88c8399b",
+        "mobileSha256": "c994e2fac33e0927800b8961a3f2c695b881024e17d68bf1d94084c9b144686e",
+        "lightPng": "gallery-light-000.png",
+        "lightPngSha256": "a4723630ffcf80550fcb696dcc34c33e1033ae0f07d4bab2567ec72a99415619",
+        "darkPng": "gallery-dark-000.png",
+        "darkPngSha256": "e114110bf3ad8553c84f5b6b7a2e4ffa08cc804599d7c364fbd41bbb49ad98c7",
+        "viewObservation": "Both themes are readable. Mobile preserves the owner change and explicit before/after labels. The smaller R/D bands after encapsulation still carry unchanged identities; they are not a quantitative complexity scale."
+      },
+      "issues": [],
+      "requestedChanges": [],
+      "limitations": "The example omits a complete load contract and error behavior deliberately. No need to add those to this introductory distinction. Integrated reading and learning were not tested."
+    },
+    {
+      "id": "ch01-review-loop",
+      "firstDecision": "retire",
+      "verdict": "retirement_confirmed",
+      "question": "Does a red flag by itself justify adopting a refactor?",
+      "expectedAnswer": "No. Actual code, alternatives and tradeoffs must be evaluated, as the retained section 1.1 explains.",
+      "firstPassResolution": "The redundant procedural supplement is absent; no generic successor fills its former slot.",
+      "graphicReasoning": "No active graphic to assess. Retirement remains appropriate because the former loop supplied no concrete design decision beyond the source prose.",
+      "sourceConditions": [{"source": "docs/ch01.md:30-40; original/ch01.md:49-65", "check": "The actual-code requirement, red-flag exploration, moderation and closing transition remain in the current chapter."}],
+      "placement": {"anchor": null, "verdict": "retired", "reason": "Absent from ch01 metadata and from the evaluated active insertion set."},
+      "evidence": {
+        "activeMetadataEntryPresent": false,
+        "desktopFilePresent": false,
+        "mobileFilePresent": false,
+        "activeGalleryEntryPresent": false,
+        "archivedDesktopSha256": "39a06b4ea8f6d9dd90abc1034884cb2618d2e6da6465ac30fcc8d894c99a989e",
+        "archivedMobileSha256": "f272dfeb158230e2aee435ce62552c36f79737a69ad96cea7554bd2cac3f4883",
+        "referenceCheck": "No retired-ID reference found in active diagram metadata, ReaderLayout.vue, ChapterDiagram.vue or plugin.ts."
+      },
+      "issues": [],
+      "requestedChanges": [],
+      "limitations": "No current screenshot exists or is needed for a retired source asset. Generated derivatives, deployed pages and caches were not checked. Retirement is not a measured learning improvement."
+    },
+    {
+      "id": "ch02-weighted-work",
+      "firstDecision": "keep",
+      "verdict": "accept",
+      "question": "With fixed weights, do equal local improvements produce equal reductions in the weighted total?",
+      "expectedAnswer": "No. Both parts initially contribute 1.6; the total is 3.2. Improving A by one point yields 2.4, while improving B yields 3.0. Costs and changing weights still matter outside the teaching calculation.",
+      "firstPassResolution": "Both SVGs are byte-identical to round1 and were viewed again in the new hash-matched gallery.",
+      "graphicReasoning": "The aligned inputs and independent alternatives still support a calculation, not an assertion that the most complex part must receive priority. The new captures preserve the same numbers and qualification text.",
+      "sourceConditions": [{"source": "docs/ch02.md:17-23; original/ch02.md:28-35, p10-p12", "check": "Rough time-weighted model, fixed invented inputs, and no work-hour or investment-return claim. All retained."}],
+      "placement": {"anchor": {"section": "2.1", "placement": "end"}, "afterLine": 23, "beforeLine": 25, "verdict": "accept", "reason": "Remains close to the formula. Moving immediately after line 21 could be slightly tighter, but is not required."},
+      "evidence": {
+        "desktopSha256": "8a42e5c5e0f60bc33702568c2aaecd4ee00a7287fb73d99b49f3e326bc49fb9b",
+        "mobileSha256": "eff9e05d8afbff8abdafea5ca38b9f1728666d699c50cd7e5cc05b653f3d3e9a",
+        "lightPng": "gallery-light-001.png",
+        "lightPngSha256": "292b86b8cc5c5334f6f58ce02050c25c5a78438007d889d4ba629b7dc4f72491",
+        "darkPng": "gallery-dark-001.png",
+        "darkPngSha256": "2c9a1e6b17cd1b9aa3911570b128b6e6e90a67903168d46c3a469c160b9e5284",
+        "viewObservation": "Readable totals, weights and caveats in both layouts/themes. Desktop table and mobile blocks preserve the same independent alternatives."
+      },
+      "issues": [],
+      "requestedChanges": [],
+      "limitations": "Arithmetic was independently checked; no calibrated complexity score or empirical learning effect was established."
+    },
+    {
+      "id": "ch02-memory-owner",
+      "firstDecision": "revise",
+      "verdict": "revise",
+      "question": "Which lifecycle responsibility changes lanes when release can safely be handled by the allocating module?",
+      "expectedAnswer": "Allocation remains in the module and use remains with the caller. Release moves from the caller lane to the module lane, conditionally removing that caller obligation without proving a safe lifetime protocol.",
+      "firstPassResolution": "The title, conditional answer, stable lanes and placement are repaired. The diagram no longer suggests line-count savings or that merely moving a box ensures safety.",
+      "graphicReasoning": "Fixed owners and numbered temporal rows make the changed release location directly comparable. This is substantially better than the former three-box sequences. One desktop time-axis head is missing, creating an unnecessary asymmetry; the lane reasoning itself is sound.",
+      "sourceConditions": [{"source": "docs/ch02.md:31-33; original/ch02.md:46-50, p16-p17", "check": "Conditional restructuring, no exclusive solution, and unspecified lifetime protocol are explicit in metadata and visible in both layouts."}],
+      "placement": {"anchor": {"section": "2.2", "paragraph": 4}, "afterLine": 33, "beforeLine": 35, "verdict": "accept", "reason": "After the memory and line-count paragraphs and before the original banner figure. No longer separated from its source by the unknown-unknowns discussion."},
+      "evidence": {
+        "desktopSha256": "eee8e67da13f47080c0b9957bc5db0aea8e7ab11208cf3e0c918283e3ecbce2b",
+        "mobileSha256": "b10ea4d99357e82704e54dfe42a2bb5885d9ef7fac6bf446764c0159fdcf7076",
+        "lightPng": "gallery-light-002.png",
+        "lightPngSha256": "d5a0fe4bfe8c6254a00ce9e9427778510e7bca99a73979f613bdccd335eefa69",
+        "darkPng": "gallery-dark-002.png",
+        "darkPngSha256": "d42889adedf30f0ef5c6c3cebe795ed27561e8f5af1b5b564aefc960bb0f0568",
+        "viewObservation": "Desktop's first vertical time line has no head; the second and both mobile time lines do. All responsibility and qualification text is readable."
+      },
+      "issues": [
+        {"priority": "low", "origin": "new", "detail": "Desktop path M31 145V308M367 145V308 has a head only on the second time line. The intended endpoint at (31,308) is visibly unmarked.", "sourceLocation": "docs/.vuepress/public/diagrams/ch02-memory-owner.svg:14"}
+      ],
+      "requestedChanges": ["Split the two desktop time axes into separate paths so both point down. Preserve the current lane layout and conditional wording."],
+      "limitations": "This is a small graphic-consistency repair, not a request for a memory-management implementation or proof of leak prevention. The labels already make the intended order recoverable."
+    },
+    {
+      "id": "ch02-cause-symptom",
+      "firstDecision": "replace",
+      "verdict": "accept",
+      "question": "When TIMEOUT is added, which edit remains necessary even if the message table is hard to discover?",
+      "expectedAnswer": "The message table still needs its TIMEOUT entry. Making the association visible helps discover that edit but leaves the two-place consistency obligation intact.",
+      "firstPassResolution": "The taxonomy matrix is gone. The replacement shows the same initial state, a visible missing entry and a complete matched edit set. It no longer promises discovery of every dependency.",
+      "graphicReasoning": "The repeated declaration plus changed message-table content gives readers an inspectable omission. Solid bidirectional co-change links remain in both cases; a separate dashed discovery link is added only to the discoverable case. Thus visibility and dependency are no longer conflated. This earns value beyond the earlier banner example by transferring the idea to another concrete representation.",
+      "sourceConditions": [{"source": "docs/ch02.md:51-59; original/ch02.md:73-86, p25-p29", "check": "Dependencies remain; visibility lowers omission risk rather than guaranteeing success. Invented status/message names and unspecified missing-message behavior are explicit."}],
+      "placement": {"anchor": {"section": "2.3", "paragraph": 5}, "afterLine": 55, "beforeLine": 57, "verdict": "accept", "reason": "Immediately after the status/message-table source example and before the broader documentation discussion."},
+      "evidence": {
+        "desktopSha256": "43f9e4441163fb715cb9eaccbb39c3d2ec6c8d9ff6c51c8e4ccf2a19b08fd4ef",
+        "mobileSha256": "c0aa82dddd5a9c0034e62d2d0c21846984f33f352842206a0143e5d697d9553c",
+        "lightPng": "gallery-light-003.png",
+        "lightPngSha256": "d7c983157ac88f01e76d697278e482ebf8cfed6e777eb1fd19b0072990f3dcc6",
+        "darkPng": "gallery-dark-003.png",
+        "darkPngSha256": "279db88ad8672f0acae6a5f37befa5319cf2eb5c12290bbb3f50cd6718bec34c",
+        "viewObservation": "Missing and completed TIMEOUT entries, bidirectional obligations, and the dashed discovery route are visible in both themes. Mobile's stacking retains both relationship types."
+      },
+      "issues": [],
+      "requestedChanges": [],
+      "limitations": "The example illustrates one omission and one successful discovery, not the probability of either outcome. No runtime behavior or learning improvement was measured."
+    },
+    {
+      "id": "ch03-patch-cycle",
+      "firstDecision": "keep",
+      "verdict": "accept",
+      "question": "How does the consequence of a shortcut increase pressure for the next shortcut?",
+      "expectedAnswer": "Accumulated complexity obstructs later changes and increases cleanup pressure, encouraging further workarounds under schedule pressure.",
+      "firstPassResolution": "Both SVGs are byte-identical to round1. The reinforcing return edge and future-maintainer cost distinction remain intact.",
+      "graphicReasoning": "The return edge still changes a linear list into a feedback mechanism. Separate path elements give all cycle edges visible directions. Numbering preserves that mechanism when the mobile layout becomes a vertical chain.",
+      "sourceConditions": [{"source": "docs/ch03.md:10-18 and 36-42; original/ch03.md:19-32 and 55-65", "check": "Qualitative accumulation argument, not measured causality or a progress forecast. Original curve/payback caveats remain in the source."}],
+      "placement": {"anchor": {"section": "3.1", "placement": "end"}, "afterLine": 18, "beforeLine": 20, "verdict": "accept", "reason": "Consolidates the mechanism and maintenance-cost example before strategic programming."},
+      "evidence": {
+        "desktopSha256": "aa51c64dc8a08c0f99e829424a362adcc68a687df011beeef9ec068cd422b315",
+        "mobileSha256": "e03d9f8dc738251efb06aa87f42211d11169cbb674d3147b7393ef6364edc709",
+        "lightPng": "gallery-light-004.png",
+        "lightPngSha256": "0dc6dc8e90bbf5abad1154165551db3fffddf00ecc4851dfa514429c609e0594",
+        "darkPng": "gallery-dark-004.png",
+        "darkPngSha256": "e518619d4a9cafcabb79fcfc9a9f14726f4594b99ed709573c491f82e4c8117a",
+        "viewObservation": "All four directed edges remain clear in both themes/layouts. The loop is not affected by the compound-path defect found elsewhere."
+      },
+      "issues": [],
+      "requestedChanges": [],
+      "limitations": "No particular patch's cost or inevitability follows from this diagram. Its reasoning affordance is not evidence of actual reader learning."
+    },
+    {
+      "id": "ch03-small-investments",
+      "firstDecision": "retire",
+      "verdict": "retirement_confirmed",
+      "question": "Does removing the supplementary schedule remove the source's continuous-investment argument or evidence caveats?",
+      "expectedAnswer": "No. The proactive/reactive investment prose, original qualitative curve and absence-of-payback-data caveat remain.",
+      "firstPassResolution": "The redundant three-column schedule is absent and has no count-preserving successor.",
+      "graphicReasoning": "No active graphic. The distinct patch loop is retained; it does not reproduce the retired schedule's repeated recommendation cells.",
+      "sourceConditions": [{"source": "docs/ch03.md:24-44; original/ch03.md:40-65", "check": "The original Figure 3.1 reference and caption, approximate investment advice and explicit lack of empirical payback data are present."}],
+      "placement": {"anchor": null, "verdict": "retired", "reason": "Absent from ch03 metadata and active insertion set."},
+      "evidence": {
+        "activeMetadataEntryPresent": false,
+        "desktopFilePresent": false,
+        "mobileFilePresent": false,
+        "activeGalleryEntryPresent": false,
+        "archivedDesktopSha256": "752e1e8141c4e42e3d52bb5e7e226c36b4f1bc987c38b4527dca8f0958a8071d",
+        "archivedMobileSha256": "db2c514c8043314019d1059d8f278bd08c74f667a831fb5950da39dd38a336b5",
+        "referenceCheck": "No retired-ID reference found in active diagram metadata or the checked reader integration files."
+      },
+      "issues": [],
+      "requestedChanges": [],
+      "limitations": "Confirmed source retirement, not removal from previously generated/deployed artifacts. No learning advantage is inferred from the reduced count."
+    },
+    {
+      "id": "ch04-abstraction-filter",
+      "firstDecision": "replace",
+      "verdict": "accept",
+      "question": "Why does the database need a persistence guarantee while it may not need the block-selection algorithm?",
+      "expectedAnswer": "The same volatile-cache loss leaves v0 or v1 depending on whether v1 reached persistent storage. The caller needs a contract that lets it rely on the relevant state. Block-selection details may remain hidden only when performance is adequate and those details are irrelevant to the caller's needs.",
+      "firstPassResolution": "The circular yes/no gate is replaced by cache/storage states and crash outcomes. The previously omitted adequate-performance condition is restored in the answer and visibly in both layouts.",
+      "graphicReasoning": "Rows preserve storage identity across a labeled crash transition. Comparing A with B changes persistent v0 to v1 while the cache loses its contents in both. The need for a guarantee can now be derived from a consequence rather than accepted from a classification label. Mobile rotates the state arrangement without changing this comparison.",
+      "sourceConditions": [{"source": "docs/ch04.md:23-35; original/ch04.md:37-56, especially p19:954b1a6804", "check": "Adequate performance, necessary interface guarantees and false-abstraction warning all present. v0/v1, volatile cache and unaffected persistent storage are explicit teaching assumptions; no named flush API or transaction protocol is asserted."}],
+      "placement": {"anchor": {"section": "4.3", "paragraph": 4}, "afterLine": 35, "beforeLine": 37, "verdict": "accept", "reason": "Directly after the file-system example and its performance condition, before the everyday-abstraction examples."},
+      "evidence": {
+        "desktopSha256": "61b1ad6cfc6ca5fae4790c0981e3ce2f6d9d9e1824a0ab0e3dc948534f72e401",
+        "mobileSha256": "81d6817536b240593af7d586a7f33be551ad55e48bef18064e493287370056c3",
+        "lightPng": "gallery-light-005.png",
+        "lightPngSha256": "70e96488ec0c9426774c27e05369c437bd620f8f3928d00c62f48bc0b52dfd18",
+        "darkPng": "gallery-dark-005.png",
+        "darkPngSha256": "0a682e3a938b95a66479506b095176b50adb5b6ea18977f06e8d82ea7342e64c",
+        "viewObservation": "Both crash transitions and all before/after values are readable. The adequate-performance sentence is prominent rather than hidden in metadata. No ambiguous branch routing remains."
+      },
+      "issues": [],
+      "requestedChanges": [],
+      "limitations": "A is a particular permitted counterexample, not a theorem that absence of a guarantee always leaves v0. The actual states and model assumptions prevent that overreading. No filesystem or reader experiment was run."
+    },
+    {
+      "id": "ch04-depth",
+      "firstDecision": "retire",
+      "verdict": "retirement_confirmed",
+      "question": "Does retirement preserve the original depth metaphor and its concrete examples?",
+      "expectedAnswer": "Yes. The chapter still supplies the original cost/functionality rectangle explanation, Figure 4.1, Unix I/O discussion and shallow-wrapper example.",
+      "firstPassResolution": "The duplicate pilot comparison is absent; no replacement metaphor has been added to fill the count.",
+      "graphicReasoning": "No active graphic. The reason for retirement remains explanatory redundancy, not rejection of the source's depth concept.",
+      "sourceConditions": [{"source": "docs/ch04.md:41-93; original/ch04.md:61-74 and 130-152", "check": "The source's relative-cost definition, original-figure reference and useful-or-unavoidable shallow-module qualification remain the governing context; retirement does not convert depth into a method-count rule."}],
+      "placement": {"anchor": null, "verdict": "retired", "reason": "Absent from ch04 metadata and active insertion set."},
+      "evidence": {
+        "activeMetadataEntryPresent": false,
+        "desktopFilePresent": false,
+        "mobileFilePresent": false,
+        "activeGalleryEntryPresent": false,
+        "archivedDesktopSha256": "417ad141966488d31f3aa6cccf96e36818588c14c9cafd0d8d41cbc63a7231d7",
+        "archivedMobileSha256": "5fd66729fbacf069717887958f198e60b5929503cb8775f77f226816773f49e4",
+        "referenceCheck": "No retired-ID reference found in active diagram metadata or the checked reader integration files."
+      },
+      "issues": [],
+      "requestedChanges": [],
+      "limitations": "Old-pilot tests, generated translations and deployed output were not validated. This confirms the requested source retirement, not a full release cleanup."
+    },
+    {
+      "id": "ch04-common-path",
+      "firstDecision": "revise",
+      "verdict": "accept",
+      "question": "After reading AB, why does the next ordinary read return CD while the seek branch returns EF?",
+      "expectedAnswer": "The position is 2 after AB. An ordinary two-byte read uses positions 2-3 and advances to 4. The alternative first moves position to 4, then reads EF and advances to 6. These are independent alternatives under the successful-two-byte-read assumption.",
+      "firstPassResolution": "Offsets, returned bytes and next positions replace the uninformative repeated read boxes. The example explicitly does not require read before lseek, and Java default buffering remains an author proposal.",
+      "graphicReasoning": "The common position-2 state forks into two paths. Readers can locate C/D or E/F on the file strip and verify the stated results. The ordinary path visibly bypasses lseek; adding the special capability does not add it to every traversal.",
+      "sourceConditions": [{"source": "docs/ch04.md:59, 117-119; original/ch04.md:91-92, 190-194", "check": "Sequential default and position adjustment are source-derived. Complete two-byte returns and ABCDEF are explicit inventions; short reads, errors and EOF are omitted. Default Java buffering is not presented as current API behavior."}],
+      "placement": {"anchor": {"section": "4.7", "placement": "end"}, "afterLine": 119, "beforeLine": 121, "verdict": "accept", "reason": "Immediately follows the effective-interface-complexity argument it demonstrates."},
+      "evidence": {
+        "desktopSha256": "90720488677cb91de3a716ee556c177e382952ccc61576d2682f9ae5fb422829",
+        "mobileSha256": "8c3d6f36ed0908d68492f3b916a5eebdba62f2084a52b5238df9c496c7ed9220",
+        "lightPng": "gallery-light-006.png",
+        "lightPngSha256": "30bda3a7a5da2654ce4e041ba2ee415dcdf658ba04e55ed759919c44691a707a",
+        "darkPng": "gallery-dark-006.png",
+        "darkPngSha256": "2b6a0e2c4f6619409bcf339874626890efab859457cd7a67d3e50c2912878e51",
+        "viewObservation": "Both branches have visible directed connectors and readable state labels in both themes. Mobile retains the fork instead of turning the alternatives into successive operations."
+      },
+      "issues": [],
+      "requestedChanges": [],
+      "limitations": "The strip labels byte offsets, unlike ch06's character-gap notation; that distinction is stated. This is not a complete I/O state machine or an empirical learning result."
+    },
+    {
+      "id": "ch05-format-ownership",
+      "firstDecision": "revise",
+      "verdict": "revise",
+      "question": "Which implementations must change for the same K format change before and after regrouping, while read-modify-write order stays fixed?",
+      "expectedAnswer": "The separate reader and writer implementations both change before regrouping; one shared format implementation changes afterward. Application phase order remains 1,2,3, provided the shared interface actually hides K.",
+      "firstPassResolution": "Numbered phases now separate execution order from invocation, and the same K change appears in both panels. The missing after-change comparison and hiding condition are repaired. Directional rendering is not yet complete.",
+      "graphicReasoning": "The repeated event and unchanged phase labels make the two-target-to-one-target inference possible. However, the mobile upper event has an arrowhead only toward the writer: the reader-side dashed segment is headless. The before panels also omit the reader-call head. This weakens precisely the symmetry the comparison relies on.",
+      "sourceConditions": [{"source": "docs/ch05.md:29-45; original/ch05.md:52-71, p18-p24", "check": "Shared knowledge, not temporal proximity, determines the proposed grouping. Actual interface hiding is visibly required; neither all-phase merging nor a concrete format is assumed."}],
+      "placement": {"anchor": {"section": "5.3", "placement": "end"}, "afterLine": 45, "beforeLine": 47, "verdict": "accept", "reason": "After the temporal-decomposition example and warning, before HTTP details."},
+      "evidence": {
+        "desktopSha256": "3be87165b39488dc253f76195ae81b0128e2ff0dfa5d1e11188087a59d854ff6",
+        "mobileSha256": "e10d7a45e7df6161baa6c93ad468680f1aa5a007b9bf007c54618e407f713095",
+        "lightPng": "gallery-light-007.png",
+        "lightPngSha256": "d60606502395beffd9d2261681b6d7a909775b4b612d2fb73b35cca6b7120677",
+        "darkPng": "gallery-dark-007.png",
+        "darkPngSha256": "3f9103efb4b20f67cd4b08e0514efbe2494e84a7af20e7ad6f66ada1edddf07f",
+        "viewObservation": "In both themes, desktop reader invocation is a plain line while writer invocation has a head. Mobile likewise loses the first invocation head and the upward K-to-reader head. Lower shared-module connections have their heads."
+      },
+      "issues": [
+        {"priority": "medium", "origin": "new", "detail": "Mobile K path M252 221V205M252 250V274 lacks the head at (252,205). Only the writer receives a directed change edge, undermining the depicted two-target claim.", "sourceLocation": "docs/.vuepress/public/diagrams/ch05-format-ownership-mobile.svg:18"},
+        {"priority": "low", "origin": "new", "detail": "Reader-call heads are missing at desktop (114,177) in M114 143V177M569 143V177 and mobile (150,162) in M91 162H150M91 306H150.", "sourceLocation": "desktop SVG:11; mobile SVG:16"}
+      ],
+      "requestedChanges": [
+        "Give each of the two before-state invocations its own directed path.",
+        "Give each mobile K change target its own dashed directed path so both targets match the desktop comparison.",
+        "Keep the new phase numbering, repeated change event, unchanged application phases and hiding qualification."
+      ],
+      "limitations": "The shared-knowledge reasoning is acceptable; this is a connector repair rather than another conceptual replacement. No actual format migration or reader trial was performed."
+    },
+    {
+      "id": "ch05-http-read",
+      "firstDecision": "revise",
+      "verdict": "revise",
+      "question": "Why must the illustrated reader already understand framing, and where is that knowledge duplicated?",
+      "expectedAnswer": "The Content-Length value constrains exactly the four ASCII body bytes a, =, 1, 2. The reader needs K to recognize boundaries and finish this request; an independent parser repeats K. A merged owner can perform both tasks, without implying one read call or a universal one-class protocol rule.",
+      "firstPassResolution": "The four byte cells and their length bracket are now connected. Both rejected modules explicitly own the same defined K; the merged alternative has one owner. Scope qualifications are retained.",
+      "graphicReasoning": "The length dependency ends at the body extent, not at an arbitrary process box. Repeated K across two module boundaries makes duplicated framing knowledge locatable. A small remaining defect is the first headless connector in the desktop merged processing row. The caller's 'call receive request' label is also inside that module's outline, mildly blurring the caller/entry distinction.",
+      "sourceConditions": [{"source": "docs/ch05.md:55-65; original/ch05.md:88-104, p30-p35", "check": "Explicit Content-Length excerpt, four ASCII bytes, potentially multiple reads, omitted framing/error paths, and no universal merge prescription all remain visible. The original Figure 5.1 content is not substituted with the teaching request."}],
+      "placement": {"anchor": {"section": "5.5", "placement": "end"}, "afterLine": 65, "beforeLine": 67, "verdict": "accept", "reason": "After both the proposed merge and its class-size limitation."},
+      "evidence": {
+        "desktopSha256": "2de47df29060e1d2514c5ddfe5d281da75b48d3cdb4eeb6dd1e21e786daecfc4",
+        "mobileSha256": "381d2733a832fcfde3f24fdd7a9537120609ba13900241855d15b08c752ce635",
+        "lightPng": "gallery-light-008.png",
+        "lightPngSha256": "6310c8ccae404f4a4be7cfeebb937e21ce74ad06908cc857b927406674724384",
+        "darkPng": "gallery-dark-008.png",
+        "darkPngSha256": "36fb201f2e41caa2769f4de3a0c108f783e7974621acacaed1b598fd56cc5f45",
+        "viewObservation": "Four cells and their bracket are clear in both themes/layouts. Desktop's first merged-row link is headless while the second is directed; mobile uses explicit textual arrows and has no corresponding missing head."
+      },
+      "issues": [
+        {"priority": "low", "origin": "new", "detail": "Desktop M145 451H217M334 451H439 lacks the head at (217,451), making one step in a stated processing sequence an undirected link.", "sourceLocation": "docs/.vuepress/public/diagrams/ch05-http-read.svg:25"},
+        {"priority": "low", "origin": "remaining_clarity", "detail": "The desktop merged-module outline includes 'call receive request', whereas the source's caller invokes an entry from outside. This is recoverable as an entry label, but 'receive-request entry' would be more precise than drawing a caller action inside the implementation.", "required": false}
+      ],
+      "requestedChanges": [
+        "Separate the desktop merged-row connectors so both processing steps have heads.",
+        "Prefer labeling the first inside item as the receive-request entry, or put a caller invocation outside; do not enlarge this into another full boundary diagram."
+      ],
+      "limitations": "The key framing/count reasoning is now supported. The independent byte-count check does not validate an HTTP implementation. The caller-entry wording note is non-blocking; the connector repair is the reason for revise."
+    },
+    {
+      "id": "ch05-parameter-boundary",
+      "firstDecision": "keep",
+      "verdict": "accept",
+      "question": "What crosses the request boundary with each accessor, and which failure conditions remain public?",
+      "expectedAnswer": "getParams exposes the internal Map reference. getIntParameter keeps lookup/conversion internal and returns the integer, while missing or unconvertible parameters still raise interface-visible exceptions.",
+      "firstPassResolution": "All explanatory content is retained. A byte comparison confirms the mobile asset is unchanged; the desktop change is the request-arrow start moving from x=247 to x=265.",
+      "graphicReasoning": "The stable desktop boundary still makes reference exposure versus a scalar result inspectable. The request arrow no longer touches the final method parenthesis in the new capture. Mobile preserves the same ownership and failure distinction without needing a two-column layout.",
+      "sourceConditions": [{"source": "docs/ch05.md:23, 77-93; original/ch05.md:43-44, 118-140", "check": "Specific internal-Map-reference example, not all collection-returning APIs. Missing/conversion exceptions remain explicit. Source-derived photo_id and 246 are retained."}],
+      "placement": {"anchor": {"section": "5.6", "placement": "end"}, "afterLine": 93, "beforeLine": 95, "verdict": "accept", "reason": "Directly beside the accessor explanation and parenthesized exception contract."},
+      "evidence": {
+        "desktopSha256": "3ec41179e034cf4cee716ef1b9057a09025d81dd9dff40818975b96fb04323e3",
+        "mobileSha256": "a52d7ddc3b85bdfc2187674a9c2c6a823f0dd238a608d00534fa29d65dcfc888",
+        "lightPng": "gallery-light-009.png",
+        "lightPngSha256": "a95416ed0071db839fec582a23b81bcc63edfcc4cda8ac3626014d1a25c8d887",
+        "darkPng": "gallery-dark-009.png",
+        "darkPngSha256": "2454ab02c5f803e4893f17053d49466a6f030eeeb194d5f8bf453ff7da5ed12a",
+        "viewObservation": "All request/return heads are present, both outcomes readable, and the adjusted desktop connector is separated from the method text."
+      },
+      "issues": [],
+      "requestedChanges": [],
+      "limitations": "No runtime API or reader-learning test. The continued keep judgment is based on the specific represented contract, not approval of every possible accessor design."
+    },
+    {
+      "id": "ch06-range-api",
+      "firstDecision": "keep",
+      "verdict": "accept",
+      "question": "Which independent ranges implement backspace, Delete and selection deletion from the displayed cursor state?",
+      "expectedAnswer": "[2,3) removes C and yields ABDE; [3,4) removes D and yields ABCE; [1,4) removes BCD and yields AE. UI chooses the range; one text mechanism applies it.",
+      "firstPassResolution": "Both assets are unchanged and all three calculations, gap markers and independent-start qualifications remain.",
+      "graphicReasoning": "Numbered character gaps anchor the half-open intervals. Each row can be checked against the same initial text instead of being accepted from a method label. No additional diagram is needed to turn this into a full editor.",
+      "sourceConditions": [{"source": "docs/ch06.md:45-85; original/ch06.md:64-110", "check": "Half-open bounds, generic Position, UI knowledge of deleted characters, independent teaching examples and no prescribed integer representation all retained."}],
+      "placement": {"anchor": {"section": "6.4", "placement": "end"}, "afterLine": 85, "beforeLine": 87, "verdict": "accept", "reason": "Follows the division-of-knowledge argument that the examples apply."},
+      "evidence": {
+        "desktopSha256": "5da5e378557c0b3c21dfda5a9881a4574312bbd6ddb3a7a66ff1d659ea9c3207",
+        "mobileSha256": "915aa5fe8548dacdcfc507bcde988a2ae589210e93c63e6e06b7e0b68034f305",
+        "lightPng": "gallery-light-010.png",
+        "lightPngSha256": "de6df240188aea87de5054397a337cfccd0781f8b2ab269c8c2a3b3762031e2b",
+        "darkPng": "gallery-dark-010.png",
+        "darkPngSha256": "ac7d24402eeafb325ae34ed1fc00750b597a05a29e286aa73449f8bcc12cdc9d",
+        "viewObservation": "Cursor and gap numbers remain distinguishable in both themes. All desktop result arrows have heads; mobile preserves each transformation and the no-sequential-execution note."
+      },
+      "issues": [],
+      "requestedChanges": [],
+      "limitations": "The valid interior ranges do not establish Unicode indexing, endpoint policies or an actual Position implementation. No learning claim."
+    },
+    {
+      "id": "ch06-history-boundary",
+      "firstDecision": "revise",
+      "verdict": "revise",
+      "question": "How can History traverse the group without understanding the state inside A1 and A2?",
+      "expectedAnswer": "The state-owning modules create and register Actions. History stores interface references and fences, invokes A2.undo then A1.undo for this group, and delegates the state-specific work. UI determines fence policy. The neutral example specifies no real text/selection restoration order.",
+      "firstPassResolution": "The missing registration/reference mechanism is now represented. Neutral A1/A2 satisfy the first report's permitted traversal-only alternative; a complete saved-state scenario is no longer required. Both fence labels, the source typo correction and same-mechanism qualification are retained.",
+      "graphicReasoning": "Matching A1/A2 identities connect external creation to list slots and delegated implementations, separating registration from later invocation. That is genuine progress over the former role pipeline. The first registration in mobile and the first callback in both layouts are nevertheless headless, making the two nominally equivalent operations visually unequal.",
+      "sourceConditions": [{"source": "docs/ch06.md:131-151; original/ch06.md:187-215, p63-p72", "check": "Opaque Action state, registration by owning modules, UI fence policy, reverse undo/forward redo, explicit redo typo correction and separation within the same mechanism all preserved."}],
+      "placement": {"anchor": {"section": "6.7", "placement": "end"}, "afterLine": 151, "beforeLine": 153, "verdict": "accept", "reason": "After the source's full mechanism and the important same-mechanism qualification."},
+      "evidence": {
+        "desktopSha256": "1b6bce78816de63f265ec1fdd9b2cdab8ad333a88f2f7512274d9fce73d78461",
+        "mobileSha256": "9b3ba3fafa85cc4301a9e6be5b2128ecf1730e105f4279b4a3ff1ba2790c3b01",
+        "lightPng": "gallery-light-011.png",
+        "lightPngSha256": "6431f3400a5c7013dc8c1adaf143fdda9e5ed118deb549a5e01c932b564a989f",
+        "darkPng": "gallery-dark-011.png",
+        "darkPngSha256": "599df7e789e8f3bdc972f648f607932a8b13792a72e448ba8d2c75dd524324b5",
+        "viewObservation": "Both desktop registrations have heads. Mobile A1 registration is a short dashed undirected segment, unlike A2. In both layouts the A2 callback is headless and the A1 callback has a head. All captions remain readable."
+      },
+      "issues": [
+        {"priority": "medium", "origin": "new", "detail": "Mobile M186 208H202M186 273H202 lacks the A1 registration head at (202,208), although the legend identifies both as addAction registration.", "sourceLocation": "docs/.vuepress/public/diagrams/ch06-history-boundary-mobile.svg:18"},
+        {"priority": "medium", "origin": "new", "detail": "Desktop M138 465H380M138 506H380 and mobile M103 438H204M103 500H204 lack the first, A2 callback heads at (380,465) and (204,438). These are the first invoked actions, not undirected associations.", "sourceLocation": "desktop SVG:24; mobile SVG:23"}
+      ],
+      "requestedChanges": [
+        "Render A1 and A2 registration as individually directed paths in mobile.",
+        "Render each callback as an individually directed path in both layouts, preserving the A2-then-A1 sequence.",
+        "Keep the neutral example and existing qualifications; do not add invented real-editor state to solve a connector defect."
+      ],
+      "limitations": "This demonstrates registration and traversal within a selected group, not cursor movement across trailing fences or a full History implementation. No demand for a concrete saved-state restoration is being reintroduced."
+    },
+    {
+      "id": "ch06-empty-selection",
+      "firstDecision": "keep",
+      "verdict": "accept",
+      "question": "How does the same prefix/suffix rule handle an empty selection?",
+      "expectedAnswer": "For [1,4), A+E gives AE. For [2,2), AB+CDE reconstructs ABCDE. Equal endpoints remove the selected interior, not the need for all range validation.",
+      "firstPassResolution": "Both SVGs are unchanged; the valid single-line scope and no-all-validation-elimination caveat remain visible.",
+      "graphicReasoning": "The normal removed span and empty boundary remain directly comparable. Actual retained character segments support the algebraic reconstruction and distinguish this diagram from the earlier API-generalization example.",
+      "sourceConditions": [{"source": "docs/ch06.md:155-161; original/ch06.md:220-230", "check": "Correctly designed single-line operation, valid ranges, and only the selection-existence special case eliminated. No complete editor algorithm is implied."}],
+      "placement": {"anchor": {"section": "6.8", "placement": "end"}, "afterLine": 161, "beforeLine": 163, "verdict": "accept", "reason": "Follows the construction it works through; the intervening chapter-10 cross-reference is short."},
+      "evidence": {
+        "desktopSha256": "0a119997b010dadb641cc59a2494e187fb85d19be578d94ec47529cc5290684e",
+        "mobileSha256": "963cd80ee7062cadec10be253e27233822e8fd6a3d6daacb2b3ff728d6283fcc",
+        "lightPng": "gallery-light-012.png",
+        "lightPngSha256": "0a30e95587eda0a146c3090c4f340ba4adf017aef7cf50070d4c27a6c90040f8",
+        "darkPng": "gallery-dark-012.png",
+        "darkPngSha256": "fc5a8c79b565825239825d571a105f71609b276aa327f6c8e361b1873eb4bf32",
+        "viewObservation": "Crossed-out BCD, the empty boundary and both result expressions are clear in desktop/mobile and light/dark. Both desktop transformation arrows have heads."
+      },
+      "issues": [],
+      "requestedChanges": [],
+      "limitations": "Independently checked example results are not evidence of learner retention or of a correct complete editing implementation."
+    },
+    {
+      "id": "ch07-dispatch-value",
+      "firstDecision": "revise",
+      "verdict": "revise",
+      "question": "With unchanged handle(request) signatures, how do S and D take different paths through dispatch but not pure forwarding?",
+      "expectedAnswer": "S=/static/a.txt matches the teaching rule and selects the file handler; D=/report selects the dynamic handler. The pure forwarder sends both to one target and is explicitly assumed to do no other work. The selection responsibility, not signature difference, supplies the value.",
+      "firstPassResolution": "Both concrete inputs and all downstream signatures are now present in the exact hash-matched captures, closing the round1 evidence mismatch. The fixed-target-is-not-inherently-useless and same-layer counterexamples are retained.",
+      "graphicReasoning": "Holding signatures constant while routing two inputs differently now supports a concrete inference. The S branch is still visibly headless in both layouts, while D has a directed head. Since the branch destination is the central lesson, this should be repaired before acceptance.",
+      "sourceConditions": [{"source": "docs/ch07.md:58-64; original/ch07.md:115-128, p39-p43", "check": "Selection is useful functionality; same signatures can be justified. Teaching URLs/rule are explicitly simplified. The left example makes the additional no-other-work assumption rather than equating all fixed-target delegation with uselessness."}],
+      "placement": {"anchor": {"section": "7.2", "placement": "end"}, "afterLine": 64, "beforeLine": 66, "verdict": "accept", "reason": "After the duplicate-interface exceptions and before decorators."},
+      "evidence": {
+        "desktopSha256": "cbb9f9a5d61c2971aa33169a807ad990f1d68220b8943efcb3f1718ea559cd7f",
+        "mobileSha256": "d322b12d7cd5f577a0950a44e023784376b6d8506bd6bc45d7981fb41e4abb0c",
+        "lightPng": "gallery-light-013.png",
+        "lightPngSha256": "d7744459def3464de10e4c9004eeebe55c9e480e0562413c8ace100584102e3b",
+        "darkPng": "gallery-dark-013.png",
+        "darkPngSha256": "e3fb0e7cfe589db63479c9f58d0cc348ff81742ae1b145f6b5ae29c2937ac7cb",
+        "viewObservation": "Both handler signatures are visible and readable, unlike round1's old captures. S's vertical connector ends without a head in both themes/layouts; D's head is visible."
+      },
+      "issues": [
+        {"priority": "medium", "origin": "new", "detail": "Desktop M422 296V336M591 296V336 lacks the S head at (422,336); mobile M88 527V561M270 527V561 lacks it at (88,561). The visual grammar gives a direction to only one of two selected-handler branches.", "sourceLocation": "desktop SVG:20; mobile SVG:22"}
+      ],
+      "requestedChanges": ["Separate the S and D branch paths and give both their intended downward heads. Keep the two input witnesses, every repeated signature and the source qualifications."],
+      "limitations": "The source/old-gallery mismatch is resolved and should not be reported as still open. This is a new connector defect in the current assets, not a router-behavior failure or measured reader confusion."
+    },
+    {
+      "id": "ch07-line-boundary",
+      "firstDecision": "revise",
+      "verdict": "accept",
+      "question": "What is removed from ABcd-NL-efGH, and which side of the boundary performs joining under each interface?",
+      "expectedAnswer": "[S,E) removes cd, NL and ef, leaving ABGH. Under the line interface the UI obtains line contents, joins retained parts and writes back. Under the range interface it supplies S/E and the text module joins internally; line-based storage remains internal in both.",
+      "firstPassResolution": "S/E gaps, explicit NL, non-color removal marks, matched storage states and actual request/return traces are all present. The former duplicated prose boxes have been replaced by an inspectable boundary comparison.",
+      "graphicReasoning": "The selected region can be read from the endpoint markers and strikeout. Stable UI/text columns show line data crossing out and a writeback crossing in only in the old design. The new design keeps the storage-state transition on the text side. Desktop's flattened logical sequence and mobile's two lines encode the same deletion.",
+      "sourceConditions": [{"source": "docs/ch07.md:85-87; original/ch07.md:160-164, p54-p55", "check": "Character-range interface over line storage retained. NL and Positions are teaching notation; operation counts and old-row deletion mechanics are explicitly unspecified. No concrete getLine/putLine contract is invented."}],
+      "placement": {"anchor": {"section": "7.4", "placement": "end"}, "afterLine": 87, "beforeLine": 89, "verdict": "accept", "reason": "Directly after the interface-versus-representation example."},
+      "evidence": {
+        "desktopSha256": "b832217fa5a927d188350e7cc2789acccdddce20c7a111fe6daeff4bbd1d9bcb",
+        "mobileSha256": "39ef47db1c8525d8cfcf55228723877283031406bbe090ab1ec6e0ef4d362eb1",
+        "lightPng": "gallery-light-014.png",
+        "lightPngSha256": "d9971e24d877f2fc2e11235deb2fc81ab381cb2c09d6a753404f15041ba7630c",
+        "darkPng": "gallery-dark-014.png",
+        "darkPngSha256": "758d1cc33e0cba7c427c55b275d1e9af87bc12b99489d018f7291365dd17e267",
+        "viewObservation": "Endpoint lines, crossed-out NL and characters, return direction, writeback direction and internal join are legible in both themes. Every intended request/return/join connector has a head. Mobile preserves the right-side storage column."
+      },
+      "issues": [],
+      "requestedChanges": [],
+      "limitations": "The 846-unit mobile asset is long and has 13-14-unit detail labels. It is readable in this gallery, but real phone page flow and scaling remain untested. Length alone is not a reason to remove the now-useful state evidence."
+    },
+    {
+      "id": "ch07-context-instances",
+      "firstDecision": "revise",
+      "verdict": "revise",
+      "question": "After A writes, B writes and A reads, why can the global slot return cert-B while netA returns cert-A through its Context reference?",
+      "expectedAnswer": "The global slot is overwritten by B. Distinct ctxA/ctxB retain different values, and netA.ctx points to ctxA. This depends on distinct objects and correct construction-time association, not merely on naming a type Context.",
+      "firstPassResolution": "The write/write/read table now matches across layouts and displays actual values. Stored ctx fields and a runtime lookup are present. The source's hidden-dependency, mutable-state and nonautomatic-thread-safety limitations remain.",
+      "graphicReasoning": "The table exposes overwrite versus isolation row by row, and the object fields explain how the correct later lookup is reached. This adds a concrete multi-instance check beyond the original four-technique figure. Desktop loses the first constructor-delivery head; the lower panel also mixes setup time and later values under one setup heading.",
+      "sourceConditions": [{"source": "docs/ch07.md:97-109; original/ch07.md:178-194, p60-p65", "check": "One process, two distinct contexts, correct references and sequential rather than concurrent interference are explicit. Read-only network use is a teaching choice, not automatic immutability or thread safety."}],
+      "placement": {"anchor": {"section": "7.5", "placement": "end"}, "afterLine": 109, "beforeLine": 111, "verdict": "accept", "reason": "Follows the Context caveats, so the example is read with those limits available."},
+      "evidence": {
+        "desktopSha256": "a52b90389e5f76bd4c05f5d9b0554551d0af0f72205ae64c6c1b3607ddc739d6",
+        "mobileSha256": "72cb1ddca67234b2f0da8a6649f846738ce218ce4672ed7513735ee2098df0b3",
+        "lightPng": "gallery-light-015.png",
+        "lightPngSha256": "9b10902a44fec9247d000af59230b7a3caac98f96c7b96139d128463d21ac20e",
+        "darkPng": "gallery-dark-015.png",
+        "darkPngSha256": "8c4c4b3ce09346f5378ab4f6bcc5b13083e0665cc574757029d85d9d4fba18f1",
+        "viewObservation": "State values and correct references are readable in both themes. Desktop new Net(ctxA) has a headless dashed delivery link, unlike B and both mobile constructors. The B stored association is intentionally undirected and must remain so."
+      },
+      "issues": [
+        {"priority": "low", "origin": "new", "detail": "Desktop M163 366V390M517 366V390 lacks the A constructor-delivery head at (163,390). This does not match the paired delivery relation or the mobile representation.", "sourceLocation": "docs/.vuepress/public/diagrams/ch07-context-instances.svg:16"},
+        {"priority": "low", "origin": "new_clarity", "detail": "The lower heading says before step 1, but ctxA/ctxB display cert-A/cert-B and A's read is step 3. The explicit step-3 arrow prevents a direct contradiction, yet the snapshot time of the values is unstated.", "required": false}
+      ],
+      "requestedChanges": [
+        "Split the desktop constructor-delivery paths so both receive heads, preserving the undirected B association.",
+        "Label the Context values as after step 2, or retitle the panel to explain that construction-time references are overlaid with a later step-3 lookup."
+      ],
+      "limitations": "The value/association reasoning is sound under the declared assumptions. The timing-label suggestion is non-blocking; the missing constructor head is the requested graphic repair. No concurrency, certificate or reader-learning test was performed."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 461" role="img" aria-labelledby="ch12-missing-contract-t ch12-missing-contract-d">
+  <title id="ch12-missing-contract-t">宣告留下了哪些互不相容的解釋？</title><desc id="ch12-missing-contract-d">教學宣告slice(start,end)沒有說明終點包含性。ABCD索引從0開始，從1到3可能得到BC或BCD。註解明確不含終點後只剩BC；起點大於終點的空結果同樣需要明說。</desc>
+  <defs><marker id="ch12-missing-contract-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)" /></marker></defs>
+  <rect width="680" height="461" fill="var(--diagram-bg,#f5f7f8)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">宣告留下了哪些互不相容的解釋？</text><text x="24" y="68">教學宣告 slice(start, end)，輸入 ABCD，start = 1，end = 3</text>
+    <rect x="230" y="91" width="220" height="44" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" /><text x="262" y="119">宣告未說明終點是否包含</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch12-missing-contract-a)"><path d="M290 136L178 181" /><path d="M390 136L502 181" /></g>
+    <text x="100" y="204" font-weight="600">解釋一：不含 end</text><text x="426" y="204" font-weight="600">解釋二：包含 end</text>
+    <g font-family="monospace" font-size="24"><text x="75" y="246">A</text><text x="125" y="246">B</text><text x="175" y="246">C</text><text x="225" y="246">D</text><text x="401" y="246">A</text><text x="451" y="246">B</text><text x="501" y="246">C</text><text x="551" y="246">D</text></g>
+    <path d="M121 261H195M447 261H573" stroke="var(--diagram-warm,#80531b)" stroke-width="5" />
+    <g font-size="12" fill="var(--diagram-muted,#58636b)"><text x="79" y="279">0</text><text x="129" y="279">1</text><text x="179" y="279">2</text><text x="229" y="279">3</text><text x="405" y="279">0</text><text x="455" y="279">1</text><text x="505" y="279">2</text><text x="555" y="279">3</text></g>
+    <text x="131" y="301">BC</text><text x="485" y="301">BCD</text>
+    <path d="M24 311H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="24" y="343" font-weight="600">加入明確的介面註解</text>
+    <rect x="24" y="362" width="411" height="57" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" /><text x="42" y="386">包含 start，不包含 end；</text><text x="42" y="409">若 start &gt; end，回傳空結果。</text>
+    <path d="M436 391H492" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch12-missing-contract-a)" /><text x="511" y="383">本例只剩 BC</text><text x="511" y="409" font-size="13">無需讀方法體來猜</text>
+    <text x="24" y="445" font-size="13" fill="var(--diagram-muted,#58636b)">所選契約與字母為教學例；不代表所有 substring 介面，註解需與實際實作一致。</text>
+  </g>
+</svg>

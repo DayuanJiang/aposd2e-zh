@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 451" role="img" aria-labelledby="ch20-measurement-loop-title ch20-measurement-loop-desc">
+  <title id="ch20-measurement-loop-title">优化同时需要热点证据和前后基线</title>
+  <desc id="ch20-measurement-loop-desc">系统测量一边保存基线，一边深入定位热点。对热点修改后复测，与基线比较。明显提升可支持保留，否则撤销额外复杂性；设计更简单的修改可保留。</desc>
+  <defs><marker id="ch20-measurement-loop-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="451" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="21" font-weight="600">“慢在哪里”与“改后更快了吗”</text><text x="24" y="61" font-size="14">20.2 · 两个测量问题，不能只靠整体耗时回答</text>
+    <rect x="24" y="92" width="166" height="58" rx="5" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/><text x="107" y="127" text-anchor="middle">测量当前系统</text>
+    <rect x="264" y="92" width="180" height="58" rx="5" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/><text x="354" y="115" text-anchor="middle">深入测量</text><text x="354" y="139" text-anchor="middle">定位具体热点</text>
+    <rect x="24" y="213" width="166" height="54" rx="5" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/><text x="107" y="246" text-anchor="middle">保存修改前基线</text>
+    <rect x="264" y="213" width="180" height="54" rx="5" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/><text x="354" y="246" text-anchor="middle">修改热点，再测量</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch20-measurement-loop-arrow)"><path d="M190 121H264"/><path d="M107 150V213"/><path d="M354 150V213"/><path d="M107 267V311H536V278"/><path d="M444 240H485"/></g>
+    <path d="M568 190L651 240L568 290L485 240Z" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="568" y="234" text-anchor="middle">对照基线</text><text x="568" y="257" text-anchor="middle">有提升？</text>
+    <text x="200" y="296" font-size="14">保留基线，才有前后比较</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch20-measurement-loop-arrow)"><path d="M568 290V339H165V359"/><path d="M568 339H479V359"/></g>
+    <text x="165" y="384" text-anchor="middle" fill="var(--diagram-primary,#0b6f5d)">显著提升：有理由保留</text>
+    <text x="479" y="384" text-anchor="middle" fill="var(--diagram-danger,#a03946)">没有可测提升：撤销额外复杂性</text>
+    <text x="479" y="412" text-anchor="middle" font-size="14">例外：修改本身使设计更简单</text>
+    <text x="24" y="435" font-size="14">流程无数值刻度，不声称任何预定加速比。</text>
+  </g>
+</svg>

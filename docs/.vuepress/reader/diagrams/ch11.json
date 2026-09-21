@@ -1,0 +1,82 @@
+[
+  {
+    "id": "ch11-interface-alternatives",
+    "chapter": "ch11",
+    "title": "用同一操作检验三个接口",
+    "question": "删除跨行的一段文字，会把哪些工作留给调用者？",
+    "answer": "同一跨行删除中，整行方案让调用者取出ab和gh再合并写回；逐字符方案循环五次删除当前索引2；范围方案一次表达[2,7)，都得到abgh。",
+    "summary": "保留相同输入、删除范围和结果，显式展示调用者的片段合并与逐次删除。字母、零基索引、删除方向及轨迹是教学选择；不规定整行API签名，也不把五次调用解释成五倍耗时。",
+    "alt": "原文任务的教学输入是abcd换行efgh。整行行显示首行前缀ab与末行后缀gh汇合成abgh。逐字符行按顺序删c、d、一个换行、e、f，依次留下abd换行efgh、ab换行efgh、abefgh、abfgh、abgh。范围行一次删除零基半开范围[2,7)。",
+    "kind": "operation-trace",
+    "desktop": "/diagrams/ch11-interface-alternatives.svg",
+    "mobile": "/diagrams/ch11-interface-alternatives-mobile.svg",
+    "anchor": {
+      "section": "intro",
+      "paragraph": 6
+    },
+    "sources": [
+      {
+        "section": "11",
+        "epub": "OEBPS/part0015.xhtml#p4:d26ff20881",
+        "reason": "原文提出整行、逐字符、字符串范围三个候选接口。图用同一任务对比其调用者义务，不定义具体整行API签名。"
+      },
+      {
+        "section": "11",
+        "epub": "OEBPS/part0015.xhtml#p6:4fb235fadb",
+        "reason": "整行与逐字符接口分别留下拆分与合并行以及循环。ab与gh片段、零基索引2、每次删除当前索引2和五个中间状态均为教学自拟；包含的换行恰删一次。"
+      },
+      {
+        "section": "11",
+        "epub": "OEBPS/part0015.xhtml#p11:709cf68663",
+        "reason": "从候选方案共同的缺点推导范围接口，而非无条件给某个方案打分。"
+      },
+      {
+        "section": "11",
+        "epub": "OEBPS/part0015.xhtml#p9:b3dd1fa860",
+        "reason": "逐字符接口可能因每字符一次调用而较慢；仅为原文判断，不是测量结论。"
+      },
+      {
+        "section": "8.1",
+        "epub": "OEBPS/part0012.xhtml#p8:b454c63498",
+        "reason": "图脚注区分第8章面向字符的任意范围接口与本章逐字符接口；操作粒度不同。"
+      }
+    ],
+    "review": {
+      "source": "review/reader/diagram-review-08-14-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    },
+    "status": "content-reviewed",
+    "reviewHistory": [
+      {
+        "source": "earlier-local-review",
+        "recordedStatus": "independently-reviewed",
+        "decision": "revise",
+        "resolution": "已按字符单元定位删除高亮，准确包含cd、换行和ef；改正合并行措辞并补充性能限定及跨章粒度来源。",
+        "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance.",
+        "snapshotDesktop": "/tmp/aposd2e-viz-review-round1/assets/ch11-interface-alternatives.svg",
+        "snapshotMobile": "/tmp/aposd2e-viz-review-round1/assets/ch11-interface-alternatives-mobile.svg"
+      },
+      {
+        "source": "review/reader/diagram-review-08-14.json",
+        "decision": "revise",
+        "stage": "MAIN-first-pass",
+        "implementation": "revised",
+        "secondReview": "pending",
+        "accepted": false,
+        "resolution": "保留已修正的字符单元和五字符高亮，新增首行前缀ab与末行后缀gh的实际汇合图。 新增五次删除当前零基索引2的中间状态，依次删除c、d、一个换行、e、f；范围方案一次表达[2,7)。 不规定整行API签名或调用次数；五次单字符调用不解释为五倍耗时。 移动到intro第6个根级段落后，即候选讨论与任意范围推导之后。 更新answer、summary、alt及教学轨迹来源说明，保留第8章/第11章不同粒度限定。",
+        "authority": "Historical implementation record, superseded by independent follow-up."
+      }
+    ],
+    "titleTw": "用同一操作檢驗三個介面",
+    "questionTw": "刪除跨行的一段文字，會把哪些工作留給呼叫者？",
+    "answerTw": "同一跨行刪除中，整行方案讓呼叫者取出ab和gh再合併寫回；逐字元方案迴圈五次刪除當前索引2；範圍方案一次表達[2,7)，都得到abgh。",
+    "summaryTw": "保留相同輸入、刪除範圍和結果，顯式展示呼叫者的片段合併與逐次刪除。字母、零基索引、刪除方向及軌跡是教學選擇；不規定整行API簽名，也不把五次呼叫解釋成五倍耗時。",
+    "altTw": "原文任務的教學輸入是abcd換行efgh。整行行顯示首行字首ab與末行字尾gh匯合成abgh。逐字元行按順序刪c、d、一個換行、e、f，依次留下abd換行efgh、ab換行efgh、abefgh、abfgh、abgh。範圍行一次刪除零基半開範圍[2,7)。",
+    "desktopTw": "/diagrams/ch11-interface-alternatives-tw.svg",
+    "mobileTw": "/diagrams/ch11-interface-alternatives-mobile-tw.svg"
+  }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "id": "ch11-interface-alternatives",
+    "chapter": "ch11",
+    "title": "用同一操作检验三个接口",
+    "question": "删除跨行的一段文字，会把哪些工作留给调用者？",
+    "answer": "整行接口留下拆行并行，逐字符接口留下循环，任意范围接口直接表达所需文本操作。",
+    "summary": "先用相同任务比较差异很大的方案。字母与操作轨迹为教学示例；逐字符调用可能较慢是原文判断，不是性能测试结果。",
+    "alt": "示例从两行文本ab[cd和ef]gh删除中间四个字母及换行，得到abgh。三条路径分别需要拆分合并行、逐字符循环或一次范围调用。",
+    "kind": "operation-trace",
+    "desktop": "/diagrams/ch11-interface-alternatives.svg",
+    "mobile": "/diagrams/ch11-interface-alternatives-mobile.svg",
+    "anchor": { "intro": true },
+    "sources": [
+      { "section": "11", "epub": "OEBPS/part0015.xhtml#p4:d26ff20881", "reason": "原文的整行、逐字符、字符串范围三个候选接口，无编号小节，按契约使用intro锚点。" },
+      { "section": "11", "epub": "OEBPS/part0015.xhtml#p6:4fb235fadb", "reason": "相同编辑任务下，整行与逐字符接口分别留下拆并行与循环。字母及五个待删除字符（包含换行）为教学例。" },
+      { "section": "11", "epub": "OEBPS/part0015.xhtml#p11:709cf68663", "reason": "从候选方案共同的缺点推导范围接口，而非无条件给某个方案打分。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch11-two-design-levels",
+    "chapter": "ch11",
+    "title": "接口选定后，还能设计两次吗？",
+    "question": "比较接口与比较实现，为什么不能使用同一套判断依据？",
+    "answer": "接口主要比较高层易用性；同一范围接口下，仍可比较多种内部表示的简单性与性能。",
+    "summary": "接口与实现是两个独立的探索层次。图不宣称链表、字符块或间隙缓冲区中某一个普遍最优，也不要求把候选方案全部实现。",
+    "alt": "界面调用任意范围接口，该接口之下分叉到行链表、固定大小字符块和间隙缓冲区三种候选实现。接口上方标注高层易用性，下方标注简单性和性能，没有胜出排名。",
+    "kind": "abstraction-and-alternatives",
+    "desktop": "/diagrams/ch11-two-design-levels.svg",
+    "mobile": "/diagrams/ch11-two-design-levels-mobile.svg",
+    "anchor": { "intro": true },
+    "sources": [
+      { "section": "11", "epub": "OEBPS/part0015.xhtml#p12:bcac19c1df", "reason": "接口之后可再比较行链表、固定字符块与gap buffer；实现目标是简单性和性能。存储形状为教学示意，不规定内部算法。" },
+      { "section": "11", "epub": "OEBPS/part0015.xhtml#p4:d26ff20881", "reason": "早期只需勾勒重要方法，不必完成各方案所有细节。" },
+      { "section": "11", "epub": "OEBPS/part0015.xhtml#p6:4fb235fadb", "reason": "接口比较最重要的因素是高层软件易用性；与实现比较目标不同。" }
+    ],
+    "status": "awaiting-independent-review"
+  }
+]

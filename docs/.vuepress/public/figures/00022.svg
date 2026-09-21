@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="594" height="340" viewBox="0 0 594 340" role="img" aria-labelledby="fig-00022-title fig-00022-desc">
+  <title id="fig-00022-title">Figure 20.1: Buffer object and memory chunks</title>
+  <desc id="fig-00022-desc">A five-part Logical Array runs left to right in blue, yellow, orange, green, and purple. Dotted lines map blue and green to the Built-In Allocation inside the Buffer Object, purple to the occupied beginning of its Extra Allocation, and yellow and orange to two External Chunks at the right. Orange is drawn above yellow in physical storage. The unused end of the Extra Allocation stays white. The five chunk widths and crossing correspondence lines follow the original illustration without assigning byte counts or a quantitative scale.</desc>
+  <rect width="594" height="340" fill="#fff"/>
+  <g transform="translate(12 12) scale(2)" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#111">
+    <text x="145.5" y="10" text-anchor="middle">Logical Array</text>
+    <g stroke="#111" stroke-width="0.8">
+      <rect x="47" y="19" width="17" height="13" fill="#aeceff"/>
+      <rect x="64" y="19" width="60" height="13" fill="#ffffb9"/>
+      <rect x="124" y="19" width="86" height="13" fill="#e4ab5d"/>
+      <rect x="210" y="19" width="26" height="13" fill="#b0ffab"/>
+      <rect x="236" y="19" width="8" height="13" fill="#d9c9ee"/>
+      <rect x="0.5" y="57" width="133" height="81" rx="5" fill="#f8f8f8"/>
+      <rect x="77.5" y="74" width="17" height="13" fill="#aeceff"/>
+      <rect x="94.5" y="74" width="26" height="13" fill="#b0ffab"/>
+      <rect x="77.5" y="109" width="43" height="13" fill="#fff"/>
+      <rect x="77.5" y="109" width="8" height="13" fill="#d9c9ee"/>
+      <rect x="193.5" y="79" width="85" height="13" fill="#e4ab5d"/>
+      <rect x="193.5" y="104" width="60" height="13" fill="#ffffb9"/>
+    </g>
+    <g fill="none" stroke="#555" stroke-width="0.9" stroke-dasharray="0.6 1.7" stroke-linecap="round">
+      <path d="M55.5 25.5 L86 80.5"/>
+      <path d="M94 25.5 L223.5 110.5"/>
+      <path d="M167 25.5 L236 85.5"/>
+      <path d="M223 25.5 L107.5 80.5"/>
+      <path d="M240 25.5 L81.5 115.5"/>
+    </g>
+    <text><tspan x="12" y="80">Built-In</tspan><tspan x="12" y="93">Allocation</tspan></text>
+    <text><tspan x="12" y="115">Extra</tspan><tspan x="12" y="128">Allocation</tspan></text>
+    <text x="67" y="156" text-anchor="middle">Buffer Object</text>
+    <text x="186" y="135">External Chunks</text>
+  </g>
+</svg>

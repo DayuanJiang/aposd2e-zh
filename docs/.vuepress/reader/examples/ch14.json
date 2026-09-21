@@ -1,0 +1,56 @@
+[
+  {
+    "id": "ch14-f1",
+    "sourceHash": "d547733bdb87e194364c44796eec3fe6471c8f6800d35617927037dd8c3bf45e",
+    "python": "class IndexletManager:\n    def getCount(self) -> int:\n        \"\"\"Returns the total number of indexlets this object is managing.\"\"\"\n        ...\n",
+    "note": "原围栏虽标为 Java，实际是 C++ 成员函数定义。这里用 Python 类展示同一接口，保留含糊的 getCount 作为反例，不替换成正文建议的 numActiveIndexlets；实现仍省略。",
+    "noteEn": "The Java-labelled fence actually contains a C++ member definition. A Python class presents the same interface, keeping the vague getCount rather than applying the suggested numActiveIndexlets rename; the implementation remains omitted.",
+    "originalLanguage": "cpp",
+    "noteTw": "原圍欄雖標為 Java，實際是 C++ 成員函式定義。這裡用 Python 類展示同一介面，保留含糊的 getCount 作為反例，不替換成正文建議的 numActiveIndexlets；實作仍省略。"
+  },
+  {
+    "id": "ch14-f2",
+    "sourceHash": "92dad297d0003e13a4d184fb1e14ad12d329dd982a06f12abd95d0d3b5e9fd73",
+    "python": "# Blink state: true when cursor visible.\nblinkStatus = True\n",
+    "note": "保留 blinkStatus 这个含糊名称及原注释，供下一例对照。这里只展示状态变量的命名，不模拟 Java 的 private 字段访问限制。",
+    "noteEn": "The vague blinkStatus name and original comment are intentional, for comparison with the next example. This state-variable excerpt does not reproduce Java's private field access restrictions.",
+    "originalLanguage": "java",
+    "noteTw": "保留 blinkStatus 這個含糊名稱及原註解，供下一例對照。這裡只展示狀態變數的命名，不模擬 Java 的 private 欄位存取限制。"
+  },
+  {
+    "id": "ch14-f3",
+    "sourceHash": "f02c05bfba27ed3008dbe3fc94efba61f5f8732d0790db78231773f265a8c6c7",
+    "python": "# Controls cursor blinking: true means the cursor is visible,\n# false means the cursor is not displayed.\ncursorVisible = True\n",
+    "note": "保留正文讨论的 cursorVisible，与上一例的 blinkStatus 对照：名称说明真值的含义，注释补充闪烁的用途。这里只展示变量，不实现界面或访问控制。",
+    "noteEn": "cursorVisible is kept to match the prose and contrast with blinkStatus: the name explains the true value, while the comment supplies the blinking context. No GUI or access-control implementation is implied.",
+    "originalLanguage": "java",
+    "noteTw": "保留正文討論的 cursorVisible，與上一例的 blinkStatus 對照：名稱說明真值的含義，註解補充閃爍的用途。這裡只展示變數，不實作介面或存取控制。"
+  },
+  {
+    "id": "ch14-f4",
+    "sourceHash": "dda00fa0927998ba86a66583e0d4c1f070c214689358a124cc47d3407c79b911",
+    "python": "# Value representing that the server has not voted (yet) for\n# anyone for the current election term.\nVOTED_FOR_SENTINEL_VALUE = \"null\"\n",
+    "note": "保留反例名称和字符串 \"null\"，不改成 NOT_YET_VOTED 或 None，以免改变比较对象。大写名称仅沿用常量命名约定，不等同于 Java 的 static final。",
+    "noteEn": "Keep the criticized name and the string \"null\", rather than changing them to NOT_YET_VOTED or None. The uppercase name follows a constant-naming convention; it does not reproduce Java's static final semantics.",
+    "originalLanguage": "java",
+    "noteTw": "保留反例名稱和字串 \"null\"，不改成 NOT_YET_VOTED 或 None，以免改變比較物件。大寫名稱僅沿用常量命名約定，不等同於 Java 的 static final。"
+  },
+  {
+    "id": "ch14-f5",
+    "sourceHash": "bef6e9b762f4ddbd7b2159e9828552d69c710d27352d99a42b7cca557e7cf31f",
+    "python": "for i in range(numLines):\n    ...\n",
+    "note": "保留 i 和 numLines，展示短循环中含义清楚的短名称这一例外。range 表达从 0 到 numLines - 1 的遍历，循环体与原例一样省略。",
+    "noteEn": "Keep i and numLines to illustrate the exception for clear, short loop variables. range expresses iteration from 0 through numLines - 1; the loop body remains omitted as in the source.",
+    "originalLanguage": "java",
+    "noteTw": "保留 i 和 numLines，展示短迴圈中含義清楚的短名稱這一例外。range 表達從 0 到 numLines - 1 的遍歷，迴圈體與原例一樣省略。"
+  },
+  {
+    "id": "ch14-f6",
+    "sourceHash": "b470aa0f657393117dd3a2eafc5ed34e227c0dcb4da683a7d597718b54279bb7",
+    "python": "def delete(selection: \"Range\") -> None:\n    ...\n",
+    "note": "保留过于具体的参数名 selection，不能提前改成正文建议的 range。Range 指项目定义的文本范围类型，不是 Python 的 range；这里只展示签名，删除实现省略。",
+    "noteEn": "Keep the overly specific selection parameter rather than applying the proposed range rename. Range denotes an application-defined text range, not Python's range; only the signature is shown.",
+    "originalLanguage": "java",
+    "noteTw": "保留過於具體的參數名 selection，不能提前改成正文建議的 range。Range 指專案定義的文字範圍型別，不是 Python 的 range；這裡只展示簽名，刪除實作省略。"
+  }
+]

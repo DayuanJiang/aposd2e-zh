@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 490" role="img" aria-labelledby="ch05-parameter-boundary-title ch05-parameter-boundary-desc">
+  <title id="ch05-parameter-boundary-title">返回参数，还是泄露容器？</title>
+  <desc id="ch05-parameter-boundary-desc">getParams 返回内部 Map 引用，调用者必须查找、转换，并避免修改容器。getIntParameter 将表示、查找和转换隐藏在 HTTPRequest 内，返回整数 246，缺失或转换失败则抛异常。private 本身不能阻止信息泄露。</desc>
+  <defs><marker id="ch05-parameter-boundary-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="490" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="24" y="34" font-size="20" font-weight="600">返回参数，还是泄露容器？</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">同样读取 photo_id，比较边界两侧必须知道什么</text>
+    <text x="24" y="103" font-weight="600">调用者</text><text x="415" y="103" font-weight="600">HTTPRequest 内部</text>
+    <path d="M360 90V421" stroke="var(--diagram-line,#aebbad)" stroke-dasharray="5 4"/>
+    <text x="24" y="142" font-family="ui-monospace,monospace">getParams()</text>
+    <path d="M163 138H399" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-parameter-boundary-arrow)"/>
+    <rect x="410" y="125" width="246" height="100" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="426" y="155" font-family="ui-monospace,monospace">private Map</text><text x="426" y="185">返回内部容器的引用</text><text x="426" y="210" font-size="14">内部状态可被外部误改</text>
+    <path d="M399 184H242" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-parameter-boundary-arrow)"/>
+    <text x="24" y="185">拿到 Map → 按名查找</text><text x="24" y="215">→ 转为整数；还要记住别改容器</text>
+    <path d="M24 252H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="287" font-family="ui-monospace,monospace" font-size="14">getIntParameter("photo_id")</text>
+    <path d="M247 281H399" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-parameter-boundary-arrow)"/>
+    <rect x="410" y="269" width="246" height="136" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="426" y="307" font-weight="600">存储表示留在内部</text><text x="426" y="338">查找 + 字符串转整数</text><text x="426" y="374" font-size="14">必要的失败规则仍属于接口</text>
+    <path d="M399 348H197" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-parameter-boundary-arrow)"/>
+    <text x="24" y="348" font-weight="600">成功：整数 246</text><text x="24" y="380">失败：缺失／转换异常</text>
+    <text x="24" y="453" font-weight="600">隐藏表示，不隐藏调用者必须处理的结果与失败条件。</text>
+    <text x="24" y="478" font-size="13" fill="var(--diagram-muted,#5c645d)">接口与 photo_id 来自原书；箭头省略其他请求处理步骤。</text>
+  </g>
+</svg>

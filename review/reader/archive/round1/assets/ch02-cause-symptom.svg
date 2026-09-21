@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 444" role="img" aria-labelledby="ch02-cause-symptom-title ch02-cause-symptom-desc">
+  <title id="ch02-cause-symptom-title">依赖与模糊性如何叠加？</title>
+  <desc id="ch02-cause-symptom-desc">按原文关系，依赖导致变更放大和认知负荷，模糊性导致认知负荷和未知的未知。新增错误状态需要同步修改消息表，知道该表存在就能联动修改，不知道则可能遗漏。让依赖明显不等于消除依赖。</desc>
+  <defs><marker id="ch02-cause-symptom-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="444" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="24" y="34" font-size="20" font-weight="600">依赖与模糊性如何叠加？</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">认知负荷有两个来源；三种症状不是互斥类别</text>
+    <text x="40" y="102">原因</text><text x="221" y="102">变更放大</text><text x="381" y="102">认知负荷</text><text x="529" y="102">未知的未知</text>
+    <rect x="24" y="116" width="632" height="51" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <rect x="24" y="168" width="632" height="51" fill="var(--diagram-warm-soft,#eae2cf)"/>
+    <text x="40" y="148" font-weight="600">依赖</text><text x="237" y="148">导致</text><text x="397" y="148">导致</text><text x="550" y="148">未列</text>
+    <text x="40" y="200" font-weight="600">模糊性</text><text x="237" y="200">未列</text><text x="397" y="200">导致</text><text x="550" y="200">导致</text>
+    <text x="24" y="244" font-size="13" fill="var(--diagram-muted,#5c645d)">“未列”指本节未直接这样归因，并非严格的因果排除。</text>
+    <rect x="24" y="293" width="190" height="68" rx="4" fill="none" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="40" y="321" font-weight="600">新增错误状态</text><text x="40" y="345">声明与消息表有依赖</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch02-cause-symptom-arrow)"><path d="M224 311H331"/><path d="M224 345H331"/></g>
+    <text x="236" y="299" font-size="13">知道消息表</text><text x="236" y="371" font-size="13">表不明显</text>
+    <text x="348" y="316" fill="var(--diagram-primary,#0b6f5d)">同步修改：仍有变更放大</text>
+    <text x="348" y="354" fill="var(--diagram-danger,#a03946)">可能漏改：再添未知的未知</text>
+    <text x="24" y="420" font-weight="600">让依赖可见，先消除“不知道还要改哪里”的风险。</text>
+  </g>
+</svg>

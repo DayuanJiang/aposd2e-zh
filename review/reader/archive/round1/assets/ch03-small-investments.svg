@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 488" role="img" aria-labelledby="ch03-small-investments-title ch03-small-investments-desc">
+  <title id="ch03-small-investments-title">设计投资应放在什么时候？</title>
+  <desc id="ch03-small-investments-desc">教学排程对比三种时机。一次性前期设计企图预知一切，延期清理每次往后推，持续小额投资则在每轮比较设计、实现并修正问题。10% 到 20% 是作者建议，没有回本时间的实证保证。</desc>
+  <rect width="680" height="488" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="24" y="34" font-size="20" font-weight="600">设计投资应放在什么时候？</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">教学排程：方块表示工作安排，不表示工时或产出数量</text>
+    <text x="229" y="102">迭代 1</text><text x="399" y="102">迭代 2</text><text x="565" y="102">迭代 3</text>
+    <text x="24" y="146" font-weight="600">前期一次设计</text>
+    <rect x="176" y="119" width="144" height="44" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="192" y="147">先设计全部</text>
+    <text x="374" y="147">实现</text><text x="544" y="147">发现原先遗漏</text>
+    <path d="M24 180H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="221" font-weight="600">持续小额投入</text>
+    <g fill="var(--diagram-primary-soft,#d6e5dc)"><rect x="176" y="195" width="144" height="62"/><rect x="344" y="195" width="144" height="62"/><rect x="512" y="195" width="144" height="62"/></g>
+    <text x="192" y="220">实现 + 改进</text><text x="360" y="220">实现 + 改进</text><text x="528" y="220">实现 + 改进</text>
+    <text x="192" y="245" font-size="14">比较设计</text><text x="360" y="245" font-size="14">修正问题</text><text x="528" y="245" font-size="14">继续积累经验</text>
+    <path d="M24 275H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="313" font-weight="600">清理总在以后</text>
+    <text x="192" y="313">先实现</text><text x="360" y="313">再实现</text><text x="528" y="313">继续实现</text>
+    <path d="M192 334H626" stroke="var(--diagram-danger,#a03946)" stroke-dasharray="5 4"/>
+    <text x="254" y="356" font-size="14" fill="var(--diagram-danger,#a03946)">“等忙完再清理”不断向后移动</text>
+    <text x="24" y="401" font-weight="600">投资有两类：事前比较备选；事后修正已发现的问题。</text>
+    <text x="24" y="432" font-size="14">作者建议投入约 10%–20% 的开发时间，而非一次设计完整系统。</text>
+    <text x="24" y="462" font-size="14" fill="var(--diagram-muted,#5c645d)">回本时间没有实证保证；本图不重画或量化原书定性曲线。</text>
+  </g>
+</svg>

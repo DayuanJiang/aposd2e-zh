@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 463" role="img" aria-labelledby="ch12-discover-dependency-t ch12-discover-dependency-d">
+  <title id="ch12-discover-dependency-t">文档让依赖可见，不让依赖消失</title><desc id="ch12-discover-dependency-d">教学模块A依赖B和C。没有文档时修改者还要找出相关位置；有文档时说明从A指向B和C并给出理由。两幅图保留相同的代码依赖，没有自动消除变更工作。</desc>
+  <defs><marker id="ch12-discover-dependency-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="680" height="463" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">文档让依赖可见，不让依赖消失</text><text x="24" y="68">教学例：修改 A 时，B、C 也可能相关</text>
+    <text x="24" y="111" font-weight="600">无说明：要重新追查相关代码</text><text x="367" y="111" font-weight="600">有说明：知道去哪里、为何要看</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch12-discover-dependency-a)"><path d="M167 183L94 299"/><path d="M167 183L265 299"/><path d="M509 183L427 299"/><path d="M509 183L609 299"/></g>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><circle cx="167" cy="163" r="29"/><circle cx="80" cy="328" r="29"/><circle cx="266" cy="328" r="29"/><circle cx="509" cy="163" r="29"/><circle cx="423" cy="328" r="29"/><circle cx="609" cy="328" r="29"/></g>
+    <g font-family="monospace" font-size="20"><text x="161" y="170">A</text><text x="74" y="335">B</text><text x="260" y="335">C</text><text x="503" y="170">A</text><text x="417" y="335">B</text><text x="603" y="335">C</text></g>
+    <text x="74" y="236" fill="var(--diagram-danger,#a03946)">还要查哪里？为何相关？</text><text x="74" y="264" font-size="13" fill="var(--diagram-muted,#58636b)">依赖存在，但没有现成说明</text>
+    <rect x="366" y="216" width="289" height="56" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="384" y="239">设计说明：指出 B、C 及理由</text><text x="384" y="260" font-size="13">保存原设计者的知识</text>
+    <path d="M510 193V215M405 273L412 294M614 273L610 294" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-dasharray="5 4"/>
+    <text x="24" y="394" font-size="14">实线：代码依赖，前后不变。虚线：文档给出的查找指引。</text>
+    <path d="M24 410H656" stroke="var(--diagram-line,#aebbad)"/><text x="24" y="438" font-size="13" fill="var(--diagram-muted,#58636b)">主要帮助认知负荷与未知的未知；不表示依赖消失、修改点减少或已测得理解收益。</text>
+  </g>
+</svg>

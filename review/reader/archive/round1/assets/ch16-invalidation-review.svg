@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 393" role="img" aria-labelledby="ch16-invalidation-review-title ch16-invalidation-review-desc">
+  <title id="ch16-invalidation-review-title">按变化层级检查注释失效范围</title>
+  <desc id="ch16-invalidation-review-desc">实现细节变化需要核对局部说明，整体行为变化需要核对接口和高层说明，提交日志中未来仍需要的修复理由应进入代码。三路汇入提交前逐项复核。</desc>
+  <defs><marker id="ch16-invalidation-review-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="393" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="21" font-weight="600">不是代码一改，所有注释就都失效</text>
+    <text x="24" y="61" font-size="14">16.3 / 16.5 / 16.6 · 按变更影响检查，不按是否改过注释检查</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"><rect x="24" y="90" width="180" height="54" rx="5"/><rect x="24" y="167" width="180" height="54" rx="5"/><rect x="24" y="244" width="180" height="54" rx="5"/></g>
+    <text x="114" y="123" text-anchor="middle">实现细节变化</text><text x="114" y="200" text-anchor="middle">整体行为变化</text><text x="114" y="266" text-anchor="middle">未来仍需要的</text><text x="114" y="289" text-anchor="middle">修复理由</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch16-invalidation-review-arrow)"><path d="M204 117H251"/><path d="M204 194H251"/><path d="M204 271H251"/><path d="M463 117H490V194H524"/><path d="M463 194H524"/><path d="M463 271H490V194"/></g>
+    <text x="261" y="111">核对局部细节说明</text><text x="261" y="137" font-size="14">高层行为描述可能仍有效</text>
+    <text x="261" y="188">核对接口与高层说明</text><text x="261" y="214" font-size="14">不只更新所改的那行代码</text>
+    <text x="261" y="265">写在相关代码附近</text><text x="261" y="291" font-size="14">不要只留在提交日志中</text>
+    <rect x="524" y="147" width="132" height="94" rx="5" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="590" y="177" text-anchor="middle">提交前</text><text x="590" y="203" text-anchor="middle">逐项核对差异</text><text x="590" y="229" text-anchor="middle" font-size="14">代码 ↔ 文档</text>
+    <path d="M24 327H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="357">抽象说明更耐受局部修改；精确的细节说明仍有其必要。</text>
+  </g>
+</svg>

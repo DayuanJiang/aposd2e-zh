@@ -1,0 +1,65 @@
+[
+  {
+    "id": "ch18-f1",
+    "sourceHash": "ab7d16da71c345137cf82dd4fcb47213c4b602244d0871e6e8fc89f487098cd0",
+    "python": "\"\"\"\n...\nnumThreads: The number of threads that this manager should\nspin up in order to manage ongoing connections. The MessageManager\nspins up at least one thread for every open connection, so this\nshould be at least equal to the number of connections you expect\nto be open at once. This should be a multiple of that number if\nyou expect to send a lot of messages in a short amount of time.\nhandler: Used as a callback in order to handle incoming\nmessages on this MessageManager's open connections. See\nMessageHandler and handleMessage for details.\n\"\"\"\n",
+    "note": "故意保留参数名与说明挤在一起、续行不缩进的反例，供下一例对照。这里只改写文档片段；MessageManager、MessageHandler 和 handleMessage 是项目约定，线程数量建议不是 Python 通则。",
+    "noteEn": "Intentionally keep the cramped parameter descriptions and unindented continuation lines for comparison with the next example. This is a documentation excerpt: MessageManager, MessageHandler, and handleMessage are application-specific, and the thread-count advice is not a general Python rule.",
+    "originalLanguage": "java",
+    "noteTw": "故意保留參數名與說明擠在一起、續行不縮排的反例，供下一例對照。這裡只改寫文件片段；MessageManager、MessageHandler 和 handleMessage 是專案約定，執行緒數量建議不是 Python 通則。"
+  },
+  {
+    "id": "ch18-f2",
+    "sourceHash": "e59487397d3475e0807a4b4cdc8de33452afd5f71fc3588e55e0bd83977f0625",
+    "python": "\"\"\"\nnumThreads:\n    The number of threads that this manager should spin up in\n    order to manage ongoing connections. The MessageManager spins\n    up at least one thread for every open connection, so this\n    should be at least equal to the number of connections you\n    expect to be open at once. This should be a multiple of that\n    number if you expect to send a lot of messages in a short\n    amount of time.\nhandler:\n    Used as a callback in order to handle incoming messages on\n    this MessageManager's open connections. See\n    MessageHandler and handleMessage for details.\n\"\"\"\n",
+    "note": "内容与上一例相同，用独立的参数名行和缩进体现排版改进，不改变线程或回调行为。这里只展示文档；这些类型和回调名称是项目约定，线程数量建议不是 Python 通则。",
+    "noteEn": "The content matches the previous example; separate parameter-name lines and indentation improve scanning without changing thread or callback behavior. This is documentation only: the types and callback names are application-specific, and the thread-count advice is not a general Python rule.",
+    "originalLanguage": "java",
+    "noteTw": "內容與上一例相同，用獨立的參數名行和縮排體現排版改進，不改變執行緒或回撥行為。這裡只展示文件；這些型別和回撥名稱是專案約定，執行緒數量建議不是 Python 通則。"
+  },
+  {
+    "id": "ch18-f4",
+    "sourceHash": "2ea2ec60942769e30f2b82420be569490e8c8a5df0be8c709a36e808e84b5c08",
+    "python": "pass_=1\nwhile pass_>=0 and not empty:\n    ...\n    pass_-=1\n\npass_ = 1\nwhile pass_ >= 0 and not empty:\n    ...\n    pass_ -= 1\n",
+    "note": "上下两段是空格不同的替代写法，不是连续执行的两个阶段。Python 没有这种三段式 for，故用 while 保留条件检查与递减；pass 是关键字，必须改为 pass_。循环体仍省略，紧凑排版是刻意保留的反例。",
+    "noteEn": "The two blocks are alternative whitespace styles, not successive phases. Python has no three-clause for loop, so while preserves the condition check and decrement; pass must become pass_ because it is a keyword. The body is omitted, and the cramped style is intentional.",
+    "originalLanguage": "java",
+    "noteTw": "上下兩段是空格不同的替代寫法，不是連續執行的兩個階段。Python 沒有這種三段式 for，故用 while 保留條件檢查與遞減；pass 是關鍵字，必須改為 pass_。迴圈體仍省略，緊湊排版是刻意保留的反例。"
+  },
+  {
+    "id": "ch18-f5",
+    "sourceHash": "afba6b0fb225971fad6dec43cd734afcbe5751bf005d39392ef6f832ae7f9d81",
+    "python": "class Transport:\n    class RpcNotifier:\n        def failed(self) -> None:\n            \"\"\"This method is invoked in the dispatch thread by a transport if a\n            transport-level error prevents an RPC from completing.\n            \"\"\"\n            ...\n",
+    "note": "原围栏虽标为 Java，实际是 C++。用 Python 嵌套类保留 Transport、RpcNotifier 和 failed 的名称，展示回调契约；调用时机和 dispatch 线程由项目的事件分发器保证，并非 Python 自动注册或调度，方法实现省略。",
+    "noteEn": "The Java-labelled source is C++. Nested Python classes preserve Transport, RpcNotifier, and failed to illustrate the callback contract. The application's dispatcher must provide the documented timing and thread; Python does not register or schedule the callback automatically. The body is omitted.",
+    "originalLanguage": "cpp",
+    "noteTw": "原圍欄雖標為 Java，實際是 C++。用 Python 巢狀類保留 Transport、RpcNotifier 和 failed 的名稱，展示回撥契約；呼叫時機和 dispatch 執行緒由專案的事件分發器保證，並非 Python 自動註冊或排程，方法實作省略。"
+  },
+  {
+    "id": "ch18-f6",
+    "sourceHash": "1ac7ded4963b213b5d2488570d8c97b13a863045578e1e4e328b912f81bc889d",
+    "python": "def reply(currentTerm: int) -> tuple[int, bool]:\n    return currentTerm, False\n",
+    "note": "以二元 tuple 保留 Pair 中元素含义不明确的反例，不擅自给 False 命名。Python 调用者可用 result[0] 和 result[1] 访问，但没有原例的 getKey/getValue API；reply 仅补齐 return 的函数上下文。",
+    "noteEn": "A two-item tuple preserves the Pair example's unnamed-element problem without inventing a meaning for False. Python callers can use result[0] and result[1], not the original getKey/getValue API. reply only supplies a function context for return.",
+    "originalLanguage": "java",
+    "noteTw": "以二元 tuple 保留 Pair 中元素含義不明確的反例，不擅自給 False 命名。Python 呼叫者可用 result[0] 和 result[1] 存取，但沒有原例的 getKey/getValue API；reply 僅補齊 return 的函式上下文。"
+  },
+  {
+    "id": "ch18-f7",
+    "sourceHash": "901a4184d957ad070ed79328869d7ee5449ba0ad2cdbf14c61869ee16d0e53be",
+    "python": "from collections.abc import MutableSequence\n\nincomingMessageList: MutableSequence[\"Message\"]\n...\nincomingMessageList = []\n",
+    "note": "用 MutableSequence 注解与实际 list 对照抽象接口和具体容器，Message 为项目类型。Python 注解不强制运行时类型；这里不照搬 Java 容器的性能或线程安全结论，也不把面向接口编程一概判为错误。",
+    "noteEn": "A MutableSequence annotation and an actual list illustrate the abstract-interface/concrete-container distinction; Message is application-defined. Python annotations do not enforce runtime types. This analogy does not transfer Java container performance or thread-safety claims, or imply that interface-based programming is inherently wrong.",
+    "originalLanguage": "java",
+    "noteTw": "用 MutableSequence 註解與實際 list 對照抽象介面和具體容器，Message 為專案型別。Python 註解不強制執行時型別；這裡不照搬 Java 容器的效能或執行緒安全結論，也不把面向介面程式設計一概判為錯誤。"
+  },
+  {
+    "id": "ch18-f8",
+    "sourceHash": "d802d4585f803d9bb54743349a66547f71d5d2d3a437f444c83b0d63556b9637",
+    "python": "def main(args: list[str]) -> None:\n    ...\n    RaftClient(myAddress, serverAddresses)\n",
+    "note": "保留构造函数副作用不明显的反例。这里假设项目的 RaftClient.__init__ 已调用 threading.Thread(..., daemon=False).start()；仍存活的非守护线程才会让进程在 main 返回后继续运行。片段省略入口调用、地址配置和 Raft 实现，不声称构造对象会自动启动线程。",
+    "noteEn": "Preserve the example's hidden constructor side effect. Assume the application's RaftClient.__init__ calls threading.Thread(..., daemon=False).start(); still-running non-daemon threads then keep the process alive after main returns. Entry-point invocation, address setup, and Raft implementation are omitted; construction alone does not automatically start threads.",
+    "originalLanguage": "java",
+    "noteTw": "保留建構函式副作用不明顯的反例。這裡假設專案的 RaftClient.__init__ 已呼叫 threading.Thread(..., daemon=False).start()；仍存活的非守護執行緒才會讓行程在 main 回傳後繼續執行。片段省略入口呼叫、地址設定和 Raft 實作，不聲稱構造物件會自動啟動執行緒。"
+  }
+]

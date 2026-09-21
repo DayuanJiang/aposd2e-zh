@@ -1,0 +1,95 @@
+[
+  {
+    "id": "ch17-convention-gate",
+    "chapter": "ch17",
+    "title": "把换行约定变成提交门槛",
+    "question": "作者项目中的换行检查，怎样阻止违规文件进入仓库？",
+    "answer": "在作者的项目案例中，提交前自动检查改动文件：含 CR 就中止提交，不含则放行。开发者可另行手动运行 CRLF 转 LF 的修复，再尝试提交。这不是所有仓库都应采用的规则。",
+    "summary": "这是作者项目中的换行符案例。自动检查负责阻止提交，修复由手动运行触发，两者不是同一步。",
+    "alt": "作者项目在提交前自动检查修改文件；不含回车则允许提交，含回车则中止，开发者另行手动把 CRLF 转为 LF 后返回检查。自动检查不等于自动修复，这不是所有仓库的通用规则。",
+    "kind": "enforcement-loop",
+    "desktop": "/diagrams/ch17-convention-gate.svg",
+    "mobile": "/diagrams/ch17-convention-gate-mobile.svg",
+    "anchor": {
+      "section": "17.2",
+      "paragraph": 6
+    },
+    "sources": [
+      {
+        "section": "17.2",
+        "epub": "OEBPS/part0021.xhtml#p17:b234c667e1",
+        "reason": "跨平台编辑器修改行终止符可掩盖真正变更，仅建立约定仍不够。"
+      },
+      {
+        "section": "17.2",
+        "epub": "OEBPS/part0021.xhtml#p18:958d04d5ff",
+        "reason": "自动检查修改文件并中止违规提交，脚本可手动运行以修复 CRLF；图的问题已限定为这个项目的提交循环。"
+      }
+    ],
+    "status": "content-reviewed",
+    "titleTw": "把換行約定變成提交門檻",
+    "questionTw": "作者專案中的換行檢查，怎樣阻止違規檔案進入儲存庫？",
+    "answerTw": "在作者的專案案例中，提交前自動檢查改動檔案：含 CR 就中止提交，不含則放行。開發者可另行手動執行 CRLF 轉 LF 的修復，再嘗試提交。這不是所有儲存庫都應採用的規則。",
+    "summaryTw": "這是作者專案中的換行符案例。自動檢查負責阻止提交，修復由手動執行觸發，兩者不是同一步。",
+    "altTw": "作者專案在提交前自動檢查修改檔案；不含回車則允許提交，含回車則中止，開發者另行手動把 CRLF 轉為 LF 後回到檢查。自動檢查不等於自動修復，這不是所有儲存庫的通用規則。",
+    "desktopTw": "/diagrams/ch17-convention-gate-tw.svg",
+    "mobileTw": "/diagrams/ch17-convention-gate-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-15-21-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  },
+  {
+    "id": "ch17-trustworthy-patterns",
+    "chapter": "ch17",
+    "title": "外观一致，还要含义一致",
+    "question": "让不同事物都长得一样，为什么反而损害一致性？",
+    "answer": "读者会把熟悉外观对应到熟悉含义。相同含义应可复用同一模式，不同含义则应有区别，否则熟悉感会诱发错误推断。",
+    "summary": "教学自拟反例：同叫 timeout 的值，一个用秒、另一个用毫秒。图中不主张具体命名规范，只说明单位差异不能被相同外观掩盖。",
+    "alt": "相同单位的 timeoutSeconds 在两处让秒的知识可复用；反例中两个 timeout 隐藏秒与毫秒差别，使按秒理解毫秒值的推断失效；显式区分单位恢复可见差异。",
+    "kind": "counterexample",
+    "desktop": "/diagrams/ch17-trustworthy-patterns.svg",
+    "mobile": "/diagrams/ch17-trustworthy-patterns-mobile.svg",
+    "anchor": {
+      "section": "17.3",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "intro",
+        "epub": "OEBPS/part0021.xhtml#p3:3cdf47b76f",
+        "reason": "一致性允许在相似情境复用已学知识。"
+      },
+      {
+        "section": "intro",
+        "epub": "OEBPS/part0021.xhtml#p4:3ac4865b5f",
+        "reason": "看似相同而实则不同的情境会诱发错误假设。"
+      },
+      {
+        "section": "17.3",
+        "epub": "OEBPS/part0021.xhtml#p23:78c80a466e",
+        "reason": "不同事物应区别处理；相同变量名不能强加给不同事物。timeout 示例为教学自拟，不来自作者项目。"
+      }
+    ],
+    "status": "content-reviewed",
+    "titleTw": "外觀一致，還要含義一致",
+    "questionTw": "讓不同事物都長得一樣，為什麼反而損害一致性？",
+    "answerTw": "讀者會把熟悉外觀對應到熟悉含義。相同含義應可複用同一模式，不同含義則應有區別，否則熟悉感會誘發錯誤推斷。",
+    "summaryTw": "教學自擬反例：同叫 timeout 的值，一個用秒、另一個用毫秒。圖中不主張具體命名規範，只說明單位差異不能被相同外觀掩蓋。",
+    "altTw": "相同單位的 timeoutSeconds 在兩處讓秒的知識可複用；反例中兩個 timeout 隱藏秒與毫秒差別，使按秒理解毫秒值的推斷失效；顯式區分單位恢復可見差異。",
+    "desktopTw": "/diagrams/ch17-trustworthy-patterns-tw.svg",
+    "mobileTw": "/diagrams/ch17-trustworthy-patterns-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-15-21-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  }
+]

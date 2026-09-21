@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 676" role="img" aria-labelledby="ch08-retry-feedback-m-t ch08-retry-feedback-m-d">
+  <title id="ch08-retry-feedback-m-t">重試間隔的知識在哪裡？</title><desc id="ch08-retry-feedback-m-d">固定設定從管理員流向重試。動態方案從成功響應向下經過測量、計算，再回到後續請求。使用者可能更瞭解請求的業務優先權。</desc>
+  <defs><marker id="ch08-retry-feedback-m-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)" /></marker></defs>
+  <rect width="360" height="676" fill="var(--diagram-bg,#f5f7f8)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="20" y="32" font-size="18" font-weight="600">重試間隔的知識在哪裡？</text>
+    <text x="20" y="74" font-weight="600">固定設定</text>
+    <rect x="20" y="94" width="136" height="48" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" /><text x="39" y="124">管理員選間隔</text>
+    <rect x="204" y="94" width="136" height="48" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" /><text x="224" y="124">按該間隔重試</text>
+    <path d="M156 118H196" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch08-retry-feedback-m-a)" />
+    <text x="20" y="175" font-size="14" fill="var(--diagram-danger,#a03946)">執行條件變了，參數不會自動變化。</text>
+    <path d="M20 199H340" stroke="var(--diagram-line,#aebbad)" />
+    <text x="20" y="232" font-weight="600">模組內部的反饋迴路</text>
+    <g fill="var(--diagram-primary-soft,#d6e5dc)"><rect x="60" y="256" width="250" height="52" rx="4" /><rect x="60" y="355" width="250" height="52" rx="4" /><rect x="60" y="454" width="250" height="52" rx="4" /></g>
+    <text x="100" y="288">成功請求取得響應</text><text x="100" y="387">測量當前響應時間</text><text x="85" y="486">計算間隔，供後續請求使用</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch08-retry-feedback-m-a)"><path d="M185 309V347" /><path d="M185 408V446" /><path d="M60 480H32V282H52" /></g>
+    <text x="203" y="336" font-size="13">觀察條件</text><text x="203" y="434" font-size="13">動態調整</text>
+    <text x="20" y="538" font-size="13" fill="var(--diagram-muted,#58636b)">迴路：後續成功請求繼續提供測量依據。</text>
+    <path d="M20 555H340" stroke="var(--diagram-line,#aebbad)" />
+    <text x="20" y="581" font-weight="600">業務優先權：使用者可能知道得更多</text>
+    <text x="20" y="610" font-size="13" fill="var(--diagram-muted,#58636b)">原文未指定響應時間的倍數或完整演算法。</text>
+    <text x="20" y="633" font-size="13" fill="var(--diagram-muted,#58636b)">設定並非一律不好：誰能確定更好的值？</text>
+    <text x="20" y="656" font-size="13" fill="var(--diagram-muted,#58636b)">確需設定時，考慮提供合理預設值。</text>
+  </g>
+</svg>

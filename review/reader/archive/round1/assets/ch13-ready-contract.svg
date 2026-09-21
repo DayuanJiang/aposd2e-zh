@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 476" role="img" aria-labelledby="ch13-ready-contract-t ch13-ready-contract-d">
+  <title id="ch13-ready-contract-t">ready 不等于一定有对象</title><desc id="ch13-ready-contract-d">有对象和查询结束两种状态都对应isReady为true，下一次getNext不阻塞，分别返回对象或NULL。false只表示可能阻塞。查询必须经直接或间接调用isReady推进。</desc>
+  <defs><marker id="ch13-ready-contract-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="680" height="476" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">ready 不等于一定有对象</text><text x="24" y="70">需要说明的是调用者可观察的行为，而非内部状态名 RESULT_READY。</text>
+    <text x="24" y="111" font-weight="600">当前情况</text><text x="274" y="111" font-weight="600">isReady()</text><text x="438" y="111" font-weight="600">下一次 getNext()</text>
+    <g fill="var(--diagram-primary-soft,#d6e5dc)"><rect x="24" y="130" width="209" height="43" rx="4"/><rect x="24" y="195" width="209" height="43" rx="4"/></g>
+    <text x="44" y="158">至少一个对象可返回</text><text x="44" y="223">查询已经结束</text>
+    <rect x="24" y="260" width="209" height="43" rx="4" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="44" y="288">尚未保证可立即返回</text>
+    <g stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch13-ready-contract-a)"><path d="M234 152H272"/><path d="M234 217H272"/><path d="M234 282H272"/><path d="M340 152H424"/><path d="M340 217H424"/><path d="M340 282H424"/></g>
+    <text x="281" y="158" font-family="monospace" font-size="18">true</text><text x="281" y="223" font-family="monospace" font-size="18">true</text><text x="281" y="288" font-family="monospace" font-size="18">false</text>
+    <text x="439" y="158">不阻塞，返回对象</text><text x="439" y="223">不阻塞，返回 NULL</text><text x="439" y="288" font-weight="600">可能阻塞，不是必然阻塞</text>
+    <path d="M24 328H656" stroke="var(--diagram-line,#aebbad)"/><text x="24" y="359" font-weight="600">另一个接口义务：调用才能推进查询</text>
+    <text x="24" y="397">直接调用 isReady</text><text x="24" y="428">或调用 getNext</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch13-ready-contract-a)"><path d="M183 393H364"/><path d="M164 424H265V404H364"/></g>
+    <rect x="372" y="375" width="284" height="65" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="391" y="402">执行 isReady，推动查询</text><text x="391" y="428" font-size="13">getNext 可以间接调用它</text>
+    <text x="24" y="464" font-size="13" fill="var(--diagram-muted,#58636b)">状态分支是接口契约的展开，不展示内部规则调度算法。</text>
+  </g>
+</svg>

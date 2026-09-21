@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 754" role="img" aria-labelledby="ch07-line-boundary-m-title ch07-line-boundary-m-desc">
+  <title id="ch07-line-boundary-m-title">按行存储，不必按行暴露</title>
+  <desc id="ch07-line-boundary-m-desc">教学例子从两行 ABcd、efGH 删除 cd、换行和 ef，结果 ABGH。按行 API 把拼接责任留给 UI；范围 API 让 UI 指定起终点，文本类内部拼接，存储仍然按行。</desc>
+  <defs><marker id="ch07-line-boundary-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="754" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="16" y="32" font-size="19" font-weight="600">按行存储，不必按行暴露</text>
+    <text x="16" y="59" font-size="14" fill="var(--diagram-muted,#5c645d)">教学示例：一次跨行删除</text>
+    <text x="36" y="107" font-family="ui-monospace,monospace" font-size="21">AB<tspan fill="var(--diagram-danger,#a03946)">cd</tspan></text>
+    <text x="36" y="144" font-family="ui-monospace,monospace" font-size="21"><tspan fill="var(--diagram-danger,#a03946)">ef</tspan>GH</text>
+    <path d="M70 113H112V127H30" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-dasharray="4 3"/>
+    <path d="M132 122H206" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch07-line-boundary-m-arrow)"/>
+    <text x="232" y="130" font-family="ui-monospace,monospace" font-size="23">ABGH</text>
+    <text x="16" y="184" font-size="14">删掉 cd、换行、ef，再拼接保留的两端。</text>
+    <path d="M16 205H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="237" font-weight="600">行接口：UI 承担存储细节</text>
+    <rect x="16" y="255" width="328" height="128" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="32" y="284">UI 通过 getLine / putLine：</text><text x="32" y="314">取两行 → 保留 AB 与 GH</text><text x="32" y="343">拼接 → 替换两行</text><text x="32" y="369" font-size="14">这些步骤可能在多个调用点重复</text>
+    <path d="M16 408H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="440" font-weight="600">范围接口：UI 只指定范围</text>
+    <text x="32" y="477" font-family="ui-monospace,monospace">delete(start, end)</text>
+    <path d="M180 490V521" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch07-line-boundary-m-arrow)"/>
+    <rect x="16" y="534" width="328" height="105" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="32" y="564" font-weight="600">文本类内部仍按行存储</text><text x="32" y="594">保留片段 → 拼接 → 替换</text><text x="32" y="621" font-size="14">拆行、合行的复杂性在这里封装</text>
+    <text x="16" y="678" font-weight="600">接口与存储的差异，提供实际价值。</text>
+    <text x="16" y="714" font-size="13" fill="var(--diagram-muted,#5c645d)">字符串和位置为教学示例。</text>
+    <text x="16" y="736" font-size="13" fill="var(--diagram-muted,#5c645d)">只说明职责，不是完整编辑算法。</text>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 624" role="img" aria-labelledby="ch14-block-domains-m-t ch14-block-domains-m-d">
+  <title id="ch14-block-domains-m-t">同一个数字，两个地址域</title><desc id="ch14-block-domains-m-d">文件块2经过映射成为磁盘块9。右侧旁路绕过映射，把2直接当作物理块号，误清零无关磁盘块2。数字为教学例。</desc>
+  <defs><marker id="ch14-block-domains-m-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="360" height="624" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="20" y="32" font-size="18" font-weight="600">同一个数字，两个地址域</text><text x="20" y="67" font-size="14">教学例：文件块 2 对应磁盘块 9</text>
+    <rect x="20" y="89" width="270" height="65" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="38" y="116" font-weight="600">fileBlock = 2</text><text x="38" y="141">文件逻辑域：文件内部的索引</text>
+    <path d="M155 155V184" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch14-block-domains-m-a)"/>
+    <rect x="20" y="191" width="270" height="47" rx="4" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="82" y="221">地址映射：2 → 9</text>
+    <path d="M155 239V268" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch14-block-domains-m-a)"/>
+    <rect x="20" y="275" width="270" height="66" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="38" y="303" font-weight="600">diskBlock = 9</text><text x="38" y="329">磁盘物理域：真正对应的块</text>
+    <path d="M291 121H327V421H297" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" marker-end="url(#ch14-block-domains-m-a)"/>
+    <text x="20" y="374" fill="var(--diagram-danger,#a03946)" font-size="14">旁路：直接把 2 当作物理块号</text>
+    <rect x="20" y="391" width="270" height="64" rx="4" fill="var(--diagram-danger-soft,#ead9dc)"/><text x="38" y="419">磁盘块 2：无关数据被清零</text><text x="38" y="444" font-size="13">都叫 block，掩盖了跨域误用</text>
+    <path d="M20 479H340" stroke="var(--diagram-line,#aebbad)"/><text x="20" y="510">名称区分地址域；更进一步，</text><text x="20" y="537">用不可互换的类型限制混用。</text>
+    <text x="20" y="571" font-size="13" fill="var(--diagram-muted,#58636b)">2和9为教学自拟，不是历史事故的块号。</text><text x="20" y="595" font-size="13" fill="var(--diagram-muted,#58636b)">名称本身不提供类型安全保证。</text>
+  </g>
+</svg>

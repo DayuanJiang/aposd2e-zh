@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 646" role="img" aria-labelledby="ch09-http-knowledge-m-t ch09-http-knowledge-m-d">
+  <title id="ch09-http-knowledge-m-t">读取与解析共享了哪份知识？</title><desc id="ch09-http-knowledge-m-d">读取类和解析类纵向排列，各自重复HTTP格式知识，以请求字符串连接；合并后只有一处格式知识和对外解析结果。</desc>
+  <defs><marker id="ch09-http-knowledge-m-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="360" height="646" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="20" y="32" font-size="18" font-weight="600">读取与解析共享了哪份知识？</text>
+    <text x="20" y="74" font-weight="600">分开：两处都理解 HTTP 格式</text>
+    <rect x="20" y="94" width="320" height="96" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <text x="38" y="122" font-weight="600">读取类</text><text x="38" y="149">读取网络数据，判断请求是否结束</text><text x="38" y="176" fill="var(--diagram-warm,#80531b)">需要 HTTP 格式知识</text>
+    <path d="M180 191V253" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch09-http-knowledge-m-a)"/>
+    <text x="195" y="223" font-size="14">请求字符串</text>
+    <rect x="20" y="260" width="320" height="96" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <text x="38" y="288" font-weight="600">解析类</text><text x="38" y="315">提取请求的组成部分</text><text x="38" y="342" fill="var(--diagram-warm,#80531b)">再次需要 HTTP 格式知识</text>
+    <path d="M20 380H340" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="20" y="414" font-weight="600">合并：知识集中，中间接口消失</text>
+    <rect x="20" y="435" width="320" height="87" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="38" y="464" font-weight="600">读取 + 解析：一处格式知识</text><text x="38" y="494" font-size="14">请求字符串不再跨两个类的接口</text>
+    <path d="M180 523V549" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch09-http-knowledge-m-a)"/><text x="148" y="578">解析结果</text>
+    <text x="20" y="610" font-size="13" fill="var(--diagram-muted,#58636b)">知识与接口示意，不是完整 HTTP 解析算法。</text>
+    <text x="20" y="633" font-size="13" fill="var(--diagram-muted,#58636b)">合并理由是共享信息，而非代码长短。</text>
+  </g>
+</svg>

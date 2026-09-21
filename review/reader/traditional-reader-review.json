@@ -1,0 +1,687 @@
+{
+  "reviewType": "independent-sc-to-tw-reader-conversion-fidelity",
+  "verdict": "revise-localization",
+  "snapshotCapturedAtUtc": "2026-09-20T17:45:47.131Z",
+  "scope": {
+    "included": [
+      "All 50 active entries in docs/.vuepress/reader/diagrams/*.json: title/titleTw, question/questionTw, answer/answerTw, summary/summaryTw, alt/altTw.",
+      "All 44 entries in docs/.vuepress/reader/examples/*.json: note/noteTw.",
+      "All 100 active SC desktop/mobile SVGs and their 100 generated *-tw.svg counterparts, including accessible title/desc and visible text.",
+      "Existing conversion conventions in bin/zh-tw.py, bin/tw-terms.tsv and review/reader/localize.py; pinned OpenCC version and existing localization tests."
+    ],
+    "excluded": [
+      "Independent correctness of the SC diagram concepts, invented examples, source-book interpretation, Python adaptations or teaching claims.",
+      "Reader learning, comprehension, usability or performance validation.",
+      "Screenshots, rendered text bounds, geometry layout quality, themes, builds and final integration.",
+      "The separately reviewed old docs/zh-tw full-book body, original-figure reproductions, retired diagrams and archived drafts."
+    ],
+    "edits": "Only this report. No source, generated SVG, manifest, converter, test or body-Markdown edits.",
+    "reviewStandard": "Technical informational text: preserve meaning, qualifications and established terminology. Do not redesign the conversion pipeline or flag merely preferred regional wording."
+  },
+  "summary": {
+    "findings": 9,
+    "priorities": {"P2": 7, "P3": 2},
+    "findingLocationAssociations": 38,
+    "distinctAffectedTextPairs": 34,
+    "affectedDiagramIds": [
+      "ch03-patch-cycle",
+      "ch04-abstraction-filter",
+      "ch10-unset-semantics",
+      "ch10-error-carrier",
+      "ch13-rpc-intent",
+      "ch15-design-feedback",
+      "ch15-comment-gate",
+      "ch16-single-source",
+      "ch17-convention-gate",
+      "ch19-abstraction-increment",
+      "ch19-regression-witness",
+      "ch20-state-compression"
+    ],
+    "exampleNoteFindings": 0,
+    "qualificationReview": "No additional conversion-induced omission of conditions, negation, uncertainty, invented-example attribution or non-guarantees was found in the reviewed pairs. This does not validate those SC claims.",
+    "knownCh19PassThroughIssue": "The supplied narrow fix is present and effective in the reviewed ch19 assets. It is not reported as unresolved. R6 concerns a different remaining condition-pass context in ch13; R5 concerns evidential support, not pass/through."
+  },
+  "method": {
+    "extraction": "Parsed every metadata file with Python json and every paired SVG with xml.etree.ElementTree. Matched SVG nodes by ordered, namespace-aware tree structure, then compared attributes and text/tail slots. No regex extraction of JSON or XML.",
+    "semanticReview": "Read all 294 metadata pairs, then all distinct SVG pairs not already represented by metadata. Identical SC/TW pairs were deduplicated only for reading; every occurrence remained in the structural comparison and coverage inventory. All changed distinct pairs were read with SC and TW together; unchanged strings were also inspected.",
+    "deduplication": "Exact ordered (SC text, TW text) equality only; not similarity, machine back-translation or vocabulary sampling.",
+    "conversionCheck": "Compared every localized string and serialized SVG with the current OpenCC 1.4.1 s2twp.json plus ordered tw-terms.tsv pipeline. Deterministic agreement was treated as provenance, not semantic approval.",
+    "locationNotation": "JSON locations are zero-based JSON Pointers to generated fields; remove the terminal Tw suffix for the SC field. XML locations use one-based sibling indices by local tag name in the SVG namespace. text() means ElementTree element.text, not descendant-concatenated text. Remove the final -tw from the SVG filename for its SC source.",
+    "evidenceStrings": "sourceExact and generatedExact are literal extracted strings or exact contiguous fragments, not back-translations. Each location must contain its corresponding fragment.",
+    "suggestedRules": "All listed literal rules are proposals only, expressed against the current final TW output. If adopted as TSV rules, place them in the existing late, context-specific correction section, after the broad rules that create these outputs. Source-wording alternatives are alternatives, not cumulative mandatory edits. Do not patch generated files.",
+    "externalTerminologyCheck": "Consulted primary technical documentation only to distinguish an invariant condition from an unchanging value and string concatenation from a connection. This did not validate any SC diagram or implementation."
+  },
+  "coverage": {
+    "diagramMetadataFiles": 22,
+    "activeDiagrams": 50,
+    "exampleMetadataFiles": 10,
+    "exampleNotes": 44,
+    "metadataTextPairs": 294,
+    "fields": {"titleTw": 50, "questionTw": 50, "answerTw": 50, "summaryTw": 50, "altTw": 50, "noteTw": 44},
+    "svgFilePairs": 100,
+    "svgElementPairs": 4024,
+    "svgNonemptyTextPairs": 2295,
+    "svgTextKinds": {"title": 100, "desc": 100, "text": 2095, "tspan": 0, "nonemptyTail": 0},
+    "totalTextPairs": 2589,
+    "distinctTextPairs": 1879,
+    "distinctSvgPairsBeyondMetadata": 1585,
+    "distinctChangedSvgPairsBeyondMetadata": 1339,
+    "distinctUnchangedSvgPairsBeyondMetadata": 246,
+    "unpairedOrMissingFields": 0,
+    "unreferencedPublicTwSvgs": [],
+    "byMetadataFile": [
+      {"file":"docs/.vuepress/reader/diagrams/ch01.json","ids":["ch01-two-levers"],"metadataPairs":5,"svgPairs":2,"svgTextPairs":41},
+      {"file":"docs/.vuepress/reader/diagrams/ch02.json","ids":["ch02-weighted-work","ch02-memory-owner","ch02-cause-symptom"],"metadataPairs":15,"svgPairs":6,"svgTextPairs":142},
+      {"file":"docs/.vuepress/reader/diagrams/ch03.json","ids":["ch03-patch-cycle"],"metadataPairs":5,"svgPairs":2,"svgTextPairs":33},
+      {"file":"docs/.vuepress/reader/diagrams/ch04.json","ids":["ch04-abstraction-filter","ch04-common-path"],"metadataPairs":10,"svgPairs":4,"svgTextPairs":109},
+      {"file":"docs/.vuepress/reader/diagrams/ch05.json","ids":["ch05-format-ownership","ch05-http-read","ch05-parameter-boundary"],"metadataPairs":15,"svgPairs":6,"svgTextPairs":140},
+      {"file":"docs/.vuepress/reader/diagrams/ch06.json","ids":["ch06-range-api","ch06-history-boundary","ch06-empty-selection"],"metadataPairs":15,"svgPairs":6,"svgTextPairs":166},
+      {"file":"docs/.vuepress/reader/diagrams/ch07.json","ids":["ch07-dispatch-value","ch07-line-boundary","ch07-context-instances"],"metadataPairs":15,"svgPairs":6,"svgTextPairs":197},
+      {"file":"docs/.vuepress/reader/diagrams/ch08.json","ids":["ch08-edit-burden","ch08-retry-feedback","ch08-semantic-boundary"],"metadataPairs":15,"svgPairs":6,"svgTextPairs":107},
+      {"file":"docs/.vuepress/reader/diagrams/ch09.json","ids":["ch09-cursor-state","ch09-logging-locality"],"metadataPairs":10,"svgPairs":4,"svgTextPairs":101},
+      {"file":"docs/.vuepress/reader/diagrams/ch10.json","ids":["ch10-unset-semantics","ch10-range-overlap","ch10-error-carrier","ch10-mask-obligation"],"metadataPairs":20,"svgPairs":8,"svgTextPairs":181},
+      {"file":"docs/.vuepress/reader/diagrams/ch11.json","ids":["ch11-interface-alternatives"],"metadataPairs":5,"svgPairs":2,"svgTextPairs":86},
+      {"file":"docs/.vuepress/reader/diagrams/ch12.json","ids":["ch12-missing-contract"],"metadataPairs":5,"svgPairs":2,"svgTextPairs":58},
+      {"file":"docs/.vuepress/reader/diagrams/ch13.json","ids":["ch13-padding-information","ch13-length-map","ch13-rpc-intent","ch13-ready-contract"],"metadataPairs":20,"svgPairs":8,"svgTextPairs":168},
+      {"file":"docs/.vuepress/reader/diagrams/ch14.json","ids":["ch14-block-domains","ch14-name-domains"],"metadataPairs":10,"svgPairs":4,"svgTextPairs":68},
+      {"file":"docs/.vuepress/reader/diagrams/ch15.json","ids":["ch15-delay-loop","ch15-design-feedback","ch15-comment-gate"],"metadataPairs":15,"svgPairs":6,"svgTextPairs":124},
+      {"file":"docs/.vuepress/reader/diagrams/ch16.json","ids":["ch16-comment-scope","ch16-single-source"],"metadataPairs":10,"svgPairs":4,"svgTextPairs":72},
+      {"file":"docs/.vuepress/reader/diagrams/ch17.json","ids":["ch17-convention-gate","ch17-trustworthy-patterns"],"metadataPairs":10,"svgPairs":4,"svgTextPairs":63},
+      {"file":"docs/.vuepress/reader/diagrams/ch18.json","ids":["ch18-event-trace","ch18-reader-expectation"],"metadataPairs":10,"svgPairs":4,"svgTextPairs":66},
+      {"file":"docs/.vuepress/reader/diagrams/ch19.json","ids":["ch19-inheritance-dependencies","ch19-abstraction-increment","ch19-regression-witness"],"metadataPairs":15,"svgPairs":6,"svgTextPairs":132},
+      {"file":"docs/.vuepress/reader/diagrams/ch20.json","ids":["ch20-measurement-loop","ch20-critical-path","ch20-state-compression"],"metadataPairs":15,"svgPairs":6,"svgTextPairs":129},
+      {"file":"docs/.vuepress/reader/diagrams/ch21.json","ids":["ch21-exposure-decision"],"metadataPairs":5,"svgPairs":2,"svgTextPairs":58},
+      {"file":"docs/.vuepress/reader/diagrams/ch22.json","ids":["ch22-startup-contract"],"metadataPairs":5,"svgPairs":2,"svgTextPairs":54},
+      {"file":"docs/.vuepress/reader/examples/ch04.json","ids":["ch04-f2","ch04-f3"],"metadataPairs":2,"svgPairs":0,"svgTextPairs":0},
+      {"file":"docs/.vuepress/reader/examples/ch05.json","ids":["ch05-f1","ch05-f2"],"metadataPairs":2,"svgPairs":0,"svgTextPairs":0},
+      {"file":"docs/.vuepress/reader/examples/ch06.json","ids":["ch06-f1","ch06-f2","ch06-f3","ch06-f4","ch06-f5","ch06-f6","ch06-f7","ch06-f8"],"metadataPairs":8,"svgPairs":0,"svgTextPairs":0},
+      {"file":"docs/.vuepress/reader/examples/ch07.json","ids":["ch07-f1"],"metadataPairs":1,"svgPairs":0,"svgTextPairs":0},
+      {"file":"docs/.vuepress/reader/examples/ch09.json","ids":["ch09-f3","ch09-f4"],"metadataPairs":2,"svgPairs":0,"svgTextPairs":0},
+      {"file":"docs/.vuepress/reader/examples/ch10.json","ids":["ch10-f1"],"metadataPairs":1,"svgPairs":0,"svgTextPairs":0},
+      {"file":"docs/.vuepress/reader/examples/ch13.json","ids":["ch13-f2","ch13-f3","ch13-f4","ch13-f5","ch13-f6","ch13-f7","ch13-f8","ch13-f9","ch13-f10","ch13-f11","ch13-f12","ch13-f19","ch13-f20"],"metadataPairs":13,"svgPairs":0,"svgTextPairs":0},
+      {"file":"docs/.vuepress/reader/examples/ch14.json","ids":["ch14-f1","ch14-f2","ch14-f3","ch14-f4","ch14-f5","ch14-f6"],"metadataPairs":6,"svgPairs":0,"svgTextPairs":0},
+      {"file":"docs/.vuepress/reader/examples/ch16.json","ids":["ch16-f1","ch16-f2"],"metadataPairs":2,"svgPairs":0,"svgTextPairs":0},
+      {"file":"docs/.vuepress/reader/examples/ch18.json","ids":["ch18-f1","ch18-f2","ch18-f4","ch18-f5","ch18-f6","ch18-f7","ch18-f8"],"metadataPairs":7,"svgPairs":0,"svgTextPairs":0}
+    ]
+  },
+  "findings": [
+    {
+      "id": "R1",
+      "priority": "P2",
+      "title": "The library rule corrupts repository and inventory nouns",
+      "affectedTextPairs": 17,
+      "why": "The ch17 repository is not a function library, and the ch19 inventory export is not a library-inventory export. The inserted 函式 changes the subjects of these examples and creates malformed nouns. This is not a choice between acceptable regional synonyms.",
+      "cause": "OpenCC emits 倉庫 and 庫存 correctly. bin/tw-terms.tsv:161, re (?<![碼料存產類])庫 -> 函式庫, subsequently matches both. The rule's exclusions do not cover 倉 or the inventory compound.",
+      "evidence": [
+        {
+          "diagramId": "ch17-convention-gate",
+          "sourceExact": "仓库",
+          "generatedExact": "倉函式庫",
+          "suggestedTw": "儲存庫",
+          "locations": [
+            {"file":"docs/.vuepress/reader/diagrams/ch17.json","location":"/0/questionTw"},
+            {"file":"docs/.vuepress/reader/diagrams/ch17.json","location":"/0/answerTw"},
+            {"file":"docs/.vuepress/reader/diagrams/ch17.json","location":"/0/altTw"},
+            {"file":"docs/.vuepress/public/diagrams/ch17-convention-gate-tw.svg","location":"/svg[1]/desc[1]/text()"},
+            {"file":"docs/.vuepress/public/diagrams/ch17-convention-gate-tw.svg","location":"/svg[1]/g[1]/text[11]/text()"},
+            {"file":"docs/.vuepress/public/diagrams/ch17-convention-gate-mobile-tw.svg","location":"/svg[1]/desc[1]/text()"}
+          ]
+        },
+        {
+          "diagramId": "ch19-abstraction-increment",
+          "sourceExact": "库存",
+          "generatedExact": "函式庫存",
+          "suggestedTw": "庫存",
+          "locations": [
+            {"file":"docs/.vuepress/reader/diagrams/ch19.json","location":"/1/questionTw"},
+            {"file":"docs/.vuepress/reader/diagrams/ch19.json","location":"/1/answerTw"},
+            {"file":"docs/.vuepress/reader/diagrams/ch19.json","location":"/1/summaryTw"},
+            {"file":"docs/.vuepress/reader/diagrams/ch19.json","location":"/1/altTw"},
+            {"file":"docs/.vuepress/public/diagrams/ch19-abstraction-increment-tw.svg","location":"/svg[1]/title[1]/text()"},
+            {"file":"docs/.vuepress/public/diagrams/ch19-abstraction-increment-tw.svg","location":"/svg[1]/desc[1]/text()"},
+            {"file":"docs/.vuepress/public/diagrams/ch19-abstraction-increment-tw.svg","location":"/svg[1]/g[1]/text[6]/text()"},
+            {"file":"docs/.vuepress/public/diagrams/ch19-abstraction-increment-tw.svg","location":"/svg[1]/g[1]/text[19]/text()"},
+            {"file":"docs/.vuepress/public/diagrams/ch19-abstraction-increment-mobile-tw.svg","location":"/svg[1]/desc[1]/text()"},
+            {"file":"docs/.vuepress/public/diagrams/ch19-abstraction-increment-mobile-tw.svg","location":"/svg[1]/g[1]/text[11]/text()"},
+            {"file":"docs/.vuepress/public/diagrams/ch19-abstraction-increment-mobile-tw.svg","location":"/svg[1]/g[1]/text[18]/text()"}
+          ],
+          "countNote": "The mobile desc contains two occurrences of 库存; 11 affected inventory text pairs contain 12 malformed inventory nouns."
+        }
+      ],
+      "suggestedNarrowRules": [
+        {"kind":"lit","pattern":"倉函式庫","replacement":"儲存庫"},
+        {"kind":"lit","pattern":"函式庫存匯出","replacement":"庫存匯出"},
+        {"kind":"lit","pattern":"函式庫存欄位","replacement":"庫存欄位"},
+        {"kind":"lit","pattern":"函式庫存輸出","replacement":"庫存輸出"},
+        {"kind":"lit","pattern":"聯絡人、函式庫存、","replacement":"聯絡人、庫存、"},
+        {"kind":"lit","pattern":"函式庫存: if comma(f): quote(f)","replacement":"庫存: if comma(f): quote(f)"}
+      ],
+      "sourceWordingAlternative": "For the repository case only, 代码库 is an unambiguous SC alternative already protected by the existing 程式碼庫 convention. Inventory must retain its inventory meaning.",
+      "regressionChecks": [
+        "Check every listed location, including both 库存 occurrences in the mobile desc.",
+        "Keep 标准库 logging -> 標準函式庫 logging and existing 程式碼庫/資料庫/儲存庫 intact.",
+        "Do not use an unrestricted 函式庫存 -> 庫存 replacement: it could damage a legitimate phrase about a library storing something."
+      ]
+    },
+    {
+      "id": "R2",
+      "priority": "P2",
+      "title": "A storage flush becomes a UI-style refresh",
+      "affectedTextPairs": 1,
+      "why": "The source discusses writing cached data out and the separate guarantees on which a database can rely. 重新整理 selects the refresh sense instead. The existing convention explicitly identifies this flush/refresh ambiguity, but its full-book phrase does not match this new reader answer.",
+      "cause": "OpenCC s2twp.json produces 相關重新整理與持久化保證. The existing narrow rule for 將資料重新整理到輔助儲存 does not apply.",
+      "evidence": [
+        {
+          "diagramId":"ch04-abstraction-filter",
+          "sourceExact":"数据库须知道相关刷新与持久化保证，才能判断何时可依赖崩溃后仍保存的数据。",
+          "generatedExact":"資料庫須知道相關重新整理與持久化保證，才能判斷何時可依賴崩潰後仍儲存的資料。",
+          "suggestedTw":"資料庫須知道相關資料寫出（flush）與持久化保證，才能判斷何時可依賴崩潰後仍儲存的資料。",
+          "locations":[{"file":"docs/.vuepress/reader/diagrams/ch04.json","location":"/0/answerTw"}]
+        }
+      ],
+      "suggestedNarrowRules": [
+        {"kind":"lit","pattern":"相關重新整理與持久化保證","replacement":"相關資料寫出（flush）與持久化保證"}
+      ],
+      "sourceWordingAlternative": "Replace only 相关刷新与持久化保证 with 相关数据写出（flush）与持久化保证 in the SC reader answer.",
+      "regressionChecks": [
+        "Keep the later 只有...時...才可隱藏 condition intact.",
+        "Do not imply that every flush API guarantees durability, and do not globally replace 重新整理."
+      ]
+    },
+    {
+      "id": "R3",
+      "priority": "P2",
+      "title": "The invariant term is split into an apparent unchanging variable",
+      "affectedTextPairs": 4,
+      "why": "Here 不变量 names a condition relating C to buffer state, not a value that stays unchanged. The same source explicitly updates C from 8 to 5. 不變數 is a misleading split of that technical term in this context; 不變條件 preserves the relational meaning without suggesting that C is constant.",
+      "cause": "OpenCC converts 不变量 to 不變數; the current postprocessing has no whole-term exception.",
+      "evidence": [
+        {
+          "diagramId":"ch20-state-compression",
+          "sourceExact":"上部定义不变量：",
+          "generatedExact":"上部定義不變數：",
+          "suggestedTw":"上部定義不變條件：",
+          "locations":[{"file":"docs/.vuepress/public/diagrams/ch20-state-compression-tw.svg","location":"/svg[1]/desc[1]/text()"}]
+        },
+        {
+          "diagramId":"ch20-state-compression",
+          "sourceExact":"完整 Buffer 不变量",
+          "generatedExact":"完整 Buffer 不變數",
+          "suggestedTw":"完整 Buffer 不變條件",
+          "locations":[{"file":"docs/.vuepress/public/diagrams/ch20-state-compression-tw.svg","location":"/svg[1]/g[1]/text[27]/text()"}]
+        },
+        {
+          "diagramId":"ch20-state-compression",
+          "sourceExact":"维护容量不变量后再供每次追加读取",
+          "generatedExact":"維護容量不變數後再供每次追加讀取",
+          "suggestedTw":"維護容量不變條件後再供每次追加讀取",
+          "locations":[{"file":"docs/.vuepress/public/diagrams/ch20-state-compression-mobile-tw.svg","location":"/svg[1]/title[1]/text()"}]
+        },
+        {
+          "diagramId":"ch20-state-compression",
+          "sourceExact":"不变量含义，不是每次重算：",
+          "generatedExact":"不變數含義，不是每次重算：",
+          "suggestedTw":"不變條件含義，不是每次重算：",
+          "locations":[{"file":"docs/.vuepress/public/diagrams/ch20-state-compression-mobile-tw.svg","location":"/svg[1]/g[1]/text[4]/text()"}]
+        }
+      ],
+      "suggestedNarrowRules": [
+        {"kind":"lit","pattern":"上部定義不變數：","replacement":"上部定義不變條件："},
+        {"kind":"lit","pattern":"完整 Buffer 不變數","replacement":"完整 Buffer 不變條件"},
+        {"kind":"lit","pattern":"維護容量不變數後","replacement":"維護容量不變條件後"},
+        {"kind":"lit","pattern":"不變數含義，不是每次重算：","replacement":"不變條件含義，不是每次重算："}
+      ],
+      "sourceWordingAlternative": "In these four reader nodes, use 不变条件（invariant） or 始终须保持的条件 if an explicit source disambiguation is preferable.",
+      "terminologyReference": "oracle-invariants",
+      "regressionChecks": [
+        "Keep C = 8, C = 5 and all positive-size/state-maintenance qualifications unchanged.",
+        "Do not globally replace 變數 or a prefix such as 不變數 that could occur inside 不變數值.",
+        "This terminology finding does not establish that the depicted Buffer invariant is complete or correctly implemented."
+      ]
+    },
+    {
+      "id": "R4",
+      "priority": "P2",
+      "title": "Returning to a workflow step becomes returning a data value",
+      "affectedTextPairs": 6,
+      "why": "These six uses of 返回 describe revisiting a step or routing back to an encoder. 回傳 instead suggests sending back a task, an interface description, a check, or an encoder as a result. The ch19 desc is especially misleading because the source routes input to the same encoder; it does not return an encoder object.",
+      "cause": "bin/tw-terms.tsv:226 applies the unconditional 返回 -> 回傳 rule to non-function-return prose.",
+      "evidence": [
+        {
+          "diagramId":"ch03-patch-cycle",
+          "sourceExact":"右侧回路返回赶任务",
+          "generatedExact":"右側迴路回傳趕任務",
+          "suggestedTw":"右側迴路回到趕任務",
+          "locations":[{"file":"docs/.vuepress/public/diagrams/ch03-patch-cycle-mobile-tw.svg","location":"/svg[1]/desc[1]/text()"}]
+        },
+        {
+          "diagramId":"ch15-design-feedback",
+          "sourceExact":"通过回箭头返回接口说明",
+          "generatedExact":"透過回箭頭回傳介面說明",
+          "suggestedTw":"透過回箭頭回到介面說明",
+          "locations":[{"file":"docs/.vuepress/reader/diagrams/ch15.json","location":"/1/altTw"}]
+        },
+        {
+          "diagramId":"ch15-design-feedback",
+          "sourceExact":"问题可返回接口说明",
+          "generatedExact":"問題可回傳介面說明",
+          "suggestedTw":"問題可回到介面說明",
+          "locations":[{"file":"docs/.vuepress/public/diagrams/ch15-design-feedback-tw.svg","location":"/svg[1]/desc[1]/text()"}]
+        },
+        {
+          "diagramId":"ch17-convention-gate",
+          "sourceExact":"LF 后返回检查",
+          "generatedExact":"LF 後回傳檢查",
+          "suggestedTw":"LF 後回到檢查",
+          "locations":[{"file":"docs/.vuepress/reader/diagrams/ch17.json","location":"/0/altTw"}]
+        },
+        {
+          "diagramId":"ch17-convention-gate",
+          "sourceExact":"再返回检查",
+          "generatedExact":"再回傳檢查",
+          "suggestedTw":"再回到檢查",
+          "locations":[{"file":"docs/.vuepress/public/diagrams/ch17-convention-gate-tw.svg","location":"/svg[1]/desc[1]/text()"}]
+        },
+        {
+          "diagramId":"ch19-abstraction-increment",
+          "sourceExact":"返回同一编码器",
+          "generatedExact":"回傳同一編碼器",
+          "suggestedTw":"回到同一編碼器",
+          "locations":[{"file":"docs/.vuepress/public/diagrams/ch19-abstraction-increment-mobile-tw.svg","location":"/svg[1]/desc[1]/text()"}]
+        }
+      ],
+      "suggestedNarrowRules": [
+        {"kind":"lit","pattern":"右側迴路回傳趕任務","replacement":"右側迴路回到趕任務"},
+        {"kind":"lit","pattern":"透過回箭頭回傳介面說明","replacement":"透過回箭頭回到介面說明"},
+        {"kind":"lit","pattern":"問題可回傳介面說明","replacement":"問題可回到介面說明"},
+        {"kind":"lit","pattern":"LF 後回傳檢查","replacement":"LF 後回到檢查"},
+        {"kind":"lit","pattern":"再回傳檢查","replacement":"再回到檢查"},
+        {"kind":"lit","pattern":"回傳同一編碼器","replacement":"回到同一編碼器"}
+      ],
+      "sourceWordingAlternative": "Prefer 回到 for these workflow uses only. For the awkward ch15 source clause, 问题可促使重新检查接口说明 makes the intended feedback step explicit without a broad conversion exception.",
+      "regressionChecks": [
+        "Retain actual result-return terminology, including 返回 C, 返回 None, 返回值 and 返回对象.",
+        "Do not change main 回傳 solely as a stylistic preference; this finding is confined to the six non-function-return contexts."
+      ]
+    },
+    {
+      "id": "R5",
+      "priority": "P2",
+      "title": "Evidence supporting a conclusion becomes feature support",
+      "affectedTextPairs": 4,
+      "why": "The source describes evidence for a judgment, not providing operational support for a capability. 支援介面簡單的判斷 and 支援覆蓋這一條迴歸 select the wrong support sense. This weakens the distinction between observations supporting coverage and a system supporting test coverage; the explicit non-proof qualifications must remain.",
+      "cause": "OpenCC maps 支持 to 支援 without separating evidential support from feature support.",
+      "evidence": [
+        {
+          "diagramId":"ch15-comment-gate",
+          "sourceExact":"说明支持接口简单的判断",
+          "generatedExact":"說明支援介面簡單的判斷",
+          "suggestedTw":"說明支持介面簡單的判斷",
+          "locations":[{"file":"docs/.vuepress/reader/diagrams/ch15.json","location":"/2/answerTw"}]
+        },
+        {
+          "diagramId":"ch19-regression-witness",
+          "sourceExact":"这支持测试覆盖了该回归，而不证明全部正确。",
+          "generatedExact":"這支援測試覆蓋了該回歸，而不證明全部正確。",
+          "suggestedTw":"這支持測試覆蓋了該回歸，而不證明全部正確。",
+          "locations":[{"file":"docs/.vuepress/reader/diagrams/ch19.json","location":"/2/answerTw"}]
+        },
+        {
+          "diagramId":"ch19-regression-witness",
+          "sourceExact":"支持覆盖了这条回归；无关的失败不能算作左边的证据。",
+          "generatedExact":"支援覆蓋了這條迴歸；無關的失敗不能算作左邊的證據。",
+          "suggestedTw":"支持覆蓋了這條迴歸；無關的失敗不能算作左邊的證據。",
+          "locations":[{"file":"docs/.vuepress/public/diagrams/ch19-regression-witness-tw.svg","location":"/svg[1]/g[1]/text[10]/text()"}]
+        },
+        {
+          "diagramId":"ch19-regression-witness",
+          "sourceExact":"支持覆盖这一条回归",
+          "generatedExact":"支援覆蓋這一條迴歸",
+          "suggestedTw":"支持覆蓋這一條迴歸",
+          "locations":[{"file":"docs/.vuepress/public/diagrams/ch19-regression-witness-mobile-tw.svg","location":"/svg[1]/g[1]/text[12]/text()"}]
+        }
+      ],
+      "suggestedNarrowRules": [
+        {"kind":"lit","pattern":"說明支援介面簡單的判斷","replacement":"說明支持介面簡單的判斷"},
+        {"kind":"lit","pattern":"這支援測試覆蓋了該回歸","replacement":"這支持測試覆蓋了該回歸"},
+        {"kind":"lit","pattern":"支援覆蓋了這條迴歸","replacement":"支持覆蓋了這條迴歸"},
+        {"kind":"lit","pattern":"支援覆蓋這一條迴歸","replacement":"支持覆蓋這一條迴歸"}
+      ],
+      "sourceWordingAlternative": "Use 为...提供证据 or 为...判断提供依据 in these SC evidence statements. Do not replace them with 证明.",
+      "regressionChecks": [
+        "Preserve 不證明全部正確, the same-test requirement and the exclusion of unrelated failures.",
+        "Keep ch10-f1 不支持的 pickle 协议 -> 不支援的 pickle 協議.",
+        "No blanket 支援 -> 支持 rule; broader enabling/support wording elsewhere is not reported solely for preference."
+      ]
+    },
+    {
+      "id": "R6",
+      "priority": "P2",
+      "title": "A separate ch13 condition-pass context still becomes through",
+      "affectedTextPairs": 1,
+      "why": "前三项通过 means that the first three conditions passed or were satisfied. 前三項透過 loses that predicate and reads as an incomplete through construction. The separate maxPos gate and the non-success qualification are present, but this concluding distinction is mistranslated.",
+      "cause": "bin/tw-terms.tsv:191 changes 通過 to 透過 here. The new ch19-specific exceptions do not and should not incidentally match this different phrase.",
+      "evidence": [
+        {
+          "diagramId":"ch13-rpc-intent",
+          "sourceExact":"也不把前三项通过画成已追加成功。",
+          "generatedExact":"也不把前三項透過畫成已追加成功。",
+          "suggestedTw":"也不把前三項通過畫成已追加成功。",
+          "locations":[{"file":"docs/.vuepress/reader/diagrams/ch13.json","location":"/2/altTw"}]
+        }
+      ],
+      "suggestedNarrowRules": [
+        {"kind":"lit","pattern":"前三項透過畫成已追加成功","replacement":"前三項通過畫成已追加成功"}
+      ],
+      "sourceWordingAlternative": "Use 也不把前三项均满足画成已追加成功, consistent with the SVG's existing 前三项均满足 wording.",
+      "regressionChecks": [
+        "Add this exact SC sentence to the narrow regression cases.",
+        "Retain 通过接口读取 -> 透過介面讀取 and all current ch19 pass/through tests.",
+        "Do not turn this into a broad exception for every occurrence preceded by 項 or 條件."
+      ]
+    },
+    {
+      "id": "R9",
+      "priority": "P2",
+      "title": "Joining output fields becomes connecting fields",
+      "affectedTextPairs": 1,
+      "why": "The source describes constructing one output string with comma separators. 用逗號連線欄位 selects the connection sense rather than string concatenation. The neighboring emitted CSV-like string makes the required sense explicit; this is not a request to rename graphical connection lines elsewhere.",
+      "cause": "OpenCC maps 连接 to 連線 without accounting for the string-joining context.",
+      "evidence": [
+        {
+          "diagramId":"ch19-abstraction-increment",
+          "sourceExact":"再用逗号连接字段。",
+          "generatedExact":"再用逗號連線欄位。",
+          "suggestedTw":"再用逗號串接欄位。",
+          "locations":[{"file":"docs/.vuepress/public/diagrams/ch19-abstraction-increment-tw.svg","location":"/svg[1]/desc[1]/text()"}]
+        }
+      ],
+      "suggestedNarrowRules": [
+        {"kind":"lit","pattern":"用逗號連線欄位","replacement":"用逗號串接欄位"}
+      ],
+      "sourceWordingAlternative": "Use 再用逗号分隔并拼接字段 in this SC desc.",
+      "terminologyReference": "microsoft-string-concatenation",
+      "regressionChecks": [
+        "Preserve emitRow, the quoted output strings and the limited-character/not-complete-CSV qualifications.",
+        "Do not change 連線 in network or actual diagram-line contexts."
+      ]
+    },
+    {
+      "id": "R7",
+      "priority": "P3",
+      "title": "The copy noun is misspelled as 覆制 in a visible title",
+      "affectedTextPairs": 1,
+      "why": "覆制 is not the intended copy operation. The project explicitly normalizes copy to 複製, and the other reader strings about these copies already use 複製. This is a segmentation-induced wrong character, not a terminology preference.",
+      "cause": "OpenCC emits 說明覆制與引用. Existing 復制/複制 corrections do not cover 覆制.",
+      "evidence": [
+        {
+          "diagramId":"ch16-single-source",
+          "sourceExact":"说明复制与引用，失效方式不同",
+          "generatedExact":"說明覆制與引用，失效方式不同",
+          "suggestedTw":"說明複製與引用，失效方式不同",
+          "locations":[{"file":"docs/.vuepress/reader/diagrams/ch16.json","location":"/1/titleTw"}]
+        }
+      ],
+      "suggestedNarrowRules": [
+        {"kind":"lit","pattern":"說明覆制與引用","replacement":"說明複製與引用"}
+      ],
+      "regressionChecks": [
+        "Check the complete title, not only conversion of isolated 复制.",
+        "Do not globally change 覆; legitimate 覆蓋 must remain."
+      ]
+    },
+    {
+      "id": "R8",
+      "priority": "P3",
+      "title": "并 is resolved to the wrong character in two explicit contexts",
+      "affectedTextPairs": 3,
+      "why": "The first clause coordinates satisfying a postcondition and succeeding; 併 incorrectly introduces the merge character. The other two labels explicitly prohibit merging messages, but spell that verb 合並 instead of 合併. Negation is not lost, and these are lower-priority orthographic defects rather than a claim that the diagrams reverse their outcomes.",
+      "cause": "Both forms are reproduced directly by OpenCC 1.4.1 on the full source phrases.",
+      "evidence": [
+        {
+          "diagramId":"ch10-unset-semantics",
+          "sourceExact":"同一个后置条件并成功",
+          "generatedExact":"同一個後置條件併成功",
+          "suggestedTw":"同一個後置條件並成功",
+          "locations":[{"file":"docs/.vuepress/public/diagrams/ch10-unset-semantics-tw.svg","location":"/svg[1]/desc[1]/text()"}]
+        },
+        {
+          "diagramId":"ch10-error-carrier",
+          "sourceExact":"不合并两条消息",
+          "generatedExact":"不合並兩條訊息",
+          "suggestedTw":"不合併兩條訊息",
+          "locations":[
+            {"file":"docs/.vuepress/public/diagrams/ch10-error-carrier-tw.svg","location":"/svg[1]/g[1]/text[2]/text()"},
+            {"file":"docs/.vuepress/public/diagrams/ch10-error-carrier-mobile-tw.svg","location":"/svg[1]/g[1]/text[2]/text()"}
+          ]
+        }
+      ],
+      "suggestedNarrowRules": [
+        {"kind":"lit","pattern":"後置條件併成功","replacement":"後置條件並成功"},
+        {"kind":"lit","pattern":"不合並兩條訊息","replacement":"不合併兩條訊息"}
+      ],
+      "regressionChecks": [
+        "Do not normalize every 並/併 occurrence.",
+        "Preserve the distinction between two independent responses and one merged response, and retain 不."
+      ]
+    }
+  ],
+  "verification": {
+    "openccVersion": "1.4.1",
+    "converterConfig": "s2twp.json",
+    "commandsRun": [
+      {
+        "command": "/tmp/aposd2e-polish.GHV1eo/venv/bin/python -B -m unittest discover -s review/reader -p test_localize.py -v",
+        "result": "PASS: 2 tests, including the 8 existing pass/through subcases and the SVG identifier/geometry fixture."
+      },
+      {
+        "command": "/tmp/aposd2e-polish.GHV1eo/venv/bin/python -B review/reader/localize.py --check",
+        "result": "PASS: Checked 132 localized assets/metadata files. Check mode only."
+      }
+    ],
+    "structuredComparisons": {
+      "missingPairs": 0,
+      "svgTreeOrAttributeMismatches": 0,
+      "svgProtectedTextMismatches": 0,
+      "localizedTextOrSerializedSvgMismatchesAgainstPipeline": 0,
+      "asciiTokenSequenceMismatchesAcrossAllTextPairs": 0,
+      "asciiTokenDefinition": "Ordered maximal runs matching [\\x21-\\x7E]+, compared before and after conversion; includes Latin identifiers, numeric literals and ASCII code punctuation.",
+      "geometryClaimBoundary": "Equal parsed SVG element trees and attributes establish that the conversion did not alter stored geometry or identifiers. They do not establish legibility, absence of rendered overlap, explanatory accuracy or screenshot approval.",
+      "metadataIdentifierBoundary": "SC and TW fields coexist in one metadata object. IDs, anchors and code fields were not rewritten by this review; raw file hashes bind the snapshot. No unavailable pre-generation metadata baseline is claimed."
+    },
+    "snapshotDriftBeforeReportWrite": [],
+    "reportValidation": {
+      "jsonParsed": true,
+      "coverageEntriesMatchedFreshStructuredInventory": 32,
+      "sourceHashesMatched": 137,
+      "allReviewedArtifactsUnchangedAtFinalReadback": 237,
+      "exactFindingLocationsValidated": 38,
+      "distinctFindingTextPairsValidated": 34,
+      "proposedLiteralRulesSimulatedInMemory": 26,
+      "textPairsCheckedAgainstProposals": 2589,
+      "textPairsChangedByProposals": 34,
+      "unreportedTextPairsChanged": 0,
+      "unmatchedProposedRules": 0,
+      "unresolvedSuggestedFragments": 0,
+      "limitations": "Proposal simulation used only the current reader text corpus, without writing or regenerating assets. It is not a full-book rule regression check or a rendered-layout check."
+    },
+    "proposedRulesAppliedToRepository": false,
+    "buildsRun": false,
+    "screenshotsTaken": false,
+    "readerExperimentsRun": false
+  },
+  "nonFindingsAndBoundaries": [
+    "The existing ch19 pass/through repair is verified on this snapshot, not re-reported.",
+    "All 44 noteTw pairs retain their source qualifications, including placeholder behavior, trusted pickle data, non-equivalence to Java/C++, omitted implementations and lack of runtime guarantees. This is translation fidelity only, not an audit of the examples.",
+    "No preference-only findings for established choices such as 型別, 對映, 參數, 缺陷, 程式碼, 區域性, 字首/字尾, 回撥 or other comprehensible existing regional vocabulary.",
+    "The inherited SC wording, SC concept accuracy, code behavior and old full-book TW translation were not re-reviewed.",
+    "English/code tokens, formula values and SVG attributes matched in all extracted pairs. Metadata IDs and geometry must remain untouched when the main process applies any wording corrections.",
+    "Global postprocessing rules also affect content outside this review. Proposed late phrase corrections minimize scope but still require the main process to inspect the full regeneration diff and run its integration checks.",
+    "Hashes identify the exact reviewed files. A later regeneration or source edit requires a new check; this verdict must not be transferred to unreviewed bytes."
+  ],
+  "terminologyReferences": [
+    {
+      "id": "oracle-invariants",
+      "publisher": "Oracle",
+      "title": "Programming With Assertions: Internal Invariants and Class Invariants",
+      "url": "https://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html",
+      "use": "Primary definition of invariants as conditions/predicates over program state. Used only to disambiguate R3, not to prescribe a universal Chinese glossary or validate Buffer behavior."
+    },
+    {
+      "id": "microsoft-string-concatenation",
+      "publisher": "Microsoft Learn",
+      "title": "String concatenation (Visual C#)",
+      "url": "https://learn.microsoft.com/zh-tw/dotnet/csharp/how-to/concatenate-multiple-strings",
+      "use": "Uses 串連/串接 for string concatenation and describes joining strings with separators. Supports the term distinction in R9, not the completeness of the CSV-like example."
+    }
+  ],
+  "snapshotIdentity": {
+    "algorithm": "SHA-256 of raw file bytes",
+    "sourceFileCount": 137,
+    "sourceFileComposition": "100 SC SVGs + 32 JSON files containing both source and generated fields + 5 converter/config/test inputs.",
+    "generatedSvgCount": 100,
+    "allReviewedArtifactCount": 237,
+    "setDigestEncoding": "Sort repository-relative ASCII paths in ordinal order. Concatenate each file's lowercase SHA-256, two ASCII spaces, its path, and LF; SHA-256 the UTF-8 result. Generated set contains the 100 paired *-tw.svg files. All-artifact set additionally contains every sourceFileHashes entry. The report itself is excluded.",
+    "allReviewedArtifactsSha256": "0df4be5c93f11e26527172eb37c3af0459390930cf08958de6924250556be685",
+    "generatedSvgSetSha256": "cb458271125253321019fe103a761f5d2211b783017576725ff0c312c706edfb",
+    "sourceFileHashes": {
+      "bin/tw-terms.tsv": "412dca2b6e8715f7a654ffc39891cdeccbe5929ce5d8d78e5351face35587458",
+      "bin/zh-tw.py": "57d0379526165712020d68771e919feb3e847675d07895cbdc6165863e2c1d44",
+      "docs/.vuepress/public/diagrams/ch01-two-levers-mobile.svg": "c994e2fac33e0927800b8961a3f2c695b881024e17d68bf1d94084c9b144686e",
+      "docs/.vuepress/public/diagrams/ch01-two-levers.svg": "18743dd680a4e3cb1417005e8f9248f0566148dbb8250fe7afe184ea88c8399b",
+      "docs/.vuepress/public/diagrams/ch02-cause-symptom-mobile.svg": "c0aa82dddd5a9c0034e62d2d0c21846984f33f352842206a0143e5d697d9553c",
+      "docs/.vuepress/public/diagrams/ch02-cause-symptom.svg": "43f9e4441163fb715cb9eaccbb39c3d2ec6c8d9ff6c51c8e4ccf2a19b08fd4ef",
+      "docs/.vuepress/public/diagrams/ch02-memory-owner-mobile.svg": "b10ea4d99357e82704e54dfe42a2bb5885d9ef7fac6bf446764c0159fdcf7076",
+      "docs/.vuepress/public/diagrams/ch02-memory-owner.svg": "44f789b633abe30dafb20e45eb4d90abdab88a76add8eff97dfef7147fcb4be9",
+      "docs/.vuepress/public/diagrams/ch02-weighted-work-mobile.svg": "eff9e05d8afbff8abdafea5ca38b9f1728666d699c50cd7e5cc05b653f3d3e9a",
+      "docs/.vuepress/public/diagrams/ch02-weighted-work.svg": "8a42e5c5e0f60bc33702568c2aaecd4ee00a7287fb73d99b49f3e326bc49fb9b",
+      "docs/.vuepress/public/diagrams/ch03-patch-cycle-mobile.svg": "e03d9f8dc738251efb06aa87f42211d11169cbb674d3147b7393ef6364edc709",
+      "docs/.vuepress/public/diagrams/ch03-patch-cycle.svg": "aa51c64dc8a08c0f99e829424a362adcc68a687df011beeef9ec068cd422b315",
+      "docs/.vuepress/public/diagrams/ch04-abstraction-filter-mobile.svg": "81d6817536b240593af7d586a7f33be551ad55e48bef18064e493287370056c3",
+      "docs/.vuepress/public/diagrams/ch04-abstraction-filter.svg": "61b1ad6cfc6ca5fae4790c0981e3ce2f6d9d9e1824a0ab0e3dc948534f72e401",
+      "docs/.vuepress/public/diagrams/ch04-common-path-mobile.svg": "8c3d6f36ed0908d68492f3b916a5eebdba62f2084a52b5238df9c496c7ed9220",
+      "docs/.vuepress/public/diagrams/ch04-common-path.svg": "90720488677cb91de3a716ee556c177e382952ccc61576d2682f9ae5fb422829",
+      "docs/.vuepress/public/diagrams/ch05-format-ownership-mobile.svg": "8b4d2d309a4a8909abbc3860da8c02a35ec062e970ef1dd8cdf158f116165ae1",
+      "docs/.vuepress/public/diagrams/ch05-format-ownership.svg": "e21eb55dbf1bdbfd2510c2dd765f1bd18a17541520ebe9617f93028c75c93754",
+      "docs/.vuepress/public/diagrams/ch05-http-read-mobile.svg": "381d2733a832fcfde3f24fdd7a9537120609ba13900241855d15b08c752ce635",
+      "docs/.vuepress/public/diagrams/ch05-http-read.svg": "0d541370097c0006086c309bc35c485862ef6fe1e9159bc289f1b46aafffbe89",
+      "docs/.vuepress/public/diagrams/ch05-parameter-boundary-mobile.svg": "a52d7ddc3b85bdfc2187674a9c2c6a823f0dd238a608d00534fa29d65dcfc888",
+      "docs/.vuepress/public/diagrams/ch05-parameter-boundary.svg": "3ec41179e034cf4cee716ef1b9057a09025d81dd9dff40818975b96fb04323e3",
+      "docs/.vuepress/public/diagrams/ch06-empty-selection-mobile.svg": "963cd80ee7062cadec10be253e27233822e8fd6a3d6daacb2b3ff728d6283fcc",
+      "docs/.vuepress/public/diagrams/ch06-empty-selection.svg": "0a119997b010dadb641cc59a2494e187fb85d19be578d94ec47529cc5290684e",
+      "docs/.vuepress/public/diagrams/ch06-history-boundary-mobile.svg": "bbd770953d7ca090492162d4648af909a6c604ab3fd1263eab0c7aa2bb2ab6cc",
+      "docs/.vuepress/public/diagrams/ch06-history-boundary.svg": "ac9f34fe98ccc89f773ff7c08a098f525fa8ab92b2cd8a49d9b84a835338a4e6",
+      "docs/.vuepress/public/diagrams/ch06-range-api-mobile.svg": "915aa5fe8548dacdcfc507bcde988a2ae589210e93c63e6e06b7e0b68034f305",
+      "docs/.vuepress/public/diagrams/ch06-range-api.svg": "5da5e378557c0b3c21dfda5a9881a4574312bbd6ddb3a7a66ff1d659ea9c3207",
+      "docs/.vuepress/public/diagrams/ch07-context-instances-mobile.svg": "ebfd1f601d9bdb47448426c3406d6e09c8aa56cf14720dd2855e9df6c2f465ac",
+      "docs/.vuepress/public/diagrams/ch07-context-instances.svg": "0f605d03dd033e940958a666d5a6a2919df285c65665a5bb2de65b6696a55937",
+      "docs/.vuepress/public/diagrams/ch07-dispatch-value-mobile.svg": "3bebeb4733c070a95f9e28edfb88a68438b92f4969d7a8d7087cd048b4c0b488",
+      "docs/.vuepress/public/diagrams/ch07-dispatch-value.svg": "8675e659c2a251f572ed86dc6b9dbe0efbdcad43944be28df35d4dab077bdfb2",
+      "docs/.vuepress/public/diagrams/ch07-line-boundary-mobile.svg": "39ef47db1c8525d8cfcf55228723877283031406bbe090ab1ec6e0ef4d362eb1",
+      "docs/.vuepress/public/diagrams/ch07-line-boundary.svg": "b832217fa5a927d188350e7cc2789acccdddce20c7a111fe6daeff4bbd1d9bcb",
+      "docs/.vuepress/public/diagrams/ch08-edit-burden-mobile.svg": "8e77ade6ad0ce52bdd1ff38a74498123320cba4c666cd9cd68e0213286bf625e",
+      "docs/.vuepress/public/diagrams/ch08-edit-burden.svg": "b05a55a40b0753695e6d0096ed92f7a7ebd4474be13cacdaa61db65417e1587c",
+      "docs/.vuepress/public/diagrams/ch08-retry-feedback-mobile.svg": "822a252c6d0c79bf730d8be5c13a90a0f946d7c9d6d951465c2d8f46adf57c60",
+      "docs/.vuepress/public/diagrams/ch08-retry-feedback.svg": "eeca8377a859fed1d24c64dd77c9dbb497c5932104403339ed2572b724fc12c0",
+      "docs/.vuepress/public/diagrams/ch08-semantic-boundary-mobile.svg": "8c89058cb4fb970806c9d4690c2d439408e3d4dcd1c7be5acf16c5c02e7be5d5",
+      "docs/.vuepress/public/diagrams/ch08-semantic-boundary.svg": "15f686a9992170a5217e89e94e1670c0380506d3c423c5d9c3ed29ecb6b1fa2a",
+      "docs/.vuepress/public/diagrams/ch09-cursor-state-mobile.svg": "c6f117d665b949a9dde8d59c0c61ffac3c6bb3e50907c22252bd62305e968ee6",
+      "docs/.vuepress/public/diagrams/ch09-cursor-state.svg": "99c4196af4af575705684849e54af6f799559f4338491956325153cf13613d90",
+      "docs/.vuepress/public/diagrams/ch09-logging-locality-mobile.svg": "206279a9c4b21ffdce112f380a0ccb45f6be0167307a84817a1be4bfaa6d24f1",
+      "docs/.vuepress/public/diagrams/ch09-logging-locality.svg": "d5868115c4b61bcef72944af5117dae3ec63e7d272b534bd95b0581188d39de7",
+      "docs/.vuepress/public/diagrams/ch10-error-carrier-mobile.svg": "481379591427c3edc64a8888a29f23a2db25584819c2948356b83c13e8cb5a59",
+      "docs/.vuepress/public/diagrams/ch10-error-carrier.svg": "079a9da3477bb6ed355a84631c2e9b357b7931e343359e390a1612bcea8ddd20",
+      "docs/.vuepress/public/diagrams/ch10-mask-obligation-mobile.svg": "bf06fd839bcddf53eef2e59be20ff257f60b4223e56a95213fc27c14b54fd6c5",
+      "docs/.vuepress/public/diagrams/ch10-mask-obligation.svg": "7afbf98887647cb7c94641e1f686421a82901f4d3522c4281c681937f3965b14",
+      "docs/.vuepress/public/diagrams/ch10-range-overlap-mobile.svg": "77e42bcfa780e99ea3230cd546a531915de38952e461c23cad226c4569cfdd1f",
+      "docs/.vuepress/public/diagrams/ch10-range-overlap.svg": "a6332a06e7f95cca17fb93d93268c1f6005a10820f7353865581032bd67450d0",
+      "docs/.vuepress/public/diagrams/ch10-unset-semantics-mobile.svg": "330121be6fbaf94bbd0e154cfbe99f858a35ae980252e42d2b2bb07d29f76e6d",
+      "docs/.vuepress/public/diagrams/ch10-unset-semantics.svg": "a7bf70a6a04be488395a4f3779602a8d1691ba57fb804d7fbff5e23a4c802abd",
+      "docs/.vuepress/public/diagrams/ch11-interface-alternatives-mobile.svg": "1c01de19472276afdba7db4feab23b3d00630735ea3373fe07f1327ccabfe2ec",
+      "docs/.vuepress/public/diagrams/ch11-interface-alternatives.svg": "3d4b105e0010e695deef852e44cb9caee67fc95bc27bfbfb71254de347964e86",
+      "docs/.vuepress/public/diagrams/ch12-missing-contract-mobile.svg": "28ebae08e6068062f51bcffe0833e398cc67cfde35d45e36dba14e4a29b6dd20",
+      "docs/.vuepress/public/diagrams/ch12-missing-contract.svg": "fa22b6b150c5e70271396555c53084a38d2118bf408dcb3736452dfcc0ae5338",
+      "docs/.vuepress/public/diagrams/ch13-length-map-mobile.svg": "b5d5f2307a7e4aca89663fef1e13d19401016317b86c10445a793d994f177d19",
+      "docs/.vuepress/public/diagrams/ch13-length-map.svg": "0c7b5cddc21689073b8878679d754b44851591bfc60098fb510b7e868e6b2741",
+      "docs/.vuepress/public/diagrams/ch13-padding-information-mobile.svg": "efcb215d0ceaace1e28d5d1643b41f8453c010276fc3873d3d2b27bf694393c8",
+      "docs/.vuepress/public/diagrams/ch13-padding-information.svg": "6858dca88eed0abedb01e44b71fef8cc5ccba3da82e047b730161a431cf872c4",
+      "docs/.vuepress/public/diagrams/ch13-ready-contract-mobile.svg": "69805786ec3586a88161844dc644f4061a5482179405a73d578eb8953a1f9492",
+      "docs/.vuepress/public/diagrams/ch13-ready-contract.svg": "ec271825bc1dc169d31186107c881d21d1e508957c307bc2e11b116c94d930d1",
+      "docs/.vuepress/public/diagrams/ch13-rpc-intent-mobile.svg": "3d5dc2cf4bcca80113d0364cb8fe91611192ce161ab22412341ce2a5b870c6fa",
+      "docs/.vuepress/public/diagrams/ch13-rpc-intent.svg": "6eb2f88445b3e25496b171dae16c37311b6dddd5091ebd88cdf6a5b0db366508",
+      "docs/.vuepress/public/diagrams/ch14-block-domains-mobile.svg": "45b487e8b8126fd8a83015a66dd78d6000747d072f3574d70f23c2ddc234bb1e",
+      "docs/.vuepress/public/diagrams/ch14-block-domains.svg": "980be5da23dbad772532d29496b2669b4e82f38a0a7ca4203ee199ac6d9d12e2",
+      "docs/.vuepress/public/diagrams/ch14-name-domains-mobile.svg": "dce1aace7b7703ae01382a81ff2b051d14208fc7eed25fde6156befe0aaae009",
+      "docs/.vuepress/public/diagrams/ch14-name-domains.svg": "46151f8fc29b22e93a25f91b2378ade986526d21e78040b79df8e399b9683024",
+      "docs/.vuepress/public/diagrams/ch15-comment-gate-mobile.svg": "a5b7fe3039fca63741d13e247ef9822731bd95944e499f3294aa95370d6831ec",
+      "docs/.vuepress/public/diagrams/ch15-comment-gate.svg": "55d5096a6d6b796caa1049bb5d068be3087b5268e3d01aca8ba1c64c2759c000",
+      "docs/.vuepress/public/diagrams/ch15-delay-loop-mobile.svg": "a0b51a3fdf77022ff6b04c2c154831ee75c5d89eea7301b0057f10a60304e1b3",
+      "docs/.vuepress/public/diagrams/ch15-delay-loop.svg": "620e8555dfbd9971d8a28d446deadd05091ea69cec71314872d73e1862b271be",
+      "docs/.vuepress/public/diagrams/ch15-design-feedback-mobile.svg": "d8b8b23b2c3af591d7f11ff975317e3651fad066118833c5816e36cc4343e93a",
+      "docs/.vuepress/public/diagrams/ch15-design-feedback.svg": "654693fd94c01f5b5a794fadc9ed5dd50ed11aaa3762a09ae32b6869b31d2c95",
+      "docs/.vuepress/public/diagrams/ch16-comment-scope-mobile.svg": "0e14ebabe1d7775bb31761829c9f6354b7b1ebb0343fa52fbe0f0a9cf389503d",
+      "docs/.vuepress/public/diagrams/ch16-comment-scope.svg": "5fc580c54e0bb3b167f915a3878d89f8577e194d98e6abbbe0d852fa7b612ac1",
+      "docs/.vuepress/public/diagrams/ch16-single-source-mobile.svg": "a4af37e76186edc410cd2e8103edfc617836640f74187a27188aa8a3d2945227",
+      "docs/.vuepress/public/diagrams/ch16-single-source.svg": "604dc9b5bee2df1ffbfccae3a8a9ee9f2e9d93a943a77cc73be5d0175466f5ca",
+      "docs/.vuepress/public/diagrams/ch17-convention-gate-mobile.svg": "24eedd6373f63558d7865e6dbcd82d4e2af5833f94bf3a5a584f5b07e3af38ee",
+      "docs/.vuepress/public/diagrams/ch17-convention-gate.svg": "06010587ab094850b04ea2300b6a443778110ce4f55784b824e690f0fe501b93",
+      "docs/.vuepress/public/diagrams/ch17-trustworthy-patterns-mobile.svg": "06475dba89060e78598b388a2bc2c7a57a204431c5f783accfb10a860ca5d0a3",
+      "docs/.vuepress/public/diagrams/ch17-trustworthy-patterns.svg": "403dc320b6d135094dc6ac63390e7b1d851bede3157f9912cd278cb0184f900b",
+      "docs/.vuepress/public/diagrams/ch18-event-trace-mobile.svg": "b4a028150c4eab572d3b5a253610c8a6b1af111831b022d3118feb1a4f1bb157",
+      "docs/.vuepress/public/diagrams/ch18-event-trace.svg": "905e33cc0618d98d3bca93edefbf4704c2392db2092b8d8674dd11c8d5b1aca1",
+      "docs/.vuepress/public/diagrams/ch18-reader-expectation-mobile.svg": "3eeed9d234b94c83bdfcfa546a04016ee9edddde7ec1a0af4d554ca7409cf016",
+      "docs/.vuepress/public/diagrams/ch18-reader-expectation.svg": "3bc07003cd4d805ee37a92e98585330d81efdeb5db6808779ebe5fbd6d025115",
+      "docs/.vuepress/public/diagrams/ch19-abstraction-increment-mobile.svg": "ceeab0915e4f303f25e7077971ef349475eb7e3c8606914c01d5a248df3ca6ea",
+      "docs/.vuepress/public/diagrams/ch19-abstraction-increment.svg": "dbc338917df0b1ef1541358d86c6a317e442c5949c9eb1e1db750cca05208011",
+      "docs/.vuepress/public/diagrams/ch19-inheritance-dependencies-mobile.svg": "a66ec9a8588168b3361fd8b1b3c7fdb18e9f4de60b583e6762e3609c0a83925c",
+      "docs/.vuepress/public/diagrams/ch19-inheritance-dependencies.svg": "6295d17b47ca1c561b1549c3ef3f73bd06832bc992e4bb5e3a8e0e4d2721ddaa",
+      "docs/.vuepress/public/diagrams/ch19-regression-witness-mobile.svg": "0f0732366de38b0963cdbb7fde500e26583deee7e1ca83966074e20645a9a152",
+      "docs/.vuepress/public/diagrams/ch19-regression-witness.svg": "a2db7baedb281d3f0f01d8e652e6508fb58a068faf2e2d68cfa79d2851c57926",
+      "docs/.vuepress/public/diagrams/ch20-critical-path-mobile.svg": "0f85da2da4e9063fcf9384da1683fbc1aad66fa6c2e767708716edbf7bd93c0b",
+      "docs/.vuepress/public/diagrams/ch20-critical-path.svg": "f8b62a22e932c7077f01458e7fa4344fb80bca638d61849e3b5ec651c6feae5a",
+      "docs/.vuepress/public/diagrams/ch20-measurement-loop-mobile.svg": "1c0581e1708346b26dba8bae36b4825269f3c3ae1457272c400529a382e33d3f",
+      "docs/.vuepress/public/diagrams/ch20-measurement-loop.svg": "2d533747e971893b8802ce478dc4139e7bc988a4e6794da1576ae8b4d5d09090",
+      "docs/.vuepress/public/diagrams/ch20-state-compression-mobile.svg": "25ade010bf404b212a9e2fceb4fabdca92d8eec97cfa52ea0416a0af05fb11b1",
+      "docs/.vuepress/public/diagrams/ch20-state-compression.svg": "7ccebee4fd0c8773d0b6b3c9500f1e3ce5a6538db8be7a5b657362db5a6181e0",
+      "docs/.vuepress/public/diagrams/ch21-exposure-decision-mobile.svg": "4348349cf7a5bc29ebf952ee4c1630fb56a1123112b706125025d6a3ee8d45fb",
+      "docs/.vuepress/public/diagrams/ch21-exposure-decision.svg": "b0f7fe5fdbe3e5b63c479c160893653d5a81c2113ff642b1728f8e7086291687",
+      "docs/.vuepress/public/diagrams/ch22-startup-contract-mobile.svg": "76642b264b03070abe826aa4d05d8240e3653b7ad058fee4a07ab0014c0f6f14",
+      "docs/.vuepress/public/diagrams/ch22-startup-contract.svg": "168a7984afa7b49ebdba7f2ea7aeb19ce0e2ec50bdb26e9a3f1fbebd117171bb",
+      "docs/.vuepress/reader/diagrams/ch01.json": "2bb3c99f5c4b5df5096a25b9f00f742bf78e2d6d52c006cfa1aa5d1d92eb8b01",
+      "docs/.vuepress/reader/diagrams/ch02.json": "8fae243ffe44362d68624ee32107cc814540b91e93baa2ebdc2ab88ab3edb6aa",
+      "docs/.vuepress/reader/diagrams/ch03.json": "f56ff4a599bd614783448d5bcf57bdfa6711939d927c93338217c76d0c853894",
+      "docs/.vuepress/reader/diagrams/ch04.json": "1c25f927b46d9e734701cf83aade23d5b4635eb4fe41b354ff7f401b8650b6e0",
+      "docs/.vuepress/reader/diagrams/ch05.json": "736a76bd3de6bc4ad9eb31c34053faf33aa51b63cc16eabf87a33e50a44d6240",
+      "docs/.vuepress/reader/diagrams/ch06.json": "dd5e9c6ba5deaa2e5659adb0c707bd5a8d8aaccee2ea7fcc35b2dea9bb27c7c7",
+      "docs/.vuepress/reader/diagrams/ch07.json": "746658258f456fe4bf231dfca8721d1f30ded21822a0df4544b4881ebec342aa",
+      "docs/.vuepress/reader/diagrams/ch08.json": "f436a68e0652fc5177bfa8f697b058362a361cba88552f7aeeeac3fdcf099d31",
+      "docs/.vuepress/reader/diagrams/ch09.json": "1843944172e6aa88ac965bf6469ed84d0ef0e7c65abf1dbee885ba5dd5ef3171",
+      "docs/.vuepress/reader/diagrams/ch10.json": "8c6dc1bde1fccfdd176e11a7ce089e141fab9b8dd264b42c655676881f9ede68",
+      "docs/.vuepress/reader/diagrams/ch11.json": "92d9860b90a805eefe1e47fb7500ec4dc5087624b96d6d70dc14692fff2d3afd",
+      "docs/.vuepress/reader/diagrams/ch12.json": "b0cbe880fce8a7dc5b3a155d78637fe97627ac36b23c01bd036a757e5b7f5199",
+      "docs/.vuepress/reader/diagrams/ch13.json": "89bb0818b2d14aab8d97ed100f737f9cbcd19032d83c9b474bbb24b10635e900",
+      "docs/.vuepress/reader/diagrams/ch14.json": "37df4bf0165e99d5c066ea0c7e3d47f8d97f0c87e5d4d0198c197d6a4bcca9cf",
+      "docs/.vuepress/reader/diagrams/ch15.json": "af7785441f5c68fd783e23838de384948e7c4581d8e0117636648489ca25b0e3",
+      "docs/.vuepress/reader/diagrams/ch16.json": "1dc245a3bb360a82a5de53501341ebd8a3709b975c961f1eed7a5a6eb95ffe96",
+      "docs/.vuepress/reader/diagrams/ch17.json": "5f1cc30cbf1655734f0e702e11c97dd995a7347ea4bdcb7c2c6da22db5877778",
+      "docs/.vuepress/reader/diagrams/ch18.json": "54011552eac42e108ca36f3511ae12aea1400ccff53233bb91d111f816b11ab7",
+      "docs/.vuepress/reader/diagrams/ch19.json": "c42a191183313f60f915cc0ef8c2e969faf0e9e96643b46279cfaec6628b3a89",
+      "docs/.vuepress/reader/diagrams/ch20.json": "897946313f95daf0b8255e1f74c411ca3fa490163cc46edac6c7f5f5be743820",
+      "docs/.vuepress/reader/diagrams/ch21.json": "1188fea60974c1915305433b416ed43cd16c5631f8d2b676508911b941aad7ef",
+      "docs/.vuepress/reader/diagrams/ch22.json": "5b4ea9557c7bca0713085d8da10a511fdc0d078a04ced2a321ccc1bd71de1a22",
+      "docs/.vuepress/reader/examples/ch04.json": "c6e938bcc1c02fd86e7800bde0f4bc2224610123d62eebb4b58212c4a7549fb0",
+      "docs/.vuepress/reader/examples/ch05.json": "26ed6d50ffe4312673ebadbeec622323adabb36a29ef3eec60117e56f23a8a01",
+      "docs/.vuepress/reader/examples/ch06.json": "446e0db66e5e9596601f301e4b76f3b16d1e4e12d43764f2344fa3e38d3217a3",
+      "docs/.vuepress/reader/examples/ch07.json": "0a02bb71c696db7de048229be2a5421c65365054e68b6e446c07b12080d715b6",
+      "docs/.vuepress/reader/examples/ch09.json": "0891add83c3e96433c59454c24b851b544146ee907dc658a4ef66e94d08196c1",
+      "docs/.vuepress/reader/examples/ch10.json": "40a53ab6c5a80047c53ddb449bf18c52cc85f6b7685ae9e60b8d0d4d083c81ab",
+      "docs/.vuepress/reader/examples/ch13.json": "de7468bc9545ea407821d4d9713a087137a73cdffa8555ee149df97178bba93d",
+      "docs/.vuepress/reader/examples/ch14.json": "fe5a16cb1aba96760456e874ad9e3d40cc7735eebcbd5873fe853b75d3b8bf37",
+      "docs/.vuepress/reader/examples/ch16.json": "ea67df8958abffc1a0c84c6bef25c3cce628846011c448cb591becfd10e10d12",
+      "docs/.vuepress/reader/examples/ch18.json": "8a9d4fb2c5881cbecbfb2e385083728a4466262526b10dc37261fa886a048ba3",
+      "requirements.txt": "bf48b95abc5e1879842d2f1df402ca0683900154d58fb0163f369e8cec872108",
+      "review/reader/localize.py": "3fe22e83903c1ac1589692a1ea65600d950c764173bc32c2c96c9832e48c005f",
+      "review/reader/test_localize.py": "b717d4cacbd48e345c58b1637748f923d013bcd0681acca08f1ddbf4c900bb8a"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "ch05-f1",
+    "sourceHash": "7423e7127a18fe92e0bdbb4c8a19bf2fd010d2a2c8cd66b52d3d29329cca4b5f",
+    "python": "def getParams(self) -> dict[str, str]:\n    return self.params\n",
+    "note": "教学改写：HTTPRequest 的方法片段，params 以字典表示。直接返回内部对象而非副本，保留调用者可修改内部状态的信息泄露；类型注解不在运行时强制检查。",
+    "noteEn": "Teaching adaptation: an HTTPRequest method excerpt representing params as a dictionary. Returning the internal object, not a copy, preserves the information leak and caller mutation of internal state; annotations do not enforce types at runtime.",
+    "originalLanguage": "java",
+    "noteTw": "教學改寫：HTTPRequest 的方法片段，params 以字典表示。直接回傳內部物件而非副本，保留呼叫者可修改內部狀態的資訊洩露；型別註解不在執行時強制檢查。"
+  },
+  {
+    "id": "ch05-f2",
+    "sourceHash": "7358ca64ebdb52cc2631fcd7f2a3a7a59627776c717b5a74f8e0fec71616b2e1",
+    "python": "def getParameter(self, name: str) -> str:\n    ...\n\n\ndef getIntParameter(self, name: str) -> int:\n    ...\n",
+    "note": "教学改写：仅列 HTTPRequest 的方法签名，不暴露参数存储。省略号标记未给出的实现；按字面运行，这些占位方法不执行操作并返回 None，使用前必须补全。参数缺失或转换失败时抛出异常，是待实现的契约，不是当前占位代码的行为。Python int 不自带 Java int 的 32 位范围限制。",
+    "noteEn": "Teaching adaptation: HTTPRequest method signatures only, without exposing parameter storage. Ellipses mark omitted implementations; executed literally, these stubs do nothing and return None, so they must be implemented before use. Raising exceptions for missing parameters or failed conversions is the required contract, not the behavior of these placeholders. Python int has no built-in Java int 32-bit range limit.",
+    "originalLanguage": "java",
+    "noteTw": "教學改寫：僅列 HTTPRequest 的方法簽名，不暴露參數儲存。省略號標記未給出的實作；按字面執行，這些佔位方法不執行操作並回傳 None，使用前必須補全。參數缺失或轉換失敗時丟擲例外，是待實作的契約，不是當前佔位程式碼的行為。Python int 不自帶 Java int 的 32 位範圍限制。"
+  }
+]

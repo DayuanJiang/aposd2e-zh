@@ -1,0 +1,695 @@
+{
+  "scope": {
+    "chapters": ["ch15", "ch16", "ch17", "ch18", "ch19", "ch20", "ch21", "ch22"],
+    "round": "all61-firstdrafts-round1",
+    "role": "Independent explanatory-design reviewer; not the author of these diagrams.",
+    "metadata": "/tmp/aposd2e-viz-review-round1/metadata/chNN.json",
+    "assets": "/tmp/aposd2e-viz-review-round1/assets/",
+    "screenshotIndex": "/tmp/aposd2e-reader-qa/gallery-index.json",
+    "sources": ["docs/ch15.md through docs/ch22.md", "/tmp/aposd2e-polish.GHV1eo/original/ch15.md through ch22.md"],
+    "method": "Read all eight Chinese chapters and eight supplied English source extracts, all twenty metadata records and forty SVG sources. Viewed gallery-light-041 through 060 and gallery-dark-041 through 060 with view_image; every sheet contains the corresponding readable desktop and mobile design. Also viewed both themes of sheet 066 and docs/figures/00022.jpeg for Figure 20.1, and both themes of sheet 013 for the ch06-range-api redundancy comparison. Sheet 015 was also viewed while locating the comparison. Read content.mjs:73-92 only to interpret insertion anchors. No builds, new screenshots, source edits, asset edits, or shared-reader edits.",
+    "priorityMeaning": {
+      "P1": "Misleading inference or unsupported general rule; address before accepting the explanatory design.",
+      "P2": "Meaningful teaching, qualification, question alignment, or placement problem.",
+      "P3": "Minor presentation or wording refinement."
+    },
+    "limitations": [
+      "This is explanatory-design judgment, not a real reader experiment. No comprehension rates, completion times, or demonstrated learning effects are claimed.",
+      "The supplied gallery shows 680-unit desktop and 360-unit mobile assets side by side, not complete chapter pages on physical devices. Readability findings are limited to those sheets.",
+      "Placement was assessed from chapter text, snapshot anchors, and the insertion function, not from a fresh integrated-page rendering.",
+      "Snapshot SVGs matched the current forty corresponding public assets when compared during this review; screenshot-to-SVG provenance was checked visually, not through screenshot asset hashes.",
+      "Source line references are to files read during this review. EPUB paragraph identifiers identify the supplied English extracts; the EPUB itself was not reopened.",
+      "The chapter 6 comparison is narrow and does not constitute a review of that chapter or a decision about its diagrams."
+    ]
+  },
+  "prioritizedFindings": [
+    {
+      "priority": "P1",
+      "ids": ["ch22-complexity-diagnosis"],
+      "finding": "The closing diagnostic flow turns symptoms into prescribed fixes and evaluates success by fewer touched locations and less information. That can reward narrow patches and penalize making necessary information visible, contrary to the cited chapters.",
+      "action": "Retire the flow rather than promote it as a general diagnostic procedure."
+    },
+    {
+      "priority": "P1",
+      "ids": ["ch22-investment-return"],
+      "finding": "The actual arrows make skill development downstream of time saved through reuse and documentation. The source presents skill investment as another benefit path, not as that causal sequence. A disclaimer about dates does not qualify the guaranteed-looking benefit arrows.",
+      "action": "Retire this redundant concluding paraphrase."
+    },
+    {
+      "priority": "P1",
+      "ids": ["ch19-abstraction-increment", "ch19-regression-witness"],
+      "finding": "The abstraction diagram never establishes that its two features need the same abstraction; the regression answer's necessity wording conflates evidence with test-writing chronology.",
+      "action": "Replace the former with a situated shared-need example; revise the latter around same-test evidence on defective and fixed versions."
+    },
+    {
+      "priority": "P2",
+      "ids": ["ch18-event-trace", "ch20-measurement-loop", "ch20-state-compression"],
+      "finding": "Registration agency is ambiguous; measurement outcomes leave a gap between significant and unmeasurable benefit; the state diagram risks reading as per-call recomputation rather than a maintained invariant.",
+      "action": "Clarify the specific edge meanings and preserve all conditions in both layouts."
+    },
+    {
+      "priority": "P2",
+      "ids": ["ch15-comment-gate", "ch16-invalidation-review", "ch21-leverage-boundary"],
+      "finding": "The depth question is answered mainly in a footer; the maintenance recap adds little beyond its prose; the deletion-boundary figure repeats a more concrete chapter 6 trace.",
+      "action": "Replace the comment-depth figure with an inspectable example and retire the two redundant figures."
+    },
+    {
+      "priority": "P2",
+      "ids": ["ch17-convention-gate", "ch18-event-trace"],
+      "finding": "Section-end anchors detach these case-specific diagrams from their examples. Both chapter 18 diagrams currently share the end of section 18.2, after several intervening topics.",
+      "action": "Main should place each retained case diagram immediately after its supporting example; do not solve this by repeating prose inside the SVG."
+    }
+  ],
+  "records": [
+    {
+      "id": "ch15-delay-loop",
+      "decision": "revise",
+      "question": "等待代码稳定，为什么可能让注释一直写不出来？",
+      "expectedAnswer": {
+        "assessment": "The supplied answer is supported and appropriately uses possibility. The loop explains increasing backlog and reluctance; the separate loss is forgotten design reasoning, even if comments are eventually written.",
+        "accepted": "When development continues while documentation is deferred, undocumented code and the perceived catch-up task can grow, encouraging further delay. Design memories can also fade, making later comments more likely to repeat code and omit rationale."
+      },
+      "graphicReasoning": "The directed cycle adds genuine value over the linear paragraph: following the four edges returns to the original decision and exposes reinforcement. The side branch separates a documentation-completion problem from an information-loss problem. No invented timing or probability is encoded. The mobile layout retains the cycle but expresses the branch's origin through a sentence rather than a connected edge.",
+      "sourceEvidence": [
+        "docs/ch15.md:8-12: ongoing development, increasing backlog, reluctance, and later loss of design memory.",
+        "/tmp/aposd2e-polish.GHV1eo/original/ch15.md:19-23, part0019 p7:a3722f7256 and p8:f9dda67b49: the two mechanisms."
+      ],
+      "issues": [
+        "[P2] The desktop SVG desc says later comments can only repeat code, whereas the visible diagram says they are prone to doing so. The accessible explanation makes a stronger claim than the accepted answer.",
+        "[P3] The mobile title drops the desktop title's possibility qualifier, and the edge from delay to more undocumented code leaves continuing development implicit."
+      ],
+      "requestedChanges": [
+        "Keep the loop and branch, but make visible and accessible wording consistently conditional; replace the desktop desc's exclusive claim.",
+        "Label the accumulation edge with continuing development, and retain a compact possible-risk qualifier on mobile."
+      ],
+      "viewEvidence": {
+        "sheets": ["/tmp/aposd2e-reader-qa/gallery-light-041.png", "/tmp/aposd2e-reader-qa/gallery-dark-041.png"],
+        "desktop": "Four-node clockwise loop and dashed memory-loss branch are traceable; labels fit.",
+        "mobile": "Loop topology survives. The separated lower branch remains understandable because its origin is explicitly named.",
+        "themes": "Both themes are readable in the supplied sheets; no visible clipping or label collision.",
+        "placement": "End of 15.1, after docs/ch15.md:12, is appropriate."
+      },
+      "limitations": ["This is a qualitative account of a risk, not a prediction that a particular developer will procrastinate or forget."]
+    },
+    {
+      "id": "ch15-design-feedback",
+      "decision": "revise",
+      "question": "实现尚未开始时写注释，后来发现设计不对怎么办？",
+      "expectedAnswer": {
+        "assessment": "Supported as the author's approach to developing a new class. It should not be presented as the universally required order for every code change.",
+        "accepted": "In the author's new-class workflow, interface comments and signatures come first, followed by variables and implementation; coding and testing can revise those comments and abstractions. Newly discovered methods still start with interface comments."
+      },
+      "graphicReasoning": "Most content is a boxed condensation of the source list, but the return arrow earns some explanatory value: the reader can see that implementation informs the earlier interface work instead of treating comments-first as a freeze. Keep that narrow purpose; the graph does not show a worked redesign or evidence of better outcomes.",
+      "sourceEvidence": [
+        "docs/ch15.md:16-27: first-person sequence, new methods, and ongoing correction during coding/testing.",
+        "/tmp/aposd2e-polish.GHV1eo/original/ch15.md:28-53, part0019 p10:a9c30ae8f4 through p18:1106ac3f0c: author-specific approach and feedback.",
+        "docs/ch15.md:49-53: possible time savings and an invitation to try the approach and reflect, not an unconditional productivity guarantee."
+      ],
+      "issues": [
+        "[P2] The visible headings present an unqualified start order; the source explicitly introduces what the author does for a new class.",
+        "[P2] The mobile footer's no-backlog outcome reads as automatic. A return arrow demonstrates permitted revision, not that following the order guarantees current documentation."
+      ],
+      "requestedChanges": [
+        "Identify this as the author's new-class workflow in both layouts and in the expected answer.",
+        "Keep the forward and feedback arrows, but replace the outcome promise with an instruction to update comments as the design changes.",
+        "Avoid expanding this into a longer universal procedure; the figure's purpose is the feedback relationship."
+      ],
+      "viewEvidence": {
+        "sheets": ["/tmp/aposd2e-reader-qa/gallery-light-042.png", "/tmp/aposd2e-reader-qa/gallery-dark-042.png"],
+        "desktop": "Return arrow visibly connects implementation/testing to the interface block.",
+        "mobile": "Right-side return edge preserves that relation; the explanation below is readable, though farther from the arrow.",
+        "themes": "No visible clipping or contrast failure in either sheet.",
+        "placement": "End of 15.2, after the feedback paragraph at docs/ch15.md:27, is well matched."
+      },
+      "limitations": ["No concrete interface revision is demonstrated; the useful inference is iteration, not proven design improvement."]
+    },
+    {
+      "id": "ch15-comment-gate",
+      "decision": "replace",
+      "question": "把接口注释缩短，是否就能让方法变深？",
+      "expectedAnswer": {
+        "assessment": "The supplied answer is substantially correct. It distinguishes complete and clear documentation from missing documentation, and interface simplicity from method depth.",
+        "accepted": "No. Omitting required information does not simplify an interface or deepen a method. A short, complete, clear contract supports a judgment of interface simplicity; depth additionally concerns how much useful implementation it hides. If the contract must expose all major implementation features, the method is shallow."
+      },
+      "graphicReasoning": "The gate encodes a legitimate prerequisite, but the large branching diagram classifies descriptions as complete, short, or difficult using labels that already state the conclusions. It contains no interface, implementation, or omitted requirement to inspect. The actual depth question is answered by prose below the diagram, not by its relationships. Compared with section 15.3 and its red-flag callout, this is an expensive paraphrase.",
+      "sourceEvidence": [
+        "docs/ch15.md:31-39: abstraction review, simple complete contracts, comparison with implementation, and the completeness caveat.",
+        "/tmp/aposd2e-polish.GHV1eo/original/ch15.md:58-71, part0019 p20:e1a4906c14, p21:349a38a4ea, p23:28c6fb0b25, p24:4075191347: diagnostic distinctions."
+      ],
+      "issues": [
+        "[P2] The graph does not let a reader infer why deleting words leaves depth unchanged; the decisive information is only in the footer.",
+        "[P2] A green simple-interface outcome can be mistaken for a deep-method verdict, even though a simple interface alone does not establish depth.",
+        "[P2] No teaching example tests the completeness gate; the reader must already know which contract facts are necessary."
+      ],
+      "requestedChanges": [
+        "Replace with a small, explicitly invented contract/implementation comparison: keep the method and implementation fixed while deleting a required condition from its comment, and show that the obligation still exists.",
+        "Contrast that with an actual design change that removes a caller obligation while preserving behavior; do not imply that fewer comment characters caused the simplification.",
+        "Show interface obligations and hidden work separately. Keep the author's shallow-method criterion and avoid word-count or box-area measurements.",
+        "Retain placement after the completeness caveat, not before it."
+      ],
+      "viewEvidence": {
+        "sheets": ["/tmp/aposd2e-reader-qa/gallery-light-043.png", "/tmp/aposd2e-reader-qa/gallery-dark-043.png"],
+        "desktop": "Completeness gate branches clearly, but implementation depth is absent from the graphical region.",
+        "mobile": "Additional intermediate box makes the test order explicit, while the depth explanation remains below the branches. The 663-unit height amplifies the paraphrase cost.",
+        "themes": "All labels are readable; rejection is explanatory, not a clipping finding.",
+        "placement": "End of 15.3 after docs/ch15.md:39 is appropriate for a replacement."
+      },
+      "limitations": ["A replacement example must be marked as editorial teaching material, not attributed to the author's project."]
+    },
+    {
+      "id": "ch16-comment-scope",
+      "decision": "keep",
+      "question": "三阶段方法的所有说明都应该放在方法开头吗？",
+      "expectedAnswer": {
+        "assessment": "Supported. The distinction is scope and abstraction, not a ban on method-opening comments.",
+        "accepted": "An opening comment may summarize the whole strategy; each phase's details belong immediately above that phase, within the smallest scope covering the described code. More distant descriptions should generally be more abstract."
+      },
+      "graphicReasoning": "Long and short brackets encode coverage rather than merely grouping quotations. A reader can infer which description applies across all three phases and which travels with one local block. This adds a spatial relationship the original four-line strategy comment does not show. The gray lines are explicitly placeholders, so the diagram does not invent an algorithm.",
+      "sourceEvidence": [
+        "docs/ch16.md:23-38: proximity, smallest relevant scope, original three-phase comment, and abstraction with distance.",
+        "/tmp/aposd2e-polish.GHV1eo/original/ch16.md:37-62, part0020 p13:74e8c3f392, p15:f492854e87, p17:52804d1ab1 through p21:df361d6028."
+      ],
+      "issues": [],
+      "requestedChanges": [],
+      "viewEvidence": {
+        "sheets": ["/tmp/aposd2e-reader-qa/gallery-light-044.png", "/tmp/aposd2e-reader-qa/gallery-dark-044.png"],
+        "desktop": "One spanning bracket covers all three phase blocks; local brackets cover one description and its code.",
+        "mobile": "Rotation to a vertical code-like layout preserves the nesting of scopes. The abbreviated overview says selection, while the local label retains selection and removal.",
+        "themes": "Brackets, placeholder code, and text remain distinct in both themes.",
+        "placement": "End of 16.2 after the distance/abstraction statement is appropriate."
+      },
+      "limitations": [
+        "Bracket scope is not proof that only the nearest comment can become invalid. Semantic effects can cross phase boundaries.",
+        "The metadata's local-change claim should not be used as a guarantee of impact isolation; the visible figure itself does not make that promise."
+      ]
+    },
+    {
+      "id": "ch16-single-source",
+      "decision": "revise",
+      "question": "为何到处复制同一段设计说明，比引用一处说明更危险？",
+      "expectedAnswer": {
+        "assessment": "The synchronization argument is supported. The supplied answer overgeneralizes the visibility of any failed reference; the source specifically discusses a main comment moved or deleted.",
+        "accepted": "Copies require synchronized updates and an obsolete copy can still look valid. A central explanation reduces duplicated maintenance. If that explanation is moved or deleted, following an old reference reveals the missing target; this does not guarantee that every reference or the central explanation is correct."
+      },
+      "graphicReasoning": "The fan-out to three copies versus fan-in to one maintained source shows a real maintenance difference, and the stale C copy illustrates silent divergence. However, the right-hand drawing depicts only valid references. Its claimed contrasting failure mode exists exclusively in the explanatory text.",
+      "sourceEvidence": [
+        "docs/ch16.md:48-52: one natural documentation location, references, moved/deleted targets, and unnoticed stale duplicates.",
+        "/tmp/aposd2e-polish.GHV1eo/original/ch16.md:76-83, part0020 p26:6cd00ff764, p27:1276783230 and p28:f0756b3dfd."
+      ],
+      "issues": [
+        "[P2] The advertised comparison of failure modes is asymmetrical: one failure is drawn, the other only asserted.",
+        "[P2] The supplied answer and concluding slogan can be read as saying reference defects are always visible. A readable but stale central explanation is outside the demonstrated case.",
+        "[P3] The C-reference arrowhead ends at the shared junction rather than the source in both SVGs. It is traceable but unnecessarily resembles a reference to another reference."
+      ],
+      "requestedChanges": [
+        "Retain the useful copy-versus-reference topology and add a compact moved/deleted-target state with a visibly unresolved reference.",
+        "Limit the failure claim to that case and note that central documentation still needs updating.",
+        "Use plain merging lines with an arrowhead at the actual explanation target, and label arrows as lookup versus update obligations."
+      ],
+      "viewEvidence": {
+        "sheets": ["/tmp/aposd2e-reader-qa/gallery-light-045.png", "/tmp/aposd2e-reader-qa/gallery-dark-045.png"],
+        "desktop": "C's stale copy is conspicuous; all reference targets remain present.",
+        "mobile": "Stacked comparison retains the same information and the same missing-target omission.",
+        "themes": "Readable in both themes; labels supplement the red/green distinction.",
+        "placement": "End of 16.4 is acceptable as a section recap, although the closest supporting paragraph is docs/ch16.md:50."
+      },
+      "limitations": ["The A/B/C labels and version states are illustrative, not observed project changes."]
+    },
+    {
+      "id": "ch16-invalidation-review",
+      "decision": "retire",
+      "question": "提交前如何区分应更新的注释与仍然有效的注释？",
+      "expectedAnswer": {
+        "assessment": "The supplied answer broadly matches the source but is a review heuristic, not an exclusive routing rule from code layer to comment layer.",
+        "accepted": "Check each change against the claims in relevant documentation. A local implementation change may leave a high-level behavioral description valid, but its actual impact determines that. Preserve future-needed rationale near the code, and review code/document consistency before committing."
+      },
+      "graphicReasoning": "Three text rows are routed into a generic review box. Neither an actual change nor a comment that remains valid is shown, so the reader cannot perform the promised invalidation judgment. The figure repeats sections 16.3, 16.5, and 16.6 and overlaps the better scope illustration without adding an inspectable relationship.",
+      "sourceEvidence": [
+        "docs/ch16.md:42-44: rationale belongs where future developers can find it.",
+        "docs/ch16.md:64-68: scan every change and distinguish abstract behavioral comments from precise details.",
+        "/tmp/aposd2e-polish.GHV1eo/original/ch16.md:67-71, 97-104, part0020 p23:8f42552ae9, p24:651dd7ef0a, p33:4c371c1799, p35:84d1399898."
+      ],
+      "issues": [
+        "[P2] The mobile heading says to check the layer where the change occurs, which suggests an exclusivity absent from the desktop heading and the source's all-diffs review.",
+        "[P2] The diagram supplies no evidence for deciding whether a comment remains true; its category labels already contain the answers.",
+        "[P2] The third row is a rationale-location concern, not another invalidation level. Merging it into the same flow adds visual procedure without improving the question's answer."
+      ],
+      "requestedChanges": [
+        "Retire this figure and retain the existing prose and comment-scope figure.",
+        "Do not replace it with another general checklist flow solely to maintain diagram count."
+      ],
+      "viewEvidence": {
+        "sheets": ["/tmp/aposd2e-reader-qa/gallery-light-046.png", "/tmp/aposd2e-reader-qa/gallery-dark-046.png"],
+        "desktop": "Three paraphrased rules converge on pre-commit review.",
+        "mobile": "Same rows, but a more rigid headline and a long convergence line; no worked diff or contract comparison.",
+        "themes": "No significant legibility problem was observed.",
+        "placement": "End of 16.6 is a plausible recap location but does not justify the redundant 633-unit mobile figure."
+      },
+      "limitations": ["This retirement is an editorial value judgment, not evidence that all readers would find the recap unhelpful."]
+    },
+    {
+      "id": "ch17-convention-gate",
+      "decision": "revise",
+      "question": "为什么写下“只用换行符”还不足以消除格式噪声？",
+      "expectedAnswer": {
+        "assessment": "Supported for the author's project. Automated rejection and manually invoked repair are correctly distinguished in the supplied answer.",
+        "accepted": "In the author's example, editors could rewrite line endings despite a documented convention, obscuring meaningful changes. A pre-commit check rejected changed files containing CR; developers could manually run the repair and retry."
+      },
+      "graphicReasoning": "The check, reject/retry loop, and accepted path convey an enforceable boundary beyond prose advice. But the question asks why documentation was insufficient: the diagram starts after editing and never shows the editor's whole-file conversion or resulting diff noise. Its present graph mainly answers how the checker works.",
+      "sourceEvidence": [
+        "docs/ch17.md:29-35: automated checks, editor conversion, whole-file apparent changes, manual repair, and code review.",
+        "/tmp/aposd2e-polish.GHV1eo/original/ch17.md:46-56, part0021 p16:fef513dca0 through p19:b8cf72d761."
+      ],
+      "issues": [
+        "[P2] The cause of format noise in the question is absent from the visual.",
+        "[P2] End-of-17.2 placement comes after the substantial discussions of following and changing conventions, not directly after the line-ending example.",
+        "[P3] Mobile does not visibly identify the case as the author's project, making this specific CR rule look more like a universal repository requirement."
+      ],
+      "requestedChanges": [
+        "Add a minimal upstream example of an editor converting LF to CRLF and obscuring the small intended diff, or narrow the question to how this project's enforcement loop works.",
+        "Name the author's project example in both layouts and label the check as automatic before commit.",
+        "Keep repair visibly manual and move the figure immediately after docs/ch17.md:33."
+      ],
+      "viewEvidence": {
+        "sheets": ["/tmp/aposd2e-reader-qa/gallery-light-047.png", "/tmp/aposd2e-reader-qa/gallery-dark-047.png"],
+        "desktop": "Yes/no outcomes and retry edge are readable; reject and manual repair share one box but are textually distinguished.",
+        "mobile": "Retry loop retains the same meaning and explicitly says the checker does not auto-repair.",
+        "themes": "No visible collision or clipping.",
+        "placement": "Snapshot anchor is section 17.2 end; the relevant example ends at line 33, before lines 35-39."
+      },
+      "limitations": ["This is not advice to reject CR in every repository or file type, and no current Git configuration was evaluated."]
+    },
+    {
+      "id": "ch17-trustworthy-patterns",
+      "decision": "keep",
+      "question": "让不同事物都长得一样，为什么反而损害一致性？",
+      "expectedAnswer": {
+        "assessment": "Supported. The explicitly invented units example makes the abstract rule concrete without asserting a mandatory naming convention.",
+        "accepted": "A familiar representation invites reuse of prior knowledge. That inference is justified only when the relevant meaning matches; identical timeout names that conceal seconds versus milliseconds can invite the wrong unit assumption."
+      },
+      "graphicReasoning": "The paired rows give the reader an actual mismatch to inspect: same name, different unit. The crossed inference arrow contrasts with legitimate knowledge transfer, rather than claiming a causal conversion of seconds into milliseconds. This earns its space beyond the chapter's abstract consistency paragraph.",
+      "sourceEvidence": [
+        "docs/ch17.md:3-5 and 43: knowledge reuse, misleading resemblance, and dissimilar things requiring distinction.",
+        "/tmp/aposd2e-polish.GHV1eo/original/ch17.md:7-11 and 67-68, part0021 p3:3cdf47b76f, p4:3ac4865b5f, p23:78c80a466e."
+      ],
+      "issues": [],
+      "requestedChanges": [],
+      "viewEvidence": {
+        "sheets": ["/tmp/aposd2e-reader-qa/gallery-light-048.png", "/tmp/aposd2e-reader-qa/gallery-dark-048.png"],
+        "desktop": "Matched units above, concealed mismatch below; crossed arrow is explicit.",
+        "mobile": "Vertical inference arrows retain the matched/mismatched contrast. Provenance and no-specific-naming-rule qualification survive.",
+        "themes": "Names, units, and crossed arrows remain readable without relying solely on color.",
+        "placement": "End of 17.3 directly follows the overapplication warning and is appropriate."
+      },
+      "limitations": ["The diagram isolates unit meaning; matching suffixes alone do not establish identical behavior or correctness."]
+    },
+    {
+      "id": "ch18-event-trace",
+      "decision": "revise",
+      "question": "找到事件模块的调用点，为什么仍不知道会执行哪个处理函数？",
+      "expectedAnswer": {
+        "assessment": "Supported. Registration supplies the target; handler documentation supplies invocation conditions and, in failed(), caller and thread context. Those are related but distinct information gaps.",
+        "accepted": "The static invocation does not identify the concrete handler because application registration determines it at runtime. Handler interface comments should explain when the handler is invoked; the supplied failed() comment additionally identifies transport and dispatch-thread context."
+      },
+      "graphicReasoning": "Solid event edges versus a dashed registration relation can expose the hidden dependency. Currently, however, one already-selected handler is shown, with the registration arrow originating from that handler. This can look like self-registration or a callback loop, while the source says other application code registers interest. The lower failed() explanation repeats a short code comment rather than tracing the missing target.",
+      "sourceEvidence": [
+        "docs/ch18.md:95-111: useful event-driven programming, other application parts registering interest, runtime target selection, and failed() comment.",
+        "/tmp/aposd2e-polish.GHV1eo/original/ch18.md:199-218, part0022 p67:60e7608be2 through p73:5c3d60c8f0: agency and invocation information.",
+        "docs/ch18.md:117-150: several unrelated examples occur between failed() and the snapshot's section-end insertion."
+      ],
+      "issues": [
+        "[P2] Handler-originated registration arrow and desktop desc can imply that the handler registers itself. The source assigns registration to other application code.",
+        "[P2] A single fully known target does not strongly demonstrate why the call site alone is insufficient; the uncertainty and resolving registration data are not inspectable.",
+        "[P2] At the end of 18.2 the figure is separated from failed() by generic containers, declaration/allocation types, and RaftClient. It also precedes the other same-anchor diagram."
+      ],
+      "requestedChanges": [
+        "Separate registration from dispatch: show application setup recording an event-to-handler relation, followed by event dispatch consulting that relation.",
+        "Use an explicitly illustrative A/B target choice or two registration states to show how the same invocation point can resolve differently; do not invent a RAMCloud registration API.",
+        "Keep failed() as a concise annotation of trigger, caller, and thread, without claiming that its comment alone resolves all runtime registration questions.",
+        "Place immediately after the failed() example at docs/ch18.md:111."
+      ],
+      "viewEvidence": {
+        "sheets": ["/tmp/aposd2e-reader-qa/gallery-light-049.png", "/tmp/aposd2e-reader-qa/gallery-dark-049.png"],
+        "desktop": "Dashed edge leaves the handler and enters the event module; solid edge returns to the same handler.",
+        "mobile": "The side loop preserves that agency ambiguity; the legend does distinguish registration from event calls.",
+        "themes": "All labels fit and both line styles remain visible.",
+        "placement": "Snapshot anchor 18.2 end is too remote from the specific case; assessed from text and insertion rules, not a full-page screenshot."
+      },
+      "limitations": ["No actual RAMCloud runtime trace or registration implementation was inspected; the supplied example establishes only the documented invocation facts."]
+    },
+    {
+      "id": "ch18-reader-expectation",
+      "decision": "keep",
+      "question": "RaftClient 例子中，读者缺少哪条信息才会误判程序退出？",
+      "expectedAnswer": {
+        "assessment": "Supported and scoped to the author's example.",
+        "accepted": "RaftClient construction starts other threads that continue after the main thread finishes in this example. Document that behavior at the constructor interface and remind the reader at the end of main."
+      },
+      "graphicReasoning": "The branch from construction and the unequal track endpoints let a reader see that the main thread's endpoint is not the endpoint of all execution. This conveys concurrency and lifecycle directly, adding value beyond the short main snippet. The documentation-placement text then addresses the reading problem exposed by the tracks.",
+      "sourceEvidence": [
+        "docs/ch18.md:141-156: main snippet, continuing threads, two comment locations, and missing information.",
+        "/tmp/aposd2e-polish.GHV1eo/original/ch18.md:271-296, part0022 p91:cd72ff3fe3 through p99:5b421f05ed, especially p96:cd1197eff7."
+      ],
+      "issues": [],
+      "requestedChanges": [],
+      "viewEvidence": {
+        "sheets": ["/tmp/aposd2e-reader-qa/gallery-light-050.png", "/tmp/aposd2e-reader-qa/gallery-dark-050.png"],
+        "desktop": "Other-thread track visibly crosses the main-return guide; main has a terminal cap rather than a continuing arrow.",
+        "mobile": "Vertical tracks preserve the fork, endpoint, and continuation. The source-example and no-time-scale qualifications remain visible.",
+        "themes": "Tracks, labels, and guides are readable in both themes.",
+        "placement": "End of 18.2 is immediately after this case and appropriate once the event-trace figure is moved away from the shared anchor."
+      },
+      "limitations": ["Not a general account of Java process termination, daemon threads, exact scheduling, or thread counts; those are not established by the supplied passage."]
+    },
+    {
+      "id": "ch19-inheritance-dependencies",
+      "decision": "revise",
+      "question": "实现继承减少重复后，为什么改父类仍可能牵动所有子类？",
+      "expectedAnswer": {
+        "assessment": "Supported as a tradeoff, with a conditional alternative. The supplied answer correctly includes shared state, overrides, composition, and state separation within inheritance.",
+        "accepted": "Shared implementation can reduce duplicate edits while state access and overrides create dependencies within the hierarchy. Parent changes may require checking children. Consider a helper-based composition design when it provides the same benefit with appropriate encapsulation, or separate state ownership within an unavoidable inheritance hierarchy."
+      },
+      "graphicReasoning": "Bidirectional change-review edges contrast with calls stopping at a helper interface. The interface/state dividing line adds a real boundary. However, the diagram shows no actual state access or override, and changing edge style between panels can suggest that composition inherently eliminates internal coupling. The source explicitly says object-oriented mechanisms do not guarantee clean design.",
+      "sourceEvidence": [
+        "docs/ch19.md:13-21: duplication reduction, shared state/overrides, conditional composition alternative, separated ownership, and no design guarantee.",
+        "/tmp/aposd2e-polish.GHV1eo/original/ch19.md:22-35, part0023 p8:18d8c7aeae through p12:3670dd1ec5."
+      ],
+      "issues": [
+        "[P2] Mobile says changes require mutual checking without retaining the desktop's possibility qualifier.",
+        "[P2] The green helper panel's encapsulation is a design assumption, not a result guaranteed by choosing composition. Calls remaining is acknowledged, but exposed state or a poor helper contract could still require cross-class review.",
+        "[P2] The picture's main question concerns why changes spread, yet the dependency-producing state access or override is only named, not shown."
+      ],
+      "requestedChanges": [
+        "Add one explicitly illustrative shared-state or override dependency so the review edges have an inspectable reason.",
+        "Label the helper panel as an encapsulated alternative in this example, not an automatic property of composition; retain the option of isolating state within inheritance.",
+        "Use possible-review wording on both layouts and clarify that the diagram concerns class/functionality relationships, not a mandated shared helper instance."
+      ],
+      "viewEvidence": {
+        "sheets": ["/tmp/aposd2e-reader-qa/gallery-light-051.png", "/tmp/aposd2e-reader-qa/gallery-dark-051.png"],
+        "desktop": "Arrow legend and helper interface boundary are clear; conditional wording appears only inside the parent box.",
+        "mobile": "Same dependency shapes and boundary, but the stronger heading changes claim strength.",
+        "themes": "No visible clipping; dashed bidirectional arrows and solid calls remain distinct.",
+        "placement": "End of 19.1 follows the source's no-guarantee caveat, making it important that the figure not erase that caveat."
+      },
+      "limitations": ["A/B are abstract teaching labels; no actual hierarchy or helper implementation was evaluated."]
+    },
+    {
+      "id": "ch19-abstraction-increment",
+      "decision": "replace",
+      "question": "先做最小功能，与先设计所需抽象，会让后续功能怎样接入？",
+      "expectedAnswer": {
+        "assessment": "The supplied answer is too categorical about subsequent features reusing one core. The source recommends designing a needed abstraction cleanly and somewhat generally; it does not establish that arbitrary features share a core or that future needs require no redesign.",
+        "accepted": "When a current feature establishes the need for an abstraction, the author recommends investing in a coherent, somewhat general core instead of repeatedly patching special-purpose mechanisms. Later features that genuinely fit that abstraction can reuse it; unrelated or still-unneeded abstractions need not be built."
+      },
+      "graphicReasoning": "Separate red boxes versus a shared green box encode separation and convergence, but nothing about features A and B establishes a common responsibility. The reader is asked to accept that the green topology is better because it is labeled complete and general. Distinct mechanisms can be the correct design for distinct concerns. The disclaimer about agile practice does not supply the missing shared-need condition.",
+      "sourceEvidence": [
+        "docs/ch19.md:27-31: incremental design, risk rather than inevitability, and delaying abstractions until needed.",
+        "docs/ch19.md:49: reasonably comprehensive core functionality, not all conceivable future functionality.",
+        "/tmp/aposd2e-polish.GHV1eo/original/ch19.md:43-50 and 79-80, part0023 p15:be05138a2c, p16:402a1c2dbc, p17:7d626259c3, p27:d157e5d942."
+      ],
+      "issues": [
+        "[P1] No common need is established before A and B are merged. The graph can teach merging features into one core as an end in itself.",
+        "[P2] The red next-demand claim treats another special branch as inevitable within an unspecified example, and the green outcome promises reuse without showing its conditions.",
+        "[P2] Existing and later needs are depicted simultaneously, so the figure does not show when to invest or what remains outside the current abstraction.",
+        "[P2] Comprehensive core functionality comes explicitly from 19.4, but the snapshot lists only 19.2 sources."
+      ],
+      "requestedChanges": [
+        "Replace the placeholder topology with a named, explicitly invented example whose two uses need the same essential operation.",
+        "Show current need, the bounded abstraction designed for that need, and a later compatible use; keep an unrelated or unneeded capability visibly outside the boundary.",
+        "Make dedicated duplication versus genuine reuse inspectable rather than relying on red/green labels.",
+        "Attribute the position to the author, retain the non-universal agile qualification, and cite 19.4 if retaining the comprehensive-core claim."
+      ],
+      "viewEvidence": {
+        "sheets": ["/tmp/aposd2e-reader-qa/gallery-light-052.png", "/tmp/aposd2e-reader-qa/gallery-dark-052.png"],
+        "desktop": "A/B have no semantic content; the shared core's superiority is asserted in text.",
+        "mobile": "Same unidentified features converge on the core. The future-abstractions caveat is readable but does not establish relatedness.",
+        "themes": "Clear and unclipped; the concern is unjustified inference, not rendering.",
+        "placement": "End of 19.2 is appropriate for a replacement that illustrates the author's actual recommendation."
+      },
+      "limitations": ["The review does not adjudicate agile development generally; it evaluates whether this graphic supports its own inference."]
+    },
+    {
+      "id": "ch19-regression-witness",
+      "decision": "revise",
+      "question": "为什么修复缺陷时应先看到测试因该缺陷失败？",
+      "expectedAnswer": {
+        "assessment": "The recommendation is supported, but the supplied answer's necessity wording can confuse a recommended writing sequence with the required evidence. A test written later can still be checked on the defective version.",
+        "accepted": "Failure attributable to the reported bug on the defective version, followed by success of the same test on the fixed version, supplies evidence that the test exercises the regression. The author recommends obtaining the failure before fixing. A test that only passed on the fixed version leaves that evidence missing, regardless of when it was written."
+      },
+      "graphicReasoning": "Matched test/version states and the before/after bracket provide a meaningful evidence comparison. The lower path correctly says a immediately passing test may not exercise the bug, but its classification by writing chronology and the answer's exclusive phrasing can turn a good recommendation into a rigid rule. The causal requirement is failure because of this defect, not just any red result.",
+      "sourceEvidence": [
+        "docs/ch19.md:39 and 47-51: tests support refactoring, passing is not best design, and the author's bug-fix recommendation.",
+        "/tmp/aposd2e-polish.GHV1eo/original/ch19.md:61-62, 76-83, part0023 p21:a5daf497db, p26:767f205de4, p28:b49380a4ac."
+      ],
+      "issues": [
+        "[P1] The answer's 'only then can prove' formulation risks making test-writing chronology a necessary condition. The graphic should distinguish unobserved evidence from evidence that can no longer be obtained.",
+        "[P2] The desired red/green states are supplied as labels; without an explicit failure-cause check, a reader could treat an unrelated failure followed by a pass as adequate regression evidence."
+      ],
+      "requestedChanges": [
+        "Keep the same-test comparison, but label the lower row as only tested on the fixed version rather than treating test-after-fix as intrinsically invalid.",
+        "Add a small route to run that same test against the defective version; mark this as an editorial clarification of the evidence distinction, not an extra instruction quoted from the author.",
+        "Retain the requirement that failure be attributable to the defect, and use evidence/support rather than general proof or guarantee language."
+      ],
+      "viewEvidence": {
+        "sheets": ["/tmp/aposd2e-reader-qa/gallery-light-053.png", "/tmp/aposd2e-reader-qa/gallery-dark-053.png"],
+        "desktop": "The paired states and shared-test bracket are clear; lower row labels writing order as the counterexample.",
+        "mobile": "Before/after states and the no-global-correctness caveat survive; the same chronology issue remains.",
+        "themes": "Text remains readable and failure/success are expressed in words as well as color.",
+        "placement": "End of 19.4 immediately after docs/ch19.md:51 is appropriate."
+      },
+      "limitations": ["No tests were executed. A red/green observation is limited evidence about the exercised regression, not proof of full correctness."]
+    },
+    {
+      "id": "ch20-measurement-loop",
+      "decision": "revise",
+      "question": "知道系统很慢，为什么还不能决定改哪里、保留什么？",
+      "expectedAnswer": {
+        "assessment": "The supplied answer captures the two measurement purposes and simpler-design exception. It should also retain the source's distinction between any measurable change and a benefit sufficient to justify added complexity.",
+        "accepted": "Deeper measurement locates specific high-cost work and a pre-change baseline supports comparison after a targeted change. Retaining added complexity needs a worthwhile speed benefit. With no measurable benefit, undo the change unless it independently simplifies the system."
+      },
+      "graphicReasoning": "The baseline bypass and the hotspot/change path converge at comparison, showing why profiling and before/after evidence are not substitutes. This is genuine diagrammatic value. The decision outcomes, however, show only significant improvement and no measurable improvement, leaving a measurable-but-insufficient improvement outside the apparent decision tree.",
+      "sourceEvidence": [
+        "docs/ch20.md:30-32: unreliable intuition, deeper measurement, baseline, rollback exception, and significant speedup.",
+        "/tmp/aposd2e-polish.GHV1eo/original/ch20.md:52-56, part0024 p18:c6ab138c52 and p19:446ae2e29f."
+      ],
+      "issues": [
+        "[P2] Desktop asks whether there is improvement, while mobile asks whether improvement is sufficient. Those are not equivalent tests.",
+        "[P2] Significant and unmeasurable improvement are not exhaustive outcomes; a small measurable gain may still fail to justify complexity.",
+        "[P3] The desktop baseline arrow stops just outside the decision's lower-left boundary, making the preserved-baseline input less explicit than on mobile."
+      ],
+      "requestedChanges": [
+        "Use the same decision criterion on both layouts: whether measured benefit justifies the added complexity.",
+        "Cover insufficient benefit without implying a fixed numerical threshold; preserve the independent simplification exception.",
+        "Label comparison as like-for-like measurements and connect both inputs cleanly to the comparison node. Do not invent benchmark numbers or a statistical threshold."
+      ],
+      "viewEvidence": {
+        "sheets": ["/tmp/aposd2e-reader-qa/gallery-light-054.png", "/tmp/aposd2e-reader-qa/gallery-dark-054.png"],
+        "desktop": "Baseline and profiling paths are distinct; decision says any improvement and the baseline arrow nearly reaches the diamond.",
+        "mobile": "Both inputs are easier to follow, but the decision changes to sufficient improvement.",
+        "themes": "All content is readable; no reported benefit is encoded with a fabricated scale.",
+        "placement": "End of 20.2 is appropriate."
+      },
+      "limitations": ["This is a qualitative optimization argument, not a complete measurement protocol or a guarantee that a faster change is otherwise acceptable."]
+    },
+    {
+      "id": "ch20-critical-path",
+      "decision": "keep",
+      "question": "围绕关键路径重构，改变的是哪种控制流关系？",
+      "expectedAnswer": {
+        "assessment": "Supported and well qualified in the supplied answer.",
+        "accepted": "For a measured hotspot after considering fundamental improvements, seek a clean design close to the common case's minimum necessary work. Ideally, one entry test routes special cases away so common work can proceed without repeated special-case checks; that structure is a target, not a guarantee."
+      },
+      "graphicReasoning": "The original chain interleaves checks with A/B, while the target forks before a continuous A-to-B path. A reader can trace the common case and see which checks it no longer traverses. This is not merely an assertion that simple code is faster. It gives a useful general control-flow relationship before the detailed Buffer example.",
+      "sourceEvidence": [
+        "docs/ch20.md:36-44: measured hotspot, fundamental fixes first, last-resort redesign, minimum common work, clean abstraction, and ideal initial check.",
+        "/tmp/aposd2e-polish.GHV1eo/original/ch20.md:61-74, part0024 p21:4350d6c75f through p25:87ac06fb38.",
+        "docs/ch20.md:64-137: Figures 20.2 and 20.3 supply the concrete code comparison later; this figure is not a replacement for them."
+      ],
+      "issues": [],
+      "requestedChanges": [],
+      "viewEvidence": {
+        "sheets": ["/tmp/aposd2e-reader-qa/gallery-light-055.png", "/tmp/aposd2e-reader-qa/gallery-dark-055.png"],
+        "desktop": "Interleaved checks and the target's off-path branch are readable and preserve A-before-B.",
+        "mobile": "Vertical original sequence and forked target retain the same control flow. Clean-abstraction and ideal-target qualifications remain explicit.",
+        "themes": "Paths and yes/no labels are distinguishable in both themes.",
+        "placement": "End of 20.3 is appropriate, immediately before the worked Buffer case."
+      },
+      "limitations": [
+        "A/B are illustrative work, not actual Buffer statements, counts, or measured speedups.",
+        "Entry hoisting must preserve behavior; the drawing does not establish that arbitrary checks can safely move before A."
+      ]
+    },
+    {
+      "id": "ch20-state-compression",
+      "decision": "revise",
+      "question": "availableAppendBytes 为什么能让 Buffer 的常见追加只做一次检查？",
+      "expectedAnswer": {
+        "assessment": "The supplied answer matches the source's state meanings. The maintained-invariant condition and positive-request scope should be part of the answer, not only supporting notes.",
+        "accepted": "For positive-size requests, a correctly maintained availableAppendBytes is zero if there is no last chunk, the last chunk is external, or no adjacent space is available; otherwise it records available adjacent bytes. Comparing it with the requested size rejects those special states and insufficient capacity together. Successful append must update this state."
+      },
+      "graphicReasoning": "Several states converging on zero and then one comparison reveal why one variable can summarize multiple predicates. That is distinct from Figure 20.1's storage ownership and Figure 20.3's code. Yet the top-to-bottom arrows can also be read as a procedure that recomputes all state conditions immediately before each comparison, defeating the intended reason for storing the value. Maintenance is mentioned only below.",
+      "sourceEvidence": [
+        "docs/ch20.md:62, 117-139: internal last chunk, adjacent capacity, zero encoding, comparison, state decrement, and totalLength tradeoff.",
+        "/tmp/aposd2e-polish.GHV1eo/original/ch20.md:97-98 and 115-119, part0024 p33:c8ebdef682, p39:f0c54a3c47 and p40:b241e41328.",
+        "docs/ch20.md:50-56 and docs/figures/00022.jpeg: original Figure 20.1 shows chunk storage and ownership, not this state invariant.",
+        "docs/ch20.md:119-137: the actual new code already provides a compact execution trace; the new graphic needs to explain the stored meaning rather than redraw its if statement."
+      ],
+      "issues": [
+        "[P2] State-definition arrows and runtime control-flow arrows use the same visual grammar without a clear phase boundary. A reader may infer that the grouped checks are repeated on every append.",
+        "[P2] The three zero-producing conditions need an explicit any-one/OR label; their bracket alone does not specify the logic.",
+        "[P2] The supplied answer omits positive request size and correct state maintenance, although the diagram visibly limits numBytes to greater than zero.",
+        "[P3] End-of-20.4 placement follows benchmark results rather than the state-variable explanation, weakening the connection to Figure 20.3."
+      ],
+      "requestedChanges": [
+        "Separate stored invariant/encoding from the per-append comparison, with distinct edge labels; show that updates maintain the encoding between calls.",
+        "Explicitly mark the zero conditions as alternatives and include numBytes > 0 in the expected answer.",
+        "Consider one small labeled teaching state transition, such as available capacity decreasing after a successful positive request, instead of another general footer about maintenance.",
+        "Place beside the new-code explanation, after Figure 20.3 and its maintenance note, before performance results."
+      ],
+      "viewEvidence": {
+        "sheets": ["/tmp/aposd2e-reader-qa/gallery-light-056.png", "/tmp/aposd2e-reader-qa/gallery-dark-056.png", "/tmp/aposd2e-reader-qa/gallery-light-066.png", "/tmp/aposd2e-reader-qa/gallery-dark-066.png"],
+        "desktop": "Zero group, capacity case, and comparison are readable; diagram flows continuously from defining state to using it.",
+        "mobile": "Same logic and positive-size qualifier survive. Long connector from zero joins the capacity case before comparison, retaining the definition/execution ambiguity.",
+        "themes": "Readability is good in both themes. Original Figure 20.1 remains on a white field; it was inspected for content comparison, not reviewed here for theme conversion.",
+        "placement": "Snapshot anchor is 20.4 end; closer correspondence would be docs/ch20.md:137-139.",
+        "originalViewed": "/Volumes/Archive/Dev/python/aposd2e-zh/docs/figures/00022.jpeg"
+      },
+      "limitations": ["No zero-size, negative-size, overflow, allocation-failure, or full Buffer-invariant behavior is inferred from this bounded illustration."]
+    },
+    {
+      "id": "ch21-leverage-boundary",
+      "decision": "retire",
+      "question": "为什么删除字符范围，比专用 backspace 方法有更广的作用？",
+      "expectedAnswer": {
+        "assessment": "Supported at the text-module abstraction boundary. The supplied additional editing scenarios are disclosed as illustrative.",
+        "accepted": "Different editing intentions can compute a deletion range outside the text module and reuse the same range-deletion operation. The text module needs the range, not the originating key or UI intention."
+      },
+      "graphicReasoning": "The many-to-one join and module boundary are legitimate visual relationships, but the all-firstdraft context already includes ch06-range-api, which shows the same separation with actual text, cursor, ranges, and results. This figure removes that evidence and repeats the conclusion with unnamed range values. Chapter 21 already points back to that text-storage discussion.",
+      "sourceEvidence": [
+        "docs/ch21.md:11: explicitly recalls chapter 6's general range interface and why backspace is irrelevant at this boundary.",
+        "/tmp/aposd2e-polish.GHV1eo/original/ch21.md:19-20, part0025 p7:37c373eec3: the same callback to the earlier example.",
+        "/tmp/aposd2e-viz-review-round1/metadata/ch06.json: ch06-range-api question, answer, teaching example and section 6.4 anchor.",
+        "/tmp/aposd2e-viz-review-round1/assets/ch06-range-api.svg and ch06-range-api-mobile.svg: three independently worked deletions from ABCDE, UI-selected ranges, and shared delete(start,end)."
+      ],
+      "issues": [
+        "[P2] Redundant with a more concrete existing explanatory figure. It contributes no additional boundary condition or worked inference.",
+        "[P2] The current figure's three generic actions are less useful teaching examples than the already-available backspace/Delete/selection traces.",
+        "[P3] End-of-21.1 placement follows naming alternatives and learning through hypotheses, not the deletion example itself."
+      ],
+      "requestedChanges": [
+        "Retire this duplicate and rely on the existing chapter 6 reference and prose.",
+        "Do not add a replacement deletion diagram merely to keep a chapter-level count."
+      ],
+      "viewEvidence": {
+        "sheets": ["/tmp/aposd2e-reader-qa/gallery-light-057.png", "/tmp/aposd2e-reader-qa/gallery-dark-057.png", "/tmp/aposd2e-reader-qa/gallery-light-013.png", "/tmp/aposd2e-reader-qa/gallery-dark-013.png"],
+        "desktop": "Three actions merge before a dashed text-module boundary; only range crosses it.",
+        "mobile": "Rotated boundary preserves meaning, with readable action labels.",
+        "comparison": "Sheet 013 shows both ch06-range-api layouts with actual character positions, deletion ranges and outputs, plus the same UI/text responsibility distinction.",
+        "themes": "Both this figure and the comparison are readable in both supplied themes.",
+        "placement": "Current section-end placement is an unnecessary second presentation of a referenced example."
+      },
+      "limitations": ["Retirement rests on the supplied all-firstdraft collection. It does not assert that the diagram would have no value in isolation."]
+    },
+    {
+      "id": "ch21-exposure-decision",
+      "decision": "revise",
+      "question": "减少接口信息，何时是简化，何时会制造未知的未知？",
+      "expectedAnswer": {
+        "assessment": "The supplied answer is supported. Necessity must be evaluated for particular callers and circumstances; common defaults need not remove exceptional callers' control.",
+        "accepted": "Hide or automate choices the relevant caller need not make, while making genuinely required information visible. Exposing irrelevant choices adds cognitive load; hiding required facts creates obscurity. Which facts are needed can vary by caller and use."
+      },
+      "graphicReasoning": "The crossed two-by-two matrix adds value by separating information necessity from visibility; a reader can compare two different errors rather than equating less information with better abstraction. However, the positive required-information example is circular: a necessary precondition is labeled necessary without saying what it is. The buffering example also loses the source's most-callers qualification.",
+      "sourceEvidence": [
+        "docs/ch21.md:19-33: defaults reflecting common usage, important information made prominent, mostly irrelevant parameters, buffering, and hidden important information.",
+        "/tmp/aposd2e-polish.GHV1eo/original/ch21.md:31-53, part0025 p11:f8b4f0d81a, p13:1b411f63b7, p17:586fcd4557 and p18:dfaf0db169."
+      ],
+      "issues": [
+        "[P2] Placing buffering categorically in the not-needed row can turn the author's almost-always observation into a universal claim.",
+        "[P2] Necessary calling precondition is not yet a teaching example: it supplies the classification without evidence the reader can inspect.",
+        "[P3] Fixed red/green cells could be read as intrinsic properties of information rather than choices relative to a caller and use case."
+      ],
+      "requestedChanges": [
+        "Keep the matrix but name the relevant caller/use context and qualify buffering as the common-case default, not a choice that can never matter.",
+        "Replace the generic necessary-precondition label with one small explicitly invented contract fact and a caller action that depends on it.",
+        "Make clear that reducing routine configuration burden does not require eliminating all exceptional controls."
+      ],
+      "viewEvidence": {
+        "sheets": ["/tmp/aposd2e-reader-qa/gallery-light-058.png", "/tmp/aposd2e-reader-qa/gallery-dark-058.png"],
+        "desktop": "Row and column headings distinguish necessity from exposure; crossed outcomes are inspectable.",
+        "mobile": "Row headings move above each pair, but exposure/hidden columns and all four outcomes preserve meaning.",
+        "themes": "Text is readable within the narrow cells in both themes; no clipping was observed.",
+        "placement": "End of 21.4 appropriately follows the two-error discussion."
+      },
+      "limitations": ["The matrix is a design aid, not an algorithm for deciding what every caller needs or a complete treatment of chapter 21's omitted-functionality mistake."]
+    },
+    {
+      "id": "ch22-complexity-diagnosis",
+      "decision": "retire",
+      "question": "面对难改的代码，应先收拢依赖，还是补足读者信息？",
+      "expectedAnswer": {
+        "assessment": "The supplied answer combines supported concepts but invents a diagnostic sequence. Multiple edits do not by themselves establish misplaced responsibility, and better visibility need not reduce the amount of necessary information.",
+        "accepted": "Investigate the particular change: unnecessary shared decisions and missing information may both contribute. Evaluate candidate boundaries and documentation against their actual responsibilities and required behavior. There is no universal choice or ordering between consolidation and clarification."
+      },
+      "graphicReasoning": "Although labeled translator synthesis and nonexclusive, the graph maps two broad symptoms directly to named causes and then to prescriptions. The final reduced-locations/reduced-information test can favor a minimal patch over a sound redesign and can count newly visible necessary information as failure. No real change, boundary, or contract is shown to validate the diagnoses. It mostly repeats earlier chapters while adding unjustified procedural authority.",
+      "sourceEvidence": [
+        "docs/ch22.md:3: conclusion lists causes, red flags, and general design ideas; it supplies no diagnostic flow or monotonic success metric.",
+        "/tmp/aposd2e-polish.GHV1eo/original/ch22.md:7-8, part0026 p3:69a997ed5b: general synthesis only.",
+        "docs/ch16.md:9-17 and /tmp/aposd2e-polish.GHV1eo/original/ch16.md:16-29: minimal edits can be tactical; restructuring must consider desired change and practical constraints.",
+        "docs/ch18.md:154-156 and /tmp/aposd2e-polish.GHV1eo/original/ch18.md:292-296, part0022 p98:7fb1df9ba7 and p99:5b421f05ed: reduce what must be learned where possible, reuse knowledge, and provide necessary information.",
+        "docs/ch21.md:31-33 and /tmp/aposd2e-polish.GHV1eo/original/ch21.md:49-53: hiding important information is itself a mistake."
+      ],
+      "issues": [
+        "[P1] The symptom-to-cause-to-action arrows imply a broadly reliable diagnostic procedure without evidence or conditions establishing the diagnosis.",
+        "[P1] Fewer touched locations and less information are treated as a combined success test. Sound refactoring may touch more locations, and clarifying a contract can reveal information that was previously hidden rather than remove it.",
+        "[P2] Desktop's retry arrow returns only to the dependency symptom; mobile omits the drawn return entirely. Neither exactly matches the claimed two-path feedback.",
+        "[P2] The question's either/or framing fights the nonexclusive caveat, and the long figure repeats prior explanations in a very short conclusion."
+      ],
+      "requestedChanges": [
+        "Retire this generalized diagnostic flow and leave the conclusion's prose intact.",
+        "Do not preserve the fewer-locations/fewer-facts success gate as a universal checklist elsewhere.",
+        "A future synthesis figure would need a bounded worked change with justified causes, preserved behavior, and tradeoffs; that is a new proposal, not a required replacement for this draft."
+      ],
+      "viewEvidence": {
+        "sheets": ["/tmp/aposd2e-reader-qa/gallery-light-059.png", "/tmp/aposd2e-reader-qa/gallery-dark-059.png"],
+        "desktop": "Both paths funnel into the quantity-reduction test; dashed return reaches only the upper symptom.",
+        "mobile": "Paths are stacked and converge, but the return is verbal rather than drawn. The 732-unit figure is substantially longer than a compact closing synthesis needs to be.",
+        "themes": "Legible in both themes; the defect is semantic and editorial.",
+        "placement": "The intro anchor inserts after the first conclusion paragraph, before the author's discussion of costs, enjoyment and investment. It gives the invented procedure disproportionate prominence."
+      },
+      "limitations": ["Translator attribution is welcome but does not validate the invented diagnostic ordering. This is not a measured claim about reader misunderstanding."]
+    },
+    {
+      "id": "ch22-investment-return",
+      "decision": "retire",
+      "question": "早期花时间设计与记录，如何影响下一次复用和修改？",
+      "expectedAnswer": {
+        "assessment": "The three proposed benefit mechanisms broadly reflect the author's argument. They should remain attributed qualitative claims, not a guaranteed causal cycle for any early investment.",
+        "accepted": "The author argues that well-designed reusable modules can save repeated design work, clear documentation can ease later understanding, and deliberate improvement of design skill can make later design more proficient. These are distinct benefit mechanisms, conditional on the quality and relevance of the work."
+      },
+      "graphicReasoning": "Two rows paraphrase module reuse and documentation. They then feed released effort into practice/experience and skill improvement, turning what the metadata calls three paths into a serial causal chain. The source discusses skill investment as an additional source of later benefit, not as something caused by those two savings. The diagram adds no worked comparison beyond the short concluding prose.",
+      "sourceEvidence": [
+        "docs/ch22.md:5-11: early costs, the author's value judgment, module reuse, later rereading, skill development and enjoyment.",
+        "/tmp/aposd2e-polish.GHV1eo/original/ch22.md:10-20, part0026 p4:7629fe91b1 through p7:2d36f877f5, especially p6:fda8236af4: distinct module, documentation and skill claims."
+      ],
+      "issues": [
+        "[P1] The savings-to-practice arrow introduces a causal dependency absent from the source; the metadata's three-path description does not match the two-path graph feeding a skill box.",
+        "[P1] No-fixed-date/no-ratio caveats do not prevent an unconditional inference that early design and documentation produce savings and then better skill. These are the author's qualitative arguments, not guaranteed effects established by this graph.",
+        "[P2] Desktop feedback reaches both investment boxes, while mobile feedback reaches only module definition, changing the graphical loop.",
+        "[P2] The figure is predominantly boxed paraphrase and repeats the immediately preceding conclusion. Removing it loses no unique inspectable example or source fact."
+      ],
+      "requestedChanges": [
+        "Retire the diagram; retain the author's concluding prose and its existing attribution.",
+        "Do not convert the same content into another ROI loop or curve merely to retain a closing image.",
+        "If a separate future learning aid is proposed, distinguish independent benefit mechanisms and explicit conditions from measured or guaranteed effects."
+      ],
+      "viewEvidence": {
+        "sheets": ["/tmp/aposd2e-reader-qa/gallery-light-060.png", "/tmp/aposd2e-reader-qa/gallery-dark-060.png"],
+        "desktop": "Both savings rows merge into the practice/skill box; dashed feedback goes to both initial investments.",
+        "mobile": "The same unsupported savings-to-skill sequence remains, and feedback returns only to module definition.",
+        "themes": "Readable in both themes; no numerical speedup or payback date is fabricated.",
+        "placement": "Chapter-end anchor repeats the short investment and enjoyment conclusion at docs/ch22.md:9-11 and weakens its ending."
+      },
+      "limitations": ["This is an editorial retirement, not a denial of the possible value of design, documentation, or practice, and not an empirical evaluation of investment returns."]
+    }
+  ]
+}

@@ -1,0 +1,673 @@
+candidate	count	files	forms	first_source
+design	185	21	"{""design"": 160, ""designs"": 20, ""Design"": 5}"	docs/en/README.md:9
+code	167	15	"{""code"": 161, ""Code"": 6}"	docs/en/preface.md:9
+class	124	13	"{""classes"": 24, ""class"": 100}"	docs/en/README.md:9
+software	106	20	"{""software"": 102, ""Software"": 4}"	docs/en/README.md:9
+system	106	23	"{""systems"": 34, ""Systems"": 3, ""system"": 67, ""System"": 2}"	docs/en/README.md:9
+interface	86	11	"{""interfaces"": 7, ""interface"": 77, ""Interfaces"": 1, ""Interface"": 1}"	docs/en/preface.md:29
+complexity	84	20	"{""complexity"": 79, ""Complexity"": 5}"	docs/en/README.md:9
+method	78	12	"{""methods"": 39, ""method"": 36, ""Methods"": 2, ""Method"": 1}"	docs/en/README.md:9
+text	69	4	"{""text"": 69}"	docs/en/preface.md:13
+comment	66	6	"{""comments"": 49, ""Comments"": 8, ""comment"": 8, ""Comment"": 1}"	docs/en/preface.md:29
+module	63	14	"{""modules"": 24, ""Modules"": 3, ""module"": 35, ""Module"": 1}"	docs/en/README.md:9
+approach	57	11	"{""approaches"": 9, ""approach"": 47, ""Approaches"": 1}"	docs/en/preface.md:13
+problem	54	13	"{""problem"": 20, ""problems"": 32, ""Problem"": 1, ""Problems"": 1}"	docs/en/README.md:9
+information	52	10	"{""information"": 49, ""Information"": 3}"	docs/en/ch02.md:19
+example	51	13	"{""example"": 45, ""examples"": 6}"	docs/en/preface.md:7
+text class	50	3	"{""text class"": 49, ""text classes"": 1}"	docs/en/ch06.md:23
+developer	46	14	"{""developers"": 31, ""developer"": 13, ""Developers"": 2}"	docs/en/ch01.md:16
+thing	45	11	"{""things"": 37, ""thing"": 7, ""Things"": 1}"	docs/en/preface.md:17
+way	44	15	"{""way"": 33, ""ways"": 11}"	docs/en/preface.md:9
+software design	42	12	"{""software design"": 41, ""software designs"": 1}"	docs/en/README.md:9
+time	42	16	"{""times"": 3, ""time"": 39}"	docs/en/preface.md:11
+book	40	9	"{""book"": 40}"	docs/en/README.md:9
+chapter	39	18	"{""chapters"": 8, ""chapter"": 24, ""Chapter"": 7}"	docs/en/ch01.md:36
+user	33	7	"{""Users"": 1, ""users"": 13, ""user"": 19}"	docs/en/ch04.md:21
+idea	30	10	"{""ideas"": 16, ""idea"": 14}"	docs/en/README.md:9
+feature	30	7	"{""features"": 27, ""feature"": 3}"	docs/en/ch01.md:6
+implementation	30	11	"{""implementation"": 26, ""implementations"": 2, ""Implementation"": 2}"	docs/en/ch01.md:16
+selection	30	2	"{""selection"": 29, ""Selection"": 1}"	docs/en/ch06.md:35
+user interface	29	2	"{""user interface"": 29}"	docs/en/ch06.md:41
+name	27	6	"{""names"": 14, ""name"": 10, ""Name"": 3}"	docs/en/ch12.md:7
+case	26	9	"{""cases"": 16, ""case"": 10}"	docs/en/ch01.md:10
+matter	26	5	"{""matter"": 17, ""matters"": 9}"	docs/en/ch11.md:7
+function	25	5	"{""functions"": 17, ""function"": 8}"	docs/en/ch01.md:38
+principle	23	11	"{""principles"": 14, ""principle"": 9}"	docs/en/README.md:9
+history	23	2	"{""history"": 6, ""History"": 17}"	docs/en/ch01.md:4
+operation	23	6	"{""operations"": 16, ""operation"": 7}"	docs/en/ch05.md:27
+documentation	22	7	"{""documentation"": 20, ""Documentation"": 2}"	docs/en/ch06.md:73
+development	21	9	"{""development"": 21}"	docs/en/preface.md:3
+piece	21	8	"{""pieces"": 12, ""piece"": 9}"	docs/en/preface.md:5
+action	21	1	"{""actions"": 12, ""Action"": 3, ""Actions"": 2, ""action"": 4}"	docs/en/ch06.md:113
+abstraction	20	8	"{""abstraction"": 12, ""Abstractions"": 1, ""abstractions"": 7}"	docs/en/ch04.md:21
+software system	19	13	"{""software systems"": 11, ""software system"": 5, ""Software systems"": 2, ""Software System"": 1}"	docs/en/README.md:9
+student	19	2	"{""Students"": 2, ""students"": 11, ""student"": 6}"	docs/en/preface.md:9
+file	19	5	"{""file"": 18, ""files"": 1}"	docs/en/preface.md:13
+work	18	9	"{""work"": 18}"	docs/en/preface.md:5
+level	18	9	"{""level"": 14, ""levels"": 4}"	docs/en/preface.md:11
+line	18	5	"{""lines"": 7, ""line"": 11}"	docs/en/preface.md:13
+editor	18	3	"{""editors"": 1, ""editor"": 17}"	docs/en/preface.md:13
+number	18	6	"{""number"": 18}"	docs/en/ch01.md:20
+component	17	2	"{""components"": 13, ""component"": 4}"	docs/en/ch01.md:6
+character	17	3	"{""character"": 7, ""characters"": 10}"	docs/en/ch06.md:25
+device	17	3	"{""device"": 13, ""devices"": 4}"	docs/en/ch06.md:105
+API	16	3	"{""API"": 16}"	docs/en/ch06.md:5
+backspace	16	2	"{""backspace"": 16}"	docs/en/ch06.md:25
+position	16	3	"{""position"": 11, ""positions"": 4, ""Position"": 1}"	docs/en/ch06.md:35
+process	15	9	"{""process"": 14, ""Process"": 1}"	docs/en/README.md:9
+people	15	4	"{""People"": 1, ""people"": 14}"	docs/en/preface.md:3
+technique	15	8	"{""techniques"": 14, ""technique"": 1}"	docs/en/preface.md:3
+result	15	9	"{""result"": 9, ""results"": 6}"	docs/en/preface.md:9
+experience	15	7	"{""experience"": 12, ""experiences"": 3}"	docs/en/preface.md:13
+behavior	15	11	"{""behaviors"": 1, ""behavior"": 14}"	docs/en/ch01.md:4
+alternative	15	4	"{""alternatives"": 13, ""alternative"": 2}"	docs/en/ch01.md:26
+layer	15	2	"{""layers"": 9, ""layer"": 6}"	docs/en/ch07.md:3
+red flag	14	7	"{""red flags"": 8, ""red flag"": 6}"	docs/en/README.md:9
+flag	14	7	"{""flags"": 8, ""flag"": 6}"	docs/en/README.md:9
+reader	14	3	"{""readers"": 6, ""reader"": 8}"	docs/en/preface.md:17
+change	14	4	"{""changes"": 12, ""change"": 2}"	docs/en/ch01.md:16
+place	14	7	"{""place"": 8, ""places"": 6}"	docs/en/ch01.md:36
+list	14	3	"{""list"": 14}"	docs/en/ch06.md:111
+project	13	4	"{""projects"": 7, ""project"": 6}"	docs/en/preface.md:9
+goal	13	9	"{""goal"": 9, ""goals"": 4}"	docs/en/preface.md:27
+it's	13	8	"{""It's"": 8, ""it's"": 5}"	docs/en/ch01.md:2
+functionality	13	8	"{""functionality"": 13}"	docs/en/ch01.md:18
+exception	13	5	"{""exceptions"": 8, ""exception"": 4, ""Exception"": 1}"	docs/en/ch01.md:36
+good design	13	5	"{""good design"": 7, ""better designs"": 2, ""Good design"": 2, ""better design"": 1, ""good designs"": 1}"	docs/en/ch03.md:3
+specialization	13	1	"{""specialization"": 11, ""Specialization"": 2}"	docs/en/ch06.md:3
+cursor	13	1	"{""cursor"": 11, ""Cursor"": 2}"	docs/en/ch06.md:25
+structure	13	6	"{""structures"": 1, ""structure"": 11, ""Structure"": 1}"	docs/en/ch09.md:39
+performance	12	4	"{""performance"": 12}"	docs/en/preface.md:7
+language	12	6	"{""languages"": 4, ""language"": 8}"	docs/en/preface.md:13
+simpler	12	8	"{""simpler"": 12}"	docs/en/ch01.md:8
+special case	12	4	"{""special cases"": 8, ""Special cases"": 2, ""special case"": 2}"	docs/en/ch01.md:10
+need	12	5	"{""need"": 5, ""needs"": 7}"	docs/en/ch04.md:3
+order	12	7	"{""order"": 12}"	docs/en/ch05.md:27
+mechanism	12	1	"{""mechanism"": 12}"	docs/en/ch06.md:11
+situation	12	7	"{""situations"": 11, ""situation"": 1}"	docs/en/ch06.md:95
+software development	11	9	"{""software development"": 11}"	docs/en/preface.md:3
+skill	11	6	"{""skills"": 6, ""skill"": 5}"	docs/en/preface.md:7
+one	11	7	"{""ones"": 9, ""one"": 2}"	docs/en/preface.md:9
+application	11	4	"{""application"": 8, ""applications"": 3}"	docs/en/ch05.md:27
+block	11	5	"{""block"": 6, ""blocks"": 4, ""Blocks"": 1}"	docs/en/ch06.md:105
+issue	10	7	"{""issues"": 7, ""issue"": 3}"	docs/en/README.md:9
+program	10	2	"{""programs"": 3, ""program"": 7}"	docs/en/preface.md:3
+programmer	10	3	"{""programmers"": 8, ""Programmers"": 1, ""programmer"": 1}"	docs/en/preface.md:5
+mistake	10	3	"{""mistakes"": 6, ""mistake"": 4}"	docs/en/preface.md:11
+best way	10	7	"{""best way"": 8, ""best ways"": 2}"	docs/en/preface.md:19
+bug	10	9	"{""bugs"": 10}"	docs/en/preface.md:23
+investment	10	6	"{""investment"": 7, ""investments"": 3}"	docs/en/ch03.md:17
+redo	10	1	"{""redo"": 10}"	docs/en/ch06.md:21
+subdivision	10	1	"{""subdivision"": 6, ""Subdivision"": 4}"	docs/en/ch09.md:5
+course	9	6	"{""course"": 9}"	docs/en/preface.md:9
+detail	9	5	"{""details"": 7, ""detail"": 2}"	docs/en/ch01.md:12
+element	9	6	"{""element"": 5, ""elements"": 4}"	docs/en/ch01.md:24
+rule	9	4	"{""rule"": 7, ""rules"": 2}"	docs/en/ch01.md:36
+lot	9	6	"{""lot"": 7, ""lots"": 2}"	docs/en/ch02.md:5
+choice	9	4	"{""choices"": 4, ""choice"": 5}"	docs/en/ch02.md:5
+part	9	4	"{""parts"": 3, ""part"": 5, ""Part"": 1}"	docs/en/ch04.md:23
+key	9	3	"{""key"": 9}"	docs/en/ch06.md:25
+insertion	9	2	"{""insertion"": 7, ""insertions"": 2}"	docs/en/ch06.md:109
+history class	9	1	"{""History class"": 9}"	docs/en/ch06.md:133
+point	8	7	"{""point"": 8}"	docs/en/preface.md:13
+word	8	5	"{""word"": 2, ""words"": 6}"	docs/en/preface.md:17
+future	8	5	"{""future"": 8}"	docs/en/preface.md:25
+term	8	6	"{""terms"": 6, ""term"": 2}"	docs/en/preface.md:29
+phase	8	2	"{""phases"": 2, ""phase"": 6}"	docs/en/ch01.md:14
+something	8	5	"{""something"": 8}"	docs/en/ch03.md:15
+undo	8	1	"{""undo"": 8}"	docs/en/ch06.md:21
+object	8	3	"{""object"": 4, ""objects"": 4}"	docs/en/ch06.md:35
+kind	8	2	"{""kinds"": 3, ""kind"": 5}"	docs/en/ch06.md:105
+computer	7	3	"{""computers"": 1, ""computer"": 3, ""Computer"": 3}"	docs/en/preface.md:3
+programming	7	4	"{""programming"": 7}"	docs/en/preface.md:3
+quality	7	4	"{""quality"": 7}"	docs/en/preface.md:7
+design skill	7	5	"{""design skill"": 3, ""design skills"": 4}"	docs/en/preface.md:7
+question	7	5	"{""questions"": 4, ""question"": 3}"	docs/en/preface.md:9
+high level	7	3	"{""high level"": 2, ""higher level"": 4, ""higher levels"": 1}"	docs/en/preface.md:11
+team	7	4	"{""teams"": 6, ""team"": 1}"	docs/en/preface.md:13
+suggestion	7	3	"{""suggestions"": 6, ""suggestion"": 1}"	docs/en/preface.md:17
+doesn't	7	6	"{""doesn't"": 7}"	docs/en/preface.md:27
+dependency	7	5	"{""dependencies"": 7}"	docs/en/ch01.md:6
+factor	7	5	"{""factors"": 6, ""factor"": 1}"	docs/en/ch01.md:6
+initial design	7	3	"{""initial design"": 7}"	docs/en/ch01.md:16
+designer	7	4	"{""designers"": 3, ""designer"": 4}"	docs/en/ch01.md:16
+someone	7	5	"{""someone"": 7}"	docs/en/ch01.md:32
+rest	7	6	"{""rest"": 7}"	docs/en/ch02.md:7
+mindset	7	6	"{""mindset"": 7}"	docs/en/ch03.md:3
+range	7	4	"{""range"": 3, ""ranges"": 4}"	docs/en/ch06.md:11
+purpose	7	3	"{""purposes"": 5, ""purpose"": 2}"	docs/en/ch06.md:15
+argument	7	4	"{""argument"": 3, ""arguments"": 4}"	docs/en/ch06.md:35
+user interface code	7	1	"{""user interface code"": 7}"	docs/en/ch06.md:41
+interface code	7	1	"{""interface code"": 7}"	docs/en/ch06.md:41
+value	7	4	"{""value"": 5, ""values"": 2}"	docs/en/ch06.md:75
+driver	7	3	"{""drivers"": 5, ""driver"": 2}"	docs/en/ch06.md:105
+category	7	3	"{""categories"": 3, ""category"": 4}"	docs/en/ch06.md:139
+condition	7	4	"{""conditions"": 4, ""condition"": 3}"	docs/en/ch06.md:153
+variable	7	3	"{""variable"": 5, ""variables"": 2}"	docs/en/ch06.md:155
+failure	7	2	"{""Failures"": 2, ""failure"": 1, ""failures"": 4}"	docs/en/ch10.md:27
+good name	7	2	"{""Good names"": 1, ""good names"": 6}"	docs/en/ch14.md:3
+design principle	6	4	"{""design principles"": 5, ""design principle"": 1}"	docs/en/README.md:9
+discussion	6	4	"{""discussion"": 4, ""discussions"": 2}"	docs/en/preface.md:3
+tool	6	3	"{""tools"": 5, ""tool"": 1}"	docs/en/preface.md:3
+core	6	2	"{""core"": 6}"	docs/en/preface.md:3
+decomposition	6	4	"{""decomposition"": 5, ""Decomposition"": 1}"	docs/en/preface.md:5
+ability	6	4	"{""ability"": 6}"	docs/en/preface.md:7
+fashion	6	5	"{""fashion"": 6}"	docs/en/preface.md:9
+improvement	6	4	"{""improvements"": 4, ""improvement"": 2}"	docs/en/preface.md:9
+review	6	5	"{""reviews"": 5, ""review"": 1}"	docs/en/preface.md:9
+existence	6	6	"{""existence"": 6}"	docs/en/preface.md:11
+variety	6	3	"{""variety"": 6}"	docs/en/preface.md:13
+storage	6	4	"{""storage"": 6}"	docs/en/preface.md:13
+amount	6	6	"{""amount"": 6}"	docs/en/preface.md:13
+don't	6	5	"{""don't"": 3, ""Don't"": 3}"	docs/en/preface.md:17
+thought	6	5	"{""thoughts"": 4, ""thought"": 2}"	docs/en/preface.md:23
+today	6	4	"{""today"": 6}"	docs/en/ch01.md:18
+section	6	4	"{""sections"": 2, ""Section"": 4}"	docs/en/ch01.md:36
+obscurity	6	4	"{""obscurities"": 1, ""obscurity"": 3, ""Obscurity"": 2}"	docs/en/ch02.md:19
+use	6	5	"{""use"": 5, ""Use"": 1}"	docs/en/ch04.md:21
+information hiding	6	4	"{""Information hiding"": 1, ""information hiding"": 5}"	docs/en/ch05.md:25
+hiding	6	4	"{""hiding"": 6}"	docs/en/ch05.md:25
+benefit	6	5	"{""benefits"": 4, ""benefit"": 2}"	docs/en/ch06.md:7
+special-purpose code	6	2	"{""special-purpose code"": 6}"	docs/en/ch06.md:7
+general-purpose code	6	1	"{""general-purpose code"": 6}"	docs/en/ch06.md:7
+decision	6	4	"{""decisions"": 2, ""decision"": 4}"	docs/en/ch06.md:11
+general-purpose interface	6	2	"{""general-purpose interfaces"": 1, ""general-purpose interface"": 5}"	docs/en/ch06.md:15
+type	6	2	"{""type"": 3, ""types"": 3}"	docs/en/ch06.md:21
+view	6	3	"{""views"": 1, ""view"": 5}"	docs/en/ch06.md:21
+backspace key	6	2	"{""backspace key"": 6}"	docs/en/ch06.md:25
+sense	6	2	"{""sense"": 6}"	docs/en/ch06.md:93
+device driver	6	3	"{""device drivers"": 4, ""device driver"": 2}"	docs/en/ch06.md:105
+byte	6	3	"{""bytes"": 5, ""byte"": 1}"	docs/en/ch06.md:157
+impact	6	4	"{""impact"": 6}"	docs/en/ch09.md:41
+good comment	6	2	"{""good comments"": 5, ""better comments"": 1}"	docs/en/ch12.md:7
+consistency	6	1	"{""Consistency"": 5, ""consistency"": 1}"	docs/en/ch17.md:3
+design problem	5	4	"{""design problems"": 5}"	docs/en/README.md:9
+large software	5	5	"{""large software"": 5}"	docs/en/README.md:9
+large software system	5	5	"{""large software systems"": 3, ""large software system"": 2}"	docs/en/README.md:9
+year	5	2	"{""years"": 5}"	docs/en/preface.md:3
+science	5	2	"{""science"": 1, ""Science"": 4}"	docs/en/preface.md:5
+university	5	2	"{""university"": 1, ""University"": 4}"	docs/en/preface.md:5
+addition	5	4	"{""addition"": 5}"	docs/en/preface.md:7
+code review	5	4	"{""code reviews"": 5}"	docs/en/preface.md:9
+i've	5	1	"{""I've"": 5}"	docs/en/preface.md:13
+i'm	5	2	"{""I'm"": 5}"	docs/en/preface.md:17
+software complexity	5	5	"{""software complexity"": 5}"	docs/en/preface.md:17
+mind	5	4	"{""mind"": 4, ""minds"": 1}"	docs/en/ch01.md:4
+life	5	3	"{""life"": 5}"	docs/en/ch01.md:6
+simple design	5	4	"{""simpler designs"": 2, ""simple design"": 2, ""simple designs"": 1}"	docs/en/ch01.md:8
+role	5	2	"{""role"": 5}"	docs/en/ch01.md:14
+concept	5	2	"{""concepts"": 5}"	docs/en/ch01.md:26
+error	5	4	"{""errors"": 3, ""error"": 2}"	docs/en/ch01.md:26
+cognitive load	5	3	"{""cognitive load"": 5}"	docs/en/ch02.md:19
+load	5	3	"{""load"": 5}"	docs/en/ch02.md:19
+more time	5	4	"{""more time"": 5}"	docs/en/ch02.md:19
+good software	5	3	"{""good software"": 5}"	docs/en/ch03.md:3
+solution	5	5	"{""solutions"": 1, ""solution"": 4}"	docs/en/ch03.md:17
+general-purpose approach	5	1	"{""general-purpose approach"": 5}"	docs/en/ch06.md:11
+other hand	5	5	"{""other hand"": 5}"	docs/en/ch06.md:13
+hand	5	5	"{""hand"": 5}"	docs/en/ch06.md:13
+text editor	5	2	"{""text editor"": 5}"	docs/en/ch06.md:21
+operating	5	2	"{""operating"": 4, ""Operating"": 1}"	docs/en/ch06.md:105
+operating system	5	2	"{""operating system"": 4, ""Operating System"": 1}"	docs/en/ch06.md:105
+entry	5	1	"{""entries"": 5}"	docs/en/ch06.md:111
+history list	5	1	"{""history list"": 5}"	docs/en/ch06.md:133
+call	5	5	"{""call"": 4, ""calls"": 1}"	docs/en/ch06.md:137
+form	5	3	"{""form"": 5}"	docs/en/ch06.md:153
+statement	5	3	"{""statements"": 5}"	docs/en/ch06.md:153
+caller	5	4	"{""callers"": 3, ""caller"": 2}"	docs/en/ch07.md:5
+parameter	5	2	"{""parameters"": 4, ""parameter"": 1}"	docs/en/ch08.md:5
+harder	5	3	"{""harder"": 5}"	docs/en/ch09.md:7
+martin	5	2	"{""Martin"": 5}"	docs/en/ch09.md:37
+system's	5	4	"{""system's"": 5}"	docs/en/ch12.md:3
+system's design	5	4	"{""system's design"": 5}"	docs/en/ch12.md:3
+important information	5	3	"{""important information"": 5}"	docs/en/ch13.md:3
+leverage	5	3	"{""leverage"": 5}"	docs/en/ch17.md:3
+award	5	1	"{""awards"": 1, ""Award"": 4}"	docs/en/summary.md:45
+design process	4	3	"{""design process"": 3, ""Design Process"": 1}"	docs/en/README.md:9
+collection	4	4	"{""collection"": 4}"	docs/en/README.md:9
+set	4	4	"{""set"": 4}"	docs/en/README.md:9
+pattern	4	3	"{""patterns"": 2, ""pattern"": 2}"	docs/en/preface.md:3
+computer science	4	2	"{""computer science"": 1, ""Computer Science"": 3}"	docs/en/preface.md:5
+bit	4	4	"{""bit"": 4}"	docs/en/preface.md:7
+infrastructure	4	3	"{""infrastructure"": 4}"	docs/en/preface.md:13
+GUI	4	3	"{""GUI"": 4}"	docs/en/preface.md:13
+email	4	1	"{""email"": 4}"	docs/en/preface.md:19
+reason	4	3	"{""reason"": 2, ""reasons"": 2}"	docs/en/preface.md:25
+ousterhout	4	2	"{""Ousterhout"": 4}"	docs/en/preface.md:29
+beginning	4	4	"{""beginning"": 4}"	docs/en/ch01.md:14
+waterfall	4	1	"{""waterfall"": 4}"	docs/en/ch01.md:14
+waterfall model	4	1	"{""waterfall model"": 4}"	docs/en/ch01.md:14
+model	4	1	"{""model"": 4}"	docs/en/ch01.md:14
+major design	4	2	"{""major design"": 4}"	docs/en/ch01.md:16
+design issue	4	2	"{""design issues"": 3, ""design issue"": 1}"	docs/en/ch01.md:22
+fraction	4	4	"{""fraction"": 4}"	docs/en/ch01.md:22
+important element	4	4	"{""important element"": 1, ""important elements"": 3}"	docs/en/ch01.md:24
+C	4	3	"{""C"": 4}"	docs/en/ch01.md:38
+network	4	4	"{""network"": 4}"	docs/en/ch01.md:38
+low level	4	4	"{""lower level"": 2, ""low level"": 2}"	docs/en/ch02.md:3
+simplicity	4	2	"{""simplicity"": 4}"	docs/en/ch02.md:5
+others	4	4	"{""others"": 4}"	docs/en/ch02.md:5
+assumption	4	3	"{""assumptions"": 3, ""assumption"": 1}"	docs/en/ch02.md:7
+modification	4	3	"{""modifications"": 4}"	docs/en/ch02.md:19
+good software design	4	3	"{""good software design"": 4}"	docs/en/ch03.md:3
+simple interface	4	4	"{""simple interfaces"": 1, ""simplest interface"": 1, ""simple interface"": 2}"	docs/en/ch04.md:21
+specification	4	1	"{""specification"": 4}"	docs/en/ch04.md:23
+information leakage	4	3	"{""information leakage"": 4}"	docs/en/ch05.md:27
+leakage	4	3	"{""leakage"": 4}"	docs/en/ch05.md:27
+knowledge	4	3	"{""knowledge"": 4}"	docs/en/ch05.md:27
+cause	4	3	"{""causes"": 2, ""cause"": 2}"	docs/en/ch06.md:3
+investment mindset	4	4	"{""investment mindset"": 4}"	docs/en/ch06.md:11
+facility	4	2	"{""facilities"": 4}"	docs/en/ch06.md:13
+current need	4	1	"{""current needs"": 4}"	docs/en/ch06.md:17
+memory	4	2	"{""memory"": 4}"	docs/en/ch06.md:23
+specific feature	4	1	"{""specific features"": 4}"	docs/en/ch06.md:25
+deletion	4	2	"{""deletions"": 3, ""deletion"": 1}"	docs/en/ch06.md:35
+large number	4	2	"{""large number"": 4}"	docs/en/ch06.md:41
+delete	4	1	"{""delete"": 4}"	docs/en/ch06.md:41
+string	4	1	"{""string"": 4}"	docs/en/ch06.md:55
+text API	4	1	"{""text API"": 4}"	docs/en/ch06.md:73
+backspace method	4	1	"{""backspace method"": 4}"	docs/en/ch06.md:73
+separation	4	2	"{""separation"": 3, ""Separation"": 1}"	docs/en/ch06.md:85
+single character	4	2	"{""single character"": 3, ""single characters"": 1}"	docs/en/ch06.md:97
+undo redo	4	1	"{""undo redo"": 4}"	docs/en/ch06.md:109
+insertion cursor	4	1	"{""insertion cursor"": 4}"	docs/en/ch06.md:109
+handler	4	2	"{""handlers"": 3, ""handler"": 1}"	docs/en/ch06.md:113
+entity	4	3	"{""entity"": 3, ""entities"": 1}"	docs/en/ch06.md:113
+policy	4	2	"{""policy"": 4}"	docs/en/ch06.md:143
+check	4	2	"{""checks"": 4}"	docs/en/ch06.md:155
+can't	4	3	"{""can't"": 4}"	docs/en/ch06.md:163
+extra work	4	4	"{""extra work"": 4}"	docs/en/ch08.md:3
+administrator	4	2	"{""administrator"": 3, ""administrators"": 1}"	docs/en/ch08.md:5
+manipulation	4	2	"{""manipulation"": 2, ""manipulations"": 2}"	docs/en/ch09.md:16
+high level software	4	1	"{""higher level software"": 4}"	docs/en/ch11.md:9
+level software	4	1	"{""level software"": 4}"	docs/en/ch11.md:9
+smart people	4	1	"{""smart people"": 4}"	docs/en/ch11.md:23
+variable name	4	2	"{""variable names"": 1, ""variable name"": 3}"	docs/en/ch12.md:7
+fun	4	2	"{""fun"": 4}"	docs/en/ch12.md:7
+trend	4	1	"{""trends"": 1, ""trend"": 3}"	docs/en/ch19.md:3
+hypothesis	4	1	"{""hypothesis"": 4}"	docs/en/ch21.md:15
+conversation	3	1	"{""conversation"": 2, ""conversations"": 1}"	docs/en/preface.md:3
+state	3	2	"{""state"": 3}"	docs/en/preface.md:3
+problem decomposition	3	1	"{""problem decomposition"": 2, ""Problem decomposition"": 1}"	docs/en/preface.md:5
+task	3	3	"{""task"": 2, ""tasks"": 1}"	docs/en/preface.md:5
+day	3	3	"{""day"": 1, ""days"": 2}"	docs/en/preface.md:5
+loop	3	3	"{""loops"": 3}"	docs/en/preface.md:5
+advantage	3	3	"{""advantage"": 3}"	docs/en/preface.md:7
+many people	3	2	"{""Many people"": 2, ""many people"": 1}"	docs/en/preface.md:7
+talent	3	2	"{""talent"": 2, ""Talent"": 1}"	docs/en/preface.md:7
+cannot	3	3	"{""cannot"": 3}"	docs/en/preface.md:7
+CS	3	1	"{""CS"": 3}"	docs/en/preface.md:9
+writing	3	2	"{""writing"": 3}"	docs/en/preface.md:9
+feedback	3	1	"{""feedback"": 3}"	docs/en/preface.md:9
+reading	3	3	"{""reading"": 3}"	docs/en/preface.md:13
+interactive editor	3	2	"{""interactive editors"": 1, ""interactive editor"": 2}"	docs/en/preface.md:13
+design technique	3	3	"{""design techniques"": 3}"	docs/en/preface.md:13
+address	3	1	"{""address"": 3}"	docs/en/preface.md:19
+group	3	2	"{""Group"": 2, ""groups"": 1}"	docs/en/preface.md:23
+effort	3	3	"{""efforts"": 1, ""effort"": 2}"	docs/en/ch01.md:8
+modular design	3	2	"{""modular design"": 3}"	docs/en/ch01.md:12
+physical system	3	1	"{""physical systems"": 3}"	docs/en/ch01.md:14
+end	3	3	"{""end"": 3}"	docs/en/ch01.md:14
+design change	3	1	"{""design changes"": 3}"	docs/en/ch01.md:16
+incremental approach	3	2	"{""incremental approach"": 3}"	docs/en/ch01.md:18
+software developer	3	1	"{""software developer"": 1, ""software developers"": 2}"	docs/en/ch01.md:22
+opportunity	3	3	"{""opportunities"": 3}"	docs/en/ch01.md:22
+development process	3	3	"{""development process"": 3}"	docs/en/ch01.md:26
+best design	3	2	"{""best design"": 3}"	docs/en/ch01.md:26
+new design	3	2	"{""new design"": 3}"	docs/en/ch01.md:32
+look	3	3	"{""look"": 3}"	docs/en/ch01.md:34
+philosophy	3	3	"{""philosophy"": 3}"	docs/en/ch02.md:5
+strategic approach	3	1	"{""strategic approach"": 3}"	docs/en/ch03.md:3
+clean design	3	2	"{""clean designs"": 1, ""clean design"": 2}"	docs/en/ch03.md:3
+crunch	3	1	"{""crunch"": 3}"	docs/en/ch03.md:17
+overall complexity	3	3	"{""overall complexity"": 3}"	docs/en/ch04.md:3
+deep module	3	1	"{""deep modules"": 3}"	docs/en/ch05.md:3
+path	3	3	"{""path"": 2, ""paths"": 1}"	docs/en/ch05.md:27
+communication	3	3	"{""Communications"": 1, ""communication"": 2}"	docs/en/ch05.md:29
+ACM	3	2	"{""ACM"": 3}"	docs/en/ch05.md:29
+us	3	1	"{""uses"": 3}"	docs/en/ch06.md:11
+student project	3	1	"{""student projects"": 3}"	docs/en/ch06.md:15
+new position	3	1	"{""new position"": 3}"	docs/en/ch06.md:61
+general-purpose text	3	1	"{""general-purpose text"": 3}"	docs/en/ch06.md:73
+new code	3	2	"{""new code"": 3}"	docs/en/ch06.md:73
+specialized code	3	1	"{""specialized code"": 3}"	docs/en/ch06.md:101
+thousand	3	3	"{""thousands"": 3}"	docs/en/ch06.md:105
+secondary storage	3	2	"{""secondary storage"": 3}"	docs/en/ch06.md:105
+secondary storage device	3	2	"{""secondary storage devices"": 2, ""secondary storage device"": 1}"	docs/en/ch06.md:105
+storage device	3	2	"{""storage devices"": 2, ""storage device"": 1}"	docs/en/ch06.md:105
+deleted text	3	1	"{""deleted text"": 3}"	docs/en/ch06.md:109
+general-purpose mechanism	3	1	"{""general-purpose mechanism"": 3}"	docs/en/ch06.md:113
+nothing	3	2	"{""nothing"": 3}"	docs/en/ch06.md:113
+separate class	3	2	"{""separate class"": 3}"	docs/en/ch06.md:115
+text insertion	3	1	"{""text insertion"": 2, ""text insertions"": 1}"	docs/en/ch06.md:133
+redo method	3	1	"{""redo methods"": 3}"	docs/en/ch06.md:133
+fence	3	1	"{""fences"": 2, ""fence"": 1}"	docs/en/ch06.md:137
+design decision	3	3	"{""design decision"": 3}"	docs/en/ch06.md:147
+undo code	3	1	"{""undo code"": 3}"	docs/en/ch06.md:149
+body	3	2	"{""bodies"": 2, ""body"": 1}"	docs/en/ch06.md:153
+low layer	3	1	"{""lower layers"": 1, ""lower layer"": 1, ""lowest layer"": 1}"	docs/en/ch07.md:3
+different abstraction	3	2	"{""different abstraction"": 2, ""different abstractions"": 1}"	docs/en/ch07.md:3
+cache	3	2	"{""cache"": 2, ""caches"": 1}"	docs/en/ch07.md:5
+packet	3	1	"{""packets"": 3}"	docs/en/ch07.md:6
+size	3	3	"{""size"": 3}"	docs/en/ch07.md:6
+different layer	3	2	"{""different layer"": 1, ""different layers"": 1, ""Different layers"": 1}"	docs/en/ch07.md:24
+deal	3	2	"{""deal"": 1, ""deals"": 2}"	docs/en/ch08.md:3
+configuration	3	2	"{""configuration"": 3}"	docs/en/ch08.md:5
+configuration parameter	3	2	"{""configuration parameters"": 2, ""configuration parameter"": 1}"	docs/en/ch08.md:5
+document	3	2	"{""document"": 3}"	docs/en/ch09.md:14
+robert	3	2	"{""Robert"": 3}"	docs/en/ch09.md:37
+length	3	1	"{""length"": 3}"	docs/en/ch09.md:37
+option	3	2	"{""options"": 2, ""option"": 1}"	docs/en/ch11.md:3
+first idea	3	1	"{""first idea"": 2, ""first ideas"": 1}"	docs/en/ch11.md:5
+possibility	3	1	"{""possibilities"": 1, ""possibility"": 2}"	docs/en/ch11.md:5
+line-oriented interface	3	1	"{""line-oriented interface"": 3}"	docs/en/ch11.md:5
+text manipulation	3	1	"{""text manipulations"": 2, ""text manipulation"": 1}"	docs/en/ch11.md:17
+extra time	3	2	"{""extra time"": 3}"	docs/en/ch11.md:21
+first time	3	3	"{""first time"": 3}"	docs/en/ch11.md:25
+many developer	3	2	"{""Many developers"": 2, ""many developers"": 1}"	docs/en/ch12.md:5
+excuse	3	1	"{""excuses"": 3}"	docs/en/ch12.md:7
+good code	3	3	"{""Good code"": 1, ""better code"": 2}"	docs/en/ch12.md:11
+many thing	3	2	"{""many things"": 3}"	docs/en/ch13.md:5
+isn't	3	3	"{""isn't"": 3}"	docs/en/ch13.md:7
+stage	3	2	"{""stages"": 2, ""stage"": 1}"	docs/en/ch16.md:3
+proposal	3	1	"{""proposal"": 2, ""proposals"": 1}"	docs/en/ch19.md:19
+doesn't matter	3	2	"{""doesn't matter"": 3}"	docs/en/ch21.md:3
+constraint	3	1	"{""constraints"": 3}"	docs/en/ch21.md:9
+pp	3	1	"{""pp"": 3}"	docs/en/summary.md:12
+topic	2	2	"{""topic"": 2}"	docs/en/README.md:9
+fundamental problem	2	2	"{""fundamental problem"": 2}"	docs/en/README.md:9
+agile	2	2	"{""agile"": 2}"	docs/en/preface.md:3
+agile development	2	2	"{""agile development"": 2}"	docs/en/preface.md:3
+development tool	2	2	"{""development tools"": 2}"	docs/en/preface.md:3
+debugger	2	1	"{""debuggers"": 2}"	docs/en/preface.md:3
+version	2	2	"{""version"": 2}"	docs/en/preface.md:3
+control	2	2	"{""control"": 2}"	docs/en/preface.md:3
+analysis	2	2	"{""analysis"": 1, ""Analysis"": 1}"	docs/en/preface.md:3
+object-oriented programming	2	1	"{""object-oriented programming"": 2}"	docs/en/preface.md:3
+david	2	2	"{""David"": 2}"	docs/en/preface.md:3
+david parnas	2	2	"{""David Parnas"": 2}"	docs/en/preface.md:3
+parnas	2	2	"{""Parnas"": 2}"	docs/en/preface.md:3
+paper	2	1	"{""paper"": 2}"	docs/en/preface.md:3
+criterion	2	2	"{""Criteria"": 2}"	docs/en/preface.md:3
+single class	2	2	"{""single class"": 2}"	docs/en/preface.md:5
+productivity	2	2	"{""productivity"": 2}"	docs/en/preface.md:7
+great programmer	2	1	"{""great programmers"": 2}"	docs/en/preface.md:7
+practice	2	1	"{""practice"": 2}"	docs/en/preface.md:7
+only way	2	2	"{""only way"": 2}"	docs/en/preface.md:9
+stanford	2	2	"{""Stanford"": 2}"	docs/en/preface.md:9
+stanford university	2	2	"{""Stanford University"": 2}"	docs/en/preface.md:9
+series	2	2	"{""series"": 2}"	docs/en/preface.md:9
+draft	2	1	"{""draft"": 1, ""drafts"": 1}"	docs/en/preface.md:9
+scratch	2	1	"{""scratch"": 2}"	docs/en/preface.md:9
+software design class	2	2	"{""software design class"": 2}"	docs/en/preface.md:11
+design class	2	2	"{""design class"": 2}"	docs/en/preface.md:11
+define	2	2	"{""Define"": 2}"	docs/en/preface.md:11
+abstract	2	2	"{""abstract"": 2}"	docs/en/preface.md:11
+answer	2	2	"{""answers"": 1, ""answer"": 1}"	docs/en/preface.md:13
+storage system	2	2	"{""storage systems"": 2}"	docs/en/preface.md:13
+scripting language	2	2	"{""scripting language"": 2}"	docs/en/preface.md:13
+other people	2	1	"{""other people"": 2}"	docs/en/preface.md:13
+thread	2	2	"{""threads"": 2}"	docs/en/preface.md:15
+coding	2	2	"{""coding"": 2}"	docs/en/preface.md:15
+long run	2	2	"{""long run"": 2}"	docs/en/preface.md:17
+run	2	2	"{""run"": 2}"	docs/en/preface.md:17
+opinion	2	2	"{""opinion"": 2}"	docs/en/preface.md:17
+understanding	2	2	"{""understanding"": 2}"	docs/en/preface.md:17
+future edition	2	1	"{""future editions"": 2}"	docs/en/preface.md:17
+edition	2	1	"{""editions"": 2}"	docs/en/preface.md:17
+email address	2	1	"{""email address"": 2}"	docs/en/preface.md:23
+google	2	1	"{""Google"": 2}"	docs/en/preface.md:23
+google group	2	1	"{""Google Group"": 2}"	docs/en/preface.md:23
+page	2	2	"{""page"": 2}"	docs/en/preface.md:25
+overall goal	2	2	"{""overall goal"": 1, ""overall goals"": 1}"	docs/en/preface.md:27
+i'd	2	2	"{""I'd"": 2}"	docs/en/preface.md:27
+criticism	2	2	"{""criticisms"": 1, ""criticism"": 1}"	docs/en/preface.md:29
+john	2	2	"{""John"": 2}"	docs/en/preface.md:29
+limitation	2	1	"{""limitations"": 1, ""limitation"": 1}"	docs/en/ch01.md:4
+physic	2	2	"{""physics"": 1, ""Physics"": 1}"	docs/en/ch01.md:4
+world	2	1	"{""worlds"": 1, ""world"": 1}"	docs/en/ch01.md:4
+more feature	2	1	"{""more features"": 2}"	docs/en/ch01.md:6
+lead	2	2	"{""leads"": 1, ""lead"": 1}"	docs/en/ch01.md:6
+decade	2	2	"{""decades"": 2}"	docs/en/ch01.md:8
+limit	2	1	"{""limit"": 1, ""limits"": 1}"	docs/en/ch01.md:8
+powerful system	2	1	"{""powerful systems"": 2}"	docs/en/ch01.md:8
+consistent fashion	2	2	"{""consistent fashion"": 2}"	docs/en/ch01.md:10
+second approach	2	2	"{""second approach"": 2}"	docs/en/ch01.md:12
+object-oriented language	2	1	"{""object-oriented language"": 2}"	docs/en/ch01.md:12
+other module	2	2	"{""other modules"": 2}"	docs/en/ch01.md:12
+building	2	2	"{""buildings"": 1, ""building"": 1}"	docs/en/ch01.md:14
+bridge	2	1	"{""bridges"": 1, ""bridge"": 1}"	docs/en/ch01.md:14
+engineering	2	2	"{""engineering"": 1, ""Engineering"": 1}"	docs/en/ch01.md:14
+extreme	2	1	"{""extreme"": 2}"	docs/en/ch01.md:14
+requirement	2	2	"{""requirements"": 2}"	docs/en/ch01.md:14
+definition	2	2	"{""definition"": 2}"	docs/en/ch01.md:14
+design phase	2	2	"{""design phase"": 2}"	docs/en/ch01.md:14
+anything	2	2	"{""anything"": 2}"	docs/en/ch01.md:16
+many problem	2	2	"{""many problems"": 2}"	docs/en/ch01.md:16
+major design change	2	1	"{""major design changes"": 2}"	docs/en/ch01.md:16
+most software	2	2	"{""most software"": 1, ""Most software"": 1}"	docs/en/ch01.md:18
+subset	2	1	"{""subset"": 2}"	docs/en/ch01.md:18
+incremental	2	1	"{""Incremental"": 2}"	docs/en/ch01.md:22
+incremental development	2	1	"{""Incremental development"": 2}"	docs/en/ch01.md:22
+design improvement	2	2	"{""design improvements"": 2}"	docs/en/ch01.md:22
+lifetime	2	2	"{""lifetime"": 2}"	docs/en/ch01.md:24
+mean	2	2	"{""mean"": 1, ""means"": 1}"	docs/en/ch01.md:26
+unnecessary complexity	2	2	"{""unnecessary complexity"": 2}"	docs/en/ch01.md:26
+software development process	2	2	"{""software development process"": 2}"	docs/en/ch01.md:26
+design alternative	2	1	"{""design alternatives"": 2}"	docs/en/ch01.md:26
+exploration	2	2	"{""exploration"": 1, ""explorations"": 1}"	docs/en/ch01.md:26
+challenge	2	2	"{""challenge"": 2}"	docs/en/ch01.md:30
+someone else's	2	2	"{""someone else's"": 2}"	docs/en/ch01.md:32
+someone else's code	2	2	"{""someone else's code"": 2}"	docs/en/ch01.md:32
+else's	2	2	"{""else's"": 2}"	docs/en/ch01.md:32
+else's code	2	2	"{""else's code"": 2}"	docs/en/ch01.md:32
+design idea	2	1	"{""design idea"": 1, ""design ideas"": 1}"	docs/en/ch01.md:36
+balance	2	2	"{""balance"": 2}"	docs/en/ch01.md:36
+good thing	2	2	"{""good thing"": 2}"	docs/en/ch01.md:36
+java	2	2	"{""Java"": 2}"	docs/en/ch01.md:38
+other domain	2	2	"{""other domains"": 2}"	docs/en/ch01.md:38
+domain	2	2	"{""domains"": 2}"	docs/en/ch01.md:38
+service	2	2	"{""services"": 2}"	docs/en/ch01.md:38
+discus	2	2	"{""discuss"": 2}"	docs/en/ch01.md:40
+first step	2	2	"{""first step"": 2}"	docs/en/ch02.md:3
+step	2	2	"{""step"": 2}"	docs/en/ch02.md:3
+good choice	2	2	"{""good choices"": 1, ""better choices"": 1}"	docs/en/ch02.md:5
+different approach	2	2	"{""different approach"": 1, ""different approaches"": 1}"	docs/en/ch02.md:5
+foundation	2	2	"{""foundation"": 1, ""Foundation"": 1}"	docs/en/ch02.md:7
+high cognitive load	2	2	"{""high cognitive load"": 2}"	docs/en/ch02.md:19
+unknown unknown	2	2	"{""unknown unknowns"": 2}"	docs/en/ch02.md:19
+unknown	2	2	"{""unknowns"": 2}"	docs/en/ch02.md:19
+new feature	2	2	"{""new feature"": 2}"	docs/en/ch02.md:19
+tactical approach	2	1	"{""tactical approach"": 2}"	docs/en/ch03.md:3
+easy	2	2	"{""easy"": 2}"	docs/en/ch03.md:17
+small investment	2	2	"{""small investments"": 2}"	docs/en/ch03.md:17
+important issue	2	2	"{""important issue"": 2}"	docs/en/ch04.md:21
+research	2	2	"{""research"": 2}"	docs/en/ch04.md:23
+specification language	2	1	"{""specification language"": 2}"	docs/en/ch04.md:23
+formal specification	2	1	"{""formal specification"": 2}"	docs/en/ch04.md:23
+deeper	2	2	"{""deeper"": 2}"	docs/en/ch05.md:25
+module doesn't	2	2	"{""module doesn't"": 2}"	docs/en/ch05.md:25
+temporal decomposition	2	2	"{""temporal decomposition"": 1, ""Temporal Decomposition"": 1}"	docs/en/ch05.md:27
+shallow module	2	2	"{""shallow modules"": 1, ""Shallow Module"": 1}"	docs/en/ch05.md:27
+software design course	2	1	"{""software design course"": 2}"	docs/en/ch06.md:3
+design course	2	1	"{""design course"": 2}"	docs/en/ch06.md:3
+generality	2	1	"{""generality"": 2}"	docs/en/ch06.md:3
+different level	2	2	"{""different levels"": 1, ""different level"": 1}"	docs/en/ch06.md:5
+apis	2	1	"{""APIs"": 2}"	docs/en/ch06.md:5
+edge	2	1	"{""edge"": 2}"	docs/en/ch06.md:5
+particular problem	2	2	"{""particular problem"": 2}"	docs/en/ch06.md:13
+today's	2	1	"{""today's"": 2}"	docs/en/ch06.md:13
+today's need	2	1	"{""today's needs"": 2}"	docs/en/ch06.md:13
+special-purpose approach	2	1	"{""special-purpose approach"": 2}"	docs/en/ch06.md:13
+general-purpose class	2	1	"{""general-purpose classes"": 1, ""general-purpose class"": 1}"	docs/en/ch06.md:15
+less code	2	1	"{""less code"": 2}"	docs/en/ch06.md:15
+other purpose	2	1	"{""other purposes"": 2}"	docs/en/ch06.md:15
+new module	2	2	"{""new modules"": 1, ""new module"": 1}"	docs/en/ch06.md:17
+phrase	2	2	"{""phrase"": 2}"	docs/en/ch06.md:17
+GUI text	2	2	"{""GUI text"": 2}"	docs/en/ch06.md:21
+GUI text editor	2	2	"{""GUI text editor"": 2}"	docs/en/ch06.md:21
+window	2	1	"{""windows"": 1, ""window"": 1}"	docs/en/ch06.md:21
+many	2	1	"{""Many"": 2}"	docs/en/ch06.md:23
+delete key	2	1	"{""delete key"": 2}"	docs/en/ch06.md:25
+cursor position	2	1	"{""cursor position"": 2}"	docs/en/ch06.md:35
+user interface operation	2	1	"{""user interface operation"": 2}"	docs/en/ch06.md:41
+interface operation	2	1	"{""interface operation"": 2}"	docs/en/ch06.md:41
+new user interface	2	1	"{""new user interface"": 1, ""New user interface"": 1}"	docs/en/ch06.md:43
+new method	2	1	"{""new method"": 1, ""new methods"": 1}"	docs/en/ch06.md:43
+class design	2	1	"{""class design"": 2}"	docs/en/ch06.md:43
+specialized approach	2	1	"{""specialized approach"": 2}"	docs/en/ch06.md:43
+numchars	2	1	"{""numChars"": 2}"	docs/en/ch06.md:61
+specialized text	2	1	"{""specialized text"": 2}"	docs/en/ch06.md:73
+old code	2	1	"{""old code"": 2}"	docs/en/ch06.md:73
+user interface module	2	1	"{""user interface module"": 2}"	docs/en/ch06.md:73
+interface module	2	1	"{""interface module"": 2}"	docs/en/ch06.md:73
+special-purpose method	2	1	"{""special-purpose methods"": 2}"	docs/en/ch06.md:73
+small number	2	1	"{""smaller number"": 1, ""small number"": 1}"	docs/en/ch06.md:73
+occurrence	2	1	"{""occurrences"": 1, ""occurrence"": 1}"	docs/en/ch06.md:75
+user interface class	2	1	"{""user interface classes"": 1, ""user interface class"": 1}"	docs/en/ch06.md:85
+interface class	2	1	"{""interface classes"": 1, ""interface class"": 1}"	docs/en/ch06.md:85
+good information	2	1	"{""better information"": 2}"	docs/en/ch06.md:85
+good information hiding	2	1	"{""better information hiding"": 2}"	docs/en/ch06.md:85
+specific	2	1	"{""specifics"": 2}"	docs/en/ch06.md:85
+user interface developer	2	1	"{""user interface developers"": 2}"	docs/en/ch06.md:87
+interface developer	2	1	"{""interface developers"": 2}"	docs/en/ch06.md:87
+capability	2	2	"{""capabilities"": 2}"	docs/en/ch06.md:93
+general-purpose method	2	1	"{""general-purpose methods"": 1, ""general-purpose method"": 1}"	docs/en/ch06.md:93
+many situation	2	2	"{""many situations"": 2}"	docs/en/ch06.md:95
+simple	2	2	"{""simple"": 2}"	docs/en/ch06.md:97
+additional code	2	2	"{""additional code"": 2}"	docs/en/ch06.md:97
+higher-level code	2	1	"{""higher-level code"": 2}"	docs/en/ch06.md:97
+software stack	2	2	"{""software stack"": 2}"	docs/en/ch06.md:101
+stack	2	2	"{""stack"": 2}"	docs/en/ch06.md:101
+upwards	2	1	"{""upwards"": 2}"	docs/en/ch06.md:103
+best approach	2	2	"{""best approach"": 2}"	docs/en/ch06.md:105
+hundred	2	2	"{""hundreds"": 2}"	docs/en/ch06.md:105
+different device	2	1	"{""different device"": 2}"	docs/en/ch06.md:105
+device type	2	1	"{""device types"": 2}"	docs/en/ch06.md:105
+device characteristic	2	1	"{""device characteristics"": 2}"	docs/en/ch06.md:105
+characteristic	2	1	"{""characteristics"": 2}"	docs/en/ch06.md:105
+main operating	2	1	"{""main operating"": 2}"	docs/en/ch06.md:105
+main operating system	2	1	"{""main operating system"": 2}"	docs/en/ch06.md:105
+editor project	2	1	"{""editor project"": 2}"	docs/en/ch06.md:109
+different place	2	1	"{""different place"": 2}"	docs/en/ch06.md:109
+visible	2	1	"{""visible"": 2}"	docs/en/ch06.md:109
+undo mechanism	2	1	"{""undo mechanism"": 2}"	docs/en/ch06.md:111
+undo list	2	1	"{""undo list"": 2}"	docs/en/ch06.md:111
+other thing	2	2	"{""other things"": 2}"	docs/en/ch06.md:111
+redo operation	2	1	"{""redo operations"": 2}"	docs/en/ch06.md:113
+forth	2	2	"{""forth"": 2}"	docs/en/ch06.md:113
+single operation	2	2	"{""single operation"": 2}"	docs/en/ch06.md:133
+location	2	1	"{""location"": 2}"	docs/en/ch06.md:133
+backwards	2	1	"{""backwards"": 2}"	docs/en/ch06.md:133
+response	2	2	"{""response"": 2}"	docs/en/ch06.md:133
+particular kind	2	1	"{""particular kind"": 1, ""particular kinds"": 1}"	docs/en/ch06.md:135
+undoableinsert	2	1	"{""UndoableInsert"": 2}"	docs/en/ch06.md:135
+request	2	2	"{""request"": 2}"	docs/en/ch06.md:137
+general-purpose part	2	1	"{""general-purpose part"": 2}"	docs/en/ch06.md:147
+special-purpose part	2	1	"{""special-purpose parts"": 2}"	docs/en/ch06.md:147
+context	2	2	"{""context"": 1, ""contexts"": 1}"	docs/en/ch06.md:153
+method body	2	2	"{""method bodies"": 2}"	docs/en/ch06.md:153
+normal case	2	2	"{""normal case"": 1, ""normal cases"": 1}"	docs/en/ch06.md:153
+screen	2	1	"{""screen"": 2}"	docs/en/ch06.md:155
+notion	2	2	"{""notion"": 2}"	docs/en/ch06.md:155
+special-case check	2	2	"{""special-case checks"": 2}"	docs/en/ch06.md:157
+single line	2	2	"{""single line"": 1, ""single lines"": 1}"	docs/en/ch06.md:157
+portion	2	1	"{""portion"": 2}"	docs/en/ch06.md:157
+obvious code	2	2	"{""obvious code"": 1, ""Obvious code"": 1}"	docs/en/ch06.md:163
+method call	2	2	"{""method call"": 1, ""method calls"": 1}"	docs/en/ch07.md:3
+file system	2	1	"{""file system"": 2}"	docs/en/ch07.md:5
+disk	2	2	"{""disk"": 2}"	docs/en/ch07.md:5
+disk block	2	2	"{""disk blocks"": 1, ""disk block"": 1}"	docs/en/ch07.md:5
+machine	2	1	"{""machine"": 1, ""machines"": 1}"	docs/en/ch07.md:6
+pass-through method	2	2	"{""pass-through methods"": 1, ""Pass-Through Method"": 1}"	docs/en/ch07.md:24
+simple implementation	2	2	"{""simple implementation"": 2}"	docs/en/ch08.md:3
+easy problem	2	2	"{""easy problems"": 1, ""easy problem"": 1}"	docs/en/ch08.md:5
+handle	2	2	"{""handle"": 1, ""handles"": 1}"	docs/en/ch08.md:5
+system administrator	2	1	"{""system administrator"": 2}"	docs/en/ch08.md:5
+O	2	2	"{""O"": 2}"	docs/en/ch09.md:3
+previous chapter	2	2	"{""previous chapters"": 1, ""Previous chapters"": 1}"	docs/en/ch09.md:3
+more interface	2	1	"{""more interfaces"": 2}"	docs/en/ch09.md:7
+subdivided component	2	1	"{""subdivided components"": 2}"	docs/en/ch09.md:9
+block cache	2	1	"{""block cache"": 1, ""block caches"": 1}"	docs/en/ch09.md:15
+hash table	2	1	"{""hash table"": 1, ""hash tables"": 1}"	docs/en/ch09.md:15
+table	2	1	"{""table"": 1, ""tables"": 1}"	docs/en/ch09.md:15
+fall	2	1	"{""fall"": 2}"	docs/en/ch09.md:16
+book clean	2	2	"{""book Clean"": 2}"	docs/en/ch09.md:37
+clean	2	2	"{""Clean"": 2}"	docs/en/ch09.md:37
+robert martin	2	2	"{""Robert Martin"": 2}"	docs/en/ch09.md:37
+short function	2	1	"{""shorter functions"": 1, ""short functions"": 1}"	docs/en/ch09.md:41
+much impact	2	2	"{""much impact"": 2}"	docs/en/ch09.md:41
+large function	2	1	"{""larger function"": 2}"	docs/en/ch09.md:41
+depth	2	1	"{""Depth"": 1, ""depth"": 1}"	docs/en/ch09.md:41
+clean code	2	2	"{""Clean Code"": 2}"	docs/en/ch09.md:47
+exception handling	2	1	"{""Exception handling"": 1, ""exception handling"": 1}"	docs/en/ch10.md:3
+handling	2	1	"{""handling"": 2}"	docs/en/ch10.md:3
+source	2	1	"{""sources"": 2}"	docs/en/ch10.md:3
+overall lesson	2	2	"{""overall lesson"": 2}"	docs/en/ch10.md:3
+lesson	2	2	"{""lesson"": 2}"	docs/en/ch10.md:3
+semantics	2	1	"{""semantics"": 2}"	docs/en/ch10.md:3
+make	2	2	"{""make"": 1, ""Make"": 1}"	docs/en/ch10.md:25
+likelihood	2	2	"{""likelihood"": 2}"	docs/en/ch10.md:25
+error condition	2	2	"{""error conditions"": 2}"	docs/en/ch10.md:25
+significant impact	2	2	"{""significant impact"": 2}"	docs/en/ch10.md:25
+system complexity	2	2	"{""system complexity"": 2}"	docs/en/ch10.md:25
+testing	2	2	"{""Testing"": 1, ""testing"": 1}"	docs/en/ch10.md:27
+production	2	2	"{""Production"": 1, ""production"": 1}"	docs/en/ch10.md:27
+system design	2	2	"{""System Design"": 1, ""system design"": 1}"	docs/en/ch10.md:27
+multiple option	2	2	"{""multiple options"": 2}"	docs/en/ch11.md:3
+consideration	2	2	"{""consideration"": 1, ""considerations"": 1}"	docs/en/ch11.md:9
+ease	2	2	"{""ease"": 2}"	docs/en/ch11.md:9
+character-oriented interface	2	1	"{""character-oriented interface"": 2}"	docs/en/ch11.md:9
+text example	2	1	"{""text example"": 2}"	docs/en/ch11.md:11
+text interface	2	1	"{""text interfaces"": 1, ""text interface"": 1}"	docs/en/ch11.md:11
+character-oriented approach	2	1	"{""character-oriented approach"": 1, ""character-oriented approaches"": 1}"	docs/en/ch11.md:13
+additional text	2	1	"{""additional text"": 2}"	docs/en/ch11.md:17
+additional text manipulation	2	1	"{""additional text manipulations"": 2}"	docs/en/ch11.md:17
+design-it-twice principle	2	1	"{""design-it-twice principle"": 2}"	docs/en/ch11.md:19
+buffer	2	2	"{""buffer"": 1, ""Buffer"": 1}"	docs/en/ch11.md:19
+important thing	2	2	"{""important things"": 2}"	docs/en/ch11.md:19
+multiple design	2	1	"{""multiple designs"": 2}"	docs/en/ch11.md:19
+try	2	2	"{""try"": 2}"	docs/en/ch11.md:23
+drudge	2	2	"{""drudge"": 2}"	docs/en/ch12.md:5
+drudge work	2	2	"{""drudge work"": 2}"	docs/en/ch12.md:5
+programming language	2	2	"{""programming languages"": 1, ""programming language"": 1}"	docs/en/ch12.md:30
+interface comment	2	2	"{""interface comment"": 2}"	docs/en/ch12.md:36
+well-written comment	2	1	"{""well-written comment"": 1, ""Well-written comments"": 1}"	docs/en/ch12.md:36
+good designer	2	2	"{""good designers"": 1, ""good designer"": 1}"	docs/en/ch12.md:38
+what's	2	2	"{""What's"": 1, ""what's"": 1}"	docs/en/ch12.md:38
+pair	2	2	"{""pair"": 1, ""Pair"": 1}"	docs/en/ch13.md:5
+index	2	1	"{""indices"": 2}"	docs/en/ch13.md:5
+second	2	2	"{""second"": 1, ""Second"": 1}"	docs/en/ch13.md:7
+declaration	2	1	"{""declarations"": 2}"	docs/en/ch13.md:7
+aspect	2	2	"{""aspects"": 2}"	docs/en/ch14.md:3
+name choice	2	1	"{""name choices"": 1, ""Name choice"": 1}"	docs/en/ch14.md:3
+mediocre	2	1	"{""mediocre"": 2}"	docs/en/ch14.md:3
+mediocre name	2	1	"{""mediocre name"": 1, ""mediocre names"": 1}"	docs/en/ch14.md:3
+first guess	2	2	"{""first guess"": 1, ""first guesses"": 1}"	docs/en/ch14.md:17
+guess	2	2	"{""guess"": 1, ""guesses"": 1}"	docs/en/ch14.md:17
+much thought	2	2	"{""much thought"": 2}"	docs/en/ch14.md:17
+convention	2	2	"{""conventions"": 2}"	docs/en/ch17.md:15
+meaning	2	2	"{""meaning"": 2}"	docs/en/ch18.md:5
+energy	2	2	"{""energy"": 2}"	docs/en/ch18.md:5
+nonobvious code	2	2	"{""nonobvious code"": 1, ""Nonobvious Code"": 1}"	docs/en/ch18.md:5
+obviousness	2	1	"{""obviousness"": 2}"	docs/en/ch18.md:7
+raftclient	2	1	"{""RaftClient"": 2}"	docs/en/ch18.md:15
+new software	2	2	"{""new software"": 2}"	docs/en/ch19.md:19
+high performance	2	1	"{""high performance"": 2}"	docs/en/ch20.md:3
+heart	2	1	"{""heart"": 2}"	docs/en/ch21.md:5
+external constraint	2	1	"{""external constraints"": 2}"	docs/en/ch21.md:9
+invariant	2	1	"{""invariant"": 2}"	docs/en/ch21.md:11
+clue	2	1	"{""clues"": 2}"	docs/en/ch21.md:15
+common usage	2	2	"{""common usage"": 2}"	docs/en/ch21.md:19
+usage	2	2	"{""usage"": 2}"	docs/en/ch21.md:19
+interface documentation	2	2	"{""interface documentation"": 2}"	docs/en/ch21.md:23
+repetition	2	2	"{""repetition"": 1, ""Repetition"": 1}"	docs/en/ch21.md:23
+distinction	2	1	"{""distinction"": 2}"	docs/en/ch21.md:31
+good taste	2	1	"{""good taste"": 2}"	docs/en/ch21.md:41
+taste	2	1	"{""taste"": 2}"	docs/en/ch21.md:41
+implementation documentation	2	2	"{""implementation documentation"": 1, ""Implementation Documentation"": 1}"	docs/en/ch22.md:3
+hard	2	1	"{""Hard"": 2}"	docs/en/summary.md:39
+professor	2	1	"{""Professor"": 2}"	docs/en/summary.md:45
+U	2	1	"{""U"": 2}"	docs/en/summary.md:45
+berkeley	2	1	"{""Berkeley"": 2}"	docs/en/summary.md:45
+national	2	1	"{""National"": 2}"	docs/en/summary.md:45

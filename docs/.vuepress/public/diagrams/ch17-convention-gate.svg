@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 367" role="img" aria-labelledby="ch17-convention-gate-title ch17-convention-gate-desc">
+  <title id="ch17-convention-gate-title">作者项目中自动检查与手动修复的提交循环</title>
+  <desc id="ch17-convention-gate-desc">在作者的项目中，提交前自动检查修改文件，不含回车才放行；含回车则中止，开发者另行手动运行 CRLF 到 LF 修复，再返回检查。这条具体约定不是所有仓库的通则。</desc>
+  <defs><marker id="ch17-convention-gate-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="367" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="21" font-weight="600">这个项目如何拦住违规提交？</text><text x="24" y="61" font-size="14">17.2 · 作者项目案例：提交前自动检查；CR 回车，LF 换行</text>
+    <rect x="24" y="107" width="147" height="60" rx="5" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="97" y="143" text-anchor="middle">修改过的文件</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch17-convention-gate-arrow)"><path d="M171 137H233"/><path d="M437 137H526"/><path d="M335 190V235"/><path d="M236 267H204V137H233"/></g>
+    <path d="M335 84L437 137L335 190L233 137Z" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="335" y="143" text-anchor="middle">含 CR？</text>
+    <text x="478" y="125">否</text><text x="348" y="217">是</text>
+    <rect x="526" y="107" width="130" height="60" rx="5" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="591" y="143" text-anchor="middle">允许提交</text>
+    <rect x="236" y="235" width="298" height="63" rx="5" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="385" y="260" text-anchor="middle">中止提交；手动运行修复</text><text x="385" y="286" text-anchor="middle">CRLF → LF，再检查</text>
+    <text x="24" y="223" font-size="14">修复后重试</text>
+    <path d="M24 320H656" stroke="var(--diagram-line,#aebbad)"/><text x="24" y="347">检查是自动的，修复另行手动运行；此处不规定其他仓库的规则。</text>
+  </g>
+</svg>

@@ -1,0 +1,48 @@
+[
+  {
+    "id": "ch05-format-ownership", "chapter": "ch05", "title": "运行顺序不等于模块边界",
+    "question": "读文件和写文件发生在不同时间，为什么仍应共享一个格式实现？",
+    "answer": "两步使用同一份格式知识。把它们分成各自掌握格式的模块，会让格式变化传播到两处；同一模块可以在不同阶段被调用。",
+    "summary": "执行依旧是读、修改、写，改变的是格式知识的归属。合并或提取只有真正隐藏格式细节才有效。",
+    "alt": "读类和写类各自掌握格式，格式变更同时指向两者；改进后应用仍按读、修改、写执行，但读写都调用一个格式模块，格式变更停在模块内。",
+    "kind": "change-propagation", "desktop": "/diagrams/ch05-format-ownership.svg", "mobile": "/diagrams/ch05-format-ownership-mobile.svg",
+    "anchor": { "section": "5.3", "placement": "end" },
+    "sources": [
+      { "section": "5.2", "epub": "OEBPS/part0009.xhtml#p18:4f98927335", "reason": "读写类即使不在接口公开格式，也会后门泄露相同知识。" },
+      { "section": "5.2", "epub": "OEBPS/part0009.xhtml#p19:8b5ba3fcd6", "reason": "合并或提取格式知识必须配合真正隐藏细节的简单接口。" },
+      { "section": "5.3", "epub": "OEBPS/part0009.xhtml#p21:3ec818d82b", "reason": "原书读、修改、写示例建议合并读写核心机制。" },
+      { "section": "5.3", "epub": "OEBPS/part0009.xhtml#p24:d201909363", "reason": "时间顺序仍有意义，但不能单凭时间决定模块结构。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch05-http-read", "chapter": "ch05", "title": "还没解析，怎么知道读完了？",
+    "question": "为什么书中的 HTTP 请求不能简单拆成先完整读取、再解析？",
+    "answer": "读取者也必须理解请求结构，例如解析 Content-Length 才知道请求体应读多长；将读取和解析彻底分开会复制这份知识。",
+    "summary": "跟踪一个明确携带 Content-Length 的教学请求。合并模块拥有读取与解析机制，对调用者只暴露接收请求的操作。",
+    "alt": "教学请求 Content-Length 为 4，请求体 a=12。读取头部后先解析长度，再取得四个请求体字节，最后形成请求对象；只读取的模块其实已经在解析。",
+    "kind": "protocol-trace", "desktop": "/diagrams/ch05-http-read.svg", "mobile": "/diagrams/ch05-http-read-mobile.svg",
+    "anchor": { "section": "5.5", "placement": "end" },
+    "sources": [
+      { "section": "5.5", "epub": "OEBPS/part0009.xhtml#p32:1fb3f4cb4e", "reason": "读取者须解析 Content-Length 等结构，读取类与解析类发生知识重复。" },
+      { "section": "5.5", "epub": "OEBPS/part0009.xhtml#p33:bc4302405d", "reason": "合并读取和解析隔离格式知识，并减少调用者的操作。" }
+    ],
+    "teachingExample": "Content-Length: 4 和 ASCII 请求体 a=12 为教学示例；仅讨论这种长度定界情形，非完整 HTTP 算法，也不表示一次 socket read 必然取得全部字节。",
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch05-parameter-boundary", "chapter": "ch05", "title": "返回参数，还是泄露容器？",
+    "question": "为什么 private Map 加上 getParams，仍没有隐藏内部表示？",
+    "answer": "返回内部 Map 引用让调用者依赖容器、承担查找转换并避免误改状态；按名称返回值才能把表示和转换留在请求对象内部。",
+    "summary": "以 photo_id 的整数读取对比两条调用路径，同时保留参数缺失或转换失败会抛异常这一接口责任。",
+    "alt": "getParams 暴露内部 Map，调用者查找 photo_id、转换整数且不能随意修改容器。getIntParameter 在模块内部查找和转换，只返回整数 246 或异常。",
+    "kind": "boundary-trace", "desktop": "/diagrams/ch05-parameter-boundary.svg", "mobile": "/diagrams/ch05-parameter-boundary-mobile.svg",
+    "anchor": { "section": "5.6", "placement": "end" },
+    "sources": [
+      { "section": "5.1", "epub": "OEBPS/part0009.xhtml#p15:d39bc8123a", "reason": "private 不等于信息隐藏，getter 仍可暴露表示。" },
+      { "section": "5.6", "epub": "OEBPS/part0009.xhtml#p43:5c5eb3299a", "reason": "返回内部 Map 暴露表示、增加调用步骤，并带来误改内部状态的风险。" },
+      { "section": "5.6", "epub": "OEBPS/part0009.xhtml#p47:45a97e3759", "reason": "按名取值和类型转换隐藏实现；缺失或无法转换时抛异常。" }
+    ],
+    "status": "awaiting-independent-review"
+  }
+]

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 742" role="img" aria-labelledby="ch02-cause-symptom-m-title ch02-cause-symptom-m-desc">
+  <title id="ch02-cause-symptom-m-title">看見依賴後，哪些修改仍要做？</title>
+  <desc id="ch02-cause-symptom-m-desc">教學初始狀態 OK 對應成功。上組新增 TIMEOUT 卻漏掉訊息，實線仍要求兩處協同修改。下組可見註記透過虛線指向訊息表，宣告和超時訊息都被補齊。可發現性減少漏改風險，不消除依賴。</desc>
+  <defs><marker id="ch02-cause-symptom-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="360" height="742" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="32" font-size="19" font-weight="600">看見依賴後，哪些修改仍要做？</text>
+    <text x="16" y="58" font-size="14" fill="var(--diagram-muted,#5c645d)">教學範例：兩組獨立新增 TIMEOUT</text>
+    <text x="16" y="89" font-size="14">相同初始：宣告 OK；訊息 OK: 成功</text>
+    <text x="16" y="126" font-weight="600">關聯不明顯：漏掉訊息表修改</text>
+    <rect x="16" y="145" width="294" height="64" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" />
+    <text x="32" y="172" font-weight="600">宣告</text><text x="32" y="197" font-family="ui-monospace,monospace">OK, + TIMEOUT</text>
+    <path d="M150 219V251" stroke="var(--diagram-muted,#5c645d)" marker-start="url(#ch02-cause-symptom-m-arrow)" marker-end="url(#ch02-cause-symptom-m-arrow)" /><text x="169" y="240" font-size="13">必須同改</text>
+    <rect x="16" y="262" width="294" height="82" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" />
+    <text x="32" y="289" font-weight="600">訊息表</text><text x="32" y="314">OK: 成功</text><text x="156" y="314">TIMEOUT: [缺失]</text>
+    <path d="M16 365H344" stroke="var(--diagram-line,#aebbad)" />
+    <text x="16" y="396" font-weight="600">關聯可發現：完成兩處修改</text>
+    <rect x="16" y="415" width="294" height="90" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" />
+    <text x="32" y="441" font-weight="600">宣告</text><text x="32" y="467" font-family="ui-monospace,monospace">OK, + TIMEOUT</text><text x="32" y="491" font-size="13">可見註記：同步訊息表</text>
+    <path d="M150 515V547" stroke="var(--diagram-muted,#5c645d)" marker-start="url(#ch02-cause-symptom-m-arrow)" marker-end="url(#ch02-cause-symptom-m-arrow)" /><text x="169" y="536" font-size="13">必須同改</text>
+    <path d="M278 489H331V589H318" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-dasharray="5 4" marker-end="url(#ch02-cause-symptom-m-arrow)" />
+    <rect x="16" y="558" width="294" height="83" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="32" y="584" font-weight="600">訊息表</text><text x="32" y="612">OK: 成功；+ TIMEOUT: 超時</text>
+    <text x="16" y="670" font-size="13">實線：必須同改；虛線：發現線索。</text>
+    <text x="16" y="699" font-weight="600">兩處修改仍在；可見關聯降低漏改風險。</text>
+    <text x="16" y="723" font-size="12" fill="var(--diagram-muted,#5c645d)">不保證發現全部依賴；缺失訊息的執行後果未假定。</text>
+  </g>
+</svg>

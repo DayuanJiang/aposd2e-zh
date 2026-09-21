@@ -1,0 +1,159 @@
+[
+  {
+    "id": "ch19-inheritance-dependencies",
+    "chapter": "ch19",
+    "title": "少复制代码，不等于少依赖",
+    "question": "实现继承减少重复后，为什么改父类仍可能牵动所有子类？",
+    "answer": "共享实现可减少副本，但子类若读取父类的表示细节，父类变化就可能要求检查子类。教学例中 head 从数组下标改为节点引用，会影响子类的 data[head]。可考虑封装辅助类，只在保持 peek()/size() 契约的条件下隔离这项变化；也可以在继承体系内隔离状态。",
+    "summary": "队列逻辑内容为 [A,B]，head、data[head]、peek()/size() 均为教学自拟。左侧给出依赖的具体理由，右侧仅是假设正确封装且契约保持的备选；组合本身不保证解耦。图示是类型/功能关系，不要求多个调用者共享同一实例。",
+    "alt": "父类原来用 head 数组下标，子类用 data[head] 取首项；head 改成节点引用后，虚线指出这个读取点可能需要复核。备选辅助类把表示放在边界内，外部只调用返回首项的 peek 和返回数量的 size，前提是这些契约在变化后仍被维护。",
+    "kind": "dependency-boundary",
+    "desktop": "/diagrams/ch19-inheritance-dependencies.svg",
+    "mobile": "/diagrams/ch19-inheritance-dependencies-mobile.svg",
+    "anchor": {
+      "section": "19.1",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "19.1",
+        "epub": "OEBPS/part0023.xhtml#p8:18d8c7aeae",
+        "reason": "实现继承减少实现副本及相应变更放大。"
+      },
+      {
+        "section": "19.1",
+        "epub": "OEBPS/part0023.xhtml#p9:26fce16963",
+        "reason": "父子类共享状态可使修改需要检查其他类；head 表示变更与 data[head] 为解释这条依赖的教学自拟反例。"
+      },
+      {
+        "section": "19.1",
+        "epub": "OEBPS/part0023.xhtml#p10:551466c57e",
+        "reason": "考虑辅助类组合而非无条件采用；peek/size 契约、队列表示均是自拟，不指定对象共享方式。"
+      },
+      {
+        "section": "19.1",
+        "epub": "OEBPS/part0023.xhtml#p11:ec90170f31",
+        "reason": "若必须继承，也可隔离父类和子类管理的状态。"
+      },
+      {
+        "section": "19.1",
+        "epub": "OEBPS/part0023.xhtml#p12:3670dd1ec5",
+        "reason": "面向对象机制自身不能保证整洁设计；绿色封装边界只是本例的设计条件，不是选择组合的自动结果。"
+      }
+    ],
+    "status": "content-reviewed",
+    "titleTw": "少複製程式碼，不等於少依賴",
+    "questionTw": "實作繼承減少重複後，為什麼改父類仍可能牽動所有子類？",
+    "answerTw": "共享實作可減少副本，但子類若讀取父類的表示細節，父類變化就可能要求檢查子類。教學例中 head 從陣列下標改為節點引用，會影響子類的 data[head]。可考慮封裝輔助類，只在保持 peek()/size() 契約的條件下隔離這項變化；也可以在繼承體系內隔離狀態。",
+    "summaryTw": "佇列邏輯內容為 [A,B]，head、data[head]、peek()/size() 均為教學自擬。左側給出依賴的具體理由，右側僅是假設正確封裝且契約保持的備選；組合本身不保證解耦。圖示是型別/功能關係，不要求多個呼叫者共享同一實例。",
+    "altTw": "父類原來用 head 陣列下標，子類用 data[head] 取首項；head 改成節點引用後，虛線指出這個讀取點可能需要複核。備選輔助類把表示放在邊界內，外部只呼叫回傳首項的 peek 和回傳數量的 size，前提是這些契約在變化後仍被維護。",
+    "desktopTw": "/diagrams/ch19-inheritance-dependencies-tw.svg",
+    "mobileTw": "/diagrams/ch19-inheritance-dependencies-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-15-21-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  },
+  {
+    "id": "ch19-abstraction-increment",
+    "chapter": "ch19",
+    "title": "共同的编码规则，才是复用的理由",
+    "question": "联系人导出与后来出现的库存导出，为什么可以复用同一个行编码器？",
+    "answer": "教学例中，两者都要把字段编码成逗号分隔的一行，且含逗号的字段需要加引号。当前联系人导出已需要这条完整的行编码契约，作者的建议是在此时设计所需抽象；后来库存导出只有因为满足同一契约，才可复用它。PDF 排版等不同需求不因此并入。",
+    "summary": "联系人、库存、字段和编码结果均为教学自拟。时间顺序区分当前需求与后来兼容的需求；重复规则与共享调用可直接比较。只展示字母、空格、数字和逗号字段，不是一份完整 CSV 规范或实现。",
+    "alt": "当前联系人字段 Li, Ming 与 Tokyo 需要输出带引号的首字段；后来库存字段 red, pen 与 2 也需要同样编码。若分别内联，两处都保存同一含逗号字段加引号规则。设计一个按该规则输出一行的 emitRow 后，两种字段输入沿同一契约得到各自结果；尚无需求的 PDF 排版留在抽象外。",
+    "kind": "situated-abstraction-evolution",
+    "desktop": "/diagrams/ch19-abstraction-increment.svg",
+    "mobile": "/diagrams/ch19-abstraction-increment-mobile.svg",
+    "anchor": {
+      "section": "19.2",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "19.2",
+        "epub": "OEBPS/part0023.xhtml#p16:402a1c2dbc",
+        "reason": "作者指出只盯功能、推迟通用设计的战术风险，不是对全部敏捷实践的必然断言。"
+      },
+      {
+        "section": "19.2",
+        "epub": "OEBPS/part0023.xhtml#p17:7d626259c3",
+        "reason": "当前功能建立需求时设计稍具通用性的抽象；联系人与库存行编码为自拟，只有共同契约才支持此处复用，不推广为合并任意功能。"
+      },
+      {
+        "section": "19.4",
+        "epub": "OEBPS/part0023.xhtml#p27:d157e5d942",
+        "reason": "作者建议所需抽象具有相对完整的核心功能；此处限于已说明的行编码契约，不包含未来未知格式或 PDF 排版。"
+      }
+    ],
+    "status": "content-reviewed",
+    "titleTw": "共同的編碼規則，才是複用的理由",
+    "questionTw": "聯絡人匯出與後來出現的庫存匯出，為什麼可以複用同一個行編碼器？",
+    "answerTw": "教學例中，兩者都要把欄位編碼成逗號分隔的一行，且含逗號的欄位需要加引號。當前聯絡人匯出已需要這條完整的行編碼契約，作者的建議是在此時設計所需抽象；後來庫存匯出只有因為滿足同一契約，才可複用它。PDF 排版等不同需求不因此併入。",
+    "summaryTw": "聯絡人、庫存、欄位和編碼結果均為教學自擬。時間順序區分當前需求與後來相容的需求；重複規則與共享呼叫可直接比較。只展示字母、空格、數字和逗號欄位，不是一份完整 CSV 規範或實作。",
+    "altTw": "當前聯絡人欄位 Li, Ming 與 Tokyo 需要輸出帶引號的首欄位；後來庫存欄位 red, pen 與 2 也需要同樣編碼。若分別內聯，兩處都儲存同一含逗號欄位加引號規則。設計一個按該規則輸出一行的 emitRow 後，兩種欄位輸入沿同一契約得到各自結果；尚無需求的 PDF 排版留在抽象外。",
+    "desktopTw": "/diagrams/ch19-abstraction-increment-tw.svg",
+    "mobileTw": "/diagrams/ch19-abstraction-increment-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-15-21-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  },
+  {
+    "id": "ch19-regression-witness",
+    "chapter": "ch19",
+    "title": "通过的测试，真的测到了那个缺陷吗？",
+    "question": "测试只在修复版本通过，还缺少哪种回归证据？",
+    "answer": "还缺少同一测试在缺陷版本因该缺陷而失败的观察。配合修复版本的通过结果，这支持测试覆盖了该回归，而不证明全部正确。作者建议修复前先获得失败；后来编写的测试也可以在缺陷版本补做核对，缺的是证据而非某种写作顺序。",
+    "summary": "last 错取倒数第二项、输入 [A,B,C]、期望 C、旧版 B 与新版 C 都是教学自拟的行为设定，不是测试执行报告。虚线补查路线是译者对证据与编写顺序的澄清，不是作者原有步骤。",
+    "alt": "同一测试 T 对 last([A,B,C]) 期望 C：自拟缺陷版返回 B，失败原因正是取错末项；修复版返回 C，通过。若只观察修复版通过，虚线引导把 T 放到缺陷版核对原因；无关失败不计为这条回归证据。",
+    "kind": "verification-counterexample",
+    "desktop": "/diagrams/ch19-regression-witness.svg",
+    "mobile": "/diagrams/ch19-regression-witness-mobile.svg",
+    "anchor": {
+      "section": "19.4",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "19.3",
+        "epub": "OEBPS/part0023.xhtml#p21:a5daf497db",
+        "reason": "测试降低重构时发现缺陷的难度，提高进行结构调整的信心；不是正确性保证。"
+      },
+      {
+        "section": "19.4",
+        "epub": "OEBPS/part0023.xhtml#p26:767f205de4",
+        "reason": "作者区分通过功能测试与寻找最佳设计。"
+      },
+      {
+        "section": "19.4",
+        "epub": "OEBPS/part0023.xhtml#p28:b49380a4ac",
+        "reason": "作者建议修复前获得因该缺陷导致的失败，再观察通过。last 的输入、缺陷与修复行为为教学自拟；补跑缺陷版是译者对证据区别的澄清，非逐字引述或真实执行报告。"
+      }
+    ],
+    "status": "content-reviewed",
+    "titleTw": "通過的測試，真的測到了那個缺陷嗎？",
+    "questionTw": "測試只在修復版本通過，還缺少哪種迴歸證據？",
+    "answerTw": "還缺少同一測試在缺陷版本因該缺陷而失敗的觀察。配合修復版本的通過結果，這支持測試覆蓋了該回歸，而不證明全部正確。作者建議修復前先獲得失敗；後來編寫的測試也可以在缺陷版本補做核對，缺的是證據而非某種寫作順序。",
+    "summaryTw": "last 錯取倒數第二項、輸入 [A,B,C]、期望 C、舊版 B 與新版 C 都是教學自擬的行為設定，不是測試執行報告。虛線補查路線是譯者對證據與編寫順序的澄清，不是作者原有步驟。",
+    "altTw": "同一測試 T 對 last([A,B,C]) 期望 C：自擬缺陷版回傳 B，失敗原因正是取錯末項；修復版回傳 C，通過。若只觀察修復版通過，虛線引導把 T 放到缺陷版核對原因；無關失敗不計為這條迴歸證據。",
+    "desktopTw": "/diagrams/ch19-regression-witness-tw.svg",
+    "mobileTw": "/diagrams/ch19-regression-witness-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-15-21-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  }
+]

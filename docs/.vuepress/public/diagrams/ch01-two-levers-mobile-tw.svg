@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 716" role="img" aria-labelledby="ch01-two-levers-m-title ch01-two-levers-m-desc">
+  <title id="ch01-two-levers-m-title">消除規則，還是隔離規則？</title>
+  <desc id="ch01-two-levers-m-desc">教學範例。兩個同義名稱合為一個，區別消失。封裝前呼叫者包含 R 識別格式和 D 解碼，封裝後呼叫者只呼叫 load(file)，R 和 D 完整保留在檔案模組內。兩種方法可並用，無強制順序。</desc>
+  <defs><marker id="ch01-two-levers-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="360" height="716" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="32" font-size="19" font-weight="600">消除規則，還是隔離規則？</text>
+    <text x="16" y="59" font-size="14" fill="var(--diagram-muted,#5c645d)">教學範例：知識消失，或改變歸屬</text>
+    <text x="16" y="96" font-weight="600">消除：本例中兩個名稱含義相同</text>
+    <rect x="16" y="114" width="138" height="53" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" />
+    <rect x="212" y="114" width="132" height="53" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="28" y="146" font-family="ui-monospace,monospace" font-size="14">size / length</text><text x="232" y="146" font-family="ui-monospace,monospace">length</text>
+    <path d="M163 140H202" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch01-two-levers-m-arrow)" />
+    <text x="16" y="196" font-size="14">不再需要記住這條命名區別。</text>
+    <path d="M16 213H344" stroke="var(--diagram-line,#aebbad)" />
+    <text x="16" y="244" font-weight="600">封裝前：R、D 都由呼叫者掌握</text>
+    <rect x="16" y="260" width="328" height="133" rx="4" fill="none" stroke="var(--diagram-secondary,#2c6096)" />
+    <text x="32" y="285" font-weight="600">呼叫者邊界</text>
+    <rect x="32" y="299" width="296" height="32" fill="var(--diagram-secondary-soft,#dce4ed)" /><text x="48" y="321">R　識別格式</text>
+    <rect x="32" y="345" width="296" height="32" fill="var(--diagram-primary-soft,#d6e5dc)" /><text x="48" y="367">D　解碼</text>
+    <text x="16" y="428" font-weight="600">封裝後：R、D 原樣移入模組</text>
+    <rect x="16" y="444" width="328" height="51" rx="4" fill="none" stroke="var(--diagram-secondary,#2c6096)" />
+    <text x="32" y="475">呼叫者：load(file)</text>
+    <path d="M180 501V523" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch01-two-levers-m-arrow)" /><text x="196" y="518" font-size="13">呼叫</text>
+    <rect x="16" y="534" width="328" height="106" rx="4" fill="none" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="32" y="559" font-weight="600">檔案模組邊界</text>
+    <rect x="32" y="570" width="296" height="26" fill="var(--diagram-secondary-soft,#dce4ed)" /><text x="48" y="589">R　識別格式</text>
+    <rect x="32" y="604" width="296" height="26" fill="var(--diagram-primary-soft,#d6e5dc)" /><text x="48" y="623">D　解碼</text>
+    <text x="16" y="670" font-weight="600">兩種手段可以並用，沒有規定順序。</text>
+    <text x="16" y="696" font-size="13" fill="var(--diagram-muted,#5c645d)">封裝不意味著模組間沒有依賴。</text>
+  </g>
+</svg>

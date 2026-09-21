@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ch18-event-trace",
+    "chapter": "ch18",
+    "title": "调用点看不到的运行时连线",
+    "question": "找到事件模块的调用点，为什么仍不知道会执行哪个处理函数？",
+    "answer": "具体目标由运行时注册决定。处理函数的接口注释应说明调用条件；原例还说明了 transport 调用方和 dispatch thread 执行上下文。",
+    "summary": "虚线表示注册关系，实线表示事件发生后的调用路径。上半部是本节通用机制示意，下半部是原文 failed() 注释中的已知信息，不假定具体注册 API。",
+    "alt": "处理函数通过运行时注册建立事件模块到处理函数的目标关系；外部事件进入模块后按该关系间接调用。failed() 的注释补充传输错误阻止 RPC 完成时由 transport 在 dispatch thread 调用。",
+    "kind": "runtime-trace",
+    "desktop": "/diagrams/ch18-event-trace.svg",
+    "mobile": "/diagrams/ch18-event-trace-mobile.svg",
+    "anchor": { "section": "18.2", "placement": "end" },
+    "sources": [
+      { "section": "18.2", "epub": "OEBPS/part0022.xhtml#p68:23d9d9ef58", "reason": "应用先注册兴趣，事件模块在事件发生时调用指定函数。" },
+      { "section": "18.2", "epub": "OEBPS/part0022.xhtml#p69:f3efedcb04", "reason": "静态调用点无法决定运行时注册的目标。" },
+      { "section": "18.2", "epub": "OEBPS/part0022.xhtml#p70:c58431aebd", "reason": "处理函数的接口注释应说明何时调用。" },
+      { "section": "18.2", "epub": "OEBPS/part0022.xhtml#p72:474b887270", "reason": "原注释说明 dispatch thread 和 transport；下一行说明错误使 RPC 无法完成。通用注册示意不声称展示 RAMCloud 内部注册实现。" },
+      { "section": "18.2", "epub": "OEBPS/part0022.xhtml#p73:5c3d60c8f0", "reason": "failed() 的触发条件为 transport-level error prevents an RPC from completing。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch18-reader-expectation",
+    "chapter": "ch18",
+    "title": "main 返回，不等于这个程序结束",
+    "question": "RaftClient 例子中，读者缺少哪条信息才会误判程序退出？",
+    "answer": "构造函数创建了继续运行的线程。构造函数接口应记录该行为，main 末尾也应提醒执行还在其他线程中继续。",
+    "summary": "线程生命周期用不同长度的轨道表示，横向距离不代表实测时间。本图只解释原例，不把所有 Java 程序概括为 main 返回就退出。",
+    "alt": "主线程创建 RaftClient 后到 main 返回处终止；构造函数分出的其他线程轨道继续向后延伸。接口注释标注创建线程，main 末尾提示继续执行，纠正把主线程结束等同于程序结束的推断。",
+    "kind": "lifecycle-counterexample",
+    "desktop": "/diagrams/ch18-reader-expectation.svg",
+    "mobile": "/diagrams/ch18-reader-expectation-mobile.svg",
+    "anchor": { "section": "18.2", "placement": "end" },
+    "sources": [
+      { "section": "18.2", "epub": "OEBPS/part0022.xhtml#p94:b573116406", "reason": "main 创建 RaftClient 的原始代码。" },
+      { "section": "18.2", "epub": "OEBPS/part0022.xhtml#p96:cd1197eff7", "reason": "构造函数创建其他线程，主线程结束后它们继续运行；作者要求在构造函数接口与 main 末尾说明。" },
+      { "section": "18.3", "epub": "OEBPS/part0022.xhtml#p98:7fb1df9ba7", "reason": "原文将线程创建事实列为读者缺少的关键信息。" }
+    ],
+    "status": "awaiting-independent-review"
+  }
+]

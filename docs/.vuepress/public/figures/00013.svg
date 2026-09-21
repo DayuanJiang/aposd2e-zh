@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" role="img" aria-labelledby="figure-00013-title figure-00013-desc">
+  <title id="figure-00013-title">Red flag</title>
+  <desc id="figure-00013-desc">The original warning emblem: a red waving flag with an overlapping lower fold, on a black pole slanting down to the right. The pale pink background and the gap between the flag's two upper lobes are retained.</desc>
+  <rect width="28" height="28" fill="#ffe5e6"/>
+  <path d="M0.8 5L8.1 25.6" fill="none" stroke="#111" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M16.5 3.3C18.7 2.7 20.8 1.9 22.2 0.5L27.5 13.8C23.9 16.1 20.2 19.2 16.1 17.9L15.5 16.6C17 16.5 18.5 16.1 19.5 15.4L18.5 11.1Z" fill="#d62a20"/>
+  <path d="M2.1 4.5C5.6 1.9 9.5 0.7 13.7 0.9L19.2 13.7C15.2 14.2 11.6 17.4 8.8 20.5Z" fill="#d62a20"/>
+</svg>

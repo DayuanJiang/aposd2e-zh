@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 656" role="img" aria-labelledby="ch20-critical-path-m-title ch20-critical-path-m-desc">
+  <title id="ch20-critical-path-m-title">入口分流後讓常見工作連續執行</title>
+  <desc id="ch20-critical-path-m-desc">上部原路徑經過檢查、A、檢查、B。下部入口判定後，常見情況向左執行 A 與 B，特殊情況向右處理，避免常見路徑反覆檢查。教學示意並非任意最佳化都適用。</desc>
+  <defs><marker id="ch20-critical-path-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="360" height="656" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">把特殊情況移出常見路徑</text><text x="16" y="57" font-size="14">20.3 · A/B 為教學自擬的必要工作</text>
+    <text x="16" y="95" font-weight="600">原路徑：正常情況也反覆檢查</text>
+    <text x="60" y="137">檢查</text><text x="60" y="177">工作 A</text><text x="60" y="217">檢查</text><text x="60" y="257">工作 B</text>
+    <path d="M39 128V252" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch20-critical-path-m-arrow)" />
+    <path d="M169 119H179V223H169" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" /><text x="197" y="160">必要工作之間</text><text x="197" y="186">夾著特殊檢查</text>
+    <path d="M16 281H344" stroke="var(--diagram-line,#aebbad)" />
+    <text x="16" y="313" font-weight="600">目標：入口分流，正常路徑直達</text>
+    <path d="M180 333L300 377L180 421L60 377Z" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" /><text x="180" y="383" text-anchor="middle">常見情況？</text>
+    <g stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch20-critical-path-m-arrow)"><path d="M114 397V456" /><path d="M246 397V456" /></g><text x="84" y="441">是</text><text x="260" y="441">否</text>
+    <rect x="24" y="456" width="148" height="102" rx="5" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" /><text x="98" y="485" text-anchor="middle">工作 A</text><path d="M98 495V523" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch20-critical-path-m-arrow)" /><text x="98" y="546" text-anchor="middle">工作 B</text>
+    <text x="246" y="489" text-anchor="middle">特殊處理</text><text x="246" y="519" text-anchor="middle">優先簡單</text>
+    <text x="16" y="591" font-size="14">前提：熱點已測實，先找根本改進。</text><text x="16" y="616" font-size="14">一次分流是理想目標，不是保證；</text><text x="16" y="641" font-size="14">仍要保留整潔抽象。</text>
+  </g>
+</svg>

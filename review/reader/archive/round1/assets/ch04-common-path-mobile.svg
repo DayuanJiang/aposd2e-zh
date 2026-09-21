@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 682" role="img" aria-labelledby="ch04-common-path-m-title ch04-common-path-m-desc">
+  <title id="ch04-common-path-m-title">有选择，不等于每次都要选择</title>
+  <desc id="ch04-common-path-m-desc">左侧纵向为普通 open、read、read、close 路径；右侧分支只在需要随机访问时使用 lseek 再读取。下方区分 Java 示例显式请求缓冲与作者建议默认缓冲。</desc>
+  <defs><marker id="ch04-common-path-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="682" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="16" y="32" font-size="19" font-weight="600">有选择，不等于每次都要选择</text>
+    <text x="16" y="59" font-size="14" fill="var(--diagram-muted,#5c645d)">Unix：普通路径无需学习位置调整</text>
+    <text x="26" y="99" font-weight="600">顺序读取</text>
+    <g fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"><rect x="26" y="114" width="126" height="48" rx="4"/><rect x="26" y="193" width="126" height="48" rx="4"/><rect x="26" y="304" width="126" height="48" rx="4"/><rect x="26" y="383" width="126" height="48" rx="4"/></g>
+    <g font-family="ui-monospace,monospace"><text x="68" y="144">open</text><text x="68" y="223">read</text><text x="68" y="334">read</text><text x="62" y="413">close</text></g>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="1.5" marker-end="url(#ch04-common-path-m-arrow)"><path d="M89 168V185"/><path d="M89 247V296"/><path d="M89 358V375"/><path d="M160 218H261V251"/><path d="M261 305V329H162"/></g>
+    <rect x="202" y="260" width="118" height="38" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="235" y="284" font-family="ui-monospace,monospace">lseek</text>
+    <text x="186" y="180" font-size="14">只有需要跳转时</text><text x="192" y="366" font-size="14">调整位置后再读</text>
+    <path d="M16 459H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="489" font-weight="600">对照：缓冲由谁主动请求？</text>
+    <text x="16" y="521" fill="var(--diagram-warm,#80531b)">书中 Java：必须另建缓冲对象</text>
+    <text x="16" y="553" fill="var(--diagram-primary,#0b6f5d)">作者建议：默认缓冲</text><text x="16" y="580">少数用户才显式关闭。</text>
+    <text x="16" y="622" font-size="14" font-weight="600">保留选择，不必强迫每次选择。</text>
+    <text x="16" y="651" font-size="14" fill="var(--diagram-muted,#5c645d)">默认缓冲是建议，不是所示 API 事实。</text>
+  </g>
+</svg>

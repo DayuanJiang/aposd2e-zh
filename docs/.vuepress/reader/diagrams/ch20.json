@@ -1,0 +1,149 @@
+[
+  {
+    "id": "ch20-measurement-loop",
+    "chapter": "ch20",
+    "title": "优化需要两种测量证据",
+    "question": "知道系统很慢，为什么还不能决定改哪里、保留什么？",
+    "answer": "深入测量定位具体高开销工作，修改前基线用于同条件比较修改后的结果。保留新增复杂性需要值得的实测收益；没有可测收益或收益不足以抵偿复杂性时，应撤销新增复杂性。若修改本身独立简化设计，可据此另行评估保留。",
+    "summary": "基线与热点路径汇入同条件比较，再统一判断实测收益是否值得新增复杂性；不足一支包含不可测和可测但不值得两种情形。不设虚构的加速比、统计阈值或固定回本标准。",
+    "alt": "当前测量分为保存基线、深入定位热点两路；热点修改后的测量和基线进入同条件比较。实测收益值得新增复杂性则有保留理由；没有收益或收益不足则撤销新增复杂性。设计独立简化是另一个保留依据，仍须满足行为要求。",
+    "kind": "measurement-decision",
+    "desktop": "/diagrams/ch20-measurement-loop.svg",
+    "mobile": "/diagrams/ch20-measurement-loop-mobile.svg",
+    "anchor": {
+      "section": "20.2",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "20.2",
+        "epub": "OEBPS/part0024.xhtml#p18:c6ab138c52",
+        "reason": "性能直觉不可靠，凭猜测修改可能无效并增加复杂性。"
+      },
+      {
+        "section": "20.2",
+        "epub": "OEBPS/part0024.xhtml#p19:446ae2e29f",
+        "reason": "测量用于热点定位与前后比较，新增复杂性需要足够收益；无可测差异时撤销，独立简化设计除外。同条件比较为使基线可比的教学澄清，不添加数字或统计阈值。"
+      }
+    ],
+    "status": "content-reviewed",
+    "titleTw": "最佳化需要兩種測量證據",
+    "questionTw": "知道系統很慢，為什麼還不能決定改哪裡、保留什麼？",
+    "answerTw": "深入測量定位具體高開銷工作，修改前基線用於同條件比較修改後的結果。保留新增複雜性需要值得的實測收益；沒有可測收益或收益不足以抵償複雜性時，應撤銷新增複雜性。若修改本身獨立簡化設計，可據此另行評估保留。",
+    "summaryTw": "基線與熱點路徑匯入同條件比較，再統一判斷實測收益是否值得新增複雜性；不足一支包含不可測和可測但不值得兩種情形。不設虛構的加速比、統計閾值或固定回本標準。",
+    "altTw": "當前測量分為儲存基線、深入定位熱點兩路；熱點修改後的測量和基線進入同條件比較。實測收益值得新增複雜性則有保留理由；沒有收益或收益不足則撤銷新增複雜性。設計獨立簡化是另一個保留依據，仍須滿足行為要求。",
+    "desktopTw": "/diagrams/ch20-measurement-loop-tw.svg",
+    "mobileTw": "/diagrams/ch20-measurement-loop-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-15-21-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  },
+  {
+    "id": "ch20-critical-path",
+    "chapter": "ch20",
+    "title": "让特殊情况离开常见路径",
+    "question": "围绕关键路径重构，改变的是哪种控制流关系？",
+    "answer": "在已证实的热点且找不到根本性改进时，先设想常见情况的最少工作，再设计尽量接近它的结构；理想情况下用入口检查把特殊情况分流。",
+    "summary": "教学示意用 A/B 表示常见路径上的必要工作，不对应 Buffer 的具体语句。入口一次分流是理想目标，不是所有代码都能达到的保证。",
+    "alt": "原结构在工作 A 与工作 B 前后分别检查特殊情况，正常路径也经过所有检查；目标结构在入口分流，常见路径连续执行 A、B，特殊处理位于旁路。",
+    "kind": "control-flow-comparison",
+    "desktop": "/diagrams/ch20-critical-path.svg",
+    "mobile": "/diagrams/ch20-critical-path-mobile.svg",
+    "anchor": {
+      "section": "20.3",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "20.3",
+        "epub": "OEBPS/part0024.xhtml#p21:4350d6c75f",
+        "reason": "热点先考虑缓存、算法等根本性改进。"
+      },
+      {
+        "section": "20.3",
+        "epub": "OEBPS/part0024.xhtml#p22:647f2b8efd",
+        "reason": "没有根本性方案时，围绕关键路径重设计是最后手段。"
+      },
+      {
+        "section": "20.3",
+        "epub": "OEBPS/part0024.xhtml#p24:424ff1d266",
+        "reason": "追求接近理想路径但保留整洁抽象，而非要求完全消除调用。"
+      },
+      {
+        "section": "20.3",
+        "epub": "OEBPS/part0024.xhtml#p25:87ac06fb38",
+        "reason": "入口尽量一次识别特殊情况并分流；A/B 与检查位置为教学示意。"
+      }
+    ],
+    "status": "content-reviewed",
+    "titleTw": "讓特殊情況離開常見路徑",
+    "questionTw": "圍繞關鍵路徑重構，改變的是哪種控制流關係？",
+    "answerTw": "在已證實的熱點且找不到根本性改進時，先設想常見情況的最少工作，再設計儘量接近它的結構；理想情況下用入口檢查把特殊情況分流。",
+    "summaryTw": "教學示意用 A/B 表示常見路徑上的必要工作，不對應 Buffer 的具體語句。入口一次分流是理想目標，不是所有程式碼都能達到的保證。",
+    "altTw": "原結構在工作 A 與工作 B 前後分別檢查特殊情況，正常路徑也經過所有檢查；目標結構在入口分流，常見路徑連續執行 A、B，特殊處理位於旁路。",
+    "desktopTw": "/diagrams/ch20-critical-path-tw.svg",
+    "mobileTw": "/diagrams/ch20-critical-path-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-15-21-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  },
+  {
+    "id": "ch20-state-compression",
+    "chapter": "ch20",
+    "title": "一个状态值如何合并多个判断？",
+    "question": "availableAppendBytes 为什么能让 Buffer 的常见追加只做一次检查？",
+    "answer": "对于 numBytes > 0 的请求，正确维护的 availableAppendBytes 在无末块、末块外部或无紧邻空间任一情形下为零，否则是紧邻可用字节数。因此一次比较同时排除这些状态和容量不足。成功追加后必须更新该值，下一次调用才可继续相信这个编码。",
+    "summary": "上半部是必须维持的状态含义，不是每次 alloc 重算的流程；下半部演示一次读取、追加和写回。8 字节追加 3 后剩 5、下一次请求 6 的数值为教学自拟状态，不是性能测量。",
+    "alt": "无末块、外部末块、无紧邻可用空间以任一成立的 OR 条件定义存储值为零。运行阶段读取已维护的 availableAppendBytes；自拟例中 8 足够追加正数 3，写回 5，下一次请求 6 时 5 小于 6，不能走扩展末块路径。写回值成为下次读取的状态，不把上方定义当作每次重算。",
+    "kind": "maintained-invariant-transition",
+    "desktop": "/diagrams/ch20-state-compression.svg",
+    "mobile": "/diagrams/ch20-state-compression-mobile.svg",
+    "anchor": {
+      "section": "20.4",
+      "paragraph": 15
+    },
+    "sources": [
+      {
+        "section": "20.4",
+        "epub": "OEBPS/part0024.xhtml#p33:c8ebdef682",
+        "reason": "扩展末块要求其为内部块且空间足够。"
+      },
+      {
+        "section": "20.4",
+        "epub": "OEBPS/part0024.xhtml#p39:f0c54a3c47",
+        "reason": "availableAppendBytes 是必须维护的状态编码，不是每次重复判断的处方；显式 OR 与正请求范围解释单次比较。8、3、5、6 为自拟容量状态；更新动作参照 docs/ch20.md 的图 20.3 代码。"
+      },
+      {
+        "section": "20.4",
+        "epub": "OEBPS/part0024.xhtml#p40:b241e41328",
+        "reason": "追加时维护总长度，为另一个常见读取路径节约重复计算；不增加数值性能宣称。"
+      }
+    ],
+    "status": "content-reviewed",
+    "titleTw": "一個狀態值如何合併多個判斷？",
+    "questionTw": "availableAppendBytes 為什麼能讓 Buffer 的常見追加只做一次檢查？",
+    "answerTw": "對於 numBytes > 0 的請求，正確維護的 availableAppendBytes 在無末塊、末塊外部或無緊鄰空間任一情形下為零，否則是緊鄰可用位元組數。因此一次比較同時排除這些狀態和容量不足。成功追加後必須更新該值，下一次呼叫才可繼續相信這個編碼。",
+    "summaryTw": "上半部是必須維持的狀態含義，不是每次 alloc 重算的流程；下半部演示一次讀取、追加和寫回。8 位元組追加 3 後剩 5、下一次請求 6 的數值為教學自擬狀態，不是效能測量。",
+    "altTw": "無末塊、外部末塊、無緊鄰可用空間以任一成立的 OR 條件定義儲存值為零。執行階段讀取已維護的 availableAppendBytes；自擬例中 8 足夠追加正數 3，寫回 5，下一次請求 6 時 5 小於 6，不能走擴充末塊路徑。寫回值成為下次讀取的狀態，不把上方定義當作每次重算。",
+    "desktopTw": "/diagrams/ch20-state-compression-tw.svg",
+    "mobileTw": "/diagrams/ch20-state-compression-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-15-21-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  }
+]

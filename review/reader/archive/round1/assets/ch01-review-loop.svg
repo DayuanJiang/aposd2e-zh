@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 450" role="img" aria-labelledby="ch01-review-loop-title ch01-review-loop-desc">
+  <title id="ch01-review-loop-title">危险信号如何变成设计改进？</title>
+  <desc id="ch01-review-loop-desc">阅读代码发现危险信号后，尝试替代设计并重新检查理解和修改的负担。仍有问题时继续探索；改进成立则采用并持续审查。原则有例外，不是自动判决。</desc>
+  <defs><marker id="ch01-review-loop-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="450" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="24" y="34" font-size="20" font-weight="600">危险信号如何变成设计改进？</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">信号是探索的起点，不是立即拆类或合类的命令</text>
+    <rect x="24" y="92" width="180" height="76" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="40" y="122" font-weight="600">阅读实际代码</text><text x="40" y="148">识别理解、修改的阻力</text>
+    <rect x="250" y="92" width="180" height="76" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="266" y="122" font-weight="600">发现危险信号</text><text x="266" y="148">停下来，提出备选</text>
+    <rect x="476" y="92" width="180" height="76" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="492" y="122" font-weight="600">尝试替代设计</text><text x="492" y="148">回到代码检验</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="1.5" marker-end="url(#ch01-review-loop-arrow)">
+      <path d="M210 130H240"/><path d="M436 130H466"/><path d="M566 178V216"/>
+    </g>
+    <path d="M466 224H636L656 270L636 316H466L446 270Z" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="476" y="262" font-weight="600">更易理解、修改？</text><text x="476" y="289">有没有新的代价？</text>
+    <rect x="24" y="231" width="244" height="80" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="40" y="261" font-weight="600">改进成立：采用</text><text x="40" y="288">继续在后续审查中检验</text>
+    <path d="M436 271H278" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch01-review-loop-arrow)"/>
+    <text x="306" y="257" font-size="14">权衡后可取</text>
+    <path d="M550 324V359H12V78H340V83" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-dasharray="5 4" marker-end="url(#ch01-review-loop-arrow)"/>
+    <text x="365" y="382" font-size="14">仍有问题：再找其他方案</text>
+    <text x="24" y="425" font-size="15" font-weight="600">原则存在边界；不能用“符合规则”代替设计判断。</text>
+  </g>
+</svg>

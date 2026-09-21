@@ -1,0 +1,763 @@
+{
+  "reviewType": "independent-second-pass",
+  "scope": "Simplified Chinese explanatory content for all original 22 ch08-ch14 IDs: 17 active desktop/mobile pairs and five retirements.",
+  "overallVerdict": "accept-sc-snapshot",
+  "summary": {
+    "activePairsAccepted": 17,
+    "retirementsAccepted": 5,
+    "activePairsRequiringChanges": 0,
+    "remainingIssues": 0,
+    "newIssues": 0,
+    "judgment": "The revised graphics provide sufficient explanatory value, retain the relevant source conditions, and communicate equivalent meanings in the supplied desktop/mobile light/dark sheets. The five retirements remain appropriate. Acceptance is limited to the identified SC snapshot and supplied display sizes."
+  },
+  "evidenceBasis": {
+    "revisionRecord": "review/reader/revisions-08-14.json",
+    "revisionRecordSha256": "a691080f393601c143e09a9ff2df4b2ea96eb1d42895011dbcd08ee0a0e93237",
+    "firstPass": "review/reader/diagram-review-08-14.json",
+    "snapshotRoot": "/tmp/aposd2e-viz-round2-before-localize",
+    "galleryRoot": "/tmp/aposd2e-viz-round2-08-14",
+    "galleryIndexSha256": "4a5c1d6959ab2cf9c537191facd6d3cf1ae7121b5d820f74426b578c7b029a68",
+    "galleryReaderCssSha256": "ca7a2683e3df6247ae4b5207d428b6237736a375a69688a92e8f37314477c9f1",
+    "originalRoot": "/tmp/aposd2e-polish.GHV1eo/original",
+    "metadataSha256": {
+      "ch08.json": "01d9d5444d258274b47906979e9aeb5197a45a7adc91363bee1f9cf64e469614",
+      "ch09.json": "796d0616a55247ea44e4106376e68498ced04e727648e4df3245101d36ad2592",
+      "ch10.json": "2d127f8b9022149f3639c181ec187e7a79d51e6998a8c53777d9796006774931",
+      "ch11.json": "daf13108f988381756ca3117b3e26567cea1fc9d5c3cb264103ab53bc4af3190",
+      "ch12.json": "7b4697d7c15ad6404a73ef1cc3b7c3dc774a090de68c3e0d60ea61dc93b9ae4b",
+      "ch13.json": "2dbe11cf4e5d7a249f444dccdc752ed0564f37c7a70de092cd864add50a1e449",
+      "ch14.json": "4f8f0cecad8d64c670f1e623199cfaa899369cbc4c750db338f43c09c1dd32eb"
+    },
+    "sourceSha256": {
+      "docs/ch08.md": "8433cec993ded854fb0bb27c4e605a03c8b8eb524a5388c8c5bac23143f938ad",
+      "docs/ch09.md": "9736725cbcd126945c3bb958a8d1ebbcb2d00449f6ef812e7d681f857c527b6d",
+      "docs/ch10.md": "85b0b5441dfae7419080df2ec5e081da2589b8460d2ce630a3271ff5d5a1613f",
+      "docs/ch11.md": "6784dc4cd0df2611c5ac6192f3fd908d7f467878c5f1a26dcbe69a01dae0269f",
+      "docs/ch12.md": "6d5fa8785dbac606cf0dd8a592d2d21070bceb32361141035aa0b23242692c52",
+      "docs/ch13.md": "df18a6157c327367375b45d0f0389f7d6aa9e927831f587de613282b23f9d731",
+      "docs/ch14.md": "7dad0262c4a0d7ac90b1226d18eadf03104c69f5d2cfec18e40d65021059f1f4"
+    },
+    "verificationPerformed": [
+      "Read the revision record, including per-ID actions, retired records, paragraph-anchor evidence and the late padding marker follow-up. Implementation claims were treated as claims to check, not acceptance evidence.",
+      "Read all 17 active SC metadata records and all 34 snapshot SVGs, including visible text, descriptions, coordinates, paths and markers.",
+      "Used view_image on every gallery-light-000.png through gallery-light-016.png and every corresponding dark sheet. Each sheet displays both the desktop and mobile asset.",
+      "Computed SHA-256 for the snapshot SVGs and verified all assetHashes in both themes of the gallery index. No mismatch was found.",
+      "Compared every snapshot metadata field with its live counterpart and compared all 34 SC SVG byte hashes. No SC field, anchor or SVG difference was found; the added live metadata keys were the seven Tw fields only.",
+      "Verified all seven SC chapter hashes against the revision record. Re-read the original source passages underlying the active diagrams and retirements, plus the relevant translation passages and retained source examples.",
+      "Independently invoked the existing read-only paragraph insertion function on MarkdownIt tokens for the three changed SC anchors. Confirmed the actual preceding paragraph, insertion index and following paragraph.",
+      "Verified each retired ID is absent from active snapshot metadata and both its SC snapshot and live public asset paths.",
+      "Recomputed the five single-character deletion states and their equivalence to deleting the teaching range [2,7)."
+    ],
+    "governance": "The snapshot now separates earlier local reviews from the first-pass authority and marks second review pending with accepted=false. The previous review-status conflict is resolved. This report supplies an independent SC second-pass judgment; it does not retroactively endorse earlier local acceptance claims."
+  },
+  "limitations": [
+    "This is explanatory-design judgment, not a real reader experiment. No comprehension, retention, speed or learning improvement was measured.",
+    "The supplied gallery shows desktop SVGs at 680 pixels and mobile SVGs at 360 pixels within composite sheets. This is not a full chapter/browser capture at every responsive breakpoint.",
+    "Full reader captions, surrounding page layout, scrolling rhythm, zoom/modal behavior, actual assistive-technology output and smaller phone sizes were not exercised. Placement acceptance concerns the verified source adjacency, not a new full-page visual test.",
+    "The gallery's zero outside, overlap and container candidates were not used as a substitute for viewing images and inspecting relationships.",
+    "Traditional Chinese strings, generated files and conversion quality are explicitly excluded. Their presence does not change the SC hashes reviewed here.",
+    "No assets, source text, shared reader files, revision records or builds were modified or generated. Only this report was written.",
+    "All accept verdicts are tied to the recorded SC metadata and SVG hashes. They are not blanket approval of subsequent edits or final multilingual release."
+  ],
+  "records": [
+    {
+      "id": "ch08-edit-burden",
+      "state": "active",
+      "verdict": "accept",
+      "decision": "keep",
+      "question": "同样的文本编辑工作，为什么换接口能减少调用者的负担？",
+      "expectedAnswer": "多个界面操作不再各自承担拆分和合并行，而通过范围接口共享文本类中的处理；内部若仍按行存储，这项工作仍须完成。",
+      "graphicReasoning": "Two warm responsibility blocks above the boundary become one below it while both caller paths remain. The drawing therefore supports the answer by comparing ownership and duplication, not just by declaring the new interface better. The relocated center text is clear of the caller stems, and 合并行 no longer suggests parallel execution. The responsibility lesson remains distinct from Chapter 11's concrete operation trace.",
+      "sourceConditions": [
+        "Splitting/joining inside the text class is conditional on its internal line-based representation.",
+        "The two caller categories are teaching decomposition, not observed counts or a claim that every input action splits a line.",
+        "Chapter 8's character-oriented interface means arbitrary character ranges, not Chapter 11's single-character candidate."
+      ],
+      "sourceEvidence": ["docs/ch08.md:11-15", "original/ch08.md: OEBPS/part0012.xhtml#p7:c85469890e and #p8:b454c63498"],
+      "resolvedIssues": ["08-edit-label", "08-edit-terminology"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {
+        "desktop": "b05a55a40b0753695e6d0096ed92f7a7ebd4474be13cacdaa61db65417e1587c",
+        "mobile": "8e77ade6ad0ce52bdd1ff38a74498123320cba4c666cd9cd68e0213286bf625e"
+      },
+      "viewEvidence": {
+        "sheets": ["gallery-light-000.png", "gallery-dark-000.png"],
+        "svgPaths": ["assets/ch08-edit-burden.svg", "assets/ch08-edit-burden-mobile.svg"],
+        "observation": "Both themes show readable labels and a clear repeated-to-shared comparison. Mobile retains the same boundary and convergence with the line-storage condition in its footer.",
+        "placement": {"section": "8.1", "placement": "end"},
+        "placementJudgment": "Appropriate after the example and its granularity clarification."
+      }
+    },
+    {
+      "id": "ch08-retry-feedback",
+      "state": "active",
+      "verdict": "accept",
+      "decision": "keep",
+      "question": "哪些参数适合由模块自己确定，哪些知识仍应由用户提供？",
+      "expectedAnswer": "模块可从成功响应测量时间并调整重试间隔；用户可能更了解业务紧迫性。应比较谁能确定更好的值，确需配置时考虑默认值。",
+      "graphicReasoning": "The fixed path has no measurement feedback, whereas the dynamic path closes through successful responses and subsequent requests. This makes adaptation visible. The separated priority case preserves a counterexample to indiscriminate removal of configuration.",
+      "sourceConditions": [
+        "Successful-request response times supply observations; no particular multiplier or complete retry algorithm is specified.",
+        "Domain urgency may be better known by the user.",
+        "The source recommends avoiding unnecessary configuration, not prohibiting all parameters, and asks about reasonable defaults."
+      ],
+      "sourceEvidence": ["docs/ch08.md:21-25", "original/ch08.md: OEBPS/part0012.xhtml#p11:b68410a287 through #p13:1a1560a5d7"],
+      "resolvedIssues": [],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {
+        "desktop": "eeca8377a859fed1d24c64dd77c9dbb497c5932104403339ed2572b724fc12c0",
+        "mobile": "822a252c6d0c79bf730d8be5c13a90a0f946d7c9d6d951465c2d8f46adf57c60"
+      },
+      "viewEvidence": {
+        "sheets": ["gallery-light-001.png", "gallery-dark-001.png"],
+        "svgPaths": ["assets/ch08-retry-feedback.svg", "assets/ch08-retry-feedback-mobile.svg"],
+        "observation": "Horizontal and vertical loops preserve equivalent meaning. Loop labels, domain exception and default guidance remain legible in both themes.",
+        "placement": {"section": "8.2", "placement": "end"},
+        "placementJudgment": "Appropriate synthesis after the example and the qualifying questions."
+      }
+    },
+    {
+      "id": "ch08-semantic-boundary",
+      "state": "active",
+      "verdict": "accept",
+      "decision": "keep",
+      "question": "为什么移动拆行逻辑是封装，移动退格键逻辑却可能是信息泄露？",
+      "expectedAnswer": "界面解释事件、光标和选区，文本类执行范围编辑。下沉内容须与核心职责相关，并简化其他代码及接口。",
+      "graphicReasoning": "Only the range crosses the valid boundary; the policy bypass is separately crossed out. The boundary distinguishes the information being transferred, not simply the physical location of a box. This remains a useful qualification of the preceding ownership diagram.",
+      "sourceConditions": [
+        "Related functionality, simplification elsewhere and a simpler interface jointly motivate pulling complexity down.",
+        "The teaching decomposition does not define specific backspace behavior or an empty-selection encoding.",
+        "The goal is lower total complexity, not moving every application function into one class."
+      ],
+      "sourceEvidence": ["docs/ch08.md:29-31", "original/ch08.md: OEBPS/part0012.xhtml#p15:0a9b8dd9a6 and #p16:38ed91cc62"],
+      "resolvedIssues": [],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {
+        "desktop": "15f686a9992170a5217e89e94e1670c0380506d3c423c5d9c3ed29ecb6b1fa2a",
+        "mobile": "8c89058cb4fb970806c9d4690c2d439408e3d4dcd1c7be5acf16c5c02e7be5d5"
+      },
+      "viewEvidence": {
+        "sheets": ["gallery-light-002.png", "gallery-dark-002.png"],
+        "svgPaths": ["assets/ch08-semantic-boundary.svg", "assets/ch08-semantic-boundary-mobile.svg"],
+        "observation": "Both variants preserve the valid range transfer and forbidden policy bypass. Text, cross and dashed boundary remain readable without depending on color alone.",
+        "placement": {"section": "8.3", "placement": "end"},
+        "placementJudgment": "Appropriate at the point where the source limits the earlier advice."
+      }
+    },
+    {
+      "id": "ch09-http-knowledge",
+      "state": "retired",
+      "verdict": "accept-retirement",
+      "decision": "retire",
+      "question": "只负责读取 HTTP 请求的方法，真的不需要理解请求格式吗？",
+      "expectedAnswer": "书中读取者也须理解请求边界；合并读取与解析集中格式知识，并消除跨类传递请求字符串的接口。",
+      "graphicReasoning": "Removal remains justified. The retained 9.1 prose directly explains why reading needs format knowledge, explicitly points back to Chapter 5, and 9.2 identifies the removed interface. Another large duplicate knowledge-box comparison is not needed to preserve either claim. Retirement is not approval of the old graphic.",
+      "sourceConditions": [
+        "The claim concerns the book's HTTP decomposition example, not a complete universal HTTP framing algorithm.",
+        "Eliminating a cross-module string interface does not forbid internal strings.",
+        "The original explanation and Chapter 5 cross-reference remain in the unchanged SC chapter."
+      ],
+      "sourceEvidence": ["docs/ch09.md:21-29", "original/ch09.md: OEBPS/part0013.xhtml#p16:f4cb6f1927 and #p18:31ebb1c440", "revisions-08-14.json: ch09-http-knowledge"],
+      "resolvedIssues": ["09-http-redundancy", "09-http-asserted-premise"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {"desktop": null, "mobile": null},
+      "viewEvidence": {
+        "sheets": [],
+        "reason": "No current active drawing exists to render. Retirement was checked against metadata, asset absence and the retained source explanation, not inferred from the revision checklist alone.",
+        "activeMetadataAbsent": true,
+        "snapshotSCAssetsAbsent": true,
+        "livePublicSCAssetsAbsent": true,
+        "sourceCoverage": "9.1 retains the framing dependency; 9.2 retains the simpler-interface result. No explanatory gap requiring reinstatement was found."
+      }
+    },
+    {
+      "id": "ch09-cursor-state",
+      "state": "active",
+      "verdict": "accept",
+      "decision": "keep",
+      "question": "选区和光标经常一起变化，为什么这个例子仍然适合分开表示？",
+      "expectedAnswer": "组合表示须依据布尔值选择端点，独立 cursor Position 可直接读取；高层仍分别操作两者。有选区时光标位于一端，无选区时光标也存在。",
+      "graphicReasoning": "The conditional endpoint branch contrasts with direct storage, and the independent representation now visibly includes both selected and unselected text. The selected b-through-e range terminates at the blue cursor line; the unselected example retains that cursor without a highlight. There is no cursor-to-selection derivation arrow and no implied transition order between the two examples.",
+      "sourceConditions": [
+        "The endpoint-selection branch is explicitly illustrated for an existing selection.",
+        "The cursor persists when selection is absent; absence is not assigned a new sentinel, null value or range encoding.",
+        "Position is reusable and the revised design does not introduce dedicated cursor or selection classes.",
+        "This is the source example's representation tradeoff, not a universal prohibition on combined objects or a performance measurement."
+      ],
+      "sourceEvidence": ["docs/ch09.md:115-121", "original/ch09.md: OEBPS/part0013.xhtml#p31:1efe914cfc, #p33:ed9e86e55c and #p34:4d0eb5288f"],
+      "resolvedIssues": ["09-cursor-dependency", "09-cursor-boundaries", "09-cursor-absence", "09-cursor-branch-labels"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {
+        "desktop": "99c4196af4af575705684849e54af6f799559f4338491956325153cf13613d90",
+        "mobile": "c6f117d665b949a9dde8d59c0c61ffac3c6bb3e50907c22252bd62305e968ee6"
+      },
+      "viewEvidence": {
+        "sheets": ["gallery-light-003.png", "gallery-dark-003.png"],
+        "svgPaths": ["assets/ch09-cursor-state.svg", "assets/ch09-cursor-state-mobile.svg"],
+        "observation": "Selection edges fall between individually positioned glyphs. Desktop's end/cursor is x567 and mobile's is x238, exactly the corresponding highlight boundary. Both show the absent-selection state explicitly and branch labels clear of the stems.",
+        "placement": {"section": "9.5", "placement": "end"},
+        "placementJudgment": "Appropriate after the source introduces the revised Position representation."
+      }
+    },
+    {
+      "id": "ch09-logging-locality",
+      "state": "active",
+      "verdict": "accept",
+      "decision": "keep",
+      "question": "把一条错误日志提成方法，为什么可能让阅读更费力？",
+      "expectedAnswer": "这种很浅、单处调用且依赖情境的包装会产生双向阅读依赖；把日志正文放回错误检测点可集中相关信息，同时保留通用 logger。",
+      "graphicReasoning": "The opposing arrows name two distinct reading questions. Their replacement with adjacent context and log information, still connected to the generic logger, gives the source's recommendation a concrete locality argument. The figure does not turn the reading arrows into runtime recursion.",
+      "sourceConditions": [
+        "The conclusion is limited to the source's shallow wrappers, each invoked at one location.",
+        "The generic logger remains; this is not opposition to logging infrastructure or all extracted methods.",
+        "The two directions concern reading dependencies, not two runtime calls."
+      ],
+      "sourceEvidence": ["docs/ch09.md:129-167", "original/ch09.md: OEBPS/part0013.xhtml#p68:df02390bcc and #p69:4beef3e21b"],
+      "resolvedIssues": [],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {
+        "desktop": "d5868115c4b61bcef72944af5117dae3ec63e7d272b534bd95b0581188d39de7",
+        "mobile": "206279a9c4b21ffdce112f380a0ccb45f6be0167307a84817a1be4bfaa6d24f1"
+      },
+      "viewEvidence": {
+        "sheets": ["gallery-light-004.png", "gallery-dark-004.png"],
+        "svgPaths": ["assets/ch09-logging-locality.svg", "assets/ch09-logging-locality-mobile.svg"],
+        "observation": "Both themes and variants preserve the reading questions, local context and remaining logger. No material readability defect was found.",
+        "placement": {"section": "9.6", "placement": "end"},
+        "placementJudgment": "Follows the actual wrapper example and therefore does not have to duplicate all its code."
+      }
+    },
+    {
+      "id": "ch10-unset-semantics",
+      "state": "active",
+      "verdict": "accept",
+      "decision": "keep",
+      "question": "怎样让删除不存在的变量成为正常情况？",
+      "expectedAnswer": "把目标定义为确保变量不再存在：存在时删除，不存在时无需操作，两种初态均满足同一成功条件。这是作者的替代语义。",
+      "graphicReasoning": "The changed convergence is the argument: absence leads to an error under the original definition but reaches the same postcondition under the proposal. This does not visually model catching an arbitrary failed operation and declaring success. The moved desktop action labels no longer cross the stems.",
+      "sourceConditions": [
+        "This is Tcl's original design versus the author's proposal, not a claim that deployed unset behavior changed.",
+        "The illustrated special case is an absent variable during cleanup, not every possible unset failure.",
+        "No-op success depends on the postcondition already holding."
+      ],
+      "sourceEvidence": ["docs/ch10.md:60 and :70", "original/ch10.md: OEBPS/part0014.xhtml#p48:cb85625e5f and #p53:8bdaca4870"],
+      "resolvedIssues": ["10-unset-labels"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {
+        "desktop": "a7bf70a6a04be488395a4f3779602a8d1691ba57fb804d7fbff5e23a4c802abd",
+        "mobile": "330121be6fbaf94bbd0e154cfbe99f858a35ae980252e42d2b2bb07d29f76e6d"
+      },
+      "viewEvidence": {
+        "sheets": ["gallery-light-005.png", "gallery-dark-005.png"],
+        "svgPaths": ["assets/ch10-unset-semantics.svg", "assets/ch10-unset-semantics-mobile.svg"],
+        "observation": "All desktop action labels are clear of paths, including the rightmost no-operation label. The mobile and desktop convergence has the same meaning, and no clipping was observed.",
+        "placement": {"section": "10.3", "placement": "end"},
+        "placementJudgment": "Appropriate immediately after the semantic proposal."
+      }
+    },
+    {
+      "id": "ch10-range-overlap",
+      "state": "active",
+      "verdict": "accept",
+      "decision": "keep",
+      "question": "索引越界或起点大于终点时，怎样仍给出明确结果？",
+      "expectedAnswer": "返回现有字符中满足 begin <= i < end 的字符；示例 [-2,2) 得到 AB，[3,8) 得到 DE，[4,2) 得到空结果。",
+      "graphicReasoning": "The request extents and string extent share a consistent scale, so the filled overlap can be checked against the actual letters. The reversed request uses an unsatisfiable inequality, not reversed traversal. The revised guide starts leave the 0 and 5 labels unobstructed without changing interval geometry.",
+      "sourceConditions": [
+        "The end is exclusive and only existing characters can be returned.",
+        "Negative values are absolute bounds in the proposed API, not Python-style offsets from the end.",
+        "This is the author's proposed API, not existing Java substring behavior.",
+        "The letters and chosen bounds are teaching inputs; the translator's Python clarification remains in the chapter."
+      ],
+      "sourceEvidence": ["docs/ch10.md:84-88", "original/ch10.md: OEBPS/part0014.xhtml#p60:50f41da8bc and #p61:ee472e4f26"],
+      "resolvedIssues": [],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {
+        "desktop": "a6332a06e7f95cca17fb93d93268c1f6005a10820f7353865581032bd67450d0",
+        "mobile": "77e42bcfa780e99ea3230cd546a531915de38952e461c23cad226c4569cfdd1f"
+      },
+      "viewEvidence": {
+        "sheets": ["gallery-light-006.png", "gallery-dark-006.png"],
+        "svgPaths": ["assets/ch10-range-overlap.svg", "assets/ch10-range-overlap-mobile.svg"],
+        "observation": "The two nonempty intersections and empty reversed case match across variants. Filled/dashed extents, index labels and API qualifications are readable in both themes.",
+        "placement": {"section": "10.5", "placement": "end"},
+        "placementJudgment": "Appropriate after the proposal and the related correction."
+      }
+    },
+    {
+      "id": "ch10-error-carrier",
+      "state": "active",
+      "verdict": "accept",
+      "decision": "keep",
+      "question": "统一处理程序如何处理新错误，又不理解每种错误的细节？",
+      "expectedAnswer": "不同检测点通过共同基类和消息约定提供具体错误内容；同一段顶层逻辑取出本次异常的消息，放入本次请求的错误响应，不必增加错误类别分支。",
+      "graphicReasoning": "The replacement now makes the crucial payload observable. A's missing-quantity message and B's invalid-xyz message appear in identically shaped exception records, pass through the same response operation, and reappear in their correspondingly labeled responses. The explicit independent-request qualification prevents the converging paths from suggesting that two errors are combined into one response. The previous generic lifecycle no longer occupies the diagram, and the new focus complements rather than redraws original figures 10.1 and 10.2.",
+      "sourceConditions": [
+        "The two messages come from 10.7; A/B and the name message are teaching notation, not new protocol fields or author-defined class names.",
+        "The common contract requires inheritance from the same exception base and a provided error message.",
+        "A and B are independent requests, each with its own response; no concatenation or broadcast is intended.",
+        "The request-level recovery note excludes system-fatal exceptions and does not prescribe cleanup-versus-response order.",
+        "No HTTP status-code rule, response serialization format or blanket exposure of every exception is introduced."
+      ],
+      "sourceEvidence": ["docs/ch10.md:124-128", "original/ch10.md: OEBPS/part0014.xhtml#p76:cd21be3ccb, #p78:8790376374 and #p79:b101a537cb"],
+      "resolvedIssues": ["10-carrier-unseen-payload", "10-carrier-competing-story"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {
+        "desktop": "079a9da3477bb6ed355a84631c2e9b357b7931e343359e390a1612bcea8ddd20",
+        "mobile": "481379591427c3edc64a8888a29f23a2db25584819c2948356b83c13e8cb5a59"
+      },
+      "viewEvidence": {
+        "sheets": ["gallery-light-007.png", "gallery-dark-007.png"],
+        "svgPaths": ["assets/ch10-error-carrier.svg", "assets/ch10-error-carrier-mobile.svg"],
+        "observation": "Checked both full message strings at input and output in both variants. Mobile's A path goes around B, rather than through B's record; the B response has its own output path. Neither record/output is clipped. The taller mobile layout remains readable at the supplied size.",
+        "placement": {"section": "10.7", "paragraph": 10},
+        "resolvedTokenInsertionIndex": 166,
+        "precedingParagraphStartLine": 126,
+        "placementJudgment": "Independently confirmed after the shared-contract/information-hiding explanation and before the general request-abort paragraph, rather than after the RAMCloud example."
+      }
+    },
+    {
+      "id": "ch10-mask-obligation",
+      "state": "active",
+      "verdict": "accept",
+      "decision": "keep",
+      "question": "重试后完成操作，与吞掉错误后假装成功，有什么区别？",
+      "expectedAnswer": "正确屏蔽在内部处理异常并履行承诺；吞错而未完成操作又不暴露必要信息，会使调用者无法处理失败。成功以确实完成为前提。",
+      "graphicReasoning": "The valid success route includes completed work, while the crossed-out route skips that obligation. The separate unfinished-and-caller-needs-information route makes the limit explicit. Metadata now matches the visible condition and the desktop description correctly calls the counterexample inappropriate masking.",
+      "sourceConditions": [
+        "A failure need not be proven irrecoverable before the caller may need information about it.",
+        "Retries are not a guarantee that the network eventually recovers.",
+        "Internal hiding is appropriate only when the relevant exception information is not needed outside.",
+        "The figure does not classify every pending retry as a terminal failure or replace the separate NFS discussion."
+      ],
+      "sourceEvidence": ["docs/ch10.md:96-104 and :158-162", "original/ch10.md: OEBPS/part0014.xhtml#p65:07e841a7ad, #p69:f220fa6840, #p94:b0272bf74a and #p95:d3bb5d85eb"],
+      "resolvedIssues": ["10-mask-exposure-scope", "10-mask-source-category"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {
+        "desktop": "7afbf98887647cb7c94641e1f686421a82901f4d3522c4281c681937f3965b14",
+        "mobile": "bf06fd839bcddf53eef2e59be20ff257f60b4223e56a95213fc27c14b54fd6c5"
+      },
+      "viewEvidence": {
+        "sheets": ["gallery-light-008.png", "gallery-dark-008.png"],
+        "svgPaths": ["assets/ch10-mask-obligation.svg", "assets/ch10-mask-obligation-mobile.svg"],
+        "observation": "Read the visible paths alongside alt and desc. Both themes preserve the success precondition, required failure exposure and crossed-out false-success shortcut.",
+        "placement": {"section": "10.9", "placement": "end"},
+        "placementJudgment": "Appropriate where the source explicitly limits error hiding."
+      }
+    },
+    {
+      "id": "ch11-interface-alternatives",
+      "state": "active",
+      "verdict": "accept",
+      "decision": "keep",
+      "question": "删除跨行的一段文字，会把哪些工作留给调用者？",
+      "expectedAnswer": "同一教学删除可由调用者合并保留的 ab 与 gh、循环五次删除当前索引 2，或一次指定范围 [2,7)；三个方案都得到 abgh，但调用者承担的工作不同。",
+      "graphicReasoning": "The comparison now contains actual evidence: highlighted source characters, separately retained fragments converging into the merged line, five successive deletion states, and a single range operation. The desktop trace can be followed edge by edge; mobile explicitly gives top-to-bottom call order and each post-deletion string. The three sections are alternatives for the same task, not a sequence of three implementations to execute. This now earns its space beyond the prose and beyond Chapter 8's ownership diagram.",
+      "sourceConditions": [
+        "The teaching input is abcd followed by one newline followed by efgh. The deleted characters are c, d, newline, e, f, exactly once each.",
+        "Every individual-character deletion uses the current zero-based index 2; later characters move into that position.",
+        "The one-range operation is the half-open teaching range [2,7). Those numeric indices and deletion direction are not mandated by the source.",
+        "Whole-line API signatures and exact whole-line call counts are not invented.",
+        "Five calls do not establish five-times execution cost or a benchmark.",
+        "Chapter 8's character-oriented range interface remains distinguished from Chapter 11's single-character candidate."
+      ],
+      "sourceEvidence": ["docs/ch11.md:5-19", "docs/ch08.md:13-15", "original/ch11.md: OEBPS/part0015.xhtml#p4:d26ff20881, #p6:4fb235fadb, #p9:b3dd1fa860 and #p11:709cf68663"],
+      "resolvedIssues": ["11-edit-highlight", "11-edit-trace", "11-edit-placement", "11-edit-terminology"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {
+        "desktop": "3d4b105e0010e695deef852e44cb9caee67fc95bc27bfbfb71254de347964e86",
+        "mobile": "1c01de19472276afdba7db4feab23b3d00630735ea3373fe07f1327ccabfe2ec"
+      },
+      "viewEvidence": {
+        "sheets": ["gallery-light-009.png", "gallery-dark-009.png"],
+        "svgPaths": ["assets/ch11-interface-alternatives.svg", "assets/ch11-interface-alternatives-mobile.svg"],
+        "observation": "Checked the rendered sequence abd\\nefgh, ab\\nefgh, abefgh, abfgh, abgh. The highlight contains only cd, the newline and ef. Desktop's smaller trace text is still readable at 680 pixels; mobile uses larger strings and an explicit ordered list. Neither variant confuses newline with a literal extra letter.",
+        "placement": {"section": "intro", "paragraph": 6},
+        "resolvedTokenInsertionIndex": 38,
+        "precedingParagraphStartLine": 17,
+        "placementJudgment": "Independently confirmed after the alternatives and range-interface derivation, before the implementation-level discussion. No longer front-loaded after the opening thesis."
+      }
+    },
+    {
+      "id": "ch11-two-design-levels",
+      "state": "retired",
+      "verdict": "accept-retirement",
+      "decision": "retire",
+      "question": "比较接口与比较实现，为什么不能使用同一套判断依据？",
+      "expectedAnswer": "原问题过强：两层比较的重点不同，但评价因素不完全互斥。同一接口下仍可比较多种实现，实施前也不必完整实现全部候选。",
+      "graphicReasoning": "The revised chapter now has one concrete interface comparison placed before the unchanged implementation paragraph. That paragraph already lists the alternative representations and different priorities. Retiring the thumbnail-based second diagram removes redundancy without hiding the second design level or implying that the retained range interface dictates an internal representation.",
+      "sourceConditions": [
+        "Interface comparison also considers simplicity, generality and implementation efficiency.",
+        "Implementation comparison emphasizes simplicity and performance; this is not an exclusive partition of criteria.",
+        "Linked lines, fixed-size blocks and a gap buffer are examples, not a universal ranking.",
+        "Early alternatives need not all be fully implemented."
+      ],
+      "sourceEvidence": ["docs/ch11.md:5-19", "original/ch11.md: OEBPS/part0015.xhtml#p4:d26ff20881, #p6:4fb235fadb through #p9:b3dd1fa860 and #p12:bcac19c1df", "revisions-08-14.json: ch11-two-design-levels"],
+      "resolvedIssues": ["11-levels-question", "11-levels-redundancy", "11-levels-placement"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {"desktop": null, "mobile": null},
+      "viewEvidence": {
+        "sheets": [],
+        "reason": "Retirement reviewed through verified removal and retained source coverage; no current asset exists.",
+        "activeMetadataAbsent": true,
+        "snapshotSCAssetsAbsent": true,
+        "livePublicSCAssetsAbsent": true,
+        "sourceCoverage": "The paragraph at line 19 remains immediately after the new interface-comparison insertion point. The stronger single comparison does not displace it."
+      }
+    },
+    {
+      "id": "ch12-missing-contract",
+      "state": "active",
+      "verdict": "accept",
+      "decision": "keep",
+      "question": "看到 start 和 end，能确定返回哪些字符吗？",
+      "expectedAnswer": "声明不足以决定终点包含性或反向范围行为。本教学契约明确这些条件后，start=1、end=3 只返回 BC；这不是所有 substring 接口的通用规则。",
+      "graphicReasoning": "The same declaration still branches into BC and BCD, and the added indices now make their correspondence to start/end independently checkable. Adding the explicit contract eliminates one interpretation. Unlike the Chapter 10 figure, this one explains missing information rather than endorsing a bounds policy.",
+      "sourceConditions": [
+        "The teaching string uses zero-based indices, now visible under the letters.",
+        "End exclusion and reversed-range empty results are chosen teaching semantics, not prescribed universal behavior.",
+        "A comment must match the actual implementation; merely writing a comment does not change runtime behavior.",
+        "The reverse-range rule is stated precisely in the comment rather than requiring another graphic example."
+      ],
+      "sourceEvidence": ["docs/ch12.md:20-24", "original/ch12.md: OEBPS/part0016.xhtml#p14:6e7f5d7f88 and #p15:7f3e8bf262"],
+      "resolvedIssues": [],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {
+        "desktop": "fa22b6b150c5e70271396555c53084a38d2118bf408dcb3736452dfcc0ae5338",
+        "mobile": "28ebae08e6068062f51bcffe0833e398cc67cfde35d45e36dba14e4a29b6dd20"
+      },
+      "viewEvidence": {
+        "sheets": ["gallery-light-010.png", "gallery-dark-010.png"],
+        "svgPaths": ["assets/ch12-missing-contract.svg", "assets/ch12-missing-contract-mobile.svg"],
+        "observation": "Indices 0 through 3, selected underlines and BC/BCD labels align sufficiently to follow both interpretations. Both themes retain readable contract and implementation-consistency notes.",
+        "placement": {"section": "12.1", "placement": "end"},
+        "placementJudgment": "Appropriate after the declaration-versus-abstraction argument."
+      }
+    },
+    {
+      "id": "ch12-discover-dependency",
+      "state": "retired",
+      "verdict": "accept-retirement",
+      "decision": "retire",
+      "question": "注释怎样减少未知信息，却不自动减少要修改的代码？",
+      "expectedAnswer": "文档保存并澄清相关知识，让修改者知道要看哪里及为什么；它主要帮助认知负荷和未知的未知，不会自动删除代码依赖。",
+      "graphicReasoning": "The unchanged 12.5 text explicitly names the three manifestations of complexity and identifies the two that documentation helps. Chapter 13 retains concrete examples of discoverable cross-module documentation. Removing the generic A/B/C drawing therefore loses no necessary inference and avoids representing already visible labels as an observed discovery improvement.",
+      "sourceConditions": [
+        "Clarifying dependencies is not the same as removing them or automatically reducing all modification sites.",
+        "The source claim concerns useful documentation, not measured improvement from a particular diagram.",
+        "Chapter 13's source examples remain; no replacement generic map is required."
+      ],
+      "sourceEvidence": ["docs/ch12.md:42-54", "docs/ch13.md:445-507", "original/ch12.md: OEBPS/part0016.xhtml#p25:e9ef790781, #p30:1a1f57a606 and #p31:98d3dec660", "revisions-08-14.json: ch12-discover-dependency"],
+      "resolvedIssues": ["12-dependency-placeholder", "12-dependency-occlusion"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {"desktop": null, "mobile": null},
+      "viewEvidence": {
+        "sheets": [],
+        "reason": "No active pair remains. The removal decision was reconsidered against the actual retained prose and examples.",
+        "activeMetadataAbsent": true,
+        "snapshotSCAssetsAbsent": true,
+        "livePublicSCAssetsAbsent": true,
+        "sourceCoverage": "The distinction between change amplification, cognitive load and unknown unknowns remains explicit. No gap requiring reinstatement was found."
+      }
+    },
+    {
+      "id": "ch13-padding-information",
+      "state": "active",
+      "verdict": "accept",
+      "decision": "keep",
+      "question": "为什么“文本的水平填充”没有解释 textHorizontalPadding？",
+      "expectedAnswer": "旧注释没有说明单位与单双侧；新注释说明每行左右分别留出 4 像素，而不是两侧总共 4 像素。",
+      "graphicReasoning": "Two distinct spaces flank the text, each with its own 4 px dimension. The late marker fix is real in both source and the hash-matched render: each dimension is an independent path with a marker at each end. Four visible arrowheads per drawing establish two separately measured intervals rather than one span across the text.",
+      "sourceConditions": [
+        "The unchanged source constant is 4 and the unit is pixels.",
+        "The blank space applies separately to the left and right sides of each line.",
+        "The enlarged spaces are not drawn to actual screen-pixel scale.",
+        "The marker repair changes neither the represented quantities nor the source contract."
+      ],
+      "sourceEvidence": ["docs/ch13.md:93-104", "original/ch13.md: OEBPS/part0017.xhtml#p49:d89461d329 and #p52:4c58df9c7c through #p56:25efe591ff", "revisions-08-14.json: ch13-padding-information.followUps, 13-padding-multipart-markers"],
+      "resolvedIssues": ["13-padding-multipart-markers"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {
+        "desktop": "6858dca88eed0abedb01e44b71fef8cc5ccba3da82e047b730161a431cf872c4",
+        "mobile": "efcb215d0ceaace1e28d5d1643b41f8453c010276fc3873d3d2b27bf694393c8"
+      },
+      "viewEvidence": {
+        "sheets": ["gallery-light-011.png", "gallery-dark-011.png"],
+        "svgPaths": ["assets/ch13-padding-information.svg", "assets/ch13-padding-information-mobile.svg"],
+        "dimensionPaths": {
+          "desktop": ["M79 309H143", "M535 309H599"],
+          "mobile": ["M23 342H69", "M291 342H337"],
+          "independentPathsPerVariant": 2,
+          "markersPerPath": ["marker-start", "marker-end"]
+        },
+        "observation": "Viewed all four endpoints in each variant in both themes. The inner and outer arrowheads are present, the 4 px labels remain clear, and no unintended connecting span crosses the text region. Acceptance uses this new gallery, not the superseded marker checks.",
+        "placement": {"section": "13.2", "placement": "end"},
+        "placementJudgment": "Appropriate immediately after the improved padding comment."
+      }
+    },
+    {
+      "id": "ch13-length-map",
+      "state": "active",
+      "verdict": "accept",
+      "decision": "keep",
+      "question": "怎样把变量注释写到无需追查所有用法就能理解？",
+      "expectedAnswer": "对这个映射须说明含换行的字符长度、该长度的行数，以及无条目意味着没有这种长度的行。示例映射为 {2:1,3:2}，而不是像素宽度或未知统计。",
+      "graphicReasoning": "The three input lines can be counted, the two equal-length lines converge to count 2, and the absent key 4 can be checked against the displayed inputs. The diagram supports an actual small derivation. Mobile's description now calls the values a key/count mapping, not a ratio.",
+      "sourceConditions": [
+        "Each displayed \\n represents one newline character and is included in length.",
+        "The value counts lines with exactly the key's character length.",
+        "No key for a length means no such lines; the source representation does not store a 4:0 entry.",
+        "The input lines are teaching data, not a source-system measurement."
+      ],
+      "sourceEvidence": ["docs/ch13.md:120-146", "original/ch13.md: OEBPS/part0017.xhtml#p72:156d407aa2 and #p76:f9f9aac689 through #p82:23aa83f202"],
+      "resolvedIssues": [],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {
+        "desktop": "0c7b5cddc21689073b8878679d754b44851591bfc60098fb510b7e868e6b2741",
+        "mobile": "b5d5f2307a7e4aca89663fef1e13d19401016317b86c10445a793d994f177d19"
+      },
+      "viewEvidence": {
+        "sheets": ["gallery-light-012.png", "gallery-dark-012.png"],
+        "svgPaths": ["assets/ch13-length-map.svg", "assets/ch13-length-map-mobile.svg"],
+        "observation": "Both variants show lengths 2,3,3 yielding counts 1,2, with readable labels and unambiguous input-to-record grouping. The colon notation is labeled length:count.",
+        "placement": {"section": "13.3", "placement": "end"},
+        "placementJudgment": "Acceptable as a precision recap within the same section, despite the intervening heartbeat example."
+      }
+    },
+    {
+      "id": "ch13-rpc-intent",
+      "state": "active",
+      "verdict": "accept",
+      "decision": "keep",
+      "question": "高层注释怎样把几个局部判断连接成一个意图？",
+      "expectedAnswer": "追加到发往目标服务器且尚未发送的既有 RPC 这一意图，有助于理解会话、状态及容量判断；三项成立仍不足够，maxPos < assignPos 也须成立才选中候选，其理由仍未解释。",
+      "graphicReasoning": "The source predicates now have direct interpretive counterparts. The unresolved maxPos condition is not merely a caution sentence below a successful candidate: it is an explicit gate with separate selected/not-selected outcomes. The outcome says selected for later append, matching the snippet's assignment of readActiveRpcId rather than inventing an append action. The top predicate-to-interpretation arrows and bottom conditional diagram do different jobs, and their labels distinguish those jobs.",
+      "sourceConditions": [
+        "rpc is explicitly an abbreviation for the current readRpc[i], not a new source identifier.",
+        "session equality is interpreted with probably, and LOADING/capacity with suggests; the author's inferential qualifications survive.",
+        "The RPC is destined for the target server and has not yet been sent; it is not located on that destination server.",
+        "All four conditions are required. The grouping is logical, not a specification of short-circuit evaluation or loop order.",
+        "The code selects a candidate for later work; this shown snippet does not itself append the hash.",
+        "The explanation still does not claim to know why maxPos < assignPos is necessary, and the figure does not invent a numeric capacity."
+      ],
+      "sourceEvidence": ["docs/ch13.md:172-202", "original/ch13.md: OEBPS/part0017.xhtml#p104:fa32221b8d through #p109:cb04b4120f and #p112:aa4ea17b1c through #p116:1a36ab00b4"],
+      "resolvedIssues": ["13-rpc-location", "13-rpc-inference-link", "13-rpc-candidate-encoding"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {
+        "desktop": "6eb2f88445b3e25496b171dae16c37311b6dddd5091ebd88cdf6a5b0db366508",
+        "mobile": "3d5dc2cf4bcca80113d0364cb8fe91611192ce161ab22412341ce2a5b870c6fa"
+      },
+      "viewEvidence": {
+        "sheets": ["gallery-light-013.png", "gallery-dark-013.png"],
+        "svgPaths": ["assets/ch13-rpc-intent.svg", "assets/ch13-rpc-intent-mobile.svg"],
+        "observation": "Read all three predicates, both maxPos branch labels and the final selected-for-later-append text in both variants. Mobile's explanation is stacked instead of connected horizontally, but the prerequisite gate and qualified interpretations have equivalent meaning. The footer explicitly disclaims runtime ordering.",
+        "placement": {"section": "13.4", "paragraph": 4},
+        "resolvedTokenInsertionIndex": 170,
+        "precedingParagraphStartLine": 202,
+        "placementJudgment": "Independently confirmed after BOTH the better comment and the explanatory paragraph beginning at line 202, before the general discussion beginning with 更高层级的注释比更低层级的注释更难写. This anchor is appropriate; no afterFence change is requested."
+      }
+    },
+    {
+      "id": "ch13-ready-contract",
+      "state": "active",
+      "verdict": "accept",
+      "decision": "keep",
+      "question": "isReady 返回 true，能保证下一次 getNext 得到对象吗？",
+      "expectedAnswer": "不能。true 保证下一次 getNext 不阻塞，但可返回对象或因查询结束而返回 NULL；false 仅表示可能阻塞。表中情况在本次 isReady 执行工作并返回时观察。",
+      "graphicReasoning": "Two different return-time states map to true, so the graphic directly refutes true-means-object. The observed-state heading and replacement of isReady() with 返回值 remove the previous pure-predicate reading. The explicit distinction between a call's initial state and its return-time state is present in the picture, not only in metadata. The progress obligation is kept separate from the guarantee about the next getNext result.",
+      "sourceConditions": [
+        "Observation occurs after the current call's work, at its return, not before it starts.",
+        "No ready object before the call does not determine a false return.",
+        "true may mean an object can be returned or the lookup has ended; end corresponds to NULL from getNext.",
+        "false means may block, not must block.",
+        "Calling isReady directly or through getNext is necessary for progress, but no fixed progress amount or object production on every call is promised.",
+        "The figure introduces no internal scheduler, rule order or concurrency protocol."
+      ],
+      "sourceEvidence": ["docs/ch13.md:310-315 and :378-416", "original/ch13.md: OEBPS/part0017.xhtml#p193:959c8fff6f and #p263:1446c997c6 through #p276:cecfa24ef0"],
+      "resolvedIssues": ["13-ready-observation-time"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {
+        "desktop": "ec271825bc1dc169d31186107c881d21d1e508957c307bc2e11b116c94d930d1",
+        "mobile": "69805786ec3586a88161844dc644f4061a5482179405a73d578eb8953a1f9492"
+      },
+      "viewEvidence": {
+        "sheets": ["gallery-light-014.png", "gallery-dark-014.png"],
+        "svgPaths": ["assets/ch13-ready-contract.svg", "assets/ch13-ready-contract-mobile.svg"],
+        "observation": "Both rendered variants visibly specify the return-time observation before the rows. Both true outcomes, NULL, possible-not-necessary blocking and direct/indirect progress obligation remain legible. The footer rejects fixed-progress and initial-state assumptions.",
+        "placement": {"section": "13.5", "placement": "end"},
+        "placementJudgment": "Appropriate immediately after the improved isReady interface comment."
+      }
+    },
+    {
+      "id": "ch13-status-discovery",
+      "state": "retired",
+      "verdict": "accept-retirement",
+      "decision": "retire",
+      "question": "新增一个状态值时，怎样让维护者发现所有同步修改点？",
+      "expectedAnswer": "将完整跨文件更新清单放在新增值时必经的 Status 枚举末尾，让维护者自然看到；清单指出义务而不自动完成更新。",
+      "graphicReasoning": "The retained source code demonstrates exactly the adjacency that the retired diagram merely asserted. Its complete seven-item checklist is more actionable than the grouped summary, and the chapter can now proceed to the different case where no central location is obvious without returning to a displaced Status recap.",
+      "sourceConditions": [
+        "STATUS_MAX_VALUE must equal the largest status value and remain last in the list.",
+        "The messages and symbols tables, C++ exception class and dispatch mapping, Java exception class and dispatch mapping, and Java enum must be updated.",
+        "The Java enum position must correspond to the status code.",
+        "Discoverability does not imply automatic synchronization or removal of dependencies.",
+        "The following designNotes alternative and its distance/staleness drawback remain in the source."
+      ],
+      "sourceEvidence": ["docs/ch13.md:445-507", "original/ch13.md: OEBPS/part0017.xhtml#p290:09247b9d63 through #p319:2254da773a and #p320:186a978c95", "revisions-08-14.json: ch13-status-discovery"],
+      "resolvedIssues": ["13-status-boxed-checklist", "13-status-displaced"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {"desktop": null, "mobile": null},
+      "viewEvidence": {
+        "sheets": [],
+        "reason": "No current pair exists. Re-read the surviving enum code and seven obligations; retirement is accepted on that basis.",
+        "activeMetadataAbsent": true,
+        "snapshotSCAssetsAbsent": true,
+        "livePublicSCAssetsAbsent": true,
+        "sourceCoverage": "The actual comment is still inside the enum example, followed by the explanation of why it is at the end. All seven obligations and their positional conditions survive."
+      }
+    },
+    {
+      "id": "ch14-block-domains",
+      "state": "active",
+      "verdict": "accept",
+      "decision": "keep",
+      "question": "为什么把逻辑块号叫作 block，会误伤另一块磁盘数据？",
+      "expectedAnswer": "文件内逻辑块号与物理磁盘块号属于不同域。教学例中逻辑 2 应映射到物理 9；绕过映射把 2 当物理号会作用于另一块。不同名称帮助识别误用，不同类型可进一步限制混用。",
+      "graphicReasoning": "The mapping path changes the address to 9, while the bypass reaches unrelated physical block 2. The divergence makes the failure mechanism inspectable without presenting the illustrative numbers as historical evidence. Both routes remain explicit after vertical reflow.",
+      "sourceConditions": [
+        "2, 9 and the mapping are teaching inventions, not the Sprite incident's recorded block values or code.",
+        "A name can help reveal the wrong domain but does not itself enforce type safety.",
+        "Non-interchangeable types provide a separate stronger protection.",
+        "The source's naming counterfactual is not converted into a universal guarantee."
+      ],
+      "sourceEvidence": ["docs/ch14.md:7-13", "original/ch14.md: OEBPS/part0018.xhtml#p6:ce75b5633d and #p7:8c78010958"],
+      "resolvedIssues": [],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {
+        "desktop": "980be5da23dbad772532d29496b2669b4e82f38a0a7ca4203ee199ac6d9d12e2",
+        "mobile": "45b487e8b8126fd8a83015a66dd78d6000747d072f3574d70f23c2ddc234bb1e"
+      },
+      "viewEvidence": {
+        "sheets": ["gallery-light-015.png", "gallery-dark-015.png"],
+        "svgPaths": ["assets/ch14-block-domains.svg", "assets/ch14-block-domains-mobile.svg"],
+        "observation": "The 2-to-9 mapping and red bypass to physical 2 remain clear and legible in both themes. Mobile's bypass starts at the original logical value and does not imply a later operation on block 9.",
+        "placement": {"section": "14.1", "placement": "end"},
+        "placementJudgment": "Appropriate after the historical explanation and proposed naming/type improvements."
+      }
+    },
+    {
+      "id": "ch14-name-domains",
+      "state": "active",
+      "verdict": "accept",
+      "decision": "keep",
+      "question": "名称过于笼统和过于具体，会造成怎样不同的误读？",
+      "expectedAnswer": "x 容许多个坐标域解释，charIndex 更准确；selection 却把任意范围操作误缩成当前选区，应使用 range。精确不是一味更具体。",
+      "graphicReasoning": "Competing interpretations in the upper half contrast with insufficient semantic coverage in the lower half. The enclosing capability and full-span bracket make selected and unselected ranges part of the actual delete capability. The two types of naming error therefore have different visual structures rather than being another list of preferred names.",
+      "sourceConditions": [
+        "The x example illustrates a possible ambiguity, not a measured probability of misunderstanding.",
+        "The generic deletion operation accepts selected or unselected ranges; renaming does not change its implementation.",
+        "The set-like shapes express conceptual coverage, not literal storage, frequency or semantic distance.",
+        "The source also mentions lineIndex; focusing the drawing on charIndex does not deny that companion example."
+      ],
+      "sourceEvidence": ["docs/ch14.md:40 and :83-89", "original/ch14.md: OEBPS/part0018.xhtml#p22:3429e964a8 and #p45:a323d4c80f"],
+      "resolvedIssues": [],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {
+        "desktop": "46151f8fc29b22e93a25f91b2378ade986526d21e78040b79df8e399b9683024",
+        "mobile": "dce1aace7b7703ae01382a81ff2b051d14208fc7eed25fde6156befe0aaae009"
+      },
+      "viewEvidence": {
+        "sheets": ["gallery-light-016.png", "gallery-dark-016.png"],
+        "svgPaths": ["assets/ch14-name-domains.svg", "assets/ch14-name-domains-mobile.svg"],
+        "observation": "Both layouts preserve ambiguity versus overly narrow naming. The bracket covers the full actual capability, the selection is inside it, and all labels remain readable.",
+        "placement": {"section": "14.3", "placement": "end"},
+        "placementJudgment": "Appropriate synthesis of the section's opposing naming errors."
+      }
+    },
+    {
+      "id": "ch14-context-budget",
+      "state": "retired",
+      "verdict": "accept-retirement",
+      "decision": "retire",
+      "question": "什么时候 block 或 i 足够清楚，什么时候必须补回限定？",
+      "expectedAnswer": "在上下文明确、含义单一且用法易见时可使用简短名称；存在多个域或远离声明时更需要描述。共同词干与 src/dst 区分同类角色，最终仍由读者理解判断。",
+      "graphicReasoning": "The remaining chapter text includes the actual short-loop example, the multi-block exception for File, source/destination roles and the reader-based distance rule. The domain distinction also retains its own concrete graphic. A separate policy recap is not necessary, and removing it avoids a second summary immediately before the chapter conclusion.",
+      "sourceConditions": [
+        "Short i/j names depend on visible, understandable use, not a universal character-count threshold.",
+        "Omitting file inside File is qualified by whether multiple block types occur.",
+        "Consistent names must have a sufficiently narrow, consistent purpose.",
+        "srcFileBlock and dstFileBlock are roles in copying file data, not an instruction to assign one block-number variable to the other.",
+        "Both shorter and longer names remain subject to reader feedback; the advice is not always-long naming."
+      ],
+      "sourceEvidence": ["docs/ch14.md:73-81, :99-113 and :153-159", "original/ch14.md: OEBPS/part0018.xhtml#p38:80ca530461, #p51:06485baed2, #p52:03d977f544, #p57:86e1e90a93, #p89:24cbe73305 and #p90:fec36f089e", "revisions-08-14.json: ch14-context-budget"],
+      "resolvedIssues": ["14-context-boxed-rules", "14-context-copy-arrow"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "currentSVGHashes": {"desktop": null, "mobile": null},
+      "viewEvidence": {
+        "sheets": [],
+        "reason": "Retirement judged against the surviving source examples and conditions. No current graphic is claimed to have been rendered.",
+        "activeMetadataAbsent": true,
+        "snapshotSCAssetsAbsent": true,
+        "livePublicSCAssetsAbsent": true,
+        "sourceCoverage": "The short-loop code, File exception, src/dst explanation and reader-based qualification remain intact. No replacement is required merely to preserve the old diagram count."
+      }
+    }
+  ],
+  "handoff": {
+    "requiredSCChanges": [],
+    "retirementReversalsRequested": [],
+    "rpcAnchorChangeRequested": false,
+    "acceptedContent": "The 17 SC pairs and five retirement decisions identified by this report.",
+    "notAcceptedByThisReport": [
+      "Traditional Chinese conversion",
+      "Uninspected later SC revisions",
+      "Complete responsive reader/caption/modal/accessibility integration",
+      "Any claim of measured reader-comprehension improvement"
+    ],
+    "releaseBoundary": "Main may record this independent SC second-pass acceptance with the reviewed hashes. Keep TW conversion and full-reader integration evidence separate from this asset/content judgment."
+  }
+}

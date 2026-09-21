@@ -1,0 +1,272 @@
+[
+  {
+    "id": "ch10-unset-semantics",
+    "chapter": "ch10",
+    "title": "改变成功条件，而不是忽略失败",
+    "question": "怎样让删除不存在的变量成为正常情况？",
+    "answer": "将操作定义为确保变量不存在：已有变量被删除，不存在的变量保持不存在，两条路径都满足同一个成功条件。",
+    "summary": "图示对照 Tcl 原设计与作者提出的替代语义，不声称现有 unset 已按建议改变。",
+    "alt": "原定义中，存在变量通向删除成功，不存在通向错误与调用者catch；建议定义中，存在和不存在两种初态都通向变量不存在且成功返回。",
+    "kind": "state-transition",
+    "desktop": "/diagrams/ch10-unset-semantics.svg",
+    "mobile": "/diagrams/ch10-unset-semantics-mobile.svg",
+    "anchor": {
+      "section": "10.3",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "10.2",
+        "epub": "OEBPS/part0014.xhtml#p48:cb85625e5f",
+        "reason": "清理临时状态时难以预测已创建的变量，原unset迫使调用者捕获并忽略不存在错误。"
+      },
+      {
+        "section": "10.3",
+        "epub": "OEBPS/part0014.xhtml#p53:8bdaca4870",
+        "reason": "作者建议以确保变量不再存在取代删除变量的定义；两条状态路径是该语义的直接展开。"
+      }
+    ],
+    "review": {
+      "source": "review/reader/diagram-review-08-14-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    },
+    "status": "content-reviewed",
+    "reviewHistory": [
+      {
+        "source": "earlier-local-review",
+        "recordedStatus": "independently-reviewed",
+        "decision": "revise",
+        "resolution": "已将桌面版四个动作标签移出垂直连线；保留原设计与建议语义的区别。",
+        "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance.",
+        "snapshotDesktop": "/tmp/aposd2e-viz-review-round1/assets/ch10-unset-semantics.svg"
+      },
+      {
+        "source": "review/reader/diagram-review-08-14.json",
+        "decision": "revise",
+        "stage": "MAIN-first-pass",
+        "implementation": "preserved-existing-fix",
+        "secondReview": "pending",
+        "accepted": false,
+        "resolution": "保留先前移开四个动作标签的有效修改及两种初态汇入同一成功条件。 本轮未改变状态语义或Tcl原设计/作者建议的区分；重新执行资产文字与连线检查。",
+        "authority": "Historical implementation record, superseded by independent follow-up."
+      }
+    ],
+    "titleTw": "改變成功條件，而不是忽略失敗",
+    "questionTw": "怎樣讓刪除不存在的變數成為正常情況？",
+    "answerTw": "將操作定義為確保變數不存在：已有變數被刪除，不存在的變數保持不存在，兩條路徑都滿足同一個成功條件。",
+    "summaryTw": "圖示對照 Tcl 原設計與作者提出的替代語義，不聲稱現有 unset 已按建議改變。",
+    "altTw": "原定義中，存在變數通向刪除成功，不存在通向錯誤與呼叫者catch；建議定義中，存在和不存在兩種初態都通向變數不存在且成功回傳。",
+    "desktopTw": "/diagrams/ch10-unset-semantics-tw.svg",
+    "mobileTw": "/diagrams/ch10-unset-semantics-mobile-tw.svg"
+  },
+  {
+    "id": "ch10-range-overlap",
+    "chapter": "ch10",
+    "title": "用范围交集定义正常结果",
+    "question": "索引越界或起点大于终点时，怎样仍给出明确结果？",
+    "answer": "按作者建议，只返回满足 beginIndex ≤ i < endIndex 的现有字符；没有满足条件的字符就返回空结果。",
+    "summary": "字母与索引为教学示例。这是作者建议的 API，不是 Java substring 的现有行为，也不是 Python 负索引规则。",
+    "alt": "字符串ABCDE的字符索引为0至4。请求负2至2与有效范围交于0至2，得到AB；请求3至8得到DE；请求4至2没有满足条件的索引，得到空结果。",
+    "kind": "interval-intersection",
+    "desktop": "/diagrams/ch10-range-overlap.svg",
+    "mobile": "/diagrams/ch10-range-overlap-mobile.svg",
+    "anchor": {
+      "section": "10.5",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "10.5",
+        "epub": "OEBPS/part0014.xhtml#p60:50f41da8bc",
+        "reason": "原Java接口边界检查给调用者带来额外代码。"
+      },
+      {
+        "section": "10.5",
+        "epub": "OEBPS/part0014.xhtml#p61:ee472e4f26",
+        "reason": "建议的字符集合语义包含越界及起点大于终点。ABCDE与具体索引是教学自拟；不采用原段对Python切片的过度概括。"
+      }
+    ],
+    "review": {
+      "source": "review/reader/diagram-review-08-14-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    },
+    "status": "content-reviewed",
+    "reviewHistory": [
+      {
+        "source": "earlier-local-review",
+        "recordedStatus": "independently-reviewed",
+        "decision": "keep",
+        "resolution": "独立审阅保留交集语义；后续浏览器几何检查发现引导线穿过0和5刻度，已下移引导线起点。",
+        "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance.",
+        "snapshotDesktop": "/tmp/aposd2e-viz-review-round1/assets/ch10-range-overlap.svg"
+      },
+      {
+        "source": "review/reader/diagram-review-08-14.json",
+        "decision": "keep",
+        "stage": "MAIN-first-pass",
+        "implementation": "kept",
+        "secondReview": "pending",
+        "accepted": false,
+        "resolution": "保留MAIN的keep决定，不重画现有SVG；保留与报告兼容的后续有效修正。 更新当前权威与状态，保留此前本地审阅历史但不将其解释为MAIN或最终二审认可。",
+        "authority": "Historical implementation record, superseded by independent follow-up."
+      }
+    ],
+    "titleTw": "用範圍交集定義正常結果",
+    "questionTw": "索引越界或起點大於終點時，怎樣仍給出明確結果？",
+    "answerTw": "按作者建議，只回傳滿足 beginIndex ≤ i < endIndex 的現有字元；沒有滿足條件的字元就回傳空結果。",
+    "summaryTw": "字母與索引為教學範例。這是作者建議的 API，不是 Java substring 的現有行為，也不是 Python 負索引規則。",
+    "altTw": "字串ABCDE的字元索引為0至4。請求負2至2與有效範圍交於0至2，得到AB；請求3至8得到DE；請求4至2沒有滿足條件的索引，得到空結果。",
+    "desktopTw": "/diagrams/ch10-range-overlap-tw.svg",
+    "mobileTw": "/diagrams/ch10-range-overlap-mobile-tw.svg"
+  },
+  {
+    "id": "ch10-error-carrier",
+    "chapter": "ch10",
+    "title": "两条错误消息，同一段响应逻辑",
+    "question": "统一处理程序如何处理新错误，又不理解每种错误的细节？",
+    "answer": "缺少quantity与quantity值xyz不合法的检测点分别生成原文的具体消息；两种异常遵守共同基类加消息的约定，同一段顶层逻辑即可把各自消息放进各自错误响应，无须新增错误类别分支。",
+    "summary": "图直接追踪原文两条消息从检测点到错误响应的对应关系，不再重画正常/异常请求流程。A/B和message字段名是教学记号，消息内容来自原文；不规定HTTP状态码或响应格式。",
+    "alt": "请求A的记录包含消息“URL 中不存在参数 'quantity'”；请求B包含“'quantity' 参数的值 'xyz' 不正确；必须为正整数”。两条同形的共同基类/message记录分别通过同一个响应生成步骤，输出各自对应的消息，而不是合成一个响应。仅请求级错误可在清理后继续下一请求，系统级致命错误另行区分，不规定清理与响应的先后。",
+    "kind": "message-contract",
+    "desktop": "/diagrams/ch10-error-carrier.svg",
+    "mobile": "/diagrams/ch10-error-carrier-mobile.svg",
+    "anchor": {
+      "section": "10.7",
+      "paragraph": 10
+    },
+    "sources": [
+      {
+        "section": "10.7",
+        "epub": "OEBPS/part0014.xhtml#p76:cd21be3ccb",
+        "reason": "本段直接提供quantity缺失与xyz不是正整数的两条消息。图沿用译文消息，A/B和message是教学标记，不是作者定义的类名或协议字段。"
+      },
+      {
+        "section": "10.7",
+        "epub": "OEBPS/part0014.xhtml#p78:8790376374",
+        "reason": "检测点描述具体错误；顶层封装响应生成知识。新异常遵守共同基类加消息的约定即可接入。图中两次独立请求复用同一处理步骤，不合并异常记录。"
+      },
+      {
+        "section": "10.7",
+        "epub": "OEBPS/part0014.xhtml#p79:b101a537cb",
+        "reason": "请求级异常中止当前请求、清理状态、继续下一个，与系统致命错误区分；图不规定清理和生成响应的内部先后。"
+      }
+    ],
+    "review": {
+      "source": "review/reader/diagram-review-08-14-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    },
+    "status": "content-reviewed",
+    "reviewHistory": [
+      {
+        "source": "earlier-local-review",
+        "recordedStatus": "independently-reviewed",
+        "decision": "keep",
+        "resolution": "保留消息契约、两种知识归属和请求级恢复边界，不重复原书调用树。",
+        "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance."
+      },
+      {
+        "source": "review/reader/diagram-review-08-14.json",
+        "decision": "replace",
+        "stage": "MAIN-first-pass",
+        "implementation": "replaced-in-place",
+        "secondReview": "pending",
+        "accepted": false,
+        "resolution": "用两条原文消息及同形的共同基类/message记录替换通用正常/异常生命周期。 显式展示独立请求A、B的检测点、同一段不增加错误类别分支的响应逻辑，以及各自响应中对应的原消息。 移除正常响应旁路和下一请求路由，只保留请求级中止/清理/继续、系统致命错误排除及不规定清理先后的范围说明。 移动到10.7第10个根级段落之后，紧接共享异常契约而不是RAMCloud例子。 更新title、answer、summary、alt和source理由；A/B及message被标记为教学记号，无HTTP状态码或响应协议发明。",
+        "authority": "Historical implementation record, superseded by independent follow-up."
+      }
+    ],
+    "titleTw": "兩條錯誤訊息，同一段響應邏輯",
+    "questionTw": "統一處理常式如何處理新錯誤，又不理解每種錯誤的細節？",
+    "answerTw": "缺少quantity與quantity值xyz不合法的檢測點分別生成原文的具體訊息；兩種例外遵守共同基類加訊息的約定，同一段頂層邏輯即可把各自訊息放進各自錯誤響應，無須新增錯誤類別分支。",
+    "summaryTw": "圖直接追蹤原文兩條訊息從檢測點到錯誤響應的對應關係，不再重畫正常/例外請求流程。A/B和message欄位名是教學記號，訊息內容來自原文；不規定HTTP狀態碼或響應格式。",
+    "altTw": "請求A的記錄包含訊息“URL 中不存在參數 'quantity'”；請求B包含“'quantity' 參數的值 'xyz' 不正確；必須為正整數”。兩條同形的共同基類/message記錄分別透過同一個響應生成步驟，輸出各自對應的訊息，而不是合成一個響應。僅請求級錯誤可在清理後繼續下一請求，系統級致命錯誤另行區分，不規定清理與響應的先後。",
+    "desktopTw": "/diagrams/ch10-error-carrier-tw.svg",
+    "mobileTw": "/diagrams/ch10-error-carrier-mobile-tw.svg"
+  },
+  {
+    "id": "ch10-mask-obligation",
+    "chapter": "ch10",
+    "title": "屏蔽异常不能丢掉完成义务",
+    "question": "重试后完成操作，与吞掉错误后假装成功，有什么区别？",
+    "answer": "前者在内部处理异常并完成承诺；后者既未完成操作，又剥夺了调用者处理失败所需的信息。",
+    "summary": "仅当异常信息不需要由模块外部处理时才适合隐藏。图中的成功路径以重试确实完成操作为前提，不保证网络永远恢复。",
+    "alt": "可恢复的错误经过内部重试，只有完成操作才到达成功；未完成且调用者需要知道的失败向上暴露。被划掉的路径从错误直接通向假装成功，没有完成操作。",
+    "kind": "error-normal-path",
+    "desktop": "/diagrams/ch10-mask-obligation.svg",
+    "mobile": "/diagrams/ch10-mask-obligation-mobile.svg",
+    "anchor": {
+      "section": "10.9",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "10.6",
+        "epub": "OEBPS/part0014.xhtml#p65:07e841a7ad",
+        "reason": "底层重传是内部处理异常的例子。图仅表达重试成功的条件路径，不把最终交付表述为无条件保证。"
+      },
+      {
+        "section": "10.6",
+        "epub": "OEBPS/part0014.xhtml#p69:f220fa6840",
+        "reason": "异常屏蔽并非适用于所有情况。"
+      },
+      {
+        "section": "10.9",
+        "epub": "OEBPS/part0014.xhtml#p94:b0272bf74a",
+        "reason": "外部不需要异常信息才适合规避或屏蔽。"
+      },
+      {
+        "section": "10.9",
+        "epub": "OEBPS/part0014.xhtml#p95:d3bb5d85eb",
+        "reason": "学生模块吞掉网络错误，使上层无法判断消息丢失或对端失败，是反例。图为条件路径教学归纳。"
+      }
+    ],
+    "review": {
+      "source": "review/reader/diagram-review-08-14-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    },
+    "status": "content-reviewed",
+    "reviewHistory": [
+      {
+        "source": "earlier-local-review",
+        "recordedStatus": "independently-reviewed",
+        "decision": "revise",
+        "resolution": "已将替代文本收窄为未完成且上层需要知道，并将吞错称为不恰当的异常屏蔽。",
+        "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance.",
+        "snapshotDesktop": "/tmp/aposd2e-viz-review-round1/assets/ch10-mask-obligation.svg"
+      },
+      {
+        "source": "review/reader/diagram-review-08-14.json",
+        "decision": "revise",
+        "stage": "MAIN-first-pass",
+        "implementation": "preserved-existing-fix",
+        "secondReview": "pending",
+        "accepted": false,
+        "resolution": "保留先前将alt从不可恢复改成未完成且调用者需要知道的修正。 保留desc中的不恰当异常屏蔽，以及完成操作才返回成功的条件；不新增必然送达承诺。 本轮未重画SVG，按MAIN报告重新标注审阅阶段。",
+        "authority": "Historical implementation record, superseded by independent follow-up."
+      }
+    ],
+    "titleTw": "遮蔽例外不能丟掉完成義務",
+    "questionTw": "重試後完成操作，與吞掉錯誤後假裝成功，有什麼區別？",
+    "answerTw": "前者在內部處理例外並完成承諾；後者既未完成操作，又剝奪了呼叫者處理失敗所需的資訊。",
+    "summaryTw": "僅當例外資訊不需要由模組外部處理時才適合隱藏。圖中的成功路徑以重試確實完成操作為前提，不保證網路永遠恢復。",
+    "altTw": "可恢復的錯誤經過內部重試，只有完成操作才到達成功；未完成且呼叫者需要知道的失敗向上暴露。被劃掉的路徑從錯誤直接通向假裝成功，沒有完成操作。",
+    "desktopTw": "/diagrams/ch10-mask-obligation-tw.svg",
+    "mobileTw": "/diagrams/ch10-mask-obligation-mobile-tw.svg"
+  }
+]

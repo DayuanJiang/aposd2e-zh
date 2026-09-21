@@ -1,76 +1,109 @@
-[![Build and Deploy](https://github.com/yingang/aposd2e-zh/actions/workflows/CI.yml/badge.svg)](https://github.com/yingang/aposd2e-zh/actions/workflows/CI.yml)
-# 《软件设计的哲学，第二版》 中文翻译
+<div align="center">
 
-在线阅读：[简体中文](https://yingang.github.io/aposd2e-zh/) | [繁体中文](https://yingang.github.io/aposd2e-zh/zh-tw/)
+# 软件设计的哲学（第二版）中文版
 
-## 简介
+**A Philosophy of Software Design, 2nd Edition**<br/>
+中文翻译 · 全书图解 · Python 代码对照 · 简繁双版
 
-<div style="inline">
-  <img src="./docs/figures/cover.jpeg" width="210px" height="280px" />
+[![Build and Deploy](https://github.com/DayuanJiang/aposd2e-zh/actions/workflows/CI.yml/badge.svg)](https://github.com/DayuanJiang/aposd2e-zh/actions/workflows/CI.yml)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](./LICENSE)
+
+**[开始阅读（简体中文）](https://dayuanjiang.github.io/aposd2e-zh/)** &nbsp;·&nbsp; **[開始閱讀（繁體中文）](https://dayuanjiang.github.io/aposd2e-zh/zh-tw/)**
+
+<img src="./docs/figures/cover.jpeg" width="210" alt="A Philosophy of Software Design 封面" />
+
 </div>
 
-这是一本关于软件设计的书：如何将复杂的软件系统分解成模块（如类和方法），以便这些模块可以相对独立地实现。本书首先介绍了软件设计的基本问题，也就是对复杂性的管理。然后讨论了一些在完成软件设计的过程中涉及到的哲学问题，并提出了一系列可以在软件设计过程中应用的设计原则。本书还介绍了一些可用来识别设计问题的危险信号。你可以通过应用本书中的想法来减少大型软件系统的复杂性，以便能更快和更低成本地编写软件。
+## 这本书讲什么
 
-作者 John Ousterhout 是斯坦福大学的 Bosack Lerner 计算机科学教授。他当前的研究重点是新的软件堆栈层，以允许数据中心应用程序利用具有微秒级延迟的通信和存储技术。Ousterhout 之前的 14 年经历在工业界，并创办了 Scriptics 和 Electric Cloud 这两家公司，再之前的 14 年则是加州大学伯克利分校的计算机科学教授。他是 Tcl 脚本语言的创建者，并且以在分布式操作系统和存储系统中的工作而闻名。Ousterhout 在耶鲁大学获得了物理学学士学位，并在卡内基梅隆大学获得了计算机科学博士学位。他是美国国家工程院院士，并获得了诸多的奖项，包括美国计算机协会（ACM）的软件系统奖、ACM Grace Murray Hopper 奖、美国国家科学基金会（NSF）的总统青年研究奖和加州大学伯克利分校（UC Berkeley）的杰出教学奖。
+为什么代码越写越难改？为什么一个小需求会牵连十几个文件？为什么每个类都很短，整个系统却没人敢动？
+
+斯坦福大学教授、Tcl 语言的作者 John Ousterhout 用一本篇幅不长的书回答了这些问题：软件设计的核心任务，是控制复杂性。全书围绕这一把尺子，讨论每个程序员每天都要面对的决定：模块该切多大，接口怎样才算好，注释该写什么，名字怎么取，异常怎样处理，什么时候值得多花一点时间把设计做对。
+
+它提供的是一套判断方式。读完之后再看自己的代码，感觉会不一样。
+
+## 这个版本有什么不同
+
+这个版本在社区译稿的基础上，对照第二版英文原文逐段修订，也为中文读者补充了图解与代码对照。
+
+- **译文重新修订。** 理顺生硬句式的同时，逐句核对条件、否定、因果与适用范围，保留作者的论证与分歧。核心术语全书统一，并区分容易混淆的含义：例如“深模块”的“深”与软件层级无关，“复杂性”也不等于算法的时间复杂度。
+- **50 幅译者图解，覆盖全部 22 章。** 用模块边界、状态变化和调用关系，把抽象原则画出来：为什么这个接口更深，为什么那个特殊情况可以消失，一次内部修改会波及多远。
+- **原书插图的矢量重绘。** 12 幅原书低分辨率插图都有可放大的 SVG 版本，也可以一键切回原图对照。
+- **60 段代码示例的 Python 对照。** 原书示例以 Java、C 与 C++ 为主。每段示例都提供可切换的 Python 教学改写，保留原例中的设计反例，并注明语言语义上的差异，方便把注意力放在设计问题本身。
+- **为长时间阅读设计的阅读器。** 简繁切换、字号调整、明暗主题、全书搜索、章节目录、本章小节定位、阅读进度，以及脚注与正文之间的往返跳转。
+- **补充内容与原书正文分开呈现。** 图解与 Python 改写都标注为译者补充；原书本身的疑点保留原文，另以译者注说明勘误依据。
+
+<p align="center">
+  <img src=".github/readme/reader-diagram.png" width="880" alt="第 4 章页面中的译者图解：这个细节能从接口中省掉吗？" />
+</p>
+<p align="center">
+  <img src=".github/readme/reader-python.png" width="880" alt="第 6 章的代码示例，切换为 Python 教学改写" />
+</p>
+
+## 关于作者
+
+John Ousterhout 是斯坦福大学 Bosack Lerner 计算机科学教授，Tcl 脚本语言的创建者，以分布式操作系统和存储系统方面的工作闻名。他在工业界工作过 14 年，创办了 Scriptics 和 Electric Cloud 两家公司；此前曾在加州大学伯克利分校任计算机科学教授，同样为期 14 年。他是美国国家工程院院士，曾获 ACM 软件系统奖、ACM Grace Murray Hopper 奖、NSF 总统青年研究奖和 UC Berkeley 杰出教学奖。这本书源自他在斯坦福讲授多年的软件设计课程。
 
 ## 目录
 
-- [前言](docs/preface.md)
-- [第 1 章 介绍](docs/ch01.md)
-- [第 2 章 复杂性的本质](docs/ch02.md)
-- [第 3 章 能工作的代码是不够的](docs/ch03.md)
-- [第 4 章 模块应该是深的](docs/ch04.md)
-- [第 5 章 信息隐藏和信息泄露](docs/ch05.md)
-- [第 6 章 通用的模块是更深的](docs/ch06.md)
-- [第 7 章 不同的层级，不同的抽象](docs/ch07.md)
-- [第 8 章 下沉复杂性](docs/ch08.md)
-- [第 9 章 在一起更好还是分开更好？](docs/ch09.md)
-- [第 10 章 通过定义来规避错误](docs/ch10.md)
-- [第 11 章 设计两次](docs/ch11.md)
-- [第 12 章 不写注释的四个借口](docs/ch12.md)
-- [第 13 章 注释应该描述代码中难以理解的内容](docs/ch13.md)
-- [第 14 章 选取名称](docs/ch14.md)
-- [第 15 章 先写注释](docs/ch15.md)
-- [第 16 章 修改现有的代码](docs/ch16.md)
-- [第 17 章 一致性](docs/ch17.md)
-- [第 18 章 代码应该是易理解的](docs/ch18.md)
-- [第 19 章 软件发展趋势](docs/ch19.md)
-- [第 20 章 性能设计](docs/ch20.md)
-- [第 21 章 决定什么是重要的](docs/ch21.md)
-- [第 22 章 结论](docs/ch22.md)
-- [总结](docs/summary.md)
+| 章节 | 内容概览 |
+| --- | --- |
+| [前言](docs/preface.md) | 我们学过语言、算法和工具，却很少专门学习如何设计软件。这本书关心的，正是怎样把复杂问题拆成可以独立理解和解决的部分。 |
+| [第 1 章 介绍](docs/ch01.md) | 软件总在变化，设计也不能止于开工前的一张蓝图。贯穿每次迭代的任务，是不让复杂性随着功能一起失控地增长。 |
+| [第 2 章 复杂性的本质](docs/ch02.md) | 复杂性常从小处显现：一处改动牵连许多地方，动手前要记住太多细节，甚至不知道自己遗漏了什么。依赖性与模糊性就这样慢慢积累。 |
+| [第 3 章 能工作的代码是不够的](docs/ch03.md) | 只求代码尽快能跑，往往会把这些负担留给未来。作者主张换一种节奏：每次多花一点心思改善设计，为后续开发省下力气。 |
+| [第 4 章 模块应该是深的](docs/ch04.md) | 这种投入首先体现在模块上。好的模块用简单的接口提供丰富的功能，让使用者不必深入内部，也能把事情做好。 |
+| [第 5 章 信息隐藏和信息泄露](docs/ch05.md) | 要做到这一点，关键不是把代码分散到更多类里，而是把设计决策藏在恰当的地方，避免一次内部变化迫使其他模块跟着修改。 |
+| [第 6 章 通用的模块是更深的](docs/ch06.md) | 当接口不再紧贴某个具体场景，而是提供少量通用操作时，模块往往能隐藏更多细节，许多特殊情况也随之消失。 |
+| [第 7 章 不同的层级，不同的抽象](docs/ch07.md) | 模块组成层级后，每一层还应带来新的抽象。若只是把参数和调用原样转交，增加的层次可能只会让人多绕一圈。 |
+| [第 8 章 下沉复杂性](docs/ch08.md) | 真正有用的封装，有时需要实现者多承担一些麻烦：在模块内部处理与自身功能相关的复杂性，换取众多调用者的简单。 |
+| [第 9 章 在一起更好还是分开更好？](docs/ch09.md) | 由此，拆分还是合并就不能只凭代码长短决定。需要共享知识的代码可以放在一起，通用与专用的职责则应分清，最终看整个系统是否更容易理解。 |
+| [第 10 章 通过定义来规避错误](docs/ch10.md) | 异常也要接受同样的审视。有些错误条件可以通过重新定义操作来消除；其余异常则可考虑屏蔽或集中处理，减少散落各处的特殊分支。 |
+| [第 11 章 设计两次](docs/ch11.md) | 这些选择很难一次想对。与其急着实现第一个方案，不如先构思几种明显不同的设计，再比较哪一种接口更简单、依赖更少。 |
+| [第 12 章 不写注释的四个借口](docs/ch12.md) | 但再好的结构，也无法让代码说出所有重要信息。书的目光因此转向注释：它不是设计失败后的补救，而是帮助读者理解抽象的一部分。 |
+| [第 13 章 注释应该描述从代码中不易看出的信息](docs/ch13.md) | 有价值的注释不会逐句复述代码，而会补上代码没有说清的内容：边界在哪里，哪些规则必须遵守，以及为什么这样设计。 |
+| [第 14 章 选取名称](docs/ch14.md) | 名称则是更短小的说明。一个准确、一致的名字，能让读者形成正确的预期，省去猜测，也减少由误解造成的缺陷。 |
+| [第 15 章 先写注释](docs/ch15.md) | 文字还可以反过来检验设计。不妨先写清接口的用途与约定，若怎么都解释不明白，就有机会在编码之前发现抽象的问题。 |
+| [第 16 章 修改现有的代码](docs/ch16.md) | 当软件进入持续维护阶段，这种设计意识仍不能放下。每次修改既要照顾当前需求，也要维护整体结构，让注释与实际行为一同更新。 |
+| [第 17 章 一致性](docs/ch17.md) | 随着代码越来越多，一致的约定能让已有经验反复派上用场。相似的事物采用相似做法，不同的事物也应有清楚的区别。 |
+| [第 18 章 代码应该是易理解的](docs/ch18.md) | 这些努力最终汇成同一种阅读体验：看到代码时，读者能较快地理解它，而不是四处寻找线索。设计应减少他们需要知道的事，并把必要的信息交代清楚。 |
+| [第 19 章 软件发展趋势](docs/ch19.md) | 有了这把尺子，面对流行的方法也就不必盲从。继承、敏捷、测试和设计模式，都值得追问一句：它究竟是在降低复杂性，还是在增加负担？ |
+| [第 20 章 性能设计](docs/ch20.md) | 性能同样不是放弃整洁设计的理由。先通过测量找到真正的瓶颈，再让关键路径少做不必要的工作，简单与高效往往可以兼得。 |
+| [第 21 章 决定什么是重要的](docs/ch21.md) | 更深一层看，这些原则都在训练同一种判断：什么值得关注，什么可以隐藏。让重要的事情清楚可见，同时尽量减少必须操心的事情。 |
+| [第 22 章 结论](docs/ch22.md) | 于是，全书回到最初的主张：好的设计来自持续的小额投入。把降低复杂性变成日常习惯，既能减轻未来的维护负担，也能让编程更有乐趣。 |
+| [总结](docs/summary.md) | 最后，书中把设计原则与危险信号汇在一起。它们不是必须照办的戒律，而是留给下一次设计与代码审查的一组提醒。 |
 
-## 翻译说明
+## 本地开发
 
-详细请参阅[翻译说明](https://github.com/yingang/aposd2e-zh/tree/main/docs#%E7%BF%BB%E8%AF%91%E8%AF%B4%E6%98%8E)。
-
-## 本地开发 & 阅读
-
-本项目基于 VuePress 进行开发，以提供比 Github Markdown 更佳的阅读体验
-
-依赖于 [`node.js`][nodejs]、[`yarn`][yarn]、[`vuepress`][vuepress] 等环境
-
-[nodejs]: https://nodejs.cn/
-[yarn]: https://yarnpkg.com/
-[vuepress]: https://v2.vuepress.vuejs.org/zh/
+本项目基于 [VuePress](https://v2.vuepress.vuejs.org/zh/) 构建，需要 [Node.js](https://nodejs.org/) 与 [Yarn](https://yarnpkg.com/)。
 
 ```sh
-git clone https://github.com/yingang/aposd2e-zh.git
+git clone https://github.com/DayuanJiang/aposd2e-zh.git
 cd aposd2e-zh/
-yarn install    # 安装 VuePress@next
-yarn dev        # 编译并打开网页预览
+yarn install    # 安装依赖
+yarn dev        # 启动本地预览
+yarn build      # 构建静态站点到 docs/.vuepress/dist
 ```
+
+繁体版由简体版自动生成。修改 `docs/*.md` 之后，运行下面的命令同步 `docs/zh-tw/`：
+
+```sh
+pip install -r requirements.txt
+python3 bin/zh-tw.py
+```
+
+## 致谢与许可
+
+- 译文基于 [yingang/aposd2e-zh](https://github.com/yingang/aposd2e-zh) 的社区译稿修订而来，感谢原译者与所有贡献者。
+- 原书版权归 John Ousterhout 所有。本仓库的译文与补充材料以 [CC BY 4.0](./LICENSE) 许可发布。
+- 发现翻译问题或有改进建议，欢迎提交 [Issue](https://github.com/DayuanJiang/aposd2e-zh/issues) 或 Pull Request。
 
 ## Star History
 
-<a href="https://www.star-history.com/?repos=yingang%2Faposd2e-zh&type=date&legend=top-left">
+<a href="https://www.star-history.com/#DayuanJiang/aposd2e-zh&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=yingang/aposd2e-zh&type=date&theme=dark&legend=top-left&sealed_token=e5aAE9dwKmToozylCVpmLO22Iinx9VF3jZfXS9D86gRNZC5zwMKIQ2iyJ4JXkG1Ojj5-9DeZ2mkXqUfpQC0zbkGOHoNjuuKaadQfTTZFN2qwIbawQaVazA" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=yingang/aposd2e-zh&type=date&legend=top-left&sealed_token=e5aAE9dwKmToozylCVpmLO22Iinx9VF3jZfXS9D86gRNZC5zwMKIQ2iyJ4JXkG1Ojj5-9DeZ2mkXqUfpQC0zbkGOHoNjuuKaadQfTTZFN2qwIbawQaVazA" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=yingang/aposd2e-zh&type=date&legend=top-left&sealed_token=e5aAE9dwKmToozylCVpmLO22Iinx9VF3jZfXS9D86gRNZC5zwMKIQ2iyJ4JXkG1Ojj5-9DeZ2mkXqUfpQC0zbkGOHoNjuuKaadQfTTZFN2qwIbawQaVazA" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=DayuanJiang/aposd2e-zh&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=DayuanJiang/aposd2e-zh&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=DayuanJiang/aposd2e-zh&type=Date" />
  </picture>
 </a>
-
-## License
-
-[CC-BY 4.0](./LICENSE)

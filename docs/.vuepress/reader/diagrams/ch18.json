@@ -1,0 +1,109 @@
+[
+  {
+    "id": "ch18-event-trace",
+    "chapter": "ch18",
+    "title": "调用点看不到的运行时连线",
+    "question": "找到事件模块的调用点，为什么仍不知道会执行哪个处理函数？",
+    "answer": "应用中的初始化代码在运行时注册事件到处理函数的关系，事件模块随后查询该关系来确定具体目标。同一调用点在不同注册状态下可调用 A 或 B。处理函数注释补充何时调用；failed() 原例还说明调用方与线程，但这些说明不能替代具体注册状态。",
+    "summary": "教学自拟的事件 E、处理函数 A/B 和两次独立运行，不表示 RAMCloud 的注册 API。虚线是应用初始化写入注册关系，实线是事件派发查表与调用；没有处理函数自注册的回路。",
+    "alt": "应用初始化分别为独立运行甲登记 E 对应 A、为运行乙登记 E 对应 B。两次运行使用同一事件模块调用点，收到 E 后查各自登记关系，分别到达 A 与 B。failed() 的原注释仅补充传输错误阻止 RPC 完成、transport 调用和 dispatch thread 上下文。",
+    "kind": "runtime-trace",
+    "desktop": "/diagrams/ch18-event-trace.svg",
+    "mobile": "/diagrams/ch18-event-trace-mobile.svg",
+    "anchor": {
+      "afterFence": "ch18-f5"
+    },
+    "sources": [
+      {
+        "section": "18.2",
+        "epub": "OEBPS/part0022.xhtml#p68:23d9d9ef58",
+        "reason": "注册由应用的其他部分发起，不应画成处理函数自注册。应用初始化、E、A/B 和两次独立运行是教学示意。"
+      },
+      {
+        "section": "18.2",
+        "epub": "OEBPS/part0022.xhtml#p69:f3efedcb04",
+        "reason": "同一静态调用点不能确定运行时目标；用两个注册状态说明差异，不假定特定注册 API 或同时调用 A/B。"
+      },
+      {
+        "section": "18.2",
+        "epub": "OEBPS/part0022.xhtml#p70:c58431aebd",
+        "reason": "处理函数的接口注释应说明何时调用。"
+      },
+      {
+        "section": "18.2",
+        "epub": "OEBPS/part0022.xhtml#p72:474b887270",
+        "reason": "原注释说明 dispatch thread 和 transport；下一行说明错误使 RPC 无法完成。通用注册示意不声称展示 RAMCloud 内部注册实现。"
+      },
+      {
+        "section": "18.2",
+        "epub": "OEBPS/part0022.xhtml#p73:5c3d60c8f0",
+        "reason": "failed() 的触发条件为 transport-level error prevents an RPC from completing。"
+      }
+    ],
+    "status": "content-reviewed",
+    "titleTw": "呼叫點看不到的執行時連線",
+    "questionTw": "找到事件模組的呼叫點，為什麼仍不知道會執行哪個處理函式？",
+    "answerTw": "應用中的初始化程式碼在執行時註冊事件到處理函式的關係，事件模組隨後查詢該關係來確定具體目標。同一呼叫點在不同註冊狀態下可呼叫 A 或 B。處理函式註解補充何時呼叫；failed() 原例還說明呼叫方與執行緒，但這些說明不能替代具體註冊狀態。",
+    "summaryTw": "教學自擬的事件 E、處理函式 A/B 和兩次獨立執行，不表示 RAMCloud 的註冊 API。虛線是應用初始化寫入註冊關係，實線是事件派發查表與呼叫；沒有處理函式自注冊的迴路。",
+    "altTw": "應用初始化分別為獨立執行甲登記 E 對應 A、為執行乙登記 E 對應 B。兩次執行使用同一事件模組呼叫點，收到 E 後查各自登記關係，分別到達 A 與 B。failed() 的原註解僅補充傳輸錯誤阻止 RPC 完成、transport 呼叫和 dispatch thread 上下文。",
+    "desktopTw": "/diagrams/ch18-event-trace-tw.svg",
+    "mobileTw": "/diagrams/ch18-event-trace-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-15-21-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  },
+  {
+    "id": "ch18-reader-expectation",
+    "chapter": "ch18",
+    "title": "main 返回，不等于这个程序结束",
+    "question": "RaftClient 例子中，读者缺少哪条信息才会误判程序退出？",
+    "answer": "构造函数创建了继续运行的线程。构造函数接口应记录该行为，main 末尾也应提醒执行还在其他线程中继续。",
+    "summary": "线程生命周期用不同长度的轨道表示，横向距离不代表实测时间。本图只解释原例，不把所有 Java 程序概括为 main 返回就退出。",
+    "alt": "主线程创建 RaftClient 后到 main 返回处终止；构造函数分出的其他线程轨道继续向后延伸。接口注释标注创建线程，main 末尾提示继续执行，纠正把主线程结束等同于程序结束的推断。",
+    "kind": "lifecycle-counterexample",
+    "desktop": "/diagrams/ch18-reader-expectation.svg",
+    "mobile": "/diagrams/ch18-reader-expectation-mobile.svg",
+    "anchor": {
+      "section": "18.2",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "18.2",
+        "epub": "OEBPS/part0022.xhtml#p94:b573116406",
+        "reason": "main 创建 RaftClient 的原始代码。"
+      },
+      {
+        "section": "18.2",
+        "epub": "OEBPS/part0022.xhtml#p96:cd1197eff7",
+        "reason": "构造函数创建其他线程，主线程结束后它们继续运行；作者要求在构造函数接口与 main 末尾说明。"
+      },
+      {
+        "section": "18.3",
+        "epub": "OEBPS/part0022.xhtml#p98:7fb1df9ba7",
+        "reason": "原文将线程创建事实列为读者缺少的关键信息。"
+      }
+    ],
+    "status": "content-reviewed",
+    "titleTw": "main 回傳，不等於這個程式結束",
+    "questionTw": "RaftClient 例子中，讀者缺少哪條資訊才會誤判程式退出？",
+    "answerTw": "建構函式建立了繼續執行的執行緒。建構函式介面應記錄該行為，main 末尾也應提醒執行還在其他執行緒中繼續。",
+    "summaryTw": "執行緒生命週期用不同長度的軌道表示，橫向距離不代表實測時間。本圖只解釋原例，不把所有 Java 程式概括為 main 回傳就退出。",
+    "altTw": "主執行緒建立 RaftClient 後到 main 回傳處終止；建構函式分出的其他執行緒軌道繼續向後延伸。介面註解標註建立執行緒，main 末尾提示繼續執行，糾正把主執行緒結束等同於程式結束的推斷。",
+    "desktopTw": "/diagrams/ch18-reader-expectation-tw.svg",
+    "mobileTw": "/diagrams/ch18-reader-expectation-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-15-21-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  }
+]

@@ -1,0 +1,169 @@
+{
+  "id": "ch22-startup-contract",
+  "verdict": "keep",
+  "decision": "keep",
+  "allRequiredConditionsMet": true,
+  "summary": "Accept this exact revision as a bounded explanatory graphic. Required findings R1 and R2 are resolved, and optional R3 is adequately addressed. The graph still earns its place through concrete configuration values and contrasting event orders, not because its predecessors were removed. No new actionable explanatory defect was found within this follow-up scope.",
+  "reviewScope": {
+    "type": "Independent bounded follow-up, not a reader experiment or implementation validation.",
+    "priorReport": "review/reader/diagram-review-22-replacement.json",
+    "priorReportSha256": "d7cd64b6937e2de14d1c6e39cd12bb8a5d63ef693075c1331a1d775b9be7b319",
+    "supersession": "This keep verdict applies only to the hashes recorded below. The prior revise verdict remains an accurate review of the earlier version and has not been edited.",
+    "method": "Read the complete current metadata and both SVG sources, the previous report, and the metadata diff against the saved previous version. Viewed both exact new gallery sheets with view_image, including desktop and mobile. Verified SVG/CSS hashes against both index entries and saved-before hashes against the prior report. Rechecked all four cited English source paragraphs. Confirmed the chapter 18 lifecycle comparison assets are unchanged.",
+    "writes": ["review/reader/diagram-review-22-followup.json"],
+    "excluded": "No source, asset, shared-reader, or prior-report edits; no builds, new screenshots, runtime tests, or full chapter 15-21 second pass."
+  },
+  "question": "当配置必须先于后台读取时，隐藏启动动作为什么可能使短接口更难用？",
+  "expectedAnswer": {
+    "assessment": "Accepted. The revised answer distinguishes the initial state from desired requirements, identifies the shared configuration reference, qualifies A as a possible violating order, and limits B's result to the compliant order shown. It preserves the extra-call obligation and a constructor-starting alternative.",
+    "accepted": "Both independent demonstrations begin with an empty caller-provided configuration retained by Indexer(config). A can read before the caller finishes configuration and therefore reads the empty value in the shown violating order. B constructs without starting, lets the caller configure root, and then starts reading; the shown read obtains /docs while configuration remains unchanged during the illustrated work. The extra call makes timing explicit but does not enforce correct caller order. Preparing configuration before passing it to a startup-enabled constructor is another possible design."
+  },
+  "findingFollowup": [
+    {
+      "id": "ch22-startup-contract-R1",
+      "originalPriority": "P1",
+      "required": true,
+      "status": "resolved",
+      "acceptanceCheck": "The header and A no longer contradict one another; B's illustrated result is conditional rather than automatically guaranteed by start.",
+      "evidence": [
+        "Desktop SVG lines 8-10 separately identify the retained configuration reference, the desired requirement, and the independent demonstrations' empty initial state.",
+        "Desktop SVG line 13 labels A as a violating execution order; line 26 labels B as one satisfying execution order.",
+        "Mobile SVG lines 9-15 likewise separate initial state from requirements and label A as possibly violating them; line 24 identifies B as one compliant order.",
+        "Mobile SVG lines 35-36 explicitly say start does not automatically guarantee correct call order. Desktop line 40 retains the caller's obligation.",
+        "Both SVG desc elements and the metadata answer, summary, and alt consistently distinguish a requirement from an assumption that every trace obeys it."
+      ],
+      "reasoning": "A is now a counterexample to the required ordering, not an impossible execution under a supposed no-mutation premise. B's read value follows the depicted configure-then-start-then-read sequence in the example model. Independent starting states also prevent treating B as a continuation of A's final assignment.",
+      "remainingAction": null
+    },
+    {
+      "id": "ch22-startup-contract-R2",
+      "originalPriority": "P2",
+      "required": true,
+      "status": "resolved",
+      "acceptanceCheck": "A reader can identify what exists before Indexer construction and how the constructed object receives that configuration.",
+      "evidence": [
+        "Desktop SVG line 8 and mobile line 10 specify that Indexer(config) retains the supplied configuration object's reference.",
+        "Desktop SVG line 44 says to set config.root first and then pass config to a startup-enabled constructor.",
+        "Mobile SVG lines 37-39 describe the same alternative, with an explicit configuration input rather than configuration of an object that does not yet exist.",
+        "Metadata answer and alt specify the independent configuration and its transfer to the constructor; neither attributes this API to RaftClient."
+      ],
+      "reasoning": "The added reference relationship makes both the post-construction assignment in A/B and the preconstruction alternative coherent. It is a stated teaching-model choice, not a general recommendation to share mutable configuration. The alternative demonstrates why constructor-started work is not categorically excluded.",
+      "remainingAction": null
+    },
+    {
+      "id": "ch22-startup-contract-R3",
+      "originalPriority": "P3",
+      "required": false,
+      "status": "resolved",
+      "acceptanceCheck": "The mobile comparison remains readable, with the tradeoff and nonexclusive-choice qualification visibly associated with B.",
+      "evidence": [
+        "Mobile viewBox changes from 360 by 1100 in the verified previous version to 360 by 940.",
+        "Primary event labels remain 15px. Previously separate value rows are consolidated into readable 15px event labels; the height reduction primarily removes extra rows and reduces event-box height.",
+        "Mobile SVG line 25, directly below B's heading, says it is not the only option and that the extra call still carries a contract obligation.",
+        "Mobile lines 35-39 put the no-automatic-guarantee statement and concrete construction alternative after B's result.",
+        "Both exact light and dark sheets show intact labels, arrows, and values without visible clipping or overlap."
+      ],
+      "reasoning": "The important qualification is no longer only a distant footer. The alternative remains below the trace, but that is reasonable for a short secondary design option and does not require another full diagram. The 940-unit height is not treated as a universal mobile-size target or proof of integrated-page usability.",
+      "remainingAction": null
+    }
+  ],
+  "independentReassessment": {
+    "questionAnswered": "Yes. The location of the read relative to the assignment explains why the two traces observe different root values. The shorter implicit-start sequence can conceal an obligation that still matters to the caller. No real-reader ease-of-use effect is claimed.",
+    "graphicInference": "The values and directed event orders carry the explanation. Removing their ordering would remove the basis for the empty versus /docs contrast. Mobile boxes remain event representations, not merely boxed conclusions.",
+    "newReferenceModel": "Coherent within the explicitly invented model. Retaining config explains how the caller's assignment after construction can affect a later worker read. The two diagrams are independent examples of alternative startup behavior, not sequential calls to one contradictory implementation. No claim is made that retaining a reference alone provides synchronization or lifetime safety.",
+    "outcomeAndTradeoff": "The result remains only the value at the illustrated read. B is one compliant trace with an extra start call and an obligation to configure first, not an enforcement mechanism, automatic success claim, or global design winner.",
+    "constructorPolicy": "No universal constructor ban is implied. Desktop explicitly rejects it; mobile states that B is not the only option and gives a concrete startup-constructor alternative. Those are semantically equivalent qualifications even though their wording differs.",
+    "desktopMobileMeaning": "The horizontal and vertical traces preserve construction behavior, the relevant read/write order, initial values, B's extra call, caller obligation, and alternative. The shorter mobile omits the desktop's separate sentence about the reader assuming configuration can wait, but retains the implicit-start contrast and the event evidence needed for the bounded question.",
+    "differenceFromChapter18": "Still distinct. The unchanged ch18-reader-expectation graphic concerns execution continuing beyond main's endpoint. This graphic compares configuration-read ordering under alternative startup contracts; it does not repeat that lifecycle inference.",
+    "sourceAttribution": "The example remains explicitly invented Indexer material. Its configuration object, reference retention, root values, and start method are not presented as author-provided APIs or RaftClient behavior.",
+    "placement": "The unchanged chapter-end anchor remains acceptable for an editorial worked closing example. This is not an ROI loop, a general diagnostic flow, or a substitute for the author's conclusion."
+  },
+  "sourceEvidence": [
+    {
+      "anchor": "OEBPS/part0026.xhtml#p5:d725d3ec10",
+      "file": "/tmp/aposd2e-polish.GHV1eo/original/ch22.md:13-14",
+      "assessment": "Rechecked: supports comparing structures for a particular problem, not a specific startup API."
+    },
+    {
+      "anchor": "OEBPS/part0022.xhtml#p96:cd1197eff7",
+      "file": "/tmp/aposd2e-polish.GHV1eo/original/ch18.md:286-287",
+      "assessment": "Rechecked: supports documenting unexpected constructor-created threads; does not prescribe replacing them with start."
+    },
+    {
+      "anchor": "OEBPS/part0022.xhtml#p99:5b421f05ed",
+      "file": "/tmp/aposd2e-polish.GHV1eo/original/ch18.md:295-296",
+      "assessment": "Rechecked: supports reducing information demands, reusing knowledge, and exposing necessary facts. None is an automatic scoring rule."
+    },
+    {
+      "anchor": "OEBPS/part0025.xhtml#p18:dfaf0db169",
+      "file": "/tmp/aposd2e-polish.GHV1eo/original/ch21.md:52-53",
+      "assessment": "Rechecked: supports the risk of hiding important information. Startup timing is an editorial application of that idea."
+    }
+  ],
+  "issues": [],
+  "requestedChanges": [],
+  "viewEvidence": {
+    "sheetsViewedWithViewImage": [
+      "/tmp/aposd2e-ch22-followup/gallery-light-000.png",
+      "/tmp/aposd2e-ch22-followup/gallery-dark-000.png"
+    ],
+    "coverage": "Desktop and mobile variants inspected in each exact sheet.",
+    "desktopReadability": "Header distinctions, timeline labels, observed values, tradeoff, and constructor qualification are legible with no visible collision.",
+    "mobileReadability": "Condensed single-row events remain readable at the displayed 360-unit width. Arrows preserve order, and B's qualification is adjacent to its heading. No visible lost event or value.",
+    "geometry": "Both theme entries report empty outside and overlaps arrays; visual inspection agrees for these sheets.",
+    "provenance": "Current SVG and reader CSS hashes match both new gallery-index entries. Saved-before metadata and both SVG hashes match the prior review, so R1-R3 were checked against the actual reviewed predecessor.",
+    "comparison": "Both current chapter 18 lifecycle SVG hashes still match the prior review's comparison hashes. No wider chapter 18 approval was performed."
+  },
+  "snapshotIdentity": {
+    "algorithm": "SHA-256",
+    "metadata": {
+      "path": "docs/.vuepress/reader/diagrams/ch22.json",
+      "sha256": "a11880a24b421f880094b8c470f516f68bc994388b5d72fe3d9c466ae18e7089"
+    },
+    "desktop": {
+      "path": "docs/.vuepress/public/diagrams/ch22-startup-contract.svg",
+      "sha256": "168a7984afa7b49ebdba7f2ea7aeb19ce0e2ec50bdb26e9a3f1fbebd117171bb"
+    },
+    "mobile": {
+      "path": "docs/.vuepress/public/diagrams/ch22-startup-contract-mobile.svg",
+      "sha256": "76642b264b03070abe826aa4d05d8240e3653b7ad058fee4a07ab0014c0f6f14"
+    },
+    "readerCss": {
+      "path": "docs/.vuepress/reader/reader.css",
+      "sha256": "5d3ef34e2d5da059238251eef0c4e1ece7528f8065dd45ced03726cdf373c289"
+    },
+    "index": {
+      "path": "/tmp/aposd2e-ch22-followup/gallery-index.json",
+      "sha256": "24f7994da32189753b78427b6abb40c0ef279ad9b07400bae41257c54de62912"
+    },
+    "lightSheet": {
+      "path": "/tmp/aposd2e-ch22-followup/gallery-light-000.png",
+      "sha256": "dca854bd10cbbae457097d6851134a6ba434a03f3c3d57898b665fbd761c097a"
+    },
+    "darkSheet": {
+      "path": "/tmp/aposd2e-ch22-followup/gallery-dark-000.png",
+      "sha256": "949fb2d652e1388c9a01c326cae4d6814ccb8f07813ee631ef3a7e4609d8a904"
+    },
+    "savedBefore": {
+      "directory": "/tmp/aposd2e-ch22-before-followup",
+      "metadataSha256": "74cfcc90508bb437193f8aafc70765ac76fac673376ad8fcd7ab429e5cd74ec5",
+      "desktopSha256": "7eb978cc3ab08df547e054acb13530cb67c0198d7aaa6e682788ccc42a7ca8eb",
+      "mobileSha256": "758c5cdd0f77d5fdad74cf15e1a75cfaaf39f5a9cc687901b5edf7b42c17b245",
+      "allMatchPriorReport": true
+    },
+    "unchangedChecks": {
+      "sourceAnchorRecords": true,
+      "question": true,
+      "placement": true,
+      "chapter18LifecycleComparisonAssets": true
+    }
+  },
+  "limitations": [
+    "Keep is limited to explanatory design of this exact revision. It does not validate a concurrent implementation, synchronization, safe publication, configuration lifetime, or mutation handling outside the depicted event-order model.",
+    "No real-reader experiment was performed; comprehension, usability, or error-rate improvement is not established.",
+    "The supplied sheets are gallery renders, not fresh integrated chapter pages or physical mobile tests. Screen-reader behavior, zoom, and formal contrast compliance were not tested.",
+    "The hashes identify the inspected inputs and PNGs; they do not independently attest to how the screenshots were generated.",
+    "The configuration-reference model and alternative constructor are invented teaching choices, not recommendations attributed to the source author.",
+    "The full chapter 15-21 second pass remains pending and is not covered by this approval."
+  ]
+}

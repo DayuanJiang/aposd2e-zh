@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 692" role="img" aria-labelledby="ch06-empty-selection-m-title ch06-empty-selection-m-desc">
+  <title id="ch06-empty-selection-m-title">没有选区，也能走同一条路径</title>
+  <desc id="ch06-empty-selection-m-desc">单行教学例子 ABCDE。删除 [1,4) 后前缀 A 加后缀 E 得 AE；删除空区间 [2,2) 后 AB 加 CDE 得到原文。两者遵循同一前缀后缀拼接规则。</desc>
+  <rect width="360" height="692" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="16" y="32" font-size="19" font-weight="600">没有选区，也能走同一条路径</text>
+    <text x="16" y="59" font-size="14" fill="var(--diagram-muted,#5c645d)">教学演算：单行 ABCDE，范围合法</text>
+    <rect x="16" y="82" width="328" height="82" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="32" y="110" font-weight="600">同一规则：前缀 + 后缀</text>
+    <text x="32" y="141" font-family="ui-monospace,monospace" font-size="14">text[0:start] + text[end:]</text>
+    <text x="16" y="203" font-weight="600">普通选区 [1, 4)</text>
+    <rect x="30" y="226" width="60" height="46" fill="var(--diagram-secondary-soft,#dce4ed)"/><rect x="90" y="226" width="180" height="46" fill="var(--diagram-danger-soft,#ead9dc)"/><rect x="270" y="226" width="60" height="46" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <g font-family="ui-monospace,monospace" font-size="21"><text x="53" y="256">A</text><text x="113" y="256">B</text><text x="173" y="256">C</text><text x="233" y="256">D</text><text x="293" y="256">E</text></g>
+    <path d="M101 248H259" stroke="var(--diagram-danger,#a03946)" stroke-width="2"/>
+    <text x="30" y="299" font-size="14">删除中间 BCD，拼接两端</text>
+    <text x="30" y="334" font-family="ui-monospace,monospace" font-size="21">A + E = AE</text>
+    <path d="M16 358H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="393" font-weight="600">空选区 [2, 2)</text>
+    <rect x="30" y="416" width="120" height="46" fill="var(--diagram-secondary-soft,#dce4ed)"/><rect x="150" y="416" width="180" height="46" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <g font-family="ui-monospace,monospace" font-size="21"><text x="53" y="446">A</text><text x="113" y="446">B</text><text x="173" y="446">C</text><text x="233" y="446">D</text><text x="293" y="446">E</text></g>
+    <path d="M150 408V470" stroke="var(--diagram-warm,#80531b)" stroke-width="3"/>
+    <text x="30" y="499" font-size="14">起点 = 终点，没有中间字符</text>
+    <text x="30" y="534" font-family="ui-monospace,monospace" font-size="21">AB + CDE = ABCDE</text>
+    <text x="16" y="580" font-weight="600">空选区自然得到原文。</text>
+    <text x="16" y="610">无需先判断选区是否存在。</text>
+    <text x="16" y="653" font-size="14" fill="var(--diagram-muted,#5c645d)">并不表示可以省略所有范围校验。</text>
+  </g>
+</svg>

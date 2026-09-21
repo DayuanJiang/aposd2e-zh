@@ -1,0 +1,47 @@
+[
+  {
+    "id": "ch04-abstraction-filter", "chapter": "ch04", "title": "这个细节能从接口中省掉吗？",
+    "question": "为什么块分配机制可以隐藏，写入何时持久化却不能一概隐藏？",
+    "answer": "是否省略取决于调用者是否需要它来正确使用模块。数据库需要知道持久化保证，而通常不需要知道块的选择算法。",
+    "summary": "接口不只是签名。用文件系统的两个细节区分真正的抽象与省略必要信息的错误抽象。",
+    "alt": "决策树询问调用者是否需要某信息来正确使用模块。否分支隐藏块选择算法，是分支在接口说明刷新和持久化规则；下方区分签名与行为约束。",
+    "kind": "decision-tree", "desktop": "/diagrams/ch04-abstraction-filter.svg", "mobile": "/diagrams/ch04-abstraction-filter-mobile.svg",
+    "anchor": { "section": "4.3", "placement": "end" },
+    "sources": [
+      { "section": "4.2", "epub": "OEBPS/part0008.xhtml#p13:c2f52ccea6", "reason": "调用者必须了解的行为和使用约束也是接口的一部分。" },
+      { "section": "4.3", "epub": "OEBPS/part0008.xhtml#p18:0d8979670a", "reason": "多露无关细节增加负荷，漏掉重要细节产生错误抽象。" },
+      { "section": "4.3", "epub": "OEBPS/part0008.xhtml#p19:954b1a6804", "reason": "块分配与刷新持久化规则是原书对照示例。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch04-depth", "chapter": "ch04", "title": "接口成本与隐藏的复杂性",
+    "question": "接口小，隐藏的功能就少吗？",
+    "answer": "不一定。深度比较的是接口理解成本与隐藏的功能，而不是接口或实现的绝对大小。",
+    "summary": "浅方法几乎只是给一条语句换个名字；深模块用相对简单的接口隐藏多项实现问题。判断深度，要同时看接口成本与提供的功能。",
+    "alt": "对比浅方法与 Unix 文件接口：前者的接口几乎和实现一样复杂，后者用五个调用隐藏路径、权限、调度、缓存和设备等问题。",
+    "kind": "comparison", "desktop": "/diagrams/ch04-depth.svg", "mobile": "/diagrams/ch04-depth-mobile.svg",
+    "anchor": { "section": "4.5", "placement": "end" },
+    "sources": [
+      { "section": "4.4", "epub": "OEBPS/part0008.xhtml#p24:2f7cf053e2", "reason": "模块收益是功能，成本是接口；保留 pilot 概念对比，不以面积作度量。" },
+      { "section": "4.4", "epub": "OEBPS/part0008.xhtml#p25:29e47a9d69", "reason": "五个基本文件调用。" },
+      { "section": "4.4", "epub": "OEBPS/part0008.xhtml#p40:f5b6f9d168", "reason": "路径、权限、调度、缓存和设备等问题由实现隐藏。" },
+      { "section": "4.5", "epub": "OEBPS/part0008.xhtml#p49:7ca889b9d5", "reason": "addNullValueForAttribute 的接口没有带来相应抽象收益。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch04-common-path", "chapter": "ch04", "title": "有选择，不等于每次都要选择",
+    "question": "怎样保留特殊用法，而不让常见调用承担全部配置成本？",
+    "answer": "让常见行为成为默认路径，特殊行为通过独立入口启用。Unix 顺序读取不要求调用者先了解 lseek。",
+    "summary": "以文件读取轨迹解释有效接口复杂性。保留随机访问能力，并不要求顺序读取者学习位置调整。",
+    "alt": "open 后普通路径连续 read 再 close；需要跳转时才经过 lseek 再 read。下方对照 Java 示例中显式装配缓冲对象与作者建议的默认缓冲。",
+    "kind": "call-path", "desktop": "/diagrams/ch04-common-path.svg", "mobile": "/diagrams/ch04-common-path-mobile.svg",
+    "anchor": { "section": "4.7", "placement": "end" },
+    "sources": [
+      { "section": "4.7", "epub": "OEBPS/part0008.xhtml#p64:a39b3e2e96", "reason": "缓冲默认启用是作者的设计建议，不是声称所示 Java 类已经如此实现。" },
+      { "section": "4.7", "epub": "OEBPS/part0008.xhtml#p65:bd4a0d112b", "reason": "Unix 默认顺序访问，随机访问使用 lseek；有效复杂性取决于常用功能。" }
+    ],
+    "status": "awaiting-independent-review"
+  }
+]

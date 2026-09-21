@@ -1,0 +1,568 @@
+{
+  "reviewType": "independent-reader-localization-resolution-followup",
+  "readerVerdict": "R1-R9-resolved",
+  "snapshotCapturedAtUtc": "2026-09-20T18:00:58.697Z",
+  "priorReport": "review/reader/traditional-reader-review.json",
+  "summary": {
+    "resolvedFindingIds": ["R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9"],
+    "unresolvedOriginalFindings": [],
+    "newReaderFindings": [],
+    "separateBodyObservations": ["B1"],
+    "exactFindingLocationsRechecked": 38,
+    "distinctCorrectedReaderTextPairs": 34,
+    "allReaderTextPairsRechecked": 2589,
+    "additionalNegativeControlsPassed": 23,
+    "result": "All nine reader findings are corrected at every original location. The current reader changes equal the prior report's proposed corrections, with no extra reader text changes. One existing body pass/through error was encountered during the shared-rule impact check and is recorded separately; it is not a regression introduced by these fixes."
+  },
+  "scope": {
+    "included": [
+      "Every original R1-R9 evidence location and its current SC/TW pair.",
+      "All 50 active diagram entries, all 44 example notes, and all 100 paired SC/TW SVG layouts.",
+      "Current ordered postprocessing rules, localization tests, malformed-word residuals and independent negative controls.",
+      "Bounded impact of the new shared rules on the 25 generated body files, with semantic review limited to the changed lines and the invariant terminology row."
+    ],
+    "excluded": [
+      "A new general style review or a new semantic review of unchanged full-book text.",
+      "Validation of SC diagram concepts, Python adaptation behavior, source-book claims or reader learning.",
+      "Builds, screenshots, rendered geometry quality, interaction testing and final integration."
+    ],
+    "edits": "Only this new follow-up report. The prior report, rules, tests, metadata, SVGs and body Markdown were not edited.",
+    "standard": "Technical conversion fidelity, preserving meaning and qualifications, not preferred phrasing."
+  },
+  "method": {
+    "readerExtraction": "Fresh Python json and xml.etree.ElementTree extraction of all current pairs. Compared against the exact preceding review's retained structured snapshot, not against HEAD or a guessed earlier generation.",
+    "sourceStability": "All 100 SC SVG raw hashes match the prior report. All 32 JSON non-Tw projections match the preceding snapshot, including IDs, anchors, source metadata, source references and example code. All 2589 extracted SC strings are unchanged.",
+    "metadataProjection": "For each JSON file, normalize to an entry list, remove top-level entry keys ending with Tw, then JSON serialize with ensure_ascii=False, sort_keys=True and separators=(',', ':'); SHA-256 its UTF-8 bytes.",
+    "semanticRecheck": "Read every changed full SC/old-TW/current-TW text pair and checked each original evidence fragment at its exact location. The other 2555 reader pairs are byte-identical as strings to the prior reviewed snapshot.",
+    "ruleBaseline": "Reconstructed the old TSV in memory by removing only the new invariant rule/comment and the new late reader-correction block. Its raw SHA-256 exactly matches the TSV hash in the prior report. This establishes that the rest of the ordered rule table did not change.",
+    "bodyComparison": "Applied the hash-verified old rules and current rules to the same current SC body sources in memory, then compared the current-rule result with actual generated body files. This isolates rule effects; it is not a historical raw-body snapshot comparison.",
+    "locationNotation": "A location is repository-relative file#JSON-Pointer or file#XML-path. JSON indices are zero-based. XML sibling indices are one-based by local tag name in the SVG namespace; text() denotes element.text. SC fields remove the terminal Tw suffix; SC SVG filenames remove final -tw.",
+    "evidenceNotation": "sourceExact and currentTwExact are literal contiguous fragments at every listed location. Full changed fields/nodes were also read; the abbreviated evidence is not a back-translation."
+  },
+  "coverage": {
+    "diagramFiles": 22,
+    "activeDiagramItems": 50,
+    "exampleFiles": 10,
+    "exampleItems": 44,
+    "metadataPairs": 294,
+    "fields": {"titleTw":50,"questionTw":50,"answerTw":50,"summaryTw":50,"altTw":50,"noteTw":44},
+    "svgPairs": 100,
+    "svgElementPairs": 4024,
+    "svgTextPairs": 2295,
+    "svgTextKinds": {"title":100,"desc":100,"text":2095,"tspan":0,"nonemptyTail":0},
+    "allTextPairs": 2589,
+    "changedTextPairs": 34,
+    "changedMetadataFields": 13,
+    "changedSvgTextNodes": 21,
+    "unchangedTextPairs": 2555,
+    "changedMetadataFiles": 6,
+    "changedTwSvgFiles": 13,
+    "unchangedExampleNotes": 44,
+    "missingOrExtraPairs": 0,
+    "unreferencedPublicTwSvgs": [],
+    "scSvgHashMismatches": 0,
+    "nonTwMetadataProjectionMismatches": 0,
+    "scTextMismatches": 0,
+    "svgTreeOrAttributeMismatches": 0,
+    "protectedSvgTextMismatches": 0,
+    "currentPipelineTextOrSerializedSvgMismatches": 0,
+    "unexpectedChangesAgainstPriorSuggestedCorrections": 0,
+    "asciiTokenDifferences": [
+      {
+        "location": "docs/.vuepress/reader/diagrams/ch04.json#/0/answerTw",
+        "difference": "The added explanatory term flush is the only additional ASCII token.",
+        "assessment": "Expected R2 correction, not an identifier change. Every other ASCII token sequence, including code names, numbers and operators, is unchanged."
+      }
+    ],
+    "geometryBoundary": "Stored tree structure, attributes and identifiers match. No rendered-layout or screenshot approval is implied."
+  },
+  "resolutions": [
+    {
+      "id": "R1",
+      "status": "resolved",
+      "locationsChecked": 17,
+      "assessment": "Repository and inventory meanings are restored. Both inventory occurrences in the mobile desc were checked. Standard-library and protected compound-library controls still pass.",
+      "evidence": [
+        {
+          "diagramId": "ch17-convention-gate",
+          "sourceExact": "仓库",
+          "currentTwExact": "儲存庫",
+          "oldMalformedExact": "倉函式庫",
+          "locations": [
+            "docs/.vuepress/reader/diagrams/ch17.json#/0/questionTw",
+            "docs/.vuepress/reader/diagrams/ch17.json#/0/answerTw",
+            "docs/.vuepress/reader/diagrams/ch17.json#/0/altTw",
+            "docs/.vuepress/public/diagrams/ch17-convention-gate-tw.svg#/svg[1]/desc[1]/text()",
+            "docs/.vuepress/public/diagrams/ch17-convention-gate-tw.svg#/svg[1]/g[1]/text[11]/text()",
+            "docs/.vuepress/public/diagrams/ch17-convention-gate-mobile-tw.svg#/svg[1]/desc[1]/text()"
+          ]
+        },
+        {
+          "diagramId": "ch19-abstraction-increment",
+          "sourceExact": "库存",
+          "currentTwExact": "庫存",
+          "oldMalformedExact": "函式庫存",
+          "locations": [
+            "docs/.vuepress/reader/diagrams/ch19.json#/1/questionTw",
+            "docs/.vuepress/reader/diagrams/ch19.json#/1/answerTw",
+            "docs/.vuepress/reader/diagrams/ch19.json#/1/summaryTw",
+            "docs/.vuepress/reader/diagrams/ch19.json#/1/altTw",
+            "docs/.vuepress/public/diagrams/ch19-abstraction-increment-tw.svg#/svg[1]/title[1]/text()",
+            "docs/.vuepress/public/diagrams/ch19-abstraction-increment-tw.svg#/svg[1]/desc[1]/text()",
+            "docs/.vuepress/public/diagrams/ch19-abstraction-increment-tw.svg#/svg[1]/g[1]/text[6]/text()",
+            "docs/.vuepress/public/diagrams/ch19-abstraction-increment-tw.svg#/svg[1]/g[1]/text[19]/text()",
+            "docs/.vuepress/public/diagrams/ch19-abstraction-increment-mobile-tw.svg#/svg[1]/desc[1]/text()",
+            "docs/.vuepress/public/diagrams/ch19-abstraction-increment-mobile-tw.svg#/svg[1]/g[1]/text[11]/text()",
+            "docs/.vuepress/public/diagrams/ch19-abstraction-increment-mobile-tw.svg#/svg[1]/g[1]/text[18]/text()"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R2",
+      "status": "resolved",
+      "locationsChecked": 1,
+      "assessment": "The flush sense is explicit. The separate durability guarantee and the later performance/relevance conditions remain intact; the correction does not assert that every flush guarantees durability.",
+      "evidence": [
+        {
+          "diagramId": "ch04-abstraction-filter",
+          "sourceExact": "相关刷新与持久化保证",
+          "currentTwExact": "相關資料寫出（flush）與持久化保證",
+          "oldMalformedExact": "相關重新整理與持久化保證",
+          "locations": ["docs/.vuepress/reader/diagrams/ch04.json#/0/answerTw"]
+        }
+      ]
+    },
+    {
+      "id": "R3",
+      "status": "resolved",
+      "locationsChecked": 4,
+      "assessment": "All four reader occurrences now name an invariant condition, while C's changes and scope limits remain unchanged. The broader canonical rule is supported by the actual body definitions and the existing invariant glossary row; its current body impact is separately bounded below.",
+      "implementedRule": {"kind":"re","pattern":"不變數(?![值量])","replacement":"不變條件","file":"bin/tw-terms.tsv","line":174},
+      "evidence": [
+        {
+          "diagramId":"ch20-state-compression",
+          "sourceExact":"上部定义不变量：",
+          "currentTwExact":"上部定義不變條件：",
+          "oldMalformedExact":"上部定義不變數：",
+          "locations":["docs/.vuepress/public/diagrams/ch20-state-compression-tw.svg#/svg[1]/desc[1]/text()"]
+        },
+        {
+          "diagramId":"ch20-state-compression",
+          "sourceExact":"完整 Buffer 不变量",
+          "currentTwExact":"完整 Buffer 不變條件",
+          "oldMalformedExact":"完整 Buffer 不變數",
+          "locations":["docs/.vuepress/public/diagrams/ch20-state-compression-tw.svg#/svg[1]/g[1]/text[27]/text()"]
+        },
+        {
+          "diagramId":"ch20-state-compression",
+          "sourceExact":"维护容量不变量后再供每次追加读取",
+          "currentTwExact":"維護容量不變條件後再供每次追加讀取",
+          "oldMalformedExact":"維護容量不變數後再供每次追加讀取",
+          "locations":["docs/.vuepress/public/diagrams/ch20-state-compression-mobile-tw.svg#/svg[1]/title[1]/text()"]
+        },
+        {
+          "diagramId":"ch20-state-compression",
+          "sourceExact":"不变量含义，不是每次重算：",
+          "currentTwExact":"不變條件含義，不是每次重算：",
+          "oldMalformedExact":"不變數含義，不是每次重算：",
+          "locations":["docs/.vuepress/public/diagrams/ch20-state-compression-mobile-tw.svg#/svg[1]/g[1]/text[4]/text()"]
+        }
+      ]
+    },
+    {
+      "id": "R4",
+      "status": "resolved",
+      "locationsChecked": 6,
+      "assessment": "All six workflow-return uses now use 回到. The implementation narrows the checking and encoder clauses further than the initial suggestion; independent real-return controls remain 回傳.",
+      "evidence": [
+        {
+          "diagramId":"ch03-patch-cycle",
+          "sourceExact":"右侧回路返回赶任务",
+          "currentTwExact":"右側迴路回到趕任務",
+          "oldMalformedExact":"右側迴路回傳趕任務",
+          "locations":["docs/.vuepress/public/diagrams/ch03-patch-cycle-mobile-tw.svg#/svg[1]/desc[1]/text()"]
+        },
+        {
+          "diagramId":"ch15-design-feedback",
+          "sourceExact":"通过回箭头返回接口说明",
+          "currentTwExact":"透過回箭頭回到介面說明",
+          "oldMalformedExact":"透過回箭頭回傳介面說明",
+          "locations":["docs/.vuepress/reader/diagrams/ch15.json#/1/altTw"]
+        },
+        {
+          "diagramId":"ch15-design-feedback",
+          "sourceExact":"问题可返回接口说明",
+          "currentTwExact":"問題可回到介面說明",
+          "oldMalformedExact":"問題可回傳介面說明",
+          "locations":["docs/.vuepress/public/diagrams/ch15-design-feedback-tw.svg#/svg[1]/desc[1]/text()"]
+        },
+        {
+          "diagramId":"ch17-convention-gate",
+          "sourceExact":"LF 后返回检查",
+          "currentTwExact":"LF 後回到檢查",
+          "oldMalformedExact":"LF 後回傳檢查",
+          "locations":["docs/.vuepress/reader/diagrams/ch17.json#/0/altTw"]
+        },
+        {
+          "diagramId":"ch17-convention-gate",
+          "sourceExact":"再返回检查",
+          "currentTwExact":"再回到檢查",
+          "oldMalformedExact":"再回傳檢查",
+          "locations":["docs/.vuepress/public/diagrams/ch17-convention-gate-tw.svg#/svg[1]/desc[1]/text()"]
+        },
+        {
+          "diagramId":"ch19-abstraction-increment",
+          "sourceExact":"返回同一编码器",
+          "currentTwExact":"回到同一編碼器",
+          "oldMalformedExact":"回傳同一編碼器",
+          "locations":["docs/.vuepress/public/diagrams/ch19-abstraction-increment-mobile-tw.svg#/svg[1]/desc[1]/text()"]
+        }
+      ]
+    },
+    {
+      "id": "R5",
+      "status": "resolved",
+      "locationsChecked": 4,
+      "assessment": "Evidential support now uses 支持. The non-proof and unrelated-failure qualifications remain; feature support elsewhere still uses 支援.",
+      "evidence": [
+        {
+          "diagramId":"ch15-comment-gate",
+          "sourceExact":"说明支持接口简单的判断",
+          "currentTwExact":"說明支持介面簡單的判斷",
+          "oldMalformedExact":"說明支援介面簡單的判斷",
+          "locations":["docs/.vuepress/reader/diagrams/ch15.json#/2/answerTw"]
+        },
+        {
+          "diagramId":"ch19-regression-witness",
+          "sourceExact":"这支持测试覆盖了该回归，而不证明全部正确。",
+          "currentTwExact":"這支持測試覆蓋了該回歸，而不證明全部正確。",
+          "oldMalformedExact":"這支援測試覆蓋了該回歸，而不證明全部正確。",
+          "locations":["docs/.vuepress/reader/diagrams/ch19.json#/2/answerTw"]
+        },
+        {
+          "diagramId":"ch19-regression-witness",
+          "sourceExact":"支持覆盖了这条回归；无关的失败不能算作左边的证据。",
+          "currentTwExact":"支持覆蓋了這條迴歸；無關的失敗不能算作左邊的證據。",
+          "oldMalformedExact":"支援覆蓋了這條迴歸；無關的失敗不能算作左邊的證據。",
+          "locations":["docs/.vuepress/public/diagrams/ch19-regression-witness-tw.svg#/svg[1]/g[1]/text[10]/text()"]
+        },
+        {
+          "diagramId":"ch19-regression-witness",
+          "sourceExact":"支持覆盖这一条回归",
+          "currentTwExact":"支持覆蓋這一條迴歸",
+          "oldMalformedExact":"支援覆蓋這一條迴歸",
+          "locations":["docs/.vuepress/public/diagrams/ch19-regression-witness-mobile-tw.svg#/svg[1]/g[1]/text[12]/text()"]
+        }
+      ]
+    },
+    {
+      "id": "R6",
+      "status": "resolved",
+      "locationsChecked": 1,
+      "assessment": "The first-three-conditions pass predicate is restored. The additional maxPos condition and the distinction from completed append success remain intact. Existing ch19 pass tests and through-interface controls still pass.",
+      "evidence": [
+        {
+          "diagramId":"ch13-rpc-intent",
+          "sourceExact":"也不把前三项通过画成已追加成功。",
+          "currentTwExact":"也不把前三項通過畫成已追加成功。",
+          "oldMalformedExact":"也不把前三項透過畫成已追加成功。",
+          "locations":["docs/.vuepress/reader/diagrams/ch13.json#/2/altTw"]
+        }
+      ]
+    },
+    {
+      "id": "R7",
+      "status": "resolved",
+      "locationsChecked": 1,
+      "assessment": "The title now spells copying as 複製. Legitimate 覆蓋 is unchanged.",
+      "evidence": [
+        {
+          "diagramId":"ch16-single-source",
+          "sourceExact":"说明复制与引用，失效方式不同",
+          "currentTwExact":"說明複製與引用，失效方式不同",
+          "oldMalformedExact":"說明覆制與引用，失效方式不同",
+          "locations":["docs/.vuepress/reader/diagrams/ch16.json#/1/titleTw"]
+        }
+      ]
+    },
+    {
+      "id": "R8",
+      "status": "resolved",
+      "locationsChecked": 3,
+      "assessment": "Conjunction 並 and merging 合併 are corrected at all three locations, without dropping the negation. The separate 合併成功 control remains correct.",
+      "evidence": [
+        {
+          "diagramId":"ch10-unset-semantics",
+          "sourceExact":"同一个后置条件并成功",
+          "currentTwExact":"同一個後置條件並成功",
+          "oldMalformedExact":"同一個後置條件併成功",
+          "locations":["docs/.vuepress/public/diagrams/ch10-unset-semantics-tw.svg#/svg[1]/desc[1]/text()"]
+        },
+        {
+          "diagramId":"ch10-error-carrier",
+          "sourceExact":"不合并两条消息",
+          "currentTwExact":"不合併兩條訊息",
+          "oldMalformedExact":"不合並兩條訊息",
+          "locations":[
+            "docs/.vuepress/public/diagrams/ch10-error-carrier-tw.svg#/svg[1]/g[1]/text[2]/text()",
+            "docs/.vuepress/public/diagrams/ch10-error-carrier-mobile-tw.svg#/svg[1]/g[1]/text[2]/text()"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R9",
+      "status": "resolved",
+      "locationsChecked": 1,
+      "assessment": "The output-field operation is now 串接, while network 連線 controls remain unchanged. The example's limited CSV-like scope and exact output strings remain intact.",
+      "evidence": [
+        {
+          "diagramId":"ch19-abstraction-increment",
+          "sourceExact":"再用逗号连接字段。",
+          "currentTwExact":"再用逗號串接欄位。",
+          "oldMalformedExact":"再用逗號連線欄位。",
+          "locations":["docs/.vuepress/public/diagrams/ch19-abstraction-increment-tw.svg#/svg[1]/desc[1]/text()"]
+        }
+      ]
+    }
+  ],
+  "residualScan": {
+    "scope": "All 2589 current reader text pairs, using their extracted TW strings, not source JSON/XML markup or the correction-rule text itself.",
+    "matchingReaderPairs": 0,
+    "patterns": [
+      "倉函式庫",
+      "函式庫存",
+      "相關重新整理與持久化保證",
+      "不變數(?![值量])",
+      "回傳趕任務",
+      "回傳介面說明",
+      "LF 後回傳檢查",
+      "修復，再回傳檢查",
+      "滿足同一契約，回傳同一編碼器",
+      "說明支援介面簡單的判斷",
+      "這支援測試覆蓋了該回歸",
+      "支援覆蓋了這條迴歸",
+      "支援覆蓋這一條迴歸",
+      "前三項透過畫成已追加成功",
+      "用逗號連線欄位",
+      "覆制",
+      "後置條件併成功",
+      "不合並兩條訊息"
+    ],
+    "interpretation": "No residuals of the reviewed malformed reader forms. This is not a claim that a finite word scan proves all possible translations correct."
+  },
+  "negativeControls": {
+    "execution": "Each case was run through the current full SC-to-TW pipeline and the hash-verified old-rule pipeline. All actual outputs equal both the listed expected value and the old output. No test or converter file was edited.",
+    "passed": 23,
+    "failed": 0,
+    "cases": [
+      {"category":"standard-library","source":"标准库 logging","expected":"標準函式庫 logging"},
+      {"category":"library","source":"库","expected":"函式庫"},
+      {"category":"code-repository","source":"代码库","expected":"程式碼庫"},
+      {"category":"database","source":"数据库","expected":"資料庫"},
+      {"category":"storage-repository","source":"储存库","expected":"儲存庫"},
+      {"category":"ui-refresh","source":"刷新页面","expected":"重新整理頁面"},
+      {"category":"api-return-encoder","source":"返回同一编码器","expected":"回傳同一編碼器"},
+      {"category":"api-return-check-result","source":"再返回检查结果","expected":"再回傳檢查結果"},
+      {"category":"api-return-docs","source":"返回接口说明","expected":"回傳介面說明"},
+      {"category":"return-value","source":"返回值","expected":"回傳值"},
+      {"category":"main-return","source":"main 返回","expected":"main 回傳"},
+      {"category":"null-return","source":"返回 None","expected":"回傳 None"},
+      {"category":"feature-support","source":"支持 HTTP","expected":"支援 HTTP"},
+      {"category":"unsupported-protocol","source":"不支持的 pickle 协议","expected":"不支援的 pickle 協議"},
+      {"category":"network-connection","source":"网络连接","expected":"網路連線"},
+      {"category":"connect-server","source":"连接服务器","expected":"連線伺服器"},
+      {"category":"coverage-character","source":"覆盖范围","expected":"覆蓋範圍"},
+      {"category":"merge-success","source":"合并成功","expected":"合併成功"},
+      {"category":"unchanging-value","source":"不变数值","expected":"不變數值"},
+      {"category":"unchanging-quantity","source":"不变数量","expected":"不變數量"},
+      {"category":"ordinary-numbers","source":"固定的数值和数量","expected":"固定的數值和數量"},
+      {"category":"through-interface","source":"通过接口读取","expected":"透過介面讀取"},
+      {"category":"fixed-version-through-interface","source":"修复版通过接口读取","expected":"修復版透過介面讀取"}
+    ]
+  },
+  "sharedRuleBodyImpact": {
+    "generatedFilesCompared": 25,
+    "changedFilesUnderOldVersusNewRuleReplay": 4,
+    "changedLines": 7,
+    "invariantReplacements": 7,
+    "repositoryReplacements": 4,
+    "otherReplacementEffects": 0,
+    "currentGeneratedFilesMatchCanonicalPipeline": true,
+    "invariantResiduals": 0,
+    "importantBoundary": "Counts compare both rule sets on current SC body sources; they do not assert the historical body files were unchanged. Only the rule-affected lines were semantically reviewed, not the whole book.",
+    "invariantEvidence": [
+      {
+        "sourceFile":"docs/ch13.md",
+        "targetFile":"docs/zh-tw/ch13.md",
+        "line":116,
+        "replacements":1,
+        "sourceExact":"变量是否具有某些始终成立的性质（不变量）",
+        "currentTwExact":"變數是否具有某些始終成立的性質（不變條件）",
+        "assessment":"Explicitly defines a property that always holds, not a permanently fixed numeric value."
+      },
+      {
+        "sourceFile":"docs/ch17.md",
+        "targetFile":"docs/zh-tw/ch17.md",
+        "line":19,
+        "replacements":3,
+        "sourceExact":"**不变量。** 不变量是变量或结构始终满足的性质。",
+        "currentTwExact":"**不變條件。** 不變條件是變數或結構始終滿足的性質。",
+        "assessment":"The heading, definition and subsequent reduction-of-special-cases occurrence share the invariant sense."
+      },
+      {
+        "sourceFile":"docs/ch17.md",
+        "targetFile":"docs/zh-tw/ch17.md",
+        "line":27,
+        "replacements":1,
+        "sourceExact":"对于局部约定，例如不变量",
+        "currentTwExact":"對於區域性約定，例如不變條件",
+        "assessment":"Refers back to the defined invariant convention; no unrelated style change is proposed."
+      },
+      {
+        "sourceFile":"docs/ch21.md",
+        "targetFile":"docs/zh-tw/ch21.md",
+        "line":11,
+        "replacements":2,
+        "sourceExact":"不变量也能带来类似的收益：一旦了解变量或结构的不变量",
+        "currentTwExact":"不變條件也能帶來類似的收益：一旦瞭解變數或結構的不變條件",
+        "assessment":"Both occurrences refer to properties enabling predictions across situations."
+      }
+    ],
+    "terminologyRow": {
+      "file":"review/translation/terms.tsv",
+      "line":41,
+      "english":"invariant",
+      "sourceTerm":"不变量",
+      "definitionExact":"变量或结构始终满足的性质",
+      "exclusionExact":"不是数值永远不变的变量",
+      "assessment":"The existing glossary explicitly supports the distinction behind R3; no glossary redesign is needed."
+    },
+    "additionalRepositoryEffects": [
+      {"sourceFile":"docs/ch16.md","targetFile":"docs/zh-tw/ch16.md","line":42,"replacements":2,"oldExact":"倉函式庫","currentExact":"儲存庫"},
+      {"sourceFile":"docs/ch17.md","targetFile":"docs/zh-tw/ch17.md","line":29,"replacements":1,"oldExact":"倉函式庫","currentExact":"儲存庫"},
+      {"sourceFile":"docs/ch17.md","targetFile":"docs/zh-tw/ch17.md","line":33,"replacements":1,"oldExact":"倉函式庫","currentExact":"儲存庫"}
+    ],
+    "additionalEffectsAssessment":"These four R1 effects also preserve the SC repository meaning. Body regeneration was therefore not exclusively an R3 change."
+  },
+  "bodyObservations": [
+    {
+      "id":"B1",
+      "priority":"P2",
+      "status":"unresolved-existing-body-conversion",
+      "blocksOriginalReaderResolutions":false,
+      "sourceFile":"docs/ch17.md",
+      "targetFile":"docs/zh-tw/ch17.md",
+      "line":29,
+      "sourceExact":"代码通过检查后才能提交到仓库",
+      "currentTwExact":"程式碼透過檢查後才能提交到儲存庫",
+      "suggestedTwExact":"程式碼通過檢查後才能提交到儲存庫",
+      "why":"This is passing a mandatory check before committing, not doing something through a check. The existing pass/through convention requires 通過 for this sense.",
+      "provenance":"Encountered while comparing the R1 body effect on this exact line. The hash-verified old rules applied to the same current SC also produce 程式碼透過檢查後才能提交, so the new R1-R9 rules did not introduce the error. No prior raw-body hash is claimed.",
+      "suggestedNarrowRule":{"kind":"lit","pattern":"程式碼透過檢查後才能提交","replacement":"程式碼通過檢查後才能提交"},
+      "suggestedRegressionCase":{"source":"代码通过检查后才能提交到仓库","expected":"程式碼通過檢查後才能提交到儲存庫"},
+      "controlsToRetain":["通过接口读取 -> 透過介面讀取","修复版通过接口读取 -> 修復版透過介面讀取"],
+      "scope":"Separate body follow-up for the main process; not a reopened ch13 reader R6 finding, a style request, or a full-book audit.",
+      "edited":false
+    }
+  ],
+  "verification": {
+    "openccVersion":"1.4.1",
+    "config":"s2twp.json",
+    "ruleDelta":{"addedLiteralRules":22,"addedRegexRules":1,"otherOrderedRuleChanges":0},
+    "commands":[
+      {
+        "command":"/tmp/aposd2e-polish.GHV1eo/venv/bin/python -B -m unittest discover -s review/reader -p test_localize.py -v",
+        "result":"PASS: 3 tests. The two text-table tests contain 8 and 31 cases respectively; the third test covers SVG identifier/geometry preservation."
+      },
+      {
+        "command":"/tmp/aposd2e-polish.GHV1eo/venv/bin/python -B review/reader/localize.py --check",
+        "result":"PASS: 132 localized assets/metadata files checked; no writes."
+      },
+      {
+        "command":"/tmp/aposd2e-polish.GHV1eo/venv/bin/python -B bin/zh-tw.py --check",
+        "result":"PASS: 25 generated body files match the current canonical pipeline; synchronization is not semantic approval."
+      }
+    ],
+    "buildsRun":false,
+    "assetsRegeneratedByReviewer":false,
+    "screenshotsTaken":false,
+    "readerExperimentsRun":false,
+    "limits":[
+      "The invariant lookahead guards the tested 數值/數量 cases and all current rule-affected corpus contexts; it is not a proof about every future Chinese compound.",
+      "R1-R9 are resolved for the hashed reader snapshot. B1 prevents describing this as a clean full-book conversion audit.",
+      "No SC concept correctness, learning benefit, rendered geometry quality or final integration approval is implied."
+    ]
+  },
+  "snapshotIdentity": {
+    "algorithm":"SHA-256",
+    "setDigestEncoding":"Sort repository-relative ASCII paths in ordinal order. Concatenate lowercase file/projection hash, two ASCII spaces, path, LF; SHA-256 the UTF-8 result.",
+    "baselineRuleSha256":"412dca2b6e8715f7a654ffc39891cdeccbe5929ce5d8d78e5351face35587458",
+    "reconstructedBaselineRuleSha256":"412dca2b6e8715f7a654ffc39891cdeccbe5929ce5d8d78e5351face35587458",
+    "readerArtifactCount":237,
+    "readerArtifactsSha256":"5defb4bd2725efeec74cfa10820760bcd537f8469b8cd4d112d0f5198a6951ca",
+    "readerArtifactSetDefinition":"100 SC SVGs, 100 paired TW SVGs, 32 reader JSON files, bin/zh-tw.py, bin/tw-terms.tsv, review/reader/localize.py, review/reader/test_localize.py and requirements.txt.",
+    "sourceSvgCount":100,
+    "sourceSvgSetSha256":"894f76a1b2cb1c823a3d8db22a372a0a3670dcb95de94121f0b4f118a279db45",
+    "sourceSvgIndividualHashReference":"All 100 individually match sourceFileHashes in the prior report, whose current hash is included below.",
+    "generatedSvgCount":100,
+    "generatedSvgSetSha256":"f6e12401d886f65a94752f859a3066566149234a713629c0e9695e8670c1f625",
+    "metadataNonTwProjectionCount":32,
+    "metadataNonTwProjectionSetSha256":"78ee6e09ade17b95248d1259cb844688ba547c1cb6b716826aab67e79ba4ec62",
+    "metadataProjectionBaselineComparison":"All 32 projection hashes equal the exact structured snapshot retained from the preceding review.",
+    "bodyRuleReplayInputFileCount":50,
+    "bodyRuleReplayInputSetSha256":"de517564d0b4bae2ba3f529e2b5c5805e2da96d74a2a6887bc2ec0cdfe09b316",
+    "bodySetDefinition":"The 25 docs/*.md sources selected by the current generator and their 25 docs/zh-tw counterparts. Read-only rule-impact and synchronization check, not full semantic review.",
+    "individualFileHashes": {
+      "bin/manual-chapters.txt":"d7c739a7df69e4c7cd86591c1b3195fd4a4f36669c7f8c0cde6250e593b27e25",
+      "bin/tw-terms.tsv":"78bdec0285f1422f55757757d866d30990e04cd51b0d44c018140461d6b5dfe2",
+      "bin/zh-tw.py":"57d0379526165712020d68771e919feb3e847675d07895cbdc6165863e2c1d44",
+      "docs/.vuepress/reader/diagrams/ch01.json":"2bb3c99f5c4b5df5096a25b9f00f742bf78e2d6d52c006cfa1aa5d1d92eb8b01",
+      "docs/.vuepress/reader/diagrams/ch02.json":"8fae243ffe44362d68624ee32107cc814540b91e93baa2ebdc2ab88ab3edb6aa",
+      "docs/.vuepress/reader/diagrams/ch03.json":"f56ff4a599bd614783448d5bcf57bdfa6711939d927c93338217c76d0c853894",
+      "docs/.vuepress/reader/diagrams/ch04.json":"30c53079f9659746c86c2fb899d182f6f9fd1ea8a62fcc559cb8f486a8780515",
+      "docs/.vuepress/reader/diagrams/ch05.json":"736a76bd3de6bc4ad9eb31c34053faf33aa51b63cc16eabf87a33e50a44d6240",
+      "docs/.vuepress/reader/diagrams/ch06.json":"dd5e9c6ba5deaa2e5659adb0c707bd5a8d8aaccee2ea7fcc35b2dea9bb27c7c7",
+      "docs/.vuepress/reader/diagrams/ch07.json":"746658258f456fe4bf231dfca8721d1f30ded21822a0df4544b4881ebec342aa",
+      "docs/.vuepress/reader/diagrams/ch08.json":"f436a68e0652fc5177bfa8f697b058362a361cba88552f7aeeeac3fdcf099d31",
+      "docs/.vuepress/reader/diagrams/ch09.json":"1843944172e6aa88ac965bf6469ed84d0ef0e7c65abf1dbee885ba5dd5ef3171",
+      "docs/.vuepress/reader/diagrams/ch10.json":"8c6dc1bde1fccfdd176e11a7ce089e141fab9b8dd264b42c655676881f9ede68",
+      "docs/.vuepress/reader/diagrams/ch11.json":"92d9860b90a805eefe1e47fb7500ec4dc5087624b96d6d70dc14692fff2d3afd",
+      "docs/.vuepress/reader/diagrams/ch12.json":"b0cbe880fce8a7dc5b3a155d78637fe97627ac36b23c01bd036a757e5b7f5199",
+      "docs/.vuepress/reader/diagrams/ch13.json":"5bc8037de0407e1bd3db3d48775bf8955144aff0543008014f7b78df30138a96",
+      "docs/.vuepress/reader/diagrams/ch14.json":"37df4bf0165e99d5c066ea0c7e3d47f8d97f0c87e5d4d0198c197d6a4bcca9cf",
+      "docs/.vuepress/reader/diagrams/ch15.json":"59a14e0c9f77ee0a3a6045d6927004351c52b98ed96dcd0107ffe08b92599284",
+      "docs/.vuepress/reader/diagrams/ch16.json":"dd4f258a4a2cdd962b0dbae12bf5a8152d16cc8e3b8aaa4dd387796ab37b234f",
+      "docs/.vuepress/reader/diagrams/ch17.json":"5a40a321bce7f2fe23df930807827536c0f202a114bbfc4a6368409208f68214",
+      "docs/.vuepress/reader/diagrams/ch18.json":"54011552eac42e108ca36f3511ae12aea1400ccff53233bb91d111f816b11ab7",
+      "docs/.vuepress/reader/diagrams/ch19.json":"36ba060b696f9cd2849c234d61ed74d19116b7ce8624c6bcbc1c44023da1e026",
+      "docs/.vuepress/reader/diagrams/ch20.json":"897946313f95daf0b8255e1f74c411ca3fa490163cc46edac6c7f5f5be743820",
+      "docs/.vuepress/reader/diagrams/ch21.json":"1188fea60974c1915305433b416ed43cd16c5631f8d2b676508911b941aad7ef",
+      "docs/.vuepress/reader/diagrams/ch22.json":"5b4ea9557c7bca0713085d8da10a511fdc0d078a04ced2a321ccc1bd71de1a22",
+      "docs/.vuepress/reader/examples/ch04.json":"c6e938bcc1c02fd86e7800bde0f4bc2224610123d62eebb4b58212c4a7549fb0",
+      "docs/.vuepress/reader/examples/ch05.json":"26ed6d50ffe4312673ebadbeec622323adabb36a29ef3eec60117e56f23a8a01",
+      "docs/.vuepress/reader/examples/ch06.json":"446e0db66e5e9596601f301e4b76f3b16d1e4e12d43764f2344fa3e38d3217a3",
+      "docs/.vuepress/reader/examples/ch07.json":"0a02bb71c696db7de048229be2a5421c65365054e68b6e446c07b12080d715b6",
+      "docs/.vuepress/reader/examples/ch09.json":"0891add83c3e96433c59454c24b851b544146ee907dc658a4ef66e94d08196c1",
+      "docs/.vuepress/reader/examples/ch10.json":"40a53ab6c5a80047c53ddb449bf18c52cc85f6b7685ae9e60b8d0d4d083c81ab",
+      "docs/.vuepress/reader/examples/ch13.json":"de7468bc9545ea407821d4d9713a087137a73cdffa8555ee149df97178bba93d",
+      "docs/.vuepress/reader/examples/ch14.json":"fe5a16cb1aba96760456e874ad9e3d40cc7735eebcbd5873fe853b75d3b8bf37",
+      "docs/.vuepress/reader/examples/ch16.json":"ea67df8958abffc1a0c84c6bef25c3cce628846011c448cb591becfd10e10d12",
+      "docs/.vuepress/reader/examples/ch18.json":"8a9d4fb2c5881cbecbfb2e385083728a4466262526b10dc37261fa886a048ba3",
+      "docs/ch13.md":"df18a6157c327367375b45d0f0389f7d6aa9e927831f587de613282b23f9d731",
+      "docs/ch16.md":"7a7d913bf10e4dd6e0ab6459b2a106a294b8e3ce4c4926281e2b492738467697",
+      "docs/ch17.md":"41507d026ba1d1812f436bb53c29d1bd58bdda1a16f85576da33628cb4c5083b",
+      "docs/ch21.md":"73e1b778cf9ac99dce10cbe60656a2ac3159372db4fc958bec9c70162c1c9f09",
+      "docs/zh-tw/ch13.md":"0c868fda267c589ecd6124173c9be40f9656380206ae2341964fca3a20a45741",
+      "docs/zh-tw/ch16.md":"71a86f981deef7e7b0f864f6ba24025f3de344ec90d56be704c9b905e7e06c97",
+      "docs/zh-tw/ch17.md":"a3725161d98097bb3d2ae521a5ef194d620e7119f9aa96de24a82708696693a4",
+      "docs/zh-tw/ch21.md":"bb694730963be0c1e50f2771c5635593c88e6afc6c7814300ffb38a0941c1a5c",
+      "requirements.txt":"bf48b95abc5e1879842d2f1df402ca0683900154d58fb0163f369e8cec872108",
+      "review/reader/localize.py":"3fe22e83903c1ac1589692a1ea65600d950c764173bc32c2c96c9832e48c005f",
+      "review/reader/test_localize.py":"0225ca2f160a9e0fbedf28e33ec834aab6c295ff873a871469bffa2f47400ad7",
+      "review/reader/traditional-reader-review.json":"3ec9aa882f6ba1e62746126f99dfa95765e6d08f777a51be7789bf109ba61a92",
+      "review/translation/terms.tsv":"815f941fdef53be9e877adf86f32c528092a0abb4b875c24c7d11bed4cea1128"
+    }
+  }
+}

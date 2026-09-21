@@ -1,0 +1,68 @@
+[
+  {
+    "id": "00009",
+    "original": "00009.gif",
+    "vector": "/figures/00009.svg",
+    "alt": "C equals the sum over p of c subscript p times t subscript p.",
+    "kind": "formula",
+    "width": 79,
+    "height": 33,
+    "source": "docs/figures/00009.gif; docs/ch02.md, section 2.1, complexity-weighting formula and the following definition of C, cp, and tp.",
+    "fidelityNotes": "Preserves italic variables, both subscripts, the summation index below the sigma, juxtaposed multiplication, and the original 79 by 33 layout. The sigma is a clean geometric path; editable serif text approximates the low-resolution original typeface. No terms or bounds have been added."
+  },
+  {
+    "id": "00010",
+    "original": "00010.jpeg",
+    "vector": "/figures/00010.svg",
+    "alt": "Three website designs: repeated red backgrounds, a shared bannerBg value, and a shared background with local darkred emphasis colors.",
+    "kind": "figure",
+    "width": 545,
+    "height": 256,
+    "source": "docs/figures/00010.jpeg; docs/ch02.md, sections 2.2 and 2.3, Figure 2.1 and its discussion of change amplification, unknown unknowns, and dependencies.",
+    "fidelityNotes": "Preserves all English labels and quoted values, panels (a), (b), and (c), four visible pages per panel, omitted-page dots, the Web pages brace, and dotted links without arrowheads. Only the first and last visible pages in (c) have emph = \"darkred\". Original internal geometry and light gray fills are retained within a four-unit outer margin so the rotated label and panel captions are not clipped. Font metrics and dotted-line spacing approximate the JPEG."
+  },
+  {
+    "id": "00011",
+    "original": "00011.jpeg",
+    "vector": "/figures/00011.svg",
+    "alt": "Qualitative Total Progress versus Time chart: dashed Tactical initially leads, but solid Strategic overtakes it and continues rising as Tactical flattens.",
+    "kind": "figure",
+    "width": 268,
+    "height": 164,
+    "source": "docs/figures/00011.jpeg; docs/ch03.md, sections 3.2 and 3.3, Figure 3.1 and its explicit warning that the curve shapes lack empirical data.",
+    "fidelityNotes": "Preserves English labels, axis arrowheads, the solid Strategic and dashed Tactical styles, initial tactical lead, crossover, and flattening tactical curve. Smooth paths approximate the original qualitative shapes. A four-unit outer margin accommodates the Time label without changing the plot geometry. No ticks, numbers, measured rates, or crossover dates have been invented; the original is not empirical evidence."
+  },
+  {
+    "id": "00012",
+    "original": "00012.jpeg",
+    "vector": "/figures/00012.svg",
+    "alt": "Deep and shallow module rectangles: interface cost is represented by the heavy top edge, and functionality benefit by the area inside.",
+    "kind": "figure",
+    "width": 259,
+    "height": 167,
+    "source": "docs/figures/00012.jpeg; docs/ch04.md, sections 4.4 and 4.5, Figure 4.1 and the distinction between interface complexity and functionality.",
+    "fidelityNotes": "Preserves the tall narrow Deep Module, short wide Shallow Module, heavy top edges, pale interiors, all English labels and parentheses, and all four arrows with their original targets. Rectangle proportions are retained rather than normalized. A four-unit outer margin prevents top and bottom labels from clipping; the two Functionality label baselines are slightly separated to avoid overlapping font boxes. Text uses a system sans-serif approximation; no numerical scale or equal-area claim has been added."
+  },
+  {
+    "id": "00013",
+    "original": "00013.jpeg",
+    "vector": "/figures/00013.svg",
+    "alt": "Red warning flag with a folded waving cloth and a slanted black pole.",
+    "kind": "icon",
+    "width": 28,
+    "height": 28,
+    "source": "docs/figures/00013.jpeg; docs/ch04.md, section 4.5, Shallow Module red flag; docs/ch05.md, sections 5.2, 5.3, and 5.7, repeated red-flag callouts.",
+    "fidelityNotes": "Recreates the actual original flag silhouette, two upper cloth lobes and intervening gap, lower overlap, diagonal black pole, and pale pink background at the original proportions. Smooth paths and flat colors intentionally omit JPEG ringing and blur. The 28 by 28 source cannot establish subpixel fold contours or exact pre-compression colors."
+  },
+  {
+    "id": "00014",
+    "original": "00014.gif",
+    "vector": "/figures/00014.svg",
+    "alt": "HTTP POST request annotated with Method, URL, Parameter(s), Protocol Version, Headers, and Body; the query is photo_id=246 and the form body is comment=What+a+cute+baby%21&priority=low.",
+    "kind": "figure",
+    "width": 393,
+    "height": 180,
+    "source": "docs/figures/00014.gif; docs/ch05.md, sections 5.4 through 5.6, Figure 5.1 and the HTTP parsing and parameter-encoding discussion.",
+    "fidelityNotes": "Transcribes every original request line and English annotation, including case, punctuation, spaces, URL encoding, Content-Length: 40, and the blank line before the body. Preserves the four downward arrows, six-header brace, and leftward Body arrow. Request baselines are spaced 15.5 units apart to avoid overlapping font boxes; the brace and body annotation move with their associated lines. Added outer whitespace protects italic labels and body descenders. Editable fonts approximate the raster; request content is not modernized or silently corrected."
+  }
+]

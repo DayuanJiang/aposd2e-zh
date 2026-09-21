@@ -1,0 +1,355 @@
+{
+  "reviewSource": "review/reader/diagram-review-01-07.json",
+  "reviewSourceSha256": "8452ce9f1471cb6f3d5680ec39c3c7eaf3d850c6cfa170e4313221dc76487b5f",
+  "stage": "MAIN-revision-implementation",
+  "status": "awaiting-second-review",
+  "counts": {
+    "original": 19,
+    "keep": 5,
+    "revise": 9,
+    "replace": 2,
+    "retire": 3,
+    "active": 16,
+    "activeSimplifiedSvgAssets": 32,
+    "byChapter": { "ch01": 1, "ch02": 3, "ch03": 1, "ch04": 2, "ch05": 3, "ch06": 3, "ch07": 3 }
+  },
+  "boundaries": {
+    "writes": [
+      "docs/.vuepress/reader/diagrams/ch01.json through ch07.json",
+      "Owned simplified-Chinese desktop/mobile ch01-ch07 SVGs",
+      "review/reader/revisions-01-07.json"
+    ],
+    "notPerformed": [
+      "Markdown or original-book-figure edits",
+      "Shared reader or test edits",
+      "Builds or shared temporary-output generation",
+      "Traditional-Chinese derivative edits or generation",
+      "Integrated reader interaction testing",
+      "Independent second review",
+      "Reader learning experiment"
+    ],
+    "beforeVersions": "/tmp/aposd2e-viz-review-round1",
+    "beforeVersionVerification": "All 38 live owned simplified SVGs were byte-compared with round1 before editing. The round1 directory was not changed.",
+    "retirementScope": "The three retired entries and six simplified SVG files are removed. Traditional derivatives, if present in generated output, are left for MAIN regeneration."
+  },
+  "validation": {
+    "metadataAndSources": "All active entries use awaiting-second-review; 48 source paragraph references resolve in the supplied English originals.",
+    "anchors": "MarkdownIt plus the current diagramInsertions function checked all entries in simplified and traditional Markdown. Root-level paragraph ordinals include image paragraphs and exclude quoted paragraphs.",
+    "svgChecks": "XML parsing, prohibited-content checks, scoped and referenced IDs, text bounds, text overlap, node containment and connector/text checks on the active simplified SVGs.",
+    "finalResult": "32 active SVGs and 64 light/dark states checked with no reported geometry, connector/text or SVG-console errors. Final source, metadata and PNG hashes were re-read and matched. No unreferenced owned simplified SVGs remain.",
+    "workedExamples": "JavaScript assertions checked the illustrated AB/CD/EF reads, ABcd-newline-efGH deletion to ABGH, empty single-line selection, and sequential shared-slot versus distinct-context values. These check the teaching calculations, not real I/O, editor, or concurrency implementations.",
+    "renderEvidenceManifest": "/tmp/aposd2e-01-07-round2-qa/manifest.json",
+    "renderEvidencePolicy": "The manifest records complete source SVG SHA-256, metadata SHA-256, PNG SHA-256 and exact screenshot paths. File names and chapter contact sheets include source hash prefixes. No round1 gallery is used to certify round2 rendering.",
+    "metadataHashBoundary": "Metadata digests describe this simplified-Chinese author snapshot. MAIN's subsequent localization may change JSON digests; compare SVG digests for these images and generate new integrated/traditional captures afterward.",
+    "renderScope": "Isolated installed Chrome through Playwright; 680-unit desktop, 360-unit mobile, light/dark themes from reader.css, and 320px mobile overflow checks. These are standalone asset checks, not integrated-reader acceptance."
+  },
+  "records": [
+    {
+      "id": "ch01-two-levers",
+      "action": "revise",
+      "status": "awaiting-second-review",
+      "actualChanges": [
+        "Retained the two-to-one naming transformation; replaced the encapsulation half with matched caller/module before-and-after boundaries containing the same R recognition and D decoding tasks.",
+        "Both layouts now conclude that the techniques may be combined, without imposing an elimination-then-encapsulation order.",
+        "Moved from section 1.1 end to intro paragraph 6."
+      ],
+      "placementEvidence": { "anchor": { "section": "intro", "paragraph": 6 }, "simplifiedAfterLine": 12, "traditionalAfterLine": 12, "method": "MarkdownIt root-level paragraph_close enumeration, including subtitle as paragraph 1." },
+      "sourceEvidence": [
+        { "path": "docs/ch01.md", "section": "intro", "paragraphs": [5, 6] },
+        { "epub": "OEBPS/part0005.xhtml#p7:6932e6496e", "supports": "Eliminating inconsistent names removes unnecessary distinctions." },
+        { "epub": "OEBPS/part0005.xhtml#p8:c2c0a76bad", "supports": "Encapsulation changes which implementation details other modules must know." }
+      ],
+      "resolutionAgainstReview": {
+        "R1": "Placed directly after the two-approach passage and before continuous-design discussion.",
+        "R2": "R and D retain their names and semantic colors while their enclosing owner changes.",
+        "R3": "Removed the unsupported sequence in desktop and matched the non-sequential mobile conclusion.",
+        "R4": "Teaching label and the remaining-dependency caveat are visible in both layouts."
+      },
+      "boundaries": ["size/length, R/D and load(file) remain teaching inventions.", "No claim that implementation complexity or every dependency disappears."]
+    },
+    {
+      "id": "ch01-review-loop",
+      "action": "retire",
+      "status": "awaiting-second-review",
+      "actualChanges": ["Removed from ch01.json.", "Deleted ch01-review-loop.svg and ch01-review-loop-mobile.svg using apply_patch.", "No generic successor was added."],
+      "sourceEvidence": [
+        { "path": "docs/ch01.md", "section": "1.1" },
+        { "epub": "OEBPS/part0005.xhtml#p17:f589803ce3", "supports": "Abstract principles require actual code cases." },
+        { "epub": "OEBPS/part0005.xhtml#p20:913d5b2ebf", "supports": "Principles require judgment; the existing prose remains." }
+      ],
+      "resolutionAgainstReview": { "R1": "Removed from active reading flow and simplified public assets.", "R2": "No diagram was added merely to preserve the chapter count.", "R3": "No successor relies on the mismatched round1 capture; retired sources remain in the supplied archive." },
+      "boundaries": ["Section 1.1 prose is unchanged.", "Retirement is MAIN's content decision, not a measured learning result."]
+    },
+    {
+      "id": "ch02-weighted-work",
+      "action": "keep",
+      "status": "awaiting-second-review",
+      "actualChanges": ["Only the metadata review status changed; both SVGs remain byte-identical to round1."],
+      "sourceEvidence": [
+        { "path": "docs/ch02.md", "section": "2.1" },
+        { "epub": "OEBPS/part0006.xhtml#p10:857fd96bed", "supports": "Common activities affect overall burden." },
+        { "epub": "OEBPS/part0006.xhtml#p11:4407ac13f2", "supports": "Rough time-weighted complexity model." }
+      ],
+      "resolutionAgainstReview": { "keep": "Preserved all fixed inputs, independent calculations, results and cost/weight caveats. Generated fresh hash-matched rendering evidence." },
+      "boundaries": ["The scores are teaching assumptions, not a calibrated measurement or investment recommendation.", "No empirical learning or payback claim."]
+    },
+    {
+      "id": "ch02-memory-owner",
+      "action": "revise",
+      "status": "awaiting-second-review",
+      "actualChanges": [
+        "Replaced line-count title with the caller's release-knowledge obligation.",
+        "Drew fixed module/caller lanes in both comparisons; allocation and use stay fixed while only release changes lanes.",
+        "Changed metadata and visible conclusion to conditional safe restructuring; mobile height reduced from 734 to 625 units.",
+        "Moved to section 2.2 paragraph 4, before the banner figure and unknown-unknowns discussion."
+      ],
+      "placementEvidence": { "anchor": { "section": "2.2", "paragraph": 4 }, "simplifiedAfterLine": 33, "traditionalAfterLine": 33, "method": "MarkdownIt in both locales; follows the cognitive-load and line-count paragraphs." },
+      "sourceEvidence": [
+        { "epub": "OEBPS/part0006.xhtml#p16:a109901f0e", "supports": "Conditional restructuring can remove the caller's release obligation." },
+        { "epub": "OEBPS/part0006.xhtml#p17:e51597de57", "supports": "Line count alone omits cognitive cost." }
+      ],
+      "resolutionAgainstReview": { "R1": "Title now describes the represented responsibility comparison.", "R2": "Stable lanes make the changed owner inspectable without rereading every node.", "R3": "Both layouts say that safe lifetime completion is not specified or proven and this is not the only approach.", "R4": "Placed beside the requested source passage and compacted mobile repetition." },
+      "boundaries": ["Arrows indicate time, not calls or ownership-transfer messages.", "No complete C API, lifetime protocol, or leak-prevention result is claimed."]
+    },
+    {
+      "id": "ch02-cause-symptom",
+      "action": "replace",
+      "status": "awaiting-second-review",
+      "actualChanges": [
+        "Removed the cause taxonomy matrix and generic knowing/not-knowing boxes.",
+        "Created matched OK/TIMEOUT declaration and message-table states, including an inspectable missing TIMEOUT entry and the completed two-edit case.",
+        "Separated solid required-cochange connectors from dashed discovery annotations.",
+        "Placed directly after the status/message-table paragraph, section 2.3 paragraph 5."
+      ],
+      "placementEvidence": { "anchor": { "section": "2.3", "paragraph": 5 }, "simplifiedAfterLine": 55, "traditionalAfterLine": 55, "method": "MarkdownIt paragraph enumeration." },
+      "sourceEvidence": [
+        { "epub": "OEBPS/part0006.xhtml#p27:3c809c76e1", "supports": "Adding a status may require a nonobvious message-table edit." },
+        { "epub": "OEBPS/part0006.xhtml#p25:d90f87f2bd", "supports": "Dependencies remain and should be obvious." }
+      ],
+      "resolutionAgainstReview": { "R1": "Both cases have the same initial state and required edit set, but different discoverability.", "R2": "Missing and completed message entries are explicitly drawn and teaching-labeled.", "R3": "Discovery and required cochange are different connectors; visible links only reduce omission risk.", "R4": "Left the cause taxonomy to the book prose." },
+      "boundaries": ["ID retained because the status/message discoverability question is stable.", "OK/TIMEOUT and message strings are invented.", "No behavior for a missing message is assumed; visible links do not prove every dependency was found."]
+    },
+    {
+      "id": "ch03-patch-cycle",
+      "action": "keep",
+      "status": "awaiting-second-review",
+      "actualChanges": ["Only review status changed; desktop and mobile SVGs remain byte-identical to round1."],
+      "sourceEvidence": [
+        { "epub": "OEBPS/part0007.xhtml#p8:bdac23ce35", "supports": "Small compromises accumulate." },
+        { "epub": "OEBPS/part0007.xhtml#p9:3bd9d83030", "supports": "Cleanup pressure encourages further workarounds." },
+        { "epub": "OEBPS/part0007.xhtml#p11:93957918f0", "supports": "Future maintainers bear costs omitted by apparent current speed." }
+      ],
+      "resolutionAgainstReview": { "keep": "Preserved the reinforcing return edge, numbering, causal framing and downstream-cost qualification." },
+      "boundaries": ["Qualitative author argument, not measured causality or cost prediction.", "Original progress curve and Markdown remain untouched."]
+    },
+    {
+      "id": "ch03-small-investments",
+      "action": "retire",
+      "status": "awaiting-second-review",
+      "actualChanges": ["Removed from ch03.json.", "Deleted both simplified SVG files using apply_patch.", "Retained the distinct patch-cycle supplement without inventing a replacement schedule."],
+      "sourceEvidence": [
+        { "path": "docs/ch03.md", "sections": ["3.2", "3.3"] },
+        { "epub": "OEBPS/part0007.xhtml#p18:4502343001", "supports": "Continuous small investment is already explained by prose." },
+        { "epub": "OEBPS/part0007.xhtml#p22:7cb9f2c4cf", "supports": "The original lack-of-payback-evidence qualification remains." }
+      ],
+      "resolutionAgainstReview": { "R1": "Removed the redundant schedule, not the original curve or source caveats.", "R2": "No replacement added to maintain an arbitrary count." },
+      "boundaries": ["All book text and original Figure 3.1 are unchanged.", "The absence of this diagram is not claimed to improve learning."]
+    },
+    {
+      "id": "ch04-abstraction-filter",
+      "action": "replace",
+      "status": "awaiting-second-review",
+      "actualChanges": [
+        "Replaced the circular classification gate with matched pre/post-crash cache and persistent-storage states for v0/v1.",
+        "Made the database's required persistence guarantee derivable from whether v1 actually reached persistent storage.",
+        "Restored adequate performance and irrelevance to caller needs as conditions for hiding block selection.",
+        "Moved to section 4.3 paragraph 4 beside the filesystem example."
+      ],
+      "placementEvidence": { "anchor": { "section": "4.3", "paragraph": 4 }, "simplifiedAfterLine": 35, "traditionalAfterLine": 35, "method": "MarkdownIt in both locales." },
+      "sourceEvidence": [
+        { "epub": "OEBPS/part0008.xhtml#p13:c2f52ccea6", "supports": "Necessary behavior and guarantees belong to the interface." },
+        { "epub": "OEBPS/part0008.xhtml#p18:0d8979670a", "supports": "Omitting necessary facts creates a false abstraction." },
+        { "epub": "OEBPS/part0008.xhtml#p19:954b1a6804", "supports": "Caching, crash persistence, and the adequate-performance qualification." }
+      ],
+      "resolutionAgainstReview": { "R1": "The state contrast replaces classification-only reasoning.", "R2": "Both layouts and answer restore the performance condition.", "R3": "The example shows an externally needed guarantee, not a named flush API.", "R4": "States and failure model are teaching-labeled; false-abstraction warning remains." },
+      "boundaries": ["Stable explanatory question keeps the original ID.", "Assumes volatile cache and persistent data unaffected by this particular crash.", "No real filesystem, flush API, transaction protocol, or observed crash outcome is specified."]
+    },
+    {
+      "id": "ch04-depth",
+      "action": "retire",
+      "status": "awaiting-second-review",
+      "actualChanges": ["Removed pilot entry from ch04.json.", "Deleted ch04-depth.svg and ch04-depth-mobile.svg using apply_patch.", "No substitute depth metaphor was added."],
+      "sourceEvidence": [
+        { "path": "docs/ch04.md", "sections": ["4.4", "4.5"] },
+        { "epub": "OEBPS/part0008.xhtml#p24:2f7cf053e2", "supports": "The book already explains cost versus functionality." },
+        { "epub": "OEBPS/part0008.xhtml#p44:5aa3fcc206", "supports": "The useful/unavoidable shallow-module qualification remains in prose." }
+      ],
+      "resolutionAgainstReview": { "R1": "Removed only the supplementary comparison.", "R2": "Original Figure 4.1, caption, Unix calls and wrapper code were not edited.", "R3": "No new applied-depth exercise was added without a concrete task." },
+      "boundaries": ["MAIN will update old-pilot tests.", "All before-version SVGs remain in the supplied round1 archive.", "No traditional derivative was edited."]
+    },
+    {
+      "id": "ch04-common-path",
+      "action": "revise",
+      "status": "awaiting-second-review",
+      "actualChanges": [
+        "Added ABCDEF byte offsets and explicit current-position states after reading AB.",
+        "Ordinary route reads CD from position 2; optional lseek changes position to 4 before reading EF.",
+        "Both layouts identify this as one example sequence, not a requirement to read before seeking.",
+        "Moved the mobile optional-branch label away from its arrow during visual QA."
+      ],
+      "sourceEvidence": [
+        { "epub": "OEBPS/part0008.xhtml#p31:ab248507f0", "supports": "Sequential default and lseek changing current position." },
+        { "epub": "OEBPS/part0008.xhtml#p64:a39b3e2e96", "supports": "Default Java buffering is the author's proposal." },
+        { "epub": "OEBPS/part0008.xhtml#p65:bd4a0d112b", "supports": "Special capabilities need not be learned by common callers." }
+      ],
+      "resolutionAgainstReview": { "R1": "Offsets, returned bytes and next positions are visible.", "R2": "Both layouts explicitly reject an exhaustive call-grammar interpretation.", "R3": "Optional route remains separate and Java proposal wording remains explicit.", "R4": "Java buffering stays a short supporting note, not another display." },
+      "boundaries": ["All reads are assumed to return the requested two bytes successfully.", "Short reads, failures and EOF handling are omitted.", "No functional I/O simulation or full API validation."]
+    },
+    {
+      "id": "ch05-format-ownership",
+      "action": "revise",
+      "status": "awaiting-second-review",
+      "actualChanges": [
+        "Used numbered phases instead of ambiguous execution/call chains; solid arrows only connect phases to implementations.",
+        "Repeated format-change K in both panels, with two implementation targets before and one afterward.",
+        "Marked application stages and order unchanged; retained actual-hidden-interface condition."
+      ],
+      "sourceEvidence": [
+        { "epub": "OEBPS/part0009.xhtml#p19:8b5ba3fcd6", "supports": "Extraction helps only if its interface really hides the knowledge." },
+        { "epub": "OEBPS/part0009.xhtml#p21:3ec818d82b", "supports": "Read and write phases can use the same format implementation." },
+        { "epub": "OEBPS/part0009.xhtml#p24:d201909363", "supports": "Time order need not determine module structure." }
+      ],
+      "resolutionAgainstReview": { "R1": "Phase numbering, solid invocation and dashed change targets have different meanings.", "R2": "The same K event and unchanged phases are drawn after refactoring.", "R3": "Both layouts retain the interface-hiding condition.", "R4": "No HTTP framing details were added; new captures bind exact SVG hashes." },
+      "boundaries": ["K is teaching notation, not a concrete format or algorithm.", "The figure does not assert that phases call each other or every phase must merge."]
+    },
+    {
+      "id": "ch05-http-read",
+      "action": "revise",
+      "status": "awaiting-second-review",
+      "actualChanges": [
+        "Linked Content-Length: 4 to a bracket spanning the four separate ASCII body bytes.",
+        "Drew the rejected reader/parser boundary with framing knowledge K in both classes.",
+        "Contrasted the duplicate ownership with one merged K owner; distinguished dependency from processing order.",
+        "Compacted mobile from 776 to 745 units while adding the missing rejected design."
+      ],
+      "sourceEvidence": [
+        { "epub": "OEBPS/part0009.xhtml#p32:1fb3f4cb4e", "supports": "Reading needs protocol parsing, so independent reader/parser classes duplicate knowledge." },
+        { "epub": "OEBPS/part0009.xhtml#p33:bc4302405d", "supports": "The source proposes merging this shared-knowledge example." }
+      ],
+      "resolutionAgainstReview": { "R1": "Duplicate K is located in two actual module boundaries before one owner afterward.", "R2": "Dashed dependency reaches the four-byte extent; solid arrows show processing order.", "R3": "All requested excerpt, Content-Length, multiple-read and omitted-path limitations remain visible.", "R4": "Explicitly rejects a universal one-class protocol prescription." },
+      "boundaries": ["a=12 and length 4 are teaching inventions; original Figure 5.1 is untouched.", "Not a complete HTTP parser, message-framing algorithm or socket conformance test."]
+    },
+    {
+      "id": "ch05-parameter-boundary",
+      "action": "keep",
+      "status": "awaiting-second-review",
+      "actualChanges": [
+        "Kept all text, source evidence, boundary logic and mobile SVG unchanged.",
+        "A connector/text QA check found the desktop request arrow touching the method's final parenthesis; moved only its start from x=247 to x=265."
+      ],
+      "sourceEvidence": [
+        { "epub": "OEBPS/part0009.xhtml#p43:5c5eb3299a", "supports": "Returning the internal Map leaks representation and exposes state mutation risk." },
+        { "epub": "OEBPS/part0009.xhtml#p47:45a97e3759", "supports": "Value accessors hide lookup/conversion but retain failure conditions." }
+      ],
+      "resolutionAgainstReview": { "keep": "Retained the reference-versus-value contrast and both exception outcomes; no explanatory redesign.", "qa": "Only the pre-existing arrow/parenthesis collision was corrected, with exact new rendering evidence." },
+      "boundaries": ["Limited to the book's internal-Map-reference API.", "No general condemnation of collection-returning APIs or API correctness claim."]
+    },
+    {
+      "id": "ch06-range-api",
+      "action": "keep",
+      "status": "awaiting-second-review",
+      "actualChanges": ["Only metadata status changed; both SVGs remain byte-identical to round1."],
+      "sourceEvidence": [
+        { "epub": "OEBPS/part0010.xhtml#p25:485d9a0327", "supports": "Half-open range contract." },
+        { "epub": "OEBPS/part0010.xhtml#p27:3bc06f5c57", "supports": "Relative Position operations." },
+        { "epub": "OEBPS/part0010.xhtml#p37:1b75d1a398", "supports": "UI must know which characters its action deletes." }
+      ],
+      "resolutionAgainstReview": { "keep": "Preserved numeric gaps, independent starts, all three outputs and Position-implementation caveat." },
+      "boundaries": ["Valid teaching ranges only; no Unicode indexing or file-end policy validation.", "No reader-learning claim."]
+    },
+    {
+      "id": "ch06-history-boundary",
+      "action": "revise",
+      "status": "awaiting-second-review",
+      "actualChanges": [
+        "Replaced the disconnected role pipeline with creation in text/UI modules and addAction registration into a fenced Action-reference list.",
+        "Connected A2/A1 list references to calls of the corresponding state-owning implementations.",
+        "Used neutral A1/A2 names, explicitly limited to registration and traversal; labeled both F0/F1 fences.",
+        "Kept undo/redo typo note, forward redo direction and same-mechanism qualification; mobile reduced from 822 to 736 units."
+      ],
+      "sourceEvidence": [
+        { "epub": "OEBPS/part0010.xhtml#p63:08a7d39ba6", "supports": "History invokes Action interfaces without knowing internal state." },
+        { "epub": "OEBPS/part0010.xhtml#p64:749e4ecf03", "supports": "Specific modules create and register concrete actions." },
+        { "epub": "OEBPS/part0010.xhtml#p65:6193a44efc", "supports": "Fences and high-level grouping; contains the acknowledged redo typo." },
+        { "epub": "OEBPS/part0010.xhtml#p72:c4f056de4e", "supports": "Separation is within one mechanism; text modules can own specialized text undo." }
+      ],
+      "resolutionAgainstReview": { "R1": "Registration is dashed and distinct from runtime callback arrows.", "R2": "Repeated object identities link list references to opaque implementations.", "R3": "Neutral traversal-only actions avoid implying a valid text/selection restoration order.", "R4": "Both fences, directions, typo correction and mechanism boundary are visible; role prose is compacted." },
+      "boundaries": ["No concrete saved values or cross-action consistency rules are specified.", "No complete editor restoration or universal undo order is claimed."]
+    },
+    {
+      "id": "ch06-empty-selection",
+      "action": "keep",
+      "status": "awaiting-second-review",
+      "actualChanges": ["Only metadata status changed; both SVGs remain byte-identical to round1."],
+      "sourceEvidence": [
+        { "epub": "OEBPS/part0010.xhtml#p75:b92f21622f", "supports": "An existence flag creates repeated special cases." },
+        { "epub": "OEBPS/part0010.xhtml#p76:c3c2a216e8", "supports": "Equal endpoints allow the same prefix/suffix construction to restore the original line." }
+      ],
+      "resolutionAgainstReview": { "keep": "Preserved character spans, struck-out interior, empty boundary, outputs and valid-range caveat." },
+      "boundaries": ["Single-line teaching construction, not a complete editing algorithm.", "No claim that every validation or special case disappears."]
+    },
+    {
+      "id": "ch07-dispatch-value",
+      "action": "revise",
+      "status": "awaiting-second-review",
+      "actualChanges": [
+        "Added clearly invented S=/static/a.txt and D=/report requests and labeled their distinct dispatcher destinations.",
+        "Showed both requests reaching the same fixed target in the explicitly no-other-work forwarder.",
+        "Displayed identical handle(request) signatures at every entry and downstream target in both layouts."
+      ],
+      "sourceEvidence": [
+        { "epub": "OEBPS/part0011.xhtml#p40:76d55e43e9", "supports": "Choosing the recipient is meaningful functionality." },
+        { "epub": "OEBPS/part0011.xhtml#p42:2ea1eb54ca", "supports": "URL-based file versus dynamic dispatch example." },
+        { "epub": "OEBPS/part0011.xhtml#p43:96ba0ef9b8", "supports": "Same-layer implementations can share an interface." }
+      ],
+      "resolutionAgainstReview": { "R1": "Both downstream signatures are present and captured from their exact SVG bytes.", "R2": "Source/PNG hash-bound round2 evidence replaces reliance on mismatched old gallery captures.", "R3": "Two concrete inputs select different branches while the pure forwarder retains one target.", "R4": "Simplified-route and same-layer caveats remain; fixed target alone is explicitly not a uselessness test." },
+      "boundaries": ["Teaching URLs, API name and one matching rule only.", "No exhaustive router behavior or integrated web server test."]
+    },
+    {
+      "id": "ch07-line-boundary",
+      "action": "revise",
+      "status": "awaiting-second-review",
+      "actualChanges": [
+        "Located start(S) and end(E) at character gaps, drew NL explicitly and struck out cd/NL/ef while retaining AB/GH.",
+        "Replaced repeated prose boxes with UI/text interaction traces.",
+        "Both designs keep pre/post line-storage rows on the text-module side: ABcd plus efGH becomes ABGH.",
+        "Contrasted getLine/putLine-level exchange and UI joining with one range request and internal joining."
+      ],
+      "sourceEvidence": [
+        { "epub": "OEBPS/part0011.xhtml#p54:fb13061723", "supports": "Line APIs force UI callers to split/join and repeat storage work." },
+        { "epub": "OEBPS/part0011.xhtml#p55:bbef5efd83", "supports": "Range interface can hide joining while line storage remains internal." }
+      ],
+      "resolutionAgainstReview": { "R1": "Endpoints, newline and retained/removed fragments are explicit without relying only on color.", "R2": "Both before/after storage representations are visible and stay across the boundary.", "R3": "Labeled requests, returned lines and writeback cross the old boundary; only the range crosses the new one.", "R4": "Kept the distinct multiline example and replaced prose-list comparison with a trace." },
+      "boundaries": ["S/E and NL are teaching notation, not a prescribed Position or text encoding.", "Operation counts and deletion-of-old-row details are intentionally unspecified.", "846-unit mobile diagram trades length for inspectable multiline states; integrated phone reading remains untested."]
+    },
+    {
+      "id": "ch07-context-instances",
+      "action": "revise",
+      "status": "awaiting-second-review",
+      "actualChanges": [
+        "Both layouts use the same numbered A-write, B-write, A-read sequence, with actual shared and independent-slot values.",
+        "Added visible netA.ctx=ctxA and netB.ctx=ctxB fields.",
+        "Separated constructor-provided references from runtime lookup and from an unused stored association.",
+        "Made one process, two distinct Context objects and correct associations explicit."
+      ],
+      "sourceEvidence": [
+        { "epub": "OEBPS/part0011.xhtml#p60:33b6affaf2", "supports": "A shared global slot interferes with independent instances." },
+        { "epub": "OEBPS/part0011.xhtml#p61:c2dc1be9e0", "supports": "Each instance may own a separate context." },
+        { "epub": "OEBPS/part0011.xhtml#p63:2c82872bba", "supports": "Objects receive references through constructors and retain them." },
+        { "epub": "OEBPS/part0011.xhtml#p65:e9a745736f", "supports": "Contexts retain hidden-dependency and mutable-state risks." }
+      ],
+      "resolutionAgainstReview": { "R1": "Write order and final reads now match in desktop/mobile and can be checked row by row.", "R2": "Fields and connector legends distinguish construction, stored association and runtime read.", "R3": "Type alone is explicitly insufficient; distinct objects and correct provision are assumed.", "R4": "Read-only example, nonautomatic immutability, hidden dependencies and thread-safety caveats remain." },
+      "boundaries": ["Sequential teaching interference, not a race-condition simulation.", "The Context type does not prove isolation, immutability or thread safety.", "No certificate handling or dependency-injection implementation was tested."]
+    }
+  ]
+}

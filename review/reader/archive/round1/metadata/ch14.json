@@ -1,0 +1,60 @@
+[
+  {
+    "id": "ch14-block-domains",
+    "chapter": "ch14",
+    "title": "同一个数字，两个地址域",
+    "question": "为什么把逻辑块号叫作 block，会误伤另一块磁盘数据？",
+    "answer": "文件内索引和物理磁盘地址属于不同域；相同名称掩盖了跨域误用。不同名称可暴露错误，不同类型还能约束混用。",
+    "summary": "文件块2对应磁盘块9等数字为教学自拟，用于解释 Sprite 缺陷的机制，不是历史事故的实际块号或代码。",
+    "alt": "教学文件中逻辑块2经映射对应磁盘块9；错误路径把数值2直接当磁盘块号，清零无关的磁盘块2。修订路径以fileBlock与diskBlock区分，进一步可用不可混用的类型保护。",
+    "kind": "address-domain-trace",
+    "desktop": "/diagrams/ch14-block-domains.svg",
+    "mobile": "/diagrams/ch14-block-domains-mobile.svg",
+    "anchor": { "section": "14.1", "placement": "end" },
+    "sources": [
+      { "section": "14.1", "epub": "OEBPS/part0018.xhtml#p6:ce75b5633d", "reason": "Sprite将逻辑块号误作物理块号，导致无关块被清零。数字2和9、映射及清零路径均为教学自拟。" },
+      { "section": "14.1", "epub": "OEBPS/part0018.xhtml#p7:8c78010958", "reason": "fileBlock/diskBlock可避免名称误导；更进一步是定义不可互换的类型。名称本身不提供类型安全保证。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch14-name-domains",
+    "chapter": "ch14",
+    "title": "名称的范围要与概念的范围吻合",
+    "question": "名称过于笼统和过于具体，会造成怎样不同的误读？",
+    "answer": "x 会让人想到多个坐标域，charIndex 将它收窄到行内字符索引；selection 又把任意文本范围误缩成界面选区，range 更贴合通用能力。",
+    "summary": "图中的集合表示可能解释或适用范围，不是频率、概率或语义距离的量化。精确不等于越具体越好。",
+    "alt": "上半图中x分叉到屏幕像素坐标与行内字符索引，charIndex只指后者。下半图中选区位于任意文本范围集合内部，delete实际覆盖整个范围集合，所以参数应叫range而非selection。",
+    "kind": "semantic-domain",
+    "desktop": "/diagrams/ch14-name-domains.svg",
+    "mobile": "/diagrams/ch14-name-domains-mobile.svg",
+    "anchor": { "section": "14.3", "placement": "end" },
+    "sources": [
+      { "section": "14.3", "epub": "OEBPS/part0018.xhtml#p22:3429e964a8", "reason": "x/y可被误解为屏幕像素，charIndex/lineIndex反映文件位置抽象。" },
+      { "section": "14.3", "epub": "OEBPS/part0018.xhtml#p45:a323d4c80f", "reason": "delete可删除任意范围，selection过窄，应使用range。集合布局为教学表达。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch14-context-budget",
+    "chapter": "ch14",
+    "title": "上下文能省掉哪些词？",
+    "question": "什么时候 block 或 i 足够清楚，什么时候必须补回限定？",
+    "answer": "可见上下文只有一种含义时可省略重复信息；跨地址域或远离声明时需保留区分。相同用途采用共同词干，角色不同再加前缀。",
+    "summary": "短名称不是一律错误，长名称也不是一律更好。图示比较上下文提供的信息，不设名称长度阈值；最终要看读者能否理解。",
+    "alt": "单一块类型的File类提供足够上下文，可用block；同时出现文件块与磁盘块时，需fileBlock/diskBlock。复制操作中的同类块使用srcFileBlock/dstFileBlock；短循环里的i由完整可见的使用范围解释，远处使用则需更具描述性的名称。",
+    "kind": "context-contrast",
+    "desktop": "/diagrams/ch14-context-budget.svg",
+    "mobile": "/diagrams/ch14-context-budget-mobile.svg",
+    "anchor": { "section": "14.6", "placement": "end" },
+    "sources": [
+      { "section": "14.4", "epub": "OEBPS/part0018.xhtml#p51:06485baed2", "reason": "共同名称必须对应足够窄且行为一致的用途。" },
+      { "section": "14.4", "epub": "OEBPS/part0018.xhtml#p52:03d977f544", "reason": "同类多个变量可添加src/dst前缀。" },
+      { "section": "14.5", "epub": "OEBPS/part0018.xhtml#p57:86e1e90a93", "reason": "File内可省去重复file前缀，但有多种块类型时例外。" },
+      { "section": "14.3", "epub": "OEBPS/part0018.xhtml#p38:80ca530461", "reason": "短小且完整可见的循环中i/j可接受。" },
+      { "section": "14.6", "epub": "OEBPS/part0018.xhtml#p89:24cbe73305", "reason": "可读性由读者判断，不按长短机械裁决。" },
+      { "section": "14.6", "epub": "OEBPS/part0018.xhtml#p90:fec36f089e", "reason": "声明到使用距离越大，越需要描述性名称；图中场景并非量化阈值。" }
+    ],
+    "status": "awaiting-independent-review"
+  }
+]

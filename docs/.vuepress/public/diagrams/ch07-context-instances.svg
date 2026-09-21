@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 688" role="img" aria-labelledby="ch07-context-instances-title ch07-context-instances-desc">
+  <title id="ch07-context-instances-title">不透传之后，两实例会串值吗？</title>
+  <desc id="ch07-context-instances-desc">单进程顺序教学案例。A 写 cert-A，B 写 cert-B，A 再读。共享槽最后为 cert-B，所以 A 读到 cert-B；两个独立 Context 分别保留 cert-A 和 cert-B。构造者预先给 netA 和 netB 正确的 ctx 字段，第三步 netA 经 ctxA 读取 cert-A。类型本身不保证隔离或不可变。</desc>
+  <defs><marker id="ch07-context-instances-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="688" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="20" font-weight="600">不透传之后，两实例会串值吗？</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">教学假设：一个进程，顺序执行；ctxA 与 ctxB 是不同对象，关联正确</text>
+    <text x="24" y="106" font-weight="600">顺序</text><text x="235" y="106" font-weight="600">共享 globalCert</text><text x="409" y="106" font-weight="600">独立 ctxA</text><text x="557" y="106" font-weight="600">独立 ctxB</text>
+    <path d="M24 120H656M24 174H656M24 228H656M24 287H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="153">1　A 写 cert-A</text><text x="235" y="153">cert-A</text><text x="409" y="153">cert-A</text><text x="557" y="153">未设置</text>
+    <text x="24" y="207">2　B 写 cert-B</text><text x="235" y="207">cert-B</text><text x="409" y="207">cert-A</text><text x="557" y="207">cert-B</text>
+    <text x="24" y="263">3　A 读取</text><text x="235" y="263" fill="var(--diagram-danger,#a03946)" font-weight="600">得到 cert-B</text><text x="409" y="263" fill="var(--diagram-primary,#0b6f5d)" font-weight="600">得到 cert-A</text><text x="557" y="263">仍为 cert-B</text>
+    <text x="24" y="323" font-weight="600">构造时保存引用；下图叠加步骤 3 查找，数值为步骤 2 之后</text>
+    <text x="40" y="357" font-family="ui-monospace,monospace">new Net(ctxA)</text><text x="394" y="357" font-family="ui-monospace,monospace">new Net(ctxB)</text>
+    <g stroke="var(--diagram-muted,#5c645d)" stroke-dasharray="5 4" marker-end="url(#ch07-context-instances-arrow)"><path d="M163 366V390"/><path d="M517 366V390"/></g>
+    <text x="181" y="382" font-size="13">构造时传入</text><text x="535" y="382" font-size="13">构造时传入</text>
+    <rect x="24" y="402" width="278" height="69" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="40" y="429" font-weight="600">netA</text><text x="40" y="455" font-family="ui-monospace,monospace">ctx = ctxA</text>
+    <rect x="378" y="402" width="278" height="69" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="394" y="429" font-weight="600">netB</text><text x="394" y="455" font-family="ui-monospace,monospace">ctx = ctxB</text>
+    <path d="M163 479V520" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch07-context-instances-arrow)"/><text x="182" y="504" font-size="14">3　运行时读取</text>
+    <path d="M517 479V520" stroke="var(--diagram-line,#aebbad)"/><text x="537" y="503" font-size="13">仅表示关联</text>
+    <rect x="24" y="532" width="278" height="56" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/><text x="40" y="566">ctxA：cert = cert-A</text>
+    <rect x="378" y="532" width="278" height="56" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/><text x="394" y="566">ctxB：cert = cert-B</text>
+    <text x="24" y="619" font-size="14">本例网络对象只读配置；Context 类型本身并不保证对象独立或不可变。</text>
+    <text x="24" y="651" font-size="13" fill="var(--diagram-muted,#5c645d)">隐蔽依赖与共享可变状态风险仍在；不是竞态演示，也未证明线程安全。</text>
+    <text x="24" y="675" font-size="12" fill="var(--diagram-muted,#5c645d)">虚线：构造时提供引用；实线箭头：步骤 3 查找；无箭头线：保存的引用关联。</text>
+  </g>
+</svg>

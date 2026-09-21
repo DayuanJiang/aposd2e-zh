@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 464" role="img" aria-labelledby="ch02-memory-owner-title ch02-memory-owner-desc">
+  <title id="ch02-memory-owner-title">少写一行，为何仍然难用？</title>
+  <desc id="ch02-memory-owner-desc">原书内存例子的责任轨迹。模块分配内存后返回指针，调用者还要知道释放责任；遗漏就泄漏。重组后分配和最终释放由同一模块负责，调用者不再承担这部分知识。不是具体的生命周期 API。</desc>
+  <defs><marker id="ch02-memory-owner-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="464" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="24" y="34" font-size="20" font-weight="600">少写一行，为何仍然难用？</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">沿时间向右看：谁分配，谁使用，谁记得释放？</text>
+    <text x="24" y="104" font-weight="600">责任外移</text>
+    <rect x="24" y="120" width="170" height="66" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="40" y="146">模块</text><text x="40" y="172">分配内存</text>
+    <rect x="250" y="120" width="170" height="66" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="266" y="146">调用者</text><text x="266" y="172">使用数据</text>
+    <rect x="476" y="120" width="180" height="66" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="492" y="146">调用者</text><text x="492" y="172">还必须负责释放</text>
+    <g stroke="var(--diagram-muted,#5c645d)" fill="none" marker-end="url(#ch02-memory-owner-arrow)">
+      <path d="M202 154H240"/><path d="M428 154H466"/>
+    </g>
+    <text x="197" y="112" font-size="13">指针</text>
+    <text x="250" y="215" fill="var(--diagram-danger,#a03946)">额外知识：释放责任与时机；遗漏就会泄漏</text>
+    <path d="M24 241H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="275" font-weight="600">责任收回</text>
+    <rect x="24" y="291" width="170" height="66" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="40" y="317">模块</text><text x="40" y="343">分配内存</text>
+    <rect x="250" y="291" width="170" height="66" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="266" y="317">调用者</text><text x="266" y="343">使用数据</text>
+    <rect x="476" y="291" width="180" height="66" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="492" y="317">同一模块</text><text x="492" y="343">最终负责释放</text>
+    <g stroke="var(--diagram-muted,#5c645d)" fill="none" marker-end="url(#ch02-memory-owner-arrow)">
+      <path d="M202 325H240"/><path d="M428 325H466"/>
+    </g>
+    <path d="M108 367V386H565V367" fill="none" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="184" y="411" font-weight="600">分配与释放的责任属于同一模块</text>
+    <text x="24" y="445" font-size="13" fill="var(--diagram-muted,#5c645d)">责任示意，非具体 C API；不能仅凭少写几行来判断认知负荷。</text>
+  </g>
+</svg>

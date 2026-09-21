@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ch22-startup-contract",
+    "chapter": "ch22",
+    "title": "围绕具体约束比较设计",
+    "question": "当配置必须先于后台读取时，隐藏启动动作为什么可能使短接口更难用？",
+    "answer": "在图示的一种可能顺序中，构造函数隐式启动后，线程先读到空 root，调用方随后才完成配置。显式 start 的方案让调用方先配置再启动，在图示前提下读到 /docs；代价是增加一次调用和相应的契约。先配置再构造启动型对象也可能满足同一要求，不能从这个例子推出构造函数不得启动线程。",
+    "summary": "译者自拟的后台索引例子，不是 RaftClient 的实现或作者提供的 API。两条轨迹比较同一约束下的启动时机；B 的调用顺序及读取后不再修改配置是明确前提。图只展示可能的失误与一种满足约束的方案，不给设计自动评分，也不声称接口越多或越少就越好。",
+    "alt": "两条有明确顺序的轨迹：A 构造对象并隐式启动线程，线程先读取空 root，调用方随后设为 /docs；B 构造但不启动，先将 root 设为 /docs，再调用 start，线程读取 /docs。旁注说明新增调用的代价，以及先配置再构造的另一种可能方案。",
+    "kind": "bounded-contract-trace",
+    "desktop": "/diagrams/ch22-startup-contract.svg",
+    "mobile": "/diagrams/ch22-startup-contract-mobile.svg",
+    "anchor": { "end": true },
+    "sources": [
+      {
+        "section": "intro",
+        "epub": "OEBPS/part0026.xhtml#p5:d725d3ec10",
+        "reason": "结论将设计表述为围绕特定问题探索简单结构。图以一组明确约束作收尾练习，不把一般原则拼成自动判决流程。Indexer、root 和 /docs 均为译者自拟。"
+      },
+      {
+        "section": "18.2",
+        "epub": "OEBPS/part0022.xhtml#p96:cd1197eff7",
+        "reason": "原例说明构造函数启动线程可能不符合读者预期，需要在接口中记录。这里只借用可见性问题；不把新例的启动时序、配置要求或 start 方法归于 RaftClient。"
+      },
+      {
+        "section": "18.3",
+        "epub": "OEBPS/part0022.xhtml#p99:5b421f05ed",
+        "reason": "减少所需信息、复用既有知识、以名称和注释提供必要信息是不同手段；图不把隐藏更多信息当作唯一优化方向。"
+      },
+      {
+        "section": "21.4",
+        "epub": "OEBPS/part0025.xhtml#p18:dfaf0db169",
+        "reason": "重要信息也可能被错误隐藏。本例对特定调用方而言，启动时机重要；这不意味着所有构造函数都必须采用相同形式。"
+      }
+    ],
+    "status": "awaiting-second-review"
+  }
+]

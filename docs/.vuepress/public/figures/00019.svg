@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="316" viewBox="0 0 1040 316" role="img" aria-labelledby="fig-00019-title fig-00019-desc">
+  <title id="fig-00019-title">Figure 9.3: Splitting a method</title>
+  <desc id="fig-00019-desc">Four left-to-right arrangements. Interface points to the thick black top of a method rectangle; Implementation points to its gray body. In (a), Callers invoke one method. In (b), the parent method invokes an extracted subtask. In (c), Callers invoke two separate methods, labeled (rarely works). In (d), Callers and a parent invoke several shallow methods, labeled (avoid!). Relative widths and depths reproduce the qualitative original and are not a numeric scale.</desc>
+  <defs>
+    <marker id="fig-00019-arrow" markerWidth="9" markerHeight="5" refX="8" refY="2.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L8 2.5 L0 5 L2 2.5 Z" fill="#111"/>
+    </marker>
+  </defs>
+  <rect width="1040" height="316" fill="#fff"/>
+  <g transform="translate(12 12) scale(2)" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#111">
+    <g fill="#ededed" stroke="#111" stroke-width="0.8">
+      <rect x="114" y="41" width="67" height="54"/>
+      <rect x="201" y="41" width="67" height="39"/>
+      <rect x="233" y="100" width="27" height="27"/>
+      <rect x="289" y="41" width="43" height="54"/>
+      <rect x="340" y="41" width="24" height="54"/>
+      <rect x="384" y="41" width="55" height="20"/>
+      <rect x="459" y="41" width="48" height="12"/>
+      <rect x="388" y="73" width="35" height="14"/>
+      <rect x="447" y="69" width="56" height="11"/>
+    </g>
+    <g fill="#080808">
+      <rect x="114" y="40" width="67" height="5"/>
+      <rect x="201" y="40" width="67" height="5"/>
+      <rect x="233" y="99" width="27" height="5"/>
+      <rect x="289" y="40" width="43" height="5"/>
+      <rect x="340" y="40" width="24" height="5"/>
+      <rect x="384" y="40" width="55" height="5"/>
+      <rect x="459" y="40" width="48" height="5"/>
+      <rect x="388" y="72" width="35" height="5"/>
+      <rect x="447" y="68" width="56" height="5"/>
+    </g>
+    <g fill="#fff" stroke="#111" stroke-width="0.8">
+      <rect x="125" y="0" width="44" height="17"/>
+      <rect x="213" y="0" width="44" height="17"/>
+      <rect x="311" y="0" width="44" height="17"/>
+      <rect x="422" y="0" width="44" height="17"/>
+    </g>
+    <g font-size="11" text-anchor="middle">
+      <text x="147" y="12">Callers</text>
+      <text x="235" y="12">Callers</text>
+      <text x="333" y="12">Callers</text>
+      <text x="444" y="12">Callers</text>
+    </g>
+    <text x="0" y="46">Interface</text>
+    <text x="0" y="72">Implementation</text>
+    <g fill="none" stroke="#111" stroke-width="0.8" marker-end="url(#fig-00019-arrow)">
+      <path d="M54 42 H111"/>
+      <path d="M91 68 H111"/>
+      <path d="M147 17 V38"/>
+      <path d="M235 17 V38"/>
+      <path d="M248 68 V98"/>
+      <path d="M325 17 L311 38"/>
+      <path d="M339 17 L352 38"/>
+      <path d="M433 17 L412 38"/>
+      <path d="M455 17 L482 38"/>
+      <path d="M444 17 L456 67"/>
+      <path d="M406 53 V71"/>
+    </g>
+    <g text-anchor="middle">
+      <text x="327" y="116">(rarely works)</text>
+      <text x="440" y="116">(avoid!)</text>
+      <text x="147" y="144">(a)</text>
+      <text x="235" y="144">(b)</text>
+      <text x="327" y="144">(c)</text>
+      <text x="440" y="144">(d)</text>
+    </g>
+  </g>
+</svg>

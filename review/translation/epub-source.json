@@ -1,0 +1,41 @@
+{
+  "epub_filename": "a-philosophy-of-software-design-2nd.epub",
+  "sha256": "9f587b71073a53a7813f4048669ee80ec3183eedd8eeb43736add7601d6b3d21",
+  "translation_baseline": "4362314d5bb8eedbe2a088f950850a187b3f8641",
+  "title": "A Philosophy of Software Design, 2nd Edition",
+  "spine_files": {
+    "OEBPS/part0004.xhtml": "d5ea7be802913a0471fc470d9b96bdedb87e4edd76eaf05009463f2593a6f6c5",
+    "OEBPS/part0005.xhtml": "e3541abb31961e027c53483a85cca6bbb3fc6fb00d99e67909159e33025233c9",
+    "OEBPS/part0006.xhtml": "ff920bde54b6ef8278a4962753b4e4b798a66ca2d55e1cb4412d97c7d974dba8",
+    "OEBPS/part0007.xhtml": "7aafba910eee384ebd5f06b950f37370cc5c0393e6de634da1c435bdcb1e435a",
+    "OEBPS/part0008.xhtml": "b6503eba70bc765d12a9cd3d73854020dc649e892f4c24bb45db29eafcba2a86",
+    "OEBPS/part0009.xhtml": "81d7df5151b51f4abe2ffe4f69b64d3c8cdb08ea6df29919bcbdc5858a871dc4",
+    "OEBPS/part0010.xhtml": "31a474fd64649b3d4a9b17d582f15caae6c0ae027032a1be492eda59c15475da",
+    "OEBPS/part0011.xhtml": "796dce44b047c224cc542677fe0c103f8e533c2b50c10b147266105266af7299",
+    "OEBPS/part0012.xhtml": "dbb4bd4d917cfc3f686e41cd91112531d5f7c64e844e5e115af88051db6ad9ff",
+    "OEBPS/part0013.xhtml": "a97435743b9ecdcb6eab4922232bcd79adcc58d35763fda2cc7a9d345f7efed8",
+    "OEBPS/part0014.xhtml": "f71b158e50603af6c87338318dbb282b51503baedbf81d0eb404e2198966fb9a",
+    "OEBPS/part0015.xhtml": "932e57428cccabdd0c393f968b98e43d2bcdca6b847925ac8d43b3cfa5008681",
+    "OEBPS/part0016.xhtml": "02d62fd354c9c706e85e8a41a88efec33e8b0b879f966e99268227fb42ac155f",
+    "OEBPS/part0017.xhtml": "53e64d17c8e68d19163e27aa78e52b71a8be2f7f3bd7b5233fdc1d6ebeb5be2a",
+    "OEBPS/part0018.xhtml": "63da5ba819eb9acd4ff02f4fbdd2c8fb02ce58a9e242556ea7d402fc9c422346",
+    "OEBPS/part0019.xhtml": "a2f96304281ac2a7e79d8dbd952579c28d882d1890dd6975ffb4ec624a458272",
+    "OEBPS/part0020.xhtml": "311a2908fbaa006a1661b6fe753549eb432cfe2d426b29d1ca30a2cbebff2e31",
+    "OEBPS/part0021.xhtml": "649695e97e442d275962561906ae1ded3ace960228394ccaf4d09d2496e76993",
+    "OEBPS/part0022.xhtml": "9e69483eae6b7943eb1697e96a6f13b30422951dec08a68c83da90e44c58aa4a",
+    "OEBPS/part0023.xhtml": "b6946ad0f37964e75f48d02ed886daf5dddfac55e838866a0dfa787a3760c97b",
+    "OEBPS/part0024.xhtml": "675e695e615dd4c040970a7714853d14a8c6980785f4e0c9f3dc4396be501442",
+    "OEBPS/part0025.xhtml": "f273c82a9e2ac79143c4ff3f5ce6da836363bb3f60348a39e797912558e2a871",
+    "OEBPS/part0026.xhtml": "93713d22371a2cf03b2743793f48ae44dd9838b6405681f57c9d0520cd07bee9",
+    "OEBPS/part0028.xhtml": "ed2ce016aea46c0c3904a31fddc6cfc49601c11f4b67cd33ff746c17ca106825",
+    "OEBPS/part0029.xhtml": "5fa3955b8a70e5b9302b72e308f95125e685c74f0dc6d59438d23f36d332ac9f",
+    "OEBPS/part0030.xhtml": "352a410425556033c7331e1e7da4f5e6dea97caa0272d06584f36af25c352891"
+  },
+  "kinds": {
+    "heading": 173,
+    "prose": 763,
+    "code": 464,
+    "label": 14
+  },
+  "note": "Full English is local only; docs/en remains the original public excerpt."
+}

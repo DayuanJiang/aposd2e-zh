@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 754" role="img" aria-labelledby="ch05-parameter-boundary-m-title ch05-parameter-boundary-m-desc">
+  <title id="ch05-parameter-boundary-m-title">返回参数，还是泄露容器？</title>
+  <desc id="ch05-parameter-boundary-m-desc">上方暴露容器时，内部 Map 引用跨出边界，调用者查找和转换并避免误改。下方按名返回整数时，表示、查找转换都留在模块内，调用者获得 246 或处理异常。</desc>
+  <defs><marker id="ch05-parameter-boundary-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="754" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="16" y="32" font-size="19" font-weight="600">返回参数，还是泄露容器？</text>
+    <text x="16" y="59" font-size="14" fill="var(--diagram-muted,#5c645d)">同样读取原书的 photo_id 参数</text>
+    <text x="16" y="98" font-weight="600">暴露容器：getParams()</text>
+    <rect x="16" y="115" width="328" height="79" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="32" y="144">HTTPRequest 内部：private Map</text><text x="32" y="174">返回内部容器的引用</text>
+    <path d="M180 202V240" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-parameter-boundary-m-arrow)"/>
+    <text x="198" y="226" font-size="14">Map 跨出边界</text>
+    <text x="32" y="270" font-weight="600">调用者还要：</text><text x="32" y="299">按名称查找 → 转为整数</text><text x="32" y="328" fill="var(--diagram-danger,#a03946)">别修改容器，否则影响内部状态</text>
+    <path d="M16 353H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="386" font-weight="600">按名取值：</text>
+    <text x="16" y="415" font-family="ui-monospace,monospace" font-size="14">getIntParameter("photo_id")</text>
+    <path d="M180 427V459" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-parameter-boundary-m-arrow)"/>
+    <rect x="16" y="472" width="328" height="99" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="32" y="501" font-weight="600">HTTPRequest 内部</text><text x="32" y="529">存储表示 + 查找 + 整数转换</text><text x="32" y="555" font-size="14">不把容器交给调用者</text>
+    <path d="M180 579V610" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-parameter-boundary-m-arrow)"/>
+    <text x="16" y="642" font-weight="600">成功：246；失败：缺失／转换异常</text>
+    <text x="16" y="684" font-size="14">隐藏表示，不隐藏必要的失败规则。</text>
+    <text x="16" y="720" font-size="13" fill="var(--diagram-muted,#5c645d)">箭头省略其他请求处理步骤。</text>
+  </g>
+</svg>

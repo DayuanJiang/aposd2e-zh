@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 755" role="img" aria-labelledby="ch21-exposure-decision-m-title ch21-exposure-decision-m-desc">
+  <title id="ch21-exposure-decision-m-title">需要的完成契約應可見，常規緩衝可預設</title>
+  <desc id="ch21-exposure-decision-m-desc">矩陣限定普通匯出後立即需要讀取結果的呼叫者。自擬 finish 完成契約若可見，呼叫者等待後再讀；隱藏它可能造成提前讀取不完整輸出。常規緩衝預設可減少重複設定，但保留特殊需求的顯式控制，不把緩衝定義為永遠不重要。</desc>
+  <defs><marker id="ch21-exposure-decision-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="360" height="755" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">先問這位呼叫者要做什麼</text><text x="16" y="57" font-size="14">21.2–21.4 · 普通匯出，隨後讀取結果</text>
+    <text x="16" y="87" font-size="14">自擬契約：finish() 成功回傳後，</text><text x="16" y="111" font-size="14">輸出才保證完整可讀；不是 Java API。</text>
+    <text x="95" y="150" text-anchor="middle" font-weight="600">介面顯露</text><text x="265" y="150" text-anchor="middle" font-weight="600">內部隱藏</text>
+    <path d="M16 164H344" stroke="var(--diagram-line,#aebbad)" />
+    <text x="16" y="193" font-weight="600">此呼叫者需要知道：何時可讀</text>
+    <rect x="16" y="212" width="157" height="172" fill="var(--diagram-primary-soft,#d6e5dc)" /><rect x="187" y="212" width="157" height="172" fill="var(--diagram-danger-soft,#ead9dc)" />
+    <text x="29" y="241">知道完成契約</text><text x="29" y="272">等 finish() 成功</text><path d="M94 284V312" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch21-exposure-decision-m-arrow)" /><text x="29" y="339">再讀完整輸出</text><text x="29" y="369" font-size="14">動作依據可見</text>
+    <text x="200" y="241">不知完成點</text><text x="200" y="272">寫後立即讀取</text><path d="M265 284V312" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch21-exposure-decision-m-arrow)" /><text x="200" y="339">可能讀不完整</text><text x="200" y="369" font-size="14">必要事實被隱藏</text>
+    <text x="16" y="421" font-weight="600">普通匯出的緩衝選擇：通常可預設</text>
+    <rect x="16" y="440" width="157" height="138" fill="var(--diagram-danger-soft,#ead9dc)" /><rect x="187" y="440" width="157" height="138" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <text x="29" y="470">每次顯式設定</text><text x="29" y="501" font-family="ui-monospace,monospace" font-size="14">buffered=true</text><text x="29" y="534">重複日常設定</text>
+    <text x="200" y="470">預設緩衝</text><text x="200" y="501">常規呼叫</text><text x="200" y="531">無需設定</text><text x="200" y="560" font-size="14">不必取消控制入口</text>
+    <text x="16" y="614">例外需求仍可顯式選擇模式。</text><text x="16" y="644">必要性取決於呼叫者與場景。</text>
+    <text x="16" y="682" font-size="14">finish 不聲稱磁碟永續性。</text><text x="16" y="709" font-size="14">預設緩衝針對多數常見用法，</text><text x="16" y="733" font-size="14">不表示緩衝選擇在所有情形下都無關。</text>
+  </g>
+</svg>

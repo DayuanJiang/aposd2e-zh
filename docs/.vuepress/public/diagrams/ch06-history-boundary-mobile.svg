@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 736" role="img" aria-labelledby="ch06-history-boundary-m-title ch06-history-boundary-m-desc">
+  <title id="ch06-history-boundary-m-title">撤销时，谁知道要恢复什么？</title>
+  <desc id="ch06-history-boundary-m-desc">文本模块创建中性 A1，UI 模块创建 A2，分别用 addAction 注册引用。UI 决定 F0 和 F1 栅栏。History 保存接口引用，逆序通过 A2 和 A1 的 undo 回到各所属模块，不读取私有状态。中性例子不指定编辑器状态恢复顺序。</desc>
+  <defs><marker id="ch06-history-boundary-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="736" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="32" font-size="19" font-weight="600">撤销时，谁知道要恢复什么？</text>
+    <text x="16" y="58" font-size="13" fill="var(--diagram-muted,#5c645d)">教学 A1/A2：只示注册、引用与遍历</text>
+    <text x="16" y="91" font-size="14">高层 UI 用 addFence() 设置 F0、F1。</text>
+    <text x="218" y="127" font-weight="600">History</text>
+    <rect x="207" y="139" width="137" height="208" fill="none" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="230" y="164" font-size="14">F0 栅栏</text><path d="M207 174H344M207 239H344M207 304H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="224" y="211">A1: Action</text><text x="224" y="275">A2: Action</text><text x="230" y="332" font-size="14">F1 栅栏</text>
+    <rect x="16" y="180" width="164" height="55" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="28" y="203" font-size="14" font-weight="600">文本模块创建 A1</text><text x="28" y="225" font-size="13">私有状态留在此处</text>
+    <rect x="16" y="245" width="164" height="55" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="28" y="268" font-size="14" font-weight="600">UI 模块创建 A2</text><text x="28" y="290" font-size="13">私有状态留在此处</text>
+    <g stroke="var(--diagram-muted,#5c645d)" stroke-dasharray="4 3" marker-end="url(#ch06-history-boundary-m-arrow)"><path d="M186 208H202"/><path d="M186 273H202"/></g>
+    <text x="16" y="373" font-size="13">虚线：addAction 注册；列表只保存引用。</text>
+    <text x="16" y="406" font-weight="600">undo 逆序调用，到 F0 停止</text>
+    <text x="16" y="443" font-size="14">1　A2 引用</text><text x="215" y="443" font-size="14">A2.undo()</text><text x="215" y="466" font-size="13">UI 模块实现</text>
+    <text x="16" y="505" font-size="14">2　A1 引用</text><text x="215" y="505" font-size="14">A1.undo()</text><text x="215" y="528" font-size="13">文本模块实现</text>
+    <g stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch06-history-boundary-m-arrow)"><path d="M103 438H204"/><path d="M103 500H204"/></g>
+    <text x="121" y="426" font-size="13">接口调用</text><text x="121" y="488" font-size="13">接口调用</text>
+    <text x="16" y="565" font-size="14">redo 正序 A1 → A2；私有状态不外露。</text>
+    <text x="16" y="596" font-size="13">原文逆序撤销误写 redo，此处依 6.7</text><text x="16" y="618" font-size="13">定义及已有译者注标为 undo。</text>
+    <text x="16" y="650" font-size="13">分离针对同一机制：文本模块仍可同时有</text><text x="16" y="672" font-size="13">通用文本代码和专用文本撤销代码。</text>
+    <text x="16" y="706" font-size="12" fill="var(--diagram-muted,#5c645d)">未指定保存值，不代表真实文本／选区恢复顺序。</text>
+  </g>
+</svg>

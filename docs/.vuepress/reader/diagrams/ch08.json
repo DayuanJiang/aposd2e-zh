@@ -1,0 +1,203 @@
+[
+  {
+    "id": "ch08-edit-burden",
+    "chapter": "ch08",
+    "title": "拆行与合并行应该由谁负责？",
+    "question": "同样的文本编辑工作，为什么换接口能减少调用者的负担？",
+    "answer": "整行接口让界面中的多种操作各自拆分、合并行；任意字符范围接口把这项责任封装进文本类。",
+    "summary": "下沉的是文本操作的实现复杂性，不是用户界面的知识。文本类内部若按行存储，仍须处理拆行与合并行。",
+    "alt": "前后责任图：输入和选区操作原本分别负责拆分与合并行，再调用整行接口；改用任意字符范围接口后，两条调用路径共享文本类内部的拆分与合并行处理。",
+    "kind": "responsibility-flow",
+    "desktop": "/diagrams/ch08-edit-burden.svg",
+    "mobile": "/diagrams/ch08-edit-burden-mobile.svg",
+    "anchor": {
+      "section": "8.1",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "8.1",
+        "epub": "OEBPS/part0012.xhtml#p7:c85469890e",
+        "reason": "整行接口使按键与跨行选区操作需要在高层拆分、合并行。图中两条调用路径是原文操作类别的教学展开，不表示实测调用次数。"
+      },
+      {
+        "section": "8.1",
+        "epub": "OEBPS/part0012.xhtml#p8:b454c63498",
+        "reason": "任意字符范围接口封装拆分与合并行；内部按行存储是条件，不是固定实现。沿用本节粒度，不与第11章的逐字符接口混淆。"
+      }
+    ],
+    "review": {
+      "source": "review/reader/diagram-review-08-14-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    },
+    "status": "content-reviewed",
+    "reviewHistory": [
+      {
+        "source": "earlier-local-review",
+        "recordedStatus": "independently-reviewed",
+        "decision": "revise",
+        "resolution": "已改正合并行的歧义缩写，并将范围说明移出连线路径。",
+        "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance.",
+        "snapshotDesktop": "/tmp/aposd2e-viz-review-round1/assets/ch08-edit-burden.svg",
+        "snapshotMobile": "/tmp/aposd2e-viz-review-round1/assets/ch08-edit-burden-mobile.svg"
+      },
+      {
+        "source": "review/reader/diagram-review-08-14.json",
+        "decision": "revise",
+        "stage": "MAIN-first-pass",
+        "implementation": "preserved-existing-fix",
+        "secondReview": "pending",
+        "accepted": false,
+        "resolution": "保留已完成的拆分/合并行措辞修正、两条调用者路径汇合及按行存储的条件。 保留位于两根连线之间的说明文字；本轮未重画SVG。 用MAIN的revise决定替代当前审阅权威，原本地审阅只作为历史记录。",
+        "authority": "Historical implementation record, superseded by independent follow-up."
+      }
+    ],
+    "titleTw": "拆行與合併行應該由誰負責？",
+    "questionTw": "同樣的文字編輯工作，為什麼換介面能減少呼叫者的負擔？",
+    "answerTw": "整行介面讓介面中的多種操作各自拆分、合併行；任意字元範圍介面把這項責任封裝進文字類。",
+    "summaryTw": "下沉的是文字操作的實作複雜性，不是使用者介面的知識。文字類內部若按行儲存，仍須處理拆行與合併行。",
+    "altTw": "前後責任圖：輸入和選區操作原本分別負責拆分與合併行，再呼叫整行介面；改用任意字元範圍介面後，兩條呼叫路徑共享文字類內部的拆分與合併行處理。",
+    "desktopTw": "/diagrams/ch08-edit-burden-tw.svg",
+    "mobileTw": "/diagrams/ch08-edit-burden-mobile-tw.svg"
+  },
+  {
+    "id": "ch08-retry-feedback",
+    "chapter": "ch08",
+    "title": "重试间隔的知识在哪里？",
+    "question": "哪些参数适合由模块自己确定，哪些知识仍应由用户提供？",
+    "answer": "协议可以测量成功请求的响应时间并动态确定重试间隔；请求的业务紧迫性则可能只有用户知道。",
+    "summary": "判断点是用户能否比模块确定更好的值。图中的反馈回路解释自动调整，不给出原文未指定的倍数或完整传输算法。",
+    "alt": "固定配置路径从管理员进入重试计时器，运行条件改变却不会自动更新它。动态路径由成功响应测量时间，再计算合理间隔并供后续请求使用；业务优先级另由用户提供。",
+    "kind": "feedback-loop",
+    "desktop": "/diagrams/ch08-retry-feedback.svg",
+    "mobile": "/diagrams/ch08-retry-feedback-mobile.svg",
+    "anchor": {
+      "section": "8.2",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "8.2",
+        "epub": "OEBPS/part0012.xhtml#p12:80a902d43a",
+        "reason": "测量成功请求响应时间并取某个倍数，动态调整重试间隔；未指定算法常数。反馈布局为教学示意。"
+      },
+      {
+        "section": "8.2",
+        "epub": "OEBPS/part0012.xhtml#p11:b68410a287",
+        "reason": "用户可能更了解请求的紧迫性，支持由用户指定优先级的反例。"
+      },
+      {
+        "section": "8.2",
+        "epub": "OEBPS/part0012.xhtml#p13:1a1560a5d7",
+        "reason": "先问用户能否确定更好的值，并尽可能提供合理默认值；不是禁止所有配置。"
+      }
+    ],
+    "review": {
+      "source": "review/reader/diagram-review-08-14-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    },
+    "status": "content-reviewed",
+    "reviewHistory": [
+      {
+        "source": "earlier-local-review",
+        "recordedStatus": "independently-reviewed",
+        "decision": "keep",
+        "resolution": "反馈方向、用户领域知识和未指定倍数的限定均保留。",
+        "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance."
+      },
+      {
+        "source": "review/reader/diagram-review-08-14.json",
+        "decision": "keep",
+        "stage": "MAIN-first-pass",
+        "implementation": "kept",
+        "secondReview": "pending",
+        "accepted": false,
+        "resolution": "保留MAIN的keep决定，不重画现有SVG；保留与报告兼容的后续有效修正。 更新当前权威与状态，保留此前本地审阅历史但不将其解释为MAIN或最终二审认可。",
+        "authority": "Historical implementation record, superseded by independent follow-up."
+      }
+    ],
+    "titleTw": "重試間隔的知識在哪裡？",
+    "questionTw": "哪些參數適合由模組自己確定，哪些知識仍應由使用者提供？",
+    "answerTw": "協議可以測量成功請求的響應時間並動態確定重試間隔；請求的業務緊迫性則可能只有使用者知道。",
+    "summaryTw": "判斷點是使用者能否比模組確定更好的值。圖中的反饋迴路解釋自動調整，不給出原文未指定的倍數或完整傳輸演算法。",
+    "altTw": "固定設定路徑從管理員進入重試計時器，執行條件改變卻不會自動更新它。動態路徑由成功響應測量時間，再計算合理間隔並供後續請求使用；業務優先權另由使用者提供。",
+    "desktopTw": "/diagrams/ch08-retry-feedback-tw.svg",
+    "mobileTw": "/diagrams/ch08-retry-feedback-mobile-tw.svg"
+  },
+  {
+    "id": "ch08-semantic-boundary",
+    "chapter": "ch08",
+    "title": "下沉文本机制，不下沉按键含义",
+    "question": "为什么移动拆行逻辑是封装，移动退格键逻辑却可能是信息泄露？",
+    "answer": "拆行属于文本管理；将按键、光标和选区解释成文本范围属于界面策略。范围接口让两种知识留在各自模块。",
+    "summary": "下沉复杂性须与类的核心职责相关，并确实简化其他代码及接口；不是把全部功能塞进底层。",
+    "alt": "用户界面把退格事件解释成删除范围，跨越边界的只有范围；文本类在边界下处理删除及拆分与合并行。另一条虚线路径把退格键含义直接传入文本类，被标为信息泄露。",
+    "kind": "knowledge-boundary",
+    "desktop": "/diagrams/ch08-semantic-boundary.svg",
+    "mobile": "/diagrams/ch08-semantic-boundary-mobile.svg",
+    "anchor": {
+      "section": "8.3",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "8.3",
+        "epub": "OEBPS/part0012.xhtml#p15:0a9b8dd9a6",
+        "reason": "保留下沉复杂性的三个适用条件与降低整体复杂性的目标。"
+      },
+      {
+        "section": "8.3",
+        "epub": "OEBPS/part0012.xhtml#p16:38ed91cc62",
+        "reason": "文本类实现退格键功能会引入不属于核心职责的界面知识。范围转换路径为结合8.1的教学分解，不规定退格键的具体规则。"
+      },
+      {
+        "section": "8.1",
+        "epub": "OEBPS/part0012.xhtml#p8:b454c63498",
+        "reason": "范围文本接口支持在文本类中封装拆分和合并行。"
+      }
+    ],
+    "review": {
+      "source": "review/reader/diagram-review-08-14-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    },
+    "status": "content-reviewed",
+    "reviewHistory": [
+      {
+        "source": "earlier-local-review",
+        "recordedStatus": "independently-reviewed",
+        "decision": "keep",
+        "resolution": "保留文本范围与界面策略的知识边界，以及下沉复杂性的适用条件。",
+        "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance."
+      },
+      {
+        "source": "review/reader/diagram-review-08-14.json",
+        "decision": "keep",
+        "stage": "MAIN-first-pass",
+        "implementation": "kept",
+        "secondReview": "pending",
+        "accepted": false,
+        "resolution": "保留MAIN的keep决定，不重画现有SVG；保留与报告兼容的后续有效修正。 更新当前权威与状态，保留此前本地审阅历史但不将其解释为MAIN或最终二审认可。",
+        "authority": "Historical implementation record, superseded by independent follow-up."
+      }
+    ],
+    "titleTw": "下沉文字機制，不下沉按鍵含義",
+    "questionTw": "為什麼移動拆行邏輯是封裝，移動退格鍵邏輯卻可能是資訊洩露？",
+    "answerTw": "拆行屬於文字管理；將按鍵、游標和選區解釋成文字範圍屬於介面策略。範圍介面讓兩種知識留在各自模組。",
+    "summaryTw": "下沉複雜性須與類的核心職責相關，並確實簡化其他程式碼及介面；不是把全部功能塞進底層。",
+    "altTw": "使用者介面把退格事件解釋成刪除範圍，跨越邊界的只有範圍；文字類在邊界下處理刪除及拆分與合併行。另一條虛線路徑把退格鍵含義直接傳入文字類，被標為資訊洩露。",
+    "desktopTw": "/diagrams/ch08-semantic-boundary-tw.svg",
+    "mobileTw": "/diagrams/ch08-semantic-boundary-mobile-tw.svg"
+  }
+]

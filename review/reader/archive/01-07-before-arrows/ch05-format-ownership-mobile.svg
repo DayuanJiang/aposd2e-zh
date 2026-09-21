@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 736" role="img" aria-labelledby="ch05-format-ownership-m-title ch05-format-ownership-m-desc">
+  <title id="ch05-format-ownership-m-title">运行顺序不等于模块边界</title>
+  <desc id="ch05-format-ownership-m-desc">教学 K 表示格式知识。上方编号 1、2、3 只表示阶段先后，读取和写入各自调用不同实现，同一格式变更 K 虚线指向两个实现。下方阶段仍是 1 读、2 改、3 写，读写实线调用共用实现，同一 K 变更只指向该模块。</desc>
+  <defs><marker id="ch05-format-ownership-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="736" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="32" font-size="19" font-weight="600">运行顺序不等于模块边界</text>
+    <text x="16" y="58" font-size="13" fill="var(--diagram-muted,#5c645d)">教学 K = 格式知识；编号仅表阶段先后</text>
+    <text x="16" y="88" font-size="13">实线：调用；虚线：变更所需修改。</text>
+    <text x="16" y="125" font-weight="600">分离实现：两个修改目标</text>
+    <text x="16" y="166">1　读取</text><text x="16" y="238">2　修改</text><text x="16" y="310">3　写入</text>
+    <rect x="161" y="138" width="183" height="59" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="177" y="162" font-weight="600">读实现</text><text x="177" y="186">K：解释格式</text>
+    <rect x="161" y="282" width="183" height="59" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="177" y="306" font-weight="600">写实现</text><text x="177" y="330">K：生成格式</text>
+    <path d="M91 162H150M91 306H150" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-format-ownership-m-arrow)"/>
+    <text x="200" y="242" font-weight="600">格式变更 K</text>
+    <path d="M252 221V205M252 250V274" stroke="var(--diagram-muted,#5c645d)" stroke-dasharray="5 4" marker-end="url(#ch05-format-ownership-m-arrow)"/>
+    <path d="M16 366H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="399" font-weight="600">共用实现：一个修改目标</text>
+    <text x="16" y="429" font-size="14">应用阶段与顺序均不变</text>
+    <text x="16" y="471">1　读取</text><text x="16" y="532">2　修改</text><text x="16" y="593">3　写入</text>
+    <rect x="164" y="484" width="180" height="92" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="180" y="514" font-weight="600">共用格式实现</text><text x="180" y="545">K：读写规则</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-format-ownership-m-arrow)"><path d="M95 467H136V505H154"/><path d="M95 589H136V556H154"/></g>
+    <text x="206" y="644" font-weight="600">格式变更 K</text>
+    <path d="M254 625V584" stroke="var(--diagram-muted,#5c645d)" stroke-dasharray="5 4" marker-end="url(#ch05-format-ownership-m-arrow)"/>
+    <text x="16" y="683" font-size="14">前提：接口确实隐藏 K。</text>
+    <text x="16" y="711" font-size="13" fill="var(--diagram-muted,#5c645d)">不是合并所有阶段，也不能再公开格式细节。</text>
+  </g>
+</svg>

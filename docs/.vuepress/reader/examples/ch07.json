@@ -1,0 +1,11 @@
+[
+  {
+    "id": "ch07-f1",
+    "sourceHash": "a13907eec9ebeccf7a50b32fc3bb73ef4295e602924a6b88a173be812064495c",
+    "python": "class TextDocument:\n    textArea: \"TextArea\"\n    listener: \"TextDocumentListener | None\"\n\n    ...  # Initialization and other members omitted.\n\n    def getLastTypedCharacter(self) -> str | None:\n        return self.textArea.getLastTypedCharacter()\n\n    def getCursorOffset(self) -> int:\n        return self.textArea.getCursorOffset()\n\n    def insertString(self, textToInsert: str, offset: int) -> None:\n        self.textArea.insertString(textToInsert, offset)\n\n    def willInsertString(self, stringToInsert: str, offset: int) -> None:\n        if self.listener is not None:\n            self.listener.willInsertString(self, stringToInsert, offset)\n\n    ...\n",
+    "note": "教学改写：刻意保留透传方法、原名及可空监听器检查。TextArea、TextDocumentListener 是应用类型，并非假定存在的 Python GUI API；初始化省略。str | None 仅表示可空字符值，不保证 Java Character 的 UTF-16 单元或偏移单位等价，也不复现 private 限制。",
+    "noteEn": "Teaching adaptation: deliberately retains the pass-through methods, names, and optional-listener check. TextArea and TextDocumentListener are application types, not assumed Python GUI APIs; initialization is omitted. str | None only represents a nullable character value, without guaranteeing Java Character's UTF-16 unit or offset-unit equivalence, or private access restrictions.",
+    "originalLanguage": "java",
+    "noteTw": "教學改寫：刻意保留透傳方法、原名及可空監聽器檢查。TextArea、TextDocumentListener 是應用型別，並非假定存在的 Python GUI API；初始化省略。str | None 僅表示可空字元值，不保證 Java Character 的 UTF-16 單元或偏移單位等價，也不復現 private 限制。"
+  }
+]

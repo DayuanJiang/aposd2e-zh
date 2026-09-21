@@ -1,0 +1,39 @@
+[
+  {
+    "id": "ch12-missing-contract",
+    "chapter": "ch12",
+    "title": "声明留下了哪些互不相容的解释？",
+    "question": "看到 start 和 end，能确定返回哪些字符吗？",
+    "answer": "不能。声明没有说明终点是否包含，也没有说明反向范围的结果；接口注释必须补齐这些选择。",
+    "summary": "教学例采用不含终点、反向范围返回空的契约，仅为演示注释补充信息，不代表所有 substring 接口。",
+    "alt": "同一个slice(start,end)声明对BC和BCD两个结果都未排除。加入终点不包含的注释后，start为1、end为3的示例只保留BC，反向范围行为也由注释明确。",
+    "kind": "ambiguity-elimination",
+    "desktop": "/diagrams/ch12-missing-contract.svg",
+    "mobile": "/diagrams/ch12-missing-contract-mobile.svg",
+    "anchor": { "section": "12.1", "placement": "end" },
+    "sources": [
+      { "section": "12.1", "epub": "OEBPS/part0016.xhtml#p15:7f3e8bf262", "reason": "声明不能确定终点包含性和start>end时行为；注释补全简化视图。slice、ABCD、索引与选定契约是教学自拟，而非作者指定的唯一语义。" },
+      { "section": "12.1", "epub": "OEBPS/part0016.xhtml#p14:6e7f5d7f88", "reason": "强迫调用者读实现来推导契约既费力，也暴露本该隐藏的复杂性。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch12-discover-dependency",
+    "chapter": "ch12",
+    "title": "文档让依赖可见，不让依赖消失",
+    "question": "注释怎样减少未知信息，却不自动减少要修改的代码？",
+    "answer": "设计说明把相关模块及理由显式连接起来，让修改者知道要看哪里；代码之间原有的依赖仍然存在。",
+    "summary": "作者指出文档主要帮助减轻认知负荷和未知的未知。A、B、C 是教学占位模块，不是书中真实系统，也不是量化效果实验。",
+    "alt": "没有设计说明时，修改者从模块A出发，不知道B、C也受影响；有说明后，可沿文档中的明确引用找到B、C。前后A、B、C之间的代码依赖保持不变。",
+    "kind": "knowledge-discovery",
+    "desktop": "/diagrams/ch12-discover-dependency.svg",
+    "mobile": "/diagrams/ch12-discover-dependency-mobile.svg",
+    "anchor": { "section": "12.5", "placement": "end" },
+    "sources": [
+      { "section": "12.5", "epub": "OEBPS/part0016.xhtml#p25:e9ef790781", "reason": "文档保存设计者无法用代码表达的知识，免去后人重新推导或猜测。" },
+      { "section": "12.5", "epub": "OEBPS/part0016.xhtml#p30:1a1f57a606", "reason": "文档针对认知负荷与未知的未知；图中依赖不因文档而消失，是对其作用边界的教学表达。" },
+      { "section": "12.5", "epub": "OEBPS/part0016.xhtml#p31:98d3dec660", "reason": "文档澄清依赖、补足缺失信息。A/B/C及引用布局是教学例，无实测改进数值。" }
+    ],
+    "status": "awaiting-independent-review"
+  }
+]

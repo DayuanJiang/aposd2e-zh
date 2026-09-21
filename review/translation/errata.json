@@ -1,0 +1,74 @@
+[
+  {
+    "id": "history-redo",
+    "file": "docs/ch06.md",
+    "source": "OEBPS/part0010.xhtml#p65:6193a44efc",
+    "note": "> **译者注（勘误）**：原文此处写作 `History.redo`，但描述的是向后遍历历史列表并撤销操作。根据本节对撤销和重做的定义，此处应为 `History.undo`。正文保留原文写法。"
+  },
+  {
+    "id": "history-action-interface",
+    "file": "docs/ch06.md",
+    "source": "OEBPS/part0010.xhtml#p71:906a637697",
+    "note": "> **译者注（勘误）**：原文称这些类为 `History.Action` 的“子类”，但本节代码将 `History.Action` 声明为接口，因此更准确的说法是“实现该接口的类”。前文的 `History.Actions` 指多个实现该接口的对象，并非代码中另行声明的类型。正文保留原文表述。"
+  },
+  {
+    "id": "list-interface",
+    "file": "docs/ch18.md",
+    "source": "OEBPS/part0022.xhtml#p90:4148a86c77",
+    "verification": "https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html",
+    "note": "> **译者注（勘误）**：在 Java 中，`List` 是接口，`ArrayList` 实现该接口，其直接父类是 `AbstractList`。原文这里的“超类／子类”称谓不准确，正文保留原文表述。参见 [Java API 文档](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html)。"
+  },
+  {
+    "id": "strategic-initial-gains",
+    "file": "docs/ch03.md",
+    "source": "OEBPS/part0007.xhtml#p22:7cb9f2c4cf",
+    "note": "> **译者注（原文疑点）**：本段原文写的是“战略式编程最初带来的收益”。结合前文“战术式编程先省时、后付出额外成本”的论述，此处疑应为“战术式编程”。正文保留原文表述。"
+  },
+  {
+    "id": "object-input-reading",
+    "file": "docs/ch04.md",
+    "source": "OEBPS/part0008.xhtml#p63:75142fb10f",
+    "verification": "https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/ObjectInputStream.html",
+    "note": "> **译者注（勘误）**：`ObjectInputStream` 用于读取并反序列化对象，不提供写入序列化对象的功能；原文此处的“写入”不准确。正文照录，参见 [Java API 文档](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/ObjectInputStream.html)。"
+  },
+  {
+    "id": "http-request-line",
+    "file": "docs/ch05.md",
+    "source": "OEBPS/part0009.xhtml#p38:834b327ea2",
+    "verification": "https://www.rfc-editor.org/rfc/rfc9112.html#section-3",
+    "note": "> **译者注（勘误）**：此处原文称“标头行”，实际指携带请求目标的“请求行”；请求行与后面的标头字段行是不同部分。正文保留原文用词，参见 [HTTP 消息语法](https://www.rfc-editor.org/rfc/rfc9112.html#section-3)。"
+  },
+  {
+    "id": "input-stream-bytes",
+    "file": "docs/ch07.md",
+    "source": "OEBPS/part0011.xhtml#p45:1bdd1bc5a7",
+    "verification": "https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/BufferedInputStream.html",
+    "note": "> **译者注（勘误）**：本例的 `InputStream` 和 `BufferedInputStream` 操作的是字节，不是字符；原文这里将读取和缓冲的单位称为“字符”，正文照录。参见 [Java API 文档](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/BufferedInputStream.html)。"
+  },
+  {
+    "id": "character-oriented-granularity",
+    "file": "docs/ch08.md",
+    "source": "OEBPS/part0012.xhtml#p8:b454c63498; OEBPS/part0015.xhtml#p6:4fb235fadb",
+    "note": "> **译者注（术语说明）**：原文在此将支持任意字符范围的接口称为“面向字符”，而第 11 章用同一名称表示逐字符操作的接口。两处操作粒度不同，译文保留各处原文名称，请结合相应示例理解。"
+  },
+  {
+    "id": "python-slice-boundaries",
+    "file": "docs/ch10.md",
+    "source": "OEBPS/part0014.xhtml#p61:ee472e4f26",
+    "verification": "https://docs.python.org/3/library/stdtypes.html#common-sequence-operations",
+    "note": "> **译者注（勘误）**：Python 列表切片的边界越界时，并非一律返回空列表，而是按切片规则调整边界。例如 `[1, 2, 3][1:99]` 返回 `[2, 3]`，`[1, 2, 3][99:]` 才返回 `[]`。正文保留原文概括，参见 [Python 序列操作说明](https://docs.python.org/3/library/stdtypes.html#common-sequence-operations)。"
+  },
+  {
+    "id": "methods-of-variables",
+    "file": "docs/ch13.md",
+    "source": "OEBPS/part0017.xhtml#p48:6ab618f75a",
+    "note": "> **译者注（原文疑点）**：原文此处为 `methods of variables`，即“变量的方法”。结合本节讨论的方法和变量注释，疑应为 `methods or variables`，即“方法或变量”。正文保留原文表述。"
+  },
+  {
+    "id": "buffer-return-type",
+    "file": "docs/ch20.md",
+    "source": "OEBPS/image_rsrc2HN.jpg",
+    "verification": "Original figure inspected; isolated void* to char* return rejected by clang++ -std=c++17 -fsyntax-only.",
+    "note": "> **译者注（勘误）**：原图中的 `Buffer::allocateAppend` 声明返回 `char*`，却将局部变量 `data` 声明为 `void*` 并直接返回。C++ 不允许将 `void*` 隐式转换为 `char*`，实际实现时应使返回值的类型一致。此处保留原书代码；这一类型问题不影响下文对关键路径和调用层级的讨论。"
+  }
+]

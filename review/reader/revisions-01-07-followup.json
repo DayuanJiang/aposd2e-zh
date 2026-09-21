@@ -1,0 +1,14 @@
+{
+  "review": "diagram-review-01-07-second.json",
+  "before": "/tmp/aposd2e-01-07-before-arrows",
+  "status": "awaiting rendered and independent follow-up",
+  "changes": [
+    { "id": "ch02-memory-owner", "action": "Split both desktop time axes so each has its own end marker." },
+    { "id": "ch05-format-ownership", "action": "Split desktop/mobile invocation paths and both mobile change-target paths; retain dashed versus solid meaning." },
+    { "id": "ch05-http-read", "action": "Split both desktop processing steps and relabel the inside item as the receive-request entry." },
+    { "id": "ch06-history-boundary", "action": "Split mobile registration and both layouts' callbacks so A1/A2 all have their intended directional heads." },
+    { "id": "ch07-dispatch-value", "action": "Split S and D branches in both layouts; preserve all input witnesses and repeated signatures." },
+    { "id": "ch07-context-instances", "action": "Split desktop construction-time delivery, identify values as after step 2, and distinguish solid lookup arrows from intentionally undirected association." }
+  ],
+  "boundary": "No original book figures, source claims, chosen examples, runtime operations or working-copy Markdown changed."
+}

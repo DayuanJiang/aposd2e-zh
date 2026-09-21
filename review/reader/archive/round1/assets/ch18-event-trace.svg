@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 394" role="img" aria-labelledby="ch18-event-trace-title ch18-event-trace-desc">
+  <title id="ch18-event-trace-title">事件调用目标取决于运行时注册</title>
+  <desc id="ch18-event-trace-desc">处理函数先注册到事件模块，外部事件进入模块后才通过注册关系间接调用。failed() 的原文注释补充触发条件、调用者和线程，通用注册图不表示特定内部实现。</desc>
+  <defs><marker id="ch18-event-trace-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="394" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="21" font-weight="600">静态调用点缺少一条运行时连线</text><text x="24" y="61" font-size="14">18.2 · 通用机制示意；不假定具体注册 API</text>
+    <rect x="24" y="136" width="144" height="61" rx="5" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/><text x="96" y="173" text-anchor="middle">外部事件</text>
+    <rect x="252" y="136" width="155" height="61" rx="5" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/><text x="329" y="173" text-anchor="middle">事件模块</text>
+    <rect x="502" y="136" width="154" height="61" rx="5" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/><text x="579" y="173" text-anchor="middle">处理函数</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch18-event-trace-arrow)"><path d="M168 167H252"/><path d="M407 167H502"/><path d="M579 136V96H329V136" stroke-dasharray="6 4"/></g>
+    <text x="438" y="87" text-anchor="middle" font-size="14">先注册：建立具体目标</text><text x="453" y="222" text-anchor="middle" font-size="14">事件到来后：按注册关系调用</text>
+    <path d="M24 247H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="279" font-weight="600">原例 failed() 的接口注释补上什么？</text>
+    <text x="24" y="309">何时：传输层错误使 RPC 无法完成</text><text x="24" y="337">由谁、在哪：transport 在 dispatch thread 中调用</text>
+    <text x="24" y="373" font-size="14" fill="var(--diagram-muted,#5c645d)">说明调用条件，不能用模糊名称替代这条控制流信息。</text>
+  </g>
+</svg>

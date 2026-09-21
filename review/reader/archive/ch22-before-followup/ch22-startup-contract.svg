@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 640" role="img" aria-labelledby="c22-title c22-desc">
+  <title id="c22-title">接口更短，读者就更容易用对吗？</title>
+  <desc id="c22-desc">译者自拟后台索引例子。要求先完成根目录配置，再让线程读取，读取开始后不再改配置。A 的构造函数隐式启动线程：在一种可能的顺序中，线程先读到空 root，调用方随后才设为 /docs。B 的构造函数不启动，调用方先配置，再调用 start 启动读取，线程读到 /docs。B 增加一次显式调用，并非普遍更优；先配好配置再使用启动型构造函数，也可能满足要求。</desc>
+  <defs><marker id="c22-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="640" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="20" font-weight="600">接口更短，读者就更容易用对吗？</text>
+    <text x="24" y="63" font-size="14">自拟教学例：后台索引必须在配置完成后读取根目录。</text>
+    <text x="24" y="88" font-size="13" fill="var(--diagram-muted,#5c645d)">前提：root 初始为空；开始读取后，调用方不再改动配置。</text>
+    <path d="M24 110H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="140" font-size="17" font-weight="600">A　构造时隐式启动：一个可能的执行顺序</text>
+    <path d="M62 190H620" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="1.5" marker-end="url(#c22-arrow)"/>
+    <g fill="var(--diagram-secondary,#2c6096)"><circle cx="92" cy="190" r="5"/><circle cx="560" cy="190" r="5"/></g>
+    <circle cx="326" cy="190" r="5" fill="var(--diagram-danger,#a03946)"/>
+    <text x="48" y="174" font-size="14">构造 Indexer</text>
+    <text x="246" y="174" font-size="14">工作线程读取 root</text>
+    <text x="488" y="174" font-size="14">调用方完成配置</text>
+    <text x="48" y="221" font-size="14">内部启动线程</text>
+    <rect x="260" y="207" width="140" height="48" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="278" y="237" font-size="16" font-family="ui-monospace,Menlo,monospace">root = ""</text>
+    <text x="486" y="226" font-size="14" font-family="ui-monospace,Menlo,monospace">root = "/docs"</text>
+    <text x="24" y="280" font-size="14" fill="var(--diagram-muted,#5c645d)">接口没提示启动时机，读者可能把“配置来得及”当成未说明的前提。</text>
+    <path d="M24 305H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="335" font-size="17" font-weight="600">B　显式启动：本例新增的调用约定</text>
+    <path d="M52 390H626" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="1.5" marker-end="url(#c22-arrow)"/>
+    <g fill="var(--diagram-secondary,#2c6096)"><circle cx="74" cy="390" r="5"/><circle cx="242" cy="390" r="5"/><circle cx="400" cy="390" r="5"/></g>
+    <circle cx="578" cy="390" r="5" fill="var(--diagram-primary,#0b6f5d)"/>
+    <g font-size="14">
+      <text x="40" y="373">构造对象</text><text x="192" y="373">完成配置</text>
+      <text x="366" y="373" font-family="ui-monospace,Menlo,monospace">start()</text>
+      <text x="520" y="373">线程读取</text>
+      <text x="40" y="423">尚未启动</text>
+      <text x="174" y="423" font-family="ui-monospace,Menlo,monospace">root = "/docs"</text>
+      <text x="360" y="423">现在才启动</text>
+    </g>
+    <rect x="512" y="405" width="144" height="48" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="526" y="435" font-size="16" font-family="ui-monospace,Menlo,monospace">"/docs"</text>
+    <text x="24" y="481" font-size="14">代价：多一个 start 调用，且调用者仍须遵守“先配置”的契约。</text>
+    <path d="M24 504H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="534" font-size="16" font-weight="600">本例需要显露的是启动时机，不是所有线程实现细节。</text>
+    <text x="24" y="562" font-size="13" fill="var(--diagram-muted,#5c645d)">这不是“构造函数不得启动线程”的规则：</text>
+    <text x="24" y="585" font-size="13" fill="var(--diagram-muted,#5c645d)">先配好配置，再构造启动型对象，也可能满足同一约束。</text>
+    <text x="24" y="616" font-size="13" fill="var(--diagram-muted,#5c645d)">箭头仅表示所列顺序，不是实测时间；不能只按接口数量判定设计好坏。</text>
+  </g>
+</svg>

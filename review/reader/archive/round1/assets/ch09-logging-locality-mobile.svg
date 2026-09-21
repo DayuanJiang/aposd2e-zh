@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 673" role="img" aria-labelledby="ch09-logging-locality-m-t ch09-logging-locality-m-d">
+  <title id="ch09-logging-locality-m-t">这条日志为什么不需要一个专用包装类？</title><desc id="ch09-logging-locality-m-d">上下两处代码之间存在双向阅读依赖。将日志放回检测点后，错误情境和记录内容相邻，通用logger保留。</desc>
+  <defs><marker id="ch09-logging-locality-m-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="360" height="673" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="20" y="32" font-size="18" font-weight="600">这条日志为什么不需要</text><text x="20" y="58" font-size="18" font-weight="600">一个专用包装类？</text>
+    <rect x="20" y="83" width="320" height="83" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="38" y="113">检测到打开连接失败</text><text x="38" y="145" font-family="monospace" font-size="14">logRpcOpenError(req, dest, e)</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch09-logging-locality-m-a)"><path d="M74 167V270"/><path d="M286 277V174"/></g>
+    <text x="88" y="201" font-size="13">向下：记录了什么？</text><text x="88" y="229" font-size="13">向上：为什么记录？</text><text x="88" y="256" font-size="12" fill="var(--diagram-muted,#58636b)">阅读依赖，非运行时调用</text>
+    <rect x="20" y="277" width="320" height="92" rx="4" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="38" y="306" font-family="monospace" font-size="14">NetworkErrorLogger</text><text x="38" y="333">一行日志，却有单独接口及文档</text><text x="38" y="357" font-size="13">书中每个包装方法只被调用一次</text>
+    <path d="M20 396H340" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="20" y="428" font-weight="600">内联后：情境和记录内容相邻</text>
+    <rect x="20" y="446" width="320" height="86" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="38" y="475">检测到打开连接失败</text><text x="38" y="505">就地记录 req、dest、e</text>
+    <path d="M180 533V557" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch09-logging-locality-m-a)"/><text x="94" y="584">通用 logger 仍然保留</text>
+    <text x="20" y="619" font-size="13" fill="var(--diagram-muted,#58636b)">结论限于浅、单处调用、依赖情境的包装。</text><text x="20" y="643" font-size="13" fill="var(--diagram-muted,#58636b)">不是反对通用日志基础设施。</text>
+  </g>
+</svg>

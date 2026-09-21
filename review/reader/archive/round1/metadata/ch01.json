@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ch01-two-levers", "chapter": "ch01", "title": "消除规则，还是隔离规则？",
+    "question": "简化代码与封装复杂性，改变的是同一件事吗？",
+    "answer": "消除使需要存在的规则更少；封装使规则仍然存在，但不再要求调用者同时理解它们。",
+    "summary": "两种手段可以并用。统一命名消除无谓区别，模块边界则把必要的解析细节留在实现内部。",
+    "alt": "同一含义的 size 和 length 统一为 length，减少命名区别；调用者的格式识别和解码转入 load 模块，规则保留但无需由调用者掌握。",
+    "kind": "boundary-comparison", "desktop": "/diagrams/ch01-two-levers.svg", "mobile": "/diagrams/ch01-two-levers-mobile.svg",
+    "anchor": { "intro": true },
+    "sources": [
+      { "section": "intro", "epub": "OEBPS/part0005.xhtml#p7:6932e6496e", "reason": "消除特殊情况和统一标识符是消除复杂性的例子。" },
+      { "section": "intro", "epub": "OEBPS/part0005.xhtml#p8:c2c0a76bad", "reason": "模块化使开发者不必同时面对全部复杂性；不是让实现复杂性消失。" }
+    ],
+    "teachingExample": "size/length 和 load 文件解码均为教学示例，不是原书代码。",
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch01-review-loop", "chapter": "ch01", "title": "危险信号如何变成设计改进？",
+    "question": "发现危险信号后，为什么不能直接机械套用一条原则？",
+    "answer": "危险信号提示探索替代设计；需要在代码中比较理解和修改的负担，并考虑原则的边界，再决定是否采用。",
+    "summary": "把阅读代码、发现信号、尝试备选和重新审查连成反馈回路，而不是把原则当作自动判决。",
+    "alt": "阅读代码发现危险信号，提出替代设计，检查是否减少复杂性；仍有问题则返回比较，改进成立则采用并继续审查。原则存在例外。",
+    "kind": "decision-loop", "desktop": "/diagrams/ch01-review-loop.svg", "mobile": "/diagrams/ch01-review-loop-mobile.svg",
+    "anchor": { "section": "1.1", "placement": "end" },
+    "sources": [
+      { "section": "1.1", "epub": "OEBPS/part0005.xhtml#p18:79b3e60f9d", "reason": "将书中思想用于代码审查，从他人代码观察复杂性。" },
+      { "section": "1.1", "epub": "OEBPS/part0005.xhtml#p19:a981fd4b9c", "reason": "发现危险信号后探索替代设计，可能需要多次尝试。" },
+      { "section": "1.1", "epub": "OEBPS/part0005.xhtml#p20:913d5b2ebf", "reason": "每条原则都有局限，不能机械推到极端。" }
+    ],
+    "status": "awaiting-independent-review"
+  }
+]

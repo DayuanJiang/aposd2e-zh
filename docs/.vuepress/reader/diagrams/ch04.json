@@ -1,0 +1,102 @@
+[
+  {
+    "id": "ch04-abstraction-filter",
+    "chapter": "ch04",
+    "title": "这个细节能从接口中省掉吗？",
+    "question": "为什么块分配机制可以隐藏，写入何时持久化却不能一概隐藏？",
+    "answer": "数据库须知道相关刷新与持久化保证，才能判断何时可依赖崩溃后仍保存的数据。只有在性能足够且块选择机制与调用者需求无关时，该机制才可隐藏。",
+    "summary": "教学状态对照：新值只在易失缓存中，与新值已进入持久存储时，崩溃后的可用值不同。接口应说明可依赖的保证，不必公开满足需求所不需要的存储选择算法。",
+    "alt": "教学初始旧值 v0。方案 A 崩溃前缓存为 v1、持久存储仍为 v0，缓存丢失后只有 v0；方案 B 持久存储已为 v1，缓存丢失后仍有 v1。块选择算法在性能足够且对需求无关时可隐藏。",
+    "kind": "crash-state-comparison",
+    "desktop": "/diagrams/ch04-abstraction-filter.svg",
+    "mobile": "/diagrams/ch04-abstraction-filter-mobile.svg",
+    "anchor": {
+      "section": "4.3",
+      "paragraph": 4
+    },
+    "sources": [
+      {
+        "section": "4.2",
+        "epub": "OEBPS/part0008.xhtml#p13:c2f52ccea6",
+        "reason": "调用者必须了解的行为和使用约束也是接口的一部分。"
+      },
+      {
+        "section": "4.3",
+        "epub": "OEBPS/part0008.xhtml#p18:0d8979670a",
+        "reason": "多露无关细节增加负荷，漏掉重要细节产生错误抽象。"
+      },
+      {
+        "section": "4.3",
+        "epub": "OEBPS/part0008.xhtml#p19:954b1a6804",
+        "reason": "块分配与刷新持久化规则是原书对照示例。"
+      }
+    ],
+    "teachingExample": "v0/v1、时点和崩溃状态为最小教学模型：缓存易失、已持久化数据不受该次崩溃影响；不指定 flush API、文件系统或事务提交协议。",
+    "status": "content-reviewed",
+    "titleTw": "這個細節能從介面中省掉嗎？",
+    "questionTw": "為什麼塊分配機制可以隱藏，寫入何時持久化卻不能一概隱藏？",
+    "answerTw": "資料庫須知道相關資料寫出（flush）與持久化保證，才能判斷何時可依賴崩潰後仍儲存的資料。只有在效能足夠且塊選擇機制與呼叫者需求無關時，該機制才可隱藏。",
+    "summaryTw": "教學狀態對照：新值只在易失快取中，與新值已進入持久儲存時，崩潰後的可用值不同。介面應說明可依賴的保證，不必公開滿足需求所不需要的儲存選擇演算法。",
+    "altTw": "教學初始舊值 v0。方案 A 崩潰前快取為 v1、持久儲存仍為 v0，快取丟失後只有 v0；方案 B 持久儲存已為 v1，快取丟失後仍有 v1。塊選擇演算法在效能足夠且對需求無關時可隱藏。",
+    "desktopTw": "/diagrams/ch04-abstraction-filter-tw.svg",
+    "mobileTw": "/diagrams/ch04-abstraction-filter-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-01-07-followup.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  },
+  {
+    "id": "ch04-common-path",
+    "chapter": "ch04",
+    "title": "有选择，不等于每次都要选择",
+    "question": "怎样保留特殊用法，而不让常见调用承担全部配置成本？",
+    "answer": "让常见行为成为默认路径，特殊行为通过独立入口启用。Unix 顺序读取不要求调用者先了解 lseek。",
+    "summary": "教学文件 ABCDEF：一次成功读取 AB 后当前位置为 2。继续读取返回 CD；选择 lseek 跳到 4 后读取返回 EF。普通路径不经过跳转操作，示例并非 API 调用语法。",
+    "alt": "文件字节偏移 0 至 5。读取 AB 后位置为 2，分支一直接再读取两个字节得到 CD、位置变为 4；分支二先把位置改为 4，再读两个字节得到 EF、位置变为 6。lseek 不要求此前先 read。",
+    "kind": "call-path",
+    "desktop": "/diagrams/ch04-common-path.svg",
+    "mobile": "/diagrams/ch04-common-path-mobile.svg",
+    "anchor": {
+      "section": "4.7",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "4.4",
+        "epub": "OEBPS/part0008.xhtml#p31:ab248507f0",
+        "reason": "顺序访问是默认行为，lseek 改变当前访问位置；新增的教学位置轨迹据此展开。"
+      },
+      {
+        "section": "4.7",
+        "epub": "OEBPS/part0008.xhtml#p64:a39b3e2e96",
+        "reason": "缓冲默认启用是作者的设计建议，不是声称所示 Java 类已经如此实现。"
+      },
+      {
+        "section": "4.7",
+        "epub": "OEBPS/part0008.xhtml#p65:bd4a0d112b",
+        "reason": "Unix 默认顺序访问，随机访问使用 lseek；有效复杂性取决于常用功能。"
+      }
+    ],
+    "teachingExample": "ABCDEF、偏移、两字节读取和完整成功返回均为教学假设；忽略短读、失败和 EOF 处理，不规定完整调用状态机。",
+    "status": "content-reviewed",
+    "titleTw": "有選擇，不等於每次都要選擇",
+    "questionTw": "怎樣保留特殊用法，而不讓常見呼叫承擔全部設定成本？",
+    "answerTw": "讓常見行為成為預設路徑，特殊行為透過獨立入口啟用。Unix 順序讀取不要求呼叫者先了解 lseek。",
+    "summaryTw": "教學檔案 ABCDEF：一次成功讀取 AB 後當前位置為 2。繼續讀取回傳 CD；選擇 lseek 跳到 4 後讀取回傳 EF。普通路徑不經過跳轉操作，範例並非 API 呼叫語法。",
+    "altTw": "檔案位元組偏移 0 至 5。讀取 AB 後位置為 2，分支一直接再讀取兩個位元組得到 CD、位置變為 4；分支二先把位置改為 4，再讀兩個位元組得到 EF、位置變為 6。lseek 不要求此前先 read。",
+    "desktopTw": "/diagrams/ch04-common-path-tw.svg",
+    "mobileTw": "/diagrams/ch04-common-path-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-01-07-followup.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  }
+]

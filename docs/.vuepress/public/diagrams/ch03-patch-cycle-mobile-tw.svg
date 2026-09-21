@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 668" role="img" aria-labelledby="ch03-patch-cycle-m-title ch03-patch-cycle-m-desc">
+  <title id="ch03-patch-cycle-m-title">一次捷徑如何變成持續負擔？</title>
+  <desc id="ch03-patch-cycle-m-desc">四步縱向因果鏈：趕任務、接受補丁、複雜性積累、下次修改受阻。右側迴路回到趕任務，表示清理更難又採取捷徑。成本還會轉給未來維護者。</desc>
+  <defs><marker id="ch03-patch-cycle-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="360" height="668" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="16" y="32" font-size="19" font-weight="600">一次捷徑如何變成持續負擔？</text>
+    <text x="16" y="59" font-size="14" fill="var(--diagram-muted,#5c645d)">戰術式程式設計：箭頭表示因果關係</text>
+    <rect x="16" y="87" width="280" height="68" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" />
+    <text x="32" y="114" font-weight="600">① 趕當前任務</text><text x="32" y="140">優先讓功能儘快工作</text>
+    <rect x="16" y="192" width="280" height="68" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" />
+    <text x="32" y="219" font-weight="600">② 接受小補丁</text><text x="32" y="245">“這點複雜性沒關係”</text>
+    <rect x="16" y="297" width="280" height="68" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" />
+    <text x="32" y="324" font-weight="600">③ 複雜性累積</text><text x="32" y="350">依賴與特殊處理越來越多</text>
+    <rect x="16" y="402" width="280" height="68" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" />
+    <text x="32" y="429" font-weight="600">④ 下次修改受阻</text><text x="32" y="455">清理更難，只好再繞過去</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="1.5" marker-end="url(#ch03-patch-cycle-m-arrow)">
+      <path d="M156 162V182" /><path d="M156 267V287" /><path d="M156 372V392" /><path d="M304 436H332V121H305" />
+    </g>
+    <text x="16" y="503" font-size="14">回到起點：下次進度也不能等</text>
+    <path d="M16 522H344" stroke="var(--diagram-line,#aebbad)" />
+    <text x="16" y="553" font-weight="600">本次省時，不代表系統總成本低。</text>
+    <text x="16" y="582">後續維護者還需重新理解和清理。</text>
+    <text x="16" y="623" font-size="14" fill="var(--diagram-muted,#5c645d)">因果示意，不是固定工時預測。</text>
+  </g>
+</svg>

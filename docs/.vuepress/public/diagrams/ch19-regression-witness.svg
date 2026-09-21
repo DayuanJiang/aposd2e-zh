@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 489" role="img" aria-labelledby="ch19-regression-witness-title ch19-regression-witness-desc">
+  <title id="ch19-regression-witness-title">回归证据取决于同一测试的版本结果和失败原因</title>
+  <desc id="ch19-regression-witness-desc">教学自拟 last 的缺陷是错取倒数第二项。测试 T 对 A B C 期望 C；设定的缺陷版本给 B，修复版本给 C，前者的失败原因正好对应报告缺陷。若只在修复版通过，可把同一 T 补跑缺陷版，编写顺序不是证据本身；补查路线为译者说明。本图未实际执行测试。</desc>
+  <defs><marker id="ch19-regression-witness-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="489" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="33" font-size="21" font-weight="600">缺的是旧版证据，不是某种编写顺序</text>
+    <text x="24" y="60" font-size="14">19.4 · 教学自拟：last 错取倒数第二项；下列结果是设定，不是测试报告</text>
+    <text x="340" y="99" text-anchor="middle" font-family="ui-monospace,monospace">T: last([A, B, C]) == C</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch19-regression-witness-arrow)"><path d="M262 109V126H168V151"/><path d="M418 109V126H512V151"/></g>
+    <rect x="24" y="151" width="288" height="115" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="40" y="179" font-weight="600">缺陷版本 + 同一 T</text><text x="40" y="209">返回 B ≠ 期望 C → 失败</text><text x="40" y="239" font-size="14">原因：取错末项，正是报告的缺陷</text>
+    <rect x="368" y="151" width="288" height="115" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="384" y="179" font-weight="600">修复版本 + 同一 T</text><text x="384" y="209">返回 C = 期望 C → 通过</text><text x="384" y="239" font-size="14">与左边同输入、同断言，形成配对证据</text>
+    <path d="M40 278V289H640V278" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/>
+    <text x="340" y="314" text-anchor="middle">支持覆盖了这条回归；无关的失败不能算作左边的证据。</text>
+    <text x="368" y="361">若只在修复版通过</text><text x="368" y="388" font-size="14">把同一 T 放到缺陷版，核对失败原因</text>
+    <path d="M352 365H12V207H24" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ch19-regression-witness-arrow)"/>
+    <text x="30" y="390" font-size="14">虚线为译者的补查说明</text>
+    <path d="M24 414H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="442" font-size="14">作者建议修复前先得到因该缺陷而失败的测试；后来编写也可补查旧版。</text>
+    <text x="24" y="468" font-size="14">这是有限的回归证据，不是全部正确、设计优良或没有其他缺陷的证明。</text>
+  </g>
+</svg>

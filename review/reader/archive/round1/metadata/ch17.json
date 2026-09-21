@@ -1,0 +1,40 @@
+[
+  {
+    "id": "ch17-convention-gate",
+    "chapter": "ch17",
+    "title": "把换行约定变成提交门槛",
+    "question": "为什么写下“只用换行符”还不足以消除格式噪声？",
+    "answer": "编辑器仍可能把所有行终止符改掉。检查脚本在提交前阻止含回车符的文件；开发者可手动运行修复，再重新检查。",
+    "summary": "这是作者项目中的换行符案例。自动检查负责阻止提交，修复由手动运行触发，两者不是同一步。",
+    "alt": "修改后的文件进入回车符检查；不含回车则允许提交，含回车则中止，开发者手动把 CRLF 转为 LF 后返回检查；文档和代码审查继续帮助成员理解约定。",
+    "kind": "enforcement-loop",
+    "desktop": "/diagrams/ch17-convention-gate.svg",
+    "mobile": "/diagrams/ch17-convention-gate-mobile.svg",
+    "anchor": { "section": "17.2", "placement": "end" },
+    "sources": [
+      { "section": "17.2", "epub": "OEBPS/part0021.xhtml#p17:b234c667e1", "reason": "跨平台编辑器修改行终止符可掩盖真正变更，仅建立约定仍不够。" },
+      { "section": "17.2", "epub": "OEBPS/part0021.xhtml#p18:958d04d5ff", "reason": "自动检查修改文件并中止违规提交，脚本可手动运行以修复 CRLF。" },
+      { "section": "17.2", "epub": "OEBPS/part0021.xhtml#p19:b8cf72d761", "reason": "代码审查也用于落实约定和帮助新成员学习。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch17-trustworthy-patterns",
+    "chapter": "ch17",
+    "title": "外观一致，还要含义一致",
+    "question": "让不同事物都长得一样，为什么反而损害一致性？",
+    "answer": "读者会把熟悉外观对应到熟悉含义。相同含义应可复用同一模式，不同含义则应有区别，否则熟悉感会诱发错误推断。",
+    "summary": "教学自拟反例：同叫 timeout 的值，一个用秒、另一个用毫秒。图中不主张具体命名规范，只说明单位差异不能被相同外观掩盖。",
+    "alt": "相同单位的 timeoutSeconds 在两处让秒的知识可复用；反例中两个 timeout 隐藏秒与毫秒差别，使按秒理解毫秒值的推断失效；显式区分单位恢复可见差异。",
+    "kind": "counterexample",
+    "desktop": "/diagrams/ch17-trustworthy-patterns.svg",
+    "mobile": "/diagrams/ch17-trustworthy-patterns-mobile.svg",
+    "anchor": { "section": "17.3", "placement": "end" },
+    "sources": [
+      { "section": "intro", "epub": "OEBPS/part0021.xhtml#p3:3cdf47b76f", "reason": "一致性允许在相似情境复用已学知识。" },
+      { "section": "intro", "epub": "OEBPS/part0021.xhtml#p4:3ac4865b5f", "reason": "看似相同而实则不同的情境会诱发错误假设。" },
+      { "section": "17.3", "epub": "OEBPS/part0021.xhtml#p23:78c80a466e", "reason": "不同事物应区别处理；相同变量名不能强加给不同事物。timeout 示例为教学自拟，不来自作者项目。" }
+    ],
+    "status": "awaiting-independent-review"
+  }
+]

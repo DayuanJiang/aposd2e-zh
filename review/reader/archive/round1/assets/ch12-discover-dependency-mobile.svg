@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 656" role="img" aria-labelledby="ch12-discover-dependency-m-t ch12-discover-dependency-m-d">
+  <title id="ch12-discover-dependency-m-t">文档让依赖可见，不让依赖消失</title><desc id="ch12-discover-dependency-m-d">两幅上下排列的A依赖B和C图保留相同实线。下图增加设计说明及虚线查找指引，提供去哪里查及为什么的信息。</desc>
+  <defs><marker id="ch12-discover-dependency-m-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="360" height="656" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="20" y="32" font-size="18" font-weight="600">文档让依赖可见，不让依赖消失</text><text x="20" y="67" font-size="14">教学例：修改 A，B、C 也可能相关</text>
+    <text x="20" y="105" font-weight="600">无说明：要重新追查</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch12-discover-dependency-m-a)"><path d="M180 164L89 258"/><path d="M180 164L273 258"/></g>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><circle cx="180" cy="148" r="24"/><circle cx="78" cy="280" r="24"/><circle cx="283" cy="280" r="24"/></g>
+    <g font-family="monospace" font-size="19"><text x="174" y="155">A</text><text x="72" y="287">B</text><text x="277" y="287">C</text></g>
+    <text x="94" y="222" font-size="14" fill="var(--diagram-danger,#a03946)">还要查哪里？为何相关？</text>
+    <path d="M20 329H340" stroke="var(--diagram-line,#aebbad)"/><text x="20" y="360" font-weight="600">有说明：可沿指引找到相关位置</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch12-discover-dependency-m-a)"><path d="M180 420L89 518"/><path d="M180 420L273 518"/></g>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><circle cx="180" cy="401" r="24"/><circle cx="78" cy="540" r="24"/><circle cx="283" cy="540" r="24"/></g>
+    <g font-family="monospace" font-size="19"><text x="174" y="408">A</text><text x="72" y="547">B</text><text x="277" y="547">C</text></g>
+    <rect x="39" y="443" width="282" height="46" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="54" y="472">设计说明：指出 B、C 及相关理由</text>
+    <path d="M180 426V442M69 490L74 514M291 490L286 514" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-dasharray="5 4"/>
+    <text x="20" y="592" font-size="13">实线依赖不变；虚线是文档给出的查找指引。</text><text x="20" y="616" font-size="13" fill="var(--diagram-muted,#58636b)">文档澄清依赖，不自动减少修改点。</text><text x="20" y="639" font-size="13" fill="var(--diagram-muted,#58636b)">此图没有量化或验证实际理解收益。</text>
+  </g>
+</svg>

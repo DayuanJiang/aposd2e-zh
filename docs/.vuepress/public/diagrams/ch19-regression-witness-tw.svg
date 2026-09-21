@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 489" role="img" aria-labelledby="ch19-regression-witness-title ch19-regression-witness-desc">
+  <title id="ch19-regression-witness-title">迴歸證據取決於同一測試的版本結果和失敗原因</title>
+  <desc id="ch19-regression-witness-desc">教學自擬 last 的缺陷是錯取倒數第二項。測試 T 對 A B C 期望 C；設定的缺陷版本給 B，修復版本給 C，前者的失敗原因正好對應報告缺陷。若只在修復版通過，可把同一 T 補跑缺陷版，編寫順序不是證據本身；補查路線為譯者說明。本圖未實際執行測試。</desc>
+  <defs><marker id="ch19-regression-witness-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="680" height="489" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="33" font-size="21" font-weight="600">缺的是舊版證據，不是某種編寫順序</text>
+    <text x="24" y="60" font-size="14">19.4 · 教學自擬：last 錯取倒數第二項；下列結果是設定，不是測試報告</text>
+    <text x="340" y="99" text-anchor="middle" font-family="ui-monospace,monospace">T: last([A, B, C]) == C</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch19-regression-witness-arrow)"><path d="M262 109V126H168V151" /><path d="M418 109V126H512V151" /></g>
+    <rect x="24" y="151" width="288" height="115" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" />
+    <text x="40" y="179" font-weight="600">缺陷版本 + 同一 T</text><text x="40" y="209">回傳 B ≠ 期望 C → 失敗</text><text x="40" y="239" font-size="14">原因：取錯末項，正是報告的缺陷</text>
+    <rect x="368" y="151" width="288" height="115" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="384" y="179" font-weight="600">修復版本 + 同一 T</text><text x="384" y="209">回傳 C = 期望 C → 通過</text><text x="384" y="239" font-size="14">與左邊同輸入、同斷言，形成配對證據</text>
+    <path d="M40 278V289H640V278" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" />
+    <text x="340" y="314" text-anchor="middle">支持覆蓋了這條迴歸；無關的失敗不能算作左邊的證據。</text>
+    <text x="368" y="361">若只在修復版通過</text><text x="368" y="388" font-size="14">把同一 T 放到缺陷版，核對失敗原因</text>
+    <path d="M352 365H12V207H24" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ch19-regression-witness-arrow)" />
+    <text x="30" y="390" font-size="14">虛線為譯者的補查說明</text>
+    <path d="M24 414H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="24" y="442" font-size="14">作者建議修復前先得到因該缺陷而失敗的測試；後來編寫也可補查舊版。</text>
+    <text x="24" y="468" font-size="14">這是有限的迴歸證據，不是全部正確、設計優良或沒有其他缺陷的證明。</text>
+  </g>
+</svg>

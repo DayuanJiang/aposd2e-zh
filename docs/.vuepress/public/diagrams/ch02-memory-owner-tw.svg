@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 436" role="img" aria-labelledby="ch02-memory-owner-title ch02-memory-owner-desc">
+  <title id="ch02-memory-owner-title">誰必須知道何時釋放記憶體？</title>
+  <desc id="ch02-memory-owner-desc">固定的模組和呼叫者泳道中，時間從上到下。兩方案均由模組分配、呼叫者使用，差別僅是釋放責任位於呼叫者還是模組。只有能安全重組生命週期時才可採用後者；箭頭不是 API 呼叫或所有權移交協議。</desc>
+  <defs><marker id="ch02-memory-owner-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="680" height="436" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="20" font-weight="600">誰必須知道何時釋放記憶體？</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">責任泳道：向下是時間先後，不是 API 呼叫或所有權轉移</text>
+    <text x="24" y="100" font-weight="600">原設計</text><text x="360" y="100" font-weight="600">若能安全重組生命週期</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><rect x="100" y="136" width="92" height="181" /><rect x="436" y="136" width="92" height="181" /></g>
+    <g fill="var(--diagram-warm-soft,#eae2cf)"><rect x="212" y="136" width="104" height="181" /><rect x="548" y="136" width="104" height="181" /></g>
+    <text x="130" y="125">模組</text><text x="242" y="125">呼叫者</text><text x="466" y="125">模組</text><text x="578" y="125">呼叫者</text>
+    <g font-size="14"><text x="48" y="169">1</text><text x="48" y="229">2</text><text x="48" y="289">3</text><text x="384" y="169">1</text><text x="384" y="229">2</text><text x="384" y="289">3</text></g>
+    <g stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch02-memory-owner-arrow)"><path d="M31 145V308" /><path d="M367 145V308" /></g>
+    <text x="130" y="169">分配</text><text x="246" y="229">使用</text><text x="466" y="169">分配</text><text x="582" y="229">使用</text>
+    <rect x="224" y="263" width="80" height="39" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" /><text x="249" y="288">釋放</text>
+    <rect x="442" y="263" width="80" height="39" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" /><text x="467" y="288">釋放</text>
+    <text x="24" y="347">呼叫者須掌握釋放義務與時機。</text><text x="360" y="347">這部分義務不再由呼叫者承擔。</text>
+    <path d="M24 365H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="24" y="396" font-weight="600">移動釋放責任不等於證明生命週期安全。</text>
+    <text x="24" y="421" font-size="13" fill="var(--diagram-muted,#5c645d)">安全結束使用的協議未指定；這是原書提出的一種條件性重組，不是唯一辦法。</text>
+  </g>
+</svg>

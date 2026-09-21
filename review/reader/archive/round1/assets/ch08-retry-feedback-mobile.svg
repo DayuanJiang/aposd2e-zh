@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 676" role="img" aria-labelledby="ch08-retry-feedback-m-t ch08-retry-feedback-m-d">
+  <title id="ch08-retry-feedback-m-t">重试间隔的知识在哪里？</title><desc id="ch08-retry-feedback-m-d">固定配置从管理员流向重试。动态方案从成功响应向下经过测量、计算，再回到后续请求。用户可能更了解请求的业务优先级。</desc>
+  <defs><marker id="ch08-retry-feedback-m-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="360" height="676" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="20" y="32" font-size="18" font-weight="600">重试间隔的知识在哪里？</text>
+    <text x="20" y="74" font-weight="600">固定配置</text>
+    <rect x="20" y="94" width="136" height="48" rx="4" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="39" y="124">管理员选间隔</text>
+    <rect x="204" y="94" width="136" height="48" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="224" y="124">按该间隔重试</text>
+    <path d="M156 118H196" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch08-retry-feedback-m-a)"/>
+    <text x="20" y="175" font-size="14" fill="var(--diagram-danger,#a03946)">运行条件变了，参数不会自动变化。</text>
+    <path d="M20 199H340" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="20" y="232" font-weight="600">模块内部的反馈回路</text>
+    <g fill="var(--diagram-primary-soft,#d6e5dc)"><rect x="60" y="256" width="250" height="52" rx="4"/><rect x="60" y="355" width="250" height="52" rx="4"/><rect x="60" y="454" width="250" height="52" rx="4"/></g>
+    <text x="100" y="288">成功请求取得响应</text><text x="100" y="387">测量当前响应时间</text><text x="85" y="486">计算间隔，供后续请求使用</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch08-retry-feedback-m-a)"><path d="M185 309V347"/><path d="M185 408V446"/><path d="M60 480H32V282H52"/></g>
+    <text x="203" y="336" font-size="13">观察条件</text><text x="203" y="434" font-size="13">动态调整</text>
+    <text x="20" y="538" font-size="13" fill="var(--diagram-muted,#58636b)">回路：后续成功请求继续提供测量依据。</text>
+    <path d="M20 555H340" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="20" y="581" font-weight="600">业务优先级：用户可能知道得更多</text>
+    <text x="20" y="610" font-size="13" fill="var(--diagram-muted,#58636b)">原文未指定响应时间的倍数或完整算法。</text>
+    <text x="20" y="633" font-size="13" fill="var(--diagram-muted,#58636b)">配置并非一律不好：谁能确定更好的值？</text>
+    <text x="20" y="656" font-size="13" fill="var(--diagram-muted,#58636b)">确需配置时，考虑提供合理默认值。</text>
+  </g>
+</svg>

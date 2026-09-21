@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 644" role="img" aria-labelledby="ch04-abstraction-filter-m-title ch04-abstraction-filter-m-desc">
+  <title id="ch04-abstraction-filter-m-title">这个细节能从接口中省掉吗？</title>
+  <desc id="ch04-abstraction-filter-m-desc">问题是正确使用模块是否需要该细节。否分支隐藏块选择算法，是分支明确刷新和持久化规则。短签名若省掉必要保证仍是错误抽象。</desc>
+  <defs><marker id="ch04-abstraction-filter-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="644" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="16" y="32" font-size="19" font-weight="600">这个细节能从接口中省掉吗？</text>
+    <text x="16" y="59" font-size="14" fill="var(--diagram-muted,#5c645d)">原书文件系统例子</text>
+    <path d="M44 85H316L340 131L316 177H44L20 131Z" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="76" y="123" font-weight="600">调用者要正确使用模块，</text><text x="90" y="150" font-weight="600">是否需要这项信息？</text>
+    <path d="M104 185V217" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch04-abstraction-filter-m-arrow)"/>
+    <text x="122" y="208">否</text>
+    <rect x="40" y="230" width="304" height="106" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="56" y="258" font-weight="600">隐藏：如何选择存储块</text>
+    <text x="56" y="288">通常不影响调用者的正确用法</text><text x="56" y="315" font-size="14">留在实现，不增加接口负担</text>
+    <path d="M22 141H16V386H30" fill="none" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch04-abstraction-filter-m-arrow)"/>
+    <text x="24" y="367" font-size="14">是</text>
+    <rect x="40" y="361" width="304" height="123" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="56" y="391" font-weight="600">公开：刷新与持久化规则</text>
+    <text x="56" y="421">数据库需要保证崩溃后数据仍在</text><text x="56" y="450">不能只靠简短签名猜测</text>
+    <path d="M16 513H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="542" font-weight="600">接口不仅是参数和类型。</text>
+    <text x="16" y="571">还包括必要的行为、约束与保证。</text>
+    <text x="16" y="610" font-size="14" fill="var(--diagram-danger,#a03946)">漏掉必要信息，是错误抽象。</text>
+  </g>
+</svg>

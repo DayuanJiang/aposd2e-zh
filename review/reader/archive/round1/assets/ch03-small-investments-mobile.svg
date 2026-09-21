@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 696" role="img" aria-labelledby="ch03-small-investments-m-title ch03-small-investments-m-desc">
+  <title id="ch03-small-investments-m-title">设计投资应放在什么时候？</title>
+  <desc id="ch03-small-investments-m-desc">移动版将三种策略分为上下时间线，每条包含三个迭代。持续策略每轮都有实现和改进，区别于前期设计全部和无限延期清理。比例是作者建议，回本时间无实证保证。</desc>
+  <rect width="360" height="696" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="16" y="32" font-size="19" font-weight="600">设计投资应放在什么时候？</text>
+    <text x="16" y="59" font-size="14" fill="var(--diagram-muted,#5c645d)">教学排程；方块宽度不代表工时</text>
+    <text x="16" y="99" font-weight="600">前期一次设计</text>
+    <text x="26" y="129" font-size="13">迭代 1</text><text x="140" y="129" font-size="13">迭代 2</text><text x="254" y="129" font-size="13">迭代 3</text>
+    <rect x="16" y="143" width="100" height="62" fill="var(--diagram-warm-soft,#eae2cf)"/>
+    <text x="28" y="169">设计全部</text><text x="140" y="169">实现</text><text x="254" y="169">发现</text><text x="254" y="195">遗漏</text>
+    <path d="M16 227H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="258" font-weight="600">持续小额投入</text>
+    <text x="26" y="288" font-size="13">迭代 1</text><text x="140" y="288" font-size="13">迭代 2</text><text x="254" y="288" font-size="13">迭代 3</text>
+    <g fill="var(--diagram-primary-soft,#d6e5dc)"><rect x="16" y="302" width="100" height="64"/><rect x="130" y="302" width="100" height="64"/><rect x="244" y="302" width="100" height="64"/></g>
+    <text x="28" y="328">实现</text><text x="28" y="354">+ 改进</text><text x="142" y="328">实现</text><text x="142" y="354">+ 改进</text><text x="256" y="328">实现</text><text x="256" y="354">+ 改进</text>
+    <text x="16" y="395" font-size="14">事前比较备选；事后修正已发现的问题。</text>
+    <path d="M16 413H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="445" font-weight="600">清理总在以后</text>
+    <text x="26" y="475" font-size="13">迭代 1</text><text x="140" y="475" font-size="13">迭代 2</text><text x="254" y="475" font-size="13">迭代 3</text>
+    <text x="26" y="505">先实现</text><text x="140" y="505">再实现</text><text x="254" y="505">再实现</text>
+    <path d="M26 524H334" stroke="var(--diagram-danger,#a03946)" stroke-dasharray="5 4"/>
+    <text x="16" y="550" font-size="14" fill="var(--diagram-danger,#a03946)">“等忙完再清理”不断向后移动</text>
+    <text x="16" y="597" font-size="14">作者建议投入约 10%–20% 开发时间。</text>
+    <text x="16" y="625" font-size="14">不是一次性设计完整系统。</text>
+    <text x="16" y="664" font-size="14" fill="var(--diagram-muted,#5c645d)">回本时间没有实证保证。</text>
+  </g>
+</svg>

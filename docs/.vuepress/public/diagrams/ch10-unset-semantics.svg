@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 430" role="img" aria-labelledby="ch10-unset-semantics-t ch10-unset-semantics-d">
+  <title id="ch10-unset-semantics-t">改变成功条件，而不是忽略失败</title><desc id="ch10-unset-semantics-d">原定义中不存在的变量引起错误。建议定义为确保变量不存在，两种初态都满足同一个后置条件并成功，不要求调用者忽略错误。</desc>
+  <defs><marker id="ch10-unset-semantics-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="680" height="430" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">改变成功条件，而不是忽略失败</text>
+    <text x="24" y="77" font-weight="600">原定义：删除变量</text><text x="370" y="77" font-weight="600">作者建议：确保变量不存在</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><circle cx="94" cy="139" r="42"/><circle cx="254" cy="139" r="42"/><circle cx="432" cy="139" r="42"/><circle cx="594" cy="139" r="42"/></g>
+    <text x="79" y="145">存在</text><text x="232" y="145">不存在</text><text x="417" y="145">存在</text><text x="572" y="145">不存在</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch10-unset-semantics-a)"><path d="M94 182V258"/><path d="M254 182V258"/><path d="M432 182V225L499 273"/><path d="M594 182V225L535 273"/></g>
+    <text x="105" y="223" font-size="14">执行删除</text><text x="265" y="223" font-size="14">无法删除</text><text x="444" y="214" font-size="14">执行删除</text><text x="603" y="214" font-size="14">无需操作</text>
+    <rect x="24" y="266" width="140" height="67" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="64" y="292">不存在</text><text x="64" y="318">成功返回</text>
+    <rect x="184" y="266" width="140" height="67" rx="4" fill="var(--diagram-danger-soft,#ead9dc)"/><text x="214" y="292">抛出错误</text><text x="202" y="318" font-size="14">调用者 catch</text>
+    <rect x="388" y="281" width="268" height="65" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="459" y="307">变量不存在</text><text x="462" y="334">成功返回</text>
+    <text x="24" y="370" font-size="14">清理临时状态时：不存在也得捕获错误。</text><text x="370" y="370" font-size="14">两种初态满足同一成功条件。</text>
+    <text x="24" y="410" font-size="13" fill="var(--diagram-muted,#58636b)">Tcl 原设计与作者建议的语义对照，不表示现有 unset 已按此改变。</text>
+  </g>
+</svg>

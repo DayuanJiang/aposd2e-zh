@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 488" role="img" aria-labelledby="ch16-single-source-title ch16-single-source-desc">
+  <title id="ch16-single-source-title">副本漏改与目标移走是不同的失效状态</title>
+  <desc id="ch16-single-source-desc">教学例中更新义务从规则变化发散到 A/B/C 副本，C 未更新却仍可读。另一侧 A/B/C 沿查找关系合入唯一说明。主说明被移走的第二状态用空的 xyz 位置与未解决引用表示找不到目标。这不保证可读的主说明正确。</desc>
+  <defs><marker id="ch16-single-source-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="488" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="33" font-size="21" font-weight="600">漏改的副本仍可读，移走的目标找不到</text>
+    <text x="24" y="60" font-size="14">16.4 · 教学示例 A/B/C、版本、xyz；虚线是更新义务，实线是查找</text>
+    <text x="24" y="99" font-weight="600">复制说明：同步更新多份</text><text x="365" y="99" font-weight="600">集中说明：沿引用查一处</text>
+    <rect x="74" y="119" width="204" height="48" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/><text x="176" y="149" text-anchor="middle">规则已改为新版</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ch16-single-source-arrow)"><path d="M176 167V192H67V220"/><path d="M176 192V220"/><path d="M176 192H279V220"/></g>
+    <g fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"><rect x="24" y="220" width="86" height="67" rx="4"/><rect x="131" y="220" width="86" height="67" rx="4"/></g>
+    <rect x="236" y="220" width="86" height="67" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="67" y="247" text-anchor="middle">A 新版</text><text x="67" y="274" text-anchor="middle" font-size="14">已更新</text>
+    <text x="174" y="247" text-anchor="middle">B 新版</text><text x="174" y="274" text-anchor="middle" font-size="14">已更新</text>
+    <text x="279" y="247" text-anchor="middle">C 旧版</text><text x="279" y="274" text-anchor="middle" font-size="14">漏改</text>
+    <text x="24" y="318" fill="var(--diagram-danger,#a03946)">C 的内容仍在，过时未必可见。</text>
+    <path d="M341 85V426" stroke="var(--diagram-line,#aebbad)"/>
+    <rect x="403" y="119" width="223" height="48" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/><text x="514" y="149" text-anchor="middle">xyz 中的唯一说明：新版</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2"><path d="M394 227V199H636V227M514 227V199"/><path d="M514 199V167" marker-end="url(#ch16-single-source-arrow)"/></g>
+    <text x="394" y="254" text-anchor="middle">A 引用</text><text x="514" y="254" text-anchor="middle">B 引用</text><text x="636" y="254" text-anchor="middle">C 引用</text>
+    <text x="365" y="301" font-weight="600">第二状态：主说明被移走</text>
+    <text x="365" y="349">旧引用</text><text x="365" y="376" font-size="14">“查看 xyz”</text>
+    <path d="M451 360H496" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch16-single-source-arrow)"/>
+    <rect x="496" y="325" width="160" height="76" rx="4" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-dasharray="5 4"/>
+    <text x="576" y="354" text-anchor="middle">xyz：空位置</text><text x="576" y="383" text-anchor="middle" fill="var(--diagram-danger,#a03946)">找不到说明</text>
+    <path d="M24 434H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="462">这里只演示目标移动或删除后缺失可见；可读的主说明仍可能过时。</text>
+  </g>
+</svg>

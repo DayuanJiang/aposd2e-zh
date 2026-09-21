@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 512" role="img" aria-labelledby="ch05-http-read-title ch05-http-read-desc">
+  <title id="ch05-http-read-title">还没解析，怎么知道读完了？</title>
+  <desc id="ch05-http-read-desc">教学请求头 Content-Length 为 4，请求体 a=12。读取头部并解析长度，才能知道要取得四个请求体字节，再构造请求对象。读取与解析共享协议知识，应封装在同一模块。只针对这种定界情形，不是完整 HTTP 算法。</desc>
+  <defs><marker id="ch05-http-read-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="512" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="24" y="34" font-size="20" font-weight="600">还没解析，怎么知道读完了？</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">教学示例：明确使用 Content-Length 的请求</text>
+    <text x="24" y="109" font-weight="600">线上内容的局部</text>
+    <rect x="24" y="128" width="238" height="164" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="40" y="157" font-family="ui-monospace,monospace" font-size="14">Content-Length: 4</text>
+    <text x="40" y="188" font-size="14">空行：头部结束</text>
+    <path d="M40 203H246" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="40" y="232" font-family="ui-monospace,monospace">a=12</text>
+    <text x="40" y="265" font-size="14">请求体：4 个 ASCII 字节</text>
+    <rect x="310" y="90" width="346" height="268" rx="4" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-dasharray="6 4"/>
+    <text x="326" y="120" font-weight="600">同一模块内部的处理</text>
+    <text x="344" y="160">① 读取请求行和头部</text>
+    <text x="344" y="211" fill="var(--diagram-warm,#80531b)">② 解析长度字段，得到 4</text>
+    <text x="344" y="262">③ 取得 4 个请求体字节</text>
+    <text x="344" y="313">④ 形成已解析的请求对象</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-http-read-arrow)"><path d="M485 171V188"/><path d="M485 221V239"/><path d="M485 272V290"/></g>
+    <text x="24" y="328" fill="var(--diagram-danger,#a03946)">“只读取”的步骤</text><text x="24" y="354" fill="var(--diagram-danger,#a03946)">其实已经在解析协议。</text>
+    <path d="M24 385H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="416" font-weight="600">拆成两个类会重复格式知识；合并后调用者只需接收请求。</text>
+    <text x="24" y="450" font-size="14">取得请求体可能需要多次读取，不等于一次 socket read。</text>
+    <text x="24" y="483" font-size="13" fill="var(--diagram-muted,#5c645d)">仅解释书中长度定界的依赖关系，不涵盖其他消息定界、校验或错误路径。</text>
+  </g>
+</svg>

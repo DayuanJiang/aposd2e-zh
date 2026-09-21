@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 612" role="img" aria-labelledby="ch19-regression-witness-m-title ch19-regression-witness-m-desc">
+  <title id="ch19-regression-witness-m-title">用同一测试观察修复前失败与修复后通过</title>
+  <desc id="ch19-regression-witness-m-desc">缺陷版本加测试失败，经修复后同一测试通过，形成前后证据。反例是先修后写且立即通过，缺少测试能触发原缺陷的证据。</desc>
+  <defs><marker id="ch19-regression-witness-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="612" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">先证明测试会因缺陷失败</text><text x="16" y="57" font-size="14">19.4 · 修复缺陷时先写测试</text>
+    <rect x="32" y="86" width="296" height="75" rx="5" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/><text x="180" y="116" text-anchor="middle">缺陷版本 + 测试</text><text x="180" y="144" text-anchor="middle">因该缺陷失败</text>
+    <path d="M180 161V237" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch19-regression-witness-m-arrow)"/><text x="198" y="204">修复</text>
+    <rect x="32" y="237" width="296" height="75" rx="5" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/><text x="180" y="267" text-anchor="middle">修复版本 + 同一测试</text><text x="180" y="295" text-anchor="middle">通过</text>
+    <text x="16" y="344" font-size="14">关键：同一测试留下前后两份证据。</text><path d="M16 365H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="399" font-weight="600" fill="var(--diagram-warm,#80531b)">反例</text><text x="16" y="429">先修复 → 后写测试 → 立即通过</text>
+    <text x="16" y="465" fill="var(--diagram-danger,#a03946)">缺少旧版失败证据：</text><text x="16" y="493">测试可能从未触发原缺陷。</text>
+    <path d="M16 519H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="550" font-size="14">测试支持重构；但通过测试不代表</text><text x="16" y="574" font-size="14">设计优良，也不保证没有其他缺陷。</text>
+  </g>
+</svg>

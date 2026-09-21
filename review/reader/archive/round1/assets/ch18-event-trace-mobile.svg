@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 577" role="img" aria-labelledby="ch18-event-trace-m-title ch18-event-trace-m-desc">
+  <title id="ch18-event-trace-m-title">调用目标来自运行时注册</title>
+  <desc id="ch18-event-trace-m-desc">垂直实线从事件经过事件模块到处理函数；右侧虚线从处理函数返回模块代表预先注册。原例注释补充传输错误、RPC 无法完成、transport 与 dispatch thread。</desc>
+  <defs><marker id="ch18-event-trace-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="577" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">静态调用点缺少运行时连线</text><text x="16" y="57" font-size="14">18.2 · 通用机制，不假定注册 API</text>
+    <rect x="24" y="84" width="234" height="54" rx="5" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/><text x="141" y="117" text-anchor="middle">外部事件</text>
+    <rect x="24" y="190" width="234" height="54" rx="5" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/><text x="141" y="223" text-anchor="middle">事件模块</text>
+    <rect x="24" y="301" width="234" height="54" rx="5" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/><text x="141" y="334" text-anchor="middle">处理函数</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch18-event-trace-m-arrow)"><path d="M141 138V190"/><path d="M141 244V301"/><path d="M258 328H325V217H258" stroke-dasharray="6 4"/></g>
+    <text x="24" y="164" font-size="14">事件到来</text><text x="16" y="278" font-size="14">间接调用</text><text x="272" y="170" font-size="14">先注册</text><text x="272" y="190" font-size="14">定目标</text>
+    <path d="M16 383H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="414" font-weight="600">原例 failed() 注释补充：</text>
+    <text x="16" y="447">触发：传输层错误</text><text x="64" y="474">使 RPC 无法完成</text><text x="16" y="503">调用者：transport</text><text x="16" y="532">线程：dispatch thread</text><text x="16" y="562" font-size="14">实线为事件路径，虚线为注册关系。</text>
+  </g>
+</svg>

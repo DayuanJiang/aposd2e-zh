@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 558" role="img" aria-labelledby="ch13-status-discovery-t ch13-status-discovery-d">
+  <title id="ch13-status-discovery-t">把跨模块清单放在必经之处</title><desc id="ch13-status-discovery-d">Status枚举末尾列出七项更新：最大值；Status.cc消息符号表；ClientException.h异常类；ClientException::throwException映射；ClientException.java静态异常类及抛出映射；Status.java枚举。箭头是人工修改指引，非自动同步。</desc>
+  <defs><marker id="ch13-status-discovery-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="680" height="558" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">把跨模块清单放在必经之处</text><text x="24" y="67">新增 Status 值：把七项同步义务放在维护者必定会编辑的位置。</text>
+    <rect x="24" y="197" width="202" height="114" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="42" y="226" font-weight="600">Status 枚举末尾</text><text x="42" y="258">新增值的必经位置</text><text x="42" y="288">注释列出同步修改点</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch13-status-discovery-a)"><path d="M227 254H268V141H303"/><path d="M268 231H303"/><path d="M268 322H303"/><path d="M268 254V450H303"/></g>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><rect x="310" y="98" width="346" height="72" rx="4"/><rect x="310" y="192" width="346" height="72" rx="4"/><rect x="310" y="286" width="346" height="86" rx="4"/><rect x="310" y="394" width="346" height="116" rx="4"/></g>
+    <text x="328" y="124" font-weight="600">1  最大状态值</text><text x="328" y="151" font-size="13">STATUS_MAX_VALUE = 最大值，且放在末尾</text>
+    <text x="328" y="218" font-weight="600">2  Status.cc</text><text x="328" y="245" font-size="14">更新 messages 与 symbols 表</text>
+    <text x="328" y="312" font-weight="600">3–4  C++ 异常</text><text x="328" y="339" font-size="13">3  ClientException.h：新增异常类</text><text x="328" y="362" font-size="13">4  ClientException::throwException 增加映射</text>
+    <text x="328" y="421" font-weight="600">5–7  Java 绑定</text><text x="328" y="446" font-size="13">5  ClientException.java：新增静态异常类</text><text x="328" y="471" font-size="13">6  ClientException.java：增加抛出异常的映射</text><text x="328" y="496" font-size="13">7  Status.java：按状态码位置增加枚举值</text>
+    <text x="24" y="348" font-size="14">箭头表示要去修改，</text><text x="24" y="374" font-size="14">不是已经自动同步。</text>
+    <text x="24" y="540" font-size="13" fill="var(--diagram-muted,#58636b)">按责任分组，保留七项更新及具体位置。文档使跨文件义务可发现，不消除依赖。</text>
+  </g>
+</svg>

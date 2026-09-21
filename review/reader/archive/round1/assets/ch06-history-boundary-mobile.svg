@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 822" role="img" aria-labelledby="ch06-history-boundary-m-title ch06-history-boundary-m-desc">
+  <title id="ch06-history-boundary-m-title">撤销时，谁知道要恢复什么？</title>
+  <desc id="ch06-history-boundary-m-desc">上方依次展示 UI 分组策略、History 通用机制和 Action 恢复细节。下方教学历史从上到下记录文本和选区动作，undo 从下到上调用，遇到前方栅栏停止。原文 redo 笔误按已有译者注标明。</desc>
+  <defs><marker id="ch06-history-boundary-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="822" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="16" y="32" font-size="19" font-weight="600">撤销时，谁知道要恢复什么？</text>
+    <text x="16" y="59" font-size="14" fill="var(--diagram-muted,#5c645d)">各自只掌握本层所需的知识</text>
+    <rect x="16" y="80" width="328" height="75" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="32" y="109" font-weight="600">高层 UI：分组策略</text><text x="32" y="137">调用 addFence() 决定栅栏位置</text>
+    <rect x="16" y="191" width="328" height="75" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="32" y="220" font-weight="600">History：列表与遍历机制</text><text x="32" y="248">识别栅栏，调用 undo() / redo()</text>
+    <rect x="16" y="302" width="328" height="88" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="32" y="331" font-weight="600">Action：具体恢复细节</text><text x="32" y="359">由文本、UI 等模块各自实现</text><text x="32" y="380" font-size="13">History 不理解这些对象的内部状态</text>
+    <g stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch06-history-boundary-m-arrow)"><path d="M180 161V182"/><path d="M180 272V293"/></g>
+    <text x="16" y="429" font-weight="600">教学动作组：由上到下记录</text>
+    <path d="M40 455H248M40 628H248" stroke="var(--diagram-secondary,#2c6096)" stroke-width="3"/>
+    <text x="40" y="480" font-size="13">栅栏</text>
+    <rect x="40" y="495" width="208" height="44" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="56" y="523">先记录：文本动作</text>
+    <rect x="40" y="565" width="208" height="44" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="56" y="593">后记录：选区动作</text>
+    <path d="M144 545V556" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch06-history-boundary-m-arrow)"/>
+    <path d="M277 610V463" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch06-history-boundary-m-arrow)"/>
+    <text x="288" y="518" font-size="14">②</text><text x="288" y="588" font-size="14">①</text><text x="288" y="557" font-size="13">undo</text>
+    <text x="16" y="660">先撤销选区，再撤销文本；到栅栏停。</text>
+    <text x="16" y="700" font-size="13" fill="var(--diagram-muted,#5c645d)">仅演示遍历方向，非完整编辑器恢复流程。</text>
+    <text x="16" y="737" font-size="13" fill="var(--diagram-muted,#5c645d)">原文将逆序撤销误写为 redo。</text>
+    <text x="16" y="762" font-size="13" fill="var(--diagram-muted,#5c645d)">本图按 6.7 定义和已有译者注标为 undo。</text>
+    <text x="16" y="798" font-size="14" font-weight="600">新增动作类型，不必改写通用遍历。</text>
+  </g>
+</svg>

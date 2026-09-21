@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 441" role="img" aria-labelledby="ch11-two-design-levels-t ch11-two-design-levels-d">
+  <title id="ch11-two-design-levels-t">接口选定后，还能设计两次吗？</title><desc id="ch11-two-design-levels-d">范围接口之上比较高层易用性，其下可选择行链表、固定字符块或间隙缓冲区。三者是候选，不是同时启用；实现按简单性和性能比较，没有普遍赢家。</desc>
+  <defs><marker id="ch11-two-design-levels-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="680" height="441" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">接口选定后，还能设计两次吗？</text>
+    <text x="24" y="79" font-weight="600">接口层：高层软件是否容易使用？</text><text x="453" y="79" font-size="14">调用者只表达文本操作</text>
+    <rect x="24" y="102" width="632" height="49" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="236" y="133">选定一个任意范围接口</text>
+    <path d="M24 174H656" stroke="var(--diagram-line,#aebbad)" stroke-dasharray="5 4"/>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch11-two-design-levels-a)"><path d="M340 152V198H120V225"/><path d="M340 198V225"/><path d="M340 198H559V225"/></g>
+    <text x="65" y="256" font-weight="600">候选：行链表</text><text x="272" y="256" font-weight="600">候选：字符块</text><text x="493" y="256" font-weight="600">候选：间隙缓冲区</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><rect x="37" y="281" width="58" height="28" rx="3"/><rect x="133" y="281" width="58" height="28" rx="3"/><rect x="261" y="281" width="42" height="28"/><rect x="303" y="281" width="42" height="28"/><rect x="345" y="281" width="42" height="28"/><rect x="469" y="281" width="47" height="28"/><rect x="602" y="281" width="47" height="28"/></g>
+    <path d="M97 295H125" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch11-two-design-levels-a)"/>
+    <path d="M303 282V309M345 282V309" stroke="var(--diagram-line,#aebbad)"/>
+    <rect x="516" y="281" width="86" height="28" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-dasharray="4 3"/>
+    <text x="49" y="301" font-size="13">一行</text><text x="146" y="301" font-size="13">一行</text><text x="283" y="338" font-size="14">固定大小块</text><text x="544" y="301" font-size="13">间隙</text>
+    <path d="M24 362H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="391" font-weight="600">实现层：比较简单性和性能，不能仅凭接口易用性决定。</text>
+    <text x="24" y="422" font-size="13" fill="var(--diagram-muted,#58636b)">候选存储形状为教学示意，无最优排名；早期探索不要求完整实现所有方案。</text>
+  </g>
+</svg>

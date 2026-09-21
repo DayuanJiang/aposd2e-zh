@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 538" role="img" aria-labelledby="ch07-dispatch-value-title ch07-dispatch-value-desc">
+  <title id="ch07-dispatch-value-title">签名相同，就一定是透传吗？</title>
+  <desc id="ch07-dispatch-value-desc">教学请求 S 为 /static/a.txt，D 为 /report。左侧纯转发器把两个请求原样交给相同固定目标，没有额外功能。右侧同样的 handle(request) 签名通过 /static/* 规则把 S 交给文件处理者、D 交给动态处理者；两个处理者也显示相同签名。固定目标本身不能证明无价值。</desc>
+  <defs><marker id="ch07-dispatch-value-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="538" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="20" font-weight="600">签名相同，就一定是透传吗？</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">教学请求 S = /static/a.txt；D = /report；只示一条简化路由规则</text>
+    <text x="24" y="103" font-weight="600">本例纯转发：除此之外不做工作</text><text x="370" y="103" font-weight="600">分发：根据 URL 选择目标</text>
+    <rect x="24" y="122" width="278" height="56" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="42" y="155" font-family="ui-monospace,monospace">handle(request)</text>
+    <rect x="370" y="122" width="286" height="56" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="388" y="155" font-family="ui-monospace,monospace">handle(request)</text>
+    <path d="M164 187V302" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch07-dispatch-value-arrow)"/><text x="183" y="238">S、D 均原样交给</text>
+    <rect x="24" y="315" width="278" height="83" rx="4" fill="none" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="42" y="343">同一个固定目标</text><text x="42" y="378" font-family="ui-monospace,monospace">handle(request)</text>
+    <path d="M513 187V211" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch07-dispatch-value-arrow)"/>
+    <path d="M393 225H631L654 256L631 287H393L370 256Z" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="400" y="262">URL 匹配 /static/*？</text>
+    <g stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch07-dispatch-value-arrow)"><path d="M422 296V336"/><path d="M591 296V336"/></g>
+    <text x="381" y="320" font-size="13">S：是</text><text x="611" y="320" font-size="13">D：否</text>
+    <text x="370" y="363" font-weight="600">文件处理者</text><text x="538" y="363" font-weight="600">动态处理者</text>
+    <text x="370" y="390" font-family="ui-monospace,monospace" font-size="13">handle(request)</text><text x="538" y="390" font-family="ui-monospace,monospace" font-size="13">handle(request)</text>
+    <path d="M24 422H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="452" font-weight="600">S、D 的去向改变了，签名没有改变：选择本身是新增职责。</text>
+    <text x="24" y="482" font-size="14">固定目标本身不能证明无价值；左例额外假定不做其他工作。</text>
+    <text x="24" y="515" font-size="13" fill="var(--diagram-muted,#5c645d)">同层的设备驱动也可共享签名、各自实现不同功能，不是透传链。</text>
+  </g>
+</svg>

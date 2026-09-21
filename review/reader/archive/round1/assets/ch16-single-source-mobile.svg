@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 626" role="img" aria-labelledby="ch16-single-source-m-title ch16-single-source-m-desc">
+  <title id="ch16-single-source-m-title">说明副本与引用的失效差异</title>
+  <desc id="ch16-single-source-m-desc">上方规则变化向三个说明副本传播，其中 C 漏改仍可读。下方三个使用处指向同一新版说明，目标移动时引用失效可发现。示例名称是教学占位。</desc>
+  <defs><marker id="ch16-single-source-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="626" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">复制与引用，失效方式不同</text>
+    <text x="16" y="57" font-size="14">16.4 · A/B/C 与版本标签为教学示例</text>
+    <text x="16" y="95" font-weight="600">复制：每一份都要同步改</text>
+    <rect x="85" y="115" width="190" height="45" rx="5" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="180" y="144" text-anchor="middle">规则发生变化</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch16-single-source-m-arrow)">
+      <path d="M180 160V181H65V209"/><path d="M180 181V209"/><path d="M180 181H295V209" stroke-dasharray="5 4"/>
+      <path d="M65 482V442H180V418"/><path d="M180 482V418"/><path d="M295 482V442H180"/>
+    </g>
+    <g fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"><rect x="16" y="209" width="98" height="64" rx="5"/><rect x="131" y="209" width="98" height="64" rx="5"/></g>
+    <rect x="246" y="209" width="98" height="64" rx="5" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="65" y="236" text-anchor="middle">A 新版</text><text x="65" y="260" text-anchor="middle" font-size="14">已更新</text>
+    <text x="180" y="236" text-anchor="middle">B 新版</text><text x="180" y="260" text-anchor="middle" font-size="14">已更新</text>
+    <text x="295" y="236" text-anchor="middle">C 旧版</text><text x="295" y="260" text-anchor="middle" font-size="14">漏改</text>
+    <text x="16" y="305" fill="var(--diagram-danger,#a03946)">旧说明仍可读，读者未必知道它已错。</text>
+    <path d="M16 330H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="359" font-weight="600">引用：只维护一份说明</text>
+    <rect x="85" y="373" width="190" height="45" rx="5" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="180" y="402" text-anchor="middle">唯一说明：新版</text>
+    <text x="65" y="508" text-anchor="middle">A 引用</text><text x="180" y="508" text-anchor="middle">B 引用</text><text x="295" y="508" text-anchor="middle">C 引用</text>
+    <text x="16" y="548">若主说明被移走，引用找不到目标。</text>
+    <text x="16" y="575" fill="var(--diagram-warm,#80531b)">失效可见，才有机会去追查、修正。</text>
+    <text x="16" y="610" font-size="14">引用不是永远有效，仍需维护。</text>
+  </g>
+</svg>

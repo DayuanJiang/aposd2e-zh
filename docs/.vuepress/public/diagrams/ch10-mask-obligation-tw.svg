@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 423" role="img" aria-labelledby="ch10-mask-obligation-t ch10-mask-obligation-d">
+  <title id="ch10-mask-obligation-t">遮蔽例外不能丟掉完成義務</title><desc id="ch10-mask-obligation-d">可恢復的情況在內部重試，操作確實完成才報告成功。未能完成且呼叫者需要的資訊必須暴露。錯誤直接丟棄而假裝成功是不恰當的例外遮蔽。</desc>
+  <defs><marker id="ch10-mask-obligation-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)" /></marker></defs>
+  <rect width="680" height="423" fill="var(--diagram-bg,#f5f7f8)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">遮蔽例外不能丟掉完成義務</text>
+    <text x="24" y="70" font-size="14">條件路徑：內部處理成功，不等於無條件保證網路最終恢復。</text>
+    <text x="24" y="113" font-weight="600">可以內部恢復</text>
+    <rect x="24" y="132" width="160" height="45" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" /><text x="70" y="161">出現丟包</text>
+    <rect x="259" y="132" width="170" height="45" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" /><text x="290" y="161">內部重試並完成</text>
+    <rect x="505" y="132" width="151" height="45" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" /><text x="550" y="161">回傳成功</text>
+    <g stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch10-mask-obligation-a)"><path d="M185 155H251" /><path d="M430 155H497" /></g>
+    <text x="24" y="217" font-weight="600">未完成，且呼叫者需要知道</text>
+    <rect x="24" y="236" width="160" height="45" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" /><text x="63" y="265">操作仍失敗</text>
+    <path d="M185 259H497" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch10-mask-obligation-a)" /><text x="289" y="247">暴露失敗資訊</text>
+    <rect x="505" y="236" width="151" height="45" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" /><text x="534" y="265">呼叫者可處理</text>
+    <path d="M24 307H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="24" y="340" fill="var(--diagram-danger,#a03946)">反例：錯誤</text>
+    <path d="M112 335H250M363 335H495" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-dasharray="5 4" />
+    <text x="267" y="340">捕獲後丟棄</text><text x="512" y="340">假裝成功</text>
+    <path d="M416 321L436 348M436 321L416 348" stroke="var(--diagram-danger,#a03946)" stroke-width="3" />
+    <text x="24" y="382" font-size="13" fill="var(--diagram-muted,#58636b)">反例既沒有完成操作，也沒有讓上層知道訊息可能丟失或對端失敗。</text>
+    <text x="24" y="405" font-size="13" fill="var(--diagram-muted,#58636b)">只有外部不需要該例外資訊時，才適合透過定義消除或在模組內部遮蔽。</text>
+  </g>
+</svg>

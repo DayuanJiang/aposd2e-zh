@@ -1,0 +1,57 @@
+[
+  {
+    "id": "ch09-http-knowledge",
+    "chapter": "ch09",
+    "title": "读取与解析共享了哪份知识？",
+    "question": "只负责读取 HTTP 请求的方法，真的不需要理解请求格式吗？",
+    "answer": "判断请求是否读完也需要理解格式；合并读取与解析可将这份知识集中起来，并消除传递中间请求字符串的接口。",
+    "summary": "图中展示的是格式知识的重复与接口消除，不是某一版本 HTTP 的完整解析算法。",
+    "alt": "合并前，读取类和解析类各自依赖 HTTP 格式知识，并通过请求字符串连接；合并后，一处读取解析模块拥有格式知识，对外返回解析结果，中间字符串不再是跨模块接口。",
+    "kind": "dependency-comparison",
+    "desktop": "/diagrams/ch09-http-knowledge.svg",
+    "mobile": "/diagrams/ch09-http-knowledge-mobile.svg",
+    "anchor": { "section": "9.2", "placement": "end" },
+    "sources": [
+      { "section": "9.1", "epub": "OEBPS/part0013.xhtml#p16:f4cb6f1927", "reason": "读取请求也须识别结束边界，从而与解析共享格式知识；图示不将某个标头概括为所有HTTP请求的唯一边界规则。" },
+      { "section": "9.2", "epub": "OEBPS/part0013.xhtml#p18:31ebb1c440", "reason": "合并后省去在两个方法之间返回和传递请求字符串的接口。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch09-cursor-state",
+    "chapter": "ch09",
+    "title": "合并对象为何反而增加一次判断？",
+    "question": "选区和光标经常一起变化，为什么这个例子仍然适合分开表示？",
+    "answer": "组合对象必须先看布尔值，再选择某个端点，才能得到光标；独立 Position 直接表达光标位置，选区仍由两个 Position 表示。",
+    "summary": "分开的是表示，不是取消关系：有选区时光标仍位于其一端。高层仍要分别操作选区和光标，合并没有省去这些操作。",
+    "alt": "组合表示通过光标在哪一端的布尔分支选择选区起点或终点；分开表示则直接读取 cursor Position。示意文本中选区有两个端点，光标与其中一个重合。",
+    "kind": "state-representation",
+    "desktop": "/diagrams/ch09-cursor-state.svg",
+    "mobile": "/diagrams/ch09-cursor-state-mobile.svg",
+    "anchor": { "section": "9.5", "placement": "end" },
+    "sources": [
+      { "section": "9.5", "epub": "OEBPS/part0013.xhtml#p31:1efe914cfc", "reason": "光标始终存在，选区可不存在；有选区时光标位于一个端点。" },
+      { "section": "9.5", "epub": "OEBPS/part0013.xhtml#p33:ed9e86e55c", "reason": "组合对象需检查布尔值再读取端点，且高层仍需分别操作两者。" },
+      { "section": "9.5", "epub": "OEBPS/part0013.xhtml#p34:4d0eb5288f", "reason": "修订版选区用两个Position，光标用一个Position，无专用选区或光标类。字母与光标位置为教学示例。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch09-logging-locality",
+    "chapter": "ch09",
+    "title": "这条日志为什么不需要一个专用包装类？",
+    "question": "把一条错误日志提成方法，为什么可能让阅读更费力？",
+    "answer": "读调用处要跳去确认记录内容，读包装方法又要跳回理解错误情境；在检测处记录，可让这两份知识同处一地。",
+    "summary": "结论限于书中单处调用、很浅、与调用处高度依赖的包装方法；不反对通用日志基础设施。",
+    "alt": "分离时，错误检测处与 NetworkErrorLogger 包装方法之间有两条相反的阅读依赖箭头；内联后，错误情境和记录 req、dest、e 的语句相邻，仍调用通用 logger。",
+    "kind": "reading-dependency",
+    "desktop": "/diagrams/ch09-logging-locality.svg",
+    "mobile": "/diagrams/ch09-logging-locality-mobile.svg",
+    "anchor": { "section": "9.6", "placement": "end" },
+    "sources": [
+      { "section": "9.6", "epub": "OEBPS/part0013.xhtml#p68:df02390bcc", "reason": "专用日志方法大多仅一行、各被调用一次，并与调用处相互依赖。" },
+      { "section": "9.6", "epub": "OEBPS/part0013.xhtml#p69:4beef3e21b", "reason": "建议把日志语句放回检测错误处，消除包装接口；图中保留通用logger，避免误解为取消所有日志抽象。" }
+    ],
+    "status": "awaiting-independent-review"
+  }
+]

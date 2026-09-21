@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 411" role="img" aria-labelledby="ch19-abstraction-increment-title ch19-abstraction-increment-desc">
+  <title id="ch19-abstraction-increment-title">让所需抽象成为增量中心</title>
+  <desc id="ch19-abstraction-increment-desc">战术风险路径中甲乙功能各自新增专用机制；作者建议需求出现时设计稍具通用性的核心，使甲乙功能可汇入同一抽象。不需要预建尚无需求的未来抽象。</desc>
+  <defs><marker id="ch19-abstraction-increment-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="411" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="21" font-weight="600">功能触发需求，抽象组织增量</text><text x="24" y="61" font-size="14">19.2 · 教学结构示意；甲乙不是原书的具体功能</text>
+    <text x="24" y="103" font-weight="600">战术风险</text>
+    <text x="163" y="103">功能甲</text><text x="163" y="161">功能乙</text>
+    <g stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch19-abstraction-increment-arrow)"><path d="M234 97H315"/><path d="M234 155H315"/></g>
+    <g fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"><rect x="315" y="77" width="170" height="40" rx="4"/><rect x="315" y="135" width="170" height="40" rx="4"/></g>
+    <text x="400" y="103" text-anchor="middle">甲的专用机制</text><text x="400" y="161" text-anchor="middle">乙的专用机制</text>
+    <path d="M501 77H511V175H501" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2"/>
+    <text x="525" y="116">下一项需求</text><text x="525" y="143">又加特殊分支</text>
+    <path d="M24 201H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="239" font-weight="600">作者建议</text><text x="163" y="239">功能甲</text><text x="163" y="304">功能乙</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2"><path d="M234 233H278V267M234 298H278V267"/><path d="M278 267H329" marker-end="url(#ch19-abstraction-increment-arrow)"/></g>
+    <rect x="329" y="221" width="327" height="92" rx="5" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="492" y="249" text-anchor="middle">需求出现时，设计所需抽象</text><text x="492" y="277" text-anchor="middle">核心完整、稍具通用性</text><text x="492" y="300" text-anchor="middle" font-size="14">后续功能复用核心，而非各加一套</text>
+    <path d="M24 345H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="374">范围外：尚无需求的未来抽象，可以继续推迟。</text><text x="24" y="400" font-size="14">这是作者对增量单位的建议，不是对所有敏捷实践的必然判断。</text>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 754" role="img" aria-labelledby="ch16-single-source-m-title ch16-single-source-m-desc">
+  <title id="ch16-single-source-m-title">副本過時與說明目標缺失的對照</title>
+  <desc id="ch16-single-source-m-desc">上方虛線說明三個副本都有更新義務，C 漏改卻仍可讀。中間三個使用處的實線合併後查詢唯一說明。下方主說明被移走時，舊引用到達空的 xyz 位置，查詢失敗。集中說明自身仍需維護。</desc>
+  <defs><marker id="ch16-single-source-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="360" height="754" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">副本過時，和引用目標缺失</text><text x="16" y="57" font-size="14">16.4 · A/B/C 與 xyz 為教學佔位</text>
+    <text x="16" y="93" font-weight="600">複製：虛線表示同步更新義務</text>
+    <rect x="85" y="112" width="190" height="43" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" /><text x="180" y="140" text-anchor="middle">規則已改為新版</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ch16-single-source-m-arrow)"><path d="M180 155V177H65V201" /><path d="M180 177V201" /><path d="M180 177H295V201" /></g>
+    <g fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"><rect x="16" y="201" width="98" height="61" rx="4" /><rect x="131" y="201" width="98" height="61" rx="4" /></g>
+    <rect x="246" y="201" width="98" height="61" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" />
+    <text x="65" y="227" text-anchor="middle">A 新版</text><text x="65" y="251" text-anchor="middle" font-size="14">已更新</text><text x="180" y="227" text-anchor="middle">B 新版</text><text x="180" y="251" text-anchor="middle" font-size="14">已更新</text><text x="295" y="227" text-anchor="middle">C 舊版</text><text x="295" y="251" text-anchor="middle" font-size="14">漏改</text>
+    <text x="16" y="294" fill="var(--diagram-danger,#a03946)">C 仍有內容，過時未必容易發現。</text>
+    <path d="M16 315H344" stroke="var(--diagram-line,#aebbad)" />
+    <text x="16" y="346" font-weight="600">集中：實線是讀者查詢</text>
+    <rect x="51" y="365" width="258" height="45" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" /><text x="180" y="394" text-anchor="middle">xyz 中的唯一說明：新版</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2"><path d="M65 466V438H295V466M180 466V438" /><path d="M180 438V410" marker-end="url(#ch16-single-source-m-arrow)" /></g>
+    <text x="65" y="491" text-anchor="middle">A 引用</text><text x="180" y="491" text-anchor="middle">B 引用</text><text x="295" y="491" text-anchor="middle">C 引用</text>
+    <text x="16" y="534" font-weight="600">第二狀態：主說明被移走</text>
+    <text x="16" y="580">舊引用</text><text x="16" y="607" font-size="14">“查看 xyz”</text>
+    <path d="M115 589H177" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch16-single-source-m-arrow)" />
+    <rect x="177" y="558" width="167" height="73" rx="4" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-dasharray="5 4" />
+    <text x="260" y="585" text-anchor="middle">xyz：空位置</text><text x="260" y="613" text-anchor="middle" fill="var(--diagram-danger,#a03946)">找不到說明</text>
+    <path d="M16 655H344" stroke="var(--diagram-line,#aebbad)" />
+    <text x="16" y="684">缺失可見，只適用於這個移走的目標。</text><text x="16" y="712">可讀的主說明仍可能過時，也要更新。</text><text x="16" y="740" font-size="14">並非所有引用缺陷都會顯露出來。</text>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 637" role="img" aria-labelledby="ch14-context-budget-t ch14-context-budget-d">
+  <title id="ch14-context-budget-t">上下文能省掉哪些词？</title><desc id="ch14-context-budget-d">只有一种块的File类可省略重复的file前缀；混合文件块与磁盘块时需区分。同类源目标用srcFileBlock和dstFileBlock。短循环可用i，远离声明时更需描述性名称。</desc>
+  <defs><marker id="ch14-context-budget-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="680" height="637" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">上下文能省掉哪些词？</text>
+    <text x="24" y="78" font-weight="600">可见上下文</text><text x="413" y="78" font-weight="600">名称还需携带的信息</text>
+    <rect x="24" y="99" width="302" height="61" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="42" y="126">File 类内只有一种块</text><text x="42" y="149" font-size="13">“属于文件”已由上下文给出</text>
+    <path d="M327 130H396" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch14-context-budget-a)"/><text x="413" y="128" font-family="monospace" font-size="18">block</text><text x="413" y="153" font-size="13">可省去重复的 file 前缀</text>
+    <rect x="24" y="184" width="302" height="61" rx="4" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="42" y="211">同时出现文件块、磁盘块</text><text x="42" y="234" font-size="13">同一上下文里有两种行为不同的值</text>
+    <path d="M327 215H396" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch14-context-budget-a)"/><text x="413" y="210" font-family="monospace">fileBlock / diskBlock</text><text x="413" y="237" font-size="13">不能省去地址域的区别</text>
+    <path d="M24 270H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="301" font-weight="600">同一用途，角色不同：保留共同词干</text>
+    <text x="24" y="337" font-family="monospace" font-size="18">srcFileBlock</text><path d="M167 332H368" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch14-context-budget-a)"/><text x="242" y="319" font-size="13">复制</text><text x="388" y="337" font-family="monospace" font-size="18">dstFileBlock</text>
+    <path d="M58 346H167M422 346H531" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="3"/>
+    <text x="24" y="382" font-size="14" font-weight="600">短循环：完整用法可见</text><text x="364" y="382" font-size="14" font-weight="600">远距离使用：名称需自带含义</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><rect x="24" y="400" width="296" height="134" rx="4"/><rect x="364" y="400" width="292" height="134" rx="4"/></g>
+    <g font-family="monospace" font-size="14"><text x="40" y="428">for (i=0; i&lt;numLines; i++) {</text><text x="40" y="457">  visitLine(i);</text><text x="40" y="486">}</text><text x="380" y="428">lineIndex = locateLine();</text><text x="380" y="506">visitLine(lineIndex);</text></g>
+    <text x="409" y="466" font-size="13" fill="var(--diagram-muted,#58636b)">… 中间省略较长代码 …</text>
+    <path d="M634 426V504" stroke="var(--diagram-line,#aebbad)" stroke-dasharray="4 4"/>
+    <text x="24" y="560" font-size="14">i 的用途在这三行内可见。</text><text x="364" y="560" font-size="14">lineIndex 在远处仍说明角色。</text>
+    <path d="M24 583H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="611" font-size="13" fill="var(--diagram-muted,#58636b)">图中伪代码为教学例。无名称长度阈值；短名和长名均需由读者的理解来检验。</text>
+  </g>
+</svg>

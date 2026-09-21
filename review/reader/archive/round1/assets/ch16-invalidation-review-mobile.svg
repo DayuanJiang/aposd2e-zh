@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 633" role="img" aria-labelledby="ch16-invalidation-review-m-title ch16-invalidation-review-m-desc">
+  <title id="ch16-invalidation-review-m-title">代码变化时检查哪一层说明</title>
+  <desc id="ch16-invalidation-review-m-desc">实现细节变化、整体行为变化和未来需要的修复理由分三行映射到局部说明、高层说明和相关代码。右侧汇流至提交前逐项检查差异。</desc>
+  <defs><marker id="ch16-invalidation-review-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="633" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">变化在哪层，就核对哪层</text>
+    <text x="16" y="57" font-size="14">16.3 / 16.5 / 16.6 · 提交前复核</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><rect x="16" y="84" width="286" height="36"/><rect x="16" y="210" width="286" height="36"/><rect x="16" y="336" width="286" height="36"/></g>
+    <text x="30" y="108" font-weight="600">实现细节变化</text><text x="30" y="234" font-weight="600">整体行为变化</text><text x="30" y="360" font-weight="600">未来仍需要的修复理由</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch16-invalidation-review-m-arrow)"><path d="M36 126V146"/><path d="M36 252V272"/><path d="M36 378V398"/><path d="M307 164H327V498H180V518"/><path d="M307 290H327"/><path d="M307 416H327"/></g>
+    <text x="52" y="160">核对局部细节说明</text><text x="30" y="187" font-size="14">高层行为描述可能仍有效</text>
+    <text x="52" y="286">核对接口与高层说明</text><text x="30" y="313" font-size="14">不只更新所改的那行代码</text>
+    <text x="52" y="412">写在相关代码附近</text><text x="30" y="439" font-size="14">不要只留在提交日志中</text>
+    <rect x="16" y="518" width="328" height="49" rx="5" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="180" y="549" text-anchor="middle">提交前：逐项核对代码与文档</text>
+    <text x="16" y="598" font-size="14">抽象说明更耐受局部修改，</text><text x="16" y="621" font-size="14">但精确的细节说明仍然有必要。</text>
+  </g>
+</svg>

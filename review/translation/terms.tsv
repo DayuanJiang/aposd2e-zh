@@ -1,0 +1,82 @@
+english	preferred_zh	en_forms	zh_variants	sense	distinction	evidence	status
+complexity	复杂性	complexity|complexities	复杂性|复杂度	使软件难以理解和修改的复杂性	不是算法时间复杂度	docs/en/ch02.md:3; docs/ch02.md:3; docs/README.md:56	确认；沿用
+dependency	依赖性／依赖关系	dependency|dependencies	依赖性|依赖关系|依赖项	设计中的相互依赖；具体关系用依赖关系	不机械改成包管理依赖项	docs/en/ch02.md:19; docs/ch02.md:69	确认；按语境
+obscurity	模糊性	obscurity|obscurities	模糊性|晦涩性	读者无法看出所需的重要信息	不等于程序行为不确定	docs/en/ch18.md:3; docs/ch18.md:3	确认；沿用
+change amplification	变更放大	change amplification	变更放大	一次需求变更迫使多处代码修改	不是变更的业务影响	docs/en/ch02.md:19; docs/ch02.md:69	确认；沿用
+cognitive load	认知负荷	cognitive load	认知负荷|认知负担	完成任务需要掌握的信息量	不是代码行数	docs/en/ch06.md:41; docs/ch06.md:39	确认；沿用
+unknown unknowns	未知的未知	unknown unknowns	未知的未知	不知道自己尚不知道的必要信息	保留本书命名	docs/en/ch02.md:19; docs/ch02.md:69	确认；沿用
+modular design	模块化设计	modular design	模块化设计	让开发人员只面对局部复杂性	不声称模块完全独立	docs/en/ch01.md:12; docs/ch01.md:11	确认；沿用
+abstraction	抽象	abstraction|abstractions	抽象	保留重要信息并隐藏不重要细节	不是省略所有细节	docs/en/ch13.md:7; docs/ch13.md:7	确认；沿用
+deep module/class	深模块／深类	deep module|deep modules|deep class|deep classes|deeper class|deeper classes	深模块|深类|深的模块|深的类|更深的类|深层模块|深层类	接口简单且封装较多功能	与软件层级layer/level不同	docs/en/ch04.md:21; docs/ch04.md:119	确认；沿用
+shallow module/class	浅模块／浅类	shallow module|shallow modules|shallow class|shallow classes	浅模块|浅类|浅的模块|浅的类|浅层模块|浅层类	接口复杂度接近实现复杂度	不是层级较低	docs/en/ch05.md:25; docs/ch05.md:115	确认；沿用
+information hiding	信息隐藏	information hiding	信息隐藏|信息隐蔽	在模块内部封装设计知识	不是安全加密	docs/en/ch05.md:25; docs/ch05.md:115	确认；沿用
+information leakage	信息泄露	information leakage	信息泄露|信息泄漏	同一设计决策出现在多个模块	不是隐私或内存泄漏	docs/en/ch06.md:43; docs/ch06.md:41	确认；沿用
+general-purpose	通用	general-purpose	通用|通用用途	接口适用于多种用途	并非预先实现所有未来功能	docs/en/ch06.md:17; docs/ch06.md:17	确认；沿用
+special-purpose	专用	special-purpose	专用|特殊用途|专门	针对特定用途的设计	不译为专业	docs/en/ch06.md:7; docs/ch06.md:7	确认；统一语境
+specialization	专用化	specialization|specializations|over-specialization	专用化|专业化	针对特定用途收窄设计	不是职业专业化；不泛化为模板特化	docs/en/ch06.md:41; docs/ch06.md:39	确认；修正专业化
+generality	通用性	generality	通用性|通用化	设计能够适用于多种用途的性质	过程可说通用化；保留性质与过程区别	docs/en/ch06.md:3; docs/ch06.md:3	确认；按语境
+special case	特殊情况	special case|special cases|special-case	特殊情况|特殊情形	需要额外分支处理的情况	不与所有异常等同	docs/en/ch06.md:153; docs/ch06.md:151	确认；沿用
+edge case/condition	边界情况	edge case|edge cases|edge condition|edge conditions	边界情况|边界条件	正常处理范围边缘的情况	不是所有罕见情况	docs/en/ch06.md:153; docs/ch06.md:151	确认；按语境
+interface	接口	interface|interfaces	接口	模块对使用者暴露的约定	既有正式声明也有行为约定；不是仅Java interface	docs/en/ch04.md:21; docs/ch04.md:119	确认；沿用
+implementation	实现	implementation|implementations	实现	模块内部实现细节	achieve表示达到目标时不得硬译实现／实作	docs/en/ch04.md:21; docs/ch04.md:119	确认；按语境
+method	方法	method|methods	方法	类的方法	普通英语method也可指做法；不能由中文词频推断技术义	docs/en/ch01.md:38; docs/ch01.md:37	确认；按语境
+function	函数	function|functions	函数|功能	可调用的程序单元	用户界面functions可表示功能；不能全局替换	docs/en/ch01.md:38; docs/ch01.md:37; docs/en/ch06.md:73	确认；按语境
+bug	缺陷／代码缺陷	bug|bugs	代码缺陷|缺陷	程序缺陷	书籍bugs可译错误或勘误；与error区分	docs/en/preface.md:23; docs/preface.md:23; docs/README.md:53	确认；按语境
+error	错误	error|errors	错误	操作的错误条件或错误结果	不是所有bug或exception	docs/en/ch10.md:25; docs/ch10.md:164	确认；沿用
+exception	异常	exception|exceptions	异常	程序异常及其处理机制	普通every rule has exceptions译例外	docs/en/ch10.md:3; docs/ch10.md:3; docs/en/ch01.md:36	确认；按语境
+exception handling	异常处理	exception handling	异常处理	处理异常的代码和策略	不等于检测异常	docs/en/ch10.md:3; docs/ch10.md:3	确认；沿用
+mask exceptions	屏蔽异常	mask exceptions|mask them	屏蔽异常|异常屏蔽	在底层处理异常使上层不必处理	不是捕获后无条件丢弃；保留10.9反例	docs/en/ch10.md:25; docs/ch10.md:94; docs/ch10.md:158	确认；保留边界
+exception aggregation	异常聚合	exception aggregation|aggregate several special-case handlers	异常聚合|聚合异常	用更通用的处理程序集中处理多种异常	与低层异常屏蔽不同	docs/en/ch10.md:25; docs/ch10.md:106	确认；沿用
+handler	处理程序／处理函数	handler|handlers	处理程序|处理函数|异常处理程序	响应事件或处理异常的代码	不是操作系统进程；繁体沿用处理常式	docs/en/ch06.md:113; docs/ch06.md:111; docs/en/ch10.md:25	确认；按语境
+pass-through	透传	pass-through	透传|传递变量	只把参数或请求向下一层传递	正常传参并不都是透传	docs/en/ch07.md:24; docs/ch07.md:113; docs/README.md:61	确认；沿用
+temporal decomposition	时间顺序分解（简称时间分解）	temporal decomposition	时间顺序分解|时间分解	按运行时步骤而非信息隐藏拆模块	不是时间复杂度；保留全称与简称	docs/en/ch05.md:27; docs/ch05.md:117	确认；沿用
+conjoined methods/functions	连体方法／连体函数	conjoined method|conjoined methods|conjoined function|conjoined functions	连体方法|连体函数	必须结合阅读才能理解的方法或函数	不等于所有互相调用的函数	docs/en/ch09.md:41; docs/ch09.md:201	确认；沿用
+red flag	危险信号	red flag|red flags	危险信号	提示设计可能存在问题的迹象	不能升级为必然错误	docs/en/ch01.md:34; docs/ch01.md:33	确认；沿用
+obvious	易理解／显而易见	obvious|obviousness	易理解|易于理解|明显|显而易见	代码特性与信息可见性按语境区分	things not obvious from code指代码未表达的信息	docs/en/ch13.md:3; docs/ch13.md:3; docs/en/ch18.md:5	确认；修正第13章主题
+comments not obvious from code	注释应描述从代码中看不出的信息	things that aren't obvious from the code|things that aren’t obvious from the code|things that are not obvious from the code	代码中难以理解的内容|从代码中看不出的信息	注释补足代码不能直接表达的信息	不是用注释解释难懂代码这一狭义要求	docs/en/ch13.md:3; docs/ch13.md:3; docs/en/summary.md:19	确认；修正
+interface documentation	接口文档	interface documentation|interface comment|interface comments	接口文档|接口注释	调用方使用模块所需的信息	排除调用方无需知道的实现细节	docs/en/ch12.md:35; docs/ch12.md:67; docs/en/ch22.md:3	确认；沿用
+implementation documentation	实现文档	implementation documentation|implementation comment|implementation comments	实现文档|实现注释	维护内部实现所需的信息	与接口文档分开	docs/en/ch22.md:3; docs/ch22.md:3	确认；沿用
+self-documenting	自解释的	self-documenting	自解释|自说明	代码自身传达含义的主张	保留作者对该借口的批评，不强化为代码可替代全部文档	docs/en/ch12.md:11; docs/ch12.md:11	确认；沿用
+consistency	一致性	consistency	一致性	类似情形采用类似方式	不是把本来不同的情形强行统一	docs/en/ch17.md:3; docs/ch17.md:3	确认；沿用
+invariant	不变量	invariant|invariants	不变量|不变式	变量或结构始终满足的性质	不是数值永远不变的变量	docs/en/ch21.md:11; docs/ch21.md:11; docs/ch17.md:19	确认；解释边界
+leverage	以少量知识或机制解决更多问题	leverage|leverage point|cognitive leverage	杠杆点|认知杠杆|杠杆	一种知识或机制带来广泛收益	不是物理杠杆；正文用语义表达，不硬统一为一个名词	docs/en/ch21.md:11; docs/ch21.md:11; docs/en/ch17.md:3	确认；按语境释义
+selection	选区／所选区域	selection|selections	选择的区域|选择区域|区域选择|所选区域|选区|所选内容	文本编辑器选中的字符范围	普通选择方案不是selection技术义；动作与区域区分	docs/en/ch06.md:35; docs/ch06.md:33; docs/README.md:63	确认；优先既有所选区域
+undo/redo	撤销／重做	undo|redo|undos|redos	撤销|撤消|重做	编辑操作的逆向恢复和再次执行	保留History.redo原文矛盾作待核，不擅改API	docs/en/ch06.md:133; docs/ch06.md:129; docs/en/ch06.md:137	确认译法；源文疑点保留
+line-oriented	面向行	line-oriented	面向行	以整行文本为操作单位	不等于面向字符或任意范围	docs/en/ch11.md:5; docs/ch11.md:5	确认；沿用
+character-oriented	面向字符	character-oriented	面向字符	以单个字符为操作单位	不与字符串接口混同	docs/en/ch11.md:9; docs/ch11.md:9	确认；沿用
+string-oriented	面向字符串	string-oriented	面向字符串	可操作包括跨行范围的字符串	不强行将原文string和range术语合并	docs/en/ch11.md:5; docs/ch11.md:5	确认；沿用
+range-oriented	面向范围	range-oriented	面向范围	以一段字符范围为操作单位	保留与其他接口粒度的比较	docs/en/ch11.md:17; docs/ch11.md:17	确认；沿用
+gap buffer	间隙缓冲区	gap buffer	间隙缓冲区	文本存储结构	不是普通I/O缓冲区	docs/en/ch11.md:19; docs/ch11.md:19	确认；沿用
+configuration parameter	配置参数	configuration parameter|configuration parameters	配置参数|配置选项	控制策略的外部设置	不要将选择策略的负担无谓转嫁给管理员	docs/en/ch08.md:5; docs/ch08.md:5	确认；按语境
+critical path	关键路径	critical path|critical paths|performance-critical path	关键路径|性能关键路径	对性能最重要的执行路径	不是项目管理中的工期路径	docs/en/ch20.md:15; docs/ch20.md:144	确认；沿用
+current term	当前任期	current term	当前项|当前任期	Raft示例的任期编号	不译当前项或当前术语	docs/en/ch18.md:15; docs/ch18.md:152	确认；修正
+strategic comments	有针对性的注释	strategic comments	战略式注释|有针对性的注释	在关键位置补充读者需要的信息	不机械套用第3章战略式编程名称	docs/en/ch18.md:17; docs/ch18.md:154	确认；按语境
+design it twice	设计两次	design it twice|design-it-twice|designing it twice	设计两次|两次设计	关键设计决策比较多个方案	并非要求完整实现两遍	docs/en/ch11.md:3; docs/ch11.md:3	确认；沿用
+define errors out of existence	通过定义来规避错误	define errors out of existence|defining errors out of existence|redefining semantics to eliminate error conditions	通过定义来规避错误|重新定义语义以消除错误条件	调整操作语义让正常行为覆盖原异常情况	不是忽略或掩盖真实错误	docs/en/ch10.md:3; docs/ch10.md:3; docs/en/ch10.md:25	确认；沿用并澄清
+clean design	整洁的设计	clean design|clean designs	整洁的设计|简洁的设计	清晰有序的设计	clean和simple不必都译简洁	docs/en/ch03.md:3; docs/ch03.md:4	确认；沿用
+Clean Code	代码整洁之道	Clean Code	代码整洁之道|整洁代码之道	Robert Martin书名	保留引文观点，不把作者的反驳改成建议	docs/en/ch12.md:27; docs/ch12.md:60; docs/ch09.md:197	确认；统一书名
+code review	代码审查	code review|code reviews	代码审查|代码审核	通过阅读代码发现设计问题	与audit审计区分	docs/en/ch01.md:32; docs/ch01.md:31	确认；沿用
+unit test	单元测试	unit test|unit tests|unit testing	单元测试	对单元行为的测试	普通test不是所有情况下都指单元测试	docs/en/ch15.md:4; docs/ch15.md:4; docs/en/ch19.md:9	确认；沿用
+test-driven development	测试驱动开发	test-driven development	测试驱动开发	先写测试再实现的开发方式	与单元测试分开；保留作者的反对意见及修复缺陷时的例外	OEBPS/part0023.xhtml#p25:f57de5c385; OEBPS/part0023.xhtml#p26:767f205de4	完整原文确认
+design pattern	设计模式	design pattern|design patterns	设计模式	常见设计问题的复用方案	普通pattern也可能只是相似结构	docs/en/preface.md:3; docs/preface.md:3	确认；按语境
+agile development	敏捷开发	agile development	敏捷开发	增量软件开发方法	保留作者对以功能而非抽象为增量的批评	docs/en/ch01.md:18; docs/ch01.md:17	确认；沿用
+parameter/argument	参数	parameter|parameters|argument|arguments	参数|实参|形参	按项目约定统称参数	记录英文区别；本次不全书引入形参实参二分	docs/en/ch06.md:35; docs/ch06.md:33; docs/en/ch21.md:31	确认；沿用
+GUI/text editor	图形界面／文本编辑器	GUI|GUI text editor|text editor|text editors	图形界面|图像界面|文本编辑器|文本编译器	图形用户界面的文本编辑器	不是图像编辑器或编译器	docs/en/ch06.md:21; docs/ch06.md:21; docs/README.md:63	确认；修正
+dispatcher	分发器	dispatcher|dispatchers	分发器|分派器|调度方法	将请求分发给相应处理方法	不与scheduler调度器混同	OEBPS/part0011.xhtml#p40:76d55e43e9; docs/README.md:58	完整原文确认
+technical debt	技术债	technical debt	技术债务|技术债	现在省时而让未来付出更大代价	不擅改作者量化判断	OEBPS/part0007.xhtml#p21:fdd3237231	完整原文确认
+strategic/tactical programming	战略式编程／战术式编程	strategic programming|tactical programming|strategic approach|tactical approach	战略式编程|战术式编程|战略式方法|战术式方法	持续投资设计与只追求当前任务完成的对比	strategic comments另按语境翻译	docs/en/ch03.md:3; docs/en/ch03.md:17; docs/ch03.md:4	确认；沿用
+common case	常见情况	common case|common cases|common-case	常见情况|常见场景	最常遇到的情况	common-case code不是general-purpose通用代码	docs/en/ch06.md:5; docs/ch06.md:5	确认；修正
+normal case	正常情况	normal case|normal cases	正常情况	非异常情况下的常规行为	不按频率等同于常见情况	docs/en/ch10.md:3; docs/ch10.md:3; docs/en/ch06.md:153	确认；沿用
+centrality	核心地位	centrality	中心化|核心地位	重要概念决定周围系统结构	不是centralization集中式架构	docs/en/ch21.md:23; docs/ch21.md:23	确认；修正
+by a factor of 2	达到原来的两倍	by a factor of 2	提高两倍|原来的两倍	结果是原值乘以二	不是增加原值的两倍	docs/en/ch20.md:15; docs/ch20.md:144	确认；修正
+single instance	只出现一处	single instance	单例代码|一处代码|一份代码	代码在系统中只有一处	不是单例设计模式	docs/en/ch09.md:5; docs/ch09.md:10	确认；修正
+allocation	分配／分配的内存区域	allocation|allocations	分配|分配器|内存区域|内存分配区域	分配操作或其得到的内存区域	不是执行分配操作的allocator	OEBPS/part0014.xhtml#p87:4780a917ab; OEBPS/part0022.xhtml#p86:8e2f7311da	完整原文确认；按语境
+internal representation	内部表示	internal representation|internal representations	内部表示|内部实现	内部采用的数据组织形式	比implementation内部实现更具体	OEBPS/part0009.xhtml#p43:5c5eb3299a	完整原文确认；修正
+partial information hiding	部分信息隐藏	partial information hiding	部分信息隐藏|隐藏部分信息	部分调用者不需要知道该信息	不等于全部信息都公开	OEBPS/part0009.xhtml#p16:3b92e49940	完整原文确认
+classitis	多类症	classitis	多类症	将类越多越好推向极端的设计倾向	沿用作者有意命名，不直译医学疾病	OEBPS/part0008.xhtml#p54:d9224258d8	完整原文确认；沿用
+secondary exceptions	后续异常	secondary exception|secondary exceptions	次要异常|后续异常|新的异常	异常恢复过程再次触发的异常	secondary表示随后发生，不表示重要性较低	OEBPS/part0014.xhtml#p13:e1e3cb0444	完整原文确认；修正
+instrumentation	诊断插桩／诊断跟踪代码	instrumentation	诊断插桩|诊断信息|跟踪代码|诊断跟踪	加入代码以观察程序执行状态	不是泛指编程工具	OEBPS/part0018.xhtml#p7:8c78010958	完整原文确认；按语境
+factoring	拆分方式	factoring|factor out|factored out|factoring out	拆分方式|拆分|提取	将功能提取为代码单元的方式	不与refactoring整体重构机械混同	OEBPS/part0013.xhtml#p76:00e2420106	完整原文确认；按语境
+common name	统一约定的名称	common name|common names	通用名称|统一约定的名称|约定的名称	同一用途共同采用的名称	不是语义笼统或适用范围广的名称	OEBPS/part0018.xhtml#p51:06485baed2	完整原文确认；修正
+interface inheritance	接口继承	interface inheritance	接口继承	通过同一接口支持不同实现	与实现继承分开	OEBPS/part0023.xhtml#p6:6eb74b2095	完整原文确认；沿用
+implementation inheritance	实现继承	implementation inheritance	实现继承	继承默认实现并允许覆盖	不等于接口继承	OEBPS/part0023.xhtml#p8:18d8c7aeae	完整原文确认；沿用

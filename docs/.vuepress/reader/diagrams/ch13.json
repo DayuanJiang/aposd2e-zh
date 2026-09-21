@@ -1,0 +1,325 @@
+[
+  {
+    "id": "ch13-padding-information",
+    "chapter": "ch13",
+    "title": "4 是多少，留在哪一边？",
+    "question": "为什么“文本的水平填充”没有解释 textHorizontalPadding？",
+    "answer": "它只是复述名称；有用的注释补上单位为像素，并明确每行左、右两侧分别留白。",
+    "summary": "尺寸线把两项缺失信息对应到具体几何位置。4像素来自原文；留白区域为便于辨认而放大，不按实际屏幕像素绘制。",
+    "alt": "原注释对单位和单侧双侧都留下问号；修订注释对应到文本左右两条独立尺寸线，每侧均标4px，明确不是两侧合计4px。",
+    "kind": "annotated-dimension",
+    "desktop": "/diagrams/ch13-padding-information.svg",
+    "mobile": "/diagrams/ch13-padding-information-mobile.svg",
+    "anchor": {
+      "section": "13.2",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "13.2",
+        "epub": "OEBPS/part0017.xhtml#p49:d89461d329",
+        "reason": "原注释遗漏单位及留白位于一侧还是两侧。"
+      },
+      {
+        "section": "13.2",
+        "epub": "OEBPS/part0017.xhtml#p52:4c58df9c7c",
+        "reason": "修订注释明确左右两侧的空白。"
+      },
+      {
+        "section": "13.2",
+        "epub": "OEBPS/part0017.xhtml#p53:5e2c836232",
+        "reason": "单位为像素。"
+      },
+      {
+        "section": "13.2",
+        "epub": "OEBPS/part0017.xhtml#p55:c06f7433be",
+        "reason": "常量值4；放大的几何是教学示意，不是像素比例测量。"
+      }
+    ],
+    "review": {
+      "source": "review/reader/diagram-review-08-14-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    },
+    "status": "content-reviewed",
+    "reviewHistory": [
+      {
+        "source": "earlier-local-review",
+        "recordedStatus": "independently-reviewed",
+        "decision": "keep",
+        "resolution": "两条尺寸线分别表示左右各4像素，保留非像素比例示意的说明。",
+        "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance."
+      },
+      {
+        "source": "review/reader/diagram-review-08-14.json",
+        "decision": "keep",
+        "stage": "MAIN-first-pass",
+        "implementation": "kept-with-post-review-marker-fix",
+        "secondReview": "pending",
+        "accepted": false,
+        "resolution": "保留MAIN初审keep；按后续marked_path_issues修复两版复合尺寸路径，每条独立path均保留起止marker，确保每个4px尺寸线两端都有箭头。坐标、文本与来源锚点不变；二审仍待处理。",
+        "authority": "Historical implementation record, superseded by independent follow-up."
+      }
+    ],
+    "titleTw": "4 是多少，留在哪一邊？",
+    "questionTw": "為什麼“文字的水平填充”沒有解釋 textHorizontalPadding？",
+    "answerTw": "它只是複述名稱；有用的註解補上單位為畫素，並明確每行左、右兩側分別留白。",
+    "summaryTw": "尺寸線把兩項缺失資訊對應到具體幾何位置。4畫素來自原文；留白區域為便於辨認而放大，不按實際螢幕畫素繪製。",
+    "altTw": "原註解對單位和單側雙側都留下問號；修訂註解對應到文字左右兩條獨立尺寸線，每側均標4px，明確不是兩側合計4px。",
+    "desktopTw": "/diagrams/ch13-padding-information-tw.svg",
+    "mobileTw": "/diagrams/ch13-padding-information-mobile-tw.svg"
+  },
+  {
+    "id": "ch13-length-map",
+    "chapter": "ch13",
+    "title": "一条映射记录与一个缺席条目",
+    "question": "怎样把变量注释写到无需追查所有用法就能理解？",
+    "answer": "说明键是含换行的字符数，值是该长度的行数；某长度没有条目，表示不存在这种长度的行。",
+    "summary": "教学数据 a\\n、bb\\n、cc\\n 映射成 {2:1, 3:2}。这里的长度不是像素宽度，缺席条目也不是缺失统计。",
+    "alt": "三行教学文本分别长度2、3、3，箭头按长度汇合成映射2到1、3到2；长度4没有任何输入行，因此不存储键4，而不是存储4到0。",
+    "kind": "data-to-map",
+    "desktop": "/diagrams/ch13-length-map.svg",
+    "mobile": "/diagrams/ch13-length-map-mobile.svg",
+    "anchor": {
+      "section": "13.3",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "13.3",
+        "epub": "OEBPS/part0017.xhtml#p72:156d407aa2",
+        "reason": "旧lineWidths注释遗漏键值含义及单位。"
+      },
+      {
+        "section": "13.3",
+        "epub": "OEBPS/part0017.xhtml#p76:f9f9aac689",
+        "reason": "条目格式为length,count。"
+      },
+      {
+        "section": "13.3",
+        "epub": "OEBPS/part0017.xhtml#p77:065899d1a8",
+        "reason": "length为含换行的字符数；具体三行及计数是教学自拟。"
+      },
+      {
+        "section": "13.3",
+        "epub": "OEBPS/part0017.xhtml#p82:23aa83f202",
+        "reason": "应说明缺少条目的含义；原代码p79-p80明确无该长度行就没有对应条目。"
+      }
+    ],
+    "review": {
+      "source": "review/reader/diagram-review-08-14-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    },
+    "status": "content-reviewed",
+    "reviewHistory": [
+      {
+        "source": "earlier-local-review",
+        "recordedStatus": "independently-reviewed",
+        "decision": "revise",
+        "resolution": "已将移动版描述中的比例式措辞改成键与计数的映射，数据和缺席条目语义不变。",
+        "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance.",
+        "snapshotMobile": "/tmp/aposd2e-viz-review-round1/assets/ch13-length-map-mobile.svg"
+      },
+      {
+        "source": "review/reader/diagram-review-08-14.json",
+        "decision": "keep",
+        "stage": "MAIN-first-pass",
+        "implementation": "kept",
+        "secondReview": "pending",
+        "accepted": false,
+        "resolution": "保留MAIN的keep决定，不重画现有SVG；保留与报告兼容的后续有效修正。 更新当前权威与状态，保留此前本地审阅历史但不将其解释为MAIN或最终二审认可。",
+        "authority": "Historical implementation record, superseded by independent follow-up."
+      }
+    ],
+    "titleTw": "一條對映記錄與一個缺席條目",
+    "questionTw": "怎樣把變數註解寫到無需追查所有用法就能理解？",
+    "answerTw": "說明鍵是含換行的字元數，值是該長度的行數；某長度沒有條目，表示不存在這種長度的行。",
+    "summaryTw": "教學資料 a\\n、bb\\n、cc\\n 對映成 {2:1, 3:2}。這裡的長度不是畫素寬度，缺席條目也不是缺失統計。",
+    "altTw": "三行教學文字分別長度2、3、3，箭頭按長度匯合成對映2到1、3到2；長度4沒有任何輸入行，因此不儲存鍵4，而不是儲存4到0。",
+    "desktopTw": "/diagrams/ch13-length-map-tw.svg",
+    "mobileTw": "/diagrams/ch13-length-map-mobile-tw.svg"
+  },
+  {
+    "id": "ch13-rpc-intent",
+    "chapter": "ch13",
+    "title": "从追加意图读懂判断，但不越过未知条件",
+    "question": "高层注释怎样把几个局部判断连接成一个意图？",
+    "answer": "高层意图帮助读者推断session相等、LOADING及容量判断的用途；这三项满足后，仍须满足maxPos小于assignPos，才可选中RPC供后续追加。该条件的理由仍未解释。",
+    "summary": "图把源码谓词逐项连到作者的“很可能 / 暗示”解释，再显示未被解释的maxPos条件。rpc只是当前readRpc[i]的教学缩写；逻辑组合不表示短路判断或循环顺序，不填入容量上限数值。",
+    "alt": "三个源码条件与推断相对应：session相等很可能确认发往正确服务器，LOADING暗示状态约束，numHashes小于MAX_PKHASHES_PERRPC暗示容量限制。即使三项满足，也要经过rpc.maxPos小于assignPos的显式门；满足才选中供追加，不满足则不选中。不是目标服务器上的RPC，也不把前三项通过画成已追加成功。",
+    "kind": "intent-and-constraints",
+    "desktop": "/diagrams/ch13-rpc-intent.svg",
+    "mobile": "/diagrams/ch13-rpc-intent-mobile.svg",
+    "anchor": {
+      "section": "13.4",
+      "paragraph": 4
+    },
+    "sources": [
+      {
+        "section": "13.4",
+        "epub": "OEBPS/part0017.xhtml#p112:aa4ea17b1c",
+        "reason": "低层注释复述条件，未提供整段目的。"
+      },
+      {
+        "section": "13.4",
+        "epub": "OEBPS/part0017.xhtml#p114:7b82743463",
+        "reason": "修订注释描述尝试追加到发往目标服务器、尚未发送的既有RPC；完整句延续至p115。这里的to表示目的地，不是位于该服务器上。"
+      },
+      {
+        "section": "13.4",
+        "epub": "OEBPS/part0017.xhtml#p106:c361eb5fed",
+        "reason": "代码仍检查maxPos<assignPos；图不得把方向、状态和容量当成全部充分条件。"
+      },
+      {
+        "section": "13.4",
+        "epub": "OEBPS/part0017.xhtml#p107:faf82ddd9f",
+        "reason": "容量约束为numHashes小于MAX_PKHASHES_PERRPC，不提供数值。图中rpc是readRpc[i]的教学缩写，四项条件均须成立。"
+      },
+      {
+        "section": "13.4",
+        "epub": "OEBPS/part0017.xhtml#p116:1a36ab00b4",
+        "reason": "作者以probably和suggests解释会话、状态及容量，并明确maxPos未获解释；图保留推断语气，不把注释当作完整实现规范。"
+      },
+      {
+        "section": "13.4",
+        "epub": "OEBPS/part0017.xhtml#p104:fa32221b8d",
+        "reason": "源码使用session == readRpc[i].session；图中session == rpc.session是明确标注的等价教学缩写。"
+      },
+      {
+        "section": "13.4",
+        "epub": "OEBPS/part0017.xhtml#p105:0d7c76785b",
+        "reason": "源码使用readRpc[i].status == LOADING；图把该谓词与作者的状态约束推断相连。"
+      },
+      {
+        "section": "13.4",
+        "epub": "OEBPS/part0017.xhtml#p108:2e1037046e",
+        "reason": "全部条件通过后这里只设置readActiveRpcId=i，选中供后续追加；图不声称此片段已经执行追加。条件组合图不改变或规定源码检查顺序。"
+      }
+    ],
+    "review": {
+      "source": "review/reader/diagram-review-08-14-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    },
+    "status": "content-reviewed",
+    "reviewHistory": [
+      {
+        "source": "earlier-local-review",
+        "recordedStatus": "independently-reviewed",
+        "decision": "revise",
+        "resolution": "SVG保留；补入p116，直接支持作者指出maxPos仍未解释的判断。",
+        "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance."
+      },
+      {
+        "source": "review/reader/diagram-review-08-14.json",
+        "decision": "revise",
+        "stage": "MAIN-first-pass",
+        "implementation": "revised",
+        "secondReview": "pending",
+        "accepted": false,
+        "resolution": "两版改成发往目标服务器的既有待发送RPC，不再表述为目标服务器上的RPC。 把session相等、LOADING与numHashes容量谓词连接到作者很可能/暗示的解释，rpc明确仅为readRpc[i]的教学缩写。 用显式maxPos条件门连接选中供后续追加与不选中两个结果；三项已满足不再呈现为成功追加。 保留maxPos理由未被解释；容量上限不填数值，条件组合不表示短路判断或循环顺序。 移动到13.4第4个根级段落后；补充p104、p105、p108来源，更新title、answer、summary、alt。",
+        "authority": "Historical implementation record, superseded by independent follow-up."
+      }
+    ],
+    "titleTw": "從追加意圖讀懂判斷，但不越過未知條件",
+    "questionTw": "高層註解怎樣把幾個區域性判斷連線成一個意圖？",
+    "answerTw": "高層意圖幫助讀者推斷session相等、LOADING及容量判斷的用途；這三項滿足後，仍須滿足maxPos小於assignPos，才可選中RPC供後續追加。該條件的理由仍未解釋。",
+    "summaryTw": "圖把原始碼謂詞逐項連到作者的“很可能 / 暗示”解釋，再顯示未被解釋的maxPos條件。rpc只是當前readRpc[i]的教學縮寫；邏輯組合不表示短路判斷或迴圈順序，不填入容量上限數值。",
+    "altTw": "三個原始碼條件與推斷相對應：session相等很可能確認發往正確伺服器，LOADING暗示狀態約束，numHashes小於MAX_PKHASHES_PERRPC暗示容量限制。即使三項滿足，也要經過rpc.maxPos小於assignPos的顯式門；滿足才選中供追加，不滿足則不選中。不是目標伺服器上的RPC，也不把前三項通過畫成已追加成功。",
+    "desktopTw": "/diagrams/ch13-rpc-intent-tw.svg",
+    "mobileTw": "/diagrams/ch13-rpc-intent-mobile-tw.svg"
+  },
+  {
+    "id": "ch13-ready-contract",
+    "chapter": "ch13",
+    "title": "ready 不等于一定有对象",
+    "question": "isReady 返回 true，能保证下一次 getNext 得到对象吗？",
+    "answer": "不能。true 保证下一次 getNext 不阻塞：可能有对象，也可能已经结束；false 仅表示可能阻塞。",
+    "summary": "三种情况均在本次isReady执行其推进工作并返回时观察，不是调用前的状态。直接调用或经getNext间接调用是推进所必需，但不保证每次产出对象或固定进展；内部调度不属于本图。",
+    "alt": "先执行本次isReady的工作，再看返回时的情况：已有可返回对象与查询已结束都可得到true，下一次getNext分别不阻塞地返回对象或NULL；false仅表示可能阻塞。调用前没有对象不能决定本次返回false，因为调用期间可能做出推进。",
+    "kind": "observable-state-contract",
+    "desktop": "/diagrams/ch13-ready-contract.svg",
+    "mobile": "/diagrams/ch13-ready-contract-mobile.svg",
+    "anchor": {
+      "section": "13.5",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "13.5",
+        "epub": "OEBPS/part0017.xhtml#p263:1446c997c6",
+        "reason": "初稿混入实现且遗漏接口信息。"
+      },
+      {
+        "section": "13.5",
+        "epub": "OEBPS/part0017.xhtml#p268:b83514b38f",
+        "reason": "必须直接或经getNext间接调用isReady，才能推进查询。"
+      },
+      {
+        "section": "13.5",
+        "epub": "OEBPS/part0017.xhtml#p272:c15a306ea3",
+        "reason": "true保证下一次getNext不阻塞。"
+      },
+      {
+        "section": "13.5",
+        "epub": "OEBPS/part0017.xhtml#p273:647cc0a00b",
+        "reason": "true可对应有对象或查询结束；p274明确false意味着可能阻塞，而非必然阻塞。"
+      },
+      {
+        "section": "13.5",
+        "epub": "OEBPS/part0017.xhtml#p193:959c8fff6f",
+        "reason": "匹配对象全部返回后，getNext返回NULL；这支持图中结束状态对应NULL。"
+      },
+      {
+        "section": "13.5",
+        "epub": "OEBPS/part0017.xhtml#p267:92cc5a232d",
+        "reason": "isReady承担大部分实际工作。图据此明确在本次调用返回时观察情况，避免把初始缺少就绪对象当作false的充分条件；不引入并发或固定进展保证。"
+      }
+    ],
+    "review": {
+      "source": "review/reader/diagram-review-08-14-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    },
+    "status": "content-reviewed",
+    "reviewHistory": [
+      {
+        "source": "earlier-local-review",
+        "recordedStatus": "independently-reviewed",
+        "decision": "keep",
+        "resolution": "保留true含结束状态、false仅可能阻塞，以及直接或间接调用的推进义务。",
+        "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance."
+      },
+      {
+        "source": "review/reader/diagram-review-08-14.json",
+        "decision": "revise",
+        "stage": "MAIN-first-pass",
+        "implementation": "revised",
+        "secondReview": "pending",
+        "accepted": false,
+        "resolution": "表格和卡片明确表示本次isReady完成其工作并返回时的情况，而不是调用前状态。 桌面中列由isReady()改为返回值，避免把它画成无副作用的纯谓词调用。 保留对象/结束两种true、NULL终止与false仅可能阻塞；新增调用前没有对象不决定本次返回值的说明。 保留直接或经getNext间接调用的推进义务，不保证每次产生对象或固定进展。 同步summary、alt，补充承担实际工作的p267与NULL终止的p193直接来源。",
+        "authority": "Historical implementation record, superseded by independent follow-up."
+      }
+    ],
+    "titleTw": "ready 不等於一定有物件",
+    "questionTw": "isReady 回傳 true，能保證下一次 getNext 得到物件嗎？",
+    "answerTw": "不能。true 保證下一次 getNext 不阻塞：可能有物件，也可能已經結束；false 僅表示可能阻塞。",
+    "summaryTw": "三種情況均在本次isReady執行其推進工作並回傳時觀察，不是呼叫前的狀態。直接呼叫或經getNext間接呼叫是推進所必需，但不保證每次產出物件或固定進展；內部排程不屬於本圖。",
+    "altTw": "先執行本次isReady的工作，再看回傳時的情況：已有可回傳物件與查詢已結束都可得到true，下一次getNext分別不阻塞地回傳物件或NULL；false僅表示可能阻塞。呼叫前沒有物件不能決定本次回傳false，因為呼叫期間可能做出推進。",
+    "desktopTw": "/diagrams/ch13-ready-contract-tw.svg",
+    "mobileTw": "/diagrams/ch13-ready-contract-mobile-tw.svg"
+  }
+]

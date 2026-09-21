@@ -1,0 +1,465 @@
+[
+  {
+    "id": "00009",
+    "decision": "keep",
+    "summary": "The complexity-weighting formula preserves every mathematical token and its placement.",
+    "sourceReferences": [
+      "docs/figures/00009.gif",
+      "docs/.vuepress/public/figures/00009.svg:1-12",
+      "docs/ch02.md:17-21",
+      "review/reader/README.md: Original Figure Contract"
+    ],
+    "evidence": [
+      "Compared C, equals, sigma, the summation index p, and the juxtaposed c_p and t_p directly against the raster. Both variable subscripts remain subscripts; p remains below sigma. No upper bound, extra coefficient, multiplication symbol, or normalization term was introduced.",
+      "The accompanying paragraph defines C as the time-weighted sum of the parts' complexities. The SVG conveys that same expression, not a different complexity metric.",
+      "The 79 by 33 native rendering is readable, and the enlarged light/dark render has no omitted or clipped glyph."
+    ],
+    "issues": [],
+    "fidelityBoundary": "Keep the expression, italic variables, subscripts, and summation-index relationship. The live serif font and geometric sigma are acceptable approximations of the low-resolution source, not exact font reconstruction. This is a source-fidelity review, not evidence that the formula predicts measured complexity or improves learning.",
+    "viewsInspected": {
+      "original": "/tmp/aposd2e-original-00009.png; sips format conversion of docs/figures/00009.gif, inspected with view_image",
+      "desktopLight": "/tmp/aposd2e-original-review-current/gallery-light-000.png; left asset, SVG displayed at 680px",
+      "desktopDark": "/tmp/aposd2e-original-review-current/gallery-dark-000.png; left asset, SVG displayed at 680px",
+      "mobile": "/tmp/aposd2e-original-review-current/mobile-00009-left.png; native 79 by 33 crop from an isolated 390 by 844 viewport",
+      "assetSha256": "3019f9c4b5bea151bb3c6183609b235b0ff9712567ab439cf00b1b1363644c24"
+    },
+    "monochromeReadability": "Black mathematical content on an explicit white background remains readable in both surrounding themes.",
+    "mobileLegibility": {
+      "result": "pass_in_isolated_render",
+      "imageWidthPx": 79,
+      "scrollContainerWidthPx": 79,
+      "maximumScrollLeftPx": 0,
+      "evidence": "/tmp/aposd2e-original-review-current/mobile-evidence.json",
+      "limitation": "Browser plugin not available; used installed Playwright/Chrome. Mobile evidence uses the current reader CSS and OriginalFigure width policy in an isolated page, not the live Vue component. The existing /aposd2e-zh/ch02.html route loaded with the correct chapter title and no page errors but contained zero [data-figure] wrappers; waiting for 00009 timed out. Integrated figure switching and zoom were therefore not verified. No build was run."
+    }
+  },
+  {
+    "id": "00010",
+    "decision": "keep",
+    "summary": "All three dependency arrangements, local emphasis values, and undirected dotted links match Figure 2.1.",
+    "sourceReferences": [
+      "docs/figures/00010.jpeg",
+      "docs/.vuepress/public/figures/00010.svg:5-63",
+      "docs/ch02.md:27-39",
+      "docs/.vuepress/reader/figures/early.json:14-22"
+    ],
+    "evidence": [
+      "Panel (a) retains four visible pages, each with bg = \"red\". Panels (b) and (c) each retain four bg = bannerBg pages and a separate bannerBg box containing \"red\".",
+      "Only the first and last visible pages of panel (c) contain emph = \"darkred\". The two middle visible pages do not acquire emphasis labels. This matches the caption and the hidden-dependency example in the following paragraph.",
+      "All eight page-to-variable dotted connections are present without arrowheads. The three vertical omitted-page ellipses, left Web pages brace, and (a)/(b)/(c) labels remain in their original groups.",
+      "The four-unit margin preserves the internal page/variable layout and exposes the complete rotated Web pages label. The fresh light/dark gallery reports no outside text or text-overlap candidates."
+    ],
+    "issues": [],
+    "fidelityBoundary": "Do not derive emph from bannerBg, add directional arrows, add emphasis to every page, or replace the literal color names with colored swatches. Those would change the author's dependency example. Font metrics, flat gray fills, dash texture, and outer whitespace may differ from the JPEG.",
+    "viewsInspected": {
+      "original": "docs/figures/00010.jpeg; native raster inspected with view_image",
+      "desktopLight": "/tmp/aposd2e-original-review-current/gallery-light-000.png; right asset",
+      "desktopDark": "/tmp/aposd2e-original-review-current/gallery-dark-000.png; right asset",
+      "mobile": [
+        "/tmp/aposd2e-original-review-current/mobile-00010-left.png",
+        "/tmp/aposd2e-original-review-current/mobile-00010-right.png"
+      ],
+      "snapshotNote": "Used the fresh gallery, not /tmp/aposd2e-reader-qa/gallery-light-000.png or its dark equivalent. The supplied first-draft screenshots predate the margin repair and are not evidence of current clipping.",
+      "assetSha256": "5f7262875b606d090d131c422c8683d5c5e9d04e88d06dbed4e4e3d588282bb8"
+    },
+    "monochromeReadability": "Meaning is carried by literal labels, grouping, and dotted links, not hue. Both surrounding themes preserve black-on-white contrast.",
+    "mobileLegibility": {
+      "result": "pass_fixed_layout_with_zoom_caveat",
+      "imageWidthPx": 545,
+      "scrollContainerWidthPx": 354,
+      "maximumScrollLeftPx": 191,
+      "evidence": "/tmp/aposd2e-original-review-current/mobile-evidence.json",
+      "observation": "All panels are reachable by horizontal scrolling without page overflow. The approximately 10.3px page labels are small at native scale; an operational enlarge/zoom path remains important. Do not shrink the complete figure to the 354px column.",
+      "limitation": "Scrolling was exercised in an isolated current-CSS render. The live chapter route had no figure wrappers, so integrated zoom and its readable magnification were not verified; this is not a reason to rewrite the faithful asset."
+    }
+  },
+  {
+    "id": "00011",
+    "decision": "keep",
+    "summary": "The qualitative tactical/strategic crossover and line-style distinction are preserved.",
+    "sourceReferences": [
+      "docs/figures/00011.jpeg",
+      "docs/.vuepress/public/figures/00011.svg:3-13",
+      "docs/ch03.md:30-38",
+      "docs/.vuepress/reader/figures/early.json:25-33"
+    ],
+    "evidence": [
+      "Total Progress remains the vertical quantity and Time the horizontal quantity; both axes point in the original positive directions.",
+      "Tactical remains dashed, leads initially, crosses the solid Strategic curve once, and flattens relative to it. Strategic continues to the higher endpoint. Both English curve labels are attached to the correct curve regions.",
+      "The image adds no ticks, rates, percentages, crossover date, or other numerical scale. This agrees with the caption's explicit statement that the precise curve shapes lack empirical support.",
+      "The complete Time label is inside the updated margin in both fresh theme screenshots; no current text-bound failure remains."
+    ],
+    "issues": [],
+    "fidelityBoundary": "Smooth path tracing is acceptable only as a qualitative approximation preserving the initial ordering, single crossover, and subsequent divergence. Neither this recreation nor this review validates the author's productivity claims or establishes an empirical crossover time.",
+    "viewsInspected": {
+      "original": "docs/figures/00011.jpeg; native raster inspected with view_image",
+      "desktopLight": "/tmp/aposd2e-original-review-current/gallery-light-001.png; left asset",
+      "desktopDark": "/tmp/aposd2e-original-review-current/gallery-dark-001.png; left asset",
+      "mobile": "/tmp/aposd2e-original-review-current/mobile-contact-000.png; third group shows isolated mobile left and right scroll positions",
+      "snapshotNote": "Fresh screenshots supersede the supplied first-draft gallery-001 screenshots, whose Time-label clipping predates the updated viewBox.",
+      "assetSha256": "01d45d71d5670115d38bd3a6e5414562ebc3dbbd650c3ecb298449520ea2fee2"
+    },
+    "monochromeReadability": "Solid versus dashed curves remain distinguishable without color. Axis arrowheads and labels are visible on the white plate in light and dark surroundings.",
+    "mobileLegibility": {
+      "result": "pass_in_isolated_render",
+      "imageWidthPx": 480,
+      "scrollContainerWidthPx": 354,
+      "maximumScrollLeftPx": 126,
+      "evidence": "/tmp/aposd2e-original-review-current/mobile-evidence.json",
+      "observation": "The preserved layout scrolls to reveal both curve labels and the complete Time axis. Approximate 21.5px labels are readable at this width; the chart is not collapsed to fit the column.",
+      "limitation": "Current-CSS fixture only; integrated reader scrolling and modal controls remain the main reader test's responsibility."
+    }
+  },
+  {
+    "id": "00012",
+    "decision": "keep",
+    "summary": "Module proportions, interface strips, and all four annotation targets match Figure 4.1.",
+    "sourceReferences": [
+      "docs/figures/00012.jpeg",
+      "docs/.vuepress/public/figures/00012.svg:10-30",
+      "docs/ch04.md:39-47",
+      "docs/.vuepress/reader/figures/early.json:36-44"
+    ],
+    "evidence": [
+      "Deep Module remains tall and narrow, Shallow Module short and wide, with aligned lower edges. Their widths and depths have not been normalized or made equal-area.",
+      "Both Interface (cost: less is better) arrows point toward the heavy top edges. Both Functionality (benefit: more is better) arrows point into the pale implementation areas, including the vertical arrow into the shallow rectangle.",
+      "The caption and preceding argument distinguish top-edge length as interface complexity from interior area as functionality. The vector preserves that visual encoding rather than replacing area with height alone.",
+      "Deep Module, Shallow Module, and both complete cost/benefit labels are present. The current outer margin and separated functionality-label baselines render without clipping or text overlap in the fresh gallery."
+    ],
+    "issues": [],
+    "fidelityBoundary": "Keep the unequal rectangle proportions, heavy top edges, four original arrow destinations, and cost/benefit wording. Font substitution, small baseline adjustments, and protective whitespace are acceptable. Do not introduce measurements or treat these qualitative areas as measured software properties.",
+    "viewsInspected": {
+      "original": "docs/figures/00012.jpeg; native raster inspected with view_image",
+      "desktopLight": "/tmp/aposd2e-original-review-current/gallery-light-001.png; right asset",
+      "desktopDark": "/tmp/aposd2e-original-review-current/gallery-dark-001.png; right asset",
+      "mobile": "/tmp/aposd2e-original-review-current/mobile-contact-001.png; first group shows isolated mobile left and right scroll positions",
+      "snapshotNote": "Inspected the latest asset, including its later label-baseline adjustment. The supplied first-draft gallery-001 clipping is superseded.",
+      "assetSha256": "6c7200b8360c66c3283b7c63f552dc673d46f25d94ee1dcf99b7976f75fa9968"
+    },
+    "monochromeReadability": "Heavy black interface strips remain distinct from pale interiors; meaning does not depend on color. The four arrowheads remain visible in both surrounding themes.",
+    "mobileLegibility": {
+      "result": "pass_in_isolated_render",
+      "imageWidthPx": 480,
+      "scrollContainerWidthPx": 354,
+      "maximumScrollLeftPx": 126,
+      "evidence": "/tmp/aposd2e-original-review-current/mobile-evidence.json",
+      "observation": "Approximately 21px annotation text is readable. Scrolling reveals the right label and shallow module without permanently cropping any content.",
+      "limitation": "Isolated current-CSS render; no claim that the complete figure is simultaneously visible in a narrow column or that live modal controls were verified."
+    }
+  },
+  {
+    "id": "00013",
+    "decision": "keep",
+    "summary": "The recreated warning flag preserves the original emblem and remains recognizable at native size.",
+    "sourceReferences": [
+      "docs/figures/00013.jpeg",
+      "docs/.vuepress/public/figures/00013.svg:3-7",
+      "docs/ch04.md:91-93",
+      "docs/ch05.md:33-45,103-105",
+      "docs/ch07.md:40-42",
+      "docs/ch09.md:107-109,123-125,191-193",
+      "docs/ch13.md:84-86,374-376",
+      "docs/ch14.md:34-36,93-95",
+      "docs/ch15.md:35-37",
+      "docs/ch18.md:113-115"
+    ],
+    "evidence": [
+      "The black pole slopes down to the right. The red cloth retains two upper lobes, their intervening gap, and the lower overlapping fold rather than becoming a generic rectangular flag.",
+      "The original pale pink square background and 28 by 28 proportions are preserved. The icon has no labels, code, arrows, or group relationships to transcribe.",
+      "Repeated chapter uses identify red-flag warnings in adjacent body text. The SVG does not change the warning category or replace the existing caption.",
+      "Inspected both the enlarged vector and its actual 28px mobile crop. The contact-sheet enlargement of that crop is not used as evidence of native sharpness."
+    ],
+    "issues": [],
+    "fidelityBoundary": "The 28px JPEG cannot support exact pre-compression colors or subpixel fold contours. Clean flat fills and smooth silhouette approximation are acceptable; replacing the source emblem with a different warning symbol would not be faithful.",
+    "viewsInspected": {
+      "original": "docs/figures/00013.jpeg; native raster inspected with view_image",
+      "desktopLight": "/tmp/aposd2e-original-review-current/gallery-light-002.png; left asset, enlarged for silhouette inspection",
+      "desktopDark": "/tmp/aposd2e-original-review-current/gallery-dark-002.png; left asset",
+      "mobile": "/tmp/aposd2e-original-review-current/mobile-00013-left.png; actual 28 by 28 crop",
+      "grayscale": "/tmp/aposd2e-original-review-current/grayscale-00013.png",
+      "assetSha256": "c534fc17d1513d292771a3e017c1bc7c066d424c47715e724f2a5c57a35c32be"
+    },
+    "monochromeReadability": "Grayscale inspection preserves the dark cloth silhouette, black pole, and pale background. The warning is also named in adjacent chapter text, so its meaning does not rely only on red.",
+    "mobileLegibility": {
+      "result": "pass_in_isolated_render",
+      "imageWidthPx": 28,
+      "scrollContainerWidthPx": 28,
+      "maximumScrollLeftPx": 0,
+      "evidence": "/tmp/aposd2e-original-review-current/mobile-evidence.json",
+      "limitation": "Native-size isolated rendering was verified. Placement and repetition in the live chapter component were not independently verified."
+    }
+  },
+  {
+    "id": "00014",
+    "decision": "keep",
+    "summary": "The complete HTTP example and annotation relationships are retained after the margin and line-spacing repairs.",
+    "sourceReferences": [
+      "docs/figures/00014.gif",
+      "docs/.vuepress/public/figures/00014.svg:10-37",
+      "docs/ch05.md:47-55",
+      "docs/.vuepress/reader/figures/early.json:58-66"
+    ],
+    "evidence": [
+      "Checked the request line exactly: POST /comments/create?photo_id=246 HTTP/1.1. Method, URL, Parameter(s), and Protocol Version each retain a downward arrow to the corresponding first-line token region.",
+      "Checked all six headers: Host: www.example.com; User-Agent: Mozilla/5.0; Accept: text/html, */*; Accept-Language: en-us; Accept-Charset: ISO-8859-1,utf-8; Content-Length: 40. Case, hyphens, slash/asterisk tokens, comma spacing, and values match the GIF.",
+      "Checked the complete body: comment=What+a+cute+baby%21&priority=low. The visible ampersand is correctly XML-escaped in source, not rendered as literal &amp;. Plus signs and %21 are not decoded or replaced.",
+      "Headers remains beside the brace spanning the six header lines, excluding the request line and body. A blank line precedes the body, and the Body annotation retains its leftward arrow.",
+      "The latest 15.5-unit request baselines and enlarged outer whitespace preserve grouping while eliminating the first-draft text-bound overlap/clipping candidates. Full italic labels and the body's descenders render in the fresh light/dark gallery."
+    ],
+    "issues": [],
+    "fidelityBoundary": "Retain the supplied example verbatim, including Content-Length: 40 and historical HTTP tokens. Do not silently modernize headers, normalize encoding, repair the length value, or present the schematic as a newly validated executable request. Spacing changes are acceptable only while preserving the blank line, brace membership, and annotation targets.",
+    "viewsInspected": {
+      "original": "/tmp/aposd2e-original-00014.png; sips format conversion of docs/figures/00014.gif, inspected with view_image",
+      "desktopLight": "/tmp/aposd2e-original-review-current/gallery-light-002.png; right asset",
+      "desktopDark": "/tmp/aposd2e-original-review-current/gallery-dark-002.png; right asset",
+      "mobile": "/tmp/aposd2e-original-review-current/mobile-contact-001.png; third group shows isolated mobile left and right scroll positions",
+      "snapshotNote": "The supplied /tmp/aposd2e-reader-qa/gallery-*-002.png screenshots predate the margin and line-spacing repairs. Their clipping and font-box overlap candidates are not current findings.",
+      "assetSha256": "d21f540121c65fb38933a2f57c8ec445d4e791c59a7576a0ef79d19b0f8cf349"
+    },
+    "monochromeReadability": "Black code, italic annotations, brace, and arrowheads on white remain distinguishable without color in both theme screenshots.",
+    "mobileLegibility": {
+      "result": "pass_in_isolated_render",
+      "imageWidthPx": 480,
+      "scrollContainerWidthPx": 354,
+      "maximumScrollLeftPx": 126,
+      "evidence": "/tmp/aposd2e-original-review-current/mobile-evidence.json",
+      "observation": "Code is approximately 15.6px at this width. Horizontal scrolling exposes the full request and body without wrapping tokens into different lines. There is no page-level overflow.",
+      "limitation": "Isolated current-CSS rendering and scroll movement were verified; integrated reader controls and zoom were not."
+    }
+  },
+  {
+    "id": "00015",
+    "decision": "keep",
+    "summary": "All signature symbols, class memberships, and downward calls match the four original pass-through-method arrangements.",
+    "sourceReferences": [
+      "docs/figures/00015.jpeg",
+      "docs/.vuepress/public/figures/00015.svg:8-118",
+      "docs/ch07.md:44-54"
+    ],
+    "evidence": [
+      "The five signature identities are preserved: green rounded square, blue five-point star, yellow circle, purple pentagon, and red four-point star. Their ordering and repeated identities match the raster.",
+      "In (a), C1 contains square/star/circle/pentagon and C2 contains star/circle/pentagon/four-point-star. Only the three shared signatures pass through C1 to C2; the rightmost caller reaches C2 directly.",
+      "In (b), C1 retains only the square and callers access the four C2 signatures directly. In (c), C1 has square/star and C2 has circle/pentagon/four-point-star, with no calls between classes. In (d), all five belong to C1.",
+      "Verified all 23 downward call arrows: eight in (a), five each in (b), (c), and (d). Seven class boxes, C1/C2 labels, internal cell dividers, and the two-by-two panel arrangement are preserved.",
+      "The caption's three alternatives, bypassing, redistributing, and merging, agree with these memberships and call directions."
+    ],
+    "issues": [],
+    "fidelityBoundary": "Keep the signature shapes and ordering as well as their colors. Do not make all C1 methods pass-through, route the rightmost (a) call through C1, or add inter-class calls to (c). Smooth symbol outlines and sampled flat colors may approximate the JPEG.",
+    "viewsInspected": {
+      "original": "docs/figures/00015.jpeg; native raster inspected with view_image",
+      "desktopLight": "/tmp/aposd2e-original-review-current/gallery-light-003.png; left asset",
+      "desktopDark": "/tmp/aposd2e-original-review-current/gallery-dark-003.png; left asset",
+      "mobile": "/tmp/aposd2e-original-review-current/mobile-contact-002.png; first group shows isolated mobile left and right scroll positions",
+      "grayscale": "/tmp/aposd2e-original-review-current/grayscale-00015.png",
+      "assetSha256": "899b60d093e1cddd8c36543faee40432339179fcd3c303f85e41bfaa344e62c2"
+    },
+    "monochromeReadability": "Explicit grayscale inspection confirms that the five shape silhouettes remain distinct and that all black call arrows and cell boundaries remain readable. Color is redundant rather than the sole signature identifier.",
+    "mobileLegibility": {
+      "result": "pass_in_isolated_render",
+      "imageWidthPx": 684,
+      "scrollContainerWidthPx": 354,
+      "maximumScrollLeftPx": 330,
+      "evidence": "/tmp/aposd2e-original-review-current/mobile-evidence.json",
+      "observation": "The original two-by-two arrangement is intentionally retained. At native SVG width the class labels are 24px; left and right panel groups are reachable by scrolling without shrinking their symbols.",
+      "limitation": "The actual image width in the current-CSS fixture is 684px, not the 680px gallery width. Live Vue integration and zoom were not verified."
+    }
+  },
+  {
+    "id": "00016",
+    "decision": "keep",
+    "summary": "All four certificate-handling examples preserve their code, call chains, fields, and undirected access relationships.",
+    "sourceReferences": [
+      "docs/figures/00016.gif",
+      "docs/.vuepress/public/figures/00016.svg:11-77",
+      "docs/ch07.md:89-109"
+    ],
+    "evidence": [
+      "Each panel retains main(argc, argv), m1, m2, m3, and the three downward call arrows, for twelve solid call arrows total. The two-by-two arrangement and (a)/(b)/(c)/(d) labels match the source.",
+      "Panel (a) retains cert in all three method signatures and openSocket(cert, ...). Panels (b), (c), and (d) retain m1(...), m2(...), and m3(...) without a cert argument. Ellipses and the m3 body braces are preserved.",
+      "Panel (b) contains exactly x, y, cert in the shared object and calls openSocket(obj.cert, ...). Panel (c) retains the unboxed global variable annotation and openSocket(cert, ...). Panel (d) contains timeout, metrics, cert, ... in the context object and calls openSocket(context.cert, ...).",
+      "The six dotted links, two each for the shared-object, global-variable, and context alternatives, remain undirected. No dotted link is turned into a call arrow and no link is added to m1 or m2.",
+      "The chapter explains that context access can itself be problematic and describes object-held references in prose. The recreation does not silently add a containing-class box, constructor flow, or thread-safety guarantee absent from the original figure."
+    ],
+    "issues": [],
+    "fidelityBoundary": "Preserve the author's schematic code, object memberships, separate call/access line conventions, and four alternatives. Do not turn it into a complete implementation or an endorsement of globals/context. Typeface and dotted-line texture can differ while these relationships remain fixed.",
+    "viewsInspected": {
+      "original": "/tmp/aposd2e-original-00016.png; sips format conversion of docs/figures/00016.gif, inspected with view_image",
+      "desktopLight": "/tmp/aposd2e-original-review-current/gallery-light-003.png; right asset",
+      "desktopDark": "/tmp/aposd2e-original-review-current/gallery-dark-003.png; right asset",
+      "mobile": "/tmp/aposd2e-original-review-current/mobile-contact-002.png; second group shows isolated mobile left and right scroll positions",
+      "assetSha256": "152d798f7d5b5364cf8a04daa30452dc4dd7092ea38b3ef7f3acf6fee5205c5c"
+    },
+    "monochromeReadability": "Solid downward arrows remain distinct from thin dotted access links. Object boundaries, monospaced code, and italic annotations remain readable without color in both surrounding themes.",
+    "mobileLegibility": {
+      "result": "pass_in_isolated_render",
+      "imageWidthPx": 888,
+      "scrollContainerWidthPx": 354,
+      "maximumScrollLeftPx": 534,
+      "evidence": "/tmp/aposd2e-original-review-current/mobile-evidence.json",
+      "observation": "At the current intrinsic width, code is 23px rather than the smaller gallery rendering. The large fixed image requires both normal page scrolling and horizontal figure scrolling; long lines may require an intermediate horizontal position. The complete layout is not expected to fit one mobile screen.",
+      "limitation": "Fixture scroll endpoints and full-height crops were inspected. Live page/figure scroll coordination and modal zoom were not verified."
+    }
+  },
+  {
+    "id": "00019",
+    "decision": "keep",
+    "summary": "The method-splitting alternatives retain the original relative depths, call structure, and evaluative labels.",
+    "sourceReferences": [
+      "docs/figures/00019.jpeg",
+      "docs/.vuepress/public/figures/00019.svg:11-66",
+      "docs/ch09.md:175-189"
+    ],
+    "evidence": [
+      "Four Callers boxes and nine method rectangles are retained. Each method keeps its thick black interface strip and pale implementation area; the separate Interface and Implementation label arrows target those respective regions in (a).",
+      "Panel (a) has one caller-to-method arrow. Panel (b) retains the parent interface width and the downward parent-to-extracted-subtask call. Panel (c) has two independent calls into side-by-side narrower methods.",
+      "Panel (d) preserves three direct caller arrows plus the short call from the upper-left shallow method to the lower-left one. The lower-right method is reached by Callers, not by the adjacent upper-right method.",
+      "All nine call arrows and two label arrows match the original directions and endpoints. The labels (rarely works), (avoid!), and (a) through (d) are retained verbatim.",
+      "The original relative widths, depths, and subtask placement are consistent with the surrounding argument about extraction versus exposing multiple methods and creating shallow methods."
+    ],
+    "issues": [],
+    "fidelityBoundary": "Do not equalize method areas, remove the author's (rarely works)/(avoid!) judgments, or simplify the (d) graph into a chain. Relative geometry is qualitative and must not acquire an inferred numerical scale.",
+    "viewsInspected": {
+      "original": "docs/figures/00019.jpeg; native raster inspected with view_image",
+      "desktopLight": "/tmp/aposd2e-original-review-current/gallery-light-004.png; left asset",
+      "desktopDark": "/tmp/aposd2e-original-review-current/gallery-dark-004.png; left asset",
+      "mobile": "/tmp/aposd2e-original-review-current/mobile-contact-002.png; third group shows isolated mobile left and right scroll positions",
+      "assetSha256": "3692337ba830ca6e163d719900840dc0e21ce721c2ec678592c6bc60ed009ab7"
+    },
+    "monochromeReadability": "Black interface strips, pale implementations, caller boxes, and arrowheads remain distinct in both theme views. No relationship depends on hue.",
+    "mobileLegibility": {
+      "result": "pass_in_isolated_render",
+      "imageWidthPx": 1040,
+      "scrollContainerWidthPx": 354,
+      "maximumScrollLeftPx": 686,
+      "evidence": "/tmp/aposd2e-original-review-current/mobile-evidence.json",
+      "observation": "The intrinsic width retains approximately 22-24px text. End-position crops show the left annotation and rightmost shallow-method arrangement; the intervening panels require intermediate horizontal scrolling. This is permitted by the original-figure contract.",
+      "limitation": "The fixture proves a continuous scrollable width without page overflow, not a mobile reflow or a verified live modal workflow."
+    }
+  },
+  {
+    "id": "00020",
+    "decision": "keep",
+    "summary": "The dispatcher and all five local exception handlers are faithfully transcribed, including the source's schematic syntax omissions.",
+    "sourceReferences": [
+      "docs/figures/00020.jpeg",
+      "docs/.vuepress/public/figures/00020.svg:9-25",
+      "docs/ch10.md:108-118",
+      "docs/.vuepress/reader/figures/late.json: 00020 fidelityNotes"
+    ],
+    "evidence": [
+      "Compared every displayed code line against an enlarged raster: Dispatcher selects handleUrl1(...), handleUrl2(...), and handleUrl3(...), with the original if/else-if structure and ellipses.",
+      "The four headings retain Dispatcher:, handleUrl1:, handleUrl2:, and handleUrl3:. Parameter literals remain photo_id and message in handleUrl1, user_id in handleUrl2, and login and password in handleUrl3.",
+      "All five try/catch (NoSuchParameter e) blocks remain local, with the original ellipsis-only handler bodies, braces, indentation, and omitted semicolons on getParameter fragments.",
+      "The final dispatcher else-if still lacks an opening brace, as in the raster. It was not silently repaired into compilable code.",
+      "The narrow dispatcher sits above three handlers; left and right handlers remain equally tall and the middle one shorter. No connecting arrows have been added. This preserves the duplicated-handler argument of Figure 10.1."
+    ],
+    "issues": [],
+    "fidelityBoundary": "This is an exact schematic-code transcription, not a runnable implementation. Preserve the original missing opening brace, omitted fragment semicolons, and ellipses. Do not add catch-body logic or arrows, or aggregate the handlers inside this figure.",
+    "viewsInspected": {
+      "original": [
+        "docs/figures/00020.jpeg; native raster inspected with view_image",
+        "/tmp/aposd2e-original-00020-large.png; sips enlargement inspected for code tokens"
+      ],
+      "desktopLight": "/tmp/aposd2e-original-review-current/gallery-light-004.png; right asset",
+      "desktopDark": "/tmp/aposd2e-original-review-current/gallery-dark-004.png; right asset",
+      "mobile": [
+        "/tmp/aposd2e-original-review-current/mobile-contact-003.png; first group",
+        "/tmp/aposd2e-original-review-current/mobile-00020-left.png; native-size detail"
+      ],
+      "assetSha256": "d1648f75e9bf00ca02ba7f8b0e45e072160c98047529301e5487cc1b0ab716fe"
+    },
+    "monochromeReadability": "The monospaced black code and pale boxes remain readable on the white plate in either surrounding theme. No handler distinction relies on color.",
+    "mobileLegibility": {
+      "result": "pass_fixed_layout_with_navigation_caveat",
+      "imageWidthPx": 1126,
+      "scrollContainerWidthPx": 354,
+      "maximumScrollLeftPx": 772,
+      "evidence": "/tmp/aposd2e-original-review-current/mobile-evidence.json",
+      "observation": "Code is 18.6px at intrinsic width, substantially more legible than its 680px gallery thumbnail. The center dispatcher and middle handler require an intermediate scroll position; the initial left position contains substantial upper whitespace because the original dispatcher is centered. This is faithful fixed-layout behavior, not omitted content.",
+      "limitation": "Isolated horizontal scrolling was verified, but the live overview/zoom workflow was unavailable. Integrated mobile acceptance should explicitly check access to the centered dispatcher rather than relying only on the leftmost crop."
+    }
+  },
+  {
+    "id": "00021",
+    "decision": "keep",
+    "summary": "The single aggregated handler and short URL-handler boxes faithfully preserve Figure 10.2's contrast with Figure 10.1.",
+    "sourceReferences": [
+      "docs/figures/00021.jpeg",
+      "docs/.vuepress/public/figures/00021.svg:9-25",
+      "docs/ch10.md:118-124",
+      "docs/.vuepress/reader/figures/late.json: 00021 fidelityNotes"
+    ],
+    "evidence": [
+      "Compared every displayed code line against an enlarged raster. The single dispatcher try surrounds the handleUrl1(...), handleUrl2(...), and handleUrl3(...) selection; catch (NoSuchParameter e) remains in the dispatcher.",
+      "The line send error response; retains its exact words, semicolon, and italic pseudocode styling. No local try/catch blocks remain in the three lower handler boxes.",
+      "The five getParameter literals remain photo_id, message, user_id, login, and password in their respective original handlers. Ellipses, braces, missing semicolons on fragments, and the final else-if's omitted opening brace are retained.",
+      "All four English headings match the raster. The tall dispatcher and three much shorter lower boxes preserve the original visual contrast with 00020; the middle lower box remains shorter than its neighbors.",
+      "The original has no connecting arrows, and the recreation introduces none. The caption's aggregation claim concerns one catch serving the same five parameter lookups, which the figure accurately preserves."
+    ],
+    "issues": [],
+    "fidelityBoundary": "Retain the author's pseudocode and omissions rather than generating a corrected implementation. Do not add exception types discussed later in the prose, restore local catches, or add propagation arrows absent from the source.",
+    "viewsInspected": {
+      "original": [
+        "docs/figures/00021.jpeg; native raster inspected with view_image",
+        "/tmp/aposd2e-original-00021-large.png; sips enlargement inspected for code tokens"
+      ],
+      "desktopLight": "/tmp/aposd2e-original-review-current/gallery-light-005.png; left asset",
+      "desktopDark": "/tmp/aposd2e-original-review-current/gallery-dark-005.png; left asset",
+      "mobile": [
+        "/tmp/aposd2e-original-review-current/mobile-contact-003.png; second group",
+        "/tmp/aposd2e-original-review-current/mobile-00021-right.png; native-size detail"
+      ],
+      "assetSha256": "0d88f82b04ea28aac91db5cc727b46fbb40083971f8916a84f7df36d1b1c11b9"
+    },
+    "monochromeReadability": "Black code, italic pseudocode, and pale box backgrounds are distinguishable in both surrounding themes without color.",
+    "mobileLegibility": {
+      "result": "pass_fixed_layout_with_navigation_caveat",
+      "imageWidthPx": 1018,
+      "scrollContainerWidthPx": 354,
+      "maximumScrollLeftPx": 664,
+      "evidence": "/tmp/aposd2e-original-review-current/mobile-evidence.json",
+      "observation": "Code remains 18.6px at intrinsic width. An intermediate horizontal position is necessary to inspect the centered dispatcher and its catch in full; left/right endpoint screenshots alone do not show the whole argument.",
+      "limitation": "The fixture verifies retained scale and horizontal reachability, not live modal fit/zoom behavior. The main reader test must still verify a usable overview and access to the dispatcher."
+    }
+  },
+  {
+    "id": "00022",
+    "decision": "keep",
+    "summary": "The five logical chunks map to the correct owned and external storage regions, with the source's geometry and unused space intact.",
+    "sourceReferences": [
+      "docs/figures/00022.jpeg",
+      "docs/.vuepress/public/figures/00022.svg:6-32",
+      "docs/ch20.md:46-58"
+    ],
+    "evidence": [
+      "The logical order is blue, yellow, orange, green, purple. The first and fourth chunks map to the blue/green Built-In Allocation; the fifth maps to the small occupied purple beginning of Extra Allocation.",
+      "The second and third chunks map to the two External Chunks. Physical orange storage remains above yellow, despite yellow preceding orange in the logical array.",
+      "All five correspondence lines are dotted and undirected, with the same crossing relationships and endpoints as the original. They are not ownership-transfer arrows or a linked-list chain.",
+      "The Buffer Object boundary contains both allocation regions and excludes both external chunks. Extra Allocation retains its white unused remainder rather than being filled entirely purple.",
+      "Logical Array, Built-In Allocation, Extra Allocation, Buffer Object, and External Chunks are all retained. Relative chunk lengths and block placement match the raster and the paragraph specifying internal/external/external/internal/internal ownership."
+    ],
+    "issues": [],
+    "fidelityBoundary": "Keep the source's chunk ordering, five correspondences, allocation boundary, orange-above-yellow storage order, and unused white space. Do not infer byte counts, imply contiguity of external storage, or redraw the extra allocation outside the source boundary to modernize implementation details.",
+    "viewsInspected": {
+      "original": [
+        "docs/figures/00022.jpeg; native raster inspected with view_image",
+        "/tmp/aposd2e-original-00022-large.png; sips enlargement inspected for allocation boundaries and line endpoints"
+      ],
+      "desktopLight": "/tmp/aposd2e-original-review-current/gallery-light-005.png; right asset",
+      "desktopDark": "/tmp/aposd2e-original-review-current/gallery-dark-005.png; right asset",
+      "mobile": "/tmp/aposd2e-original-review-current/mobile-contact-003.png; third group shows isolated mobile left and right scroll positions",
+      "grayscale": "/tmp/aposd2e-original-review-current/grayscale-00022.png",
+      "assetSha256": "e415a81eed8582d7603947c46145849f58858dae9794995d0625bb1a1b11a1e7"
+    },
+    "monochromeReadability": "Explicit grayscale inspection preserves all five traceable dotted correspondences and black storage boundaries. Some pale fills become similar, but membership remains recoverable from line endpoints and geometry; do not add new patterns to a faithful reproduction solely to restyle it.",
+    "mobileLegibility": {
+      "result": "pass_in_isolated_render",
+      "imageWidthPx": 594,
+      "scrollContainerWidthPx": 354,
+      "maximumScrollLeftPx": 240,
+      "evidence": "/tmp/aposd2e-original-review-current/mobile-evidence.json",
+      "observation": "Native 26px labels and dotted lines remain readable. Scrolling exposes owned storage on the left and both external blocks on the right while preserving the fixed correspondence geometry.",
+      "limitation": "Isolated current-CSS rendering only. A fit-to-column version would make cross-figure tracing harder; live zoom and full-reader interaction acceptance remain unverified here."
+    }
+  }
+]

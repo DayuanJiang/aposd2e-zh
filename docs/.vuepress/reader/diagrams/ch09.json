@@ -1,0 +1,135 @@
+[
+  {
+    "id": "ch09-cursor-state",
+    "chapter": "ch09",
+    "title": "合并对象为何反而增加一次判断？",
+    "question": "选区和光标经常一起变化，为什么这个例子仍然适合分开表示？",
+    "answer": "本例的组合对象须依布尔值选择端点，独立 cursor Position 可直接读取。有选区时光标仍在一端，无选区时光标也仍存在；不规定无选区的编码。",
+    "summary": "分开的是表示，不是取消关系。图中分别画出有选区和无选区两种状态。高层仍要分别操作选区和光标，合并没有省去这些操作；这不是性能测量。",
+    "alt": "左侧或上方以有选区的情况展示组合对象的端点选择分支。独立表示中，无选区时只有光标，有选区时另有两个Position表示的范围，光标与一个端点重合。两幅字母示例不规定哨兵或空选区编码。",
+    "kind": "state-representation",
+    "desktop": "/diagrams/ch09-cursor-state.svg",
+    "mobile": "/diagrams/ch09-cursor-state-mobile.svg",
+    "anchor": {
+      "section": "9.5",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "9.5",
+        "epub": "OEBPS/part0013.xhtml#p31:1efe914cfc",
+        "reason": "光标始终存在，选区可不存在；有选区时光标位于一个端点。"
+      },
+      {
+        "section": "9.5",
+        "epub": "OEBPS/part0013.xhtml#p33:ed9e86e55c",
+        "reason": "组合对象需检查布尔值再读取端点，且高层仍需分别操作两者。"
+      },
+      {
+        "section": "9.5",
+        "epub": "OEBPS/part0013.xhtml#p34:4d0eb5288f",
+        "reason": "修订版选区用两个Position，光标用一个Position，无专用选区或光标类。字母与光标位置为教学示例。"
+      }
+    ],
+    "review": {
+      "source": "review/reader/diagram-review-08-14-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    },
+    "status": "content-reviewed",
+    "reviewHistory": [
+      {
+        "source": "earlier-local-review",
+        "recordedStatus": "independently-reviewed",
+        "decision": "revise",
+        "resolution": "已去掉光标指向选区的误导箭头，移动分支标签，固定字符位置并使光标与选区端点重合。",
+        "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance.",
+        "snapshotDesktop": "/tmp/aposd2e-viz-review-round1/assets/ch09-cursor-state.svg",
+        "snapshotMobile": "/tmp/aposd2e-viz-review-round1/assets/ch09-cursor-state-mobile.svg"
+      },
+      {
+        "source": "review/reader/diagram-review-08-14.json",
+        "decision": "revise",
+        "stage": "MAIN-first-pass",
+        "implementation": "revised",
+        "secondReview": "pending",
+        "accepted": false,
+        "resolution": "两版新增无选区且光标仍存在的可见状态图；有选区例继续保持光标与端点重合。 组合端点选择明确限定为有选区示例，未定义哨兵、空范围或其他无选区编码。 同步answer、summary和alt；保留已有逐字定位、分支标签移位及误导箭头删除。",
+        "authority": "Historical implementation record, superseded by independent follow-up."
+      }
+    ],
+    "titleTw": "合併物件為何反而增加一次判斷？",
+    "questionTw": "選區和游標經常一起變化，為什麼這個例子仍然適合分開表示？",
+    "answerTw": "本例的組合物件須依布林值選擇端點，獨立 cursor Position 可直接讀取。有選區時游標仍在一端，無選區時游標也仍存在；不規定無選區的編碼。",
+    "summaryTw": "分開的是表示，不是取消關係。圖中分別畫出有選區和無選區兩種狀態。高層仍要分別操作選區和游標，合併沒有省去這些操作；這不是效能測量。",
+    "altTw": "左側或上方以有選區的情況展示組合物件的端點選擇分支。獨立表示中，無選區時只有游標，有選區時另有兩個Position表示的範圍，游標與一個端點重合。兩幅字母範例不規定哨兵或空選區編碼。",
+    "desktopTw": "/diagrams/ch09-cursor-state-tw.svg",
+    "mobileTw": "/diagrams/ch09-cursor-state-mobile-tw.svg"
+  },
+  {
+    "id": "ch09-logging-locality",
+    "chapter": "ch09",
+    "title": "这条日志为什么不需要一个专用包装类？",
+    "question": "把一条错误日志提成方法，为什么可能让阅读更费力？",
+    "answer": "读调用处要跳去确认记录内容，读包装方法又要跳回理解错误情境；在检测处记录，可让这两份知识同处一地。",
+    "summary": "结论限于书中单处调用、很浅、与调用处高度依赖的包装方法；不反对通用日志基础设施。",
+    "alt": "分离时，错误检测处与 NetworkErrorLogger 包装方法之间有两条相反的阅读依赖箭头；内联后，错误情境和记录 req、dest、e 的语句相邻，仍调用通用 logger。",
+    "kind": "reading-dependency",
+    "desktop": "/diagrams/ch09-logging-locality.svg",
+    "mobile": "/diagrams/ch09-logging-locality-mobile.svg",
+    "anchor": {
+      "section": "9.6",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "9.6",
+        "epub": "OEBPS/part0013.xhtml#p68:df02390bcc",
+        "reason": "专用日志方法大多仅一行、各被调用一次，并与调用处相互依赖。"
+      },
+      {
+        "section": "9.6",
+        "epub": "OEBPS/part0013.xhtml#p69:4beef3e21b",
+        "reason": "建议把日志语句放回检测错误处，消除包装接口；图中保留通用logger，避免误解为取消所有日志抽象。"
+      }
+    ],
+    "review": {
+      "source": "review/reader/diagram-review-08-14-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    },
+    "status": "content-reviewed",
+    "reviewHistory": [
+      {
+        "source": "earlier-local-review",
+        "recordedStatus": "independently-reviewed",
+        "decision": "keep",
+        "resolution": "双向箭头明确表示阅读依赖；保留单处调用的限定和通用logger。",
+        "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance."
+      },
+      {
+        "source": "review/reader/diagram-review-08-14.json",
+        "decision": "keep",
+        "stage": "MAIN-first-pass",
+        "implementation": "kept",
+        "secondReview": "pending",
+        "accepted": false,
+        "resolution": "保留MAIN的keep决定，不重画现有SVG；保留与报告兼容的后续有效修正。 更新当前权威与状态，保留此前本地审阅历史但不将其解释为MAIN或最终二审认可。",
+        "authority": "Historical implementation record, superseded by independent follow-up."
+      }
+    ],
+    "titleTw": "這條日誌為什麼不需要一個專用包裝類？",
+    "questionTw": "把一條錯誤日誌提成方法，為什麼可能讓閱讀更費力？",
+    "answerTw": "讀呼叫處要跳去確認記錄內容，讀包裝方法又要跳回理解錯誤情境；在檢測處記錄，可讓這兩份知識同處一地。",
+    "summaryTw": "結論限於書中單處呼叫、很淺、與呼叫處高度依賴的包裝方法；不反對通用日誌基礎設施。",
+    "altTw": "分離時，錯誤檢測處與 NetworkErrorLogger 包裝方法之間有兩條相反的閱讀依賴箭頭；內聯後，錯誤情境和記錄 req、dest、e 的語句相鄰，仍呼叫通用 logger。",
+    "desktopTw": "/diagrams/ch09-logging-locality-tw.svg",
+    "mobileTw": "/diagrams/ch09-logging-locality-mobile-tw.svg"
+  }
+]

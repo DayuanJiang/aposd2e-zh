@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 700" role="img" aria-labelledby="ch04-common-path-m-title ch04-common-path-m-desc">
+  <title id="ch04-common-path-m-title">有選擇，不等於每次都要選擇</title>
+  <desc id="ch04-common-path-m-desc">教學 ABCDEF 檔案已讀 AB，位置為 2。左側普通分支直接讀 CD 後位置為 4；右側先 lseek 到 4 再讀 EF，位置為 6。兩條路徑可獨立選擇。讀前無需先定位，定位前也不要求先讀，圖僅是一條教學序列。</desc>
+  <defs><marker id="ch04-common-path-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="360" height="700" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="32" font-size="19" font-weight="600">有選擇，不等於每次都要選擇</text>
+    <text x="16" y="58" font-size="14" fill="var(--diagram-muted,#5c645d)">教學序列：每次成功讀取 2 位元組</text>
+    <g font-size="13" text-anchor="middle"><text x="60" y="95">0</text><text x="108" y="95">1</text><text x="156" y="95">2</text><text x="204" y="95">3</text><text x="252" y="95">4</text><text x="300" y="95">5</text></g>
+    <rect x="36" y="104" width="288" height="40" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-line,#aebbad)" />
+    <path d="M84 104V144M132 104V144M180 104V144M228 104V144M276 104V144" stroke="var(--diagram-line,#aebbad)" />
+    <g font-family="ui-monospace,monospace" text-anchor="middle"><text x="60" y="130">A</text><text x="108" y="130">B</text><text x="156" y="130">C</text><text x="204" y="130">D</text><text x="252" y="130">E</text><text x="300" y="130">F</text></g>
+    <text x="16" y="174" font-size="14">上方數字是位元組偏移。</text>
+    <rect x="16" y="194" width="328" height="62" rx="4" fill="none" stroke="var(--diagram-secondary,#2c6096)" />
+    <text x="32" y="220">已讀取 AB</text><text x="32" y="245">當前位置：0 → 2</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch04-common-path-m-arrow)"><path d="M180 264V289H89V318" /><path d="M180 289H273V318" /></g>
+    <text x="24" y="310" font-size="14">順序繼續</text><text x="280" y="310" font-size="14">選擇跳轉</text>
+    <rect x="16" y="332" width="146" height="160" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="32" y="361" font-weight="600">直接 read</text><text x="32" y="395">從位置 2 讀</text><text x="32" y="429">回傳 CD</text><text x="32" y="462">下一位置 4</text>
+    <rect x="198" y="332" width="146" height="70" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" />
+    <text x="214" y="359" font-weight="600">lseek</text><text x="214" y="386">位置：2 → 4</text>
+    <path d="M271 410V431" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch04-common-path-m-arrow)" />
+    <rect x="198" y="443" width="146" height="88" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="214" y="469">read 回傳 EF</text><text x="214" y="497">下一位置 6</text><text x="214" y="520" font-size="13">從跳轉後的 4 讀</text>
+    <text x="16" y="564" font-size="14">普通路徑無需進入 lseek 分支。</text>
+    <text x="16" y="593" font-size="13">此例不是呼叫語法；lseek 前不必先 read。</text>
+    <text x="16" y="622" font-size="13">Java 預設緩衝是作者建議，並非所示事實。</text>
+    <text x="16" y="661" font-size="13" fill="var(--diagram-muted,#5c645d)">假設完整成功回傳；短讀、錯誤、EOF 未畫出。</text>
+  </g>
+</svg>

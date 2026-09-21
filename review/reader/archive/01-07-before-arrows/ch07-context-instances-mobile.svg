@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 818" role="img" aria-labelledby="ch07-context-instances-m-title ch07-context-instances-m-desc">
+  <title id="ch07-context-instances-m-title">不透传之后，两实例会串值吗？</title>
+  <desc id="ch07-context-instances-m-desc">单进程教学顺序为 A 写、B 写、A 读。共享槽依次存 cert-A 和 cert-B，A 读到 cert-B；独立 Context A 保持 cert-A，B 保持 cert-B。构造者预先将正确引用写入 netA.ctx 和 netB.ctx，A 运行时沿 ctxA 读取 cert-A。不是隔离或线程安全保证。</desc>
+  <defs><marker id="ch07-context-instances-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="818" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="32" font-size="19" font-weight="600">不透传之后，两实例会串值吗？</text>
+    <text x="16" y="58" font-size="13" fill="var(--diagram-muted,#5c645d)">教学：单进程、顺序执行、两个独立 Context</text>
+    <text x="16" y="84" font-size="13">假设 netA/ctxA、netB/ctxB 关联正确。</text>
+    <text x="16" y="123" font-weight="600">顺序</text><text x="120" y="123" font-weight="600">共享槽</text><text x="231" y="123" font-weight="600">独立 Context</text>
+    <path d="M16 138H344M16 211H344M16 284H344M16 357H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="165" font-size="14">1　A 写</text><text x="16" y="191" font-size="14">cert-A</text><text x="120" y="182">cert-A</text><text x="231" y="166" font-size="13">A: cert-A</text><text x="231" y="191" font-size="13">B: 未设置</text>
+    <text x="16" y="238" font-size="14">2　B 写</text><text x="16" y="264" font-size="14">cert-B</text><text x="120" y="255">cert-B</text><text x="231" y="239" font-size="13">A: cert-A</text><text x="231" y="264" font-size="13">B: cert-B</text>
+    <text x="16" y="314" font-size="14">3　A 读</text><text x="120" y="326" font-weight="600" fill="var(--diagram-danger,#a03946)">cert-B</text><text x="231" y="311" font-size="14" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">读到 cert-A</text><text x="231" y="340" font-size="13">B 仍为 cert-B</text>
+    <text x="16" y="389" font-weight="600">序号 1 前：构造者提供正确引用</text>
+    <text x="16" y="424" font-family="ui-monospace,monospace" font-size="14">new Net(ctxA)</text>
+    <path d="M79 434V454" stroke="var(--diagram-muted,#5c645d)" stroke-dasharray="5 4" marker-end="url(#ch07-context-instances-m-arrow)"/><text x="96" y="449" font-size="13">构造时</text>
+    <rect x="16" y="467" width="140" height="63" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/><text x="29" y="492" font-weight="600">netA</text><text x="29" y="518" font-size="14">ctx = ctxA</text>
+    <rect x="216" y="467" width="128" height="63" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/><text x="230" y="492">ctxA</text><text x="230" y="518">cert-A</text>
+    <path d="M164 506H206" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch07-context-instances-m-arrow)"/><text x="162" y="492" font-size="13">3 读</text>
+    <text x="16" y="566" font-family="ui-monospace,monospace" font-size="14">new Net(ctxB)</text>
+    <path d="M79 576V596" stroke="var(--diagram-muted,#5c645d)" stroke-dasharray="5 4" marker-end="url(#ch07-context-instances-m-arrow)"/><text x="96" y="591" font-size="13">构造时</text>
+    <rect x="16" y="609" width="140" height="63" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/><text x="29" y="634" font-weight="600">netB</text><text x="29" y="660" font-size="14">ctx = ctxB</text>
+    <rect x="216" y="609" width="128" height="63" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/><text x="230" y="634">ctxB</text><text x="230" y="660">cert-B</text>
+    <path d="M164 648H206" stroke="var(--diagram-line,#aebbad)"/><text x="164" y="633" font-size="13">关联</text>
+    <text x="16" y="702" font-size="13">虚线：提供引用；箭头：运行读取；直线：关联。</text>
+    <text x="16" y="733" font-size="13">网络对象只读是本例假设，非类型保证。</text>
+    <text x="16" y="760" font-size="13">Context 不自动不可变；隐蔽依赖及</text><text x="16" y="782" font-size="13">共享可变状态风险仍在，线程安全未证明。</text>
+    <text x="16" y="806" font-size="12" fill="var(--diagram-muted,#5c645d)">顺序干扰例子，不是竞态演示。</text>
+  </g>
+</svg>

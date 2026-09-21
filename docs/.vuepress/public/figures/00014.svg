@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="393" height="180" viewBox="-4 -4 393 180" role="img" aria-labelledby="figure-00014-title figure-00014-desc">
+  <title id="figure-00014-title">Figure 5.1: An HTTP POST request</title>
+  <desc id="figure-00014-desc">An annotated HTTP request. Downward arrows identify the Method, URL, Parameter(s), and Protocol Version in the first line. A right brace identifies the six Headers, followed by a blank line. A leftward arrow identifies the Body. All request text, including Content-Length: 40, the query photo_id=246, and the URL-encoded form body, is transcribed from the original.</desc>
+  <defs>
+    <marker id="figure-00014-arrow" viewBox="0 0 7 5" refX="7" refY="2.5" markerWidth="7" markerHeight="5" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0 0L7 2.5L0 5L2 2.5Z" fill="#000"/>
+    </marker>
+  </defs>
+  <rect x="-4" y="-4" width="393" height="180" fill="#fff"/>
+  <g fill="none" stroke="#000" stroke-width="0.8" marker-end="url(#figure-00014-arrow)">
+    <path d="M20.5 14V30"/>
+    <path d="M93.5 14V30"/>
+    <path d="M207 14V30"/>
+    <path d="M299.5 14V30"/>
+    <path d="M346 162.4H325"/>
+  </g>
+  <g fill="#000" font-family="Arial, Helvetica, sans-serif" font-size="12" font-style="italic">
+    <text x="0" y="9.5">Method</text>
+    <text x="81" y="9.5">URL</text>
+    <text x="169" y="9.5">Parameter(s)</text>
+    <text x="253" y="9.5">Protocol Version</text>
+    <text x="338" y="97">Headers</text>
+    <text x="356" y="166.4">Body</text>
+  </g>
+  <g fill="#000" font-family="'Courier New', Courier, monospace" font-size="12.8">
+    <text x="8.5" y="42">POST /comments/create?photo_id=246 HTTP/1.1</text>
+    <text x="8.5" y="57.5">Host: www.example.com</text>
+    <text x="8.5" y="73">User-Agent: Mozilla/5.0</text>
+    <text x="8.5" y="88.5">Accept: text/html, */*</text>
+    <text x="8.5" y="104">Accept-Language: en-us</text>
+    <text x="8.5" y="119.5">Accept-Charset: ISO-8859-1,utf-8</text>
+    <text x="8.5" y="135">Content-Length: 40</text>
+    <text x="8.5" y="166">comment=What+a+cute+baby%21&amp;priority=low</text>
+  </g>
+  <path d="M328.5 47C337 47 331.5 68 331.5 81C331.5 90 331.7 92.5 335.5 93.5C331.7 94.5 331.5 97 331.5 106C331.5 119 337 140 328.5 140" fill="none" stroke="#000" stroke-width="0.8"/>
+</svg>

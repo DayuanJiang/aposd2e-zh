@@ -1,0 +1,59 @@
+[
+  {
+    "id": "ch16-comment-scope",
+    "chapter": "ch16",
+    "title": "注释应覆盖多大范围？",
+    "question": "三阶段方法的所有说明都应该放在方法开头吗？",
+    "answer": "整体策略可放在开头；每个阶段的细节应紧贴该阶段，放在涵盖相关代码的最小范围内。离代码越远，说明越应抽象。",
+    "summary": "跨度线表示说明覆盖的代码范围。选候选、评分、选择并移除来自原文；灰色短线仅示意代码，不是实现。",
+    "alt": "整体策略的括线覆盖候选筛选、评分、选择并移除三个阶段；每个阶段各有紧贴本阶段的细节注释和短括线，局部修改只直接牵动相邻细节。",
+    "kind": "scope-boundaries",
+    "desktop": "/diagrams/ch16-comment-scope.svg",
+    "mobile": "/diagrams/ch16-comment-scope-mobile.svg",
+    "anchor": { "section": "16.2", "placement": "end" },
+    "sources": [
+      { "section": "16.2", "epub": "OEBPS/part0020.xhtml#p13:74e8c3f392", "reason": "注释靠近代码，修改时更容易看到并同步维护。" },
+      { "section": "16.2", "epub": "OEBPS/part0020.xhtml#p15:f492854e87", "reason": "细节说明放到涵盖有关代码的最小范围；方法开头仍可概述策略。" },
+      { "section": "16.2", "epub": "OEBPS/part0020.xhtml#p17:52804d1ab1", "reason": "三阶段实例的第一阶段是找候选；随后两行是评分、选择并移除。" },
+      { "section": "16.2", "epub": "OEBPS/part0020.xhtml#p21:df361d6028", "reason": "离代码越远，注释越应抽象。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch16-single-source",
+    "chapter": "ch16",
+    "title": "说明复制与引用，失效方式不同",
+    "question": "为何到处复制同一段设计说明，比引用一处说明更危险？",
+    "answer": "复制要求同步更新每一份，漏改的副本仍看似可信；单处说明只需维护一份，引用若失效，读者至少会发现目标不存在。",
+    "summary": "以 A/B/C 使用处和规则旧版、新版作教学示意。虚线表示漏改或失效路径，不代表引用永远不会坏。",
+    "alt": "左侧规则变化传播到三份说明，其中一份漏改却仍可读；右侧三个使用处只引用一个说明源，源移动时引用找不到目标，故障可见。",
+    "kind": "change-propagation",
+    "desktop": "/diagrams/ch16-single-source.svg",
+    "mobile": "/diagrams/ch16-single-source-mobile.svg",
+    "anchor": { "section": "16.4", "placement": "end" },
+    "sources": [
+      { "section": "16.4", "epub": "OEBPS/part0020.xhtml#p26:6cd00ff764", "reason": "每个设计决策尽量记录一次，多个使用处可查变量声明等自然位置。" },
+      { "section": "16.4", "epub": "OEBPS/part0020.xhtml#p27:1276783230", "reason": "引用目标被移除后失效可见；未更新的重复文档可能没有任何失效迹象。A/B/C 和版本标签为教学自拟。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch16-invalidation-review",
+    "chapter": "ch16",
+    "title": "代码改了，哪层注释必须改？",
+    "question": "提交前如何区分应更新的注释与仍然有效的注释？",
+    "answer": "逐项检查差异：局部实现变动核对对应细节，整体行为变动核对更高层说明；未来还需要的修复理由写回代码，不只留在提交日志。",
+    "summary": "两条变更路径表示失效范围不同，并汇入同一次提交前复核。没有行为变化，不等于可以跳过对注释有效性的检查。",
+    "alt": "实现细节变化指向局部细节说明，整体行为变化指向接口和高层说明；未来需要的修复理由从提交日志转入相关代码注释；三路汇入逐项核对差异。",
+    "kind": "invalidation-review",
+    "desktop": "/diagrams/ch16-invalidation-review.svg",
+    "mobile": "/diagrams/ch16-invalidation-review-mobile.svg",
+    "anchor": { "section": "16.6", "placement": "end" },
+    "sources": [
+      { "section": "16.3", "epub": "OEBPS/part0020.xhtml#p24:651dd7ef0a", "reason": "未来需要的微妙修复理由应记录在代码里，防止不知情的开发者撤销修复。" },
+      { "section": "16.5", "epub": "OEBPS/part0020.xhtml#p33:4c371c1799", "reason": "提交前逐项检查差异与文档是否一致。" },
+      { "section": "16.6", "epub": "OEBPS/part0020.xhtml#p35:84d1399898", "reason": "高层说明不受细微实现变化影响，整体行为变化才使其需要更新；一些细节注释仍须精确。" }
+    ],
+    "status": "awaiting-independent-review"
+  }
+]

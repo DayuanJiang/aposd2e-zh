@@ -1,0 +1,41 @@
+[
+  {
+    "id": "ch22-complexity-diagnosis",
+    "chapter": "ch22",
+    "title": "从一次修改的困难，选择设计动作",
+    "question": "面对难改的代码，应先收拢依赖，还是补足读者信息？",
+    "answer": "观察困难来自何处：同一决策牵动多处，检查泄露和重复并收拢责任；不知道契约或调用条件，先判断信息能否隐藏，必要信息再用明确接口与注释呈现。两者可能同时存在。",
+    "summary": "这是译者将结论与第 16、18、21 章组织成的诊断路径，不是作者原有流程图。动作必须回到原修改任务验证，不能只按危险信号贴标签。",
+    "alt": "一次修改分成两条可同时成立的观察路径：多处联动指向依赖，再到收拢设计决策；信息难找指向模糊性，再到隐藏无关信息并显露必要契约；两路汇入重新检查此次修改需要触及和理解的范围。",
+    "kind": "synthesis-diagnostic",
+    "desktop": "/diagrams/ch22-complexity-diagnosis.svg",
+    "mobile": "/diagrams/ch22-complexity-diagnosis-mobile.svg",
+    "anchor": { "intro": true },
+    "sources": [
+      { "section": "intro", "epub": "OEBPS/part0026.xhtml#p3:69a997ed5b", "reason": "结论将依赖性、模糊性、危险信号、深模块和文档分离联系到复杂性；图中诊断顺序为译者综合。" },
+      { "section": "16.4", "epub": "OEBPS/part0020.xhtml#p26:6cd00ff764", "reason": "同一决策记录一次，避免多份同步维护。" },
+      { "section": "18.3", "epub": "OEBPS/part0022.xhtml#p99:5b421f05ed", "reason": "先减少所需信息，再复用读者知识，再以名称和注释提供必要信息。" },
+      { "section": "21.4", "epub": "OEBPS/part0025.xhtml#p18:dfaf0db169", "reason": "避免把重要信息错误隐藏；两类原因可能并存，图不作排他分类。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch22-investment-return",
+    "chapter": "ch22",
+    "title": "设计投入通过什么路径回到后续工作？",
+    "question": "早期花时间设计与记录，如何影响下一次复用和修改？",
+    "answer": "精心定义的模块减少后续重复设计，清晰文档减少重读时恢复上下文的工作；实践与反思积累的技能，又让下一轮设计更熟练。",
+    "summary": "三条路径分别是模块复用、文档重读、技能积累，最终回到下一次设计。箭头是本章的定性因果叙述，不表示保证收益或固定回本日期。",
+    "alt": "早期投入分为定义模块与记录契约，分别通向后续复用和重读修改；这些收益释放后续工作的精力。实践与经验另一路进入技能提升，再反馈到下一轮设计；没有数值收益曲线。",
+    "kind": "investment-feedback",
+    "desktop": "/diagrams/ch22-investment-return.svg",
+    "mobile": "/diagrams/ch22-investment-return-mobile.svg",
+    "anchor": { "end": true },
+    "sources": [
+      { "section": "intro", "epub": "OEBPS/part0026.xhtml#p4:7629fe91b1", "reason": "设计与学习在早期增加工作投入。" },
+      { "section": "intro", "epub": "OEBPS/part0026.xhtml#p6:fda8236af4", "reason": "模块反复复用、文档重读和技能积累分别带来后续收益；图只呈现定性机制。" },
+      { "section": "intro", "epub": "OEBPS/part0026.xhtml#p7:2d36f877f5", "reason": "良好设计使更大比例时间能投入设计而不是在脆弱代码里追错；不虚构比例和回本日期。" }
+    ],
+    "status": "awaiting-independent-review"
+  }
+]

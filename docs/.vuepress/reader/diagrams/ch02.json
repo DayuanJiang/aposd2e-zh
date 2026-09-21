@@ -1,0 +1,141 @@
+[
+  {
+    "id": "ch02-weighted-work",
+    "chapter": "ch02",
+    "title": "先简化最难的，还是常改的？",
+    "question": "为什么只看局部复杂性高低，不足以安排改进优先级？",
+    "answer": "整体负担还取决于开发者在各部分花费的时间。相同的局部简化，作用于常接触的部分时，加权影响可以更大。",
+    "summary": "用固定时间权重的教学算例展开原书公式：两处复杂性都降低 1，整体指标分别下降 0.8 和 0.2。不是工时预测。",
+    "alt": "A 复杂性为 2、时间占比 80%，B 为 8、占比 20%，贡献同为 1.6。A 降低 1 后总和为 2.4，B 降低 1 后为 3.0。",
+    "kind": "worked-matrix",
+    "desktop": "/diagrams/ch02-weighted-work.svg",
+    "mobile": "/diagrams/ch02-weighted-work-mobile.svg",
+    "anchor": {
+      "section": "2.1",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "2.1",
+        "epub": "OEBPS/part0006.xhtml#p10:857fd96bed",
+        "reason": "复杂性与常见开发活动有关，罕少触及的复杂部分影响有限。"
+      },
+      {
+        "section": "2.1",
+        "epub": "OEBPS/part0006.xhtml#p11:4407ac13f2",
+        "reason": "整体复杂性按开发时间比例加权；图展开算例而非复制公式图。"
+      }
+    ],
+    "teachingExample": "A/B、复杂性分值、80%/20% 和固定权重均为教学假设；不是测量方法或投资收益预测。",
+    "status": "content-reviewed",
+    "titleTw": "先簡化最難的，還是常改的？",
+    "questionTw": "為什麼只看區域性複雜性高低，不足以安排改進優先權？",
+    "answerTw": "整體負擔還取決於開發者在各部分花費的時間。相同的區域性簡化，作用於常接觸的部分時，加權影響可以更大。",
+    "summaryTw": "用固定時間權重的教學算例展開原書公式：兩處複雜性都降低 1，整體指標分別下降 0.8 和 0.2。不是工時預測。",
+    "altTw": "A 複雜性為 2、時間佔比 80%，B 為 8、佔比 20%，貢獻同為 1.6。A 降低 1 後總和為 2.4，B 降低 1 後為 3.0。",
+    "desktopTw": "/diagrams/ch02-weighted-work-tw.svg",
+    "mobileTw": "/diagrams/ch02-weighted-work-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-01-07-followup.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  },
+  {
+    "id": "ch02-memory-owner",
+    "chapter": "ch02",
+    "title": "谁必须知道何时释放内存？",
+    "question": "同样的分配、使用、释放过程，释放义务在哪一种设计中落到调用者？",
+    "answer": "原设计要求调用者知道释放责任与时机。如果系统能安全地重组为由分配模块负责最终释放，可减轻这部分调用者负担；这不是唯一的降负荷方法，也不是完整的生命周期方案。",
+    "summary": "固定模块与调用者两条责任泳道，以时间顺序对照三项任务；只改变释放责任的归属，不声称移动方框即可确保内存安全。",
+    "alt": "两组相同的模块和调用者泳道中，分配在模块，使用在调用者。第一组的释放也在调用者；第二组仅将释放移回模块。箭头仅表示时间先后，安全结束使用的协议未指定。",
+    "kind": "ownership-trace",
+    "desktop": "/diagrams/ch02-memory-owner.svg",
+    "mobile": "/diagrams/ch02-memory-owner-mobile.svg",
+    "anchor": {
+      "section": "2.2",
+      "paragraph": 4
+    },
+    "sources": [
+      {
+        "section": "2.2",
+        "epub": "OEBPS/part0006.xhtml#p16:a109901f0e",
+        "reason": "分配函数假定调用者释放内存增加认知负荷；原书建议分配模块承担释放责任。"
+      },
+      {
+        "section": "2.2",
+        "epub": "OEBPS/part0006.xhtml#p17:e51597de57",
+        "reason": "代码行数不能代表理解调用所需知识的成本。"
+      }
+    ],
+    "status": "content-reviewed",
+    "titleTw": "誰必須知道何時釋放記憶體？",
+    "questionTw": "同樣的分配、使用、釋放過程，釋放義務在哪一種設計中落到呼叫者？",
+    "answerTw": "原設計要求呼叫者知道釋放責任與時機。如果系統能安全地重組為由分配模組負責最終釋放，可減輕這部分呼叫者負擔；這不是唯一的降負荷方法，也不是完整的生命週期方案。",
+    "summaryTw": "固定模組與呼叫者兩條責任泳道，以時間順序對照三項任務；只改變釋放責任的歸屬，不聲稱移動方框即可確保記憶體安全。",
+    "altTw": "兩組相同的模組和呼叫者泳道中，分配在模組，使用在呼叫者。第一組的釋放也在呼叫者；第二組僅將釋放移回模組。箭頭僅表示時間先後，安全結束使用的協議未指定。",
+    "desktopTw": "/diagrams/ch02-memory-owner-tw.svg",
+    "mobileTw": "/diagrams/ch02-memory-owner-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-01-07-followup.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  },
+  {
+    "id": "ch02-cause-symptom",
+    "chapter": "ch02",
+    "title": "看见依赖后，哪些修改仍要做？",
+    "question": "新增错误状态时，消息表变得可发现，会减少哪些未知而不会消除哪些修改？",
+    "answer": "声明和消息表仍需一致更新。可发现的关联帮助找到第二处修改，降低漏改风险，但不移除依赖，也不保证系统中所有依赖都已被发现。",
+    "summary": "两组匹配的教学状态表都新增 TIMEOUT：一组只改声明，消息条目缺失；另一组通过可见关联找到消息表并补齐相同的必需修改集。",
+    "alt": "初始声明只有 OK，消息表有 OK 对应成功。新增 TIMEOUT 后，关联不明显的例子漏掉 TIMEOUT 消息；可见关联的例子将其补为超时。两组都必须修改声明和消息表，实线表示协同修改，虚线表示发现线索。",
+    "kind": "cochange-trace",
+    "desktop": "/diagrams/ch02-cause-symptom.svg",
+    "mobile": "/diagrams/ch02-cause-symptom-mobile.svg",
+    "anchor": {
+      "section": "2.3",
+      "paragraph": 5
+    },
+    "sources": [
+      {
+        "section": "2.3",
+        "epub": "OEBPS/part0006.xhtml#p27:3c809c76e1",
+        "reason": "新增错误状态还需更新消息表，但该表的存在可能不明显。"
+      },
+      {
+        "section": "2.3",
+        "epub": "OEBPS/part0006.xhtml#p29:ab0367e05b",
+        "reason": "明确列出依赖、模糊性分别导致的三种症状。"
+      },
+      {
+        "section": "2.3",
+        "epub": "OEBPS/part0006.xhtml#p25:d90f87f2bd",
+        "reason": "依赖不能全部消除，应尽量简单且明显。"
+      }
+    ],
+    "teachingExample": "OK、TIMEOUT、成功、超时及可见关联注记均为教学示例，不是原书程序；缺失消息的运行时处理未假定。",
+    "status": "content-reviewed",
+    "titleTw": "看見依賴後，哪些修改仍要做？",
+    "questionTw": "新增錯誤狀態時，訊息表變得可發現，會減少哪些未知而不會消除哪些修改？",
+    "answerTw": "宣告和訊息表仍需一致更新。可發現的關聯幫助找到第二處修改，降低漏改風險，但不移除依賴，也不保證系統中所有依賴都已被發現。",
+    "summaryTw": "兩組匹配的教學狀態表都新增 TIMEOUT：一組只改宣告，訊息條目缺失；另一組透過可見關聯找到訊息表並補齊相同的必需修改集。",
+    "altTw": "初始宣告只有 OK，訊息表有 OK 對應成功。新增 TIMEOUT 後，關聯不明顯的例子漏掉 TIMEOUT 訊息；可見關聯的例子將其補為超時。兩組都必須修改宣告和訊息表，實線表示協同修改，虛線表示發現線索。",
+    "desktopTw": "/diagrams/ch02-cause-symptom-tw.svg",
+    "mobileTw": "/diagrams/ch02-cause-symptom-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-01-07-followup.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  }
+]

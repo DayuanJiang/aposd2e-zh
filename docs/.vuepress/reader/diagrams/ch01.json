@@ -1,0 +1,47 @@
+[
+  {
+    "id": "ch01-two-levers",
+    "chapter": "ch01",
+    "title": "消除规则，还是隔离规则？",
+    "question": "简化代码与封装复杂性，改变的是同一件事吗？",
+    "answer": "消除使需要存在的规则更少；封装使规则仍然存在，但不再要求调用者同时理解它们。",
+    "summary": "两种手段可以并用。统一命名消除无谓区别，模块边界则把必要的解析细节留在实现内部。",
+    "alt": "同一含义的 size 和 length 统一为 length，区别消失。另一个对照保持 R 格式识别与 D 解码不变：封装前都在调用者内，封装后移入文件模块，调用者只调用 load(file)。",
+    "kind": "boundary-comparison",
+    "desktop": "/diagrams/ch01-two-levers.svg",
+    "mobile": "/diagrams/ch01-two-levers-mobile.svg",
+    "anchor": {
+      "section": "intro",
+      "paragraph": 6
+    },
+    "sources": [
+      {
+        "section": "intro",
+        "epub": "OEBPS/part0005.xhtml#p7:6932e6496e",
+        "reason": "消除特殊情况和统一标识符是消除复杂性的例子。"
+      },
+      {
+        "section": "intro",
+        "epub": "OEBPS/part0005.xhtml#p8:c2c0a76bad",
+        "reason": "模块化使开发者不必同时面对全部复杂性；不是让实现复杂性消失。"
+      }
+    ],
+    "teachingExample": "size/length 和 load 文件解码均为教学示例，不是原书代码。",
+    "status": "content-reviewed",
+    "titleTw": "消除規則，還是隔離規則？",
+    "questionTw": "簡化程式碼與封裝複雜性，改變的是同一件事嗎？",
+    "answerTw": "消除使需要存在的規則更少；封裝使規則仍然存在，但不再要求呼叫者同時理解它們。",
+    "summaryTw": "兩種手段可以並用。統一命名消除無謂區別，模組邊界則把必要的解析細節留在實作內部。",
+    "altTw": "同一含義的 size 和 length 統一為 length，區別消失。另一個對照保持 R 格式識別與 D 解碼不變：封裝前都在呼叫者內，封裝後移入檔案模組，呼叫者只呼叫 load(file)。",
+    "desktopTw": "/diagrams/ch01-two-levers-tw.svg",
+    "mobileTw": "/diagrams/ch01-two-levers-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-01-07-followup.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  }
+]

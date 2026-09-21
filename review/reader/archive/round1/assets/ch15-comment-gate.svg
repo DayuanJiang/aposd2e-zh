@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" role="img" aria-labelledby="ch15-comment-gate-title ch15-comment-gate-desc">
+  <title id="ch15-comment-gate-title">先看完整性，再用注释诊断设计</title>
+  <desc id="ch15-comment-gate-desc">说明不清晰或不完整时先修文档，不能判深度。完整后仍冗长复杂提示设计问题；简短完整支持接口简单。若必须暴露全部主要实现特性，则方法浅。</desc>
+  <defs><marker id="ch15-comment-gate-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="440" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="21" font-weight="600">注释短，不等于接口简单</text>
+    <text x="24" y="61" font-size="14">15.3 · 字数不是深度指标；完整、清晰是诊断前提</text>
+    <path d="M184 84L344 134L184 184L24 134Z" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="184" y="127" text-anchor="middle">使用所需的信息</text><text x="184" y="151" text-anchor="middle">完整、清晰吗？</text>
+    <path d="M344 134H442" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch15-comment-gate-arrow)"/>
+    <text x="388" y="121" text-anchor="middle">否</text>
+    <rect x="442" y="100" width="214" height="70" rx="5" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="549" y="128" text-anchor="middle">补足、澄清说明</text><text x="549" y="154" text-anchor="middle">此时不能判定深度</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch15-comment-gate-arrow)"><path d="M184 184V237H549V260"/><path d="M184 237V260"/></g>
+    <text x="198" y="215">是，再看能否简洁描述</text>
+    <rect x="24" y="260" width="292" height="72" rx="5" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="170" y="289" text-anchor="middle">简短且完整</text><text x="170" y="315" text-anchor="middle">支持“接口简单”的判断</text>
+    <rect x="364" y="260" width="292" height="72" rx="5" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="510" y="289" text-anchor="middle">仍然很难描述</text><text x="510" y="315" text-anchor="middle">设计预警：重新考虑抽象</text>
+    <path d="M24 364H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="391">另一个深度信号：若接口说明必须覆盖全部主要实现特性，</text>
+    <text x="24" y="416">这个方法就是浅的。删掉这些说明，并不会使方法变深。</text>
+  </g>
+</svg>

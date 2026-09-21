@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 594" role="img" aria-labelledby="ch11-two-design-levels-m-t ch11-two-design-levels-m-d">
+  <title id="ch11-two-design-levels-m-t">接口选定后，还能设计两次吗？</title><desc id="ch11-two-design-levels-m-d">同一任意范围接口下，行链表、字符块和间隙缓冲区三个候选实现纵向列出。接口看易用性，实现看简单性与性能。</desc>
+  <defs><marker id="ch11-two-design-levels-m-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="360" height="594" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="20" y="32" font-size="18" font-weight="600">接口选定后，还能设计两次吗？</text>
+    <text x="20" y="75" font-weight="600">接口层：高层软件是否易于使用？</text>
+    <rect x="20" y="96" width="320" height="48" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="83" y="127">选定任意范围接口</text>
+    <path d="M20 166H340" stroke="var(--diagram-line,#aebbad)" stroke-dasharray="5 4"/>
+    <path d="M40 145V461" stroke="var(--diagram-muted,#58636b)" fill="none"/>
+    <g stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch11-two-design-levels-m-a)"><path d="M40 224H67"/><path d="M40 331H67"/><path d="M40 438H67"/></g>
+    <text x="80" y="210" font-weight="600">候选：行链表</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><rect x="80" y="230" width="66" height="29" rx="3"/><rect x="194" y="230" width="66" height="29" rx="3"/></g>
+    <text x="99" y="250" font-size="13">一行</text><text x="213" y="250" font-size="13">一行</text><path d="M148 245H186" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch11-two-design-levels-m-a)"/>
+    <text x="80" y="317" font-weight="600">候选：固定大小字符块</text><rect x="80" y="337" width="180" height="29" fill="var(--diagram-secondary-soft,#dce4ed)"/><path d="M125 337V366M170 337V366M215 337V366" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="80" y="424" font-weight="600">候选：间隙缓冲区</text><rect x="80" y="444" width="46" height="29" fill="var(--diagram-secondary-soft,#dce4ed)"/><rect x="126" y="444" width="90" height="29" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-dasharray="4 3"/><rect x="216" y="444" width="46" height="29" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="157" y="464" font-size="13">间隙</text>
+    <path d="M20 498H340" stroke="var(--diagram-line,#aebbad)"/><text x="20" y="527" font-weight="600">实现层：比较简单性与性能</text>
+    <text x="20" y="557" font-size="13" fill="var(--diagram-muted,#58636b)">候选形状为教学示意，无普遍最优排名。</text><text x="20" y="580" font-size="13" fill="var(--diagram-muted,#58636b)">早期探索不要求完整实现所有方案。</text>
+  </g>
+</svg>

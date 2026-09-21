@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 416" role="img" aria-labelledby="ch19-inheritance-dependencies-title ch19-inheritance-dependencies-desc">
+  <title id="ch19-inheritance-dependencies-title">共享实现与共享状态带来不同代价</title>
+  <desc id="ch19-inheritance-dependencies-desc">实现继承减少代码副本，但父子共享状态会扩大修改检查范围。组合方案让 A、B 通过辅助类接口使用功能，状态封装在内部；调用依赖仍存在。A、B 为教学占位。</desc>
+  <defs><marker id="ch19-inheritance-dependencies-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="416" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="21" font-weight="600">少复制代码，不等于少依赖</text><text x="24" y="61" font-size="14">19.1 · 虚线：修改时需互相检查；实线：通过接口使用</text>
+    <text x="24" y="100" font-weight="600">风险：父子共享状态</text><text x="365" y="100" font-weight="600">备选：组合共享功能</text>
+    <rect x="80" y="120" width="194" height="70" rx="5" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="177" y="148" text-anchor="middle">父类实现与状态</text><text x="177" y="175" text-anchor="middle" font-size="14">变化可能牵动子类</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-start="url(#ch19-inheritance-dependencies-arrow)" marker-end="url(#ch19-inheritance-dependencies-arrow)" stroke-dasharray="5 4"><path d="M135 190L92 249"/><path d="M220 190L269 249"/></g>
+    <rect x="24" y="249" width="136" height="54" rx="5" fill="none" stroke="var(--diagram-danger,#a03946)"/><rect x="205" y="249" width="122" height="54" rx="5" fill="none" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="92" y="282" text-anchor="middle">子类 A</text><text x="266" y="282" text-anchor="middle">子类 B</text>
+    <path d="M346 85V340" stroke="var(--diagram-line,#aebbad)"/>
+    <rect x="370" y="122" width="112" height="46" rx="5" fill="none" stroke="var(--diagram-secondary,#2c6096)"/><rect x="544" y="122" width="112" height="46" rx="5" fill="none" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="426" y="151" text-anchor="middle">类 A</text><text x="600" y="151" text-anchor="middle">类 B</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch19-inheritance-dependencies-arrow)"><path d="M426 168V205H481V225"/><path d="M600 168V205H544V225"/></g>
+    <rect x="385" y="225" width="256" height="91" rx="5" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="513" y="250" text-anchor="middle">辅助类接口</text><path d="M385 263H641" stroke="var(--diagram-primary,#0b6f5d)"/><text x="513" y="292" text-anchor="middle">内部状态不直接共享</text>
+    <text x="365" y="341" font-size="14">调用依赖仍在，不是“零依赖”。</text>
+    <path d="M24 360H656" stroke="var(--diagram-line,#aebbad)"/><text x="24" y="389">若必须继承，也应隔离父类与子类各自管理的状态。A/B 为示意。</text>
+  </g>
+</svg>

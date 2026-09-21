@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 688" role="img" aria-labelledby="ch07-context-instances-title ch07-context-instances-desc">
+  <title id="ch07-context-instances-title">不透傳之後，兩實例會串值嗎？</title>
+  <desc id="ch07-context-instances-desc">單行程順序教學案例。A 寫 cert-A，B 寫 cert-B，A 再讀。共享槽最後為 cert-B，所以 A 讀到 cert-B；兩個獨立 Context 分別保留 cert-A 和 cert-B。構造者預先給 netA 和 netB 正確的 ctx 欄位，第三步 netA 經 ctxA 讀取 cert-A。型別本身不保證隔離或不可變。</desc>
+  <defs><marker id="ch07-context-instances-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="680" height="688" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="20" font-weight="600">不透傳之後，兩實例會串值嗎？</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">教學假設：一個行程，順序執行；ctxA 與 ctxB 是不同物件，關聯正確</text>
+    <text x="24" y="106" font-weight="600">順序</text><text x="235" y="106" font-weight="600">共享 globalCert</text><text x="409" y="106" font-weight="600">獨立 ctxA</text><text x="557" y="106" font-weight="600">獨立 ctxB</text>
+    <path d="M24 120H656M24 174H656M24 228H656M24 287H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="24" y="153">1　A 寫 cert-A</text><text x="235" y="153">cert-A</text><text x="409" y="153">cert-A</text><text x="557" y="153">未設定</text>
+    <text x="24" y="207">2　B 寫 cert-B</text><text x="235" y="207">cert-B</text><text x="409" y="207">cert-A</text><text x="557" y="207">cert-B</text>
+    <text x="24" y="263">3　A 讀取</text><text x="235" y="263" fill="var(--diagram-danger,#a03946)" font-weight="600">得到 cert-B</text><text x="409" y="263" fill="var(--diagram-primary,#0b6f5d)" font-weight="600">得到 cert-A</text><text x="557" y="263">仍為 cert-B</text>
+    <text x="24" y="323" font-weight="600">構造時儲存引用；下圖疊加步驟 3 查詢，數值為步驟 2 之後</text>
+    <text x="40" y="357" font-family="ui-monospace,monospace">new Net(ctxA)</text><text x="394" y="357" font-family="ui-monospace,monospace">new Net(ctxB)</text>
+    <g stroke="var(--diagram-muted,#5c645d)" stroke-dasharray="5 4" marker-end="url(#ch07-context-instances-arrow)"><path d="M163 366V390" /><path d="M517 366V390" /></g>
+    <text x="181" y="382" font-size="13">構造時傳入</text><text x="535" y="382" font-size="13">構造時傳入</text>
+    <rect x="24" y="402" width="278" height="69" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" />
+    <text x="40" y="429" font-weight="600">netA</text><text x="40" y="455" font-family="ui-monospace,monospace">ctx = ctxA</text>
+    <rect x="378" y="402" width="278" height="69" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" />
+    <text x="394" y="429" font-weight="600">netB</text><text x="394" y="455" font-family="ui-monospace,monospace">ctx = ctxB</text>
+    <path d="M163 479V520" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch07-context-instances-arrow)" /><text x="182" y="504" font-size="14">3　執行時讀取</text>
+    <path d="M517 479V520" stroke="var(--diagram-line,#aebbad)" /><text x="537" y="503" font-size="13">僅表示關聯</text>
+    <rect x="24" y="532" width="278" height="56" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" /><text x="40" y="566">ctxA：cert = cert-A</text>
+    <rect x="378" y="532" width="278" height="56" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" /><text x="394" y="566">ctxB：cert = cert-B</text>
+    <text x="24" y="619" font-size="14">本例網路物件只讀設定；Context 型別本身並不保證物件獨立或不可變。</text>
+    <text x="24" y="651" font-size="13" fill="var(--diagram-muted,#5c645d)">隱蔽依賴與共享可變狀態風險仍在；不是競態演示，也未證明執行緒安全。</text>
+    <text x="24" y="675" font-size="12" fill="var(--diagram-muted,#5c645d)">虛線：構造時提供引用；實線箭頭：步驟 3 查詢；無箭頭線：儲存的引用關聯。</text>
+  </g>
+</svg>

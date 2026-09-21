@@ -1,0 +1,74 @@
+[
+  {
+    "id": "ch06-f1",
+    "sourceHash": "50f1e7611eb67068ea20fc04739cb8f07ed1df9c7620e253ccd185f4d1ba7896",
+    "python": "def backspace(self, cursor: \"Cursor\") -> None:\n    ...\n\n\ndef delete(self, cursor: \"Cursor\") -> None:\n    ...\n",
+    "note": "教学改写：文本类的方法签名，Cursor 是应用定义的光标类型。刻意保留分别对应退格键与删除键的专用 API。省略号标记未给出的实现；按字面运行，这些占位方法不执行操作并返回 None，使用前必须补全。",
+    "noteEn": "Teaching adaptation: text-class method signatures with an application-defined Cursor type. The separate APIs tied to backspace and delete keys are deliberately retained. Ellipses mark omitted implementations; executed literally, these stubs do nothing and return None, so they must be implemented before use.",
+    "originalLanguage": "java",
+    "noteTw": "教學改寫：文字類的方法簽名，Cursor 是應用定義的游標型別。刻意保留分別對應退格鍵與刪除鍵的專用 API。省略號標記未給出的實作；按字面執行，這些佔位方法不執行操作並回傳 None，使用前必須補全。"
+  },
+  {
+    "id": "ch06-f2",
+    "sourceHash": "8dd68ef0568a06fe29f6ee7aeb2d88220e61152a84169ab5fd9a25235e2c7158",
+    "python": "def deleteSelection(self, selection: \"Selection\") -> None:\n    ...\n",
+    "note": "教学改写：文本类的方法签名；保留界面专用的 Selection 类型和 deleteSelection 原名，以呈现原例的耦合问题。Selection 的定义与删除实现均省略。",
+    "noteEn": "Teaching adaptation: a text-class method signature retaining the UI-specific Selection type and deleteSelection name to preserve the original coupling problem. The Selection definition and deletion implementation are omitted.",
+    "originalLanguage": "java",
+    "noteTw": "教學改寫：文字類的方法簽名；保留介面專用的 Selection 型別和 deleteSelection 原名，以呈現原例的耦合問題。Selection 的定義與刪除實作均省略。"
+  },
+  {
+    "id": "ch06-f3",
+    "sourceHash": "ca2d2e1f913f0fdc07428be469aa8f64c3a8e103e517f5eae5a9dab74d3dda00",
+    "python": "def insert(self, position: \"Position\", newText: str) -> None:\n    ...\n\n\ndef delete(self, start: \"Position\", end: \"Position\") -> None:\n    ...\n",
+    "note": "教学改写：仅列通用文本 API；delete 的范围包含 start、不包含 end。Position 仍是应用定义的位置对象，并非 Python 字符串下标；类型和实现省略，注解不强制执行契约。",
+    "noteEn": "Teaching adaptation: general-purpose text API signatures; delete includes start and excludes end. Position remains an application-defined location, not a Python string index. Types and implementations are omitted, and annotations do not enforce the contract.",
+    "originalLanguage": "java",
+    "noteTw": "教學改寫：僅列通用文字 API；delete 的範圍包含 start、不包含 end。Position 仍是應用定義的位置物件，並非 Python 字串下標；型別和實作省略，註解不強制執行契約。"
+  },
+  {
+    "id": "ch06-f4",
+    "sourceHash": "e4ef57ff0743d98b664b1b1de854a16bbd5bdeafe2fc4a8720d781353bb53256",
+    "python": "def changePosition(self, position: \"Position\", numChars: int) -> \"Position\":\n    ...\n",
+    "note": "教学改写：保留返回新位置、按 numChars 正负方向移动并跨行的接口契约，实现省略。字符单位及文件边界处理仍由文本类定义，不套用 Python 负下标规则。",
+    "noteEn": "Teaching adaptation: preserves the contract of returning a new position, moving forward or backward by numChars across lines; implementation is omitted. Character units and file-boundary behavior belong to the text class, not Python's negative-index rules.",
+    "originalLanguage": "java",
+    "noteTw": "教學改寫：保留回傳新位置、按 numChars 正負方向移動並跨行的介面契約，實作省略。字元單位及檔案邊界處理仍由文字類定義，不套用 Python 負下標規則。"
+  },
+  {
+    "id": "ch06-f5",
+    "sourceHash": "115769f5061c7e678b9f46ddf47aa550de1fddff82acfed3844797e655fc8aa1",
+    "python": "text.delete(cursor, text.changePosition(cursor, 1))\n",
+    "note": "教学改写：调用应用的通用文本 API，删除从 cursor 到后一位置的左闭右开范围；text 和 cursor 来自外围代码。保留 changePosition 原名，不假定位置等同于 Python 下标。",
+    "noteEn": "Teaching adaptation: calls the application's general text API to delete the half-open range from cursor to the next position. text and cursor come from surrounding code; changePosition keeps its original name without treating positions as Python indices.",
+    "originalLanguage": "java",
+    "noteTw": "教學改寫：呼叫應用的通用文字 API，刪除從 cursor 到後一位置的左閉右開範圍；text 和 cursor 來自外圍程式碼。保留 changePosition 原名，不假定位置等同於 Python 下標。"
+  },
+  {
+    "id": "ch06-f6",
+    "sourceHash": "00c91ec1890974e2ae2eac9f08a5e916393e083bf9f3443ac32c828cbb8ca67a",
+    "python": "text.delete(text.changePosition(cursor, -1), cursor)\n",
+    "note": "教学改写：保留用通用 API 表达退格行为的调用。-1 是向前一个字符位置移动，不是从字符串末尾索引；text、cursor 及跨行和边界实现均由应用提供。",
+    "noteEn": "Teaching adaptation: retains the general-API call expressing backspace. -1 moves one character position backward rather than indexing from a string's end; the application supplies text, cursor, and line-crossing and boundary behavior.",
+    "originalLanguage": "java",
+    "noteTw": "教學改寫：保留用通用 API 表達退格行為的呼叫。-1 是向前一個字元位置移動，不是從字串末尾索引；text、cursor 及跨行和邊界實作均由應用提供。"
+  },
+  {
+    "id": "ch06-f7",
+    "sourceHash": "d89def59b6be4e06d4a7bd1a326e8fe239c23fc859e070dcb3fb2cbac2d78369",
+    "python": "def findNext(self, start: \"Position\", string: str) -> \"Position\":\n    ...\n",
+    "note": "教学改写：仅列文本类的搜索接口，保留 Position 返回类型和 findNext 原名。原例未规定未找到时的结果，因此不擅自增加 None、-1 或异常约定。",
+    "noteEn": "Teaching adaptation: a text-class search signature retaining the Position return type and findNext name. The source leaves unsuccessful searches unspecified, so no None, -1, or exception convention is invented.",
+    "originalLanguage": "java",
+    "noteTw": "教學改寫：僅列文字類的搜尋介面，保留 Position 回傳型別和 findNext 原名。原例未規定未找到時的結果，因此不擅自增加 None、-1 或例外約定。"
+  },
+  {
+    "id": "ch06-f8",
+    "sourceHash": "87f364bca0b349500d658c3c0c4f36f223099bb01fecd92d03cf3de239e66a9d",
+    "python": "from typing import Protocol\n\n\nclass History:\n    class Action(Protocol):\n        def redo(self) -> None:\n            ...\n\n        def undo(self) -> None:\n            ...\n\n    def __init__(self) -> None:\n        ...\n\n    def addAction(self, action: \"History.Action\") -> None:\n        ...\n\n    def addFence(self) -> None:\n        ...\n\n    def undo(self) -> None:\n        ...\n\n    def redo(self) -> None:\n        ...\n",
+    "note": "教学改写：用结构化类型协议 Protocol 表达 History.Action，不要求像 Java 接口那样显式声明实现关系。保留动作、历史机制和高层分组策略的分离；所有方法均为接口示意，不实现撤销栈或栅栏策略。",
+    "noteEn": "Teaching adaptation: Protocol expresses History.Action structurally, without Java's explicit interface implementation declaration. Actions, history mechanics, and higher-level grouping policy remain separate; all methods are API sketches, not an implemented undo stack or fence policy.",
+    "originalLanguage": "java",
+    "noteTw": "教學改寫：用結構化型別協議 Protocol 表達 History.Action，不要求像 Java 介面那樣顯式宣告實作關係。保留動作、歷史機制和高層分組策略的分離；所有方法均為介面示意，不實作撤銷棧或柵欄策略。"
+  }
+]

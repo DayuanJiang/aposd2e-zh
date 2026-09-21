@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 566" role="img" aria-labelledby="ch15-comment-gate-title ch15-comment-gate-desc">
+  <title id="ch15-comment-gate-title">删掉注释条件与真正迁移调用义务不同</title>
+  <desc id="ch15-comment-gate-desc">教学例 saveReport：原设计要求调用者先建父目录，内部只 write。删掉这个注释条件而保持实现不变，缺目录时直接调用仍失败。真正把 ensureParent 移进实现后，调用者只提交路径和文本，模块建目录再写入。比较限定为目录可创建且写入成功的情形，不主张所有错误行为等价，也不凭字数判定方法深度。</desc>
+  <defs><marker id="ch15-comment-gate-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="566" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="33" font-size="21" font-weight="600">删掉调用条件，不会删掉调用义务</text>
+    <text x="24" y="60" font-size="14">15.3 · 教学自拟 saveReport(path, text)，不是作者的 API</text>
+    <text x="24" y="91" font-size="14">共同起点：父目录不存在。假定目录可创建，写入操作能够成功。</text>
+    <text x="24" y="128" font-weight="600">A · 完整说明</text><text x="240" y="128" font-weight="600">B · 只删注释条件</text><text x="456" y="128" font-weight="600">C · 真正改变设计</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><rect x="24" y="143" width="194" height="69"/><rect x="240" y="143" width="194" height="69"/><rect x="456" y="143" width="200" height="69"/></g>
+    <text x="36" y="170">保存文本。</text><text x="36" y="197">调用前须创建父目录。</text>
+    <text x="252" y="170">保存文本。</text><path d="M252 190H414" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-dasharray="4 4"/>
+    <text x="468" y="170">保存文本。</text><text x="468" y="197">按需创建父目录。</text>
+    <text x="24" y="243">调用者先建目录</text><text x="24" y="270">再调用 saveReport</text>
+    <text x="240" y="243" fill="var(--diagram-danger,#a03946)">义务仍在，但说明缺失</text><text x="240" y="270">直接调用会怎样？</text>
+    <text x="456" y="243">调用者只给路径、文本</text><text x="456" y="270">不再负责建目录</text>
+    <path d="M24 289H656" stroke="var(--diagram-line,#aebbad)" stroke-dasharray="5 4"/>
+    <text x="24" y="315" font-size="14">模块内部的实际工作</text>
+    <g font-family="ui-monospace,SFMono-Regular,monospace" font-size="14">
+      <text x="36" y="359">write(path, text)</text><text x="252" y="359">write(path, text)</text>
+      <text x="470" y="341">ensureParent(path)</text><text x="470" y="387">write(path, text)</text>
+    </g>
+    <path d="M553 350V367" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch15-comment-gate-arrow)"/>
+    <path d="M36 375V393H422V375" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2"/>
+    <text x="229" y="417" text-anchor="middle" font-size="14">A 与 B：方法和实现完全未改</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch15-comment-gate-arrow)"><path d="M120 426V445"/><path d="M337 426V445"/><path d="M553 403V445"/></g>
+    <text x="121" y="468" text-anchor="middle" fill="var(--diagram-primary,#0b6f5d)">保存同一路径、文本</text>
+    <text x="337" y="468" text-anchor="middle" fill="var(--diagram-danger,#a03946)">缺目录，直接调用失败</text>
+    <text x="556" y="468" text-anchor="middle" fill="var(--diagram-primary,#0b6f5d)">保存同一路径、文本</text>
+    <path d="M24 491H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="519" font-size="14">C 减少了调用义务，因为工作移入了模块，不是因为注释字数变少。</text>
+    <text x="24" y="544" font-size="14">简单接口不自动等于深方法；若接口必须暴露全部主要实现，方法仍浅。</text>
+  </g>
+</svg>

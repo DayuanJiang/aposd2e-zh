@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 487" role="img" aria-labelledby="ch10-range-overlap-m-t ch10-range-overlap-m-d">
+  <title id="ch10-range-overlap-m-t">用范围交集定义正常结果</title><desc id="ch10-range-overlap-m-d">ABCDE位于索引0到4。负2到2请求的交集是AB，3到8交集是DE，4到2没有满足条件的字符。教学例展示作者建议的绝对索引语义。</desc>
+  <rect width="360" height="487" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="20" y="32" font-size="18" font-weight="600">用范围交集定义正常结果</text>
+    <text x="20" y="64" font-size="14">作者建议：只保留 begin ≤ i &lt; end</text><text x="20" y="86" font-size="14">的现有字符，右边界不包含。</text>
+    <rect x="90" y="107" width="150" height="33" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <path d="M90 107V140M120 107V140M150 107V140M180 107V140M210 107V140M240 107V140" stroke="var(--diagram-line,#aebbad)"/>
+    <g font-family="monospace" font-size="18"><text x="99" y="130">A</text><text x="129" y="130">B</text><text x="159" y="130">C</text><text x="189" y="130">D</text><text x="219" y="130">E</text></g>
+    <path d="M30 155H330" stroke="var(--diagram-line,#aebbad)"/><g font-size="13"><text x="22" y="174">-2</text><text x="86" y="174">0</text><text x="146" y="174">2</text><text x="176" y="174">3</text><text x="206" y="174">4</text><text x="236" y="174">5</text><text x="326" y="174">8</text></g>
+    <text x="20" y="204">请求 [-2, 2) ：得到 AB</text>
+    <rect x="30" y="218" width="120" height="29" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-dasharray="5 3"/><rect x="90" y="218" width="60" height="29" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="109" y="239">AB</text>
+    <text x="20" y="280">请求 [3, 8) ：得到 DE</text>
+    <rect x="180" y="294" width="150" height="29" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-dasharray="5 3"/><rect x="180" y="294" width="60" height="29" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="198" y="315">DE</text>
+    <text x="20" y="356">请求 [4, 2) ：空结果</text><text x="20" y="381" font-size="14">没有 i 同时满足 i ≥ 4 且 i &lt; 2。</text>
+    <path d="M20 399H340" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="20" y="422" font-size="13">虚框为请求，实色为交集。数据是教学例。</text><text x="20" y="445" font-size="13" fill="var(--diagram-muted,#58636b)">这是作者建议的 API，不是 Java 现有行为，</text><text x="20" y="468" font-size="13" fill="var(--diagram-muted,#58636b)">也不是 Python 将负索引解释为倒数的规则。</text>
+  </g>
+</svg>

@@ -1,0 +1,733 @@
+{
+  "round": "independent-second-pass-ch15-ch21",
+  "verdict": "accept-within-reviewed-scope",
+  "summary": "All 18 original IDs are accounted for: keep the 16 current explanatory diagrams and retain the two retirements. The first-report issues are resolved by the actual revised content, accepted question changes, verified placements, or removal. No remaining required diagram correction or new actionable explanatory defect was found. A late reader.css change is not covered by the supplied screenshots; see endOfReviewDrift. This is not approval of current production rendering, all locales, or reader comprehension.",
+  "scope": {
+    "chapters": ["ch15", "ch16", "ch17", "ch18", "ch19", "ch20", "ch21"],
+    "firstReport": "review/reader/diagram-review-15-22.json",
+    "writerReport": "review/reader/revisions-15-21.json",
+    "gallery": "/tmp/aposd2e-viz-round2-15-21/",
+    "archive": "/tmp/aposd2e-viz-review-round1/",
+    "method": "Read all current ch15-ch21 metadata and 32 complete active SVG sources, the writer's revision account, and the first report. Reread all seven current Chinese chapters and the English paragraphs referenced by the active metadata. Viewed all gallery-light-000 through 015 and gallery-dark-000 through 015 with view_image; each sheet contains its desktop and mobile variants. Independently verified hashes, inventory, retirements, unchanged assets, and insertion positions.",
+    "placementVerification": "Read content.mjs and plugin.ts, then evaluated diagramInsertions on the current MarkdownIt tokens for all active IDs in Simplified and Traditional Chinese. This was a read-only token-position check, not a build or integrated browser run.",
+    "issueReferences": "firstReportIssues uses one-based positions in each original record's issues array. Resolution evidence below refers to actual current files and viewed sheets, not merely the writer's claim.",
+    "onlyFileWritten": "review/reader/diagram-review-15-21-second.json",
+    "excluded": "Ch22 was not rereviewed. No assets, source Markdown, shared reader, previous reports, or build outputs were edited. No build, localization generation, runtime example tests, or real-reader experiment was performed."
+  },
+  "verification": {
+    "originalIds": 18,
+    "activeIds": 16,
+    "activeSvgFiles": 32,
+    "gallerySheetsViewed": 32,
+    "allSvgHashesMatchBothThemeIndexEntries": true,
+    "readerCssMatchedBothThemesDuringInspection": true,
+    "currentReaderCssMatchesBothThemesAtFinalCheck": false,
+    "endOfReviewDrift": [
+      {
+        "path": "docs/.vuepress/reader/reader.css",
+        "galleryAndInitiallyVerifiedSha256": "5d3ef34e2d5da059238251eef0c4e1ece7528f8065dd45ced03726cdf373c289",
+        "finalObservedSha256": "fc8eff8a3b087d71331cbc62324e1e953093e431be3401d86cb808831bbad5ec",
+        "unchangedAtFinalCheck": "All 32 SVGs, seven manifests, content.mjs, plugin.ts, both reviewed reports and the gallery index still match the recorded inputs.",
+        "assessment": "The stylesheet changed externally during this review. The current CSS was read, but the supplied gallery does not contain a complete prior stylesheet snapshot for an exact style diff. Hash drift alone is not evidence of a visual regression.",
+        "acceptanceBoundary": "Per-ID explanatory judgments and verified source placements stand. Screenshot-based readability acceptance remains tied to the indexed CSS hash, not the later stylesheet.",
+        "mainVerificationAction": "Before treating these screenshots as approval of the later CSS, obtain rendering evidence for that stylesheet or independently establish that its changes cannot affect the reviewed presentation. No build or screenshot regeneration was performed in this review."
+      }
+    ],
+    "indexOutsideCandidates": 0,
+    "indexOverlapCandidates": 0,
+    "indexContainerCandidates": 0,
+    "visualInspection": "No visible clipping, text collision, or desktop/mobile reversal of the teaching relationships was found in the supplied sheets. Empty geometry results were supporting evidence, not the basis of the explanatory verdicts.",
+    "unchangedPairs": [
+      "ch16-comment-scope",
+      "ch17-trustworthy-patterns",
+      "ch18-reader-expectation",
+      "ch20-critical-path"
+    ],
+    "unchangedPairCheck": "All eight SVGs byte-match their first-round archived assets. For ch16-comment-scope, current metadata changes only alt and status; the alt now rejects guaranteed local impact isolation. The other three retained records change only status.",
+    "retirementCheck": "Neither retired ID appears in any active diagram manifest record or any filename in public/diagrams. The four archived SVGs remain available outside the active collection.",
+    "afterFenceCheck": {
+      "id": "ch18-event-trace",
+      "currentAnchor": { "afterFence": "ch18-f5" },
+      "implementation": "docs/.vuepress/reader/content.mjs:86-94 resolves the root fence and returns its token index plus one. plugin.ts:30-45 uses the same fence ordinal convention and inserts the diagram at that position.",
+      "simplified": {
+        "insertionTokenIndex": 59,
+        "precedingFenceLines": [103, 111],
+        "precedingFunction": "Transport::RpcNotifier::failed()",
+        "followingParagraphLine": 113
+      },
+      "traditional": {
+        "insertionTokenIndex": 59,
+        "precedingFenceLines": [103, 111],
+        "precedingFunction": "Transport::RpcNotifier::failed()",
+        "followingParagraphLine": 113
+      },
+      "conclusion": "The requested after-code position is implemented, before the red-flag callout. The writer report's paragraph-3 fallback and remaining-placement limitation are superseded by MAIN's current metadata and implementation. The gallery does not verify placement, but its SVG hashes remain exact."
+    },
+    "otherMovedAnchors": [
+      {
+        "id": "ch17-convention-gate",
+        "anchor": { "section": "17.2", "paragraph": 6 },
+        "insertionTokenIndex": 51,
+        "afterLine": 33,
+        "beforeLine": 35,
+        "bothChineseLocalesMatch": true
+      },
+      {
+        "id": "ch20-state-compression",
+        "anchor": { "section": "20.4", "paragraph": 15 },
+        "insertionTokenIndex": 132,
+        "afterLine": 139,
+        "beforeLine": 141,
+        "bothChineseLocalesMatch": true
+      }
+    ]
+  },
+  "remainingIssues": [],
+  "newIssues": [],
+  "records": [
+    {
+      "id": "ch15-delay-loop",
+      "firstVerdict": "revise",
+      "verdict": "keep",
+      "active": true,
+      "question": "等待代码稳定，为什么可能让注释一直写不出来？",
+      "expectedAnswerAssessment": "Accepted. Continuing development during deferral can increase undocumented work and the perceived catch-up burden; memory loss is a separate possible consequence. Neither is an individual prediction.",
+      "resolvedIssues": [
+        {
+          "firstReportIssues": [1],
+          "resolution": "Both accessible descriptions now use possible/easier-to-omit language and explicitly reject an exclusive or inevitable outcome; the desktop no longer says later comments can only repeat code.",
+          "evidence": "Desktop SVG:2-3, 7-8, 24-27; mobile SVG:2-3, 7-8, 23-28; current answer/summary/alt."
+        },
+        {
+          "firstReportIssues": [2],
+          "resolution": "Continuing development labels the accumulation edge in both layouts, and mobile visibly retains the risk qualifier.",
+          "evidence": "Desktop SVG:16-17; mobile SVG:15-16 and its title."
+        }
+      ],
+      "reassessment": "The cycle still permits an actual inference about reinforcement: backlog makes catch-up less attractive, and moving to further work returns to deferral. The separate memory branch preserves the distinction between completing documentation and recovering its substance. The mobile branch is connected verbally rather than by the desktop's long edge, but its origin remains explicit. This earns space beyond the linear prose without modeling probability or time.",
+      "sourceEvidence": ["docs/ch15.md:8-12", "/tmp/aposd2e-polish.GHV1eo/original/ch15.md:19-23, part0019 p7:a3722f7256 and p8:f9dda67b49"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "evidence": {
+        "sheets": ["/tmp/aposd2e-viz-round2-15-21/gallery-light-000.png", "/tmp/aposd2e-viz-round2-15-21/gallery-dark-000.png"],
+        "desktopSha256": "620e8555dfbd9971d8a28d446deadd05091ea69cec71314872d73e1862b271be",
+        "mobileSha256": "a0b51a3fdf77022ff6b04c2c154831ee75c5d89eea7301b0057f10a60304e1b3",
+        "placement": "Verified after docs/ch15.md:12 and before 15.2; appropriate.",
+        "readability": "Both line paths and labels are readable in light/dark. The split mobile edge label remains interpretable."
+      },
+      "limitations": ["Qualitative behavioral risk only; not evidence that every postponement causes backlog or forgetting."]
+    },
+    {
+      "id": "ch15-design-feedback",
+      "firstVerdict": "revise",
+      "verdict": "keep",
+      "active": true,
+      "question": "实现尚未开始时写注释，后来发现设计不对怎么办？",
+      "expectedAnswerAssessment": "Accepted as the author's new-class workflow. Implementation/testing can revise the interface description; the order is neither universal nor an automatic documentation-completeness mechanism.",
+      "resolvedIssues": [
+        {
+          "firstReportIssues": [1],
+          "resolution": "Both visible subtitles and descriptions now identify the author's new-class approach and reject its use as a mandatory sequence for all modifications.",
+          "evidence": "Desktop SVG:3, 8; mobile SVG:3, 8; current answer."
+        },
+        {
+          "firstReportIssues": [2],
+          "resolution": "No-backlog outcome language is replaced with the responsibility to maintain comments when the design changes.",
+          "evidence": "Desktop SVG:19; mobile SVG:17; current summary/alt."
+        }
+      ],
+      "reassessment": "Much of the content remains summarized prose, but the return edge supplies the figure's narrow added value: the apparent early interface phase is revisable in light of implementation. The graph does not expand into a universal procedure or promise a better design. The mobile return route and desktop return route express the same relationship.",
+      "sourceEvidence": ["docs/ch15.md:16-27", "/tmp/aposd2e-polish.GHV1eo/original/ch15.md:31-53, part0019 p11 through p18"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "evidence": {
+        "sheets": ["/tmp/aposd2e-viz-round2-15-21/gallery-light-001.png", "/tmp/aposd2e-viz-round2-15-21/gallery-dark-001.png"],
+        "desktopSha256": "654693fd94c01f5b5a794fadc9ed5dd50ed11aaa3762a09ae32b6869b31d2c95",
+        "mobileSha256": "d8b8b23b2c3af591d7f11ff975317e3651fad066118833c5816e36cc4343e93a",
+        "placement": "Verified after docs/ch15.md:27; directly follows the feedback paragraph.",
+        "readability": "No visible clipping; the mobile return-edge explanation remains readable below the two blocks."
+      },
+      "limitations": ["The figure demonstrates permitted feedback, not an observed productivity improvement or a worked interface redesign."]
+    },
+    {
+      "id": "ch15-comment-gate",
+      "firstVerdict": "replace",
+      "verdict": "keep",
+      "active": true,
+      "question": "把接口注释缩短，是否就能让方法变深？",
+      "expectedAnswerAssessment": "Accepted. A/B keep the implementation and its obligation unchanged, while C actually moves directory creation into the module. The answer correctly separates fewer caller obligations from a general verdict that the method is deep.",
+      "resolvedIssues": [
+        {
+          "firstReportIssues": [1, 3],
+          "resolution": "The category-only gate is replaced by an inspectable missing-directory example: the removed condition, unchanged write operation, caller behavior, and failing direct call are visible.",
+          "evidence": "Desktop SVG:9-29 and A/B implementation bracket; mobile SVG:9-22."
+        },
+        {
+          "firstReportIssues": [2],
+          "resolution": "Caller obligations and internal work are separated. C's success label describes the saved result, not certification of depth; both layouts retain the shallow-method warning.",
+          "evidence": "Desktop SVG:17-33; mobile SVG:24-35."
+        }
+      ],
+      "reassessment": "The replacement now answers the original question graphically. The A/B bracket makes it possible to see that deleting a sentence did not change what write requires. C's ensureParent-before-write sequence moves real work across the caller/module boundary. C need not be a deep method, and the figure explicitly declines that inference. Green describes the bounded successful result, not a universal quality score. The three mobile sections preserve the comparison rather than becoming a single required procedure.",
+      "sourceEvidence": ["docs/ch15.md:33-39", "/tmp/aposd2e-polish.GHV1eo/original/ch15.md:61-71, part0019 p21:349a38a4ea and p24:4075191347"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "evidence": {
+        "sheets": ["/tmp/aposd2e-viz-round2-15-21/gallery-light-002.png", "/tmp/aposd2e-viz-round2-15-21/gallery-dark-002.png"],
+        "desktopSha256": "55d5096a6d6b796caa1049bb5d068be3087b5268e3d01aca8ba1c64c2759c000",
+        "mobileSha256": "a5b7fe3039fca63741d13e247ef9822731bd95944e499f3294aa95370d6831ec",
+        "placement": "Verified after docs/ch15.md:39, following the completeness caveat.",
+        "readability": "A/B/C, unchanged implementation, responsibility boundary, and outcomes are legible in both themes. Mobile repeats the boundary per alternative without changing its meaning."
+      },
+      "limitations": [
+        "saveReport, ensureParent, and write are invented teaching operations. Directory creation/writing are assumed possible; missing-directory failure is part of the illustrated model.",
+        "The comparison preserves the stated saved text/path for the successful A/C calls, not all failures, races, permissions, or side effects.",
+        "No method-depth measurement follows from operation count, comment length, or box area."
+      ]
+    },
+    {
+      "id": "ch16-comment-scope",
+      "firstVerdict": "keep",
+      "verdict": "keep",
+      "active": true,
+      "question": "三阶段方法的所有说明都应该放在方法开头吗？",
+      "expectedAnswerAssessment": "Accepted. A method-opening strategy may cover all phases, while details belong near the smallest code scope they describe.",
+      "resolvedIssues": [
+        {
+          "firstReportIssues": [],
+          "firstReportLimitation": "Metadata must not imply guaranteed local-change isolation.",
+          "resolution": "The updated alt explicitly separates explanatory coverage from change-impact boundaries; both SVGs are byte-identical to the accepted versions."
+        }
+      ],
+      "reassessment": "The long and short brackets continue to encode an actual coverage relation absent from the original four-line strategy comment. The mobile layout preserves those scopes. There is no arrow or label promising that semantic effects cannot cross a phase boundary. An invented concrete algorithm is unnecessary for this scope question.",
+      "sourceEvidence": ["docs/ch16.md:23-38", "/tmp/aposd2e-polish.GHV1eo/original/ch16.md:37-62, part0020 p13, p15, p17 and p21"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "evidence": {
+        "sheets": ["/tmp/aposd2e-viz-round2-15-21/gallery-light-003.png", "/tmp/aposd2e-viz-round2-15-21/gallery-dark-003.png"],
+        "desktopSha256": "5fc580c54e0bb3b167f915a3878d89f8577e194d98e6abbbe0d852fa7b612ac1",
+        "mobileSha256": "0e14ebabe1d7775bb31761829c9f6354b7b1ebb0343fa52fbe0f0a9cf389503d",
+        "bothSvgFilesUnchanged": true,
+        "metadataChanges": ["alt", "status"],
+        "placement": "Verified after docs/ch16.md:38; appropriate.",
+        "readability": "Both bracket levels remain visible in both themes; code-placeholder lines do not obscure labels."
+      },
+      "limitations": ["The brackets depict documentation scope, not causal impact containment or a proven maintenance benefit."]
+    },
+    {
+      "id": "ch16-single-source",
+      "firstVerdict": "revise",
+      "verdict": "keep",
+      "active": true,
+      "question": "为何到处复制同一段设计说明，比引用一处说明更危险？",
+      "expectedAnswerAssessment": "Accepted. Copies can diverge silently; centralization reduces duplicated maintenance. A moved/deleted target creates a visibly failed lookup, without guaranteeing the correctness of reachable central text.",
+      "resolvedIssues": [
+        {
+          "firstReportIssues": [1],
+          "resolution": "Both failure modes are drawn: stale C retains content, while the second reference state reaches an empty xyz location.",
+          "evidence": "Desktop SVG:10-26; mobile SVG:9-24."
+        },
+        {
+          "firstReportIssues": [2],
+          "resolution": "Answer and captions explicitly limit visibility to the missing target and acknowledge readable-but-stale central documentation.",
+          "evidence": "Desktop SVG:28; mobile SVG:26; current answer/summary/alt."
+        },
+        {
+          "firstReportIssues": [3],
+          "resolution": "Lookup lines merge without junction arrowheads; the arrowhead is at the central explanation.",
+          "evidence": "Desktop SVG:20; mobile SVG:18."
+        }
+      ],
+      "reassessment": "Update fan-out and lookup fan-in have different roles and are now labeled accordingly. The missing-target state makes the detectability comparison inspectable rather than merely asserted. A/B/C versions remain teaching states, not measurements. The mobile stack retains the copy/reference contrast and the separate moved-target state.",
+      "sourceEvidence": ["docs/ch16.md:48-52", "/tmp/aposd2e-polish.GHV1eo/original/ch16.md:76-80, part0020 p26:6cd00ff764 and p27:1276783230"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "evidence": {
+        "sheets": ["/tmp/aposd2e-viz-round2-15-21/gallery-light-004.png", "/tmp/aposd2e-viz-round2-15-21/gallery-dark-004.png"],
+        "desktopSha256": "604dc9b5bee2df1ffbfccae3a8a9ee9f2e9d93a943a77cc73be5d0175466f5ca",
+        "mobileSha256": "a4af37e76186edc410cd2e8103edfc617836640f74187a27188aa8a3d2945227",
+        "placement": "Verified after docs/ch16.md:60; acceptable section recap.",
+        "readability": "Stale content and empty target have readable textual labels as well as color/border distinctions."
+      },
+      "limitations": ["Reference reachability does not establish freshness, and centralizing documentation does not eliminate its maintenance obligation."]
+    },
+    {
+      "id": "ch16-invalidation-review",
+      "firstVerdict": "retire",
+      "verdict": "retire",
+      "active": false,
+      "question": "提交前如何区分应更新的注释与仍然有效的注释？",
+      "expectedAnswerAssessment": "The original question remains covered by the prose; there is no current diagram answer to approve.",
+      "resolvedIssues": [
+        {
+          "firstReportIssues": [1, 2, 3],
+          "resolution": "Closed by actual retirement: no exclusive layer-routing headline, unsupported invalidation classification, or mixed rationale-routing flow remains in the active collection."
+        }
+      ],
+      "reassessment": "Retirement remains justified. The old figure did not show a changed claim whose continued truth could be checked. Existing sections 16.3, 16.5 and 16.6 plus the retained scope illustration cover its useful content without a count-preserving replacement.",
+      "sourceEvidence": ["docs/ch16.md:42-44", "docs/ch16.md:64-68", "First report's ch16-invalidation-review record"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "evidence": {
+        "activeManifestMatches": [],
+        "publicFilenameMatches": [],
+        "absentFiles": ["docs/.vuepress/public/diagrams/ch16-invalidation-review.svg", "docs/.vuepress/public/diagrams/ch16-invalidation-review-mobile.svg"],
+        "archivePairStillExists": true,
+        "currentSheets": [],
+        "currentSvgHashes": null
+      },
+      "limitations": ["This confirms active source inventory removal, not absence from previously built artifacts or caches, which were not inspected."]
+    },
+    {
+      "id": "ch17-convention-gate",
+      "firstVerdict": "revise",
+      "verdict": "keep",
+      "active": true,
+      "question": "作者项目中的换行检查，怎样阻止违规文件进入仓库？",
+      "originalQuestion": "为什么写下“只用换行符”还不足以消除格式噪声？",
+      "expectedAnswerAssessment": "Accepted. The narrowed question asks about the project's enforcement loop actually drawn: automatic rejection, optional manually invoked repair, and rechecking.",
+      "resolvedIssues": [
+        {
+          "firstReportIssues": [1],
+          "resolution": "The writer used the first review's permitted question narrowing; the figure no longer claims to explain upstream editor conversion or whole-file diff noise."
+        },
+        {
+          "firstReportIssues": [2],
+          "resolution": "Paragraph-6 insertion resolves immediately after the repair-script paragraph at line 33, before code-review and convention-change discussions.",
+          "evidence": "Read-only insertion check: token index 51 in both Chinese locales."
+        },
+        {
+          "firstReportIssues": [3],
+          "resolution": "Both layouts visibly identify the author's project and reject a universal repository rule.",
+          "evidence": "Desktop SVG:7, 19; mobile SVG:7-8, 16."
+        }
+      ],
+      "reassessment": "The yes/no gate and retry path demonstrate what enforces the convention, not merely the existence of documentation. Automatic checking and manual repair remain distinct even though rejection and repair share one box. The narrower question makes the preserved graph sufficient without requiring a new editor-noise illustration.",
+      "sourceEvidence": ["docs/ch17.md:31-33", "/tmp/aposd2e-polish.GHV1eo/original/ch17.md:49-53, part0021 p17:b234c667e1 and p18:958d04d5ff"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "evidence": {
+        "sheets": ["/tmp/aposd2e-viz-round2-15-21/gallery-light-005.png", "/tmp/aposd2e-viz-round2-15-21/gallery-dark-005.png"],
+        "desktopSha256": "06010587ab094850b04ea2300b6a443778110ce4f55784b824e690f0fe501b93",
+        "mobileSha256": "24eedd6373f63558d7865e6dbcd82d4e2af5833f94bf3a5a584f5b07e3af38ee",
+        "placement": "Verified after docs/ch17.md:33 using section 17.2 paragraph 6.",
+        "readability": "Both themes preserve readable branch labels and a traceable retry loop."
+      },
+      "limitations": ["Project-specific example, not advice to reject CR in every repository or every file type."]
+    },
+    {
+      "id": "ch17-trustworthy-patterns",
+      "firstVerdict": "keep",
+      "verdict": "keep",
+      "active": true,
+      "question": "让不同事物都长得一样，为什么反而损害一致性？",
+      "expectedAnswerAssessment": "Accepted. The same appearance justifies reuse of relevant knowledge only when the relevant meaning also matches.",
+      "resolvedIssues": [],
+      "reassessment": "The two matched units and the same-name/different-unit counterexample still allow a concrete inference. The crossed arrow marks a mistaken interpretation, not conversion between units. Both layouts retain the invented-example and non-mandatory-naming-rule qualifications. No revision-induced change was found.",
+      "sourceEvidence": ["docs/ch17.md:3-5 and 43", "/tmp/aposd2e-polish.GHV1eo/original/ch17.md:7-11 and 67-68, part0021 p3, p4 and p23"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "evidence": {
+        "sheets": ["/tmp/aposd2e-viz-round2-15-21/gallery-light-006.png", "/tmp/aposd2e-viz-round2-15-21/gallery-dark-006.png"],
+        "desktopSha256": "403dc320b6d135094dc6ac63390e7b1d851bede3157f9912cd278cb0184f900b",
+        "mobileSha256": "06475dba89060e78598b388a2bc2c7a57a204431c5f783accfb10a860ca5d0a3",
+        "bothSvgFilesUnchanged": true,
+        "metadataChanges": ["status"],
+        "placement": "Verified after docs/ch17.md:43; directly follows the overapplication warning.",
+        "readability": "Names, unit labels and crossed inference remain legible in both themes."
+      },
+      "limitations": ["Equal suffixes or units alone do not establish complete behavioral equivalence."]
+    },
+    {
+      "id": "ch18-event-trace",
+      "firstVerdict": "revise",
+      "verdict": "keep",
+      "active": true,
+      "question": "找到事件模块的调用点，为什么仍不知道会执行哪个处理函数？",
+      "expectedAnswerAssessment": "Accepted. Application registration supplies the concrete runtime mapping. Handler comments explain invocation conditions/context but do not substitute for the mapping.",
+      "resolvedIssues": [
+        {
+          "firstReportIssues": [1],
+          "resolution": "Registration now originates at application initialization and writes mapping data; no edge originates at a handler as self-registration.",
+          "evidence": "Desktop SVG:9-13; mobile SVG:8-14."
+        },
+        {
+          "firstReportIssues": [2],
+          "resolution": "Two explicitly independent runs use the same dispatch code with E-to-A versus E-to-B data, so differing targets are inspectable.",
+          "evidence": "Desktop SVG:8, 11-18; mobile SVG:8-15."
+        },
+        {
+          "firstReportIssues": [3],
+          "resolution": "MAIN's current afterFence anchor puts the diagram exactly after failed(), not at paragraph 3 or the section end.",
+          "evidence": "Current ch18 metadata; content.mjs:86-94; verified token index 59 immediately after docs/ch18.md:103-111 in both Chinese locales."
+        }
+      ],
+      "reassessment": "The same-code/different-data contrast answers the uncertainty question directly. Dashed registration edges show initialization writes; solid edges carry lookup information and the resulting calls. They need not depict a particular table implementation. The mobile ordering does not suggest that run A invokes run B, because the runs and mapping paths are explicitly separate. The failed() annotation retains its limited role and exact trigger/caller/thread facts.",
+      "sourceEvidence": ["docs/ch18.md:97-111", "/tmp/aposd2e-polish.GHV1eo/original/ch18.md:202-218, part0022 p68 through p73"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "evidence": {
+        "sheets": ["/tmp/aposd2e-viz-round2-15-21/gallery-light-007.png", "/tmp/aposd2e-viz-round2-15-21/gallery-dark-007.png"],
+        "desktopSha256": "905e33cc0618d98d3bca93edefbf4704c2392db2092b8d8674dd11c8d5b1aca1",
+        "mobileSha256": "b4a028150c4eab572d3b5a253610c8a6b1af111831b022d3118feb1a4f1bb157",
+        "placement": "Verified current anchor {afterFence: ch18-f5}; follows failed() and precedes the intact red-flag callout.",
+        "writerReportDeviation": "The writer report's paragraph-3 placement and outstanding MAIN decision are stale for the current metadata. They are not counted as unresolved diagram issues.",
+        "readability": "Registration and dispatch paths are readable in both themes; all independent-run and provenance qualifications survive on mobile."
+      },
+      "limitations": ["E, A/B and the displayed mappings are invented. No RAMCloud registration API or runtime behavior was tested."]
+    },
+    {
+      "id": "ch18-reader-expectation",
+      "firstVerdict": "keep",
+      "verdict": "keep",
+      "active": true,
+      "question": "RaftClient 例子中，读者缺少哪条信息才会误判程序退出？",
+      "expectedAnswerAssessment": "Accepted for the source's RaftClient case: construction creates threads that continue after main finishes, and this behavior needs documentation.",
+      "resolvedIssues": [],
+      "reassessment": "The continuing worker track crossing the main-return guide remains a genuine lifecycle inference rather than a boxed assertion. Horizontal-to-vertical reflow retains the fork and unequal endpoints. Moving event-trace removes the unrelated diagram formerly sharing this position. No changes to the accepted pair were found.",
+      "sourceEvidence": ["docs/ch18.md:141-156", "/tmp/aposd2e-polish.GHV1eo/original/ch18.md:280-293, part0022 p94, p96 and p98"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "evidence": {
+        "sheets": ["/tmp/aposd2e-viz-round2-15-21/gallery-light-008.png", "/tmp/aposd2e-viz-round2-15-21/gallery-dark-008.png"],
+        "desktopSha256": "3bc07003cd4d805ee37a92e98585330d81efdeb5db6808779ebe5fbd6d025115",
+        "mobileSha256": "3eeed9d234b94c83bdfcfa546a04016ee9edddde7ec1a0af4d554ca7409cf016",
+        "bothSvgFilesUnchanged": true,
+        "metadataChanges": ["status"],
+        "placement": "Verified after docs/ch18.md:150 at section 18.2 end; appropriate for this case.",
+        "readability": "Terminal cap, continuing arrow, guide and labels are distinct in both themes."
+      },
+      "limitations": ["Not a general Java termination rule, exact scheduler model, thread count, or daemon-thread explanation."]
+    },
+    {
+      "id": "ch19-inheritance-dependencies",
+      "firstVerdict": "revise",
+      "verdict": "keep",
+      "active": true,
+      "question": "实现继承减少重复后，为什么改父类仍可能牵动所有子类？",
+      "expectedAnswerAssessment": "Accepted. A subclass's representation-dependent expression gives a concrete reason for review; the helper alternative is conditional on encapsulation and maintained interface behavior.",
+      "resolvedIssues": [
+        {
+          "firstReportIssues": [1],
+          "resolution": "Both layouts use possible-review wording, rather than requiring all classes to be examined for every change.",
+          "evidence": "Desktop SVG:8, 13; mobile SVG:7, 10, 19."
+        },
+        {
+          "firstReportIssues": [2],
+          "resolution": "The alternative explicitly requires hiding representation and maintaining peek/size contracts; composition is not credited with doing this automatically. State isolation within inheritance and unspecified instance sharing remain visible.",
+          "evidence": "Desktop SVG:19-25; mobile SVG:15-19."
+        },
+        {
+          "firstReportIssues": [3],
+          "resolution": "head changes from index 0 to Node(A) while the subclass still evaluates data[head], making the coupling inspectable.",
+          "evidence": "Desktop SVG:10-15; mobile SVG:8-11."
+        }
+      ],
+      "reassessment": "The reader can now identify the exact assumption endangered by the parent change, instead of trusting a generic dependency arrow. The right-hand boundary preserves semantic observations of the stated [A,B] queue while placing representation behind the interface. It demonstrates a candidate boundary, not proof that arbitrary composition is better or that one sample establishes full equivalence.",
+      "sourceEvidence": ["docs/ch19.md:13-21", "/tmp/aposd2e-polish.GHV1eo/original/ch19.md:22-35, part0023 p8 through p12"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "evidence": {
+        "sheets": ["/tmp/aposd2e-viz-round2-15-21/gallery-light-009.png", "/tmp/aposd2e-viz-round2-15-21/gallery-dark-009.png"],
+        "desktopSha256": "6295d17b47ca1c561b1549c3ef3f73bd06832bc992e4bb5e3a8e0e4d2721ddaa",
+        "mobileSha256": "a66ec9a8588168b3361fd8b1b3c7fdb18e9f4de60b583e6762e3609c0a83925c",
+        "placement": "Verified after docs/ch19.md:21, including the source's no-guarantee caveat.",
+        "readability": "The changed representation, dependent expression and interface boundary remain readable in both layouts/themes."
+      },
+      "limitations": ["QueueBase, Node(A), data[head], peek/size and the sample results are teaching assumptions, not a production hierarchy or a validated replacement implementation."]
+    },
+    {
+      "id": "ch19-abstraction-increment",
+      "firstVerdict": "replace",
+      "verdict": "keep",
+      "active": true,
+      "question": "联系人导出与后来出现的库存导出，为什么可以复用同一个行编码器？",
+      "originalQuestion": "先做最小功能，与先设计所需抽象，会让后续功能怎样接入？",
+      "expectedAnswerAssessment": "Accepted. The two inputs need the same bounded field transformation, so compatible later export can use the existing abstraction. The answer no longer assumes arbitrary features share a core.",
+      "resolvedIssues": [
+        {
+          "firstReportIssues": [1],
+          "resolution": "Actual comma-containing fields and their quoted outputs establish a shared need before the reuse claim.",
+          "evidence": "Desktop SVG:8-19; mobile SVG:8-17."
+        },
+        {
+          "firstReportIssues": [2],
+          "resolution": "The dedicated alternative is conditional inlining of the same displayed rule, not an inevitable bad outcome. Later reuse explicitly depends on a matching contract.",
+          "evidence": "Desktop SVG:11, 20-27; mobile SVG:15, 18-23."
+        },
+        {
+          "firstReportIssues": [3],
+          "resolution": "Current and later inputs are labeled separately; the current need defines the core and the later edge joins it. Unrelated PDF layout stays outside.",
+          "evidence": "Desktop SVG:9-13, 25; mobile SVG:9-16, 22."
+        },
+        {
+          "firstReportIssues": [4],
+          "resolution": "The metadata and both SVG subtitles now cite 19.4 alongside 19.2 for the comprehensive-core recommendation."
+        }
+      ],
+      "reassessment": "A reader can apply the stated comma/quoting rule to each displayed input and obtain the displayed output. That transformation, together with the duplicate-rule comparison, justifies reuse independently of green coloring. The mobile return edge means later use of the same core, not backward time or mandatory feature merger. Restricting the input alphabet prevents the small teaching rule from being presented as a full CSV implementation.",
+      "sourceEvidence": ["docs/ch19.md:29-31 and 49", "/tmp/aposd2e-polish.GHV1eo/original/ch19.md:46-50 and 79-80, part0023 p16, p17 and p27"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "evidence": {
+        "sheets": ["/tmp/aposd2e-viz-round2-15-21/gallery-light-010.png", "/tmp/aposd2e-viz-round2-15-21/gallery-dark-010.png"],
+        "desktopSha256": "dbc338917df0b1ef1541358d86c6a317e442c5949c9eb1e1db750cca05208011",
+        "mobileSha256": "ceeab0915e4f303f25e7077971ef349475eb7e3c8606914c01d5a248df3ca6ea",
+        "placement": "Verified after docs/ch19.md:31; appropriate for the author's abstraction-increment recommendation.",
+        "readability": "Inputs, outputs and duplicated pseudocode are readable in both themes. The taller mobile version retains current/later distinctions and scope limits."
+      },
+      "limitations": ["Invented contact/inventory export, not author code or a complete CSV specification. Different future contracts can require redesign; no general judgment of agile practice follows."]
+    },
+    {
+      "id": "ch19-regression-witness",
+      "firstVerdict": "revise",
+      "verdict": "keep",
+      "active": true,
+      "question": "测试只在修复版本通过，还缺少哪种回归证据？",
+      "originalQuestion": "为什么修复缺陷时应先看到测试因该缺陷失败？",
+      "expectedAnswerAssessment": "Accepted. The missing observation is a defect-caused failure of the same test on the defective version, not compliance with a unique test-writing chronology.",
+      "resolvedIssues": [
+        {
+          "firstReportIssues": [1],
+          "resolution": "Question, answer and visible headings concern evidence. A labeled editorial route allows a later-written test to be checked on the defective version while retaining the author's preferred sequence.",
+          "evidence": "Desktop SVG:7, 17-22; mobile SVG:7, 15-20."
+        },
+        {
+          "firstReportIssues": [2],
+          "resolution": "The same input/assertion expects C; the stated defect returns B for the reported wrong-last-element reason. Unrelated failures are explicitly excluded.",
+          "evidence": "Desktop SVG:8-16; mobile SVG:8-14, 20."
+        }
+      ],
+      "reassessment": "The shared test branches to two version results, giving an inspectable mismatch rather than generic red/green labels. The mobile pairing arrow is labeled as pairing, not as a mandatory execution chronology. The dotted route repairs missing evidence rather than asserting that every rerun must fail. The toy defect/output are declared assumptions, and the result supports only the exercised regression.",
+      "sourceEvidence": ["docs/ch19.md:39 and 47-51", "/tmp/aposd2e-polish.GHV1eo/original/ch19.md:61-62 and 76-83, part0023 p21, p26 and p28"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "evidence": {
+        "sheets": ["/tmp/aposd2e-viz-round2-15-21/gallery-light-011.png", "/tmp/aposd2e-viz-round2-15-21/gallery-dark-011.png"],
+        "desktopSha256": "a2db7baedb281d3f0f01d8e652e6508fb58a068faf2e2d68cfa79d2851c57926",
+        "mobileSha256": "0f0732366de38b0963cdbb7fde500e26583deee7e1ca83966074e20645a9a152",
+        "placement": "Verified after docs/ch19.md:51, immediately following the bug-fix recommendation.",
+        "readability": "The assertion, expected/actual values, failure cause and supplementary route are legible in both themes."
+      },
+      "limitations": ["No tests were executed; displayed results are invented. Same-test paired outcomes are limited evidence, not proof of overall correctness or good design."]
+    },
+    {
+      "id": "ch20-measurement-loop",
+      "firstVerdict": "revise",
+      "verdict": "keep",
+      "active": true,
+      "question": "知道系统很慢，为什么还不能决定改哪里、保留什么？",
+      "expectedAnswerAssessment": "Accepted. Profiling identifies high-cost work, while a comparable baseline supports judging measured benefit against added complexity. Independent simplification is a separate possible retention basis.",
+      "resolvedIssues": [
+        {
+          "firstReportIssues": [1],
+          "resolution": "Both layouts now ask the identical question about benefit being worth added complexity.",
+          "evidence": "Desktop SVG:15; mobile SVG:17."
+        },
+        {
+          "firstReportIssues": [2],
+          "resolution": "The negative outcome includes no benefit and measurable-but-insufficient benefit, without inventing a threshold. The simplification exception remains qualified by behavior requirements.",
+          "evidence": "Desktop SVG:17-22; mobile SVG:19-23."
+        },
+        {
+          "firstReportIssues": [3],
+          "resolution": "Baseline and post-change measurements directly enter the comparison node.",
+          "evidence": "Desktop SVG:12-15; mobile SVG:14-17."
+        }
+      ],
+      "reassessment": "The two independent input paths still explain why knowing total slowness is insufficient to choose a change and why profiling alone is insufficient to retain it. The revised outcome is a judgment supported by measurement, not an automatic pass/fail score. Baseline retention is visually separate from modification, and mobile preserves that distinction.",
+      "sourceEvidence": ["docs/ch20.md:30-32", "/tmp/aposd2e-polish.GHV1eo/original/ch20.md:52-56, part0024 p18:c6ab138c52 and p19:446ae2e29f"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "evidence": {
+        "sheets": ["/tmp/aposd2e-viz-round2-15-21/gallery-light-012.png", "/tmp/aposd2e-viz-round2-15-21/gallery-dark-012.png"],
+        "desktopSha256": "2d533747e971893b8802ce478dc4139e7bc988a4e6794da1576ae8b4d5d09090",
+        "mobileSha256": "1c0581e1708346b26dba8bae36b4825269f3c3ae1457272c400529a382e33d3f",
+        "placement": "Verified after docs/ch20.md:32; appropriate.",
+        "readability": "All inputs and outcomes are readable in both themes; no detached decision input remains."
+      },
+      "limitations": ["Not a full benchmarking protocol or approval of every faster change. No statistical or numerical benefit threshold is established."]
+    },
+    {
+      "id": "ch20-critical-path",
+      "firstVerdict": "keep",
+      "verdict": "keep",
+      "active": true,
+      "question": "围绕关键路径重构，改变的是哪种控制流关系？",
+      "expectedAnswerAssessment": "Accepted with the measured-hotspot, fundamental-fix-first and ideal-target conditions.",
+      "resolvedIssues": [],
+      "reassessment": "The common case can be followed through interleaved checks in one structure and through one entry split into uninterrupted A/B in the other. This is the figure's actual inference; it does not depend on an asserted speedup. The mobile fork retains A-before-B and a separate special-case path. The unchanged figure remains useful ahead of the specific Buffer code.",
+      "sourceEvidence": ["docs/ch20.md:36-44", "/tmp/aposd2e-polish.GHV1eo/original/ch20.md:61-74, part0024 p21, p22, p24 and p25"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "evidence": {
+        "sheets": ["/tmp/aposd2e-viz-round2-15-21/gallery-light-013.png", "/tmp/aposd2e-viz-round2-15-21/gallery-dark-013.png"],
+        "desktopSha256": "f8b62a22e932c7077f01458e7fa4344fb80bca638d61849e3b5ec651c6feae5a",
+        "mobileSha256": "0f85da2da4e9063fcf9384da1683fbc1aad66fa6c2e767708716edbf7bd93c0b",
+        "bothSvgFilesUnchanged": true,
+        "metadataChanges": ["status"],
+        "placement": "Verified after docs/ch20.md:44, before the Buffer case.",
+        "readability": "Branch labels and necessary-work order remain legible in both themes."
+      },
+      "limitations": ["Illustrative A/B work, not concrete Buffer instructions. Arbitrary conditions cannot be assumed movable without preserving behavior, and one entry check is a goal rather than a guarantee."]
+    },
+    {
+      "id": "ch20-state-compression",
+      "firstVerdict": "revise",
+      "verdict": "keep",
+      "active": true,
+      "question": "availableAppendBytes 为什么能让 Buffer 的常见追加只做一次检查？",
+      "expectedAnswerAssessment": "Accepted. Correctly maintained capacity encodes the disqualifying states; for a positive request one comparison tests eligibility/capacity. The writeback is necessary for a later call to trust that value.",
+      "resolvedIssues": [
+        {
+          "firstReportIssues": [1],
+          "resolution": "The stored invariant and per-call execution are separated by a labeled boundary, with an explicit warning against per-call recomputation. The update is demonstrated rather than only mentioned.",
+          "evidence": "Desktop SVG:9-18, 19-30; mobile SVG:9-23."
+        },
+        {
+          "firstReportIssues": [2],
+          "resolution": "Any-one/OR semantics are explicit in both layouts.",
+          "evidence": "Desktop SVG:10-14; mobile SVG:10-11."
+        },
+        {
+          "firstReportIssues": [3],
+          "resolution": "Positive request size and correctly maintained state are now in the expected answer and both visible scopes.",
+          "evidence": "Current answer; desktop SVG:8; mobile SVG:7-8."
+        },
+        {
+          "firstReportIssues": [4],
+          "resolution": "Paragraph-15 insertion places the diagram after the new-code maintenance note and before benchmarks.",
+          "evidence": "Verified token index 132, after docs/ch20.md:139 and before line 141 in both Chinese locales."
+        }
+      ],
+      "reassessment": "The upper OR definition explains why invalid last-chunk states share C=0; the positive-request condition excludes accepting that zero capacity. The lower 8-to-5 transition explains a different part of the same mechanism: the next request must read maintained state, not a stale value. Comparing 5 with 6 makes the consequence of missed writeback inspectable. The actual comparison/update is also grounded by the immediately preceding Figure 20.3 code. This complements that code and the original storage-layout figure rather than replacing either.",
+      "sourceEvidence": ["docs/ch20.md:62 and 117-139", "/tmp/aposd2e-polish.GHV1eo/original/ch20.md:97-98 and 115-119, part0024 p33, p39 and p40"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "evidence": {
+        "sheets": ["/tmp/aposd2e-viz-round2-15-21/gallery-light-014.png", "/tmp/aposd2e-viz-round2-15-21/gallery-dark-014.png"],
+        "desktopSha256": "7ccebee4fd0c8773d0b6b3c9500f1e3ce5a6538db8be7a5b657362db5a6181e0",
+        "mobileSha256": "25ade010bf404b212a9e2fceb4fabdca92d8eec97cfa52ea0416a0af05fb11b1",
+        "placement": "Verified after docs/ch20.md:139 using section 20.4 paragraph 15.",
+        "readability": "OR definition, phase boundary, units, comparisons, writeback and next request remain clear in both layouts/themes."
+      },
+      "limitations": ["8, 3, 5 and 6 are invented capacities, not measured performance. No inference about zero/negative requests, overflow, allocation failure or complete Buffer correctness is approved."]
+    },
+    {
+      "id": "ch21-leverage-boundary",
+      "firstVerdict": "retire",
+      "verdict": "retire",
+      "active": false,
+      "question": "为什么删除字符范围，比专用 backspace 方法有更广的作用？",
+      "expectedAnswerAssessment": "No current diagram answer remains. The chapter's existing explanation and chapter 6 reference still provide the relevant content.",
+      "resolvedIssues": [
+        {
+          "firstReportIssues": [1, 2, 3],
+          "resolution": "Closed by actual removal of the redundant diagram and its remote section-end insertion; no count-preserving deletion diagram was substituted."
+        }
+      ],
+      "reassessment": "The first review's collection-level redundancy judgment still applies. The current chapter still recalls the earlier range abstraction. Nothing in the revised ch21 exposure matrix duplicates or requires restoration of the removed generic deletion-boundary flow.",
+      "sourceEvidence": ["docs/ch21.md:11", "First report's ch21-leverage-boundary record and its inspected ch06-range-api comparison"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "evidence": {
+        "activeManifestMatches": [],
+        "publicFilenameMatches": [],
+        "absentFiles": ["docs/.vuepress/public/diagrams/ch21-leverage-boundary.svg", "docs/.vuepress/public/diagrams/ch21-leverage-boundary-mobile.svg"],
+        "archivePairStillExists": true,
+        "currentSheets": [],
+        "currentSvgHashes": null
+      },
+      "limitations": ["The chapter 6 illustration was not rereviewed in this second pass; retirement relies on the prior documented comparison and verified removal, not a new chapter 6 approval."]
+    },
+    {
+      "id": "ch21-exposure-decision",
+      "firstVerdict": "revise",
+      "verdict": "keep",
+      "active": true,
+      "question": "减少接口信息，何时是简化，何时会制造未知的未知？",
+      "expectedAnswerAssessment": "Accepted for the stated exporter/caller model. The finish completion fact is necessary for the subsequent read, while routine buffering can default without eliminating exceptional control.",
+      "resolvedIssues": [
+        {
+          "firstReportIssues": [1],
+          "resolution": "Buffering is qualified as a usual default for ordinary export, with an explicit control path for different needs.",
+          "evidence": "Desktop SVG:16-22; mobile SVG:15-20."
+        },
+        {
+          "firstReportIssues": [2],
+          "resolution": "A concrete finish-success contract and wait-then-read versus premature-read actions replace the circular necessary-precondition label.",
+          "evidence": "Desktop SVG:8, 10-15; mobile SVG:8, 11-14."
+        },
+        {
+          "firstReportIssues": [3],
+          "resolution": "The reference caller and task are fixed at the top, and both layouts explicitly say necessity varies by caller/context.",
+          "evidence": "Desktop SVG:7, 21; mobile SVG:7, 19."
+        }
+      ],
+      "reassessment": "The matrix now supplies something to reason about in each row: knowledge of completion changes when the caller may safely read under the invented contract, while the ordinary buffering choice repeats a defaultable task. The red hidden-completion cell remains a possible premature read, not an inevitable reader action. The green complete-output result follows the declared toy contract, not a general claim that documentation guarantees correct use. Defaulting is explicitly distinguished from removal of all controls.",
+      "sourceEvidence": ["docs/ch21.md:19-33", "/tmp/aposd2e-polish.GHV1eo/original/ch21.md:31-53, part0025 p11, p13, p17 and p18"],
+      "remainingIssues": [],
+      "newIssues": [],
+      "requestedChanges": [],
+      "evidence": {
+        "sheets": ["/tmp/aposd2e-viz-round2-15-21/gallery-light-015.png", "/tmp/aposd2e-viz-round2-15-21/gallery-dark-015.png"],
+        "desktopSha256": "b0f7fe5fdbe3e5b63c479c160893653d5a81c2113ff642b1728f8e7086291687",
+        "mobileSha256": "4348349cf7a5bc29ebf952ee4c1630fb56a1123112b706125025d6a3ee8d45fb",
+        "placement": "Verified after docs/ch21.md:33 at section 21.4 end.",
+        "readability": "Both columns and row contexts survive mobile reflow; labels, arrows and scope notes fit in both themes."
+      },
+      "limitations": ["The exporter/finish behavior is invented, not a Java API or disk-durability claim. This matrix is not a universal procedure for discovering every caller's needs."]
+    }
+  ],
+  "inputHashes": {
+    "algorithm": "SHA-256",
+    "metadataDirectory": "docs/.vuepress/reader/diagrams",
+    "metadata": {
+      "ch15.json": "7cd40747fac59a13a2e0a9e1e6efb95f3ea22be0db487aeb1bae4e2898bc20e3",
+      "ch16.json": "eabf4b7d61ba7104b51ec97b518752b7976c76bd1a44646a6dc2f5d6cfc41ac1",
+      "ch17.json": "5bd63d51ebfc8a7b5b7c7539659feb2d1cceb38e759e6be79d6d15c4609e5b30",
+      "ch18.json": "7a28ffd2c2d9fc9985724b038f2a719fe2be3600cd6e3907f5539d62ad859458",
+      "ch19.json": "dc65d3b9d4a1331c776def9b3d11b67c95e9d82c4bf9d6c658bc35ee95b00b34",
+      "ch20.json": "67b56c42153257ba6b126ba8067115ea04c7020606e99ebca417092392043e47",
+      "ch21.json": "8dcefae308793f0cd85128510471edbbc76cb9aafa64b4603aca652ae53e4c85"
+    },
+    "files": {
+      "docs/.vuepress/reader/reader.css": "5d3ef34e2d5da059238251eef0c4e1ece7528f8065dd45ced03726cdf373c289",
+      "docs/.vuepress/reader/content.mjs": "e89779196a8631c89c075e030d6e9fc33c6048890824e83a66a76d0f4b4e38a8",
+      "docs/.vuepress/reader/plugin.ts": "ea8cbccc451f91025fc157d61c17e0ce01392a85c0e0ef5e0607e1c5c20678d6",
+      "review/reader/diagram-review-15-22.json": "5a344ca86596b0436d0877ee2054fafaf28e9e4ef1874856de25d4fb63680f8e",
+      "review/reader/revisions-15-21.json": "a58f2f9cc1ba42d2bf1789f2cabafb4bbe4c5da891300520bc5ffbca96e8c875",
+      "/tmp/aposd2e-viz-round2-15-21/gallery-index.json": "65a07fe26a11f21eec0c61f05ad866b350c48712504cf10bdb653c3755154ccb"
+    },
+    "svgPaths": "For each active record, desktopSha256 identifies docs/.vuepress/public/diagrams/<id>.svg and mobileSha256 identifies docs/.vuepress/public/diagrams/<id>-mobile.svg.",
+    "metadataAfterGallery": "The current ch18 metadata hash captures MAIN's afterFence change. The gallery indexes SVG/CSS inputs, not metadata. All SVGs still match exactly. The reader.css hash here identifies the gallery and initially verified stylesheet; the final external CSS change is separately recorded in verification.endOfReviewDrift."
+  },
+  "limitations": [
+    "Acceptance is limited to explanatory design of the recorded current inputs and source-level placement. It does not establish reader comprehension or predict behavior, productivity, speedup, or design quality.",
+    "All new supplied sheets were viewed, but they show readable 680-unit desktop and 360-unit mobile assets in a gallery, not complete chapters on physical devices.",
+    "reader.css changed after the initial successful hash comparison. The later stylesheet is not visually certified by these sheets; this evidence limitation is separate from the absence of remaining diagram-content issues.",
+    "No fresh build, production route QA, screen-reader exercise, zoom test, formal contrast audit, or actual execution of the teaching examples was performed.",
+    "Traditional Chinese token placement was checked; Traditional Chinese diagram assets and localized explanations were not accepted by this review.",
+    "Retirement was verified in active manifests/public files, not stale build artifacts, deployment caches, or external copies.",
+    "Illustrative filesystem, queue, export, test and capacity assumptions are bounded teaching material, not implementations certified correct by this review.",
+    "The original storage figure was not rerendered in this pass. The current Figure 20.2/20.3 code and surrounding prose were reread to judge the revised state diagram's complementary role.",
+    "Ch22 remains covered only by its separate review; this report neither reopens nor broadens that decision."
+  ]
+}

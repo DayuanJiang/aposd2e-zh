@@ -1,0 +1,128 @@
+[
+  {
+    "id": "ch14-block-domains",
+    "chapter": "ch14",
+    "title": "同一个数字，两个地址域",
+    "question": "为什么把逻辑块号叫作 block，会误伤另一块磁盘数据？",
+    "answer": "文件内索引和物理磁盘地址属于不同域；相同名称掩盖了跨域误用。不同名称可暴露错误，不同类型还能约束混用。",
+    "summary": "文件块2对应磁盘块9等数字为教学自拟，用于解释 Sprite 缺陷的机制，不是历史事故的实际块号或代码。",
+    "alt": "教学文件中逻辑块2经映射对应磁盘块9；错误路径把数值2直接当磁盘块号，清零无关的磁盘块2。修订路径以fileBlock与diskBlock区分，进一步可用不可混用的类型保护。",
+    "kind": "address-domain-trace",
+    "desktop": "/diagrams/ch14-block-domains.svg",
+    "mobile": "/diagrams/ch14-block-domains-mobile.svg",
+    "anchor": {
+      "section": "14.1",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "14.1",
+        "epub": "OEBPS/part0018.xhtml#p6:ce75b5633d",
+        "reason": "Sprite将逻辑块号误作物理块号，导致无关块被清零。数字2和9、映射及清零路径均为教学自拟。"
+      },
+      {
+        "section": "14.1",
+        "epub": "OEBPS/part0018.xhtml#p7:8c78010958",
+        "reason": "fileBlock/diskBlock可避免名称误导；更进一步是定义不可互换的类型。名称本身不提供类型安全保证。"
+      }
+    ],
+    "review": {
+      "source": "review/reader/diagram-review-08-14-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    },
+    "status": "content-reviewed",
+    "reviewHistory": [
+      {
+        "source": "earlier-local-review",
+        "recordedStatus": "independently-reviewed",
+        "decision": "keep",
+        "resolution": "正确映射与错误旁路指向不同物理块；保留教学块号及名称不等于类型安全的限定。",
+        "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance."
+      },
+      {
+        "source": "review/reader/diagram-review-08-14.json",
+        "decision": "keep",
+        "stage": "MAIN-first-pass",
+        "implementation": "kept",
+        "secondReview": "pending",
+        "accepted": false,
+        "resolution": "保留MAIN的keep决定，不重画现有SVG；保留与报告兼容的后续有效修正。 更新当前权威与状态，保留此前本地审阅历史但不将其解释为MAIN或最终二审认可。",
+        "authority": "Historical implementation record, superseded by independent follow-up."
+      }
+    ],
+    "titleTw": "同一個數字，兩個地址域",
+    "questionTw": "為什麼把邏輯塊號叫作 block，會誤傷另一塊磁碟資料？",
+    "answerTw": "檔案內索引和物理磁碟地址屬於不同域；相同名稱掩蓋了跨域誤用。不同名稱可暴露錯誤，不同型別還能約束混用。",
+    "summaryTw": "檔案塊2對應磁碟塊9等數字為教學自擬，用於解釋 Sprite 缺陷的機制，不是歷史事故的實際塊號或程式碼。",
+    "altTw": "教學檔案中邏輯塊2經對映對應磁碟塊9；錯誤路徑把數值2直接當磁碟塊號，清零無關的磁碟塊2。修訂路徑以fileBlock與diskBlock區分，進一步可用不可混用的型別保護。",
+    "desktopTw": "/diagrams/ch14-block-domains-tw.svg",
+    "mobileTw": "/diagrams/ch14-block-domains-mobile-tw.svg"
+  },
+  {
+    "id": "ch14-name-domains",
+    "chapter": "ch14",
+    "title": "名称的范围要与概念的范围吻合",
+    "question": "名称过于笼统和过于具体，会造成怎样不同的误读？",
+    "answer": "x 会让人想到多个坐标域，charIndex 将它收窄到行内字符索引；selection 又把任意文本范围误缩成界面选区，range 更贴合通用能力。",
+    "summary": "图中的集合表示可能解释或适用范围，不是频率、概率或语义距离的量化。精确不等于越具体越好。",
+    "alt": "上半图中x分叉到屏幕像素坐标与行内字符索引，charIndex只指后者。下半图中选区位于任意文本范围集合内部，delete实际覆盖整个范围集合，所以参数应叫range而非selection。",
+    "kind": "semantic-domain",
+    "desktop": "/diagrams/ch14-name-domains.svg",
+    "mobile": "/diagrams/ch14-name-domains-mobile.svg",
+    "anchor": {
+      "section": "14.3",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "14.3",
+        "epub": "OEBPS/part0018.xhtml#p22:3429e964a8",
+        "reason": "x/y可被误解为屏幕像素，charIndex/lineIndex反映文件位置抽象。"
+      },
+      {
+        "section": "14.3",
+        "epub": "OEBPS/part0018.xhtml#p45:a323d4c80f",
+        "reason": "delete可删除任意范围，selection过窄，应使用range。集合布局为教学表达。"
+      }
+    ],
+    "review": {
+      "source": "review/reader/diagram-review-08-14-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    },
+    "status": "content-reviewed",
+    "reviewHistory": [
+      {
+        "source": "earlier-local-review",
+        "recordedStatus": "independently-reviewed",
+        "decision": "keep",
+        "resolution": "解释域分叉及选区子集均有图形关系，不赋予集合大小定量含义。",
+        "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance."
+      },
+      {
+        "source": "review/reader/diagram-review-08-14.json",
+        "decision": "keep",
+        "stage": "MAIN-first-pass",
+        "implementation": "kept",
+        "secondReview": "pending",
+        "accepted": false,
+        "resolution": "保留MAIN的keep决定，不重画现有SVG；保留与报告兼容的后续有效修正。 更新当前权威与状态，保留此前本地审阅历史但不将其解释为MAIN或最终二审认可。",
+        "authority": "Historical implementation record, superseded by independent follow-up."
+      }
+    ],
+    "titleTw": "名稱的範圍要與概念的範圍吻合",
+    "questionTw": "名稱過於籠統和過於具體，會造成怎樣不同的誤讀？",
+    "answerTw": "x 會讓人想到多個座標域，charIndex 將它收窄到行內字元索引；selection 又把任意文字範圍誤縮成介面選區，range 更貼合通用能力。",
+    "summaryTw": "圖中的集合表示可能解釋或適用範圍，不是頻率、機率或語義距離的量化。精確不等於越具體越好。",
+    "altTw": "上半圖中x分叉到螢幕畫素座標與行內字元索引，charIndex只指後者。下半圖中選區位於任意文字範圍集合內部，delete實際覆蓋整個範圍集合，所以參數應叫range而非selection。",
+    "desktopTw": "/diagrams/ch14-name-domains-tw.svg",
+    "mobileTw": "/diagrams/ch14-name-domains-mobile-tw.svg"
+  }
+]

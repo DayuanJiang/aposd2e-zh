@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 854" role="img" aria-labelledby="ch13-rpc-intent-m-t ch13-rpc-intent-m-d">
+  <title id="ch13-rpc-intent-m-t">从追加意图读懂判断，但不越过未知条件</title><desc id="ch13-rpc-intent-m-d">挑选的是发往目标服务器、尚未发出的RPC，不是在目标服务器上。rpc表示当前readRpc[i]。会话、LOADING及容量谓词与作者推断逐项对应；即使三项满足，仍须经过rpc.maxPos小于assignPos这一理由未解释的条件，满足才选中供后续追加。图不是判定或循环顺序。</desc>
+  <defs><marker id="ch13-rpc-intent-m-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="360" height="854" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="20" y="30" font-size="18" font-weight="600">从追加意图读懂判断，</text><text x="20" y="55" font-size="18" font-weight="600">但不越过未知条件</text>
+    <text x="20" y="86" font-size="14">意图：追加到发往目标服务器、</text><text x="20" y="108" font-size="14">尚未发出的既有 RPC。</text>
+    <text x="20" y="131" font-size="12" fill="var(--diagram-muted,#58636b)">rpc 是当前 readRpc[i] 的教学缩写。</text>
+    <rect x="20" y="147" width="320" height="72" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <text x="36" y="174" font-family="monospace" font-size="13">session == rpc.session</text><text x="36" y="202" font-size="14">很可能是在确认目标服务器。</text>
+    <rect x="20" y="237" width="320" height="72" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <text x="36" y="264" font-family="monospace" font-size="13">rpc.status == LOADING</text><text x="36" y="292" font-size="14">暗示状态约束，呼应“尚未发出”。</text>
+    <rect x="20" y="327" width="320" height="92" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <text x="36" y="351" font-family="monospace" font-size="13">rpc.numHashes</text><text x="36" y="374" font-family="monospace" font-size="13">&lt; MAX_PKHASHES_PERRPC</text><text x="36" y="402" font-size="14">暗示容量有上限，不指定数值。</text>
+    <text x="20" y="450" font-weight="600">前三项满足，也不能直接追加：</text>
+    <path d="M180 459V478" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch13-rpc-intent-m-a)"/>
+    <path d="M180 486 327 548 180 610 33 548Z" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="96" y="553" font-family="monospace" font-size="13">rpc.maxPos &lt; assignPos</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch13-rpc-intent-m-a)"><path d="M32 548H20V657H92V668"/><path d="M328 548H340V657H268V668"/></g>
+    <text x="35" y="641" font-size="13">不满足</text><text x="284" y="641" font-size="13">满足</text>
+    <rect x="20" y="675" width="143" height="48" rx="4" fill="var(--diagram-danger-soft,#ead9dc)"/><text x="38" y="705" font-size="14">此候选不选中</text>
+    <rect x="197" y="675" width="143" height="48" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="213" y="695" font-size="13">选中此 RPC</text><text x="213" y="715" font-size="13">供后续追加</text>
+    <text x="20" y="756" font-size="14">maxPos 判断为何必要？高层注释未解释。</text>
+    <text x="20" y="790" font-size="13" fill="var(--diagram-muted,#58636b)">上方解释保留作者“很可能 / 暗示”的语气。</text><text x="20" y="814" font-size="13" fill="var(--diagram-muted,#58636b)">所有条件均须满足；图是逻辑组合，</text><text x="20" y="838" font-size="13" fill="var(--diagram-muted,#58636b)">不规定短路判断或循环顺序，不是完整算法。</text>
+  </g>
+</svg>

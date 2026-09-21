@@ -1,0 +1,35 @@
+[
+  {
+    "id": "ch03-patch-cycle", "chapter": "ch03", "title": "一次捷径如何变成持续负担？",
+    "question": "为什么每次都只顾当前任务，会让以后更难抽空改进设计？",
+    "answer": "小补丁增加复杂性，复杂性妨碍下一次修改；为赶下一次进度继续绕过问题，又增加复杂性，形成自我强化的循环。",
+    "summary": "用因果回路解释战术式编程。当前提交速度没有计入以后维护者重新理解和清理的成本。",
+    "alt": "赶当前任务、接受小补丁、复杂性积累、下次修改受阻构成回路；代价还会落到后续维护者。",
+    "kind": "causal-loop", "desktop": "/diagrams/ch03-patch-cycle.svg", "mobile": "/diagrams/ch03-patch-cycle-mobile.svg",
+    "anchor": { "section": "3.1", "placement": "end" },
+    "sources": [
+      { "section": "3.1", "epub": "OEBPS/part0007.xhtml#p8:bdac23ce35", "reason": "每次战术式任务都可增加一点复杂性，累积造成问题。" },
+      { "section": "3.1", "epub": "OEBPS/part0007.xhtml#p9:3bd9d83030", "reason": "复杂性需要更多补丁，清理越来越难安排。" },
+      { "section": "3.1", "epub": "OEBPS/part0007.xhtml#p11:93957918f0", "reason": "维护者承担清理成本，个人表面产出速度不能代表系统成本。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch03-small-investments", "chapter": "ch03", "title": "设计投资应放在什么时候？",
+    "question": "持续投资与一次性前期设计、延期大清理有何区别？",
+    "answer": "在每次功能开发中留出小额投入，既在实现前比较设计，也在发现问题后修正；不要求预先设计完整系统，也不把清理一再推迟。",
+    "summary": "用三个迭代的教学排程对比投资时机，不重画原书收益曲线。10%–20% 是作者建议，回本时间并无实证保证。",
+    "alt": "三行时间线对比前期全部设计、每轮实现加小额改进、每轮实现但延后清理。连续投资分为主动比较设计和发现问题后修复。",
+    "kind": "investment-timeline", "desktop": "/diagrams/ch03-small-investments.svg", "mobile": "/diagrams/ch03-small-investments-mobile.svg",
+    "anchor": { "section": "3.3", "placement": "end" },
+    "sources": [
+      { "section": "3.1", "epub": "OEBPS/part0007.xhtml#p9:3bd9d83030", "reason": "为了当前任务不断延后重构，用补丁绕过问题，是图中延期清理路径的依据。" },
+      { "section": "3.2", "epub": "OEBPS/part0007.xhtml#p15:ddd2f463b7", "reason": "比较替代设计和编写文档属于主动投资。" },
+      { "section": "3.2", "epub": "OEBPS/part0007.xhtml#p16:c40b0d0f1d", "reason": "发现设计问题后进行小幅修复属于应对性投资。" },
+      { "section": "3.3", "epub": "OEBPS/part0007.xhtml#p18:4502343001", "reason": "不赞成瀑布式巨额前期投入，建议持续小额投入约 10%–20%。" },
+      { "section": "3.3", "epub": "OEBPS/part0007.xhtml#p22:7cb9f2c4cf", "reason": "作者明确没有回本时间的实证数据，图不作收益或进度预测。" }
+    ],
+    "teachingExample": "三个迭代及其排程为教学示意，方块宽度不代表时间测量。",
+    "status": "awaiting-independent-review"
+  }
+]

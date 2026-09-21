@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 465" role="img" aria-labelledby="ch13-rpc-intent-t ch13-rpc-intent-d">
+  <title id="ch13-rpc-intent-t">先看要装进哪个请求，再读条件</title><desc id="ch13-rpc-intent-d">教学键哈希发往服务器A，目标B请求不符，已发出的A请求也不符，尚未发出且有容量的A请求只是候选，还必须满足maxPos小于assignPos。高层注释解释大部分检查，却没有解释maxPos的理由。</desc>
+  <defs><marker id="ch13-rpc-intent-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="680" height="465" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">先看要装进哪个请求，再读条件</text><text x="24" y="68">意图：尝试追加到发往目标服务器、尚未发出的 RPC</text>
+    <rect x="24" y="178" width="164" height="80" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="47" y="207" font-weight="600">当前键的哈希</text><text x="47" y="238">目标服务器 A</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5"><path d="M189 217H229V130H280"/><path d="M229 217H280"/><path d="M229 217V304H280" marker-end="url(#ch13-rpc-intent-a)"/></g>
+    <rect x="289" y="97" width="367" height="65" rx="4" fill="var(--diagram-danger-soft,#ead9dc)"/><text x="307" y="123">服务器 B：尚未发出</text><text x="307" y="149" font-size="14">目标不符，不能追加到这里</text>
+    <rect x="289" y="184" width="367" height="65" rx="4" fill="var(--diagram-danger-soft,#ead9dc)"/><text x="307" y="210">服务器 A：已经发出</text><text x="307" y="236" font-size="14">状态不符，不能再向已发出的请求追加</text>
+    <rect x="289" y="271" width="367" height="65" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="307" y="297">服务器 A：尚未发出，还有容量</text><text x="307" y="323" font-size="14">候选，不是仅凭这三点就能通过全部检查</text>
+    <path d="M263 121L279 138M279 121L263 138M263 208L279 225M279 208L263 225" stroke="var(--diagram-danger,#a03946)" stroke-width="2"/>
+    <path d="M24 361H656" stroke="var(--diagram-line,#aebbad)"/><text x="24" y="391" font-weight="600">还剩一个解释缺口：maxPos &lt; assignPos</text>
+    <text x="24" y="418" font-size="14">原文指出，高层注释没有解释这一检查；理解意图不等于理解全部细节。</text>
+    <text x="24" y="446" font-size="13" fill="var(--diagram-muted,#58636b)">服务器字母和候选布局为教学示意；不规定循环顺序，不构成完整 RPC 算法。</text>
+  </g>
+</svg>

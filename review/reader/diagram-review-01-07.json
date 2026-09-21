@@ -1,0 +1,850 @@
+[
+  {
+    "id": "ch01-two-levers",
+    "decision": "revise",
+    "question": "After unifying two names and after encapsulating file decoding, which knowledge disappears, and which knowledge still exists but changes owner?",
+    "expectedAnswer": "The unnecessary distinction between names with the same meaning disappears. Format recognition and decoding still exist inside the file module, but its caller need not understand their implementation. These techniques can be combined; the chapter does not prescribe a mandatory order.",
+    "graphicReasoning": "The two-to-one naming transformation supports a small, checkable inference. The encapsulation half shows a caller outside an implementation boundary, but only the final arrangement: no visible before-state demonstrates which responsibilities moved. Thus one half is a transformation and the other is a labeled description. A matched before/after boundary comparison would make the distinction more than a restatement of the two introductory paragraphs.",
+    "sourceEvidence": [
+      {
+        "path": "docs/ch01.md",
+        "lines": "10-12",
+        "evidence": "Distinguishes eliminating special cases or inconsistent identifiers from encapsulating complexity through relatively independent modules."
+      },
+      {
+        "path": "/tmp/aposd2e-polish.GHV1eo/original/ch01.md",
+        "lines": "19-23",
+        "anchors": ["OEBPS/part0005.xhtml#p7:6932e6496e", "OEBPS/part0005.xhtml#p8:c2c0a76bad"],
+        "evidence": "Supports the distinction, but neither a size/length API nor a load(file) API nor an obligatory simplify-then-encapsulate sequence. The draft correctly marks its examples as teaching inventions."
+      }
+    ],
+    "issues": [
+      {
+        "priority": "medium",
+        "detail": "The late live metadata moves this diagram to the end of section 1.1, stacking it with ch01-review-loop after docs/ch01.md:40. This supersedes the snapshot's too-early position after line 4, but overshoots the relevant passage: elimination and encapsulation are explained at lines 10-12, before the discussion turns to continuous design and then how to use the book. The new position makes readers return to an earlier topic after the chapter's closing transition."
+      },
+      {
+        "priority": "medium",
+        "detail": "The desktop closing instruction says to eliminate distinctions first and then place necessary details behind a boundary. Mobile instead says the techniques can be combined. The desktop wording introduces an unsupported sequence."
+      },
+      {
+        "priority": "medium",
+        "detail": "The encapsulation half does not show the caller previously performing recognition and decoding. The metadata's claim that these responsibilities move into load is stronger than what the geometry demonstrates."
+      }
+    ],
+    "requestedChanges": [
+      "Relocate the diagram immediately after docs/ch01.md:12, before the transition to software's continuous design process at line 14. Neither the snapshot's opening position nor the late end-of-1.1 position follows the source flow as closely.",
+      "Show the same decoding responsibilities before and after encapsulation, with their location changing while their identities remain constant.",
+      "Use the same non-sequential conclusion in both layouts: the approaches can be combined.",
+      "Keep the teaching-example label and the warning that encapsulation does not remove all dependencies."
+    ],
+    "viewEvidence": {
+      "reviewedVersion": "For this review's 19 records, the content baseline is immutable round1 metadata/ch01-ch07.json and all 38 round1 desktop/mobile SVGs, compared with the supplied current gallery captures. The one late override is the live ch01-two-levers anchor in docs/.vuepress/reader/diagrams/ch01.json: section 1.1 end replaces snapshot intro=true. Recomparison found no other changes to round1 metadata fields across ch01-ch07, and all 38 live SVGs were byte-identical to round1. This record's placement judgment uses the late override.",
+      "svgRead": ["/tmp/aposd2e-viz-review-round1/assets/ch01-two-levers.svg", "/tmp/aposd2e-viz-review-round1/assets/ch01-two-levers-mobile.svg"],
+      "screenshotsViewed": ["/tmp/aposd2e-reader-qa/gallery-light-000.png", "/tmp/aposd2e-reader-qa/gallery-dark-000.png"],
+      "observations": "Both layouts are readable in both supplied themes. The unification and call arrows are explicitly labeled and distinguishable. No clipping was apparent.",
+      "semanticEquivalence": "The central distinction survives reflow; the desktop-only first/then instruction does not.",
+      "placement": "Snapshot: after docs/ch01.md:4. Late live metadata, read and evaluated through diagramInsertions: both chapter-1 IDs share token index 63 at EOF after line 40. The current judgment is to move this diagram to the two-approach passage after line 12 and retire the review loop, not merely rearrange the end-of-chapter stack."
+    },
+    "limitations": "Independent explanatory-design judgment, not evidence of reader learning. Placement was checked from the insertion logic, not a live chapter screenshot. The gallery shows the mobile asset at its gallery size, not every possible phone content width."
+  },
+  {
+    "id": "ch01-review-loop",
+    "decision": "retire",
+    "question": "Does finding a red flag justify an immediate refactor, or must the alternative be evaluated against its costs?",
+    "expectedAnswer": "A red flag prompts exploration, not an automatic verdict. Compare alternatives in actual code, including understanding and modification costs and the limits of the principle.",
+    "graphicReasoning": "The loop has a real feedback topology, but all of its decisions are verbal restatements of section 1.1. There is no actual red flag, competing design, or observable tradeoff for a reader to evaluate. The decision node asks whether the design is better without supplying evidence for answering it. The adjacent prose already explains iteration and discretion more precisely. Its large mobile footprint buys a procedural outline, not a new reasoning task.",
+    "sourceEvidence": [
+      {
+        "path": "docs/ch01.md",
+        "lines": "30-36",
+        "evidence": "Explains why actual code is needed, recommends code reviews and repeated alternatives, and warns against applying principles mechanically."
+      },
+      {
+        "path": "/tmp/aposd2e-polish.GHV1eo/original/ch01.md",
+        "lines": "49-59",
+        "anchors": ["OEBPS/part0005.xhtml#p17:f589803ce3", "OEBPS/part0005.xhtml#p18:79b3e60f9d", "OEBPS/part0005.xhtml#p19:a981fd4b9c", "OEBPS/part0005.xhtml#p20:913d5b2ebf"],
+        "evidence": "The source itself says abstract principles may be insufficient without actual code. The diagram supplies no such code or case."
+      }
+    ],
+    "issues": [
+      {
+        "priority": "medium",
+        "detail": "Needless repetition at the end of an already explicit instructional section. The question is answered by reading the node labels rather than by reasoning from a represented situation. The late ch01 metadata now puts two-levers at the same endpoint, adding a second large display after the chapter's closing transition; this increases the interruption but is not the primary reason to retire this diagram."
+      },
+      {
+        "priority": "medium",
+        "detail": "The generic adopt-or-try-again flow does not demonstrate how competing principles are balanced or when retaining the original design is justified."
+      },
+      {
+        "priority": "medium",
+        "detail": "Screenshot/source mismatch: the frozen desktop return path runs around the left perimeter through x=12 and y=78. Both supplied gallery captures instead show an interior vertical return crossing the adoption connector and its label. That observed crossing is not attributable to the frozen path."
+      }
+    ],
+    "requestedChanges": [
+      "Remove this supplementary diagram from the reading flow; retain the existing prose. Do not move it to the introduction just to separate the late end-of-1.1 stack: section 1.1 is its correct subject context, and redundancy is the reason to retire it.",
+      "Do not create another generic process diagram to maintain chapter coverage. Reconsider a visual only if an actual code-review case with defensible alternatives is introduced.",
+      "For any retained successor, provide screenshots generated from the exact reviewed SVG; do not treat the current gallery as proof of the frozen route's rendering."
+    ],
+    "viewEvidence": {
+      "reviewedVersion": "Immutable round1 content and desktop/mobile SVGs, with late live ch01.json placement context explicitly considered. This ID's section-1.1-end anchor itself is unchanged; ch01-two-levers was moved to the same anchor. Both live chapter-1 SVG pairs remain byte-identical to round1.",
+      "svgRead": ["/tmp/aposd2e-viz-review-round1/assets/ch01-review-loop.svg", "/tmp/aposd2e-viz-review-round1/assets/ch01-review-loop-mobile.svg"],
+      "screenshotsViewed": ["/tmp/aposd2e-reader-qa/gallery-light-001.png", "/tmp/aposd2e-reader-qa/gallery-dark-001.png"],
+      "observations": "Text is readable in both themes. The gallery desktop feedback line intersects the adoption connector and runs through the area of its label; mobile routes its feedback around the right edge.",
+      "semanticEquivalence": "Both present exploration, evaluation, adoption, and retry. Neither graph depicts the promised continuing review after adoption. This is an incompleteness, not an opposite mobile meaning.",
+      "placement": "Both frozen and late live versions place this ID at EOF after docs/ch01.md:40. Live insertion evaluation confirms that it now shares that endpoint with two-levers. Its topic belongs to section 1.1, but a second prose-outline display there is not justified."
+    },
+    "limitations": "Retirement is a judgment of marginal explanatory value, not a measured finding that readers learn nothing. The supplied desktop capture is demonstrably not an exact rendering of the frozen SVG route; no replacement capture or build was generated."
+  },
+  {
+    "id": "ch02-weighted-work",
+    "decision": "keep",
+    "question": "With A=(complexity 2, time share 0.8) and B=(8, 0.2), what happens to total weighted complexity if either part independently improves by one point while weights stay fixed?",
+    "expectedAnswer": "Both initially contribute 1.6, so the total is 3.2. Improving A produces 2.4, a reduction of 0.8; improving B produces 3.0, a reduction of 0.2. This calculation alone does not choose the best investment, because improvement costs and time shares can differ or change.",
+    "graphicReasoning": "The aligned desktop table separates local complexity, exposure, and contribution, allowing readers to verify why fourfold local complexity does not imply fourfold total burden. The independent alternatives then expose the effect of a fixed weight. Although this is a worked table rather than a geometric magnitude chart, alignment and controlled inputs support a concrete calculation. It adds an application to the original formula instead of merely redrawing it. Mobile preserves the numbers, operations, and comparison.",
+    "sourceEvidence": [
+      {
+        "path": "docs/ch02.md",
+        "lines": "15-23",
+        "evidence": "Defines complexity relative to a developer's task and gives a rough time-weighted model; it is not a calibrated measurement or scheduling model."
+      },
+      {
+        "path": "/tmp/aposd2e-polish.GHV1eo/original/ch02.md",
+        "lines": "25-35",
+        "anchors": ["OEBPS/part0006.xhtml#p10:857fd96bed", "OEBPS/part0006.xhtml#p11:4407ac13f2"],
+        "evidence": "Explicitly calls the characterization crude. The draft labels the scores and fixed weights as teaching assumptions and visibly disclaims work-hour predictions."
+      },
+      {
+        "path": "docs/figures/00009.gif",
+        "evidence": "The original formula, also inspected through gallery-light-061.png, provides the relationship but no worked counterexample to prioritizing the locally hardest component."
+      }
+    ],
+    "issues": [],
+    "requestedChanges": [],
+    "viewEvidence": {
+      "svgRead": ["/tmp/aposd2e-viz-review-round1/assets/ch02-weighted-work.svg", "/tmp/aposd2e-viz-review-round1/assets/ch02-weighted-work-mobile.svg"],
+      "screenshotsViewed": ["/tmp/aposd2e-reader-qa/gallery-light-002.png", "/tmp/aposd2e-reader-qa/gallery-dark-002.png", "/tmp/aposd2e-reader-qa/gallery-light-061.png"],
+      "observations": "Numbers, multiplication, totals, and qualifications are legible in both themes. Color separates A and B but is not necessary to identify either. There are no ambiguous arrows.",
+      "semanticEquivalence": "Mobile replaces columns with labeled rows/cards but retains every input and both alternative calculations, including fixed weights and changing-cost caveats.",
+      "placement": "Section 2.1 end, after docs/ch02.md:23, is close enough to the formula and its explanation."
+    },
+    "limitations": "Keep means the example affords a verifiable inference, not that a learning benefit was measured. No reader trial, complexity measurement, or investment-return estimate was performed. Narrower live reader widths were not tested."
+  },
+  {
+    "id": "ch02-memory-owner",
+    "decision": "revise",
+    "question": "For the same allocation/use/release sequence, which lifecycle obligations cross into the caller in each design?",
+    "expectedAnswer": "In the first design the caller must know its release obligation and timing. If the system can be restructured so the allocating module safely owns release, that part of the caller's cognitive load is reduced. The diagram does not establish a complete lifetime protocol or prove that only this restructuring can reduce cognitive load.",
+    "graphicReasoning": "The two traces keep allocation and use constant while changing the owner of release. The brace linking allocation to eventual release provides useful relational information beyond a list. However, owners are repeated inside sequential boxes instead of occupying stable lanes, so the boundary crossing is largely read from labels. Nothing depicted corresponds to the title's claim about writing one fewer line. A compact ownership diagram could preserve the useful comparison without suggesting an implemented memory-management solution.",
+    "sourceEvidence": [
+      {
+        "path": "docs/ch02.md",
+        "lines": "31-33",
+        "evidence": "The C example concerns the caller's obligation to free memory. Restructuring is explicitly conditional; line count is discussed separately."
+      },
+      {
+        "path": "/tmp/aposd2e-polish.GHV1eo/original/ch02.md",
+        "lines": "46-50",
+        "anchors": ["OEBPS/part0006.xhtml#p16:a109901f0e", "OEBPS/part0006.xhtml#p17:e51597de57"],
+        "evidence": "Says that if the system can be restructured, cognitive load decreases. It does not specify a C API, ownership-transfer protocol, or an exclusive way to reduce cognitive load."
+      }
+    ],
+    "issues": [
+      {
+        "priority": "medium",
+        "detail": "The frozen answer makes returning release responsibility sound necessary for reducing this load, whereas the source offers a conditional restructuring. The lower trace does not show how safe lifetime completion is established."
+      },
+      {
+        "priority": "medium",
+        "detail": "The title promises a fewer-lines comparison that is not drawn. The arrows are time order, not an actual release request or transfer protocol; this distinction should remain explicit in mobile too."
+      },
+      {
+        "priority": "low",
+        "detail": "The section-end placement follows the entire unknown-unknowns discussion and its original figure, several paragraphs after the memory example. The 734-unit mobile trace is disproportionately long for the ownership difference shown."
+      }
+    ],
+    "requestedChanges": [
+      "Retitle around who must know when and how to release memory, rather than an unshown line-count reduction.",
+      "Use stable module/caller responsibility lanes and make release the visually changed responsibility.",
+      "Keep the conditional wording and the explicit non-API limitation; do not imply that moving a release box alone solves lifetime safety.",
+      "Place beside the cognitive-load example at docs/ch02.md:31-33 and shorten repeated mobile prose."
+    ],
+    "viewEvidence": {
+      "svgRead": ["/tmp/aposd2e-viz-review-round1/assets/ch02-memory-owner.svg", "/tmp/aposd2e-viz-review-round1/assets/ch02-memory-owner-mobile.svg"],
+      "screenshotsViewed": ["/tmp/aposd2e-reader-qa/gallery-light-003.png", "/tmp/aposd2e-reader-qa/gallery-dark-003.png"],
+      "observations": "Readable in both themes. The brace visibly relates allocating and freeing to the same module. No apparent text collisions.",
+      "semanticEquivalence": "Responsibility assignment agrees. Desktop explicitly calls its horizontal axis time; the corresponding mobile temporal interpretation is mostly implicit.",
+      "placement": "Section 2.2 end maps after docs/ch02.md:43, not next to the memory paragraph."
+    },
+    "limitations": "Design assessment only. The frozen metadata itself says this is not a concrete lifecycle implementation, so no leak-prevention or API-correctness result is claimed. Actual reading efficiency has not been tested."
+  },
+  {
+    "id": "ch02-cause-symptom",
+    "decision": "replace",
+    "question": "When a new error status requires a message-table entry, which work remains after the table becomes discoverable, and which uncertainty is reduced?",
+    "expectedAnswer": "Both the declaration and message table still need consistent edits. Making their relationship visible reduces the risk of not knowing about the second edit; it does not remove the dependency or the change amplification.",
+    "graphicReasoning": "Most of the area is a cause/symptom lookup table copied from the final paragraph of section 2.3. The lower branch distinguishes knowing from not knowing, but neither the declaration nor the message table is actually represented. Readers cannot trace a change, locate an omitted entry, or compare edit sets. The original banner figure already demonstrates hidden dependency through concrete values. A status/message worked example could add transfer to a new case; the present boxes and category labels do not yet do that.",
+    "sourceEvidence": [
+      {
+        "path": "docs/ch02.md",
+        "lines": "49-59",
+        "evidence": "Defines dependency, gives the status/message-table example, and lists the two causes' contributions to three symptoms."
+      },
+      {
+        "path": "/tmp/aposd2e-polish.GHV1eo/original/ch02.md",
+        "lines": "70-86",
+        "anchors": ["OEBPS/part0006.xhtml#p25:d90f87f2bd", "OEBPS/part0006.xhtml#p27:3c809c76e1", "OEBPS/part0006.xhtml#p29:ab0367e05b"],
+        "evidence": "Dependencies cannot all be removed; remaining dependencies should be simple and obvious. The source supplies a qualitative attribution, not an exclusive causal matrix."
+      },
+      {
+        "path": "docs/figures/00010.jpeg",
+        "evidence": "Original Figure 2.1(c), inspected as a raster and in gallery-light-061.png, concretely shows the remaining local emphasis-color dependency after background centralization. Its caption at docs/ch02.md:37 is essential."
+      }
+    ],
+    "issues": [
+      {
+        "priority": "medium",
+        "detail": "The dominant matrix is an outline of a paragraph, not evidence from which the requested status-change answer can be derived."
+      },
+      {
+        "priority": "medium",
+        "detail": "Desktop needs a special 'not listed is not excluded' disclaimer to prevent overreading its empty relationships. Mobile removes that matrix and its explicit disclaimer, retaining only a source-attribution heading."
+      },
+      {
+        "priority": "medium",
+        "detail": "The desktop conclusion says visibility eliminates the risk of not knowing where else to edit. The source supports making dependencies more obvious, not a guarantee that every relevant dependency has been discovered; mobile's conclusion is more restrained."
+      }
+    ],
+    "requestedChanges": [
+      "Replace the dominant matrix with two matched status/message examples showing the same required edits but different visibility of the dependency.",
+      "Show a concrete missing message entry after a declaration-only edit and the complete edit set when the link is visible. Mark any invented names or values as teaching examples.",
+      "Use connectors for required co-change and a separate visual treatment for discoverability; do not imply that documenting a dependency removes it.",
+      "Reduce the cause taxonomy to a small annotation, or leave it to the existing prose."
+    ],
+    "viewEvidence": {
+      "svgRead": ["/tmp/aposd2e-viz-review-round1/assets/ch02-cause-symptom.svg", "/tmp/aposd2e-viz-review-round1/assets/ch02-cause-symptom-mobile.svg"],
+      "screenshotsViewed": ["/tmp/aposd2e-reader-qa/gallery-light-004.png", "/tmp/aposd2e-reader-qa/gallery-dark-004.png", "/tmp/aposd2e-reader-qa/gallery-light-061.png"],
+      "observations": "Both themes are readable. Desktop arrows denote alternative knowledge conditions rather than runtime calls. Mobile substitutes two prose boxes for the branches, making the lower comparison even less graphical.",
+      "semanticEquivalence": "The intended causal attributions survive, but explicit non-exclusion wording and the strength of the closing conclusion differ.",
+      "placement": "Section 2.3 end maps after docs/ch02.md:59, immediately repeating that paragraph's taxonomy."
+    },
+    "limitations": "The replacement recommendation concerns reasoning affordance and redundancy, not experimentally measured recall or transfer. No claim is made that the source's causal taxonomy is an empirically validated exclusive model."
+  },
+  {
+    "id": "ch03-patch-cycle",
+    "decision": "keep",
+    "question": "How can shortcuts that help the current task make the next shortcut more likely?",
+    "expectedAnswer": "Repeated shortcuts accumulate complexity; that complexity obstructs later changes and makes cleanup more intimidating under schedule pressure, encouraging further workarounds. The apparent speed of the current contributor omits later maintenance costs.",
+    "graphicReasoning": "Unlike a simple chronological outline, the return edge makes the mechanism self-reinforcing: the consequence becomes pressure for the next decision. The accumulation edge is explicitly labeled as repeated additions, and the commentary separates current contribution from downstream cost. Readers can trace why the loop persists rather than merely remember that tactical programming is bad. This explains a mechanism behind the original progress curve without pretending to quantify its shape.",
+    "sourceEvidence": [
+      {
+        "path": "docs/ch03.md",
+        "lines": "10-18",
+        "evidence": "Describes accumulated small compromises, increasingly expensive cleanup, further patches, and costs borne by subsequent maintainers."
+      },
+      {
+        "path": "/tmp/aposd2e-polish.GHV1eo/original/ch03.md",
+        "lines": "19-32",
+        "anchors": ["OEBPS/part0007.xhtml#p8:bdac23ce35", "OEBPS/part0007.xhtml#p9:3bd9d83030", "OEBPS/part0007.xhtml#p11:93957918f0"],
+        "evidence": "Supports the reinforcing relationship and the difference between individual apparent output and maintenance cost."
+      },
+      {
+        "path": "docs/figures/00011.jpeg",
+        "evidence": "Original Figure 3.1, inspected as a raster and in gallery-light-062.png, is a qualitative progress comparison. Its caption at docs/ch03.md:36 disclaims empirical curve measurements; this new diagram does not invent them."
+      }
+    ],
+    "issues": [],
+    "requestedChanges": [],
+    "viewEvidence": {
+      "svgRead": ["/tmp/aposd2e-viz-review-round1/assets/ch03-patch-cycle.svg", "/tmp/aposd2e-viz-review-round1/assets/ch03-patch-cycle-mobile.svg"],
+      "screenshotsViewed": ["/tmp/aposd2e-reader-qa/gallery-light-005.png", "/tmp/aposd2e-reader-qa/gallery-dark-005.png", "/tmp/aposd2e-reader-qa/gallery-light-062.png"],
+      "observations": "Both themes clearly show all four states and the return edge without crossings. Numbering preserves order when the desktop cycle becomes a mobile vertical chain.",
+      "semanticEquivalence": "Both communicate reinforcement and future maintenance cost. Desktop additionally says not every patch has a fixed cost or inevitable outcome; mobile retains the non-quantitative causal framing.",
+      "placement": "After docs/ch03.md:18, the end of section 3.1, appropriately consolidates the mechanism and maintenance-cost example."
+    },
+    "limitations": "A useful causal representation of the author's argument, not causal research or reader-learning evidence. It cannot predict costs or show that every particular shortcut will produce this outcome."
+  },
+  {
+    "id": "ch03-small-investments",
+    "decision": "retire",
+    "question": "How does continuous design investment differ from designing everything in advance or repeatedly postponing cleanup?",
+    "expectedAnswer": "Continuous investment combines implementation with repeated proactive design work and reactive fixes as understanding grows. It is neither complete up-front design nor indefinite deferral. The 10-20% suggestion and payback discussion are the author's advice, not measured guarantees.",
+    "graphicReasoning": "The three-column schedule encodes placement in time, but its cells merely repeat 'implement and improve' or 'implement again'. It contains no discovered problem, changed design, or visible effect carried from one iteration to the next. The deferred-cleanup dashed line has no moving item or target. The two investment types sit in explanatory text rather than in an actual worked schedule. Compared with sections 3.2-3.3 and the more informative patch loop, the extra display mainly repeats recommendations.",
+    "sourceEvidence": [
+      {
+        "path": "docs/ch03.md",
+        "lines": "24-44",
+        "evidence": "Already contrasts proactive/reactive investment, rejects complete up-front design, recommends small ongoing investments, and states the absence of empirical payback evidence."
+      },
+      {
+        "path": "/tmp/aposd2e-polish.GHV1eo/original/ch03.md",
+        "lines": "40-65",
+        "anchors": ["OEBPS/part0007.xhtml#p15:ddd2f463b7", "OEBPS/part0007.xhtml#p16:c40b0d0f1d", "OEBPS/part0007.xhtml#p18:4502343001", "OEBPS/part0007.xhtml#p19:4a595fa49e", "OEBPS/part0007.xhtml#p22:7cb9f2c4cf"],
+        "evidence": "The draft preserves the important empirical qualifications. Its three iterations and assignments are explicitly teaching inventions, not a source schedule."
+      },
+      {
+        "path": "docs/figures/00011.jpeg",
+        "evidence": "The existing qualitative progress figure answers a different question about cumulative progress. The new schedule need not duplicate that curve, but still needs independent explanatory value to justify its presence."
+      }
+    ],
+    "issues": [
+      {
+        "priority": "medium",
+        "detail": "Low marginal value: the layout repeats already explicit prose and adds a long second teaching display to a chapter whose patch loop already exposes a mechanism."
+      },
+      {
+        "priority": "low",
+        "detail": "Calling the up-front-design row's sequential phases 'iterations' blurs the distinction being taught. Desktop also assigns comparison, correction, and experience to separate successive cells, while mobile keeps all iterations identical."
+      },
+      {
+        "priority": "low",
+        "detail": "The deferred-work dashed line asserts movement without drawing a postponed task, endpoint, or directional marker. Its meaning depends entirely on the sentence below it."
+      }
+    ],
+    "requestedChanges": [
+      "Retire this supplementary schedule and keep the prose, its evidence caveats, the original curve, and the distinct patch-cycle explanation.",
+      "Do not replace it solely to preserve two diagrams in the chapter. A future replacement would need one concrete design discovery followed through several iterations, not another slogan schedule."
+    ],
+    "viewEvidence": {
+      "svgRead": ["/tmp/aposd2e-viz-review-round1/assets/ch03-small-investments.svg", "/tmp/aposd2e-viz-review-round1/assets/ch03-small-investments-mobile.svg"],
+      "screenshotsViewed": ["/tmp/aposd2e-reader-qa/gallery-light-006.png", "/tmp/aposd2e-reader-qa/gallery-dark-006.png", "/tmp/aposd2e-reader-qa/gallery-light-062.png"],
+      "observations": "Readable in both themes, including the teaching-schedule and non-measurement qualifications. Mobile remains a small three-column schedule repeated vertically, occupying substantial space without additional states.",
+      "semanticEquivalence": "The main contrast and qualifications agree. Desktop's per-iteration descriptions are not retained as such in mobile.",
+      "placement": "After docs/ch03.md:44, at the end of section 3.3, repeats the section immediately after its payback caveat and translator note."
+    },
+    "limitations": "Retirement reflects explanatory economy, not a measured comprehension decrement. The figure is not rejected for failing to provide empirical payback data; it correctly avoids claiming such data."
+  },
+  {
+    "id": "ch04-abstraction-filter",
+    "decision": "replace",
+    "question": "For a database that must preserve committed data after a crash, which file-system facts must the interface expose, and under what condition can block-selection details remain hidden?",
+    "expectedAnswer": "The interface must expose the relevant flushing and persistence guarantees. The block-selection mechanism can remain hidden when it is irrelevant to using the system, including the source's assumption of adequate performance. A shorter signature is not a better abstraction if needed guarantees are missing.",
+    "graphicReasoning": "The yes/no geometry classifies two already-labeled examples, but asks readers the very question they need help answering: whether information is needed. It does not depict volatile versus persistent state or the consequence of a crash, so necessity is asserted inside the outcome box rather than derived. A small requirements/state contrast could show why the database needs a guarantee while not needing the placement algorithm.",
+    "sourceEvidence": [
+      {
+        "path": "docs/ch04.md",
+        "lines": "21-35",
+        "evidence": "Interface information includes behavior and constraints; abstraction must not omit important details. The file-system paragraph explicitly qualifies hidden allocation details with adequate performance and explains persistence through caching and crashes."
+      },
+      {
+        "path": "/tmp/aposd2e-polish.GHV1eo/original/ch04.md",
+        "lines": "34-56",
+        "anchors": ["OEBPS/part0008.xhtml#p13:c2f52ccea6", "OEBPS/part0008.xhtml#p18:0d8979670a", "OEBPS/part0008.xhtml#p19:954b1a6804"],
+        "evidence": "The decisive source condition is 'as long as the system provides adequate performance'. Caching may delay storage writes, which explains the database's need for a visible persistence contract."
+      }
+    ],
+    "issues": [
+      {
+        "priority": "high",
+        "detail": "The draft omits the source's adequate-performance qualification from both layouts and its answer. Its correctness-only gate can teach an overly narrow rule for deciding whether information matters to a caller."
+      },
+      {
+        "priority": "medium",
+        "detail": "The decision tree is circular as instruction: it labels persistence necessary without exposing the state difference that makes it necessary. The source's caching/crash explanation offers a more concrete visual opportunity."
+      },
+      {
+        "priority": "low",
+        "detail": "The mobile yes branch leaves the side of the decision and travels past the no result. It is connected correctly, but requires more tracing than the desktop's parallel outcomes."
+      }
+    ],
+    "requestedChanges": [
+      "Replace the classification-only centerpiece with a minimal cache/storage and crash-outcome contrast tied to the database requirement.",
+      "Restore the adequate-performance qualification next to the hidden block-selection example in both layouts and in the answer.",
+      "Distinguish the externally promised persistence behavior from the internal mechanism; do not imply that a particular flush API or crash outcome was specified by the book.",
+      "Keep any new illustrative timing or state values clearly marked as teaching examples and retain the warning about false abstractions."
+    ],
+    "viewEvidence": {
+      "svgRead": ["/tmp/aposd2e-viz-review-round1/assets/ch04-abstraction-filter.svg", "/tmp/aposd2e-viz-review-round1/assets/ch04-abstraction-filter-mobile.svg"],
+      "screenshotsViewed": ["/tmp/aposd2e-reader-qa/gallery-light-007.png", "/tmp/aposd2e-reader-qa/gallery-dark-007.png"],
+      "observations": "Readable in both themes. Branch labels are present and no clipping is apparent. The missing qualification is a content issue, not a text-size issue.",
+      "semanticEquivalence": "Both layouts make the same qualified-in-source but underqualified-in-diagram distinction. The interface-behavior warning is retained.",
+      "placement": "End of section 4.3 after docs/ch04.md:37. Appropriate topic, though a replacement would be most useful adjacent to the file-system paragraph at line 35."
+    },
+    "limitations": "High priority refers to a misleading teaching criterion, not a verified software defect. The proposed state contrast is a design recommendation; no reader study or filesystem experiment was performed."
+  },
+  {
+    "id": "ch04-depth",
+    "decision": "retire",
+    "question": "Why can five file operations hide much more complexity than one wrapper method, even though both interfaces fit in a small box?",
+    "expectedAnswer": "Depth concerns useful functionality relative to what callers must understand, not simply method count, code length, or drawn area. The wrapper adds little abstraction; the file interface hides substantial implementation decisions. Shallow modules can still be useful or unavoidable.",
+    "graphicReasoning": "This copies the wrapper code and Unix implementation topics from the immediately preceding sections into paired boxes. Equal-width interface boxes and a taller implementation box do not independently demonstrate relative understanding cost. The explicit non-scale disclaimer prevents a quantitative error, but also leaves the box size serving mostly as room for a longer list. The original Figure 4.1 already provides the visual metaphor, and the prose already supplies these exact concrete examples.",
+    "sourceEvidence": [
+      {
+        "path": "docs/ch04.md",
+        "lines": "41-93",
+        "evidence": "Contains the depth figure and its caption, cost/benefit explanation, five file calls and implementation list, then the complete shallow wrapper and analysis."
+      },
+      {
+        "path": "/tmp/aposd2e-polish.GHV1eo/original/ch04.md",
+        "lines": "61-74, 94-125, 130-152",
+        "anchors": ["OEBPS/part0008.xhtml#p23:f31c45ce13", "OEBPS/part0008.xhtml#p24:2f7cf053e2", "OEBPS/part0008.xhtml#p40:f5b6f9d168", "OEBPS/part0008.xhtml#p44:5aa3fcc206", "OEBPS/part0008.xhtml#p49:7ca889b9d5"],
+        "evidence": "Supports the two examples, but also says shallow linked-list classes may be useful and unavoidable. Depth is a cost/benefit relationship, not a universal condemnation of small wrappers."
+      },
+      {
+        "path": "docs/figures/00012.jpeg",
+        "evidence": "Original Figure 4.1 was inspected as a raster and in gallery-light-062.png. Its top-edge/interface and area/functionality mapping is already explained by the nearby text and caption."
+      }
+    ],
+    "issues": [
+      {
+        "priority": "medium",
+        "detail": "Redundant third presentation of the same argument: original metaphor, prose/code examples, then the same examples boxed. It offers no new task or counterexample."
+      },
+      {
+        "priority": "medium",
+        "detail": "The five file call names omit most of their interface contract while the wrapper is shown almost in full. The equal interface boxes can invite an unsupported comparison by visible label length rather than actual understanding cost."
+      },
+      {
+        "priority": "low",
+        "detail": "The positive/negative examples omit the section's useful-or-unavoidable shallow-module qualification. Mobile uses 720 units to repeat the comparison after the source's shallow-module warning."
+      }
+    ],
+    "requestedChanges": [
+      "Retire this supplementary comparison; preserve the original figure, its caption, and the existing Unix/wrapper examples.",
+      "Do not replace the original cost/benefit metaphor or add another depth diagram simply to maintain coverage.",
+      "If a future applied-depth exercise is added, compare caller obligations for a concrete task and retain the qualification that shallow modules can be useful."
+    ],
+    "viewEvidence": {
+      "svgRead": ["/tmp/aposd2e-viz-review-round1/assets/ch04-depth.svg", "/tmp/aposd2e-viz-review-round1/assets/ch04-depth-mobile.svg"],
+      "screenshotsViewed": ["/tmp/aposd2e-reader-qa/gallery-light-008.png", "/tmp/aposd2e-reader-qa/gallery-dark-008.png", "/tmp/aposd2e-reader-qa/gallery-light-062.png"],
+      "observations": "Text is readable in the supplied themes; the smallest area-disclaimer text is secondary. Call arrows are labeled, but the lower boxes are implementation-topic summaries rather than literal called objects.",
+      "semanticEquivalence": "Both contain the same examples and the non-scale caveat. Mobile loses simultaneous side-by-side comparison while preserving the claims.",
+      "placement": "After docs/ch04.md:93, directly after the shallow-module red flag and already complete example analysis."
+    },
+    "limitations": "A redundancy and explanatory-value judgment, not evidence that repetition is always harmful. No learning or retention study compared the original figure against this supplement."
+  },
+  {
+    "id": "ch04-common-path",
+    "decision": "revise",
+    "question": "Which operation does a caller need for a position jump but not for ordinary sequential reading, and why can that feature stay out of the common caller's knowledge?",
+    "expectedAnswer": "A caller that needs a position jump uses lseek; ordinary sequential reading uses the ongoing file position without needing that operation. Retaining the special capability does not require every caller to learn it. Default Java buffering is the author's proposed redesign, not the shown API's behavior.",
+    "graphicReasoning": "The bypass route around lseek is meaningful: the ordinary path remains complete without entering the special branch. This adds a graphical explanation of effective interface complexity. However, the two identical read boxes do not show automatic position advancement or what lseek changes, so the argument is mostly about skipping an operation, not yet about why it is unnecessary. A tiny position trace would turn the route into a stronger worked example.",
+    "sourceEvidence": [
+      {
+        "path": "docs/ch04.md",
+        "lines": "59, 103-119",
+        "evidence": "Explains current file position, the explicit Java wrapper assembly, proposed default buffering, and Unix's sequential default."
+      },
+      {
+        "path": "/tmp/aposd2e-polish.GHV1eo/original/ch04.md",
+        "lines": "91-92, 187-194",
+        "anchors": ["OEBPS/part0008.xhtml#p31:ab248507f0", "OEBPS/part0008.xhtml#p64:a39b3e2e96", "OEBPS/part0008.xhtml#p65:bd4a0d112b"],
+        "evidence": "Supports optional position adjustment and distinguishes a proposed Java design from an existing Unix behavior."
+      }
+    ],
+    "issues": [
+      {
+        "priority": "medium",
+        "detail": "The trace does not depict current position or returned data, so the reader cannot infer how sequential reading advances or how the special branch changes the next read."
+      },
+      {
+        "priority": "low",
+        "detail": "Every drawn route starts with read before the optional lseek. Without an explicit example-sequence label, this can look like an allowed-call grammar requiring a preliminary read; the source makes no such restriction."
+      }
+    ],
+    "requestedChanges": [
+      "Add a small, explicitly illustrative position/data strip showing the next sequential read versus a position jump.",
+      "Label the route as one example sequence, not the full API state machine or a requirement to read before seeking.",
+      "Keep the special branch out of the ordinary route and retain the explicit author-proposal wording for Java buffering.",
+      "Do not expand the Java comparison into another full diagram; it is supporting context for the same common-path principle."
+    ],
+    "viewEvidence": {
+      "svgRead": ["/tmp/aposd2e-viz-review-round1/assets/ch04-common-path.svg", "/tmp/aposd2e-viz-review-round1/assets/ch04-common-path-mobile.svg"],
+      "screenshotsViewed": ["/tmp/aposd2e-reader-qa/gallery-light-009.png", "/tmp/aposd2e-reader-qa/gallery-dark-009.png"],
+      "observations": "Both themes are readable. The optional branch rejoins the next read correctly, without forcing traversal of lseek. Mobile retains the branch instead of flattening it into an unconditional sequence.",
+      "semanticEquivalence": "Both preserve the optional path and proposed-versus-actual distinction. Mobile makes the latter especially explicit in its final note.",
+      "placement": "After docs/ch04.md:119, immediately following the common-case argument in section 4.7."
+    },
+    "limitations": "No claim of a functional I/O simulation or exhaustive API validation. The proposed position trace would be a teaching assumption. Reader comprehension and narrower rendered widths remain unmeasured."
+  },
+  {
+    "id": "ch05-format-ownership",
+    "decision": "revise",
+    "question": "Can the application keep its read-modify-write order while a format change affects only one implementation owner?",
+    "expectedAnswer": "Yes. Read and write phases can call the same module that owns the format details, while modification remains a separate application activity. This helps only if the module actually hides those details rather than exposing them through a new interface.",
+    "graphicReasoning": "The upper fan-out exposes two change targets; the lower converging calls show how two times of use can share one knowledge owner. This is useful geometry and not merely an outline. But the before and after panels encode different things: change propagation is drawn only before, while the claimed containment after is a sentence. The shared visual style for execution order and calls also weakens the important distinction the diagram is meant to teach.",
+    "sourceEvidence": [
+      {
+        "path": "docs/ch05.md",
+        "lines": "29-45",
+        "evidence": "Explains back-door format leakage, conditional merge/extraction, and the read-modify-write example. Explicitly allows temporal decomposition when consistent with information hiding."
+      },
+      {
+        "path": "/tmp/aposd2e-polish.GHV1eo/original/ch05.md",
+        "lines": "52-71",
+        "anchors": ["OEBPS/part0009.xhtml#p18:4f98927335", "OEBPS/part0009.xhtml#p19:8b5ba3fcd6", "OEBPS/part0009.xhtml#p21:3ec818d82b", "OEBPS/part0009.xhtml#p24:d201909363"],
+        "evidence": "The central point is knowledge ownership, not mandatory merging of every stage. The draft correctly retains the warning against exposing the extracted knowledge."
+      }
+    ],
+    "issues": [
+      {
+        "priority": "medium",
+        "detail": "Solid arrows explicitly mean both execution order and calls. In the upper panel, a reader may interpret ReadClass calling ModifyClass calling WriteClass even though only temporal order is established by the example."
+      },
+      {
+        "priority": "medium",
+        "detail": "The after panel omits the format-change event and its one remaining target. Consequently the advertised two-target-to-one-target comparison is not directly inspectable."
+      },
+      {
+        "priority": "low",
+        "detail": "The upper desktop frozen dashed path passes through the area of the 'temporal decomposition' label; the supplied capture appears to start that path farther right. Exact round1 routing is not fully established by that screenshot."
+      }
+    ],
+    "requestedChanges": [
+      "Separate temporal order from invocation using distinct lanes or connector treatments with unambiguous labels.",
+      "Repeat the same format-change event in the after panel and connect it only to the shared format implementation; mark application phases unchanged.",
+      "Keep the condition that the shared module's interface must actually hide format knowledge.",
+      "Keep this diagram's focus on change propagation, leaving message-framing mechanics to ch05-http-read, and verify a matching desktop capture."
+    ],
+    "viewEvidence": {
+      "svgRead": ["/tmp/aposd2e-viz-review-round1/assets/ch05-format-ownership.svg", "/tmp/aposd2e-viz-review-round1/assets/ch05-format-ownership-mobile.svg"],
+      "screenshotsViewed": ["/tmp/aposd2e-reader-qa/gallery-light-010.png", "/tmp/aposd2e-reader-qa/gallery-dark-010.png"],
+      "observations": "Both layouts and themes are readable. The two upper change targets and common lower module are visually distinguishable. Frozen desktop routing near the upper heading differs in apparent start position from the capture.",
+      "semanticEquivalence": "Both preserve the separate modification phase and one shared format owner. Both also retain the mixed solid-arrow semantics.",
+      "placement": "Section 5.3 end maps after docs/ch05.md:45, close to the temporal-decomposition explanation."
+    },
+    "limitations": "This assesses design reasoning, not an implemented refactoring. The chapter does not provide a concrete format or API to validate. Gallery/source routing differences prevent certifying every frozen desktop connector from the capture."
+  },
+  {
+    "id": "ch05-http-read",
+    "decision": "revise",
+    "question": "In the illustrated Content-Length: 4 request, what must a purported read-only request class understand before it knows the request body is complete?",
+    "expectedAnswer": "It must recognize the header boundary and interpret the length field to know that four body bytes belong to this request. That is already protocol parsing. A separate parser that independently understands the same structure duplicates knowledge. Obtaining those bytes may require multiple reads; this example is not a complete HTTP framing algorithm.",
+    "graphicReasoning": "The concrete four-byte body makes the length dependency checkable, and the ordered parse-before-body-completion step refutes a naive read-everything-first story. This is an addition to Figure 5.1, which labels message structure but does not trace completion. Nevertheless, the draft draws only the merged solution. The two classes and repeated knowledge that motivate merging are absent, and the source field is not visually connected to the step that consumes it.",
+    "sourceEvidence": [
+      {
+        "path": "docs/ch05.md",
+        "lines": "53-65",
+        "evidence": "Figure 5.1 and its caption define request parts; section 5.5 explains why the reading class already parses structure and why the second class duplicates that knowledge."
+      },
+      {
+        "path": "/tmp/aposd2e-polish.GHV1eo/original/ch05.md",
+        "lines": "88-104",
+        "anchors": ["OEBPS/part0009.xhtml#p30:a0c89aff1f", "OEBPS/part0009.xhtml#p32:1fb3f4cb4e", "OEBPS/part0009.xhtml#p33:bc4302405d"],
+        "evidence": "The design criticism is duplicated protocol knowledge and ordered caller operations, not a claim that all reading and parsing abstractions must always be one class."
+      },
+      {
+        "path": "docs/figures/00014.gif",
+        "evidence": "Original Figure 5.1 was inspected as a raster and in gallery-light-063.png. Its original body and Content-Length: 40 are distinct from the explicitly invented four-byte teaching request; the draft does not silently alter the original."
+      }
+    ],
+    "issues": [
+      {
+        "priority": "medium",
+        "detail": "The conclusion that two classes duplicate knowledge is asserted but not drawn. The merged module's four-step outline does not let readers locate the duplication in the rejected design."
+      },
+      {
+        "priority": "medium",
+        "detail": "The displayed length field, the parsed integer, and the extent of body bytes are related only by repeated text. The four-byte extent is not visually marked."
+      },
+      {
+        "priority": "low",
+        "detail": "The mobile image spends 776 units on four processing lines plus repeated qualifications. The qualifications are necessary; the processing layout could be more compact."
+      }
+    ],
+    "requestedChanges": [
+      "Show the rejected read/parse boundary and identify the same framing knowledge in both classes, then the single owner after merging.",
+      "Connect Content-Length: 4 to the boundary/count of the four ASCII body bytes, using labeled dependency connectors distinct from processing-order arrows.",
+      "Retain all existing visible limitations: explicit Content-Length scenario, partial request excerpt, potentially multiple reads, and omitted framing/error paths.",
+      "Do not broaden the conclusion into a universal protocol implementation prescription."
+    ],
+    "viewEvidence": {
+      "svgRead": ["/tmp/aposd2e-viz-review-round1/assets/ch05-http-read.svg", "/tmp/aposd2e-viz-review-round1/assets/ch05-http-read-mobile.svg"],
+      "screenshotsViewed": ["/tmp/aposd2e-reader-qa/gallery-light-011.png", "/tmp/aposd2e-reader-qa/gallery-dark-011.png", "/tmp/aposd2e-reader-qa/gallery-light-063.png"],
+      "observations": "Both themes render the request excerpt, highlighted parse step, and limitations legibly. The dashed enclosure clearly denotes one module; arrows inside it indicate processing order.",
+      "semanticEquivalence": "Both preserve length=4, a=12, parsing before body completion, and the multiple-read/non-complete-algorithm qualifications.",
+      "placement": "After docs/ch05.md:65, end of section 5.5. Appropriate placement after both the problematic design and its proposed merge have been introduced."
+    },
+    "limitations": "No HTTP conformance or socket behavior was tested. The review uses the source's bounded design example and does not treat the four-step teaching trace as an implementation algorithm or as reader-learning evidence."
+  },
+  {
+    "id": "ch05-parameter-boundary",
+    "decision": "keep",
+    "question": "What crosses the HTTPRequest boundary with getParams versus getIntParameter(\"photo_id\"), and what must the caller still handle in the latter case?",
+    "expectedAnswer": "getParams exposes the internal Map reference, leaving lookup, conversion, and the risk of modifying internal state with the caller. getIntParameter keeps representation, lookup, and conversion internal and returns the integer value. Missing or unconvertible values still produce exceptions that are part of the interface contract.",
+    "graphicReasoning": "Desktop gives the boundary a stable location: return arrows show either an internal container reference or a scalar result crossing it, while lookup and conversion move to the implementation side. This spatial relocation directly supports a caller-obligation comparison. The exception outcome prevents information hiding from being mistaken for hiding necessary failure semantics. It adds boundary reasoning to the source code and the original HTTP-message figure, which do not show this ownership contrast.",
+    "sourceEvidence": [
+      {
+        "path": "docs/ch05.md",
+        "lines": "23, 75-93",
+        "evidence": "Private does not imply information hiding; getParams returns the internal representation and requires callers to avoid modification. The better accessor methods retain missing/conversion exceptions."
+      },
+      {
+        "path": "/tmp/aposd2e-polish.GHV1eo/original/ch05.md",
+        "lines": "43-44, 115-140",
+        "anchors": ["OEBPS/part0009.xhtml#p15:d39bc8123a", "OEBPS/part0009.xhtml#p43:5c5eb3299a", "OEBPS/part0009.xhtml#p47:45a97e3759"],
+        "evidence": "Supports every depicted responsibility and the exception condition. The accessor names and photo_id example are source-derived, not unexplained inventions."
+      },
+      {
+        "path": "docs/figures/00014.gif",
+        "evidence": "The original request supplies photo_id=246, but not the accessor-boundary comparison. Both the raster and its gallery rendering were inspected."
+      }
+    ],
+    "issues": [],
+    "requestedChanges": [],
+    "viewEvidence": {
+      "svgRead": ["/tmp/aposd2e-viz-review-round1/assets/ch05-parameter-boundary.svg", "/tmp/aposd2e-viz-review-round1/assets/ch05-parameter-boundary-mobile.svg"],
+      "screenshotsViewed": ["/tmp/aposd2e-reader-qa/gallery-light-012.png", "/tmp/aposd2e-reader-qa/gallery-dark-012.png", "/tmp/aposd2e-reader-qa/gallery-light-063.png"],
+      "observations": "Readable in both themes. Desktop opposing arrows separate request and returned information. Mobile explicitly labels the Map crossing and keeps internal work inside the HTTPRequest boxes.",
+      "semanticEquivalence": "Mobile loses the fixed two-column boundary but retains caller/module ownership, the reference-versus-value distinction, and both failure conditions. No contradictory return behavior was found.",
+      "placement": "After docs/ch05.md:93, directly beside the complete accessor and exception explanation."
+    },
+    "limitations": "Keep is a design judgment, not proof of learning or an API correctness test. The diagram is scoped to the source's internal-Map-return example, not every possible API that returns a collection. Supplied gallery views do not establish all live mobile widths."
+  },
+  {
+    "id": "ch06-range-api",
+    "decision": "keep",
+    "question": "Starting independently from ABCDE with the cursor between C and D, which half-open ranges implement backspace, Delete, and deletion of BCD?",
+    "expectedAnswer": "Backspace deletes [2,3), giving ABDE. Delete deletes [3,4), giving ABCE. Deleting the selected BCD uses [1,4), giving AE. UI code chooses the intent and Positions; the text module applies one range mechanism. The numeric gaps are teaching notation, not a prescribed Position implementation.",
+    "graphicReasoning": "The character cells and numbered gaps make the distinction between a character and a position visible. A reader can derive each range from the cursor and verify each remaining string; the aligned alternatives make reuse of the same mechanism explicit. The independent-start qualification prevents interpreting the rows as successive mutations. This adds a worked model to the source's abstract signatures and call expressions without inventing new editor behavior.",
+    "sourceEvidence": [
+      {
+        "path": "docs/ch06.md",
+        "lines": "25-41, 45-71, 83-85",
+        "evidence": "Defines backspace/Delete, the half-open delete contract, generic Position operations, and why UI code must retain knowledge of which characters are deleted."
+      },
+      {
+        "path": "/tmp/aposd2e-polish.GHV1eo/original/ch06.md",
+        "lines": "40-59, 64-92, 106-110",
+        "anchors": ["OEBPS/part0010.xhtml#p25:485d9a0327", "OEBPS/part0010.xhtml#p27:3bc06f5c57", "OEBPS/part0010.xhtml#p36:b5999bc8fc", "OEBPS/part0010.xhtml#p37:1b75d1a398"],
+        "evidence": "Supports the behavior and division of knowledge. ABCDE, numeric gaps, and the chosen selection are visibly labeled teaching examples."
+      }
+    ],
+    "issues": [],
+    "requestedChanges": [],
+    "viewEvidence": {
+      "svgRead": ["/tmp/aposd2e-viz-review-round1/assets/ch06-range-api.svg", "/tmp/aposd2e-viz-review-round1/assets/ch06-range-api-mobile.svg"],
+      "screenshotsViewed": ["/tmp/aposd2e-reader-qa/gallery-light-013.png", "/tmp/aposd2e-reader-qa/gallery-dark-013.png"],
+      "observations": "The cursor is distinguishable from ordinary cell dividers in both themes. Gaps 0 through 5, range endpoints, and all results are readable. Arrows indicate transformations, not sequential execution of the rows.",
+      "semanticEquivalence": "Both retain all ranges/results, the half-open convention, independent starts, and the warning that numeric positions are illustrative.",
+      "placement": "End of section 6.4 after docs/ch06.md:85. This gives the preceding API examples an applied check before the general design questions."
+    },
+    "limitations": "The three ordinary, valid examples do not validate file-end policy, Unicode indexing, or a complete editor. Keep indicates a derivable teaching example; no reader trial established retention or transfer."
+  },
+  {
+    "id": "ch06-history-boundary",
+    "decision": "revise",
+    "question": "Given a fenced group containing two Actions, which component chooses the group, which traverses it, and which knows how each saved state is restored?",
+    "expectedAnswer": "High-level UI policy places fences. History stores Action objects and traverses the group, invoking undo in reverse order or redo forward. Concrete Action implementations, located in the modules that understand their operations, restore the saved state. The draft's two actions only illustrate traversal; they do not establish a valid complete editor restoration sequence.",
+    "graphicReasoning": "The opposing recording/undo directions and fence endpoints support a real ordering inference. The upper three responsibility boxes are less effective: they look like a UI-to-History-to-Action pipeline, with no action registration, reference ownership, or connection to the lower history entries. Readers can recite the roles but cannot trace how History restores anything without understanding its state. Connecting history entries to actual action objects would make the abstraction boundary inspectable.",
+    "sourceEvidence": [
+      {
+        "path": "docs/ch06.md",
+        "lines": "107-151",
+        "evidence": "Distinguishes the full editor-state requirement, Action creation and addAction registration, generic traversal, UI fence policy, and operation-specific restoration. Contains explicit redo/undo and interface/subclass translator notes."
+      },
+      {
+        "path": "/tmp/aposd2e-polish.GHV1eo/original/ch06.md",
+        "lines": "187-215",
+        "anchors": ["OEBPS/part0010.xhtml#p63:08a7d39ba6", "OEBPS/part0010.xhtml#p64:749e4ecf03", "OEBPS/part0010.xhtml#p65:6193a44efc", "OEBPS/part0010.xhtml#p70:84283ebcc2", "OEBPS/part0010.xhtml#p72:c4f056de4e"],
+        "evidence": "The source explicitly places concrete actions outside History. It mistakenly names redo while describing backward undo; the diagram openly follows the existing correction rather than silently changing the source. Separation is within a mechanism, not a ban on specialized undo code living in a generic text module."
+      }
+    ],
+    "issues": [
+      {
+        "priority": "medium",
+        "detail": "The upper chain does not show where Action objects originate, how they enter History, or how generic references dispatch to the state-owning implementations. This is the central mechanism behind the question, not an incidental omitted API."
+      },
+      {
+        "priority": "medium",
+        "detail": "The worked group uses text and selection names but no before/after or saved states. Selection-first undo therefore cannot be assessed as a coherent editor restoration. The existing disclaimer appropriately limits the claim, but the concrete-sounding names still invite readers to transfer it to the preceding deletion scenario."
+      },
+      {
+        "priority": "low",
+        "detail": "Desktop fences are not labeled as fences; mobile labels the first one. Upper arrows also lack operation labels. The 822-unit mobile layout postpones the ordering example until after three large prose boxes."
+      }
+    ],
+    "requestedChanges": [
+      "Show Action creation/registration from the text and UI modules into the History list, distinct from History's calls back through the Action interface.",
+      "Connect the list entries to their concrete implementations and identify what History can see versus what remains opaque.",
+      "Either use neutral A1/A2 names for a traversal-only example or provide internally consistent saved states and actions for one real restoration; do not claim selection/text order is universally valid or invalid.",
+      "Label both fences and the invocation directions consistently, compact the role descriptions, and retain the explicit source-typo note and same-mechanism qualification."
+    ],
+    "viewEvidence": {
+      "svgRead": ["/tmp/aposd2e-viz-review-round1/assets/ch06-history-boundary.svg", "/tmp/aposd2e-viz-review-round1/assets/ch06-history-boundary-mobile.svg"],
+      "screenshotsViewed": ["/tmp/aposd2e-reader-qa/gallery-light-014.png", "/tmp/aposd2e-reader-qa/gallery-dark-014.png"],
+      "observations": "All text and sequence markers are readable in both themes. Reverse traversal is visually clear in desktop and mobile. The diagrams show no actual saved values or links from list entries to the responsibility boxes.",
+      "semanticEquivalence": "Both reverse the same example order and preserve the redo/undo correction. Mobile adds an explicit fence label and stronger final extension claim; neither supplies a complete state-restoration example.",
+      "placement": "After docs/ch06.md:151, at section 6.7 end, following the same-mechanism qualification. A revision should not accidentally erase that context."
+    },
+    "limitations": "No editor was executed and no action sequence was validated. The review does not assert that the illustrated order is inherently incorrect; it is underspecified for state restoration. These are design findings, not real reader-learning evidence."
+  },
+  {
+    "id": "ch06-empty-selection",
+    "decision": "keep",
+    "question": "Why does applying the same prefix-plus-suffix rule to [2,2) leave ABCDE unchanged without a separate no-selection branch?",
+    "expectedAnswer": "With equal endpoints, the prefix is AB and the suffix is CDE, so their concatenation reconstructs ABCDE. For [1,4), the same rule concatenates A and E. The simplification removes the selection-existence branch, not all range-validity checks.",
+    "graphicReasoning": "This is the strongest worked visual in the reviewed set. Prefix, removed interior, and suffix occupy actual character spans; the empty case collapses the interior to a boundary rather than replacing it with another verbal category. Readers can perform the concatenation from the colored segments and verify that the same expression handles both cases. It earns a separate role from ch06-range-api: that diagram concerns API generality, while this one demonstrates a representation eliminating a branch.",
+    "sourceEvidence": [
+      {
+        "path": "docs/ch06.md",
+        "lines": "155-159",
+        "evidence": "Explains no-selection state checks and the single-line prefix/suffix deletion construction, with empty selection represented by equal endpoints."
+      },
+      {
+        "path": "/tmp/aposd2e-polish.GHV1eo/original/ch06.md",
+        "lines": "220-227",
+        "anchors": ["OEBPS/part0010.xhtml#p75:b92f21622f", "OEBPS/part0010.xhtml#p76:c3c2a216e8"],
+        "evidence": "Explicitly considers a selection all on one line and requires a correctly designed implementation. The draft visibly preserves the valid-range and single-line scope."
+      }
+    ],
+    "issues": [],
+    "requestedChanges": [],
+    "viewEvidence": {
+      "svgRead": ["/tmp/aposd2e-viz-review-round1/assets/ch06-empty-selection.svg", "/tmp/aposd2e-viz-review-round1/assets/ch06-empty-selection-mobile.svg"],
+      "screenshotsViewed": ["/tmp/aposd2e-reader-qa/gallery-light-015.png", "/tmp/aposd2e-reader-qa/gallery-dark-015.png"],
+      "observations": "Both themes distinguish retained segments, struck-out BCD, and the empty boundary. Textual results make the meaning recoverable without relying only on color. No clipping was apparent.",
+      "semanticEquivalence": "Mobile stacks the comparisons but preserves both segmentations, expressions, outputs, teaching labels, and validation caveat.",
+      "placement": "After docs/ch06.md:161, section 6.8 end, directly following the source's single-line explanation and its brief cross-reference."
+    },
+    "limitations": "This is a verifiable worked example, not empirical evidence that readers learn the concept. It does not validate multiline editing, endpoint handling, or the implementation semantics of the illustrative slicing notation."
+  },
+  {
+    "id": "ch07-dispatch-value",
+    "decision": "revise",
+    "question": "For two calls with different URL classes, what useful decision does the dispatcher make that a pure fixed forwarder does not, even when every method has the same signature?",
+    "expectedAnswer": "The dispatcher selects the appropriate handler using the URL rule, so its added responsibility is choosing the recipient. The pure forwarder makes no such decision. Identical signatures alone do not diagnose pass-through behavior; same-layer implementations can also provide distinct useful functionality.",
+    "graphicReasoning": "The one-edge forwarder versus a conditional two-way branch makes the added selection responsibility visible. In the frozen SVGs, repeating handle(request) at each handler is important: it holds the signature constant while varying behavior. This is distinct from original Figure 7.1, which illustrates removal of pass-through methods rather than a justified repeated interface. The current captures omit those handler signatures, so they no longer visibly establish the intended same-signature comparison.",
+    "sourceEvidence": [
+      {
+        "path": "docs/ch07.md",
+        "lines": "44-64",
+        "evidence": "Distinguishes signature dependence from useful new functionality, then supplies URL dispatch and same-layer driver implementations as counterexamples."
+      },
+      {
+        "path": "/tmp/aposd2e-polish.GHV1eo/original/ch07.md",
+        "lines": "100-128",
+        "anchors": ["OEBPS/part0011.xhtml#p34:0eec2ca984", "OEBPS/part0011.xhtml#p40:76d55e43e9", "OEBPS/part0011.xhtml#p42:2ea1eb54ca", "OEBPS/part0011.xhtml#p43:96ba0ef9b8"],
+        "evidence": "Supports dispatch as functionality and notes that actual URL rule selection may be intricate. The draft appropriately marks handle(request) and /static/* as simplified teaching notation."
+      },
+      {
+        "path": "docs/figures/00015.jpeg",
+        "evidence": "Original Figure 7.1 was inspected as a raster and in gallery-light-064.png with its caption at docs/ch07.md:52. It gives restructuring alternatives, not the dispatcher counterexample."
+      }
+    ],
+    "issues": [
+      {
+        "priority": "high",
+        "detail": "Evidence mismatch affecting the central teaching claim: the frozen desktop SVG contains downstream handle(request) text at y=387 and mobile at y=620, but both supplied light/dark captures omit these signatures. A reader of the captured version cannot visually verify that the dispatcher and handlers share the interface. This is not proof of a defect in the frozen SVG."
+      },
+      {
+        "priority": "medium",
+        "detail": "The title asks about equal signatures, but the alternatives are preclassified as pure forwarding and dispatch. Two small sample inputs and their selected destinations would give the reader a more concrete comparison than accepting the labels."
+      }
+    ],
+    "requestedChanges": [
+      "Keep the branching comparison and ensure every downstream handler's identical signature remains visible in both layouts.",
+      "Provide new gallery captures tied to the exact reviewed asset version before accepting the design; do not certify the current screenshots as round1 SVG renderings.",
+      "Add two clearly invented URL inputs that select different branches, while the pure forwarder retains the same target.",
+      "Retain the simplified-routing label and same-layer counterexample; do not turn a fixed target alone into a universal test for uselessness."
+    ],
+    "viewEvidence": {
+      "svgRead": ["/tmp/aposd2e-viz-review-round1/assets/ch07-dispatch-value.svg", "/tmp/aposd2e-viz-review-round1/assets/ch07-dispatch-value-mobile.svg"],
+      "screenshotsViewed": ["/tmp/aposd2e-reader-qa/gallery-light-016.png", "/tmp/aposd2e-reader-qa/gallery-dark-016.png", "/tmp/aposd2e-reader-qa/gallery-light-064.png"],
+      "observations": "Visible labels and branches are readable in both themes. Handler names are visible but their repeated signatures are absent in the supplied captures despite being present in both frozen SVG sources.",
+      "semanticEquivalence": "Frozen desktop/mobile preserve the same call/branch logic and repeated signatures. The captured pair agrees with itself but omits evidence essential to the frozen design's claim.",
+      "placement": "After docs/ch07.md:64, section 7.2 end. Appropriate location beside the explicit exception to the pass-through warning."
+    },
+    "limitations": "High priority is a source-to-view verification gap, not a diagnosed rendering-engine bug. No matching replacement capture or live application test was produced. Explanatory value remains a reviewer judgment, not measured learning."
+  },
+  {
+    "id": "ch07-line-boundary",
+    "decision": "revise",
+    "question": "Deleting cd, the newline, and ef from ABcd/efGH yields ABGH. Which layer should perform the line extraction and joining, and what information should cross its interface?",
+    "expectedAnswer": "UI code should specify the character-range endpoints. The text module can retain line-based storage internally and perform the extraction, joining, and replacement. The UI need not reproduce storage operations at each call site.",
+    "graphicReasoning": "The two-line to one-line transformation adds a concrete case beyond the prose, but most of the design comparison remains two boxes containing almost the same step list. The selection endpoints and newline are not represented explicitly, so the API parameters are not connected to the actual edit. The dashed red path and red letters suggest the affected range, but readers must use explanatory text to identify the newline and retained fragments.",
+    "sourceEvidence": [
+      {
+        "path": "docs/ch07.md",
+        "lines": "85-87",
+        "evidence": "Explains the duplicated UI splitting/joining imposed by getLine/putLine and the value of a character-oriented interface over line-oriented storage."
+      },
+      {
+        "path": "/tmp/aposd2e-polish.GHV1eo/original/ch07.md",
+        "lines": "160-164",
+        "anchors": ["OEBPS/part0011.xhtml#p54:fb13061723", "OEBPS/part0011.xhtml#p55:bbef5efd83"],
+        "evidence": "Supports arbitrary-position insertion/deletion and keeping line representation internal. ABcd, efGH, and ABGH are appropriately labeled teaching inventions."
+      }
+    ],
+    "issues": [
+      {
+        "priority": "medium",
+        "detail": "start/end are never located on the example. The figure therefore does not connect the range interface to the concrete cross-line edit it promises to explain."
+      },
+      {
+        "priority": "medium",
+        "detail": "The dashed red shape between lines has no explicit legend or newline token. Removal is primarily encoded by letter color, unlike ch06-empty-selection's independently inspectable segments and strikeout."
+      },
+      {
+        "priority": "medium",
+        "detail": "The boundary comparison lists storage operations in two boxes without depicting the line storage or multiple UI call sites. It says the implementation remains line-oriented but does not show that invariance."
+      }
+    ],
+    "requestedChanges": [
+      "Mark start and end in character gaps and show the removed newline explicitly; distinguish retained AB and GH without relying only on color.",
+      "Show the line-storage rows before and after and keep them on the text-module side in both designs.",
+      "Draw what crosses the UI/text boundary: repeated getLine/putLine-level work before versus one range request after. Keep operation count illustrative rather than claiming a complete API algorithm.",
+      "Preserve the worked example because it differs from ch06's single-line/API-generalization tasks, but replace the duplicated prose boxes with a trace."
+    ],
+    "viewEvidence": {
+      "svgRead": ["/tmp/aposd2e-viz-review-round1/assets/ch07-line-boundary.svg", "/tmp/aposd2e-viz-review-round1/assets/ch07-line-boundary-mobile.svg"],
+      "screenshotsViewed": ["/tmp/aposd2e-reader-qa/gallery-light-017.png", "/tmp/aposd2e-reader-qa/gallery-dark-017.png"],
+      "observations": "Both themes are readable; ABGH is clear. The red dashed path is visible but requires prose to interpret. There are no visible start/end markers or newline token.",
+      "semanticEquivalence": "Both preserve the same edit and ownership claims. Mobile explicitly enumerates cd/newline/ef; desktop relies on its subtitle and color treatment. Neither places endpoints.",
+      "placement": "After docs/ch07.md:87, section 7.4 end, directly beside the representation-versus-interface explanation."
+    },
+    "limitations": "This is not a complete multiline editor algorithm. The review does not infer any particular getLine/putLine contract beyond the source. No user testing measured whether the dashed range is understood correctly."
+  },
+  {
+    "id": "ch07-context-instances",
+    "decision": "revise",
+    "question": "After instance A writes cert-A and instance B writes cert-B in the same process, what can A read from a shared global slot versus its own Context?",
+    "expectedAnswer": "A shared last-written slot can expose cert-B to A. With distinct Context objects and correctly associated network objects, A reads cert-A and B reads cert-B. Context references still have to be provided, here during construction, and hidden dependencies or shared mutable state do not automatically disappear.",
+    "graphicReasoning": "One convergent storage target versus two disjoint context paths supplies useful isolation geometry. It adds a two-instance test case absent from original Figure 7.2's single-instance alternatives. However, the top desktop panel does not order the writes or show the final read; the incorrect value is asserted in text. The lower paths show constructor-reference delivery but not stored reference ownership or a subsequent read. A matched write/write/read trace would let readers derive the conflict and its absence.",
+    "sourceEvidence": [
+      {
+        "path": "docs/ch07.md",
+        "lines": "95-109",
+        "evidence": "Contrasts a shared object, process-global state, and per-instance Context; describes constructor propagation and explicitly warns of hidden dependencies and thread-safety issues."
+      },
+      {
+        "path": "/tmp/aposd2e-polish.GHV1eo/original/ch07.md",
+        "lines": "175-194",
+        "anchors": ["OEBPS/part0011.xhtml#p60:33b6affaf2", "OEBPS/part0011.xhtml#p61:c2dc1be9e0", "OEBPS/part0011.xhtml#p63:2c82872bba", "OEBPS/part0011.xhtml#p65:e9a745736f"],
+        "evidence": "Supports independent contexts within one process and explains why context itself can become a pass-through variable. The read-only use, instance names, and certificate values are explicitly bounded teaching choices in the draft."
+      },
+      {
+        "path": "docs/figures/00016.gif",
+        "evidence": "Original Figure 7.2 was inspected as a raster and in gallery-light-064.png with its caption at docs/ch07.md:103. It compares four storage/propagation techniques, but does not work through a two-instance interference case."
+      }
+    ],
+    "issues": [
+      {
+        "priority": "medium",
+        "detail": "Desktop's two writes are simultaneous-looking inward arrows with no order and no resulting slot value. Mobile explicitly orders A then B and displays globalCert=cert-B, so it provides stronger evidence for the named wrong-value outcome."
+      },
+      {
+        "priority": "medium",
+        "detail": "Constructor delivery arrows point from Context toward a textual network-object description. Without a distinct stored-reference/read relation, they can be mistaken for data flow or the Context constructing its consumer."
+      },
+      {
+        "priority": "low",
+        "detail": "The green/blue isolated cases declare that each object only reads its own context but do not draw or test the association. The read-only qualifier and mutable-state warning are present and should not be lost in a cleaner layout."
+      }
+    ],
+    "requestedChanges": [
+      "Use the same numbered sequence in both layouts: A writes, B writes, then A reads. Show the final values for shared-global and per-instance cases.",
+      "Give each network object a visible stored Context reference; distinguish construction-time provision from runtime lookup.",
+      "Keep the one-process/two-distinct-context assumption explicit and avoid implying that the Context type alone guarantees isolation.",
+      "Preserve the limitations about nonautomatic immutability, hidden dependencies, and shared-state risk."
+    ],
+    "viewEvidence": {
+      "svgRead": ["/tmp/aposd2e-viz-review-round1/assets/ch07-context-instances.svg", "/tmp/aposd2e-viz-review-round1/assets/ch07-context-instances-mobile.svg"],
+      "screenshotsViewed": ["/tmp/aposd2e-reader-qa/gallery-light-018.png", "/tmp/aposd2e-reader-qa/gallery-dark-018.png", "/tmp/aposd2e-reader-qa/gallery-light-064.png"],
+      "observations": "Text, single-slot convergence, and separate contexts are readable in both themes. The smallest read-only caveat remains legible at the supplied gallery size.",
+      "semanticEquivalence": "The intended isolation conclusion agrees. Mobile adds explicit write order and final global value that desktop leaves unspecified; both preserve construction-time provision and risk qualifications.",
+      "placement": "After docs/ch07.md:109, following the source's Context caveats at section 7.5 end. Good placement for a bounded two-instance check."
+    },
+    "limitations": "No concurrent program, certificate handling, or dependency-injection implementation was tested. A sequential example would suffice to show interference; no race-condition claim is needed. Learning benefits remain unmeasured."
+  }
+]

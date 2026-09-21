@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 694" role="img" aria-labelledby="ch06-range-api-m-title ch06-range-api-m-desc">
+  <title id="ch06-range-api-m-title">三个删除动作，一种文本机制</title>
+  <desc id="ch06-range-api-m-desc">教学文本 ABCDE 的光标在 C、D 之间，位置为 3。三条独立演算：退格 [2,3) 得 ABDE；Delete [3,4) 得 ABCE；删除选区 [1,4) 得 AE。UI 决定范围，文本类统一执行。</desc>
+  <rect width="360" height="694" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="16" y="32" font-size="19" font-weight="600">三个删除动作，一种文本机制</text>
+    <text x="16" y="59" font-size="14" fill="var(--diagram-muted,#5c645d)">教学示例：位置在字符之间的间隙</text>
+    <rect x="40" y="109" width="280" height="48" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-line,#aebbad)"/>
+    <path d="M96 109V157M152 109V157M264 109V157" stroke="var(--diagram-line,#aebbad)"/>
+    <g font-family="ui-monospace,monospace" font-size="20" text-anchor="middle"><text x="68" y="140">A</text><text x="124" y="140">B</text><text x="180" y="140">C</text><text x="236" y="140">D</text><text x="292" y="140">E</text></g>
+    <g font-size="13" text-anchor="middle"><text x="40" y="96">0</text><text x="96" y="96">1</text><text x="152" y="96">2</text><text x="208" y="96">3</text><text x="264" y="96">4</text><text x="320" y="96">5</text></g>
+    <path d="M208 106V166" stroke="var(--diagram-danger,#a03946)" stroke-width="3"/>
+    <text x="162" y="191" font-size="14">光标在 3</text>
+    <path d="M16 210H344M16 317H344M16 424H344M16 531H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="240" font-weight="600">退格：UI 决定删除左侧字符</text>
+    <text x="16" y="273">[2, 3) → 删除 C → ABDE</text><text x="16" y="298" font-size="14" fill="var(--diagram-muted,#5c645d)">起点是光标之前的位置</text>
+    <text x="16" y="347" font-weight="600">Delete：UI 决定删除右侧字符</text>
+    <text x="16" y="380">[3, 4) → 删除 D → ABCE</text><text x="16" y="405" font-size="14" fill="var(--diagram-muted,#5c645d)">终点是光标之后的位置</text>
+    <text x="16" y="454" font-weight="600">删除选区：UI 提供两端位置</text>
+    <text x="16" y="487">[1, 4) → 删除 BCD → AE</text><text x="16" y="512" font-size="14" fill="var(--diagram-muted,#5c645d)">文本类无需知道 Selection 类型</text>
+    <rect x="16" y="550" width="328" height="78" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="32" y="578" font-family="ui-monospace,monospace">delete(start, end)</text><text x="32" y="607">同一机制：含起点，不含终点</text>
+    <text x="16" y="658" font-size="13" fill="var(--diagram-muted,#5c645d)">三条演算均从原始文本开始，不依次执行。</text>
+    <text x="16" y="679" font-size="13" fill="var(--diagram-muted,#5c645d)">数字位置只是示意，不规定 Position 实现。</text>
+  </g>
+</svg>

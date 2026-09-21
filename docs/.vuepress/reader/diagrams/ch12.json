@@ -1,0 +1,67 @@
+[
+  {
+    "id": "ch12-missing-contract",
+    "chapter": "ch12",
+    "title": "声明留下了哪些互不相容的解释？",
+    "question": "看到 start 和 end，能确定返回哪些字符吗？",
+    "answer": "不能。声明没有说明终点是否包含，也没有说明反向范围的结果；接口注释必须补齐这些选择。",
+    "summary": "教学例采用不含终点、反向范围返回空的契约，仅为演示注释补充信息，不代表所有 substring 接口。",
+    "alt": "教学字符串ABCD的索引从0开始。同一个slice(start,end)声明对BC和BCD两个结果都未排除。加入终点不包含的注释后，start为1、end为3的示例只保留BC，反向范围行为也由注释明确。",
+    "kind": "ambiguity-elimination",
+    "desktop": "/diagrams/ch12-missing-contract.svg",
+    "mobile": "/diagrams/ch12-missing-contract-mobile.svg",
+    "anchor": {
+      "section": "12.1",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "12.1",
+        "epub": "OEBPS/part0016.xhtml#p15:7f3e8bf262",
+        "reason": "声明不能确定终点包含性和start>end时行为；注释补全简化视图。slice、ABCD、索引与选定契约是教学自拟，而非作者指定的唯一语义。"
+      },
+      {
+        "section": "12.1",
+        "epub": "OEBPS/part0016.xhtml#p14:6e7f5d7f88",
+        "reason": "强迫调用者读实现来推导契约既费力，也暴露本该隐藏的复杂性。"
+      }
+    ],
+    "review": {
+      "source": "review/reader/diagram-review-08-14-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    },
+    "status": "content-reviewed",
+    "reviewHistory": [
+      {
+        "source": "earlier-local-review",
+        "recordedStatus": "independently-reviewed",
+        "decision": "revise",
+        "resolution": "已补充与字符对齐的0至3索引，并明确教学例从0开始。",
+        "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance.",
+        "snapshotDesktop": "/tmp/aposd2e-viz-review-round1/assets/ch12-missing-contract.svg",
+        "snapshotMobile": "/tmp/aposd2e-viz-review-round1/assets/ch12-missing-contract-mobile.svg"
+      },
+      {
+        "source": "review/reader/diagram-review-08-14.json",
+        "decision": "keep",
+        "stage": "MAIN-first-pass",
+        "implementation": "kept",
+        "secondReview": "pending",
+        "accepted": false,
+        "resolution": "保留MAIN的keep决定，不重画现有SVG；保留与报告兼容的后续有效修正。 更新当前权威与状态，保留此前本地审阅历史但不将其解释为MAIN或最终二审认可。",
+        "authority": "Historical implementation record, superseded by independent follow-up."
+      }
+    ],
+    "titleTw": "宣告留下了哪些互不相容的解釋？",
+    "questionTw": "看到 start 和 end，能確定回傳哪些字元嗎？",
+    "answerTw": "不能。宣告沒有說明終點是否包含，也沒有說明反向範圍的結果；介面註解必須補齊這些選擇。",
+    "summaryTw": "教學例採用不含終點、反向範圍回傳空的契約，僅為演示註解補充資訊，不代表所有 substring 介面。",
+    "altTw": "教學字串ABCD的索引從0開始。同一個slice(start,end)宣告對BC和BCD兩個結果都未排除。加入終點不包含的註解後，start為1、end為3的範例只保留BC，反向範圍行為也由註解明確。",
+    "desktopTw": "/diagrams/ch12-missing-contract-tw.svg",
+    "mobileTw": "/diagrams/ch12-missing-contract-mobile-tw.svg"
+  }
+]

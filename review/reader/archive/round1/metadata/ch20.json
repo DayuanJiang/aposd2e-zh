@@ -1,0 +1,59 @@
+[
+  {
+    "id": "ch20-measurement-loop",
+    "chapter": "ch20",
+    "title": "优化需要两种测量证据",
+    "question": "知道系统很慢，为什么还不能决定改哪里、保留什么？",
+    "answer": "整体测量建立基线，深入测量找出具体热点；修改后再与基线比较。无可测提升就撤销额外复杂性，除非修改本身使设计更简单。",
+    "summary": "一条测量路径定位原因，另一条保留基线作前后比较。没有绘制虚构耗时、加速比或收益曲线。",
+    "alt": "当前系统测量分为保存基线和深入定位热点；热点驱动修改与复测，复测与基线汇合后决定保留、撤销，或因设计更简单而保留。",
+    "kind": "measurement-decision",
+    "desktop": "/diagrams/ch20-measurement-loop.svg",
+    "mobile": "/diagrams/ch20-measurement-loop-mobile.svg",
+    "anchor": { "section": "20.2", "placement": "end" },
+    "sources": [
+      { "section": "20.2", "epub": "OEBPS/part0024.xhtml#p18:c6ab138c52", "reason": "性能直觉不可靠，凭猜测修改可能无效并增加复杂性。" },
+      { "section": "20.2", "epub": "OEBPS/part0024.xhtml#p19:446ae2e29f", "reason": "测量同时承担热点定位和基线比较；无可测差异时撤销，设计更简单除外。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch20-critical-path",
+    "chapter": "ch20",
+    "title": "让特殊情况离开常见路径",
+    "question": "围绕关键路径重构，改变的是哪种控制流关系？",
+    "answer": "在已证实的热点且找不到根本性改进时，先设想常见情况的最少工作，再设计尽量接近它的结构；理想情况下用入口检查把特殊情况分流。",
+    "summary": "教学示意用 A/B 表示常见路径上的必要工作，不对应 Buffer 的具体语句。入口一次分流是理想目标，不是所有代码都能达到的保证。",
+    "alt": "原结构在工作 A 与工作 B 前后分别检查特殊情况，正常路径也经过所有检查；目标结构在入口分流，常见路径连续执行 A、B，特殊处理位于旁路。",
+    "kind": "control-flow-comparison",
+    "desktop": "/diagrams/ch20-critical-path.svg",
+    "mobile": "/diagrams/ch20-critical-path-mobile.svg",
+    "anchor": { "section": "20.3", "placement": "end" },
+    "sources": [
+      { "section": "20.3", "epub": "OEBPS/part0024.xhtml#p21:4350d6c75f", "reason": "热点先考虑缓存、算法等根本性改进。" },
+      { "section": "20.3", "epub": "OEBPS/part0024.xhtml#p22:647f2b8efd", "reason": "没有根本性方案时，围绕关键路径重设计是最后手段。" },
+      { "section": "20.3", "epub": "OEBPS/part0024.xhtml#p24:424ff1d266", "reason": "追求接近理想路径但保留整洁抽象，而非要求完全消除调用。" },
+      { "section": "20.3", "epub": "OEBPS/part0024.xhtml#p25:87ac06fb38", "reason": "入口尽量一次识别特殊情况并分流；A/B 与检查位置为教学示意。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch20-state-compression",
+    "chapter": "ch20",
+    "title": "一个状态值如何合并多个判断？",
+    "question": "availableAppendBytes 为什么能让 Buffer 的常见追加只做一次检查？",
+    "answer": "无块、末块非内部块、或没有可用空间时，该值都为零；否则记录末块紧邻的可用字节数。请求大小只需与这个值比较。",
+    "summary": "画的是状态含义到控制流的映射，不复刻原书内存布局或代码图。图示针对正大小请求；numBytes 为零的边界不在此图推论范围内。",
+    "alt": "无块、末块外部、无紧邻空间三种状态汇入 availableAppendBytes 等于零；内部末块有空间则映射为可用字节数。正大小请求与该值比较，足够则扩展末块并更新计数，否则转特殊处理。",
+    "kind": "state-to-branch",
+    "desktop": "/diagrams/ch20-state-compression.svg",
+    "mobile": "/diagrams/ch20-state-compression-mobile.svg",
+    "anchor": { "section": "20.4", "placement": "end" },
+    "sources": [
+      { "section": "20.4", "epub": "OEBPS/part0024.xhtml#p33:c8ebdef682", "reason": "扩展末块要求其为内部块且空间足够。" },
+      { "section": "20.4", "epub": "OEBPS/part0024.xhtml#p39:f0c54a3c47", "reason": "availableAppendBytes 编码三种特殊状态，使单次检查排除它们；正大小限定为图解避免零字节歧义的范围说明。" },
+      { "section": "20.4", "epub": "OEBPS/part0024.xhtml#p40:b241e41328", "reason": "追加时维护总长度，为另一个常见读取路径节约重复计算；不增加数值性能宣称。" }
+    ],
+    "status": "awaiting-independent-review"
+  }
+]

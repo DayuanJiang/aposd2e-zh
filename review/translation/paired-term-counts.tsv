@@ -1,0 +1,82 @@
+english	en_count	en_files	en_forms	zh_count	zh_files	zh_variants
+complexity	83	20	"{""complexity"": 79, ""Complexity"": 4}"	83	20	"{""复杂性"": 83}"
+dependency	7	5	"{""dependencies"": 7}"	6	4	"{""依赖性"": 4, ""依赖关系"": 2}"
+obscurity	6	4	"{""obscurities"": 1, ""obscurity"": 3, ""Obscurity"": 2}"	6	4	"{""模糊性"": 6}"
+change amplification	1	1	"{""change amplification"": 1}"	1	1	"{""变更放大"": 1}"
+cognitive load	5	3	"{""cognitive load"": 5}"	5	3	"{""认知负荷"": 5}"
+unknown unknowns	2	2	"{""unknown unknowns"": 2}"	2	2	"{""未知的未知"": 2}"
+modular design	3	2	"{""modular design"": 3}"	3	2	"{""模块化设计"": 3}"
+abstraction	20	8	"{""abstraction"": 12, ""Abstractions"": 1, ""abstractions"": 7}"	23	10	"{""抽象"": 23}"
+deep module/class	5	3	"{""deep modules"": 3, ""deeper classes"": 2}"	4	2	"{""深模块"": 3, ""更深的类"": 1}"
+shallow module/class	3	3	"{""shallow modules"": 1, ""Shallow classes"": 1, ""Shallow Module"": 1}"	3	3	"{""浅模块"": 2, ""浅的类"": 1}"
+information hiding	6	4	"{""Information hiding"": 1, ""information hiding"": 5}"	6	4	"{""信息隐藏"": 6}"
+information leakage	5	4	"{""information leakage"": 4, ""Information Leakage"": 1}"	5	4	"{""信息泄露"": 5}"
+general-purpose	55	4	"{""general-purpose"": 54, ""General-purpose"": 1}"	69	8	"{""通用"": 68, ""通用用途"": 1}"
+special-purpose	27	2	"{""special-purpose"": 27}"	63	3	"{""专用"": 59, ""专门"": 3, ""特殊用途"": 1}"
+specialization	15	1	"{""specialization"": 12, ""over-specialization"": 1, ""Specialization"": 2}"	10	1	"{""专用化"": 9, ""专业化"": 1}"
+generality	2	1	"{""generality"": 2}"	3	1	"{""通用化"": 3}"
+special case	16	5	"{""special cases"": 8, ""Special cases"": 2, ""special case"": 2, ""special-case"": 4}"	17	5	"{""特殊情况"": 17}"
+edge case/condition	2	1	"{""edge cases"": 1, ""edge conditions"": 1}"	2	1	"{""边界情况"": 2}"
+interface	89	12	"{""interfaces"": 7, ""interface"": 80, ""Interfaces"": 1, ""Interface"": 1}"	66	12	"{""接口"": 66}"
+implementation	30	11	"{""implementation"": 26, ""implementations"": 2, ""Implementation"": 2}"	82	16	"{""实现"": 82}"
+method	80	12	"{""methods"": 39, ""method"": 38, ""Methods"": 2, ""Method"": 1}"	165	20	"{""方法"": 165}"
+function	25	5	"{""functions"": 17, ""function"": 8}"	74	16	"{""函数"": 22, ""功能"": 52}"
+bug	10	9	"{""bugs"": 10}"	10	9	"{""缺陷"": 5, ""代码缺陷"": 5}"
+error	8	7	"{""errors"": 5, ""error"": 3}"	22	12	"{""错误"": 22}"
+exception	13	5	"{""exceptions"": 8, ""exception"": 4, ""Exception"": 1}"	17	4	"{""异常"": 17}"
+exception handling	2	1	"{""Exception handling"": 1, ""exception handling"": 1}"	2	1	"{""异常处理"": 2}"
+mask exceptions	1	1	"{""mask them"": 1}"	0	0	{}
+exception aggregation	1	1	"{""aggregate several special-case handlers"": 1}"	0	0	{}
+handler	4	2	"{""handlers"": 3, ""handler"": 1}"	4	2	"{""处理程序"": 4}"
+pass-through	3	2	"{""pass-through"": 2, ""Pass-Through"": 1}"	3	2	"{""透传"": 3}"
+temporal decomposition	2	2	"{""temporal decomposition"": 1, ""Temporal Decomposition"": 1}"	2	2	"{""时间顺序分解"": 1, ""时间分解"": 1}"
+conjoined methods/functions	2	2	"{""conjoined functions"": 1, ""Conjoined Methods"": 1}"	2	2	"{""连体函数"": 1, ""连体方法"": 1}"
+red flag	14	7	"{""red flags"": 8, ""red flag"": 6}"	16	7	"{""危险信号"": 16}"
+obvious	40	9	"{""obvious"": 36, ""Obvious"": 2, ""obviousness"": 2}"	34	12	"{""易理解"": 23, ""明显"": 7, ""易于理解"": 2, ""显而易见"": 2}"
+comments not obvious from code	4	2	"{""things that aren’t obvious from the code"": 3, ""things that are not obvious from the code"": 1}"	3	2	"{""代码中难以理解的内容"": 3}"
+interface documentation	4	4	"{""interface comment"": 2, ""interface documentation"": 2}"	4	4	"{""接口注释"": 2, ""接口文档"": 2}"
+implementation documentation	2	2	"{""implementation documentation"": 1, ""Implementation Documentation"": 1}"	2	2	"{""实现文档"": 2}"
+self-documenting	1	1	"{""self-documenting"": 1}"	1	1	"{""自解释"": 1}"
+consistency	6	1	"{""Consistency"": 5, ""consistency"": 1}"	6	1	"{""一致性"": 6}"
+invariant	2	1	"{""invariant"": 2}"	2	1	"{""不变量"": 2}"
+leverage	5	3	"{""cognitive leverage"": 1, ""leverage"": 3, ""leverage point"": 1}"	4	2	"{""认知杠杆"": 1, ""杠杆点"": 2, ""杠杆"": 1}"
+selection	30	2	"{""selection"": 29, ""Selection"": 1}"	11	2	"{""选择的区域"": 1, ""区域选择"": 6, ""所选内容"": 4}"
+undo/redo	45	1	"{""undo"": 29, ""redo"": 14, ""undos"": 1, ""redos"": 1}"	51	1	"{""撤销"": 7, ""重做"": 14, ""撤消"": 30}"
+line-oriented	4	1	"{""line-oriented"": 4}"	4	1	"{""面向行"": 4}"
+character-oriented	4	1	"{""character-oriented"": 4}"	5	1	"{""面向字符"": 5}"
+string-oriented	1	1	"{""string-oriented"": 1}"	1	1	"{""面向字符串"": 1}"
+range-oriented	1	1	"{""range-oriented"": 1}"	1	1	"{""面向范围"": 1}"
+gap buffer	1	1	"{""gap buffer"": 1}"	1	1	"{""间隙缓冲区"": 1}"
+configuration parameter	3	2	"{""configuration parameters"": 2, ""configuration parameter"": 1}"	3	2	"{""配置参数"": 3}"
+critical path	2	2	"{""critical paths"": 1, ""performance-critical path"": 1}"	2	2	"{""关键路径"": 1, ""性能关键路径"": 1}"
+current term	1	1	"{""current term"": 1}"	1	1	"{""当前项"": 1}"
+strategic comments	1	1	"{""strategic comments"": 1}"	1	1	"{""战略式注释"": 1}"
+design it twice	8	3	"{""design it twice"": 2, ""design-it-twice"": 3, ""Designing it twice"": 1, ""designing it twice"": 1, ""Design it twice"": 1}"	8	3	"{""设计两次"": 7, ""两次设计"": 1}"
+define errors out of existence	5	5	"{""Define errors out of existence"": 2, ""define errors out of existence"": 1, ""redefining semantics to eliminate error conditions"": 1, ""defining errors out of existence"": 1}"	5	5	"{""通过定义来规避错误"": 4, ""重新定义语义以消除错误条件"": 1}"
+clean design	3	2	"{""clean designs"": 1, ""clean design"": 2}"	2	2	"{""整洁的设计"": 1, ""简洁的设计"": 1}"
+Clean Code	3	2	"{""Clean Code"": 3}"	3	2	"{""整洁代码之道"": 2, ""代码整洁之道"": 1}"
+code review	5	4	"{""code reviews"": 5}"	5	4	"{""代码审查"": 5}"
+unit test	1	1	"{""unit testing"": 1}"	1	1	"{""单元测试"": 1}"
+test-driven development	0	0	{}	0	0	{}
+design pattern	1	1	"{""design patterns"": 1}"	1	1	"{""设计模式"": 1}"
+agile development	2	2	"{""agile development"": 2}"	2	2	"{""敏捷开发"": 2}"
+parameter/argument	12	5	"{""argument"": 3, ""arguments"": 4, ""parameters"": 4, ""parameter"": 1}"	12	5	"{""参数"": 12}"
+GUI/text editor	7	3	"{""GUI"": 2, ""GUI text editor"": 2, ""text editor"": 3}"	9	3	"{""图像界面"": 2, ""图形界面"": 2, ""文本编辑器"": 5}"
+dispatcher	0	0	{}	0	0	{}
+technical debt	0	0	{}	0	0	{}
+strategic/tactical programming	5	1	"{""strategic approach"": 3, ""tactical approach"": 2}"	2	1	"{""战略式方法"": 1, ""战术式方法"": 1}"
+common case	1	1	"{""common-case"": 1}"	0	0	{}
+normal case	2	2	"{""normal case"": 1, ""normal cases"": 1}"	2	2	"{""正常情况"": 2}"
+centrality	1	1	"{""centrality"": 1}"	1	1	"{""中心化"": 1}"
+by a factor of 2	1	1	"{""by a factor of 2"": 1}"	1	1	"{""提高两倍"": 1}"
+single instance	1	1	"{""single instance"": 1}"	1	1	"{""单例代码"": 1}"
+allocation	0	0	{}	0	0	{}
+internal representation	0	0	{}	0	0	{}
+partial information hiding	0	0	{}	0	0	{}
+classitis	0	0	{}	0	0	{}
+secondary exceptions	0	0	{}	0	0	{}
+instrumentation	0	0	{}	0	0	{}
+factoring	0	0	{}	7	5	"{""提取"": 4, ""拆分"": 3}"
+common name	0	0	{}	0	0	{}
+interface inheritance	0	0	{}	0	0	{}
+implementation inheritance	0	0	{}	0	0	{}

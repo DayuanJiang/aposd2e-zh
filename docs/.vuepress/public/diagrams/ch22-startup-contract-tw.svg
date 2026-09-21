@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 664" role="img" aria-labelledby="c22-title c22-desc">
+  <title id="c22-title">介面更短，讀者就更容易用對嗎？</title>
+  <desc id="c22-desc">譯者自擬的兩個獨立演示。Indexer(config) 儲存呼叫方提供的設定物件引用，起點均為 config.root 為空。要求先設定再讀取，讀取期間不再改設定。A 是違反要求的一種可能順序：建構函式啟動執行緒，執行緒先讀到空 root，呼叫方隨後才設為 /docs。B 先設定，再呼叫 start，執行緒讀到 /docs，圖示讀取期間未改設定。B 增加一次呼叫及順序義務，並非普遍更優。另一種可能設計是先設定好獨立的 config，再傳給會啟動執行緒的建構函式。</desc>
+  <defs><marker id="c22-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="680" height="664" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="20" font-weight="600">介面更短，讀者就更容易用對嗎？</text>
+    <text x="24" y="63" font-size="14">自擬例：Indexer(config) 儲存呼叫方提供的設定物件引用。</text>
+    <text x="24" y="87" font-size="13">要求：先完成設定再讀取；讀取期間不再改設定。</text>
+    <text x="24" y="110" font-size="13" fill="var(--diagram-muted,#5c645d)">兩個方案分別演示，起點均為 config.root 為空。</text>
+    <g transform="translate(0,24)">
+    <path d="M24 110H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="24" y="140" font-size="17" font-weight="600">A　隱式啟動：一種違反要求的執行順序</text>
+    <path d="M62 190H620" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="1.5" marker-end="url(#c22-arrow)" />
+    <g fill="var(--diagram-secondary,#2c6096)"><circle cx="92" cy="190" r="5" /><circle cx="560" cy="190" r="5" /></g>
+    <circle cx="326" cy="190" r="5" fill="var(--diagram-danger,#a03946)" />
+    <text x="48" y="174" font-size="14">構造 Indexer(config)</text>
+    <text x="246" y="174" font-size="14">工作執行緒讀取 root</text>
+    <text x="488" y="174" font-size="14">呼叫方完成設定</text>
+    <text x="48" y="221" font-size="14">內部啟動執行緒</text>
+    <rect x="260" y="207" width="140" height="48" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" />
+    <text x="278" y="237" font-size="16" font-family="ui-monospace,Menlo,monospace">root = ""</text>
+    <text x="486" y="226" font-size="14" font-family="ui-monospace,Menlo,monospace">root = "/docs"</text>
+    <text x="24" y="280" font-size="14" fill="var(--diagram-muted,#5c645d)">介面沒提示啟動時機，讀者可能把“設定來得及”當成未說明的前提。</text>
+    <path d="M24 305H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="24" y="335" font-size="17" font-weight="600">B　顯式啟動：一種滿足要求的執行順序</text>
+    <path d="M52 390H626" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="1.5" marker-end="url(#c22-arrow)" />
+    <g fill="var(--diagram-secondary,#2c6096)"><circle cx="74" cy="390" r="5" /><circle cx="242" cy="390" r="5" /><circle cx="400" cy="390" r="5" /></g>
+    <circle cx="578" cy="390" r="5" fill="var(--diagram-primary,#0b6f5d)" />
+    <g font-size="14">
+      <text x="40" y="373">構造物件</text><text x="192" y="373">完成設定</text>
+      <text x="366" y="373" font-family="ui-monospace,Menlo,monospace">start()</text>
+      <text x="520" y="373">執行緒讀取</text>
+      <text x="40" y="423">尚未啟動</text>
+      <text x="174" y="423" font-family="ui-monospace,Menlo,monospace">root = "/docs"</text>
+      <text x="360" y="423">現在才啟動</text>
+    </g>
+    <rect x="512" y="405" width="144" height="48" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="526" y="435" font-size="16" font-family="ui-monospace,Menlo,monospace">"/docs"</text>
+    <text x="24" y="481" font-size="14">代價：多一個 start 呼叫，且呼叫者仍須遵守“先設定”的契約。</text>
+    <path d="M24 504H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="24" y="534" font-size="16" font-weight="600">本例需要顯露的是啟動時機，不是所有執行緒實作細節。</text>
+    <text x="24" y="562" font-size="13" fill="var(--diagram-muted,#5c645d)">這不是“建構函式不得啟動執行緒”的規則：</text>
+    <text x="24" y="585" font-size="13" fill="var(--diagram-muted,#5c645d)">也可先設好 config.root，再把 config 傳給啟動型建構函式。</text>
+    <text x="24" y="616" font-size="13" fill="var(--diagram-muted,#5c645d)">箭頭僅表示所列順序，不是實測時間；不能只按介面數量判定設計好壞。</text>
+    </g>
+  </g>
+</svg>

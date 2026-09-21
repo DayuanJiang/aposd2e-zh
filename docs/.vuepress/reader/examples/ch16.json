@@ -1,0 +1,20 @@
+[
+  {
+    "id": "ch16-f1",
+    "sourceHash": "8e036b686717161de9176d25f4afcbfb233a7bfa26a5f3cd34f7ac20ceb553eb",
+    "python": "#  We proceed in three phases:\n#  Phase 1: Find feasible candidates\n#  Phase 2: Assign each candidate a score\n#  Phase 3: Choose the best, and remove it\n",
+    "note": "这是方法开头概述整体策略的注释，不是把所有实现细节堆在开头的反例；各阶段的细节仍应紧靠相关代码。原片段只有通用注释语法，语言标签沿用 Java 围栏。",
+    "noteEn": "This is a high-level strategy comment at the start of a method, not an example of crowding all implementation details there. Phase-specific details belong beside their code. The source contains only language-neutral comments, so its Java fence label is retained.",
+    "originalLanguage": "java",
+    "noteTw": "這是方法開頭概述整體策略的註解，不是把所有實作細節堆在開頭的反例；各階段的細節仍應緊靠相關程式碼。原片段只有通用註解語法，語言標籤沿用 Java 圍欄。"
+  },
+  {
+    "id": "ch16-f2",
+    "sourceHash": "e803afef5d9c37643a17b8ca73729ac778d981203fc9082ef73ae754bfc37805",
+    "python": "# Implements the Foo command; see the user manual for details.\n",
+    "note": "保留指向用户手册的简短注释，不虚构 Foo 命令的实现或重复手册内容。原片段只有通用注释语法，语言标签沿用 Java 围栏。",
+    "noteEn": "Keep the short reference to the user manual without inventing a Foo implementation or duplicating the manual. The source contains only language-neutral comments, so its Java fence label is retained.",
+    "originalLanguage": "java",
+    "noteTw": "保留指向使用者手冊的簡短註解，不虛構 Foo 命令的實作或重複手冊內容。原片段只有通用註解語法，語言標籤沿用 Java 圍欄。"
+  }
+]

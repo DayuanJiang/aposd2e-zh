@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 504" role="img" aria-labelledby="ch05-format-ownership-title ch05-format-ownership-desc">
+  <title id="ch05-format-ownership-title">运行顺序不等于模块边界</title>
+  <desc id="ch05-format-ownership-desc">按时间拆成读、改、写类时，读类和写类各自掌握格式，格式变动传播到两处。应用运行顺序可以不变，让读写阶段调用同一格式模块，隐藏格式变更。实线表示调用顺序，虚线表示知识导致的联动修改。</desc>
+  <defs><marker id="ch05-format-ownership-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="504" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="24" y="34" font-size="20" font-weight="600">运行顺序不等于模块边界</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">实线：执行顺序／调用　虚线：格式变更的传播</text>
+    <text x="24" y="101" font-weight="600">按时间拆类</text><text x="284" y="101" fill="var(--diagram-danger,#a03946)">格式变更</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-format-ownership-arrow)"><path d="M275 97H110V128" stroke-dasharray="5 4"/><path d="M368 97H568V128" stroke-dasharray="5 4"/><path d="M210 174H250"/><path d="M430 174H470"/></g>
+    <rect x="24" y="139" width="176" height="71" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <rect x="260" y="139" width="160" height="71" rx="4" fill="none" stroke="var(--diagram-line,#aebbad)"/>
+    <rect x="480" y="139" width="176" height="71" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="40" y="168" font-weight="600">读类</text><text x="40" y="195">知道文件格式</text><text x="276" y="180">修改内容的类</text><text x="496" y="168" font-weight="600">写类</text><text x="496" y="195">也知道文件格式</text>
+    <path d="M24 236H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="269" font-weight="600">按知识划界：运行顺序仍然是读、改、写</text>
+    <text x="70" y="308">读取阶段</text><text x="300" y="308">修改内容</text><text x="538" y="308">写入阶段</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-format-ownership-arrow)"><path d="M153 302H288"/><path d="M380 302H526"/><path d="M110 320V389H227"/><path d="M568 320V389H452"/></g>
+    <rect x="238" y="351" width="204" height="85" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="254" y="381" font-weight="600">同一个格式模块</text><text x="254" y="409">封装读取与写入机制</text>
+    <text x="24" y="464" font-weight="600">格式知识只归一处；不能只是把知识搬进公开接口。</text>
+    <text x="24" y="488" font-size="13" fill="var(--diagram-muted,#5c645d)">不要求所有阶段都合并；关键是它们是否共享同一设计决策。</text>
+  </g>
+</svg>

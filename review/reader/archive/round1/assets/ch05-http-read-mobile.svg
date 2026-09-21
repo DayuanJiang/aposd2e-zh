@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 776" role="img" aria-labelledby="ch05-http-read-m-title ch05-http-read-m-desc">
+  <title id="ch05-http-read-m-title">还没解析，怎么知道读完了？</title>
+  <desc id="ch05-http-read-m-desc">教学示例 Content-Length: 4，请求体 a=12。在同一模块内先读头部并解析长度，再取得四字节请求体并形成请求对象。图不是完整 HTTP 算法。</desc>
+  <defs><marker id="ch05-http-read-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="776" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="16" y="32" font-size="19" font-weight="600">还没解析，怎么知道读完了？</text>
+    <text x="16" y="59" font-size="14" fill="var(--diagram-muted,#5c645d)">教学示例：已指定 Content-Length</text>
+    <rect x="16" y="83" width="328" height="132" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="32" y="111" font-family="ui-monospace,monospace">Content-Length: 4</text><text x="32" y="140" font-size="14">空行：头部结束</text>
+    <path d="M32 153H328" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="32" y="181" font-family="ui-monospace,monospace">a=12</text><text x="111" y="181" font-size="14">4 个 ASCII 请求体字节</text>
+    <rect x="16" y="243" width="328" height="307" rx="4" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-dasharray="6 4"/>
+    <text x="32" y="273" font-weight="600">同一模块内部</text>
+    <text x="40" y="312">① 读取请求行和头部</text>
+    <text x="40" y="375" fill="var(--diagram-warm,#80531b)">② 解析长度字段，得到 4</text>
+    <text x="40" y="438">③ 取得 4 个请求体字节</text>
+    <text x="40" y="501">④ 形成已解析的请求对象</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-http-read-m-arrow)"><path d="M180 326V350"/><path d="M180 389V413"/><path d="M180 452V476"/></g>
+    <text x="16" y="586" font-weight="600">“只读取”其实已经在解析。</text>
+    <text x="16" y="615">合并后，调用者只需接收请求。</text>
+    <text x="16" y="656" font-size="14" fill="var(--diagram-muted,#5c645d)">取得请求体可能需要多次读取。</text>
+    <text x="16" y="683" font-size="14" fill="var(--diagram-muted,#5c645d)">不等于一次 socket read。</text>
+    <text x="16" y="722" font-size="14" fill="var(--diagram-muted,#5c645d)">仅示长度定界依赖，非完整 HTTP 算法。</text>
+    <text x="16" y="748" font-size="14" fill="var(--diagram-muted,#5c645d)">其他定界、校验和错误路径未画出。</text>
+  </g>
+</svg>

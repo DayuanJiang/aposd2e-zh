@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 680" role="img" aria-labelledby="ch01-two-levers-m-title ch01-two-levers-m-desc">
+  <title id="ch01-two-levers-m-title">消除规则，还是隔离规则？</title>
+  <desc id="ch01-two-levers-m-desc">教学示例。上方命名从 size 和 length 统一到 length，消除区别。下方调用者通过 load 使用文件模块，格式识别和解码留在模块内部。封装保留必要复杂性。</desc>
+  <defs><marker id="ch01-two-levers-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="680" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="16" y="32" font-size="19" font-weight="600">消除规则，还是隔离规则？</text>
+    <text x="16" y="58" font-size="14" fill="var(--diagram-muted,#5c645d)">教学示例：命名统一与文件解码</text>
+    <text x="16" y="97" font-weight="600">① 消除：规则本身变少</text>
+    <rect x="16" y="113" width="328" height="64" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="32" y="139" font-family="ui-monospace,monospace">size / length</text><text x="32" y="163">同一含义，却要记两套名字</text>
+    <path d="M180 185V220" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch01-two-levers-m-arrow)"/>
+    <text x="196" y="208" font-size="14">统一</text>
+    <rect x="16" y="231" width="328" height="64" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="32" y="257" font-family="ui-monospace,monospace">length</text><text x="32" y="281">不再需要那条命名区别</text>
+    <path d="M16 320H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="352" font-weight="600">② 封装：改变谁需要知道</text>
+    <rect x="16" y="371" width="328" height="64" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="32" y="397">调用者只需</text><text x="32" y="421" font-family="ui-monospace,monospace">load(file)</text>
+    <path d="M180 443V475" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch01-two-levers-m-arrow)"/>
+    <text x="196" y="465" font-size="14">调用</text>
+    <rect x="16" y="486" width="328" height="113" rx="4" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="1.5"/>
+    <text x="32" y="513" font-weight="600">文件模块内部</text><path d="M16 524H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="32" y="550">识别格式 → 解码 → 返回内容</text>
+    <text x="32" y="578" font-size="14" fill="var(--diagram-muted,#5c645d)">必要规则没有消失，只是不外露</text>
+    <text x="16" y="634" font-weight="600">两种手段可以并用。</text>
+    <text x="16" y="659" font-size="13" fill="var(--diagram-muted,#5c645d)">封装不等于消除模块之间的所有依赖。</text>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 516" role="img" aria-labelledby="ch06-history-boundary-title ch06-history-boundary-desc">
+  <title id="ch06-history-boundary-title">撤销时，谁知道要恢复什么？</title>
+  <desc id="ch06-history-boundary-desc">UI 通过栅栏决定分组，History 管理列表并调用接口，具体 Action 由文本或 UI 模块实现。教学列表先记录文本动作再记录选区动作，undo 逆序调用，先选区后文本，停在栅栏。原文将逆序撤销误写为 redo，此处依已有勘误说明。</desc>
+  <defs><marker id="ch06-history-boundary-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="516" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="24" y="34" font-size="20" font-weight="600">撤销时，谁知道要恢复什么？</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">策略、通用机制、专用动作分别掌握不同的知识</text>
+    <rect x="24" y="92" width="176" height="138" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="40" y="121" font-weight="600">高层 UI：策略</text><text x="40" y="151">哪些动作算一组</text><text x="40" y="181" font-family="ui-monospace,monospace" font-size="14">addFence()</text><text x="40" y="212" font-size="14">决定栅栏放在哪里</text>
+    <rect x="252" y="92" width="176" height="138" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="268" y="121" font-weight="600">History：机制</text><text x="268" y="151">管理列表与栅栏</text><text x="268" y="181">向前／向后遍历</text><text x="268" y="212" font-size="14">不理解具体状态</text>
+    <rect x="480" y="92" width="176" height="138" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="496" y="121" font-weight="600">Action：细节</text><text x="496" y="151">文本或 UI 模块实现</text><text x="496" y="181" font-family="ui-monospace,monospace" font-size="14">undo() / redo()</text><text x="496" y="212" font-size="14">知道如何恢复状态</text>
+    <g stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch06-history-boundary-arrow)"><path d="M207 165H241"/><path d="M435 165H469"/></g>
+    <text x="24" y="268" font-weight="600">教学动作组：记录顺序向右，撤销顺序向左</text>
+    <path d="M96 292V365M584 292V365" stroke="var(--diagram-secondary,#2c6096)" stroke-width="3"/>
+    <rect x="132" y="302" width="176" height="48" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="150" y="332">先记录：文本动作</text>
+    <rect x="368" y="302" width="176" height="48" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="386" y="332">后记录：选区动作</text>
+    <path d="M316 326H358" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch06-history-boundary-arrow)"/>
+    <path d="M558 385H106" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch06-history-boundary-arrow)"/>
+    <text x="44" y="393" font-size="13">停</text><text x="158" y="414" font-size="14">② 文本.undo()</text><text x="392" y="414" font-size="14">① 选区.undo()</text>
+    <text x="24" y="456" font-size="14">核心只认识 Action 接口；动作状态留在理解它的模块。</text>
+    <text x="24" y="487" font-size="13" fill="var(--diagram-muted,#5c645d)">原文逆序撤销误写 redo；本图依 6.7 定义及已有译者注标为 undo。</text>
+    <text x="24" y="507" font-size="12" fill="var(--diagram-muted,#5c645d)">仅演示一组动作的遍历方向，不是完整编辑器状态恢复流程。</text>
+  </g>
+</svg>

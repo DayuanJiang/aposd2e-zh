@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 846" role="img" aria-labelledby="ch07-line-boundary-m-title ch07-line-boundary-m-desc">
+  <title id="ch07-line-boundary-m-title">按行存储，不必按行暴露</title>
+  <desc id="ch07-line-boundary-m-desc">教学第一行 ABcd 后接 NL 换行，第二行 efGH。start(S) 在 B、c 之间，end(E) 在 f、G 之间。划掉 cd、NL、ef 保留 AB 和 GH。两组边界右侧都是按行存储，由两行变为 ABGH 一行；行接口让 UI 取行拼接回写，范围接口把这些工作留在文本模块。</desc>
+  <defs><marker id="ch07-line-boundary-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="846" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="32" font-size="19" font-weight="600">按行存储，不必按行暴露</text>
+    <text x="16" y="58" font-size="13" fill="var(--diagram-muted,#5c645d)">教学文本；NL 表换行，不规定编码</text>
+    <text x="132" y="91" font-size="14">start (S)</text>
+    <rect x="32" y="106" width="88" height="40" fill="var(--diagram-secondary-soft,#dce4ed)"/><rect x="120" y="106" width="132" height="40" fill="var(--diagram-danger-soft,#ead9dc)"/>
+    <g font-family="ui-monospace,monospace" font-size="20" text-anchor="middle"><text x="54" y="133">A</text><text x="98" y="133">B</text><text x="142" y="133">c</text><text x="186" y="133">d</text><text x="230" y="133">NL</text></g>
+    <path d="M120 99V153" stroke="var(--diagram-warm,#80531b)" stroke-width="2"/><path d="M128 127H246" stroke="var(--diagram-danger,#a03946)" stroke-width="2"/>
+    <text x="132" y="180" font-size="14">end (E)</text>
+    <rect x="32" y="195" width="88" height="40" fill="var(--diagram-danger-soft,#ead9dc)"/><rect x="120" y="195" width="88" height="40" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <g font-family="ui-monospace,monospace" font-size="20" text-anchor="middle"><text x="54" y="222">e</text><text x="98" y="222">f</text><text x="142" y="222">G</text><text x="186" y="222">H</text></g>
+    <path d="M120 188V242" stroke="var(--diagram-warm,#80531b)" stroke-width="2"/><path d="M40 216H113" stroke="var(--diagram-danger,#a03946)" stroke-width="2"/>
+    <text x="16" y="269" font-size="14">删除 cd、NL、ef；保留 AB 与 GH。</text>
+    <path d="M16 289H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="320" font-weight="600">行接口：UI 自己拼接</text>
+    <text x="16" y="350" font-weight="600">UI</text><text x="210" y="350" font-weight="600">文本模块</text>
+    <path d="M192 337V779" stroke="var(--diagram-line,#aebbad)" stroke-dasharray="5 4"/>
+    <rect x="207" y="365" width="137" height="61" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <text x="217" y="389" font-size="14">前：行1 ABcd</text><text x="243" y="414" font-size="14">行2 efGH</text>
+    <text x="16" y="387" font-family="ui-monospace,monospace" font-size="13">getLine</text><path d="M85 382H200" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch07-line-boundary-m-arrow)"/>
+    <text x="16" y="425" font-family="ui-monospace,monospace" font-size="13">ABcd/efGH</text><path d="M200 420H98" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch07-line-boundary-m-arrow)"/>
+    <text x="16" y="453" font-size="14">拼接 AB + GH</text>
+    <text x="16" y="488" font-size="13">putLine 等</text><path d="M106 483H200" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch07-line-boundary-m-arrow)"/>
+    <rect x="207" y="460" width="137" height="51" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="217" y="491" font-size="14">后：行1 ABGH</text>
+    <text x="16" y="540" font-size="13">同类 UI 调用点可能重复这些工作。</text>
+    <path d="M16 557H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="588" font-weight="600">范围接口：拼接留在文本模块</text>
+    <rect x="207" y="612" width="137" height="61" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <text x="217" y="636" font-size="14">前：行1 ABcd</text><text x="243" y="661" font-size="14">行2 efGH</text>
+    <text x="16" y="645" font-family="ui-monospace,monospace" font-size="13">delete(S,E)</text><path d="M111 640H200" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch07-line-boundary-m-arrow)"/>
+    <path d="M227 681V712" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch07-line-boundary-m-arrow)"/><text x="244" y="704" font-size="13">内部拼接</text>
+    <rect x="207" y="724" width="137" height="51" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="217" y="754" font-size="14">后：行1 ABGH</text>
+    <text x="16" y="701" font-size="14">UI 不接收行，</text><text x="16" y="727" font-size="14">也不自行合行。</text>
+    <text x="16" y="804" font-size="13" fill="var(--diagram-muted,#5c645d)">存储始终在右侧且按行；调用次数不固定。</text>
+    <text x="16" y="827" font-size="13" fill="var(--diagram-muted,#5c645d)">省略删除旧行等细节，非完整编辑算法。</text>
+  </g>
+</svg>

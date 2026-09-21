@@ -1,0 +1,482 @@
+{
+  "scope": {
+    "chapters": ["ch15", "ch16", "ch17", "ch18", "ch19", "ch20", "ch21"],
+    "review": "review/reader/diagram-review-15-22.json",
+    "round": "implementation-after-independent-round1",
+    "status": "awaiting-second-review",
+    "authority": "MAIN accepted all decisions for chapters 15-21. Chapter 22 is handled separately by MAIN.",
+    "written": [
+      "docs/.vuepress/reader/diagrams/ch15.json through ch21.json",
+      "Owned ch15-ch21 SVG pairs named by those manifests, including removal of the two retired pairs",
+      "review/reader/revisions-15-21.json"
+    ],
+    "notChanged": [
+      "Chapter 22 files",
+      "Markdown, original figures, shared reader implementation and test files",
+      "Traditional Chinese assets or localization metadata"
+    ],
+    "notRun": ["Tests", "Builds", "Browser or production QA", "Traditional Chinese generation"]
+  },
+  "beforeVersions": {
+    "root": "/tmp/aposd2e-viz-review-round1",
+    "metadata": "metadata/chNN.json",
+    "desktop": "assets/<id>.svg",
+    "mobile": "assets/<id>-mobile.svg",
+    "verification": "All 18 owned IDs have archived metadata and both archived SVGs. Before editing the retained assets, their bytes matched the archived versions. The archive was not written."
+  },
+  "summary": {
+    "decisions": { "keep": 4, "revise": 10, "replace": 2, "retire": 2 },
+    "activeDiagrams": 16,
+    "activeSvgAssets": 32,
+    "changedSvgAssets": 24,
+    "unchangedKeptSvgAssets": 8,
+    "removedSvgAssets": 4,
+    "chapterCounts": { "ch15": 3, "ch16": 2, "ch17": 2, "ch18": 2, "ch19": 3, "ch20": 3, "ch21": 1 },
+    "allActiveStatus": "awaiting-second-review"
+  },
+  "verification": {
+    "scope": "Read-only source and asset inspection, not tests or rendered QA.",
+    "results": [
+      "32 active SVGs parse with xmllint and use 680-unit desktop or 360-unit mobile viewBoxes.",
+      "Accessible title/description references and marker references resolve to locally scoped unique IDs.",
+      "No embedded raster, external href/src, script, event attribute, foreignObject or animation was found in the owned SVGs.",
+      "53 active EPUB paragraph references were found in the supplied English chapter extracts.",
+      "All 16 active records contain the teaching-contract fields and have status awaiting-second-review.",
+      "Both retired IDs are absent from active manifests, and their four public SVGs are absent.",
+      "The eight SVGs belonging to the four keep decisions are byte-identical to their archived versions.",
+      "Close paragraph placements were derived from MarkdownIt tokens in both existing Simplified and Traditional Chinese Markdown; neither locale was edited."
+    ],
+    "placementRule": "Count only root-level paragraphs within the numbered section, including image paragraphs and excluding blockquote paragraphs. A code fence is not a paragraph.",
+    "notEstablished": [
+      "Post-revision text bounds, arrow/text collisions, theme rendering or mobile readability have not been rechecked in a browser.",
+      "MAIN's reported 88-route production QA and SSR fix were not rerun and are not treated as rendered evidence for these revised SVGs.",
+      "No real-reader comprehension or performance experiment was performed."
+    ]
+  },
+  "records": [
+    {
+      "id": "ch15-delay-loop",
+      "decision": "revise",
+      "action": "revise",
+      "active": true,
+      "status": "awaiting-second-review",
+      "changes": [
+        "Removed the accessible description's claim that later comments can only repeat code.",
+        "Made titles, descriptions and the undocumented-code and memory states consistently conditional.",
+        "Labeled the accumulation edge with continuing development in both layouts."
+      ],
+      "responseToReview": "The retained loop describes a possible reinforcement mechanism under continuing development, not an inevitable personal behavior or exclusive documentation outcome.",
+      "sources": [
+        "docs/ch15.md:10-12",
+        "OEBPS/part0019.xhtml#p7:a3722f7256",
+        "OEBPS/part0019.xhtml#p8:f9dda67b49"
+      ],
+      "anchor": { "section": "15.1", "placement": "end" },
+      "limits": ["Qualitative risk only; no timing, probability or individual prediction."]
+    },
+    {
+      "id": "ch15-design-feedback",
+      "decision": "revise",
+      "action": "revise",
+      "active": true,
+      "status": "awaiting-second-review",
+      "changes": [
+        "Identified the sequence as the author's workflow for a new class in metadata and both layouts.",
+        "Retained forward order and implementation-to-interface feedback without expanding the workflow.",
+        "Replaced automatic no-backlog language with the obligation to update comments as design changes."
+      ],
+      "responseToReview": "The useful claim is that comments-first allows revision, not that this order is mandatory for every code change or guarantees complete documentation.",
+      "sources": [
+        "docs/ch15.md:16-27",
+        "OEBPS/part0019.xhtml#p11:533d9fefe2",
+        "OEBPS/part0019.xhtml#p16:b5b78e3408",
+        "OEBPS/part0019.xhtml#p18:1106ac3f0c"
+      ],
+      "anchor": { "section": "15.2", "placement": "end" },
+      "limits": ["No demonstrated improvement in productivity or design quality is claimed."]
+    },
+    {
+      "id": "ch15-comment-gate",
+      "decision": "replace",
+      "action": "replace",
+      "active": true,
+      "status": "awaiting-second-review",
+      "changes": [
+        "Replaced the generic completeness decision tree with three concrete saveReport contract/implementation states, retaining the ID and asset URLs.",
+        "A documents the caller's parent-directory obligation and has the caller create it before write; B deletes the condition but leaves write unchanged, so a direct missing-directory call still fails.",
+        "C moves ensureParent before write inside the module, removing the caller's directory-creation obligation while retaining the same path/text result for the illustrated successful scenario.",
+        "Separated caller obligations from internal work with a boundary and explicitly grouped A/B as identical implementations.",
+        "Retained the author's shallow-method criterion and warned that interface simplicity alone does not establish depth."
+      ],
+      "responseToReview": "The reader can now inspect the unchanged obligation and implementation in B and the actual responsibility transfer in C, instead of accepting category labels or a word-count verdict.",
+      "sources": [
+        "docs/ch15.md:33-39",
+        "OEBPS/part0019.xhtml#p21:349a38a4ea",
+        "OEBPS/part0019.xhtml#p24:4075191347"
+      ],
+      "anchor": { "section": "15.3", "placement": "end" },
+      "teachingInvention": "saveReport, ensureParent and write are editorial pseudocode. The common starting state lacks a parent directory; directory creation and writing are assumed able to succeed.",
+      "limits": [
+        "The illustrated preservation concerns saving the same text at the same path in the stated success case.",
+        "No equivalence of permission failures, races, partial writes or all other observable effects is asserted.",
+        "Box area, comment length and step count are not depth measurements."
+      ]
+    },
+    {
+      "id": "ch16-comment-scope",
+      "decision": "keep",
+      "action": "keep",
+      "active": true,
+      "status": "awaiting-second-review",
+      "changes": [
+        "Kept both SVGs byte-for-byte unchanged.",
+        "Removed the metadata alt text's local-change isolation implication; brackets describe explanatory scope, not guaranteed impact boundaries.",
+        "Updated the manifest review status."
+      ],
+      "responseToReview": "Preserved the accepted long/short bracket relationship and incorporated the review's limitation without redrawing the figure.",
+      "sources": [
+        "docs/ch16.md:29-38",
+        "OEBPS/part0020.xhtml#p15:f492854e87",
+        "OEBPS/part0020.xhtml#p21:df361d6028"
+      ],
+      "anchor": { "section": "16.2", "placement": "end" },
+      "limits": ["Semantic change impact can cross the displayed phase boundaries."]
+    },
+    {
+      "id": "ch16-single-source",
+      "decision": "revise",
+      "action": "revise",
+      "active": true,
+      "status": "awaiting-second-review",
+      "changes": [
+        "Retained the copy-update fan-out and central-explanation lookup topology.",
+        "Distinguished dashed update obligations from solid lookup paths.",
+        "Merged lookup lines without arrowheads at junctions and placed the arrowhead at the actual explanation.",
+        "Added a second visible state: the master explanation has moved, xyz is an empty dashed location, and the old reference cannot find the explanation.",
+        "Qualified metadata and captions so a readable but stale master explanation is not claimed to be self-detecting."
+      ],
+      "responseToReview": "Both advertised failure modes are now drawn. The visible missing-target result is explicitly limited to a moved/deleted target rather than all reference errors.",
+      "sources": [
+        "docs/ch16.md:48-52",
+        "OEBPS/part0020.xhtml#p26:6cd00ff764",
+        "OEBPS/part0020.xhtml#p27:1276783230"
+      ],
+      "anchor": { "section": "16.4", "placement": "end" },
+      "teachingInvention": "A/B/C, old/new rule states and xyz are illustrative placeholders.",
+      "limits": ["Central documentation still requires updates; reachable documentation may still be wrong."]
+    },
+    {
+      "id": "ch16-invalidation-review",
+      "decision": "retire",
+      "action": "retire",
+      "active": false,
+      "status": "awaiting-second-review",
+      "changes": [
+        "Removed the item from ch16.json.",
+        "Deleted ch16-invalidation-review.svg and ch16-invalidation-review-mobile.svg from public/diagrams.",
+        "Added no replacement checklist or count-preserving diagram."
+      ],
+      "responseToReview": "Accepted retirement of a redundant rule-routing recap without an inspectable changed contract. Existing prose and the accepted scope figure remain.",
+      "sources": [
+        "docs/ch16.md:42-44",
+        "docs/ch16.md:64-68",
+        "OEBPS/part0020.xhtml#p24:651dd7ef0a",
+        "OEBPS/part0020.xhtml#p33:4c371c1799",
+        "OEBPS/part0020.xhtml#p35:84d1399898"
+      ],
+      "limits": ["Archived pre-review versions remain available outside the active collection; this is an editorial retirement, not a measured reader result."]
+    },
+    {
+      "id": "ch17-convention-gate",
+      "decision": "revise",
+      "action": "revise",
+      "active": true,
+      "status": "awaiting-second-review",
+      "changes": [
+        "Used the review's permitted narrower question: how this author's project blocks nonconforming commits.",
+        "Marked the project-specific provenance and automatic pre-commit check in both layouts.",
+        "Kept manual repair and retry distinct from automatic rejection.",
+        "Moved the diagram immediately after the repair-script paragraph."
+      ],
+      "responseToReview": "The revised question now matches the enforcement loop actually shown; the figure no longer purports to demonstrate upstream whole-file editor conversion.",
+      "sources": [
+        "docs/ch17.md:31-33",
+        "OEBPS/part0021.xhtml#p17:b234c667e1",
+        "OEBPS/part0021.xhtml#p18:958d04d5ff"
+      ],
+      "placement": {
+        "before": { "section": "17.2", "placement": "end" },
+        "after": { "section": "17.2", "paragraph": 6 },
+        "derivedWith": "MarkdownIt root paragraph tokens",
+        "simplifiedTarget": "docs/ch17.md:33",
+        "traditionalTarget": "docs/zh-tw/ch17.md:33"
+      },
+      "limits": ["Not advice to reject CR in every repository or file type; no repository configuration was changed."]
+    },
+    {
+      "id": "ch17-trustworthy-patterns",
+      "decision": "keep",
+      "action": "keep",
+      "active": true,
+      "status": "awaiting-second-review",
+      "changes": ["Kept both SVGs byte-for-byte unchanged and advanced the manifest review status."],
+      "responseToReview": "Preserved the accepted same-name/different-unit counterexample and its explicit invented-example and naming-rule limitations.",
+      "sources": [
+        "docs/ch17.md:3-5",
+        "docs/ch17.md:43",
+        "OEBPS/part0021.xhtml#p23:78c80a466e"
+      ],
+      "anchor": { "section": "17.3", "placement": "end" },
+      "limits": ["Matching units or suffixes alone do not establish full behavioral equivalence."]
+    },
+    {
+      "id": "ch18-event-trace",
+      "decision": "revise",
+      "action": "revise",
+      "active": true,
+      "status": "awaiting-second-review",
+      "changes": [
+        "Replaced the handler-originated registration loop with application-initialization edges writing event-to-handler registration data.",
+        "Compared two independent runs, E to A and E to B, using the same dispatch code and different resolved targets.",
+        "Distinguished initialization writes from dispatch reads/calls and removed any self-registration implication.",
+        "Kept failed() trigger, transport caller and dispatch-thread facts as a concise separate annotation, explicitly not a substitute for registration state.",
+        "Moved the figure out of the end-of-18.2 stack into the event-driven discussion."
+      ],
+      "responseToReview": "Registration agency and the information resolving target uncertainty are now inspectable. Exact after-fence placement cannot be expressed with the available root-paragraph anchor without changing the shared reader.",
+      "sources": [
+        "docs/ch18.md:97-111",
+        "OEBPS/part0022.xhtml#p68:23d9d9ef58",
+        "OEBPS/part0022.xhtml#p69:f3efedcb04",
+        "OEBPS/part0022.xhtml#p72:474b887270",
+        "OEBPS/part0022.xhtml#p73:5c3d60c8f0"
+      ],
+      "placement": {
+        "before": { "section": "18.2", "placement": "end" },
+        "after": { "section": "18.2", "paragraph": 3 },
+        "derivedWith": "MarkdownIt root paragraph tokens",
+        "simplifiedTarget": "docs/ch18.md:99",
+        "traditionalTarget": "docs/zh-tw/ch18.md:99",
+        "deviation": "The review requested after the failed() fence ending at line 111. Root paragraph 4 ends at the introduction at line 101, before that fence. Root paragraph 5 is the red-flag image/title at line 113 and is followed by a blockquote; inserting there would split the callout. Paragraph 3 places the diagram after the runtime-target explanation and before the lead-in/fence, keeping both prose-code and callout groups intact.",
+        "remainingMainDecision": "Use this close legal placement or provide an after-fence placement mechanism separately. No unsupported anchor key was invented."
+      },
+      "teachingInvention": "Event E, handlers A/B and independent registration states are editorial examples, not RAMCloud APIs or observed traces.",
+      "limits": ["Exact requested after-code placement remains a documented limitation.", "Handler comments do not resolve every possible runtime registration question."]
+    },
+    {
+      "id": "ch18-reader-expectation",
+      "decision": "keep",
+      "action": "keep",
+      "active": true,
+      "status": "awaiting-second-review",
+      "changes": ["Kept both SVGs byte-for-byte unchanged and advanced the manifest review status."],
+      "responseToReview": "Preserved the accepted construction fork and unequal execution endpoints. Moving event-trace removed the unrelated same-anchor predecessor.",
+      "sources": [
+        "docs/ch18.md:141-150",
+        "OEBPS/part0022.xhtml#p94:b573116406",
+        "OEBPS/part0022.xhtml#p96:cd1197eff7"
+      ],
+      "anchor": { "section": "18.2", "placement": "end" },
+      "limits": ["Specific to the supplied RaftClient example; not a general Java termination, daemon-thread or scheduling model."]
+    },
+    {
+      "id": "ch19-inheritance-dependencies",
+      "decision": "revise",
+      "action": "revise",
+      "active": true,
+      "status": "awaiting-second-review",
+      "changes": [
+        "Added a concrete shared-representation dependency: QueueBase.head changes from array index to node reference while a child still uses data[head].",
+        "Used possible-review wording on both layouts, with dashed impact edges anchored to the actual dependent read.",
+        "Made the helper alternative conditional on hiding representation and preserving peek() and size() contracts; no automatic composition benefit is asserted.",
+        "Retained state isolation inside inheritance as another option and explicitly avoided prescribing shared helper instances.",
+        "Added the source's object-oriented-mechanisms-are-not-a-design-guarantee paragraph."
+      ],
+      "responseToReview": "The diagram now shows why a review edge exists and which contract must hold for the encapsulated alternative, rather than treating a green helper box as evidence of decoupling.",
+      "sources": [
+        "docs/ch19.md:13-21",
+        "OEBPS/part0023.xhtml#p9:26fce16963",
+        "OEBPS/part0023.xhtml#p10:551466c57e",
+        "OEBPS/part0023.xhtml#p11:ec90170f31",
+        "OEBPS/part0023.xhtml#p12:3670dd1ec5"
+      ],
+      "anchor": { "section": "19.1", "placement": "end" },
+      "teachingInvention": "QueueBase, logical queue contents [A,B], head, data[head], Node(A), peek/size and the A/2 results are bounded editorial examples.",
+      "limits": ["No concrete production hierarchy was evaluated; hiding representation and maintaining contracts still require correct implementation."]
+    },
+    {
+      "id": "ch19-abstraction-increment",
+      "decision": "replace",
+      "action": "replace",
+      "active": true,
+      "status": "awaiting-second-review",
+      "changes": [
+        "Replaced anonymous features and color-coded topology with current contact export and later inventory export, retaining the ID and URLs.",
+        "Displayed actual fields containing commas and their corresponding quoted-field output, establishing the shared row-encoding requirement.",
+        "Showed emitRow as a bounded abstraction created for the current need, with later reuse conditional on the same contract.",
+        "Displayed two copies of the same local comma/quote rule as the dedicated-inlining alternative, rather than only labeling duplication as bad.",
+        "Kept unrelated PDF layout and unneeded future capabilities outside the boundary.",
+        "Attributed the increment recommendation to the author and added the 19.4 comprehensive-core source."
+      ],
+      "responseToReview": "The two uses merge only because their actual inputs require the same encoding transformation. The graphic does not prescribe merging unrelated concerns or promise future compatibility.",
+      "sources": [
+        "docs/ch19.md:29-31",
+        "docs/ch19.md:49",
+        "OEBPS/part0023.xhtml#p16:402a1c2dbc",
+        "OEBPS/part0023.xhtml#p17:7d626259c3",
+        "OEBPS/part0023.xhtml#p27:d157e5d942"
+      ],
+      "anchor": { "section": "19.2", "placement": "end" },
+      "teachingInvention": "Contact/inventory fields, output strings, emitRow and comma/quote pseudocode are editorial material.",
+      "limits": [
+        "The example is restricted to letters, spaces, digits and commas in fields; it is not a complete CSV specification or implementation.",
+        "Different future contracts may require redesign.",
+        "No universal verdict on agile development or mandatory merger of features is implied."
+      ]
+    },
+    {
+      "id": "ch19-regression-witness",
+      "decision": "revise",
+      "action": "revise",
+      "active": true,
+      "status": "awaiting-second-review",
+      "changes": [
+        "Changed the question and answer from test-writing chronology to missing defective-version evidence.",
+        "Made the same-test comparison concrete: T expects C from last([A,B,C]); the hypothetical defect returns B and the fixed behavior returns C.",
+        "Explicitly connected the failure to the reported wrong-last-element defect and rejected unrelated failures as regression evidence.",
+        "Added a dashed route from only-fixed-version evidence to checking the same T against the defective version, labeled as editorial clarification.",
+        "Retained the author's recommendation to obtain the failing case before fixing, without making that chronology a necessary condition of evidence."
+      ],
+      "responseToReview": "Uses limited support/evidence language rather than general proof. A later-written test can supply the missing old-version observation; red from an unrelated cause is not enough.",
+      "sources": [
+        "docs/ch19.md:39",
+        "docs/ch19.md:47-51",
+        "OEBPS/part0023.xhtml#p21:a5daf497db",
+        "OEBPS/part0023.xhtml#p26:767f205de4",
+        "OEBPS/part0023.xhtml#p28:b49380a4ac"
+      ],
+      "anchor": { "section": "19.4", "placement": "end" },
+      "teachingInvention": "last, the off-by-one behavior, input, assertion and outcomes are explicit illustrative assumptions, not executed tests.",
+      "limits": ["No tests were run. Paired results support the exercised regression, not overall correctness, absence of other defects or design quality."]
+    },
+    {
+      "id": "ch20-measurement-loop",
+      "decision": "revise",
+      "action": "revise",
+      "active": true,
+      "status": "awaiting-second-review",
+      "changes": [
+        "Used the identical desktop/mobile criterion: whether like-for-like measured benefit justifies added complexity.",
+        "Made the negative branch include no benefit and measurable-but-insufficient benefit.",
+        "Connected baseline and post-change measurements directly to a shared comparison node, removing the nearly-attached diamond input.",
+        "Preserved independently simpler design as a separate possible retention basis, without exempting behavior requirements.",
+        "Introduced no numerical or statistical threshold."
+      ],
+      "responseToReview": "The decision is no longer a false dichotomy between significant and unmeasurable results. Profiling and baseline comparison remain distinct paths.",
+      "sources": [
+        "docs/ch20.md:30-32",
+        "OEBPS/part0024.xhtml#p18:c6ab138c52",
+        "OEBPS/part0024.xhtml#p19:446ae2e29f"
+      ],
+      "anchor": { "section": "20.2", "placement": "end" },
+      "limits": ["Like-for-like comparison is an editorial clarification; this is not a complete benchmarking protocol or an approval of every faster change."]
+    },
+    {
+      "id": "ch20-critical-path",
+      "decision": "keep",
+      "action": "keep",
+      "active": true,
+      "status": "awaiting-second-review",
+      "changes": ["Kept both SVGs byte-for-byte unchanged and advanced the manifest review status."],
+      "responseToReview": "Preserved the accepted interleaved-check versus entry-split relationship and its measured-hotspot, fundamental-fix-first and ideal-target qualifications.",
+      "sources": [
+        "docs/ch20.md:36-44",
+        "OEBPS/part0024.xhtml#p21:4350d6c75f",
+        "OEBPS/part0024.xhtml#p22:647f2b8efd",
+        "OEBPS/part0024.xhtml#p25:87ac06fb38"
+      ],
+      "anchor": { "section": "20.3", "placement": "end" },
+      "limits": ["A/B are illustrative work. Moving checks requires behavior preservation; the figure does not establish that arbitrary checks can be hoisted."]
+    },
+    {
+      "id": "ch20-state-compression",
+      "decision": "revise",
+      "action": "revise",
+      "active": true,
+      "status": "awaiting-second-review",
+      "changes": [
+        "Separated the stored invariant definition from per-call execution using a labeled phase boundary.",
+        "Explicitly marked no last chunk, external last chunk and no adjacent capacity as alternative OR conditions for zero.",
+        "Added correct maintenance and numBytes > 0 to the expected answer as well as both visible layouts.",
+        "Replaced the generic maintenance footer with a concrete state transition: read C=8, append 3, write C=5, then reject a following 6-byte request from the fast path.",
+        "Showed why stale C=8 would misclassify that following request and retained chunk-length/total-length updates.",
+        "Moved the diagram after the Figure 20.3 maintenance note and before benchmark results."
+      ],
+      "responseToReview": "The upper definition is no longer an apparent per-call recomputation path. The next request depends on the newly stored value, making between-call maintenance inspectable.",
+      "sources": [
+        "docs/ch20.md:117-139",
+        "OEBPS/part0024.xhtml#p33:c8ebdef682",
+        "OEBPS/part0024.xhtml#p39:f0c54a3c47",
+        "OEBPS/part0024.xhtml#p40:b241e41328"
+      ],
+      "placement": {
+        "before": { "section": "20.4", "placement": "end" },
+        "after": { "section": "20.4", "paragraph": 15 },
+        "derivedWith": "MarkdownIt root paragraph tokens, counting the Figure 20.1 image paragraph",
+        "simplifiedTarget": "docs/ch20.md:139",
+        "traditionalTarget": "docs/zh-tw/ch20.md:139"
+      },
+      "teachingInvention": "8, 3, 5 and 6 are illustrative byte-capacity states, not timings, observed benchmark results or performance ratios.",
+      "limits": [
+        "Only positive-size requests with correctly maintained state are covered.",
+        "No behavior for zero/negative sizes, overflow, allocation failure or the full Buffer invariant is inferred.",
+        "This is an explanation of the stored meaning and one update, not a replacement for the original storage diagram or code."
+      ]
+    },
+    {
+      "id": "ch21-leverage-boundary",
+      "decision": "retire",
+      "action": "retire",
+      "active": false,
+      "status": "awaiting-second-review",
+      "changes": [
+        "Removed the item from ch21.json.",
+        "Deleted ch21-leverage-boundary.svg and ch21-leverage-boundary-mobile.svg from public/diagrams.",
+        "Created no replacement deletion figure and left the existing chapter 6 reference untouched."
+      ],
+      "responseToReview": "Accepted that the all-firstdraft collection already has a more concrete range-deletion trace; no diagram count was preserved artificially.",
+      "sources": [
+        "docs/ch21.md:11",
+        "OEBPS/part0025.xhtml#p7:37c373eec3",
+        "review/reader/diagram-review-15-22.json record ch21-leverage-boundary and its ch06-range-api comparison"
+      ],
+      "limits": ["Retirement follows the accepted collection-level redundancy judgment, not a claim that the isolated figure has no possible use."]
+    },
+    {
+      "id": "ch21-exposure-decision",
+      "decision": "revise",
+      "action": "revise",
+      "active": true,
+      "status": "awaiting-second-review",
+      "changes": [
+        "Kept the necessity/visibility matrix but fixed its reference context to an ordinary file-export caller that subsequently reads the result.",
+        "Replaced the circular necessary-precondition label with an invented finish() completion contract and dependent wait-then-read versus premature-read actions.",
+        "Qualified buffering as a common-case default and showed repeated buffered=true setup versus no routine setup.",
+        "Explicitly retained exceptional callers' ability to select a different mode and stated that necessity varies with context."
+      ],
+      "responseToReview": "The necessary fact now has a concrete consequence that can be inspected, while buffering is no longer classified as intrinsically irrelevant for every caller.",
+      "sources": [
+        "docs/ch21.md:19-33",
+        "OEBPS/part0025.xhtml#p11:f8b4f0d81a",
+        "OEBPS/part0025.xhtml#p13:1b411f63b7",
+        "OEBPS/part0025.xhtml#p17:586fcd4557",
+        "OEBPS/part0025.xhtml#p18:dfaf0db169"
+      ],
+      "anchor": { "section": "21.4", "placement": "end" },
+      "teachingInvention": "The exporter and finish() contract are editorial: successful completion makes the result fully readable; before that it may be incomplete.",
+      "limits": [
+        "This is not an actual Java API or a disk-durability guarantee.",
+        "The matrix is not a universal algorithm for deciding every caller's needs, nor a complete treatment of missing functionality."
+      ]
+    }
+  ]
+}

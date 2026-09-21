@@ -1,0 +1,154 @@
+[
+  {
+    "id": "ch15-delay-loop",
+    "chapter": "ch15",
+    "title": "推迟注释，为什么可能越积越难补？",
+    "question": "等待代码稳定，为什么可能让注释一直写不出来？",
+    "answer": "在推迟注释的同时继续开发，未记录代码和补写任务可能增加，进一步鼓励拖延。设计记忆也可能变模糊，使后补注释更容易重复代码、遗漏理由。",
+    "summary": "闭环呈现持续开发时可能出现的积压风险，旁支呈现设计记忆损失；不预测每位开发者都会拖延或遗忘。",
+    "alt": "推迟注释后若继续开发，未记录代码可能增加，使补写更不吸引人并鼓励进一步拖延。另一条支路说明设计记忆可能变模糊，后来补写易重复代码、漏掉理由，而非只能如此。",
+    "kind": "feedback-loop",
+    "desktop": "/diagrams/ch15-delay-loop.svg",
+    "mobile": "/diagrams/ch15-delay-loop-mobile.svg",
+    "anchor": {
+      "section": "15.1",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "15.1",
+        "epub": "OEBPS/part0019.xhtml#p7:a3722f7256",
+        "reason": "积压使补写更不吸引人，转做功能又增加未记录的代码，构成强化循环。"
+      },
+      {
+        "section": "15.1",
+        "epub": "OEBPS/part0019.xhtml#p8:f9dda67b49",
+        "reason": "延迟使设计记忆模糊；对照代码补写容易重复代码并遗漏设计思路。"
+      }
+    ],
+    "status": "content-reviewed",
+    "titleTw": "推遲註解，為什麼可能越積越難補？",
+    "questionTw": "等待程式碼穩定，為什麼可能讓註解一直寫不出來？",
+    "answerTw": "在推遲註解的同時繼續開發，未記錄程式碼和補寫任務可能增加，進一步鼓勵拖延。設計記憶也可能變模糊，使後補註解更容易重複程式碼、遺漏理由。",
+    "summaryTw": "閉環呈現持續開發時可能出現的積壓風險，旁支呈現設計記憶損失；不預測每位開發者都會拖延或遺忘。",
+    "altTw": "推遲註解後若繼續開發，未記錄程式碼可能增加，使補寫更不吸引人並鼓勵進一步拖延。另一條支路說明設計記憶可能變模糊，後來補寫易重複程式碼、漏掉理由，而非只能如此。",
+    "desktopTw": "/diagrams/ch15-delay-loop-tw.svg",
+    "mobileTw": "/diagrams/ch15-delay-loop-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-15-21-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  },
+  {
+    "id": "ch15-design-feedback",
+    "chapter": "ch15",
+    "title": "先写注释不是写完就冻结",
+    "question": "实现尚未开始时写注释，后来发现设计不对怎么办？",
+    "answer": "在作者设计新类的做法中，先写接口注释与签名，再写变量和实现；编码与测试发现的问题反馈到注释和抽象，新发现的方法仍先写接口注释。这不是每次代码修改都必须遵循的通用流程。",
+    "summary": "前向箭头是作者的新类工作顺序，回箭头说明实现可以促使接口说明修正。应随设计变更同步维护注释，不把顺序当作自动消除积压的保证。",
+    "alt": "作者的新类工作流先检查接口说明，再写变量和实现；编码测试发现的问题通过回箭头返回接口说明，新方法也从说明开始。图不保证采用该顺序就自动获得完整文档。",
+    "kind": "workflow-feedback",
+    "desktop": "/diagrams/ch15-design-feedback.svg",
+    "mobile": "/diagrams/ch15-design-feedback-mobile.svg",
+    "anchor": {
+      "section": "15.2",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "15.2",
+        "epub": "OEBPS/part0019.xhtml#p11:533d9fefe2",
+        "reason": "从类接口注释开始。"
+      },
+      {
+        "section": "15.2",
+        "epub": "OEBPS/part0019.xhtml#p12:def8d84a40",
+        "reason": "主要公有方法先写接口注释和签名，方法体留空。"
+      },
+      {
+        "section": "15.2",
+        "epub": "OEBPS/part0019.xhtml#p13:644d81305f",
+        "reason": "通过反复修改注释调整基本结构。"
+      },
+      {
+        "section": "15.2",
+        "epub": "OEBPS/part0019.xhtml#p14:3c56f054d7",
+        "reason": "随后写主要实例变量的声明和注释。"
+      },
+      {
+        "section": "15.2",
+        "epub": "OEBPS/part0019.xhtml#p16:b5b78e3408",
+        "reason": "实现中新发现的方法仍先写接口注释。"
+      },
+      {
+        "section": "15.2",
+        "epub": "OEBPS/part0019.xhtml#p18:1106ac3f0c",
+        "reason": "编码与测试会发现并修正注释问题；反馈不是单向瀑布流程。"
+      }
+    ],
+    "status": "content-reviewed",
+    "titleTw": "先寫註解不是寫完就凍結",
+    "questionTw": "實作尚未開始時寫註解，後來發現設計不對怎麼辦？",
+    "answerTw": "在作者設計新類的做法中，先寫介面註解與簽名，再寫變數和實作；編碼與測試發現的問題反饋到註解和抽象，新發現的方法仍先寫介面註解。這不是每次程式碼修改都必須遵循的通用流程。",
+    "summaryTw": "前向箭頭是作者的新類工作順序，回箭頭說明實作可以促使介面說明修正。應隨設計變更同步維護註解，不把順序當作自動消除積壓的保證。",
+    "altTw": "作者的新類工作流先檢查介面說明，再寫變數和實作；編碼測試發現的問題透過回箭頭回到介面說明，新方法也從說明開始。圖不保證採用該順序就自動獲得完整文件。",
+    "desktopTw": "/diagrams/ch15-design-feedback-tw.svg",
+    "mobileTw": "/diagrams/ch15-design-feedback-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-15-21-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  },
+  {
+    "id": "ch15-comment-gate",
+    "chapter": "ch15",
+    "title": "删掉调用条件，不会删掉调用义务",
+    "question": "把接口注释缩短，是否就能让方法变深？",
+    "answer": "不能。教学例中 saveReport 仍只调用 write，删掉“调用前创建父目录”只会隐去仍存在的义务。把创建目录的工作实际移入模块，调用者才不再负责它。简单而完整的接口说明支持接口简单的判断；方法深度还要看它隐藏了什么工作，不能由字数决定。",
+    "summary": "教学自拟的三态对比：完整注释、只删条件、实际迁移职责。比较父目录可创建且写入成功的场景；原合法调用与迁移后的调用都在同一路径保存同一文本，不主张所有错误和副作用等价。",
+    "alt": "相同起点是父目录尚不存在。原设计由调用者先建目录，saveReport 内部只 write，成功保存文本；删掉注释条件后实现不变，直接调用仍会因缺少目录失败。修改设计后 ensureParent 和 write 都在模块内，调用者只提交路径与文本，仍得到同一保存结果。分界线把接口义务与内部工作分开。",
+    "kind": "contract-implementation-comparison",
+    "desktop": "/diagrams/ch15-comment-gate.svg",
+    "mobile": "/diagrams/ch15-comment-gate-mobile.svg",
+    "anchor": {
+      "section": "15.3",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "15.3",
+        "epub": "OEBPS/part0019.xhtml#p21:349a38a4ea",
+        "reason": "接口说明应与隐藏的实现工作分开比较；若接口必须描述全部主要实现特性，则方法浅。saveReport、ensureParent、write 及其行为假设为教学自拟，不是作者 API。"
+      },
+      {
+        "section": "15.3",
+        "epub": "OEBPS/part0019.xhtml#p24:4075191347",
+        "reason": "删去调用所需信息不能使接口变简单；用同实现而不同说明与真正改变职责位置的对照解释完整性前提，不按字数或面积衡量深度。"
+      }
+    ],
+    "status": "content-reviewed",
+    "titleTw": "刪掉呼叫條件，不會刪掉呼叫義務",
+    "questionTw": "把介面註解縮短，是否就能讓方法變深？",
+    "answerTw": "不能。教學例中 saveReport 仍只呼叫 write，刪掉“呼叫前建立父目錄”只會隱去仍存在的義務。把建立目錄的工作實際移入模組，呼叫者才不再負責它。簡單而完整的介面說明支持介面簡單的判斷；方法深度還要看它隱藏了什麼工作，不能由字數決定。",
+    "summaryTw": "教學自擬的三態對比：完整註解、只刪條件、實際遷移職責。比較父目錄可建立且寫入成功的場景；原合法呼叫與遷移後的呼叫都在同一路徑儲存同一文字，不主張所有錯誤和副作用等價。",
+    "altTw": "相同起點是父目錄尚不存在。原設計由呼叫者先建目錄，saveReport 內部只 write，成功儲存文字；刪掉註解條件後實作不變，直接呼叫仍會因缺少目錄失敗。修改設計後 ensureParent 和 write 都在模組內，呼叫者只提交路徑與文字，仍得到同一儲存結果。分界線把介面義務與內部工作分開。",
+    "desktopTw": "/diagrams/ch15-comment-gate-tw.svg",
+    "mobileTw": "/diagrams/ch15-comment-gate-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-15-21-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  }
+]

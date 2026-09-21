@@ -1,0 +1,51 @@
+[
+  {
+    "id": "ch03-patch-cycle",
+    "chapter": "ch03",
+    "title": "一次捷径如何变成持续负担？",
+    "question": "为什么每次都只顾当前任务，会让以后更难抽空改进设计？",
+    "answer": "小补丁增加复杂性，复杂性妨碍下一次修改；为赶下一次进度继续绕过问题，又增加复杂性，形成自我强化的循环。",
+    "summary": "用因果回路解释战术式编程。当前提交速度没有计入以后维护者重新理解和清理的成本。",
+    "alt": "赶当前任务、接受小补丁、复杂性积累、下次修改受阻构成回路；代价还会落到后续维护者。",
+    "kind": "causal-loop",
+    "desktop": "/diagrams/ch03-patch-cycle.svg",
+    "mobile": "/diagrams/ch03-patch-cycle-mobile.svg",
+    "anchor": {
+      "section": "3.1",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "3.1",
+        "epub": "OEBPS/part0007.xhtml#p8:bdac23ce35",
+        "reason": "每次战术式任务都可增加一点复杂性，累积造成问题。"
+      },
+      {
+        "section": "3.1",
+        "epub": "OEBPS/part0007.xhtml#p9:3bd9d83030",
+        "reason": "复杂性需要更多补丁，清理越来越难安排。"
+      },
+      {
+        "section": "3.1",
+        "epub": "OEBPS/part0007.xhtml#p11:93957918f0",
+        "reason": "维护者承担清理成本，个人表面产出速度不能代表系统成本。"
+      }
+    ],
+    "status": "content-reviewed",
+    "titleTw": "一次捷徑如何變成持續負擔？",
+    "questionTw": "為什麼每次都只顧當前任務，會讓以後更難抽空改進設計？",
+    "answerTw": "小補丁增加複雜性，複雜性妨礙下一次修改；為趕下一次進度繼續繞過問題，又增加複雜性，形成自我強化的迴圈。",
+    "summaryTw": "用因果迴路解釋戰術式程式設計。當前提交速度沒有計入以後維護者重新理解和清理的成本。",
+    "altTw": "趕當前任務、接受小補丁、複雜性積累、下次修改受阻構成迴路；代價還會落到後續維護者。",
+    "desktopTw": "/diagrams/ch03-patch-cycle-tw.svg",
+    "mobileTw": "/diagrams/ch03-patch-cycle-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-01-07-followup.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  }
+]

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 732" role="img" aria-labelledby="ch22-complexity-diagnosis-m-title ch22-complexity-diagnosis-m-desc">
+  <title id="ch22-complexity-diagnosis-m-title">从修改困难选择设计动作</title>
+  <desc id="ch22-complexity-diagnosis-m-desc">第一条路径把多处联动映射为依赖检查和责任收拢，第二条把调用契约难找映射为模糊性检查和必要信息显露。两路都回到原任务复核，两种原因可以同时存在。流程为译者综合。</desc>
+  <defs><marker id="ch22-complexity-diagnosis-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="732" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">修改很难，困难来自哪里？</text><text x="16" y="57" font-size="14">第 22 章 · 译者综合；两路可同时成立</text>
+    <rect x="24" y="82" width="288" height="49" rx="5" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/><text x="168" y="112" text-anchor="middle">同一决策改变，要改多个位置</text>
+    <path d="M168 131V172" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch22-complexity-diagnosis-m-arrow)"/><text x="168" y="197" text-anchor="middle">检查依赖：泄露、重复决策</text>
+    <path d="M168 208V239" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch22-complexity-diagnosis-m-arrow)"/>
+    <rect x="24" y="239" width="288" height="55" rx="5" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/><text x="168" y="261" text-anchor="middle">收拢责任与说明</text><text x="168" y="284" text-anchor="middle">把变化藏进模块</text>
+    <rect x="24" y="334" width="288" height="49" rx="5" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/><text x="168" y="364" text-anchor="middle">调用条件和契约，要到处猜找</text>
+    <path d="M168 383V424" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch22-complexity-diagnosis-m-arrow)"/><text x="168" y="449" text-anchor="middle">检查模糊性：必要信息不明显</text>
+    <path d="M168 460V491" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch22-complexity-diagnosis-m-arrow)"/>
+    <rect x="24" y="491" width="288" height="55" rx="5" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/><text x="168" y="513" text-anchor="middle">隐藏无关信息</text><text x="168" y="536" text-anchor="middle">显露必要契约</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2"><path d="M312 267H333V574H180M312 518H333"/><path d="M180 574V594" marker-end="url(#ch22-complexity-diagnosis-m-arrow)"/></g>
+    <rect x="24" y="594" width="288" height="79" rx="5" fill="none" stroke="var(--diagram-primary,#0b6f5d)"/><text x="168" y="620" text-anchor="middle">回到原任务复核</text><text x="168" y="645" text-anchor="middle">触及的位置、需理解的信息</text><text x="168" y="666" text-anchor="middle" font-size="14">减少了吗？否则继续追查。</text>
+    <text x="16" y="710" font-size="14">依据：结论；16.4、18.3、21.4。</text>
+  </g>
+</svg>

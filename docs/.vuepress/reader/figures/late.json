@@ -1,0 +1,92 @@
+[
+  {
+    "id": "00015",
+    "original": "00015.jpeg",
+    "vector": "/figures/00015.svg",
+    "alt": "Figure 7.1: Four arrangements of C1 and C2 retain five colored method-signature symbols. Panel (a) has three pass-through calls; (b) exposes C2 directly; (c) redistributes methods; (d) merges them into C1.",
+    "kind": "figure",
+    "width": 684,
+    "height": 410,
+    "source": "docs/figures/00015.jpeg; docs/ch07.md section 7.1, Figure 7.1; original EPUB OEBPS/part0011.xhtml#a2DS, image_rsrc2HD.jpg.",
+    "fidelityNotes": [
+      "Traced from the supplied 330 x 193 raster, with a 2x coordinate scale and a small outer margin; English labels, the two-by-two layout, seven class groupings, signature shapes/colors, and all 23 downward call arrows are retained.",
+      "Editable geometric shapes and live Arial-family text replace raster edges. Font metrics, symbol contours, antialiasing, and sampled colors are approximations, not pixel-identical copies.",
+      "The original fixed layout is intentional; use horizontal scrolling or zoom on narrow screens rather than reflowing the panels."
+    ]
+  },
+  {
+    "id": "00016",
+    "original": "00016.gif",
+    "vector": "/figures/00016.svg",
+    "alt": "Figure 7.2: Four main-to-m3 call chains compare passing cert through m1 and m2, storing it in a shared object, using a global variable, and using a context object containing timeout, metrics, cert, and other fields.",
+    "kind": "figure",
+    "width": 888,
+    "height": 854,
+    "source": "docs/figures/00016.gif; docs/ch07.md section 7.5, Figure 7.2; original EPUB OEBPS/part0011.xhtml#a2CY, image_rsrc2HE.jpg.",
+    "fidelityNotes": [
+      "Preserves the original two-by-two arrangement, all four code snippets, 12 downward call arrows, six undirected dotted links, object fields, italic English annotations, and panel letters.",
+      "The existing-object, global-variable, and context alternatives are reproduced, not endorsed or extended. No extra owner box, constructor call, access arrow, or thread-safety claim has been added.",
+      "Live Courier-family code replaces bitmap text; the 2x coordinate scale and outer margin improve legibility without reflowing the layout. Font metrics and dotted-line texture differ slightly from the GIF."
+    ]
+  },
+  {
+    "id": "00019",
+    "original": "00019.jpeg",
+    "vector": "/figures/00019.svg",
+    "alt": "Figure 9.3: A method with a black interface strip and gray implementation is compared with an extracted subtask, two independently called methods marked (rarely works), and several shallow methods marked (avoid!).",
+    "kind": "figure",
+    "width": 1040,
+    "height": 316,
+    "source": "docs/figures/00019.jpeg; docs/ch09.md section 9.7, Figure 9.3; original EPUB OEBPS/part0013.xhtml#a2CZ, image_rsrc2HH.jpg.",
+    "fidelityNotes": [
+      "Retains four Callers boxes, nine method rectangles with thick black interface strips, all nine call arrows plus two label arrows, four panel letters, and the author's exact (rarely works) and (avoid!) labels.",
+      "Method widths, implementation depths, extracted-subtask placement, and shallow-method arrangement follow the raster's relative geometry. They remain qualitative: no numeric scale or inferred values have been added.",
+      "Reproduced at a 2x coordinate scale with an outer margin and live Arial-family text; gray fills and stroke edges are cleaned approximations of the JPEG."
+    ]
+  },
+  {
+    "id": "00020",
+    "original": "00020.jpeg",
+    "vector": "/figures/00020.svg",
+    "alt": "Figure 10.1: A dispatcher above three URL-handler code boxes. Five separate try/catch blocks handle NoSuchParameter around photo_id, message, user_id, login, and password parameter lookups.",
+    "kind": "figure",
+    "width": 1126,
+    "height": 710,
+    "source": "docs/figures/00020.jpeg; docs/ch10.md section 10.7, Figure 10.1; original EPUB OEBPS/part0014.xhtml#a2CD, image_rsrc2HJ.jpg.",
+    "fidelityNotes": [
+      "Transcribes all original code lines, identifiers, parameter strings, ellipses, five try/catch blocks, and four English headings. Preserves the tall left/right handlers, shorter middle handler, and smaller dispatcher above them.",
+      "The original final else-if lacks an opening brace and the parameter-call fragments lack semicolons; those schematic omissions are deliberately retained, not silently repaired into compilable code.",
+      "No arrows were present in the raster and none were added. Live monospace text, slightly regularized baselines, a 2x coordinate scale, and an outer margin replace low-resolution raster type; the fixed wide layout should scroll or zoom on mobile."
+    ]
+  },
+  {
+    "id": "00021",
+    "original": "00021.jpeg",
+    "vector": "/figures/00021.svg",
+    "alt": "Figure 10.2: A dispatcher contains one try/catch around all URL dispatch and an italic send error response; line. The three small URL-handler boxes retain five parameter lookups without local exception handlers.",
+    "kind": "figure",
+    "width": 1018,
+    "height": 536,
+    "source": "docs/figures/00021.jpeg; docs/ch10.md section 10.7, Figure 10.2; original EPUB OEBPS/part0014.xhtml#a2CT, image_rsrc2HK.jpg.",
+    "fidelityNotes": [
+      "Retains every code line and English heading, the single dispatcher-level NoSuchParameter catch, italic send error response; pseudocode, all five parameter lookups, and the original tall-dispatcher/short-handler arrangement.",
+      "As in Figure 10.1, the final else-if's omitted opening brace and the parameter-call fragments' omitted semicolons are retained. No arrows, extra exception types, or replacement implementation have been introduced.",
+      "Live Courier-family text, slightly regularized baselines, a 2x coordinate scale, and a small outer margin improve legibility; the SVG remains fixed-layout for mobile scrolling or zoom."
+    ]
+  },
+  {
+    "id": "00022",
+    "original": "00022.jpeg",
+    "vector": "/figures/00022.svg",
+    "alt": "Figure 20.1: Five colored Logical Array chunks map through dotted lines to blue/green Built-In Allocation, purple Extra Allocation, and orange/yellow External Chunks. The first, fourth, and fifth chunks are inside the Buffer Object.",
+    "kind": "figure",
+    "width": 594,
+    "height": 340,
+    "source": "docs/figures/00022.jpeg; docs/ch20.md section 20.4, Figure 20.1; original EPUB OEBPS/part0024.xhtml#a2CC, image_rsrc2HM.jpg, and the following paragraph describing five chunks.",
+    "fidelityNotes": [
+      "Preserves all English labels, the blue/yellow/orange/green/purple logical order, orange-above-yellow external storage, the Buffer Object boundary, built-in and extra allocations, and all five crossing dotted correspondence lines without arrowheads.",
+      "The purple chunk occupies only the beginning of Extra Allocation; the remaining space stays white. Chunk widths follow the original relative geometry but do not imply a byte-count scale.",
+      "Reproduced with editable rectangles, dotted paths, live Arial-family text, a 2x coordinate scale, and an outer margin. Exact font metrics, dotted texture, and JPEG colors are approximate."
+    ]
+  }
+]

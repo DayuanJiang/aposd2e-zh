@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 444" role="img" aria-labelledby="ch02-weighted-work-title ch02-weighted-work-desc">
+  <title id="ch02-weighted-work-title">先简化最难的，还是常改的？</title>
+  <desc id="ch02-weighted-work-desc">教学算例，权重固定。A 的复杂性 2 乘时间占比 80% 等于 1.6；B 的 8 乘 20% 也为 1.6。A 降低一分使总和从 3.2 降到 2.4，B 降低一分只降到 3.0。不是工时或收益预测。</desc>
+  <rect width="680" height="444" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="24" y="34" font-size="20" font-weight="600">先简化最难的，还是常改的？</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">教学算例：假设两部分、权重固定，分值只为解释关系</text>
+    <text x="40" y="104">部分</text><text x="224" y="104">局部复杂性</text><text x="374" y="104">开发时间占比</text><text x="548" y="104">加权贡献</text>
+    <rect x="24" y="118" width="632" height="58" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <rect x="24" y="177" width="632" height="58" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <text x="40" y="153" font-weight="600">A：经常接触</text><text x="264" y="153">2</text><text x="412" y="153">80%</text><text x="570" y="153">1.6</text>
+    <text x="40" y="212" font-weight="600">B：较少接触</text><text x="264" y="212">8</text><text x="412" y="212">20%</text><text x="570" y="212">1.6</text>
+    <path d="M24 235H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="40" y="262">局部复杂性差四倍，加权贡献却相同。</text><text x="532" y="262" font-weight="600">总和 3.2</text>
+    <text x="24" y="307" font-weight="600">如果都能让局部复杂性下降 1：</text>
+    <text x="40" y="341" fill="var(--diagram-primary,#0b6f5d)">改 A：1 × 80% + 8 × 20%</text>
+    <text x="40" y="370" font-weight="600">总和 2.4　下降 0.8</text>
+    <path d="M340 324V381" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="368" y="341" fill="var(--diagram-secondary,#2c6096)">改 B：2 × 80% + 7 × 20%</text>
+    <text x="368" y="370" font-weight="600">总和 3.0　下降 0.2</text>
+    <text x="24" y="419" font-size="14" fill="var(--diagram-muted,#5c645d)">这不是工时预测；实际改进成本与时间权重也可能变化。</text>
+  </g>
+</svg>

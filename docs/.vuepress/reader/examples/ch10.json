@@ -1,0 +1,11 @@
+[
+  {
+    "id": "ch10-f1",
+    "sourceHash": "53590d1d49c91b4ad399eaa92dd301e4bf74b6fa7d569500e7b8a66a7218331c",
+    "python": "import io\nimport pickle\n\n# Tweet, fileName, tweetsPerFile, and tweets come from the application.\n# Only trusted pickle data, not Java's serialized format.\ntry:\n    with io.FileIO(fileName, \"r\") as fileStream:\n        with io.BufferedReader(fileStream) as bufferedStream:\n            objectStream = pickle.Unpickler(bufferedStream)\n            for i in range(tweetsPerFile):\n                tweet = objectStream.load()\n                if tweet is not None and not isinstance(tweet, Tweet):\n                    raise TypeError(\"Expected Tweet\")\n                tweets.append(tweet)\nexcept FileNotFoundError as e:\n    ...\nexcept (ImportError, AttributeError) as e:\n    ...\nexcept EOFError as e:\n    # Not a problem: not all tweet files contain the full set of tweets.\n    pass\nexcept (OSError, pickle.UnpicklingError) as e:\n    ...\nexcept TypeError as e:\n    ...\n",
+    "note": "教学改写：保留分层 I/O 和多个异常分支，tweets 以列表表示。仅适用于可信的 Python pickle 数据，不兼容 Java 序列化；Tweet 由应用提供。显式检查代替强制类型转换并允许 None，异常类并非一一对应，处理代码仍省略。这份捕获列表并不完整：例如不支持的 pickle 协议会以 ValueError 逸出。照原例忽略 EOFError，但它也可能表示数据截断。",
+    "noteEn": "Teaching adaptation: preserves layered I/O and separate handlers; tweets is a list. Only trusted Python pickle data, not Java serialization; Tweet is supplied by the application. The explicit check stands in for the cast and accepts None, but exception classes are not equivalent and handlers remain placeholders. This catch list is not exhaustive: an unsupported pickle protocol, for example, escapes as ValueError. EOFError is deliberately ignored as in the source, though it can also indicate truncated data.",
+    "originalLanguage": "java",
+    "noteTw": "教學改寫：保留分層 I/O 和多個例外分支，tweets 以列表表示。僅適用於可信的 Python pickle 資料，不相容 Java 序列化；Tweet 由應用提供。顯式檢查代替強制型別轉換並允許 None，例外類並非一一對應，處理程式碼仍省略。這份捕獲列表並不完整：例如不支援的 pickle 協議會以 ValueError 逸出。照原例忽略 EOFError，但它也可能表示資料截斷。"
+  }
+]

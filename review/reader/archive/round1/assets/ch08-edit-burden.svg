@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 450" role="img" aria-labelledby="ch08-edit-burden-t ch08-edit-burden-d">
+  <title id="ch08-edit-burden-t">拆行与并行应该由谁负责？</title>
+  <desc id="ch08-edit-burden-d">前：输入与选区操作各自处理拆行并行，再调用整行接口。后：两类操作调用任意字符范围接口，共享文本类内部的拆行并行。内部按行存储是条件。</desc>
+  <defs><marker id="ch08-edit-burden-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="680" height="450" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">拆行与并行应该由谁负责？</text>
+    <text x="24" y="62" fill="var(--diagram-muted,#58636b)">同一文本机制：分散给多个调用者，还是封装在一处</text>
+    <text x="24" y="100" font-weight="600">整行接口</text><text x="362" y="100" font-weight="600">任意字符范围接口</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)"><rect x="24" y="118" width="134" height="42" rx="4"/><rect x="180" y="118" width="134" height="42" rx="4"/><rect x="362" y="118" width="134" height="42" rx="4"/><rect x="518" y="118" width="138" height="42" rx="4"/></g>
+    <text x="60" y="145">输入操作</text><text x="216" y="145">选区操作</text><text x="398" y="145">输入操作</text><text x="555" y="145">选区操作</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch08-edit-burden-a)"><path d="M91 160V186"/><path d="M247 160V186"/><path d="M429 160V244H509V263"/><path d="M587 160V244H509"/></g>
+    <g fill="var(--diagram-warm-soft,#eae2cf)"><rect x="24" y="190" width="134" height="48" rx="4"/><rect x="180" y="190" width="134" height="48" rx="4"/></g>
+    <text x="40" y="219">拆行 / 并行</text><text x="196" y="219">拆行 / 并行</text>
+    <text x="387" y="203" fill="var(--diagram-muted,#58636b)">界面只表达要编辑的范围</text>
+    <path d="M24 253H314M362 253H656" stroke="var(--diagram-line,#aebbad)" stroke-dasharray="5 4"/>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch08-edit-burden-a)"><path d="M91 238V265"/><path d="M247 238V265"/></g>
+    <rect x="24" y="269" width="290" height="48" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="78" y="299">读取 / 插入 / 删除整行</text>
+    <rect x="362" y="269" width="294" height="48" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="411" y="299">插入 / 删除任意字符范围</text>
+    <path d="M509 318V338" fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch08-edit-burden-a)"/>
+    <rect x="362" y="342" width="294" height="48" rx="4" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="433" y="372">拆行 / 并行</text>
+    <text x="24" y="352" font-size="14" fill="var(--diagram-muted,#58636b)">虚线以上：用户界面</text><text x="24" y="378" font-size="14" fill="var(--diagram-muted,#58636b)">虚线以下：文本类</text>
+    <text x="24" y="422" font-size="13" fill="var(--diagram-muted,#58636b)">责任路径示意；若文本类内部按行存储，拆行与并行仍要做，只是不再分散给调用者。</text>
+  </g>
+</svg>

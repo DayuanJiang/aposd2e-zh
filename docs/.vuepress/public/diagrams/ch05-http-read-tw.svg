@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 578" role="img" aria-labelledby="ch05-http-read-title ch05-http-read-desc">
+  <title id="ch05-http-read-title">還沒解析，怎麼知道讀完了？</title>
+  <desc id="ch05-http-read-desc">教學請求片段中的 Content-Length: 4 透過依賴虛線指向 a、=、1、2 四位元組範圍。K 是識別頭部空行與解釋長度的知識。被批評的方案中讀取類和解析類各自有 K，前者先用 K 完成定界讀取，後者再用 K 解析。合併方案將 K 留給一個模組。</desc>
+  <defs><marker id="ch05-http-read-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="680" height="578" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="20" font-weight="600">還沒解析，怎麼知道讀完了？</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">教學請求片段：僅討論顯式 Content-Length 定界</text>
+    <text x="24" y="110" font-family="ui-monospace,monospace">Content-Length: 4</text><text x="24" y="139" font-size="14">頭部以空行結束</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-line,#aebbad)"><rect x="408" y="87" width="50" height="44" /><rect x="458" y="87" width="50" height="44" /><rect x="508" y="87" width="50" height="44" /><rect x="558" y="87" width="50" height="44" /></g>
+    <g font-family="ui-monospace,monospace" text-anchor="middle" font-size="19"><text x="433" y="116">a</text><text x="483" y="116">=</text><text x="533" y="116">1</text><text x="583" y="116">2</text></g>
+    <path d="M408 139V151H608V139" fill="none" stroke="var(--diagram-secondary,#2c6096)" />
+    <path d="M218 106H357V151H398" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-dasharray="5 4" marker-end="url(#ch05-http-read-arrow)" />
+    <text x="238" y="95" font-size="13">長度約束</text><text x="411" y="177" font-size="14">請求體共 4 個 ASCII 位元組</text>
+    <text x="24" y="213" font-weight="600">K = 識別空行 + 解釋長度；讀取者已經需要 K</text>
+    <text x="24" y="250" font-weight="600">被批評的拆分類設計</text>
+    <rect x="24" y="267" width="280" height="98" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" />
+    <text x="40" y="296" font-weight="600">讀取類：包含 K</text><text x="40" y="325">用 K 判斷需要讀完哪些位元組</text><text x="40" y="352" font-size="14">回傳請求字串</text>
+    <rect x="376" y="267" width="280" height="98" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" />
+    <text x="392" y="296" font-weight="600">解析類：也包含 K</text><text x="392" y="325">再解釋頭部與請求體邊界</text><text x="392" y="352" font-size="14">呼叫者還要安排先後</text>
+    <path d="M314 320H365" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-http-read-arrow)" /><text x="314" y="306" font-size="13">再解析</text>
+    <rect x="24" y="395" width="632" height="93" rx="4" fill="none" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="40" y="423" font-weight="600">合併後：一個模組儲存 K</text>
+    <text x="40" y="457">接收請求入口</text><text x="232" y="457">K 定界並讀取</text><text x="454" y="457">形成請求物件</text>
+    <g stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-http-read-arrow)"><path d="M145 451H217" /><path d="M334 451H439" /></g>
+    <text x="24" y="519" font-size="14">實線是處理順序，虛線是長度依賴；取得請求體可能需要多次讀取。</text>
+    <text x="24" y="548" font-size="13" fill="var(--diagram-muted,#5c645d)">其他定界、校驗與錯誤路徑未畫出；不是所有協議都應採用同一個類的通則。</text>
+  </g>
+</svg>

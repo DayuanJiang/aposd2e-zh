@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 423" role="img" aria-labelledby="ch10-mask-obligation-t ch10-mask-obligation-d">
+  <title id="ch10-mask-obligation-t">屏蔽异常不能丢掉完成义务</title><desc id="ch10-mask-obligation-d">可恢复的情况在内部重试，操作确实完成才报告成功。未能完成且调用者需要的信息必须暴露。错误直接丢弃而假装成功是反例，不是异常屏蔽。</desc>
+  <defs><marker id="ch10-mask-obligation-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="680" height="423" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">屏蔽异常不能丢掉完成义务</text>
+    <text x="24" y="70" font-size="14">条件路径：内部处理成功，不等于无条件保证网络最终恢复。</text>
+    <text x="24" y="113" font-weight="600">可以内部恢复</text>
+    <rect x="24" y="132" width="160" height="45" rx="4" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="70" y="161">出现丢包</text>
+    <rect x="259" y="132" width="170" height="45" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="290" y="161">内部重试并完成</text>
+    <rect x="505" y="132" width="151" height="45" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="550" y="161">返回成功</text>
+    <g stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch10-mask-obligation-a)"><path d="M185 155H251"/><path d="M430 155H497"/></g>
+    <text x="24" y="217" font-weight="600">未完成，且调用者需要知道</text>
+    <rect x="24" y="236" width="160" height="45" rx="4" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="63" y="265">操作仍失败</text>
+    <path d="M185 259H497" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch10-mask-obligation-a)"/><text x="289" y="247">暴露失败信息</text>
+    <rect x="505" y="236" width="151" height="45" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="534" y="265">调用者可处理</text>
+    <path d="M24 307H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="340" fill="var(--diagram-danger,#a03946)">反例：错误</text>
+    <path d="M112 335H250M363 335H495" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-dasharray="5 4"/>
+    <text x="267" y="340">捕获后丢弃</text><text x="512" y="340">假装成功</text>
+    <path d="M416 321L436 348M436 321L416 348" stroke="var(--diagram-danger,#a03946)" stroke-width="3"/>
+    <text x="24" y="382" font-size="13" fill="var(--diagram-muted,#58636b)">反例既没有完成操作，也没有让上层知道消息可能丢失或对端失败。</text>
+    <text x="24" y="405" font-size="13" fill="var(--diagram-muted,#58636b)">只有外部不需要该异常信息时，才适合通过定义消除或在模块内部屏蔽。</text>
+  </g>
+</svg>

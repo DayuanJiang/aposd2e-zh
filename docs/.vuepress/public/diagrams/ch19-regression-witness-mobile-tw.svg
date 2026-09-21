@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 749" role="img" aria-labelledby="ch19-regression-witness-m-title ch19-regression-witness-m-desc">
+  <title id="ch19-regression-witness-m-title">同一測試的缺陷版失敗和修復版通過才形成迴歸證據</title>
+  <desc id="ch19-regression-witness-m-desc">自擬 last 錯取倒數第二項，測試 T 對 A B C 期望 C。圖中設定缺陷版回傳 B 而修復版回傳 C，並要求失敗原因對應報告缺陷。只測修復版時可沿虛線將 T 補查缺陷版，此為譯者說明而非作者原有步驟；沒有執行測試。</desc>
+  <defs><marker id="ch19-regression-witness-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="360" height="749" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">缺的是舊版證據，不是順序</text><text x="16" y="57" font-size="14">19.4 · last 錯取末項的自擬例，未執行</text>
+    <text x="16" y="94" font-family="ui-monospace,monospace" font-size="16">T: last([A, B, C]) == C</text>
+    <text x="16" y="122" font-size="14">以下兩版使用同一輸入和斷言</text>
+    <rect x="24" y="144" width="288" height="123" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" />
+    <text x="40" y="174" font-weight="600">缺陷版本 + T</text><text x="40" y="204">回傳 B ≠ 期望 C → 失敗</text><text x="40" y="234" font-size="14">核對原因：錯取倒數第二項，</text><text x="40" y="257" font-size="14">正是報告缺陷，不是無關報錯。</text>
+    <path d="M168 267V310" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch19-regression-witness-m-arrow)" /><text x="188" y="296" font-size="14">與修復版配對</text>
+    <rect x="24" y="310" width="288" height="99" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="40" y="340" font-weight="600">修復版本 + T</text><text x="40" y="370">回傳 C = 期望 C → 通過</text><text x="40" y="396" font-size="14">支持覆蓋這一條迴歸</text>
+    <text x="24" y="452">只有修復版通過，舊版尚未檢查？</text><text x="24" y="480">把同一 T 放到缺陷版核對原因。</text>
+    <path d="M312 474H335V202H312" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ch19-regression-witness-m-arrow)" />
+    <text x="24" y="511" font-size="14">虛線是譯者補查說明，不限測試編寫先後。</text>
+    <path d="M16 537H344" stroke="var(--diagram-line,#aebbad)" />
+    <text x="16" y="568">作者建議：修前先獲得缺陷失敗。</text><text x="16" y="600" font-size="14">後來編寫的測試也可補查舊版；</text><text x="16" y="625" font-size="14">圖中的 B/C 是教學設定，非執行結果。</text>
+    <text x="16" y="662" font-size="14">不能把環境等無關失敗當作該回歸證據。</text><text x="16" y="694" font-size="14">通過這一測試不證明全部正確、設計優良，</text><text x="16" y="719" font-size="14">也不保證沒有其他缺陷。</text>
+  </g>
+</svg>

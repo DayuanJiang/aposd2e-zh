@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 450" role="img" aria-labelledby="ch08-retry-feedback-t ch08-retry-feedback-d">
+  <title id="ch08-retry-feedback-t">重试间隔的知识在哪里？</title><desc id="ch08-retry-feedback-d">固定参数由管理员设定，不随运行条件自动变化。动态方案用成功请求的响应时间计算合理重试间隔，反馈到后续请求。用户仍可能更了解业务优先级。</desc>
+  <defs><marker id="ch08-retry-feedback-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="680" height="450" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">重试间隔的知识在哪里？</text>
+    <text x="24" y="77" font-weight="600">固定配置</text>
+    <rect x="24" y="96" width="150" height="46" rx="4" fill="var(--diagram-warm-soft,#eae2cf)"/><text x="46" y="125">管理员选择间隔</text>
+    <rect x="244" y="96" width="180" height="46" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="270" y="125">按该间隔进行重试</text>
+    <path d="M174 119H237" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch08-retry-feedback-a)"/>
+    <text x="457" y="112" fill="var(--diagram-danger,#a03946)">运行条件变了</text><text x="457" y="137" font-size="14">参数不会自动跟着变</text>
+    <path d="M24 167H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="197" font-weight="600">模块内部的反馈回路</text>
+    <g fill="var(--diagram-primary-soft,#d6e5dc)"><rect x="24" y="222" width="158" height="58" rx="4"/><rect x="254" y="222" width="158" height="58" rx="4"/><rect x="488" y="222" width="168" height="58" rx="4"/></g>
+    <text x="48" y="247">成功请求</text><text x="48" y="269">取得响应</text><text x="276" y="247">测量响应时间</text><text x="276" y="269">观察当前条件</text><text x="510" y="247">计算合理间隔</text><text x="510" y="269">供后续请求使用</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch08-retry-feedback-a)"><path d="M182 251H246"/><path d="M412 251H480"/><path d="M572 281V324H103V289"/></g>
+    <text x="234" y="315" font-size="14">后续请求继续提供测量依据</text>
+    <path d="M24 348H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="379" font-weight="600">不同的知识：请求有多紧急？</text><text x="341" y="379">用户可能知道得更多，可提供优先级。</text>
+    <text x="24" y="416" font-size="13" fill="var(--diagram-muted,#58636b)">原文建议用成功响应时间的某个倍数；未指定倍数。图不是完整传输算法。</text>
+    <text x="24" y="437" font-size="13" fill="var(--diagram-muted,#58636b)">暴露配置前先问：用户能确定更好的值吗？能否提供合理默认值？</text>
+  </g>
+</svg>

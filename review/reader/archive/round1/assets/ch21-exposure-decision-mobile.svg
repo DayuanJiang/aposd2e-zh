@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 656" role="img" aria-labelledby="ch21-exposure-decision-m-title ch21-exposure-decision-m-desc">
+  <title id="ch21-exposure-decision-m-title">先判断必要性，再决定信息是否暴露</title>
+  <desc id="ch21-exposure-decision-m-desc">移动版矩阵把必要性放在每组上方，显露与隐藏保持左右对应。需要的信息显露有益、隐藏有害；不需要的选择显露增加负担、隐藏减少负担。</desc>
+  <rect width="360" height="656" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">少暴露，未必更简单</text><text x="16" y="57" font-size="14">21.2–21.4 · 按调用者的需要判断</text>
+    <text x="96" y="100" text-anchor="middle" font-weight="600">接口显露</text><text x="266" y="100" text-anchor="middle" font-weight="600">内部隐藏</text>
+    <path d="M16 116H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="144" font-weight="600">调用者需要的信息</text>
+    <rect x="16" y="161" width="157" height="140" fill="var(--diagram-primary-soft,#d6e5dc)"/><rect x="187" y="161" width="157" height="140" fill="var(--diagram-danger-soft,#ead9dc)"/>
+    <text x="29" y="191" font-weight="600">支持正确调用</text><text x="29" y="221">名称、必要参数</text><text x="29" y="247">与接口契约</text><text x="29" y="281" font-size="14">例：必要调用前提</text>
+    <text x="200" y="191" font-weight="600">未知的未知</text><text x="200" y="221">需要的信息</text><text x="200" y="247">却看不见</text><text x="200" y="281" font-size="14">不是有效的信息隐藏</text>
+    <text x="16" y="338" font-weight="600">调用者不需要的选择</text>
+    <rect x="16" y="355" width="157" height="140" fill="var(--diagram-danger-soft,#ead9dc)"/><rect x="187" y="355" width="157" height="140" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="29" y="386" font-weight="600">增加认知负荷</text><text x="29" y="416">强迫调用者</text><text x="29" y="442">做无关选择</text><text x="29" y="477" font-size="14">原例：显式选缓冲</text>
+    <text x="200" y="386" font-weight="600">减少负担</text><text x="200" y="416">默认、自动计算</text><text x="200" y="442">或局部处理</text><text x="200" y="477" font-size="14">不把细节向外传播</text>
+    <text x="16" y="532">必要信息可见，无关细节不外溢。</text>
+    <text x="16" y="574" font-size="14">“调用前提”为教学示意。</text><text x="16" y="599" font-size="14">缓冲选择来自本章的 Java I/O 讨论。</text>
+    <text x="16" y="635" font-weight="600">目标不是隐藏得最多。</text>
+  </g>
+</svg>

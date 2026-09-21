@@ -1,0 +1,59 @@
+[
+  {
+    "id": "ch19-inheritance-dependencies",
+    "chapter": "ch19",
+    "title": "少复制代码，不等于少依赖",
+    "question": "实现继承减少重复后，为什么改父类仍可能牵动所有子类？",
+    "answer": "共享实现减少需要同步修改的副本，但共享状态与覆盖关系会让类互相依赖；可以考虑组合，或在继承层次内隔离状态。",
+    "summary": "左边虚线表示修改时可能需要检查的范围，不是方法调用。右边是作者提出的辅助类组合方案，调用依赖仍存在，但内部状态不直接共享。A/B 为教学占位名。",
+    "alt": "父类状态与两个子类相连，修改父类时检查范围扩大到子类；组合方案中两个类通过接口使用共同辅助类，状态留在辅助类边界内部，强调消除共享状态而非声称无依赖。",
+    "kind": "dependency-boundary",
+    "desktop": "/diagrams/ch19-inheritance-dependencies.svg",
+    "mobile": "/diagrams/ch19-inheritance-dependencies-mobile.svg",
+    "anchor": { "section": "19.1", "placement": "end" },
+    "sources": [
+      { "section": "19.1", "epub": "OEBPS/part0023.xhtml#p8:18d8c7aeae", "reason": "实现继承减少实现副本及相应变更放大。" },
+      { "section": "19.1", "epub": "OEBPS/part0023.xhtml#p9:26fce16963", "reason": "父子类共享状态与覆盖实现可使修改需要检查其他类。" },
+      { "section": "19.1", "epub": "OEBPS/part0023.xhtml#p10:551466c57e", "reason": "考虑通过辅助类组合获得共享功能；图中 A/B 为教学占位，不是书中的具体类。" },
+      { "section": "19.1", "epub": "OEBPS/part0023.xhtml#p11:ec90170f31", "reason": "若必须继承，应隔离父类和子类管理的状态。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch19-abstraction-increment",
+    "chapter": "ch19",
+    "title": "一次增量，该围绕功能还是抽象？",
+    "question": "先做最小功能，与先设计所需抽象，会让后续功能怎样接入？",
+    "answer": "作者建议功能触发抽象需求后，就设计相对完整且稍具通用性的核心；后续功能复用这个核心，而不是各自堆叠专用机制。",
+    "summary": "教学自拟的甲、乙功能用来比较依赖结构。不是提前实现所有未来功能，也不是声称每种敏捷实践都会产生左侧结构。",
+    "alt": "上路功能甲和功能乙分别连到专用机制，增加后续特殊分支；下路当前功能触发所需抽象设计，两个功能汇入同一核心；尚无需求的未来抽象留在范围外。",
+    "kind": "increment-structure",
+    "desktop": "/diagrams/ch19-abstraction-increment.svg",
+    "mobile": "/diagrams/ch19-abstraction-increment-mobile.svg",
+    "anchor": { "section": "19.2", "placement": "end" },
+    "sources": [
+      { "section": "19.2", "epub": "OEBPS/part0023.xhtml#p16:402a1c2dbc", "reason": "作者指出只盯功能、推迟通用设计的战术风险，不是对全部敏捷实践的必然断言。" },
+      { "section": "19.2", "epub": "OEBPS/part0023.xhtml#p17:7d626259c3", "reason": "功能需要抽象前可以推迟；需要后应整洁设计并有一定通用性。甲乙功能与结构对比是教学示意。" }
+    ],
+    "status": "awaiting-independent-review"
+  },
+  {
+    "id": "ch19-regression-witness",
+    "chapter": "ch19",
+    "title": "通过的测试，真的测到了那个缺陷吗？",
+    "question": "为什么修复缺陷时应先看到测试因该缺陷失败？",
+    "answer": "同一测试先在缺陷版本失败，再在修复版本通过，才能证明它触发了问题；修完才写且立即通过的测试，可能从未触发过缺陷。",
+    "summary": "上下两条路径对比证据是否齐全。测试有助于安全重构，但通过测试不是设计优良或没有其他缺陷的证明。",
+    "alt": "证据完整的路径为缺陷版本上测试失败、修复、同一测试通过；反例为先修复、后写测试并通过，缺少旧版失败证据，无法确认测试是否触发缺陷。",
+    "kind": "verification-counterexample",
+    "desktop": "/diagrams/ch19-regression-witness.svg",
+    "mobile": "/diagrams/ch19-regression-witness-mobile.svg",
+    "anchor": { "section": "19.4", "placement": "end" },
+    "sources": [
+      { "section": "19.3", "epub": "OEBPS/part0023.xhtml#p21:a5daf497db", "reason": "测试降低重构时发现缺陷的难度，提高进行结构调整的信心；不是正确性保证。" },
+      { "section": "19.4", "epub": "OEBPS/part0023.xhtml#p26:767f205de4", "reason": "作者区分通过功能测试与寻找最佳设计。" },
+      { "section": "19.4", "epub": "OEBPS/part0023.xhtml#p28:b49380a4ac", "reason": "修复前编写因缺陷而失败的测试，再确认修复后通过；反向顺序可能写出不触发缺陷的测试。" }
+    ],
+    "status": "awaiting-independent-review"
+  }
+]

@@ -1,0 +1,63 @@
+{
+  "status": "accepted-with-documented-boundaries",
+  "scope": {
+    "originalContentImagesRecreated": 12,
+    "cover": "original raster preserved",
+    "activeTeachingDiagrams": 50,
+    "chaptersCovered": 22,
+    "teachingSvgVariants": 200,
+    "totalActiveSvgAssets": 212,
+    "sourceLockedPythonAdaptations": 44,
+    "retiredDraftDiagrams": 12
+  },
+  "contentEvidence": [
+    "original-figure-review.json",
+    "diagram-review-01-07-followup.json",
+    "diagram-review-08-14-second.json",
+    "diagram-review-15-21-second.json",
+    "diagram-review-22-followup.json",
+    "traditional-reader-followup.json",
+    "python-review.md"
+  ],
+  "verification": {
+    "currentScSvgHashesMatchIndependentReviews": true,
+    "currentScQuestionsAnswersAndAnchorsMatchReviewedSnapshot": true,
+    "retiredAssetsAbsentFromPublicSourceAndProductionOutput": true,
+    "nodeTests": 6,
+    "readerPythonTests": 10,
+    "translationAuditTests": 6,
+    "protectedContentFailures": 0,
+    "synchronizedTraditionalMarkdownFiles": 25,
+    "svgStaticChecks": 212,
+    "svgLightDarkGeometryCandidates": 0,
+    "productionPagesBuilt": 76,
+    "wholeBookPageStatesPassed": 300,
+    "finalScopedPageStatesPassed": 24,
+    "finalScopedChapters": ["ch13", "ch17"],
+    "finalInteractionSuite": "passed on Vite preview, including rendered B1 correction and mixed-language label",
+    "resilienceSuite": "passed",
+    "developmentDesktopMobileSmoke": "passed with no console errors",
+    "productionAppAsset": "app-UgAVK0Am.js",
+    "productionStyleAsset": "style-j2a0B27N.css"
+  },
+  "evidenceLocations": {
+    "svgGallery": "/tmp/aposd2e-viz-accepted",
+    "fullPageMatrix": "/tmp/aposd2e-pages-accepted",
+    "finalScopedMatrix": "/tmp/aposd2e-final-vite-targeted",
+    "interactions": "/tmp/aposd2e-reader-interactions/result.json",
+    "resilience": "/tmp/aposd2e-reader-resilience/result.json",
+    "developmentScreenshots": [
+      "/tmp/aposd2e-dev-desktop.png",
+      "/tmp/aposd2e-dev-mobile.png"
+    ]
+  },
+  "boundaries": [
+    "Explanatory-design review is not an empirical reader-comprehension experiment.",
+    "Browser evidence uses installed macOS Chrome and emulated viewport widths, not every physical device or browser.",
+    "The Python option covers the 44 Java-labelled fences, including some C++ or mixed originals, not code embedded in faithful original-figure reproductions.",
+    "English pages remain the repository's public excerpts; the supplied complete EPUB was used locally for comparison.",
+    "Original-vector fonts, stroke textures and tiny flag contours are approximations, not pixel-identical raster reconstructions.",
+    "Remote links and authentication flows were not audited.",
+    "No commit, push or deployment was performed."
+  ]
+}

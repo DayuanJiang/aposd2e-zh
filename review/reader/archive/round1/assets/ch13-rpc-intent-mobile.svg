@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 649" role="img" aria-labelledby="ch13-rpc-intent-m-t ch13-rpc-intent-m-d">
+  <title id="ch13-rpc-intent-m-t">先看要装进哪个请求，再读条件</title><desc id="ch13-rpc-intent-m-d">当前键哈希的目标是A。三个候选请求按目标、发送状态和容量分类。目标A且未发送有空间的请求仍需通过maxPos检查，其理由没有被高层注释解释。</desc>
+  <defs><marker id="ch13-rpc-intent-m-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="360" height="649" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="20" y="32" font-size="18" font-weight="600">先看要装进哪个请求，再读条件</text><text x="20" y="66" font-size="14">意图：追加到目标服务器上尚未发出的 RPC</text>
+    <rect x="20" y="88" width="320" height="55" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="43" y="121">当前键的哈希：目标服务器 A</text>
+    <path d="M38 144V477" stroke="var(--diagram-muted,#58636b)" fill="none"/>
+    <path d="M38 204H59M38 306H59M38 420H59" stroke="var(--diagram-muted,#58636b)" fill="none"/>
+    <path d="M50 195L64 212M64 195L50 212M50 297L64 314M64 297L50 314" stroke="var(--diagram-danger,#a03946)" stroke-width="2"/>
+    <path d="M38 420H63" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch13-rpc-intent-m-a)"/>
+    <rect x="72" y="170" width="268" height="72" rx="4" fill="var(--diagram-danger-soft,#ead9dc)"/><text x="88" y="199">服务器 B：尚未发出</text><text x="88" y="226" font-size="14">目标不符，不能追加</text>
+    <rect x="72" y="272" width="268" height="72" rx="4" fill="var(--diagram-danger-soft,#ead9dc)"/><text x="88" y="301">服务器 A：已经发出</text><text x="88" y="328" font-size="14">状态不符，不能再追加</text>
+    <rect x="72" y="374" width="268" height="104" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="88" y="403">服务器 A：尚未发出</text><text x="88" y="430">还有容量</text><text x="88" y="460" font-size="14">只是候选，仍需检查 maxPos</text>
+    <path d="M20 503H340" stroke="var(--diagram-line,#aebbad)"/><text x="20" y="532" font-weight="600">解释缺口：maxPos &lt; assignPos</text>
+    <text x="20" y="561" font-size="14">高层注释没有解释这一条件的理由。</text><text x="20" y="588" font-size="14">理解意图，不等于知道全部细节。</text>
+    <text x="20" y="622" font-size="13" fill="var(--diagram-muted,#58636b)">服务器字母及布局为教学示意，非完整算法。</text>
+  </g>
+</svg>

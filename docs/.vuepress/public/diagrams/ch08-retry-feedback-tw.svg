@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 450" role="img" aria-labelledby="ch08-retry-feedback-t ch08-retry-feedback-d">
+  <title id="ch08-retry-feedback-t">重試間隔的知識在哪裡？</title><desc id="ch08-retry-feedback-d">固定參數由管理員設定，不隨執行條件自動變化。動態方案用成功請求的響應時間計算合理重試間隔，反饋到後續請求。使用者仍可能更瞭解業務優先權。</desc>
+  <defs><marker id="ch08-retry-feedback-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)" /></marker></defs>
+  <rect width="680" height="450" fill="var(--diagram-bg,#f5f7f8)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">重試間隔的知識在哪裡？</text>
+    <text x="24" y="77" font-weight="600">固定設定</text>
+    <rect x="24" y="96" width="150" height="46" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" /><text x="46" y="125">管理員選擇間隔</text>
+    <rect x="244" y="96" width="180" height="46" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" /><text x="270" y="125">按該間隔進行重試</text>
+    <path d="M174 119H237" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch08-retry-feedback-a)" />
+    <text x="457" y="112" fill="var(--diagram-danger,#a03946)">執行條件變了</text><text x="457" y="137" font-size="14">參數不會自動跟著變</text>
+    <path d="M24 167H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="24" y="197" font-weight="600">模組內部的反饋迴路</text>
+    <g fill="var(--diagram-primary-soft,#d6e5dc)"><rect x="24" y="222" width="158" height="58" rx="4" /><rect x="254" y="222" width="158" height="58" rx="4" /><rect x="488" y="222" width="168" height="58" rx="4" /></g>
+    <text x="48" y="247">成功請求</text><text x="48" y="269">取得響應</text><text x="276" y="247">測量響應時間</text><text x="276" y="269">觀察當前條件</text><text x="510" y="247">計算合理間隔</text><text x="510" y="269">供後續請求使用</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch08-retry-feedback-a)"><path d="M182 251H246" /><path d="M412 251H480" /><path d="M572 281V324H103V289" /></g>
+    <text x="234" y="315" font-size="14">後續請求繼續提供測量依據</text>
+    <path d="M24 348H656" stroke="var(--diagram-line,#aebbad)" />
+    <text x="24" y="379" font-weight="600">不同的知識：請求有多緊急？</text><text x="341" y="379">使用者可能知道得更多，可提供優先權。</text>
+    <text x="24" y="416" font-size="13" fill="var(--diagram-muted,#58636b)">原文建議用成功響應時間的某個倍數；未指定倍數。圖不是完整傳輸演算法。</text>
+    <text x="24" y="437" font-size="13" fill="var(--diagram-muted,#58636b)">暴露設定前先問：使用者能確定更好的值嗎？能否提供合理預設值？</text>
+  </g>
+</svg>

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "ch04-f1",
+    "sourceHash": "760fb1d3122a817f88735c8ad57c04f6a9ba13c08409686788ce447be3bbedfe",
+    "originalLanguage": "c",
+    "python": "def open(path: str, flags: int, permissions: int) -> int:\n    ...\n\n\ndef read(fd: int, buffer: bytearray, count: int) -> int:\n    ...\n\n\ndef write(fd: int, buffer: bytes, count: int) -> int:\n    ...\n\n\ndef lseek(fd: int, offset: int, referencePosition: int) -> int:\n    ...\n\n\ndef close(fd: int) -> int:\n    ...\n",
+    "note": "接口示意：用 Python 签名展示原书的五个 Unix 操作，保留调用者提供缓冲区和字节数的接口形态。这不是 Python os 模块的调用方式，也不执行系统调用；省略的函数体按字面执行会返回 None，并未实现返回类型或错误处理约定。",
+    "noteEn": "Interface sketch: Python signatures present the five Unix operations and retain caller-supplied buffers and byte counts. These are not Python os-module signatures and perform no system calls. Literal placeholder bodies return None; return types and error contracts are not implemented.",
+    "noteTw": "介面示意：用 Python 簽名展示原書的五個 Unix 操作，保留呼叫者提供緩衝區和位元組數的介面形態。這不是 Python os 模組的呼叫方式，也不執行系統呼叫；省略的函式體按字面執行會回傳 None，並未實作回傳型別或錯誤處理約定。"
+  },
+  {
+    "id": "ch09-f1",
+    "sourceHash": "977cf409fcd0e6541b72c2720a609402e7959732782be9adcef1ad8eeccc341d",
+    "originalLanguage": "cpp",
+    "python": "import logging\n\nlogger = logging.getLogger(__name__)\n\n\ndef handle(common, received):\n    if common.opcode == DATA:\n        header = received.getStart(DataHeader)\n        if header is None:\n            logger.warning(\n                \"%s packet from %s too short (%d bytes)\",\n                opcodeSymbol(common.opcode),\n                received.sender.toString(), received.len,\n            )\n            return\n        ...\n    elif common.opcode == GRANT:\n        header = received.getStart(GrantHeader)\n        if header is None:\n            logger.warning(\n                \"%s packet from %s too short (%d bytes)\",\n                opcodeSymbol(common.opcode),\n                received.sender.toString(), received.len,\n            )\n            return\n        ...\n    elif common.opcode == RESEND:\n        header = received.getStart(ResendHeader)\n        if header is None:\n            logger.warning(\n                \"%s packet from %s too short (%d bytes)\",\n                opcodeSymbol(common.opcode),\n                received.sender.toString(), received.len,\n            )\n            return\n        ...\n",
+    "note": "保留三处分散、重复的短报文日志作为反例。操作码、报文类型、getStart 和发送方对象由应用提供；getStart(type) 代替模板参数，None 表示未取得完整头部。handle 仅补齐 return 的作用域，成功后的处理和其他操作码均未实现。",
+    "noteEn": "Preserves three duplicated short-packet log sites as the counterexample. Opcodes, header types, getStart and sender objects are application-supplied; getStart(type) replaces the template argument and None means no complete header. handle supplies return scope; successful processing and other opcodes remain omitted.",
+    "noteTw": "保留三處分散、重複的短報文日誌作為反例。操作碼、報文型別、getStart 和傳送方物件由應用提供；getStart(type) 代替模板參數，None 表示未取得完整頭部。handle 僅補齊 return 的作用域，成功後的處理和其他操作碼均未實作。"
+  },
+  {
+    "id": "ch09-f2",
+    "sourceHash": "e05a7a4c2a92f54f452a252830925f415db873fe422015ab21cd62312810c06d",
+    "originalLanguage": "cpp",
+    "python": "import logging\n\nlogger = logging.getLogger(__name__)\n\n\nclass PacketTooShort(Exception):\n    pass\n\n\ndef handle(common, received):\n    try:\n        if common.opcode == DATA:\n            header = received.getStart(DataHeader)\n            if header is None:\n                raise PacketTooShort\n            ...\n        elif common.opcode == GRANT:\n            header = received.getStart(GrantHeader)\n            if header is None:\n                raise PacketTooShort\n            ...\n        elif common.opcode == RESEND:\n            header = received.getStart(ResendHeader)\n            if header is None:\n                raise PacketTooShort\n            ...\n        ...\n    except PacketTooShort:\n        logger.warning(\n            \"%s packet from %s too short (%d bytes)\",\n            opcodeSymbol(common.opcode),\n            received.sender.toString(), received.len,\n        )\n        return\n",
+    "note": "Python 没有 goto，这里用本例专用的 PacketTooShort 将三个分支汇到同一日志位置，不捕获无关异常。保留集中处理与前例重复处理的对照；应用类型及正常处理省略，不声称异常跳转与 C++ goto 的性能或控制流完全等价。",
+    "noteEn": "Python has no goto; a dedicated PacketTooShort routes the three guards to one log site without catching unrelated exceptions. This preserves the comparison with duplicated handling. Application types and normal processing are omitted; exception transfer is not claimed to match C++ goto performance or all control-flow semantics.",
+    "noteTw": "Python 沒有 goto，這裡用本例專用的 PacketTooShort 將三個分支匯到同一日誌位置，不捕獲無關例外。保留集中處理與前例重複處理的對照；應用型別及正常處理省略，不聲稱例外跳轉與 C++ goto 的效能或控制流完全等價。"
+  },
+  {
+    "id": "ch13-f13",
+    "sourceHash": "26e62da8fff54ef9070771ce1c415ee92b879f620de9f8d0dc61ac505b354dd4",
+    "originalLanguage": "cpp",
+    "python": "def copy(self, offset: int, length: int, dest: bytearray) -> int:\n    \"\"\"Copy a range of bytes from a buffer to an external location.\n\n    Args:\n        offset: Index within the buffer of the first byte to copy.\n        length: Number of bytes to copy.\n        dest: Where to copy the bytes; must have room for at least\n            length bytes.\n\n    Returns:\n        The actual number of bytes copied, which may be less than\n        length if the requested range extends past the buffer end.\n        Returns 0 if the requested range does not overlap the buffer.\n    \"\"\"\n    ...\n",
+    "note": "用 docstring 保留范围、目标容量、实际复制长度和无交集返回零的接口约定。dest 以可写 bytearray 表示，offset 和 length 假定非负；并未实现复制，省略号函数体实际返回 None，类型注解也不提供 C++ 的整数位宽或指针检查。",
+    "noteEn": "The docstring retains range, destination capacity, actual length and zero-for-no-overlap contracts. dest is a writable bytearray and offset/length are assumed nonnegative. Copying is not implemented: the ellipsis body returns None, and annotations do not provide C++ integer widths or pointer checks.",
+    "noteTw": "用 docstring 保留範圍、目標容量、實際複製長度和無交集回傳零的介面約定。dest 以可寫 bytearray 表示，offset 和 length 假定非負；並未實作複製，省略號函式體實際回傳 None，型別註解也不提供 C++ 的整數位寬或指標檢查。"
+  },
+  {
+    "id": "ch13-f14",
+    "sourceHash": "b82881a5f721b6763afac3c9b24576c9b160fd0dd23bc5bc52cadb725ad7da94",
+    "originalLanguage": "cpp",
+    "python": "query = IndexLookup(table, index, key1, key2)\nwhile True:\n    object = query.getNext()\n    if object is None:\n        break\n    ...  # Process object here.\n",
+    "note": "保留逐次取得对象、遇到结束标记退出的调用过程。IndexLookup 和查询参数由应用提供，None 对应原例的 NULL；对象处理仍省略，不额外实现索引查询或复制 C++ 的对象生命周期。",
+    "noteEn": "Preserves retrieval until the end marker. IndexLookup and query arguments are application-supplied; None represents NULL. Object processing remains omitted, with no index implementation or C++ object-lifetime emulation.",
+    "noteTw": "保留逐次取得物件、遇到結束標記退出的呼叫過程。IndexLookup 和查詢參數由應用提供，None 對應原例的 NULL；物件處理仍省略，不額外實作索引查詢或複製 C++ 的物件生命週期。"
+  },
+  {
+    "id": "ch13-f15",
+    "sourceHash": "fc30d18f1a6bfb650fa2274d9c7e2453d9473d232dc5f07412141e9d51d53136",
+    "originalLanguage": "cpp",
+    "python": "class IndexLookup:\n    \"\"\"Implement the client-side framework for index range lookups.\n\n    Manage a single LookupIndexKeys RPC and multiple IndexedRead RPCs.\n    Client code imports IndexLookup to use this class. Configuration:\n    - The number of concurrent indexedRead RPCs.\n    - The maximum PKHashes per indexedRead RPC.\n    - The size of the active PKHashes.\n\n    Create an object with all necessary information, then call getNext\n    to move to the next available object. None means the end is reached.\n    Use getKey, getKeyLength, getValue and getValueLength on the current\n    object to obtain its data.\n    \"\"\"\n\n    # Maximum concurrent indexedRead RPCs.\n    NUM_READ_RPC = 10\n    # Maximum PKHashes in one indexedRead RPC.\n    MAX_PKHASHES_PERRPC = 256\n    # Maximum PKHashes held by activeHashes.\n    MAX_NUM_PK = 1 << LG_BUFFER_SIZE\n\n    ...\n",
+    "note": "刻意保留把内部 RPC 和配置细节混入接口文档的反例。头文件包含改成 Python 导入的表述，NULL 改为 None；LG_BUFFER_SIZE 仍由项目提供。类属性不模拟 private、const 或固定整数位宽，查询方法省略。",
+    "noteEn": "Deliberately preserves internal RPC/configuration details leaking into interface documentation. Header inclusion becomes an import description and NULL becomes None. The project supplies LG_BUFFER_SIZE. Class attributes do not emulate private, const or fixed integer widths; query methods remain omitted.",
+    "noteTw": "刻意保留把內部 RPC 和設定細節混入介面文件的反例。標頭檔案包含改成 Python 匯入的表述，NULL 改為 None；LG_BUFFER_SIZE 仍由專案提供。類屬性不模擬 private、const 或固定整數位寬，查詢方法省略。"
+  },
+  {
+    "id": "ch13-f16",
+    "sourceHash": "1ab007dbfd5ca5c5c26ff19ee427a3931caa8cf5d2ccdbe34c278a88767b0087",
+    "originalLanguage": "cpp",
+    "python": "\"\"\"\nClient applications use this class to make range queries using indexes.\nEach instance represents a single range query.\n\nTo start a range query, create an instance of this class. Call getNext()\nto retrieve objects in the desired range. For each returned object,\ninvoke getKey(), getKeyLength(), getValue() and getValueLength() to\nobtain information about it.\n\"\"\"\n",
+    "note": "仅将原例的接口说明改成 Python 文档字符串，保留它与前一段实现细节过多的文档之间的对照；没有添加类实现或补充原例未给出的行为。",
+    "noteEn": "Only converts the interface description to a Python docstring, preserving its contrast with the preceding implementation-heavy documentation. No class implementation or unspecified behavior is added.",
+    "noteTw": "僅將原例的介面說明改成 Python 文件字串，保留它與前一段實作細節過多的文件之間的對照；沒有新增類實作或補充原例未給出的行為。"
+  },
+  {
+    "id": "ch13-f17",
+    "sourceHash": "1f06f5b0b96d8b497a7f9cae3c06689682e4bc2c6d735d4534d3f1ccd8c90d4e",
+    "originalLanguage": "cpp",
+    "python": "def isReady(self) -> bool:\n    \"\"\"Check whether the next object is RESULT_READY.\n\n    This function is implemented in a DCFT module. Each execution\n    makes small progress; getNext invokes isReady in a while loop\n    until it returns true.\n\n    The implementation follows rules in a particular order and\n    performs actions when a rule is satisfied.\n\n    Returns:\n        True means the next object is available; otherwise False.\n    \"\"\"\n    ...\n",
+    "note": "保留混入内部状态和规则执行顺序的旧注释，供下一例对照；不要把它当作完整的就绪契约。DCFT、RESULT_READY 和 getNext 都是原项目术语，方法实现省略，按字面调用会返回 None 而非已实现的布尔结果。",
+    "noteEn": "Keeps the old implementation-heavy state/rule description for comparison, not as a complete readiness contract. DCFT, RESULT_READY and getNext are original project terms. The method body is omitted and literally returns None, not an implemented Boolean result.",
+    "noteTw": "保留混入內部狀態和規則執行順序的舊註解，供下一例對照；不要把它當作完整的就緒契約。DCFT、RESULT_READY 和 getNext 都是原專案術語，方法實作省略，按字面呼叫會回傳 None 而非已實作的布林結果。"
+  },
+  {
+    "id": "ch13-f18",
+    "sourceHash": "b83724a3fb6d59e1609cf60488ce247918de56be238b8fe90940968a60c5ca28",
+    "originalLanguage": "cpp",
+    "python": "\"\"\"\nIndicate whether an indexed read has made enough progress for getNext\nto return immediately without blocking. This method also does most of\nthe real work for indexed reads, so it must be invoked directly or\nindirectly through getNext for the read to make progress.\n\nReturns:\n    True means the next getNext invocation will not block: either an\n    object is available or the end of the lookup has been reached.\n    False means getNext may block.\n\"\"\"\n",
+    "note": "保留改进后的行为契约，尤其是 True 也可能表示查询已结束，而不是一定还有对象。这里只转换注释，不实现异步推进或阻塞行为。",
+    "noteEn": "Preserves the improved behavioral contract, particularly that True may mean lookup completion rather than another available object. This is documentation only, not asynchronous progress or blocking implementation.",
+    "noteTw": "保留改進後的行為契約，尤其是 True 也可能表示查詢已結束，而不是一定還有物件。這裡只轉換註解，不實作非同步推進或阻塞行為。"
+  },
+  {
+    "id": "ch13-f21",
+    "sourceHash": "d258a8373a6c961fc101569d764077a07db7c8285ad14c45a4064477a9491908",
+    "originalLanguage": "cpp",
+    "python": "from enum import IntEnum\n\n\nclass Status(IntEnum):\n    STATUS_OK = 0\n    STATUS_UNKNOWN_TABLET = 1\n    STATUS_WRONG_VERSION = 2\n    ...\n    STATUS_INDEX_DOESNT_EXIST = 29\n    STATUS_INVALID_PARAMETER = 30\n    STATUS_MAX_VALUE = 30\n\n    # Adding a status also requires updates elsewhere in the project:\n    # (1) Keep STATUS_MAX_VALUE equal to the largest status value and\n    #     keep it last. It is used primarily for testing.\n    # (2) Add entries to messages and symbols in Status.cc.\n    # (3) Add an exception class to ClientException.h.\n    # (4) Extend ClientException::throwException in the native code.\n    # (5) Add an exception class to ClientException.java.\n    # (6) Extend throwException in ClientException.java.\n    # (7) Add the correctly positioned status to Status.java.\n",
+    "note": "保留枚举值和跨模块、跨语言修改清单，原项目文件名仍是文档引用，不是本例新增的文件。这里只把枚举表达改成 IntEnum；STATUS_MAX_VALUE 与值 30 的成员互为别名，Python 的枚举迭代和整数位宽规则不同，不能据此替换原项目的二进制协议。",
+    "noteEn": "Preserves enum values and the cross-module/cross-language update checklist; original filenames remain documentation references, not new files. Only the enum notation becomes IntEnum. STATUS_MAX_VALUE aliases the member with value 30; Python iteration and integer-width rules differ, so this is not a binary-protocol replacement.",
+    "noteTw": "保留列舉值和跨模組、跨語言修改清單，原專案檔名仍是文件引用，不是本例新增的檔案。這裡只把列舉表達改成 IntEnum；STATUS_MAX_VALUE 與值 30 的成員互為別名，Python 的列舉迭代和整數位寬規則不同，不能據此替換原專案的二進位制協議。"
+  },
+  {
+    "id": "ch13-f23",
+    "sourceHash": "e09b0db5beed369ea8cc49a7eddf2dbe5a7283e3c5d74194b182ff17cb312b30",
+    "originalLanguage": "c",
+    "python": "# See \"Zombies\" in designNotes.\n",
+    "note": "只把注释符号改成 Python 的 #，保留指向设计文档的引用；相邻未标语言的文本块本来就是设计文档，不是待转换的程序。",
+    "noteEn": "Only changes the comment marker to Python's # and retains the design-document reference. The adjacent unlabelled text fence is a design document, not an unconverted program.",
+    "noteTw": "只把註解符號改成 Python 的 #，保留指向設計文件的引用；相鄰未標語言的文字塊本來就是設計文件，不是待轉換的程式。"
+  },
+  {
+    "id": "ch14-f7",
+    "sourceHash": "ed842e1b4422e86acb10e045591d5e80a9fdce58da9de48e1b0e3802539fa2fc",
+    "originalLanguage": "go",
+    "python": "def RuneCount(b: bytes) -> int:\n    i, n = 0, 0\n    while i < len(b):\n        if b[i] < 0x80:\n            i += 1\n        else:\n            rune = b[i:i + 4].decode(\"utf-8\", \"surrogateescape\")[0]\n            size = len(rune.encode(\"utf-8\", \"surrogateescape\"))\n            i += size\n        n += 1\n    return n\n",
+    "note": "保留 b、i、n 的短命名，供下一例对照。用 Python 标准 UTF-8 编解码器取得首个字符的字节宽度，每次最多查看四个字节；surrogateescape 让无效或截断序列中的非法字节逐个计数。统计的是码点/错误字节，不是用户感知字符，也不复现 Go 的性能。",
+    "noteEn": "Preserves short names b, i and n for comparison. Python's UTF-8 codec obtains the first character's byte width from at most four bytes; surrogateescape counts invalid/truncated bytes individually. This counts code points/error bytes, not grapheme clusters, and does not reproduce Go performance.",
+    "noteTw": "保留 b、i、n 的短命名，供下一例對照。用 Python 標準 UTF-8 編解碼器取得首個字元的位元組寬度，每次最多查看四個位元組；surrogateescape 讓無效或截斷序列中的非法位元組逐個計數。統計的是碼點/錯誤位元組，不是使用者感知字元，也不復現 Go 的效能。"
+  },
+  {
+    "id": "ch14-f8",
+    "sourceHash": "27b211df563d34484d779b12bbad59c07349c2661c34972c5cd0a68c2a2caf02",
+    "originalLanguage": "go",
+    "python": "def RuneCount(buffer: bytes) -> int:\n    index, count = 0, 0\n    while index < len(buffer):\n        if buffer[index] < 0x80:\n            index += 1\n        else:\n            rune = buffer[index:index + 4].decode(\"utf-8\", \"surrogateescape\")[0]\n            size = len(rune.encode(\"utf-8\", \"surrogateescape\"))\n            index += size\n        count += 1\n    return count\n",
+    "note": "算法与上一例相同，只把主要变量改成 buffer、index、count，以保留命名可读性的对照。标准编解码器负责 UTF-8 解析，无效字节逐个计数；这不是字素簇计数或 Go 性能基准。",
+    "noteEn": "The algorithm matches the preceding example; buffer, index and count retain the naming/readability contrast. The standard codec handles UTF-8 and invalid bytes are counted individually. This is neither grapheme-cluster counting nor a Go performance benchmark.",
+    "noteTw": "演算法與上一例相同，只把主要變數改成 buffer、index、count，以保留命名可讀性的對照。標準編解碼器負責 UTF-8 解析，無效位元組逐個計數；這不是字素簇計數或 Go 效能基準。"
+  },
+  {
+    "id": "ch18-f3",
+    "sourceHash": "dd8d0c2dfb370475e7a248935cfd8add292800e8766f0c2a30642dbe4cc9d4db",
+    "originalLanguage": "cpp",
+    "python": "def allocAux(self, numBytes: int) -> int:\n    # Round up to a multiple of 8 in this logical-address model.\n    numBytes32 = (numBytes + 7) & ~0x7\n    assert numBytes32 != 0\n\n    # Work down from the top of the first available allocation.\n    if self.availableLength >= numBytes32:\n        self.availableLength -= numBytes32\n        return self.firstAvailable + self.availableLength\n\n    # Next, use extra space at the end of the last chunk.\n    if self.extraAppendBytes >= numBytes32:\n        self.extraAppendBytes -= numBytes32\n        return (self.lastChunk.data + self.lastChunk.length\n                + self.extraAppendBytes)\n\n    # A new allocation supplies a base address and its total length.\n    self.firstAvailable, allocatedLength = self.getNewAllocation(numBytes32)\n    self.availableLength = allocatedLength - numBytes32\n    return self.firstAvailable + self.availableLength\n",
+    "note": "保留向上取整、已有分配区、最后一块的额外空间、新分配区三条路径及分段排版。地址以整数建模，不分配或访问真实内存；getNewAllocation 返回（基址，总长度）代替输出参数。前提是字节数为正且八字节取整不溢出 uint32、区间长度及顶端对齐满足原例约束；不模拟 downCast、无符号溢出或真实指针对齐。",
+    "noteEn": "Preserves rounding, the three allocation paths and paragraph-like layout. Addresses are integers in a model, not real memory; getNewAllocation returns (base, length) instead of an output parameter. Counts must be positive with eight-byte rounding fitting uint32; region lengths and aligned tops must satisfy the source assumptions. No downCast, unsigned overflow or physical pointer alignment is emulated.",
+    "noteTw": "保留向上取整、已有分配區、最後一塊的額外空間、新分配區三條路徑及分段排版。地址以整數建模，不分配或存取真實記憶體；getNewAllocation 回傳（基址，總長度）代替輸出參數。前提是位元組數為正且八位元組取整不溢位 uint32、區間長度及頂端對齊滿足原例約束；不模擬 downCast、無符號溢位或真實指標對齊。"
+  },
+  {
+    "id": "ch20-f1",
+    "sourceHash": "600488e144d2dfc8191c435593aa27199bb502e6380eae18e97b100265a8719c",
+    "originalLanguage": "cpp",
+    "python": "class Allocation:\n    def allocateAppend(self, size: int) -> int | None:\n        if self.chunkTop - self.appendTop < size:\n            return None\n        result = self.data + self.appendTop\n        self.appendTop += size\n        return result\n\n\nclass Buffer:\n    def alloc(self, numBytes: int) -> int:\n        data = self.allocateAppend(numBytes)\n        lastChunk = self.chunksTail\n        if (lastChunk is not None and lastChunk.isInternal()\n                and data - lastChunk.length == lastChunk.data):\n            # Fast path: grow the existing chunk.\n            lastChunk.length += numBytes\n            self.totalLength += numBytes\n        else:\n            # The application supplies append and chunk creation.\n            self.append(data, numBytes)\n        return data\n\n    def allocateAppend(self, size: int) -> int:\n        if self.allocations is not None:\n            data = self.allocations.allocateAppend(size)\n            if data is not None:\n                return data\n        data = self.newAllocation(0, size).allocateAppend(size)\n        assert data is not None\n        return data\n",
+    "note": "用整数表示逻辑地址，None 表示 NULL，保留原例的多层调用、重复检查与相邻块合并。各属性、append 和 newAllocation 由外围模型提供；字节数与区间有效性是前提，不执行真实分配或指针运算。原书的 char*/void* 类型疑点仍保留在原例及勘误中；Python 模型不重现该编译问题，也不用于比较原书纳秒级性能。",
+    "noteEn": "Integer logical addresses and None-for-NULL preserve the layered calls, repeated checks and adjacent-chunk merge. The enclosing model supplies attributes, append and newAllocation; valid counts/regions are assumed. No real allocation or pointer arithmetic occurs. The original char*/void* issue remains in the source and erratum, not in this Python model, which cannot reproduce the native timing measurements.",
+    "noteTw": "用整數表示邏輯地址，None 表示 NULL，保留原例的多層呼叫、重複檢查與相鄰塊合併。各屬性、append 和 newAllocation 由外圍模型提供；位元組數與區間有效性是前提，不執行真實分配或指標運算。原書的 char*/void* 型別疑點仍保留在原例及勘誤中；Python 模型不重現該編譯問題，也不用於比較原書納秒級效能。"
+  },
+  {
+    "id": "ch20-f2",
+    "sourceHash": "abe73012e05271a30e2c38152c1d1cfedbc77fdd03642951e720826a2e0e87c6",
+    "originalLanguage": "cpp",
+    "python": "def alloc(self, numBytes: int) -> int:\n    if self.availableAppendBytes >= numBytes:\n        # There is space immediately after the current last chunk.\n        chunk = self.lastChunk\n        result = chunk.data + chunk.length\n        chunk.length += numBytes\n        self.availableAppendBytes -= numBytes\n        self.totalLength += numBytes\n        return result\n\n    # The original omits new-chunk creation after this point.\n    raise NotImplementedError(\"New-chunk path omitted in the original\")\n",
+    "note": "保留一次检查后的快速路径和四项状态计算；地址仍是整数模型。前提是字节数为正，availableAppendBytes 正确概括内部末块及可用空间状态。原例省略新块路径，这里显式抛出 NotImplementedError，避免把省略号误当成已实现的分配；不声称 Python 与 C++ 的内存布局或性能等价。",
+    "noteEn": "Preserves the single-guard fast path and state calculations using integer logical addresses. Positive counts and a valid availableAppendBytes invariant are required. The omitted new-chunk path raises NotImplementedError explicitly rather than silently acting as an implemented allocator. Python/native memory layout and performance are not equivalent.",
+    "noteTw": "保留一次檢查後的快速路徑和四項狀態計算；地址仍是整數模型。前提是位元組數為正，availableAppendBytes 正確概括內部末塊及可用空間狀態。原例省略新塊路徑，這裡顯式丟擲 NotImplementedError，避免把省略號誤當成已實作的分配；不聲稱 Python 與 C++ 的記憶體佈局或效能等價。"
+  }
+]

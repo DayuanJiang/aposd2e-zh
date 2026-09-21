@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 634" role="img" aria-labelledby="ch17-trustworthy-patterns-m-title ch17-trustworthy-patterns-m-desc">
+  <title id="ch17-trustworthy-patterns-m-title">相同外观不能掩盖不同单位</title>
+  <desc id="ch17-trustworthy-patterns-m-desc">教学例先展示 timeoutSeconds 在两处都表示秒，再展示相同 timeout 名称掩盖秒和毫秒的差异；相同外观诱发的单位推断被叉号标为错误。</desc>
+  <defs><marker id="ch17-trustworthy-patterns-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="634" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">外观相似，含义也要相符</text><text x="16" y="57" font-size="14">17.3 · 教学自拟的单位反例</text>
+    <text x="16" y="95" font-weight="600">相同含义：知识可以复用</text>
+    <g fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"><rect x="32" y="112" width="296" height="52" rx="5"/><rect x="32" y="212" width="296" height="52" rx="5"/></g>
+    <text x="180" y="144" text-anchor="middle">timeoutSeconds：秒</text><text x="180" y="244" text-anchor="middle">timeoutSeconds：秒</text>
+    <path d="M80 164V212" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch17-trustworthy-patterns-m-arrow)"/><text x="103" y="194" font-size="14">在另一处仍可按秒理解</text>
+    <path d="M16 289H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="319" font-weight="600">反例：同名却掩盖不同单位</text>
+    <g fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"><rect x="32" y="339" width="296" height="52" rx="5"/><rect x="32" y="450" width="296" height="52" rx="5"/></g>
+    <text x="180" y="371" text-anchor="middle">timeout：实际是秒</text><text x="180" y="482" text-anchor="middle">timeout：实际是毫秒</text>
+    <path d="M80 391V450" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ch17-trustworthy-patterns-m-arrow)"/><path d="M71 411L89 429M89 411L71 429" stroke="var(--diagram-danger,#a03946)" stroke-width="3"/>
+    <text x="103" y="421" fill="var(--diagram-danger,#a03946)">“它也是秒”</text><text x="103" y="441" font-size="14">熟悉外观诱发错误推断</text>
+    <text x="16" y="539">修正：明确区分单位。</text><text x="16" y="568">不同含义应显出不同外观，</text><text x="16" y="596">而不是强套同一个模式。</text><text x="16" y="622" font-size="14">这里不主张某一种具体命名规范。</text>
+  </g>
+</svg>

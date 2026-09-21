@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 708" role="img" aria-labelledby="ch18-event-trace-m-title ch18-event-trace-m-desc">
+  <title id="ch18-event-trace-m-title">应用登记数据决定同一派发点的目标</title>
+  <desc id="ch18-event-trace-m-desc">自拟的两次独立运行先由应用初始化代码分别记录 E 到 A 和 E 到 B，再由同一派发代码查询各自关系而调用 A 或 B。虚线从应用初始化出发，实线用于读取与调用，不表示处理函数自注册。原 failed 注释只补调用条件和线程上下文。</desc>
+  <defs><marker id="ch18-event-trace-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="708" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">同一调用点，不同登记目标</text><text x="16" y="57" font-size="14">18.2 · E、A/B 为教学示意，不是具体 API</text>
+    <rect x="16" y="80" width="296" height="58" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/><text x="164" y="104" text-anchor="middle">应用初始化代码登记</text><text x="164" y="127" text-anchor="middle" font-size="14">下面是两次独立运行，不是同时登记</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-dasharray="5 4"><path d="M312 108H336V370"/><path d="M336 200H312" marker-end="url(#ch18-event-trace-m-arrow)"/><path d="M336 370H312" marker-end="url(#ch18-event-trace-m-arrow)"/></g>
+    <rect x="16" y="174" width="296" height="52" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/><text x="164" y="206" text-anchor="middle">运行甲：登记 E → A</text>
+    <path d="M164 226V260" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch18-event-trace-m-arrow)"/>
+    <text x="16" y="286">同一派发代码收到 E，查登记关系</text><text x="16" y="313" fill="var(--diagram-primary,#0b6f5d)">查到 A → 调用处理函数 A</text>
+    <rect x="16" y="344" width="296" height="52" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/><text x="164" y="376" text-anchor="middle">运行乙：登记 E → B</text>
+    <path d="M164 396V430" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch18-event-trace-m-arrow)"/>
+    <text x="16" y="456">同一派发代码收到 E，查登记关系</text><text x="16" y="483" fill="var(--diagram-primary,#0b6f5d)">查到 B → 调用处理函数 B</text>
+    <path d="M16 508H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="538" font-weight="600">原例 failed() 的注释另补充：</text>
+    <text x="16" y="566" font-size="14">传输错误使 RPC 无法完成时，</text><text x="16" y="590" font-size="14">由 transport 在 dispatch thread 调用。</text>
+    <text x="16" y="620" font-size="14">这不替代具体登记数据；不是自注册回路。</text>
+    <text x="16" y="653" font-size="14">虚线：应用初始化写入关系。</text><text x="16" y="678" font-size="14">实线：派发时读取并调用。</text>
+  </g>
+</svg>

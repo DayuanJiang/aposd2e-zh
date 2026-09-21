@@ -1,0 +1,55 @@
+[
+  {
+    "id": "ch22-startup-contract",
+    "chapter": "ch22",
+    "title": "围绕具体约束比较设计",
+    "question": "当配置必须先于后台读取时，隐藏启动动作为什么可能使短接口更难用？",
+    "answer": "两个方案分别演示，Indexer(config) 均持有调用方给出的配置对象引用。要求是先配置再读取，读取期间不再改配置。A 的一种可能顺序违反了要求：构造后线程先读到空 root，调用方随后才完成配置。B 图示顺序先配置、再 start、再读取且未继续改配置，因而读到 /docs；增加一次调用也增加了调用方的义务，并不自动保证顺序正确。也可先完成独立 config 的配置，再把它传给会启动线程的构造函数。因此不能推出构造函数不得启动线程。",
+    "summary": "译者自拟的后台索引例子，不是 RaftClient 的实现或作者提供的 API。两个演示的初始配置均为空：A 展示违反要求的可能顺序，B 展示一种满足要求的顺序。另可先配置好独立的 config，再传给启动型构造函数。比较围绕具体要求，不给设计自动评分，也不声称接口越多或越少就越好。",
+    "alt": "Indexer(config) 保存调用方的配置对象引用，两次演示分别从空 root 开始。A 隐式启动后先读取空 root，再完成配置，违反先配置再读取的要求；B 先配置为 /docs，再显式 start，线程读到 /docs，图示工作期间未再改配置。另一种可能设计是将事先配好的 config 传给启动型构造函数。",
+    "kind": "bounded-contract-trace",
+    "desktop": "/diagrams/ch22-startup-contract.svg",
+    "mobile": "/diagrams/ch22-startup-contract-mobile.svg",
+    "anchor": {
+      "end": true
+    },
+    "sources": [
+      {
+        "section": "intro",
+        "epub": "OEBPS/part0026.xhtml#p5:d725d3ec10",
+        "reason": "结论将设计表述为围绕特定问题探索简单结构。图以一组明确约束作收尾练习，不把一般原则拼成自动判决流程。Indexer、root 和 /docs 均为译者自拟。"
+      },
+      {
+        "section": "18.2",
+        "epub": "OEBPS/part0022.xhtml#p96:cd1197eff7",
+        "reason": "原例说明构造函数启动线程可能不符合读者预期，需要在接口中记录。这里只借用可见性问题；不把新例的启动时序、配置要求或 start 方法归于 RaftClient。"
+      },
+      {
+        "section": "18.3",
+        "epub": "OEBPS/part0022.xhtml#p99:5b421f05ed",
+        "reason": "减少所需信息、复用既有知识、以名称和注释提供必要信息是不同手段；图不把隐藏更多信息当作唯一优化方向。"
+      },
+      {
+        "section": "21.4",
+        "epub": "OEBPS/part0025.xhtml#p18:dfaf0db169",
+        "reason": "重要信息也可能被错误隐藏。本例对特定调用方而言，启动时机重要；这不意味着所有构造函数都必须采用相同形式。"
+      }
+    ],
+    "status": "content-reviewed",
+    "titleTw": "圍繞具體約束比較設計",
+    "questionTw": "當設定必須先於後台讀取時，隱藏啟動動作為什麼可能使短介面更難用？",
+    "answerTw": "兩個方案分別演示，Indexer(config) 均持有呼叫方給出的設定物件引用。要求是先設定再讀取，讀取期間不再改設定。A 的一種可能順序違反了要求：構造後執行緒先讀到空 root，呼叫方隨後才完成設定。B 圖示順序先設定、再 start、再讀取且未繼續改設定，因而讀到 /docs；增加一次呼叫也增加了呼叫方的義務，並不自動保證順序正確。也可先完成獨立 config 的設定，再把它傳給會啟動執行緒的建構函式。因此不能推出建構函式不得啟動執行緒。",
+    "summaryTw": "譯者自擬的後台索引例子，不是 RaftClient 的實作或作者提供的 API。兩個演示的初始設定均為空：A 展示違反要求的可能順序，B 展示一種滿足要求的順序。另可先設定好獨立的 config，再傳給啟動型建構函式。比較圍繞具體要求，不給設計自動評分，也不聲稱介面越多或越少就越好。",
+    "altTw": "Indexer(config) 儲存呼叫方的設定物件引用，兩次演示分別從空 root 開始。A 隱式啟動後先讀取空 root，再完成設定，違反先設定再讀取的要求；B 先設定為 /docs，再顯式 start，執行緒讀到 /docs，圖示工作期間未再改設定。另一種可能設計是將事先配好的 config 傳給啟動型建構函式。",
+    "desktopTw": "/diagrams/ch22-startup-contract-tw.svg",
+    "mobileTw": "/diagrams/ch22-startup-contract-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-22-followup.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  }
+]

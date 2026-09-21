@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1126" height="710" viewBox="0 0 1126 710" role="img" aria-labelledby="fig-00020-title fig-00020-desc">
+  <title id="fig-00020-title">Figure 10.1: Separate exception handlers for each parameter</title>
+  <desc id="fig-00020-desc">A Dispatcher code box sits above three handleUrl method boxes. The dispatcher selects handleUrl1, handleUrl2, or handleUrl3. handleUrl1 separately catches NoSuchParameter for photo_id and message; handleUrl2 catches it for user_id; handleUrl3 separately catches it for login and password. All five try/catch blocks, ellipses, original pseudocode, and box groupings are retained. The original has no connecting arrows.</desc>
+  <style>
+    #fig-00020-code text { white-space: pre; }
+  </style>
+  <rect width="1126" height="710" fill="#fff"/>
+  <g transform="translate(12 12) scale(2)" fill="#111">
+    <g font-family="Arial, Helvetica, sans-serif" font-size="11">
+      <text x="220" y="9">Dispatcher:</text>
+      <text x="0" y="164">handleUrl1:</text>
+      <text x="188" y="164">handleUrl2:</text>
+      <text x="371" y="164">handleUrl3:</text>
+    </g>
+    <g fill="#f8f8f8" stroke="#111" stroke-width="0.8">
+      <rect x="220" y="13" width="115" height="129"/>
+      <rect x="0" y="168" width="179" height="174"/>
+      <rect x="188" y="168" width="174" height="92"/>
+      <rect x="371" y="168" width="179" height="174"/>
+    </g>
+    <g id="fig-00020-code" font-family="'Courier New', Courier, monospace" font-size="9.3" xml:space="preserve">
+      <text id="fig-00020-dispatcher"><tspan x="227" y="21">...</tspan><tspan x="227" y="32">if (...) {</tspan><tspan x="227" y="44">  handleUrl1(...);</tspan><tspan x="227" y="55">} else if (...) {</tspan><tspan x="227" y="67">  handleUrl2(...);</tspan><tspan x="227" y="78">} else if (...) {</tspan><tspan x="227" y="90">  handleUrl3(...);</tspan><tspan x="227" y="101">} else if (...)</tspan><tspan x="227" y="113">  ...</tspan><tspan x="227" y="124">}</tspan><tspan x="227" y="136">...</tspan></text>
+      <text id="fig-00020-handler-1"><tspan x="7" y="177">...</tspan><tspan x="7" y="188">try {</tspan><tspan x="7" y="200">  ... getParameter("photo_id")</tspan><tspan x="7" y="211">  ...</tspan><tspan x="7" y="223">} catch (NoSuchParameter e) {</tspan><tspan x="7" y="234">  ...</tspan><tspan x="7" y="246">}</tspan><tspan x="7" y="257">...</tspan><tspan x="7" y="269">try {</tspan><tspan x="7" y="280">  ... getParameter("message")</tspan><tspan x="7" y="292">  ...</tspan><tspan x="7" y="303">} catch (NoSuchParameter e) {</tspan><tspan x="7" y="315">  ...</tspan><tspan x="7" y="326">}</tspan><tspan x="7" y="338">...</tspan></text>
+      <text id="fig-00020-handler-2"><tspan x="195" y="177">...</tspan><tspan x="195" y="188">try {</tspan><tspan x="195" y="200">  ... getParameter("user_id")</tspan><tspan x="195" y="211">  ...</tspan><tspan x="195" y="223">} catch (NoSuchParameter e) {</tspan><tspan x="195" y="234">  ...</tspan><tspan x="195" y="246">}</tspan><tspan x="195" y="257">...</tspan></text>
+      <text id="fig-00020-handler-3"><tspan x="378" y="177">...</tspan><tspan x="378" y="188">try {</tspan><tspan x="378" y="200">  ... getParameter("login")</tspan><tspan x="378" y="211">  ...</tspan><tspan x="378" y="223">} catch (NoSuchParameter e) {</tspan><tspan x="378" y="234">  ...</tspan><tspan x="378" y="246">}</tspan><tspan x="378" y="257">...</tspan><tspan x="378" y="269">try {</tspan><tspan x="378" y="280">  ... getParameter("password")</tspan><tspan x="378" y="292">  ...</tspan><tspan x="378" y="303">} catch (NoSuchParameter e) {</tspan><tspan x="378" y="315">  ...</tspan><tspan x="378" y="326">}</tspan><tspan x="378" y="338">...</tspan></text>
+    </g>
+  </g>
+</svg>

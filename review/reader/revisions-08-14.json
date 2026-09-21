@@ -1,0 +1,2952 @@
+{
+  "reviewSource": "review/reader/diagram-review-08-14.json",
+  "reviewSourceSha256": "1c59a198bd4abbcd3b2d96a7e0adacf6118a6b028505c9df3b078a0256771c66",
+  "stage": "MAIN-revision-implementation",
+  "status": "awaiting-second-review",
+  "acceptedFinalReview": false,
+  "counts": {
+    "before": 22,
+    "retired": 5,
+    "retained": 17,
+    "publicPreReviewCopiesRemoved": 18,
+    "uniqueLiveSvgVersionsArchived": 10,
+    "perChapter": {
+      "ch08": 3,
+      "ch09": 2,
+      "ch10": 4,
+      "ch11": 1,
+      "ch12": 1,
+      "ch13": 4,
+      "ch14": 2
+    },
+    "activeSvgAssets": 34,
+    "retainedSvgAssetsChanged": 12,
+    "mainDecisionCounts": {
+      "revise": 7,
+      "keep": 9,
+      "retire": 5,
+      "replace": 1
+    }
+  },
+  "boundaries": {
+    "scope": "Existing owned ch08-ch14 metadata and SVGs, this log, and explicitly permitted non-served unique-history archive only.",
+    "notPerformed": [
+      "Markdown edits",
+      "shared reader edits",
+      "test file edits",
+      "build or generated-output changes",
+      "traditional-Chinese generation",
+      "independent second review",
+      "reader comprehension experiment"
+    ]
+  },
+  "protectedSourceHashes": {
+    "docs/ch08.md": "8433cec993ded854fb0bb27c4e605a03c8b8eb524a5388c8c5bac23143f938ad",
+    "docs/zh-tw/ch08.md": "8c216bff27b28f13e3491bfe8df3de8575a090b47b11401b5f84347b457f091b",
+    "docs/en/ch08.md": "1489648ad22174ab816d7642071daca1e6912fb0a23be55e413bc5dcffe0692f",
+    "docs/ch09.md": "9736725cbcd126945c3bb958a8d1ebbcb2d00449f6ef812e7d681f857c527b6d",
+    "docs/zh-tw/ch09.md": "57afa8212316f242d29e0af0d9e433a84d877403dfe72778af5716460034f500",
+    "docs/en/ch09.md": "4d2bab0b6d9d70fd7dae4fd341b647b351541909272a35f10e9b757518d5c1ca",
+    "docs/ch10.md": "85b0b5441dfae7419080df2ec5e081da2589b8460d2ce630a3271ff5d5a1613f",
+    "docs/zh-tw/ch10.md": "494c9510cde1a7f909bd89df3acef502959d159dce767558fe11a76065135595",
+    "docs/en/ch10.md": "4b061ac38332f171197b0912571040c6f15b7d48f100d38396a6b75dd5ff21ad",
+    "docs/ch11.md": "6784dc4cd0df2611c5ac6192f3fd908d7f467878c5f1a26dcbe69a01dae0269f",
+    "docs/zh-tw/ch11.md": "bdab2ec732c55413839aa8ec6cefaae1b95145ebb5bfedeef39d5ae6568ea358",
+    "docs/en/ch11.md": "d8d6003240afce28fd3f8780c464693891f9728d5cf1a0a8e124ecf666514c5b",
+    "docs/ch12.md": "6d5fa8785dbac606cf0dd8a592d2d21070bceb32361141035aa0b23242692c52",
+    "docs/zh-tw/ch12.md": "37708863aca167f3525d800677f3a85a317418a02fb1b869d9918d7cc517d677",
+    "docs/en/ch12.md": "7e6e823d6bf43314ef0b8cdaf6c98e1d6a1f65a1bf71c6ba90686d171e3c75f2",
+    "docs/ch13.md": "df18a6157c327367375b45d0f0389f7d6aa9e927831f587de613282b23f9d731",
+    "docs/zh-tw/ch13.md": "370a5c81fe1226022005c0876eb01e774d92769c6f74be3b08427ebbc5746faa",
+    "docs/en/ch13.md": "075a3a78bc925aec40b1fa4ad972061cecd26d2fc74f32608f8027ddf03ab7f8",
+    "docs/ch14.md": "7dad0262c4a0d7ac90b1226d18eadf03104c69f5d2cfec18e40d65021059f1f4",
+    "docs/zh-tw/ch14.md": "2e526dda02148552788b1e7e0acf876a60ad9bdf50d7bbac9a283f57575e8fea",
+    "docs/en/ch14.md": "7197957a197e4f0cfa9e42b598ad318736fa82a48a5148183f3042e4347c133e",
+    "docs/figures/00009.gif": "0e4374482b0c425eee55c4d9dd70d584fc4fba18aa07f46cf6620ca40a87a32d",
+    "docs/figures/00010.jpeg": "6e3fb93e407e9458392145f088c1c34572a66f17d934783e921877126f1f1840",
+    "docs/figures/00011.jpeg": "f4759f6ec0f15a6c17db922c7811ad5d1af4d7e9350bf04d53cdd5dad6e4dc61",
+    "docs/figures/00012.jpeg": "f941743b15870e381751cf050f6d6676b2c8f8cfc379814c24ce84e4877507df",
+    "docs/figures/00013.jpeg": "499d213fb4be2422303b109175dadd0899181cd17003a39e94a95360a0c2aa59",
+    "docs/figures/00014.gif": "3263ba95f7957cc7870ac4d9673055ee9baf24c83cd2e8722825ed5e4928dcca",
+    "docs/figures/00015.jpeg": "40c964820ecc3b9d5038d3a906ffc61d0b5fe49136ddcc917ecdafff1d5311df",
+    "docs/figures/00016.gif": "f5b90ea807e56d168802c60c9c1b619b5d93839603519b054e59e22e79445ac2",
+    "docs/figures/00019.jpeg": "6cb8754a795f7da6684ccb4c95100d2131bd421a2a71096cf5400dd758105438",
+    "docs/figures/00020.jpeg": "8caf6020d98ca61e98958f49cfa3d18b124239e69fb6ce9f00f5201f2070d11f",
+    "docs/figures/00021.jpeg": "b64f9d2bd521db49fb3cfa0e80cdf085040a49ae12a2d68b6e778e0a7ff4bf41",
+    "docs/figures/00022.jpeg": "f1f5b80f65fe5f05409cf9aea483fe70354e921c7b3269ababe51396658bc93f",
+    "docs/figures/cover.jpeg": "4badaf6a3642d95fe8c02bf5671962fe5e95d87b9e358ae7a38a8b9c5d0445a2"
+  },
+  "archive": [
+    {
+      "original": "docs/.vuepress/public/diagrams/ch09-cursor-state.svg",
+      "archive": "review/reader/archive/08-14-before-main/ch09-cursor-state.svg",
+      "sha256": "b8c3ec1308ce3c62a70cf91f952557265dc89ab346813f7d320b73447d14bf44"
+    },
+    {
+      "original": "docs/.vuepress/public/diagrams/ch09-cursor-state-mobile.svg",
+      "archive": "review/reader/archive/08-14-before-main/ch09-cursor-state-mobile.svg",
+      "sha256": "ee4d1b3e9c14efa6bed3ab2a915251f3cf2cf1769da4960d861d4cf6a6fecabd"
+    },
+    {
+      "original": "docs/.vuepress/public/diagrams/ch11-interface-alternatives.svg",
+      "archive": "review/reader/archive/08-14-before-main/ch11-interface-alternatives.svg",
+      "sha256": "33a0baaddd88e13b04c2433c16afb190241974e74083983a589d38741eaa4cba"
+    },
+    {
+      "original": "docs/.vuepress/public/diagrams/ch11-interface-alternatives-mobile.svg",
+      "archive": "review/reader/archive/08-14-before-main/ch11-interface-alternatives-mobile.svg",
+      "sha256": "2f9eebdbb22cbedf90a11aea03b3bff933a4aa0e4fbdf9db4bb45fe59013e510"
+    },
+    {
+      "original": "docs/.vuepress/public/diagrams/ch12-discover-dependency.svg",
+      "archive": "review/reader/archive/08-14-before-main/ch12-discover-dependency.svg",
+      "sha256": "57b2fb533dabe26f4aae693d5e6d7d8b9c7b516b26bc453323d28b21489ab256"
+    },
+    {
+      "original": "docs/.vuepress/public/diagrams/ch12-discover-dependency-mobile.svg",
+      "archive": "review/reader/archive/08-14-before-main/ch12-discover-dependency-mobile.svg",
+      "sha256": "465b366dd815cd0ebd952581ba4d82d9639dac2a2a1f8c505f9c6dc5e20df971"
+    },
+    {
+      "original": "docs/.vuepress/public/diagrams/ch13-status-discovery.svg",
+      "archive": "review/reader/archive/08-14-before-main/ch13-status-discovery.svg",
+      "sha256": "e455a2888b55f91fe7b9216a0c1bde95ac5887959b092f45b5f853e07bafc5e3"
+    },
+    {
+      "original": "docs/.vuepress/public/diagrams/ch13-status-discovery-mobile.svg",
+      "archive": "review/reader/archive/08-14-before-main/ch13-status-discovery-mobile.svg",
+      "sha256": "65cd2b929886830bc870b51fc31661a785ac58626a2851276c42538ef2703126"
+    },
+    {
+      "original": "docs/.vuepress/public/diagrams/ch14-context-budget.svg",
+      "archive": "review/reader/archive/08-14-before-main/ch14-context-budget.svg",
+      "sha256": "ec220165fe5d737a3d09cdd362169522855b383558ec85c5b466f38a8f166cc3"
+    },
+    {
+      "original": "docs/.vuepress/public/diagrams/ch14-context-budget-mobile.svg",
+      "archive": "review/reader/archive/08-14-before-main/ch14-context-budget-mobile.svg",
+      "sha256": "eafd18126f88e52d6897f2e0ba73aebedf712380ac5eb9eafe4ee53e52faa857"
+    }
+  ],
+  "publicBackupCleanup": [
+    {
+      "removed": "docs/.vuepress/public/diagrams/ch08-edit-burden-mobile-review-before.svg",
+      "identicalBackup": "/tmp/aposd2e-viz-review-round1/assets/ch08-edit-burden-mobile.svg",
+      "sha256": "db6c25d6228e3d963be929a5a15fc9a0bd706a6ab520009413b8d2004a713e7f"
+    },
+    {
+      "removed": "docs/.vuepress/public/diagrams/ch08-edit-burden-review-before.svg",
+      "identicalBackup": "/tmp/aposd2e-viz-review-round1/assets/ch08-edit-burden.svg",
+      "sha256": "e2885420b492657c942e3c245aad01391daef989d038d487338c679c9cff5f07"
+    },
+    {
+      "removed": "docs/.vuepress/public/diagrams/ch09-cursor-state-mobile-review-before.svg",
+      "identicalBackup": "/tmp/aposd2e-viz-review-round1/assets/ch09-cursor-state-mobile.svg",
+      "sha256": "84bab18e1a98f3d1740715e240e22c07c292ca36e203206655c5004297c45f39"
+    },
+    {
+      "removed": "docs/.vuepress/public/diagrams/ch09-cursor-state-review-before.svg",
+      "identicalBackup": "/tmp/aposd2e-viz-review-round1/assets/ch09-cursor-state.svg",
+      "sha256": "51c3a7d8108f58d2ac1a3bd2adfef10aa8d570ea317ae251798a0e2bcad23f21"
+    },
+    {
+      "removed": "docs/.vuepress/public/diagrams/ch10-mask-obligation-review-before.svg",
+      "identicalBackup": "/tmp/aposd2e-viz-review-round1/assets/ch10-mask-obligation.svg",
+      "sha256": "f54358c6b5f70cbe85e8f50f3fc38895be6269bfb761ac272c70794be191e356"
+    },
+    {
+      "removed": "docs/.vuepress/public/diagrams/ch10-range-overlap-review-before.svg",
+      "identicalBackup": "/tmp/aposd2e-viz-review-round1/assets/ch10-range-overlap.svg",
+      "sha256": "ce7c5dd6c11df018c83cb626543bed71c774f38b7a7c1dc2b04c578b85887baf"
+    },
+    {
+      "removed": "docs/.vuepress/public/diagrams/ch10-unset-semantics-review-before.svg",
+      "identicalBackup": "/tmp/aposd2e-viz-review-round1/assets/ch10-unset-semantics.svg",
+      "sha256": "9dbb71112d80c85d1e94c467d0c004ba6e2164c9bb6db15ba10bf36c5c832e72"
+    },
+    {
+      "removed": "docs/.vuepress/public/diagrams/ch11-interface-alternatives-mobile-review-before.svg",
+      "identicalBackup": "/tmp/aposd2e-viz-review-round1/assets/ch11-interface-alternatives-mobile.svg",
+      "sha256": "08eb8b13150f9c8d8d2fdbb6a45a0a5c6702a7bc68580447871cc05c13a4df52"
+    },
+    {
+      "removed": "docs/.vuepress/public/diagrams/ch11-interface-alternatives-review-before.svg",
+      "identicalBackup": "/tmp/aposd2e-viz-review-round1/assets/ch11-interface-alternatives.svg",
+      "sha256": "082050e817941aeef8a0c88d272cd8a84e1baf81b8edbb8f16e87b6b09081a49"
+    },
+    {
+      "removed": "docs/.vuepress/public/diagrams/ch12-discover-dependency-mobile-review-before.svg",
+      "identicalBackup": "/tmp/aposd2e-viz-review-round1/assets/ch12-discover-dependency-mobile.svg",
+      "sha256": "81091d7d573041f72fd3ee240c62c62ed37db4f30585064f9e16be5ea5502dc6"
+    },
+    {
+      "removed": "docs/.vuepress/public/diagrams/ch12-discover-dependency-review-before.svg",
+      "identicalBackup": "/tmp/aposd2e-viz-review-round1/assets/ch12-discover-dependency.svg",
+      "sha256": "b96311a4b005b37852d735f9f4b4bd14a4a34e65607721a9a6e5ca76117128e7"
+    },
+    {
+      "removed": "docs/.vuepress/public/diagrams/ch12-missing-contract-mobile-review-before.svg",
+      "identicalBackup": "/tmp/aposd2e-viz-review-round1/assets/ch12-missing-contract-mobile.svg",
+      "sha256": "c21409cb830d658b7146694a8cea04fbf85b3869820bb0fc314d463e80050975"
+    },
+    {
+      "removed": "docs/.vuepress/public/diagrams/ch12-missing-contract-review-before.svg",
+      "identicalBackup": "/tmp/aposd2e-viz-review-round1/assets/ch12-missing-contract.svg",
+      "sha256": "7efada1a3e145a3a615c263ed6df8e9e28aebc10597c53ceeacb0d4d72af097c"
+    },
+    {
+      "removed": "docs/.vuepress/public/diagrams/ch13-length-map-mobile-review-before.svg",
+      "identicalBackup": "/tmp/aposd2e-viz-review-round1/assets/ch13-length-map-mobile.svg",
+      "sha256": "ea2ab4276ecbbf329ba9ae7d716e2d92f9cf28ae4f8cd1bc0961a12cfc233ca8"
+    },
+    {
+      "removed": "docs/.vuepress/public/diagrams/ch13-status-discovery-mobile-review-before.svg",
+      "identicalBackup": "/tmp/aposd2e-viz-review-round1/assets/ch13-status-discovery-mobile.svg",
+      "sha256": "1f0f17277f63c4c44b37aab7edd0693cdbf4fa5cd90376b1bf35567eac5a50aa"
+    },
+    {
+      "removed": "docs/.vuepress/public/diagrams/ch13-status-discovery-review-before.svg",
+      "identicalBackup": "/tmp/aposd2e-viz-review-round1/assets/ch13-status-discovery.svg",
+      "sha256": "8c696d9b692755b51b1c4005b3addaba4caf96a0976370d1d90020077154da05"
+    },
+    {
+      "removed": "docs/.vuepress/public/diagrams/ch14-context-budget-mobile-review-before.svg",
+      "identicalBackup": "/tmp/aposd2e-viz-review-round1/assets/ch14-context-budget-mobile.svg",
+      "sha256": "a3c14e17a31760a9eb0bc21c98977c6c140c5d25154b2e517f1ef24b399b5ed9"
+    },
+    {
+      "removed": "docs/.vuepress/public/diagrams/ch14-context-budget-review-before.svg",
+      "identicalBackup": "/tmp/aposd2e-viz-review-round1/assets/ch14-context-budget.svg",
+      "sha256": "f83e4f1e20c36e31a47a2c0de565d0bbb7c2a049d1ca2ac15f1164ce5241975f"
+    }
+  ],
+  "records": [
+    {
+      "id": "ch08-edit-burden",
+      "mainDecision": "revise",
+      "mainIssueIds": [
+        "08-edit-label",
+        "08-edit-terminology"
+      ],
+      "mainRequestedChanges": [
+        "Keep the repeated-to-shared responsibility structure and the conditional internal representation.",
+        "Use 拆分 / 合并行 consistently in visible labels, title, alt and descriptions.",
+        "Move the central label entirely clear of both caller connectors; verify this at the final display size."
+      ],
+      "priorMetadata": {
+        "id": "ch08-edit-burden",
+        "chapter": "ch08",
+        "title": "拆行与合并行应该由谁负责？",
+        "question": "同样的文本编辑工作，为什么换接口能减少调用者的负担？",
+        "answer": "整行接口让界面中的多种操作各自拆分、合并行；任意字符范围接口把这项责任封装进文本类。",
+        "summary": "下沉的是文本操作的实现复杂性，不是用户界面的知识。文本类内部若按行存储，仍须处理拆行与合并行。",
+        "alt": "前后责任图：输入和选区操作原本分别负责拆分与合并行，再调用整行接口；改用任意字符范围接口后，两条调用路径共享文本类内部的拆分与合并行处理。",
+        "kind": "responsibility-flow",
+        "desktop": "/diagrams/ch08-edit-burden.svg",
+        "mobile": "/diagrams/ch08-edit-burden-mobile.svg",
+        "anchor": {
+          "section": "8.1",
+          "placement": "end"
+        },
+        "sources": [
+          {
+            "section": "8.1",
+            "epub": "OEBPS/part0012.xhtml#p7:c85469890e",
+            "reason": "整行接口使按键与跨行选区操作需要在高层拆分、合并行。图中两条调用路径是原文操作类别的教学展开，不表示实测调用次数。"
+          },
+          {
+            "section": "8.1",
+            "epub": "OEBPS/part0012.xhtml#p8:b454c63498",
+            "reason": "任意字符范围接口封装拆分与合并行；内部按行存储是条件，不是固定实现。沿用本节粒度，不与第11章的逐字符接口混淆。"
+          }
+        ],
+        "review": {
+          "source": "review/reader/diagram-review-08-14.json",
+          "decision": "revise",
+          "stage": "MAIN-first-pass",
+          "implementation": "pending-implementation-or-readback",
+          "secondReview": "pending",
+          "accepted": false
+        },
+        "status": "awaiting-second-review",
+        "reviewHistory": [
+          {
+            "source": "earlier-local-review",
+            "recordedStatus": "independently-reviewed",
+            "decision": "revise",
+            "resolution": "已改正合并行的歧义缩写，并将范围说明移出连线路径。",
+            "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance.",
+            "snapshotDesktop": "/tmp/aposd2e-viz-review-round1/assets/ch08-edit-burden.svg",
+            "snapshotMobile": "/tmp/aposd2e-viz-review-round1/assets/ch08-edit-burden-mobile.svg"
+          }
+        ]
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch08-edit-burden.svg",
+          "sha256": "b05a55a40b0753695e6d0096ed92f7a7ebd4474be13cacdaa61db65417e1587c",
+          "recoverableAt": "docs/.vuepress/public/diagrams/ch08-edit-burden.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch08-edit-burden-mobile.svg",
+          "sha256": "8e77ade6ad0ce52bdd1ff38a74498123320cba4c666cd9cd68e0213286bf625e",
+          "recoverableAt": "docs/.vuepress/public/diagrams/ch08-edit-burden-mobile.svg"
+        }
+      },
+      "action": "preserved-existing-fix",
+      "actualChanges": [
+        "保留已完成的拆分/合并行措辞修正、两条调用者路径汇合及按行存储的条件。",
+        "保留位于两根连线之间的说明文字；本轮未重画SVG。",
+        "用MAIN的revise决定替代当前审阅权威，原本地审阅只作为历史记录。"
+      ],
+      "reviewResolution": {
+        "implementation": "implemented-pending-independent-second-review",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "Two caller categories are a teaching decomposition, not measured call counts or a requirement that every keystroke split a line. Live fixes are assessed separately.",
+        "未运行构建、未修改Markdown或共享reader/test文件；繁体生成及独立整章验收由MAIN后续执行。"
+      ],
+      "issueResolutions": [
+        {
+          "id": "08-edit-label",
+          "implementation": "preserved-existing-fix",
+          "verification": "实施者来源/资产检查，不是独立二审结论。"
+        },
+        {
+          "id": "08-edit-terminology",
+          "implementation": "preserved-existing-fix",
+          "verification": "实施者来源/资产检查，不是独立二审结论。"
+        }
+      ],
+      "afterAnchor": {
+        "section": "8.1",
+        "placement": "end"
+      },
+      "beforeAnchor": {
+        "section": "8.1",
+        "placement": "end"
+      },
+      "afterAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch08-edit-burden.svg",
+          "sha256": "b05a55a40b0753695e6d0096ed92f7a7ebd4474be13cacdaa61db65417e1587c",
+          "changedSinceMainImplementationStart": false
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch08-edit-burden-mobile.svg",
+          "sha256": "8e77ade6ad0ce52bdd1ff38a74498123320cba4c666cd9cd68e0213286bf625e",
+          "changedSinceMainImplementationStart": false
+        }
+      }
+    },
+    {
+      "id": "ch08-retry-feedback",
+      "mainDecision": "keep",
+      "mainIssueIds": [],
+      "mainRequestedChanges": [],
+      "priorMetadata": {
+        "id": "ch08-retry-feedback",
+        "chapter": "ch08",
+        "title": "重试间隔的知识在哪里？",
+        "question": "哪些参数适合由模块自己确定，哪些知识仍应由用户提供？",
+        "answer": "协议可以测量成功请求的响应时间并动态确定重试间隔；请求的业务紧迫性则可能只有用户知道。",
+        "summary": "判断点是用户能否比模块确定更好的值。图中的反馈回路解释自动调整，不给出原文未指定的倍数或完整传输算法。",
+        "alt": "固定配置路径从管理员进入重试计时器，运行条件改变却不会自动更新它。动态路径由成功响应测量时间，再计算合理间隔并供后续请求使用；业务优先级另由用户提供。",
+        "kind": "feedback-loop",
+        "desktop": "/diagrams/ch08-retry-feedback.svg",
+        "mobile": "/diagrams/ch08-retry-feedback-mobile.svg",
+        "anchor": {
+          "section": "8.2",
+          "placement": "end"
+        },
+        "sources": [
+          {
+            "section": "8.2",
+            "epub": "OEBPS/part0012.xhtml#p12:80a902d43a",
+            "reason": "测量成功请求响应时间并取某个倍数，动态调整重试间隔；未指定算法常数。反馈布局为教学示意。"
+          },
+          {
+            "section": "8.2",
+            "epub": "OEBPS/part0012.xhtml#p11:b68410a287",
+            "reason": "用户可能更了解请求的紧迫性，支持由用户指定优先级的反例。"
+          },
+          {
+            "section": "8.2",
+            "epub": "OEBPS/part0012.xhtml#p13:1a1560a5d7",
+            "reason": "先问用户能否确定更好的值，并尽可能提供合理默认值；不是禁止所有配置。"
+          }
+        ],
+        "review": {
+          "source": "review/reader/diagram-review-08-14.json",
+          "decision": "keep",
+          "stage": "MAIN-first-pass",
+          "implementation": "pending-implementation-or-readback",
+          "secondReview": "pending",
+          "accepted": false
+        },
+        "status": "awaiting-second-review",
+        "reviewHistory": [
+          {
+            "source": "earlier-local-review",
+            "recordedStatus": "independently-reviewed",
+            "decision": "keep",
+            "resolution": "反馈方向、用户领域知识和未指定倍数的限定均保留。",
+            "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance."
+          }
+        ]
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch08-retry-feedback.svg",
+          "sha256": "eeca8377a859fed1d24c64dd77c9dbb497c5932104403339ed2572b724fc12c0",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch08-retry-feedback.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch08-retry-feedback-mobile.svg",
+          "sha256": "822a252c6d0c79bf730d8be5c13a90a0f946d7c9d6d951465c2d8f46adf57c60",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch08-retry-feedback-mobile.svg"
+        }
+      },
+      "action": "kept",
+      "actualChanges": [
+        "保留MAIN的keep决定，不重画现有SVG；保留与报告兼容的后续有效修正。",
+        "更新当前权威与状态，保留此前本地审阅历史但不将其解释为MAIN或最终二审认可。"
+      ],
+      "reviewResolution": {
+        "implementation": "implemented-pending-independent-second-review",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "This is an illustrative feedback relationship, not a complete transport algorithm, retry-success guarantee or measured optimal policy.",
+        "未运行构建、未修改Markdown或共享reader/test文件；繁体生成及独立整章验收由MAIN后续执行。"
+      ],
+      "issueResolutions": [],
+      "afterAnchor": {
+        "section": "8.2",
+        "placement": "end"
+      },
+      "beforeAnchor": {
+        "section": "8.2",
+        "placement": "end"
+      },
+      "afterAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch08-retry-feedback.svg",
+          "sha256": "eeca8377a859fed1d24c64dd77c9dbb497c5932104403339ed2572b724fc12c0",
+          "changedSinceMainImplementationStart": false
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch08-retry-feedback-mobile.svg",
+          "sha256": "822a252c6d0c79bf730d8be5c13a90a0f946d7c9d6d951465c2d8f46adf57c60",
+          "changedSinceMainImplementationStart": false
+        }
+      }
+    },
+    {
+      "id": "ch08-semantic-boundary",
+      "mainDecision": "keep",
+      "mainIssueIds": [],
+      "mainRequestedChanges": [],
+      "priorMetadata": {
+        "id": "ch08-semantic-boundary",
+        "chapter": "ch08",
+        "title": "下沉文本机制，不下沉按键含义",
+        "question": "为什么移动拆行逻辑是封装，移动退格键逻辑却可能是信息泄露？",
+        "answer": "拆行属于文本管理；将按键、光标和选区解释成文本范围属于界面策略。范围接口让两种知识留在各自模块。",
+        "summary": "下沉复杂性须与类的核心职责相关，并确实简化其他代码及接口；不是把全部功能塞进底层。",
+        "alt": "用户界面把退格事件解释成删除范围，跨越边界的只有范围；文本类在边界下处理删除及拆分与合并行。另一条虚线路径把退格键含义直接传入文本类，被标为信息泄露。",
+        "kind": "knowledge-boundary",
+        "desktop": "/diagrams/ch08-semantic-boundary.svg",
+        "mobile": "/diagrams/ch08-semantic-boundary-mobile.svg",
+        "anchor": {
+          "section": "8.3",
+          "placement": "end"
+        },
+        "sources": [
+          {
+            "section": "8.3",
+            "epub": "OEBPS/part0012.xhtml#p15:0a9b8dd9a6",
+            "reason": "保留下沉复杂性的三个适用条件与降低整体复杂性的目标。"
+          },
+          {
+            "section": "8.3",
+            "epub": "OEBPS/part0012.xhtml#p16:38ed91cc62",
+            "reason": "文本类实现退格键功能会引入不属于核心职责的界面知识。范围转换路径为结合8.1的教学分解，不规定退格键的具体规则。"
+          },
+          {
+            "section": "8.1",
+            "epub": "OEBPS/part0012.xhtml#p8:b454c63498",
+            "reason": "范围文本接口支持在文本类中封装拆分和合并行。"
+          }
+        ],
+        "review": {
+          "source": "review/reader/diagram-review-08-14.json",
+          "decision": "keep",
+          "stage": "MAIN-first-pass",
+          "implementation": "pending-implementation-or-readback",
+          "secondReview": "pending",
+          "accepted": false
+        },
+        "status": "awaiting-second-review",
+        "reviewHistory": [
+          {
+            "source": "earlier-local-review",
+            "recordedStatus": "independently-reviewed",
+            "decision": "keep",
+            "resolution": "保留文本范围与界面策略的知识边界，以及下沉复杂性的适用条件。",
+            "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance."
+          }
+        ]
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch08-semantic-boundary.svg",
+          "sha256": "15f686a9992170a5217e89e94e1670c0380506d3c423c5d9c3ed29ecb6b1fa2a",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch08-semantic-boundary.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch08-semantic-boundary-mobile.svg",
+          "sha256": "8c89058cb4fb970806c9d4690c2d439408e3d4dcd1c7be5acf16c5c02e7be5d5",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch08-semantic-boundary-mobile.svg"
+        }
+      },
+      "action": "kept",
+      "actualChanges": [
+        "保留MAIN的keep决定，不重画现有SVG；保留与报告兼容的后续有效修正。",
+        "更新当前权威与状态，保留此前本地审阅历史但不将其解释为MAIN或最终二审认可。"
+      ],
+      "reviewResolution": {
+        "implementation": "implemented-pending-independent-second-review",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "The range-conversion path is a teaching synthesis of 8.1 and 8.3, not literal source code. The later alt-only wording cleanup does not change the snapshot keep verdict.",
+        "未运行构建、未修改Markdown或共享reader/test文件；繁体生成及独立整章验收由MAIN后续执行。"
+      ],
+      "issueResolutions": [],
+      "afterAnchor": {
+        "section": "8.3",
+        "placement": "end"
+      },
+      "beforeAnchor": {
+        "section": "8.3",
+        "placement": "end"
+      },
+      "afterAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch08-semantic-boundary.svg",
+          "sha256": "15f686a9992170a5217e89e94e1670c0380506d3c423c5d9c3ed29ecb6b1fa2a",
+          "changedSinceMainImplementationStart": false
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch08-semantic-boundary-mobile.svg",
+          "sha256": "8c89058cb4fb970806c9d4690c2d439408e3d4dcd1c7be5acf16c5c02e7be5d5",
+          "changedSinceMainImplementationStart": false
+        }
+      }
+    },
+    {
+      "id": "ch09-http-knowledge",
+      "mainDecision": "retire",
+      "mainIssueIds": [
+        "09-http-redundancy",
+        "09-http-asserted-premise"
+      ],
+      "mainRequestedChanges": [
+        "Retire this supplemental SVG pair while retaining the original 9.1 and 9.2 prose.",
+        "Use the existing Chapter 5 reference for the concrete framing explanation. Do not add another full protocol drawing merely to replace the retired figure.",
+        "Preserve the distinction that an inter-module string interface disappears, not a claim that the combined implementation cannot use strings internally."
+      ],
+      "priorMetadata": {
+        "id": "ch09-http-knowledge",
+        "chapter": "ch09",
+        "title": "读取与解析共享了哪份知识？",
+        "question": "只负责读取 HTTP 请求的方法，真的不需要理解请求格式吗？",
+        "answer": "判断请求是否读完也需要理解格式；合并读取与解析可将这份知识集中起来，并消除传递中间请求字符串的接口。",
+        "summary": "图中展示的是格式知识的重复与接口消除，不是某一版本 HTTP 的完整解析算法。",
+        "alt": "合并前，读取类和解析类各自依赖 HTTP 格式知识，并通过请求字符串连接；合并后，一处读取解析模块拥有格式知识，对外返回解析结果，中间字符串不再是跨模块接口。",
+        "kind": "dependency-comparison",
+        "desktop": "/diagrams/ch09-http-knowledge.svg",
+        "mobile": "/diagrams/ch09-http-knowledge-mobile.svg",
+        "anchor": {
+          "section": "9.2",
+          "placement": "end"
+        },
+        "sources": [
+          {
+            "section": "9.1",
+            "epub": "OEBPS/part0013.xhtml#p16:f4cb6f1927",
+            "reason": "读取请求也须识别结束边界，从而与解析共享格式知识；图示不将某个标头概括为所有HTTP请求的唯一边界规则。"
+          },
+          {
+            "section": "9.2",
+            "epub": "OEBPS/part0013.xhtml#p18:31ebb1c440",
+            "reason": "合并后省去在两个方法之间返回和传递请求字符串的接口。"
+          }
+        ],
+        "review": {
+          "decision": "keep",
+          "resolution": "共享格式知识与消除跨类字符串接口均有直接来源；不概括为完整HTTP算法。"
+        },
+        "status": "independently-reviewed"
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch09-http-knowledge.svg",
+          "sha256": "08de4b2c9b56cc8604e68f89c5d3ebfc5a09417226ce447a691be468ad5db777",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch09-http-knowledge.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch09-http-knowledge-mobile.svg",
+          "sha256": "23c68415463a418b815afe65ee008c08605e26767aacf155927dac124077ee88",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch09-http-knowledge-mobile.svg"
+        }
+      },
+      "action": "retired",
+      "actualChanges": [
+        "已从活动JSON数组移除该ID，已删除公开桌面/移动SVG两份，不以disabled状态保留。",
+        "不补入替代图以恢复数量；原书相关正文、代码、清单、交叉引用及原图均未修改。",
+        "中央备份之外的独有后续SVG版本已移到review/reader/archive/08-14-before-main，未继续公开提供。"
+      ],
+      "reviewResolution": {
+        "implementation": "retired-as-requested",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "The comparator was inspected for overlap, not given a complete Chapter 5 independent verdict. The HTTP behavior being assessed is the supplied book example, not a general protocol specification."
+      ],
+      "issueResolutions": [
+        {
+          "id": "09-http-redundancy",
+          "implementation": "retired-as-requested",
+          "verification": "从活动元数据及public路径均确认不存在；不是宣称已修好旧图。"
+        },
+        {
+          "id": "09-http-asserted-premise",
+          "implementation": "retired-as-requested",
+          "verification": "从活动元数据及public路径均确认不存在；不是宣称已修好旧图。"
+        }
+      ]
+    },
+    {
+      "id": "ch09-cursor-state",
+      "mainDecision": "revise",
+      "mainIssueIds": [
+        "09-cursor-dependency",
+        "09-cursor-boundaries",
+        "09-cursor-absence",
+        "09-cursor-branch-labels"
+      ],
+      "mainRequestedChanges": [
+        "Remove the cursor-to-selection arrow; show independent storage with a separately labeled conditional invariant.",
+        "Use stable character cells or individually positioned glyphs, with selection boundaries between characters and the cursor at exactly the selected endpoint.",
+        "Add a short visible qualification that selection may be absent but cursor Position still exists. Do not invent a sentinel or an empty-selection encoding.",
+        "Move branch labels off their paths. Keep the scope limited to this design example and do not frame the difference as a measured performance benefit."
+      ],
+      "priorMetadata": {
+        "id": "ch09-cursor-state",
+        "chapter": "ch09",
+        "title": "合并对象为何反而增加一次判断？",
+        "question": "选区和光标经常一起变化，为什么这个例子仍然适合分开表示？",
+        "answer": "组合对象必须先看布尔值，再选择某个端点，才能得到光标；独立 Position 直接表达光标位置，选区仍由两个 Position 表示。",
+        "summary": "分开的是表示，不是取消关系：有选区时光标仍位于其一端。高层仍要分别操作选区和光标，合并没有省去这些操作。",
+        "alt": "组合表示通过光标在哪一端的布尔分支选择选区起点或终点；分开表示则直接读取 cursor Position。示意文本中选区有两个端点，光标与其中一个重合。",
+        "kind": "state-representation",
+        "desktop": "/diagrams/ch09-cursor-state.svg",
+        "mobile": "/diagrams/ch09-cursor-state-mobile.svg",
+        "anchor": {
+          "section": "9.5",
+          "placement": "end"
+        },
+        "sources": [
+          {
+            "section": "9.5",
+            "epub": "OEBPS/part0013.xhtml#p31:1efe914cfc",
+            "reason": "光标始终存在，选区可不存在；有选区时光标位于一个端点。"
+          },
+          {
+            "section": "9.5",
+            "epub": "OEBPS/part0013.xhtml#p33:ed9e86e55c",
+            "reason": "组合对象需检查布尔值再读取端点，且高层仍需分别操作两者。"
+          },
+          {
+            "section": "9.5",
+            "epub": "OEBPS/part0013.xhtml#p34:4d0eb5288f",
+            "reason": "修订版选区用两个Position，光标用一个Position，无专用选区或光标类。字母与光标位置为教学示例。"
+          }
+        ],
+        "review": {
+          "source": "review/reader/diagram-review-08-14.json",
+          "decision": "revise",
+          "stage": "MAIN-first-pass",
+          "implementation": "pending-implementation-or-readback",
+          "secondReview": "pending",
+          "accepted": false
+        },
+        "status": "awaiting-second-review",
+        "reviewHistory": [
+          {
+            "source": "earlier-local-review",
+            "recordedStatus": "independently-reviewed",
+            "decision": "revise",
+            "resolution": "已去掉光标指向选区的误导箭头，移动分支标签，固定字符位置并使光标与选区端点重合。",
+            "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance.",
+            "snapshotDesktop": "/tmp/aposd2e-viz-review-round1/assets/ch09-cursor-state.svg",
+            "snapshotMobile": "/tmp/aposd2e-viz-review-round1/assets/ch09-cursor-state-mobile.svg"
+          }
+        ]
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch09-cursor-state.svg",
+          "sha256": "b8c3ec1308ce3c62a70cf91f952557265dc89ab346813f7d320b73447d14bf44",
+          "recoverableAt": "review/reader/archive/08-14-before-main/ch09-cursor-state.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch09-cursor-state-mobile.svg",
+          "sha256": "ee4d1b3e9c14efa6bed3ab2a915251f3cf2cf1769da4960d861d4cf6a6fecabd",
+          "recoverableAt": "review/reader/archive/08-14-before-main/ch09-cursor-state-mobile.svg"
+        }
+      },
+      "action": "revised",
+      "actualChanges": [
+        "两版新增无选区且光标仍存在的可见状态图；有选区例继续保持光标与端点重合。",
+        "组合端点选择明确限定为有选区示例，未定义哨兵、空范围或其他无选区编码。",
+        "同步answer、summary和alt；保留已有逐字定位、分支标签移位及误导箭头删除。"
+      ],
+      "reviewResolution": {
+        "implementation": "implemented-pending-independent-second-review",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "The chosen letters are invented teaching data. No actual editor state or runtime behavior was tested. Live geometry repairs do not automatically supply the missing no-selection qualification.",
+        "未运行构建、未修改Markdown或共享reader/test文件；繁体生成及独立整章验收由MAIN后续执行。"
+      ],
+      "issueResolutions": [
+        {
+          "id": "09-cursor-dependency",
+          "implementation": "preserved-existing-fix",
+          "verification": "实施者来源/资产检查，不是独立二审结论。"
+        },
+        {
+          "id": "09-cursor-boundaries",
+          "implementation": "preserved-existing-fix",
+          "verification": "实施者来源/资产检查，不是独立二审结论。"
+        },
+        {
+          "id": "09-cursor-absence",
+          "implementation": "implemented-in-this-pass",
+          "verification": "实施者来源/资产检查，不是独立二审结论。"
+        },
+        {
+          "id": "09-cursor-branch-labels",
+          "implementation": "preserved-existing-fix",
+          "verification": "实施者来源/资产检查，不是独立二审结论。"
+        }
+      ],
+      "afterAnchor": {
+        "section": "9.5",
+        "placement": "end"
+      },
+      "beforeAnchor": {
+        "section": "9.5",
+        "placement": "end"
+      },
+      "afterAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch09-cursor-state.svg",
+          "sha256": "99c4196af4af575705684849e54af6f799559f4338491956325153cf13613d90",
+          "changedSinceMainImplementationStart": true
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch09-cursor-state-mobile.svg",
+          "sha256": "c6f117d665b949a9dde8d59c0c61ffac3c6bb3e50907c22252bd62305e968ee6",
+          "changedSinceMainImplementationStart": true
+        }
+      }
+    },
+    {
+      "id": "ch09-logging-locality",
+      "mainDecision": "keep",
+      "mainIssueIds": [],
+      "mainRequestedChanges": [],
+      "priorMetadata": {
+        "id": "ch09-logging-locality",
+        "chapter": "ch09",
+        "title": "这条日志为什么不需要一个专用包装类？",
+        "question": "把一条错误日志提成方法，为什么可能让阅读更费力？",
+        "answer": "读调用处要跳去确认记录内容，读包装方法又要跳回理解错误情境；在检测处记录，可让这两份知识同处一地。",
+        "summary": "结论限于书中单处调用、很浅、与调用处高度依赖的包装方法；不反对通用日志基础设施。",
+        "alt": "分离时，错误检测处与 NetworkErrorLogger 包装方法之间有两条相反的阅读依赖箭头；内联后，错误情境和记录 req、dest、e 的语句相邻，仍调用通用 logger。",
+        "kind": "reading-dependency",
+        "desktop": "/diagrams/ch09-logging-locality.svg",
+        "mobile": "/diagrams/ch09-logging-locality-mobile.svg",
+        "anchor": {
+          "section": "9.6",
+          "placement": "end"
+        },
+        "sources": [
+          {
+            "section": "9.6",
+            "epub": "OEBPS/part0013.xhtml#p68:df02390bcc",
+            "reason": "专用日志方法大多仅一行、各被调用一次，并与调用处相互依赖。"
+          },
+          {
+            "section": "9.6",
+            "epub": "OEBPS/part0013.xhtml#p69:4beef3e21b",
+            "reason": "建议把日志语句放回检测错误处，消除包装接口；图中保留通用logger，避免误解为取消所有日志抽象。"
+          }
+        ],
+        "review": {
+          "source": "review/reader/diagram-review-08-14.json",
+          "decision": "keep",
+          "stage": "MAIN-first-pass",
+          "implementation": "pending-implementation-or-readback",
+          "secondReview": "pending",
+          "accepted": false
+        },
+        "status": "awaiting-second-review",
+        "reviewHistory": [
+          {
+            "source": "earlier-local-review",
+            "recordedStatus": "independently-reviewed",
+            "decision": "keep",
+            "resolution": "双向箭头明确表示阅读依赖；保留单处调用的限定和通用logger。",
+            "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance."
+          }
+        ]
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch09-logging-locality.svg",
+          "sha256": "d5868115c4b61bcef72944af5117dae3ec63e7d272b534bd95b0581188d39de7",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch09-logging-locality.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch09-logging-locality-mobile.svg",
+          "sha256": "206279a9c4b21ffdce112f380a0ccb45f6be0167307a84817a1be4bfaa6d24f1",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch09-logging-locality-mobile.svg"
+        }
+      },
+      "action": "kept",
+      "actualChanges": [
+        "保留MAIN的keep决定，不重画现有SVG；保留与报告兼容的后续有效修正。",
+        "更新当前权威与状态，保留此前本地审阅历史但不将其解释为MAIN或最终二审认可。"
+      ],
+      "reviewResolution": {
+        "implementation": "implemented-pending-independent-second-review",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "The arrows describe plausible reading dependencies from the source, not observed navigation by test participants. This is not advice to inline every small method or logging abstraction.",
+        "未运行构建、未修改Markdown或共享reader/test文件；繁体生成及独立整章验收由MAIN后续执行。"
+      ],
+      "issueResolutions": [],
+      "afterAnchor": {
+        "section": "9.6",
+        "placement": "end"
+      },
+      "beforeAnchor": {
+        "section": "9.6",
+        "placement": "end"
+      },
+      "afterAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch09-logging-locality.svg",
+          "sha256": "d5868115c4b61bcef72944af5117dae3ec63e7d272b534bd95b0581188d39de7",
+          "changedSinceMainImplementationStart": false
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch09-logging-locality-mobile.svg",
+          "sha256": "206279a9c4b21ffdce112f380a0ccb45f6be0167307a84817a1be4bfaa6d24f1",
+          "changedSinceMainImplementationStart": false
+        }
+      }
+    },
+    {
+      "id": "ch10-unset-semantics",
+      "mainDecision": "revise",
+      "mainIssueIds": [
+        "10-unset-labels"
+      ],
+      "mainRequestedChanges": [
+        "Keep the state/postcondition comparison unchanged.",
+        "Move all desktop action labels clear of the arrow stems and keep the rightmost label inside the final content width."
+      ],
+      "priorMetadata": {
+        "id": "ch10-unset-semantics",
+        "chapter": "ch10",
+        "title": "改变成功条件，而不是忽略失败",
+        "question": "怎样让删除不存在的变量成为正常情况？",
+        "answer": "将操作定义为确保变量不存在：已有变量被删除，不存在的变量保持不存在，两条路径都满足同一个成功条件。",
+        "summary": "图示对照 Tcl 原设计与作者提出的替代语义，不声称现有 unset 已按建议改变。",
+        "alt": "原定义中，存在变量通向删除成功，不存在通向错误与调用者catch；建议定义中，存在和不存在两种初态都通向变量不存在且成功返回。",
+        "kind": "state-transition",
+        "desktop": "/diagrams/ch10-unset-semantics.svg",
+        "mobile": "/diagrams/ch10-unset-semantics-mobile.svg",
+        "anchor": {
+          "section": "10.3",
+          "placement": "end"
+        },
+        "sources": [
+          {
+            "section": "10.2",
+            "epub": "OEBPS/part0014.xhtml#p48:cb85625e5f",
+            "reason": "清理临时状态时难以预测已创建的变量，原unset迫使调用者捕获并忽略不存在错误。"
+          },
+          {
+            "section": "10.3",
+            "epub": "OEBPS/part0014.xhtml#p53:8bdaca4870",
+            "reason": "作者建议以确保变量不再存在取代删除变量的定义；两条状态路径是该语义的直接展开。"
+          }
+        ],
+        "review": {
+          "source": "review/reader/diagram-review-08-14.json",
+          "decision": "revise",
+          "stage": "MAIN-first-pass",
+          "implementation": "pending-implementation-or-readback",
+          "secondReview": "pending",
+          "accepted": false
+        },
+        "status": "awaiting-second-review",
+        "reviewHistory": [
+          {
+            "source": "earlier-local-review",
+            "recordedStatus": "independently-reviewed",
+            "decision": "revise",
+            "resolution": "已将桌面版四个动作标签移出垂直连线；保留原设计与建议语义的区别。",
+            "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance.",
+            "snapshotDesktop": "/tmp/aposd2e-viz-review-round1/assets/ch10-unset-semantics.svg"
+          }
+        ]
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch10-unset-semantics.svg",
+          "sha256": "a7bf70a6a04be488395a4f3779602a8d1691ba57fb804d7fbff5e23a4c802abd",
+          "recoverableAt": "docs/.vuepress/public/diagrams/ch10-unset-semantics.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch10-unset-semantics-mobile.svg",
+          "sha256": "330121be6fbaf94bbd0e154cfbe99f858a35ae980252e42d2b2bb07d29f76e6d",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch10-unset-semantics-mobile.svg"
+        }
+      },
+      "action": "preserved-existing-fix",
+      "actualChanges": [
+        "保留先前移开四个动作标签的有效修改及两种初态汇入同一成功条件。",
+        "本轮未改变状态语义或Tcl原设计/作者建议的区分；重新执行资产文字与连线检查。"
+      ],
+      "reviewResolution": {
+        "implementation": "implemented-pending-independent-second-review",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "The diagram covers the absent-variable condition only, not every possible unset failure. The author's later label move still requires fresh rendering.",
+        "未运行构建、未修改Markdown或共享reader/test文件；繁体生成及独立整章验收由MAIN后续执行。"
+      ],
+      "issueResolutions": [
+        {
+          "id": "10-unset-labels",
+          "implementation": "preserved-existing-fix",
+          "verification": "实施者来源/资产检查，不是独立二审结论。"
+        }
+      ],
+      "afterAnchor": {
+        "section": "10.3",
+        "placement": "end"
+      },
+      "beforeAnchor": {
+        "section": "10.3",
+        "placement": "end"
+      },
+      "afterAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch10-unset-semantics.svg",
+          "sha256": "a7bf70a6a04be488395a4f3779602a8d1691ba57fb804d7fbff5e23a4c802abd",
+          "changedSinceMainImplementationStart": false
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch10-unset-semantics-mobile.svg",
+          "sha256": "330121be6fbaf94bbd0e154cfbe99f858a35ae980252e42d2b2bb07d29f76e6d",
+          "changedSinceMainImplementationStart": false
+        }
+      }
+    },
+    {
+      "id": "ch10-range-overlap",
+      "mainDecision": "keep",
+      "mainIssueIds": [],
+      "mainRequestedChanges": [],
+      "priorMetadata": {
+        "id": "ch10-range-overlap",
+        "chapter": "ch10",
+        "title": "用范围交集定义正常结果",
+        "question": "索引越界或起点大于终点时，怎样仍给出明确结果？",
+        "answer": "按作者建议，只返回满足 beginIndex ≤ i < endIndex 的现有字符；没有满足条件的字符就返回空结果。",
+        "summary": "字母与索引为教学示例。这是作者建议的 API，不是 Java substring 的现有行为，也不是 Python 负索引规则。",
+        "alt": "字符串ABCDE的字符索引为0至4。请求负2至2与有效范围交于0至2，得到AB；请求3至8得到DE；请求4至2没有满足条件的索引，得到空结果。",
+        "kind": "interval-intersection",
+        "desktop": "/diagrams/ch10-range-overlap.svg",
+        "mobile": "/diagrams/ch10-range-overlap-mobile.svg",
+        "anchor": {
+          "section": "10.5",
+          "placement": "end"
+        },
+        "sources": [
+          {
+            "section": "10.5",
+            "epub": "OEBPS/part0014.xhtml#p60:50f41da8bc",
+            "reason": "原Java接口边界检查给调用者带来额外代码。"
+          },
+          {
+            "section": "10.5",
+            "epub": "OEBPS/part0014.xhtml#p61:ee472e4f26",
+            "reason": "建议的字符集合语义包含越界及起点大于终点。ABCDE与具体索引是教学自拟；不采用原段对Python切片的过度概括。"
+          }
+        ],
+        "review": {
+          "source": "review/reader/diagram-review-08-14.json",
+          "decision": "keep",
+          "stage": "MAIN-first-pass",
+          "implementation": "pending-implementation-or-readback",
+          "secondReview": "pending",
+          "accepted": false
+        },
+        "status": "awaiting-second-review",
+        "reviewHistory": [
+          {
+            "source": "earlier-local-review",
+            "recordedStatus": "independently-reviewed",
+            "decision": "keep",
+            "resolution": "独立审阅保留交集语义；后续浏览器几何检查发现引导线穿过0和5刻度，已下移引导线起点。",
+            "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance.",
+            "snapshotDesktop": "/tmp/aposd2e-viz-review-round1/assets/ch10-range-overlap.svg"
+          }
+        ]
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch10-range-overlap.svg",
+          "sha256": "a6332a06e7f95cca17fb93d93268c1f6005a10820f7353865581032bd67450d0",
+          "recoverableAt": "docs/.vuepress/public/diagrams/ch10-range-overlap.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch10-range-overlap-mobile.svg",
+          "sha256": "77e42bcfa780e99ea3230cd546a531915de38952e461c23cad226c4569cfdd1f",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch10-range-overlap-mobile.svg"
+        }
+      },
+      "action": "kept",
+      "actualChanges": [
+        "保留MAIN的keep决定，不重画现有SVG；保留与报告兼容的后续有效修正。",
+        "更新当前权威与状态，保留此前本地审阅历史但不将其解释为MAIN或最终二审认可。"
+      ],
+      "reviewResolution": {
+        "implementation": "implemented-pending-independent-second-review",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "ABCDE and the three ranges are invented teaching inputs, correctly identified as such. This does not specify Java's current behavior or a complete language slicing API.",
+        "未运行构建、未修改Markdown或共享reader/test文件；繁体生成及独立整章验收由MAIN后续执行。"
+      ],
+      "issueResolutions": [],
+      "afterAnchor": {
+        "section": "10.5",
+        "placement": "end"
+      },
+      "beforeAnchor": {
+        "section": "10.5",
+        "placement": "end"
+      },
+      "afterAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch10-range-overlap.svg",
+          "sha256": "a6332a06e7f95cca17fb93d93268c1f6005a10820f7353865581032bd67450d0",
+          "changedSinceMainImplementationStart": false
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch10-range-overlap-mobile.svg",
+          "sha256": "77e42bcfa780e99ea3230cd546a531915de38952e461c23cad226c4569cfdd1f",
+          "changedSinceMainImplementationStart": false
+        }
+      }
+    },
+    {
+      "id": "ch10-error-carrier",
+      "mainDecision": "replace",
+      "mainIssueIds": [
+        "10-carrier-unseen-payload",
+        "10-carrier-competing-story"
+      ],
+      "mainRequestedChanges": [
+        "Replace the generic workflow with a compact message-contract illustration using the two error messages already supplied in 10.7.",
+        "Show two detection sites producing the same shaped base-exception/message record, then the same unchanged response-building operation using the supplied message. Visually distinguish specific-error knowledge from response-format knowledge.",
+        "Keep a concise request-level scope note: abort this request, clean up as appropriate, continue with the next; exclude system-fatal exceptions.",
+        "Do not prescribe cleanup-versus-response ordering, add HTTP status-code rules, expose every exception indiscriminately, or redraw the existing aggregation call tree."
+      ],
+      "priorMetadata": {
+        "id": "ch10-error-carrier",
+        "chapter": "ch10",
+        "title": "聚合错误处理，分开两种知识",
+        "question": "统一处理程序如何处理新错误，又不理解每种错误的细节？",
+        "answer": "检测点提供具体错误消息，异常遵循共同基类约定；顶层只负责把消息写入错误响应，随后继续处理下一请求。",
+        "summary": "这张图追踪异常携带的信息与请求生命周期，不重复原图10.1和10.2的调用树。系统级致命错误不属于这条恢复路径。",
+        "alt": "请求处理分为正常响应和请求级异常两路。参数检测点把错误原因封装为共同异常契约中的消息，顶层生成错误响应并清理请求状态，两路最终汇合到下一请求。",
+        "kind": "message-contract",
+        "desktop": "/diagrams/ch10-error-carrier.svg",
+        "mobile": "/diagrams/ch10-error-carrier-mobile.svg",
+        "anchor": {
+          "section": "10.7",
+          "placement": "end"
+        },
+        "sources": [
+          {
+            "section": "10.7",
+            "epub": "OEBPS/part0014.xhtml#p76:cd21be3ccb",
+            "reason": "缺参数、参数格式错误等在抛出时生成消息，由顶层提取并写入响应。"
+          },
+          {
+            "section": "10.7",
+            "epub": "OEBPS/part0014.xhtml#p78:8790376374",
+            "reason": "提取参数知识与响应语法分离；新异常遵守共同基类加消息的约定即可接入。"
+          },
+          {
+            "section": "10.7",
+            "epub": "OEBPS/part0014.xhtml#p79:b101a537cb",
+            "reason": "请求级异常中止当前请求、清理状态、继续下一个，与系统致命错误区分；图不规定清理和生成响应的内部先后。"
+          }
+        ],
+        "review": {
+          "source": "review/reader/diagram-review-08-14.json",
+          "decision": "replace",
+          "stage": "MAIN-first-pass",
+          "implementation": "pending-implementation-or-readback",
+          "secondReview": "pending",
+          "accepted": false
+        },
+        "status": "awaiting-second-review",
+        "reviewHistory": [
+          {
+            "source": "earlier-local-review",
+            "recordedStatus": "independently-reviewed",
+            "decision": "keep",
+            "resolution": "保留消息契约、两种知识归属和请求级恢复边界，不重复原书调用树。",
+            "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance."
+          }
+        ]
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch10-error-carrier.svg",
+          "sha256": "64a00f0a5997da4f8a182fe01a2d26ae470bccec853c39087313db9a19a7e752",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch10-error-carrier.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch10-error-carrier-mobile.svg",
+          "sha256": "11a193f9cf2926796d0d9d9232852e108556c1cf77d18e9991ca7e233fc7054a",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch10-error-carrier-mobile.svg"
+        }
+      },
+      "action": "replaced-in-place",
+      "actualChanges": [
+        "用两条原文消息及同形的共同基类/message记录替换通用正常/异常生命周期。",
+        "显式展示独立请求A、B的检测点、同一段不增加错误类别分支的响应逻辑，以及各自响应中对应的原消息。",
+        "移除正常响应旁路和下一请求路由，只保留请求级中止/清理/继续、系统致命错误排除及不规定清理先后的范围说明。",
+        "移动到10.7第10个根级段落之后，紧接共享异常契约而不是RAMCloud例子。",
+        "更新title、answer、summary、alt和source理由；A/B及message被标记为教学记号，无HTTP状态码或响应协议发明。"
+      ],
+      "reviewResolution": {
+        "implementation": "implemented-pending-independent-second-review",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "Original-figure comparison used the supplied readable gallery sheets and chapter captions. No running web server, exception implementation or reader understanding was tested.",
+        "未运行构建、未修改Markdown或共享reader/test文件；繁体生成及独立整章验收由MAIN后续执行。"
+      ],
+      "issueResolutions": [
+        {
+          "id": "10-carrier-unseen-payload",
+          "implementation": "implemented-in-this-pass",
+          "verification": "实施者来源/资产检查，不是独立二审结论。"
+        },
+        {
+          "id": "10-carrier-competing-story",
+          "implementation": "implemented-in-this-pass",
+          "verification": "实施者来源/资产检查，不是独立二审结论。"
+        }
+      ],
+      "afterAnchor": {
+        "section": "10.7",
+        "paragraph": 10
+      },
+      "beforeAnchor": {
+        "section": "10.7",
+        "placement": "end"
+      },
+      "afterAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch10-error-carrier.svg",
+          "sha256": "079a9da3477bb6ed355a84631c2e9b357b7931e343359e390a1612bcea8ddd20",
+          "changedSinceMainImplementationStart": true
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch10-error-carrier-mobile.svg",
+          "sha256": "481379591427c3edc64a8888a29f23a2db25584819c2948356b83c13e8cb5a59",
+          "changedSinceMainImplementationStart": true
+        }
+      }
+    },
+    {
+      "id": "ch10-mask-obligation",
+      "mainDecision": "revise",
+      "mainIssueIds": [
+        "10-mask-exposure-scope",
+        "10-mask-source-category"
+      ],
+      "mainRequestedChanges": [
+        "Align alt with the visible unfinished-and-caller-needs-to-know condition.",
+        "Describe the crossed-out case as inappropriate/excessive masking in the SVG description.",
+        "Retain the visible success precondition and external-information requirement. Do not add an unconditional eventually-delivered promise or treat every pending retry as a reportable failure."
+      ],
+      "priorMetadata": {
+        "id": "ch10-mask-obligation",
+        "chapter": "ch10",
+        "title": "屏蔽异常不能丢掉完成义务",
+        "question": "重试后完成操作，与吞掉错误后假装成功，有什么区别？",
+        "answer": "前者在内部处理异常并完成承诺；后者既未完成操作，又剥夺了调用者处理失败所需的信息。",
+        "summary": "仅当异常信息不需要由模块外部处理时才适合隐藏。图中的成功路径以重试确实完成操作为前提，不保证网络永远恢复。",
+        "alt": "可恢复的错误经过内部重试，只有完成操作才到达成功；未完成且调用者需要知道的失败向上暴露。被划掉的路径从错误直接通向假装成功，没有完成操作。",
+        "kind": "error-normal-path",
+        "desktop": "/diagrams/ch10-mask-obligation.svg",
+        "mobile": "/diagrams/ch10-mask-obligation-mobile.svg",
+        "anchor": {
+          "section": "10.9",
+          "placement": "end"
+        },
+        "sources": [
+          {
+            "section": "10.6",
+            "epub": "OEBPS/part0014.xhtml#p65:07e841a7ad",
+            "reason": "底层重传是内部处理异常的例子。图仅表达重试成功的条件路径，不把最终交付表述为无条件保证。"
+          },
+          {
+            "section": "10.6",
+            "epub": "OEBPS/part0014.xhtml#p69:f220fa6840",
+            "reason": "异常屏蔽并非适用于所有情况。"
+          },
+          {
+            "section": "10.9",
+            "epub": "OEBPS/part0014.xhtml#p94:b0272bf74a",
+            "reason": "外部不需要异常信息才适合规避或屏蔽。"
+          },
+          {
+            "section": "10.9",
+            "epub": "OEBPS/part0014.xhtml#p95:d3bb5d85eb",
+            "reason": "学生模块吞掉网络错误，使上层无法判断消息丢失或对端失败，是反例。图为条件路径教学归纳。"
+          }
+        ],
+        "review": {
+          "source": "review/reader/diagram-review-08-14.json",
+          "decision": "revise",
+          "stage": "MAIN-first-pass",
+          "implementation": "pending-implementation-or-readback",
+          "secondReview": "pending",
+          "accepted": false
+        },
+        "status": "awaiting-second-review",
+        "reviewHistory": [
+          {
+            "source": "earlier-local-review",
+            "recordedStatus": "independently-reviewed",
+            "decision": "revise",
+            "resolution": "已将替代文本收窄为未完成且上层需要知道，并将吞错称为不恰当的异常屏蔽。",
+            "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance.",
+            "snapshotDesktop": "/tmp/aposd2e-viz-review-round1/assets/ch10-mask-obligation.svg"
+          }
+        ]
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch10-mask-obligation.svg",
+          "sha256": "7afbf98887647cb7c94641e1f686421a82901f4d3522c4281c681937f3965b14",
+          "recoverableAt": "docs/.vuepress/public/diagrams/ch10-mask-obligation.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch10-mask-obligation-mobile.svg",
+          "sha256": "bf06fd839bcddf53eef2e59be20ff257f60b4223e56a95213fc27c14b54fd6c5",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch10-mask-obligation-mobile.svg"
+        }
+      },
+      "action": "preserved-existing-fix",
+      "actualChanges": [
+        "保留先前将alt从不可恢复改成未完成且调用者需要知道的修正。",
+        "保留desc中的不恰当异常屏蔽，以及完成操作才返回成功的条件；不新增必然送达承诺。",
+        "本轮未重画SVG，按MAIN报告重新标注审阅阶段。"
+      ],
+      "reviewResolution": {
+        "implementation": "implemented-pending-independent-second-review",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "This is a contract distinction, not a comprehensive retry state machine. Both identified wording issues have subsequent live source fixes; rendering and integrated accessibility readback remain pending.",
+        "未运行构建、未修改Markdown或共享reader/test文件；繁体生成及独立整章验收由MAIN后续执行。"
+      ],
+      "issueResolutions": [
+        {
+          "id": "10-mask-exposure-scope",
+          "implementation": "preserved-existing-fix",
+          "verification": "实施者来源/资产检查，不是独立二审结论。"
+        },
+        {
+          "id": "10-mask-source-category",
+          "implementation": "preserved-existing-fix",
+          "verification": "实施者来源/资产检查，不是独立二审结论。"
+        }
+      ],
+      "afterAnchor": {
+        "section": "10.9",
+        "placement": "end"
+      },
+      "beforeAnchor": {
+        "section": "10.9",
+        "placement": "end"
+      },
+      "afterAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch10-mask-obligation.svg",
+          "sha256": "7afbf98887647cb7c94641e1f686421a82901f4d3522c4281c681937f3965b14",
+          "changedSinceMainImplementationStart": false
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch10-mask-obligation-mobile.svg",
+          "sha256": "bf06fd839bcddf53eef2e59be20ff257f60b4223e56a95213fc27c14b54fd6c5",
+          "changedSinceMainImplementationStart": false
+        }
+      }
+    },
+    {
+      "id": "ch11-interface-alternatives",
+      "mainDecision": "revise",
+      "mainIssueIds": [
+        "11-edit-highlight",
+        "11-edit-trace",
+        "11-edit-placement",
+        "11-edit-terminology"
+      ],
+      "mainRequestedChanges": [
+        "Align the teaching selection to individually positioned glyphs/cells and count the newline exactly once.",
+        "Show the retained ab and gh fragments in the line-oriented row, and a compact repeated-call or loop representation in the character-oriented row. Keep the same input/result and avoid inventing exact whole-line API signatures.",
+        "Place the comparison after the candidate discussion and the range-interface derivation, not as the first content after the chapter thesis.",
+        "Use 拆分与合并行. Preserve the Chapter 8/11 granularity distinction and do not turn five calls into a measured five-times-slower claim."
+      ],
+      "priorMetadata": {
+        "id": "ch11-interface-alternatives",
+        "chapter": "ch11",
+        "title": "用同一操作检验三个接口",
+        "question": "删除跨行的一段文字，会把哪些工作留给调用者？",
+        "answer": "整行接口留下拆分与合并行，逐字符接口留下循环，任意范围接口直接表达所需文本操作。",
+        "summary": "先用相同任务比较差异很大的方案。字母与操作轨迹为教学示例；逐字符调用可能较慢是原文判断，不是性能测试结果。",
+        "alt": "示例从两行文本ab[cd和ef]gh删除中间四个字母及换行，得到abgh。三条路径分别需要拆分合并行、逐字符循环或一次范围调用。",
+        "kind": "operation-trace",
+        "desktop": "/diagrams/ch11-interface-alternatives.svg",
+        "mobile": "/diagrams/ch11-interface-alternatives-mobile.svg",
+        "anchor": {
+          "intro": true
+        },
+        "sources": [
+          {
+            "section": "11",
+            "epub": "OEBPS/part0015.xhtml#p4:d26ff20881",
+            "reason": "原文的整行、逐字符、字符串范围三个候选接口，无编号小节，按契约使用intro锚点。"
+          },
+          {
+            "section": "11",
+            "epub": "OEBPS/part0015.xhtml#p6:4fb235fadb",
+            "reason": "相同编辑任务下，整行与逐字符接口分别留下拆分与合并行以及循环。字母及五个待删除字符（包含换行）为教学例。"
+          },
+          {
+            "section": "11",
+            "epub": "OEBPS/part0015.xhtml#p11:709cf68663",
+            "reason": "从候选方案共同的缺点推导范围接口，而非无条件给某个方案打分。"
+          },
+          {
+            "section": "11",
+            "epub": "OEBPS/part0015.xhtml#p9:b3dd1fa860",
+            "reason": "逐字符接口可能因每字符一次调用而较慢；仅为原文判断，不是测量结论。"
+          },
+          {
+            "section": "8.1",
+            "epub": "OEBPS/part0012.xhtml#p8:b454c63498",
+            "reason": "图脚注区分第8章面向字符的任意范围接口与本章逐字符接口；操作粒度不同。"
+          }
+        ],
+        "review": {
+          "source": "review/reader/diagram-review-08-14.json",
+          "decision": "revise",
+          "stage": "MAIN-first-pass",
+          "implementation": "pending-implementation-or-readback",
+          "secondReview": "pending",
+          "accepted": false
+        },
+        "status": "awaiting-second-review",
+        "reviewHistory": [
+          {
+            "source": "earlier-local-review",
+            "recordedStatus": "independently-reviewed",
+            "decision": "revise",
+            "resolution": "已按字符单元定位删除高亮，准确包含cd、换行和ef；改正合并行措辞并补充性能限定及跨章粒度来源。",
+            "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance.",
+            "snapshotDesktop": "/tmp/aposd2e-viz-review-round1/assets/ch11-interface-alternatives.svg",
+            "snapshotMobile": "/tmp/aposd2e-viz-review-round1/assets/ch11-interface-alternatives-mobile.svg"
+          }
+        ]
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch11-interface-alternatives.svg",
+          "sha256": "33a0baaddd88e13b04c2433c16afb190241974e74083983a589d38741eaa4cba",
+          "recoverableAt": "review/reader/archive/08-14-before-main/ch11-interface-alternatives.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch11-interface-alternatives-mobile.svg",
+          "sha256": "2f9eebdbb22cbedf90a11aea03b3bff933a4aa0e4fbdf9db4bb45fe59013e510",
+          "recoverableAt": "review/reader/archive/08-14-before-main/ch11-interface-alternatives-mobile.svg"
+        }
+      },
+      "action": "revised",
+      "actualChanges": [
+        "保留已修正的字符单元和五字符高亮，新增首行前缀ab与末行后缀gh的实际汇合图。",
+        "新增五次删除当前零基索引2的中间状态，依次删除c、d、一个换行、e、f；范围方案一次表达[2,7)。",
+        "不规定整行API签名或调用次数；五次单字符调用不解释为五倍耗时。",
+        "移动到intro第6个根级段落后，即候选讨论与任意范围推导之后。",
+        "更新answer、summary、alt及教学轨迹来源说明，保留第8章/第11章不同粒度限定。"
+      ],
+      "reviewResolution": {
+        "implementation": "implemented-pending-independent-second-review",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "The self-fix changes glyph placement but not the boxed comparison or intro anchor. No performance timing, real editor operation or final live render was tested.",
+        "未运行构建、未修改Markdown或共享reader/test文件；繁体生成及独立整章验收由MAIN后续执行。"
+      ],
+      "issueResolutions": [
+        {
+          "id": "11-edit-highlight",
+          "implementation": "preserved-existing-fix",
+          "verification": "实施者来源/资产检查，不是独立二审结论。"
+        },
+        {
+          "id": "11-edit-trace",
+          "implementation": "implemented-in-this-pass",
+          "verification": "实施者来源/资产检查，不是独立二审结论。"
+        },
+        {
+          "id": "11-edit-placement",
+          "implementation": "implemented-in-this-pass",
+          "verification": "实施者来源/资产检查，不是独立二审结论。"
+        },
+        {
+          "id": "11-edit-terminology",
+          "implementation": "preserved-existing-fix",
+          "verification": "实施者来源/资产检查，不是独立二审结论。"
+        }
+      ],
+      "afterAnchor": {
+        "section": "intro",
+        "paragraph": 6
+      },
+      "beforeAnchor": {
+        "intro": true
+      },
+      "afterAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch11-interface-alternatives.svg",
+          "sha256": "3d4b105e0010e695deef852e44cb9caee67fc95bc27bfbfb71254de347964e86",
+          "changedSinceMainImplementationStart": true
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch11-interface-alternatives-mobile.svg",
+          "sha256": "1c01de19472276afdba7db4feab23b3d00630735ea3373fe07f1327ccabfe2ec",
+          "changedSinceMainImplementationStart": true
+        }
+      }
+    },
+    {
+      "id": "ch11-two-design-levels",
+      "mainDecision": "retire",
+      "mainIssueIds": [
+        "11-levels-question",
+        "11-levels-redundancy",
+        "11-levels-placement"
+      ],
+      "mainRequestedChanges": [
+        "Retire this supplemental figure and keep the source paragraph about applying design-it-twice at several levels.",
+        "Do not replace it with a larger data-structure tutorial or invented performance ranking.",
+        "Any retained summary should say different priorities, not mutually exclusive criteria, and should preserve that early exploration need not fully implement every candidate."
+      ],
+      "priorMetadata": {
+        "id": "ch11-two-design-levels",
+        "chapter": "ch11",
+        "title": "接口选定后，还能设计两次吗？",
+        "question": "比较接口与比较实现，为什么不能使用同一套判断依据？",
+        "answer": "接口主要比较高层易用性；同一范围接口下，仍可比较多种内部表示的简单性与性能。",
+        "summary": "接口与实现是两个独立的探索层次。图不宣称链表、字符块或间隙缓冲区中某一个普遍最优，也不要求把候选方案全部实现。",
+        "alt": "界面调用任意范围接口，该接口之下分叉到行链表、固定大小字符块和间隙缓冲区三种候选实现。接口上方标注高层易用性，下方标注简单性和性能，没有胜出排名。",
+        "kind": "abstraction-and-alternatives",
+        "desktop": "/diagrams/ch11-two-design-levels.svg",
+        "mobile": "/diagrams/ch11-two-design-levels-mobile.svg",
+        "anchor": {
+          "intro": true
+        },
+        "sources": [
+          {
+            "section": "11",
+            "epub": "OEBPS/part0015.xhtml#p12:bcac19c1df",
+            "reason": "接口之后可再比较行链表、固定字符块与gap buffer；实现目标是简单性和性能。存储形状为教学示意，不规定内部算法。"
+          },
+          {
+            "section": "11",
+            "epub": "OEBPS/part0015.xhtml#p4:d26ff20881",
+            "reason": "早期只需勾勒重要方法，不必完成各方案所有细节。"
+          },
+          {
+            "section": "11",
+            "epub": "OEBPS/part0015.xhtml#p6:4fb235fadb",
+            "reason": "接口比较最重要的因素是高层软件易用性；与实现比较目标不同。"
+          }
+        ],
+        "review": {
+          "decision": "keep",
+          "resolution": "分叉表示实现备选而非顺序步骤，保留不同评价目标和无普遍赢家的限定。"
+        },
+        "status": "independently-reviewed"
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch11-two-design-levels.svg",
+          "sha256": "2b7bb5721ab250a9c1aafc7dd38db680f9c438e0e974b217dae245facf7eb4a9",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch11-two-design-levels.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch11-two-design-levels-mobile.svg",
+          "sha256": "f6715b30190e5392481820a4f2181cc830fd06067fa3dc8d118c6c1d8c1bb4fd",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch11-two-design-levels-mobile.svg"
+        }
+      },
+      "action": "retired",
+      "actualChanges": [
+        "已从活动JSON数组移除该ID，已删除公开桌面/移动SVG两份，不以disabled状态保留。",
+        "不补入替代图以恢复数量；原书相关正文、代码、清单、交叉引用及原图均未修改。",
+        "中央备份之外的独有后续SVG版本已移到review/reader/archive/08-14-before-main，未继续公开提供。"
+      ],
+      "reviewResolution": {
+        "implementation": "retired-as-requested",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "Retirement is based on redundancy and scope, not a claim that the listed representations cannot implement the interface."
+      ],
+      "issueResolutions": [
+        {
+          "id": "11-levels-question",
+          "implementation": "retired-as-requested",
+          "verification": "从活动元数据及public路径均确认不存在；不是宣称已修好旧图。"
+        },
+        {
+          "id": "11-levels-redundancy",
+          "implementation": "retired-as-requested",
+          "verification": "从活动元数据及public路径均确认不存在；不是宣称已修好旧图。"
+        },
+        {
+          "id": "11-levels-placement",
+          "implementation": "retired-as-requested",
+          "verification": "从活动元数据及public路径均确认不存在；不是宣称已修好旧图。"
+        }
+      ]
+    },
+    {
+      "id": "ch12-missing-contract",
+      "mainDecision": "keep",
+      "mainIssueIds": [],
+      "mainRequestedChanges": [],
+      "priorMetadata": {
+        "id": "ch12-missing-contract",
+        "chapter": "ch12",
+        "title": "声明留下了哪些互不相容的解释？",
+        "question": "看到 start 和 end，能确定返回哪些字符吗？",
+        "answer": "不能。声明没有说明终点是否包含，也没有说明反向范围的结果；接口注释必须补齐这些选择。",
+        "summary": "教学例采用不含终点、反向范围返回空的契约，仅为演示注释补充信息，不代表所有 substring 接口。",
+        "alt": "教学字符串ABCD的索引从0开始。同一个slice(start,end)声明对BC和BCD两个结果都未排除。加入终点不包含的注释后，start为1、end为3的示例只保留BC，反向范围行为也由注释明确。",
+        "kind": "ambiguity-elimination",
+        "desktop": "/diagrams/ch12-missing-contract.svg",
+        "mobile": "/diagrams/ch12-missing-contract-mobile.svg",
+        "anchor": {
+          "section": "12.1",
+          "placement": "end"
+        },
+        "sources": [
+          {
+            "section": "12.1",
+            "epub": "OEBPS/part0016.xhtml#p15:7f3e8bf262",
+            "reason": "声明不能确定终点包含性和start>end时行为；注释补全简化视图。slice、ABCD、索引与选定契约是教学自拟，而非作者指定的唯一语义。"
+          },
+          {
+            "section": "12.1",
+            "epub": "OEBPS/part0016.xhtml#p14:6e7f5d7f88",
+            "reason": "强迫调用者读实现来推导契约既费力，也暴露本该隐藏的复杂性。"
+          }
+        ],
+        "review": {
+          "source": "review/reader/diagram-review-08-14.json",
+          "decision": "keep",
+          "stage": "MAIN-first-pass",
+          "implementation": "pending-implementation-or-readback",
+          "secondReview": "pending",
+          "accepted": false
+        },
+        "status": "awaiting-second-review",
+        "reviewHistory": [
+          {
+            "source": "earlier-local-review",
+            "recordedStatus": "independently-reviewed",
+            "decision": "revise",
+            "resolution": "已补充与字符对齐的0至3索引，并明确教学例从0开始。",
+            "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance.",
+            "snapshotDesktop": "/tmp/aposd2e-viz-review-round1/assets/ch12-missing-contract.svg",
+            "snapshotMobile": "/tmp/aposd2e-viz-review-round1/assets/ch12-missing-contract-mobile.svg"
+          }
+        ]
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch12-missing-contract.svg",
+          "sha256": "fa22b6b150c5e70271396555c53084a38d2118bf408dcb3736452dfcc0ae5338",
+          "recoverableAt": "docs/.vuepress/public/diagrams/ch12-missing-contract.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch12-missing-contract-mobile.svg",
+          "sha256": "28ebae08e6068062f51bcffe0833e398cc67cfde35d45e36dba14e4a29b6dd20",
+          "recoverableAt": "docs/.vuepress/public/diagrams/ch12-missing-contract-mobile.svg"
+        }
+      },
+      "action": "kept",
+      "actualChanges": [
+        "保留MAIN的keep决定，不重画现有SVG；保留与报告兼容的后续有效修正。",
+        "更新当前权威与状态，保留此前本地审阅历史但不将其解释为MAIN或最终二审认可。"
+      ],
+      "reviewResolution": {
+        "implementation": "implemented-pending-independent-second-review",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "The illustrative indexing is zero-based, inferred from the displayed input/output example rather than separately numbered cells. Reverse-range behavior is stated in text, not given a second picture; that is sufficient for this figure's narrower ambiguity demonstration.",
+        "未运行构建、未修改Markdown或共享reader/test文件；繁体生成及独立整章验收由MAIN后续执行。"
+      ],
+      "issueResolutions": [],
+      "afterAnchor": {
+        "section": "12.1",
+        "placement": "end"
+      },
+      "beforeAnchor": {
+        "section": "12.1",
+        "placement": "end"
+      },
+      "afterAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch12-missing-contract.svg",
+          "sha256": "fa22b6b150c5e70271396555c53084a38d2118bf408dcb3736452dfcc0ae5338",
+          "changedSinceMainImplementationStart": false
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch12-missing-contract-mobile.svg",
+          "sha256": "28ebae08e6068062f51bcffe0833e398cc67cfde35d45e36dba14e4a29b6dd20",
+          "changedSinceMainImplementationStart": false
+        }
+      }
+    },
+    {
+      "id": "ch12-discover-dependency",
+      "mainDecision": "retire",
+      "mainIssueIds": [
+        "12-dependency-placeholder",
+        "12-dependency-occlusion"
+      ],
+      "mainRequestedChanges": [
+        "Retire the SVG pair and rely on the concise 12.5 prose and Chapter 13's concrete source examples.",
+        "Preserve the boundary that documentation clarifies dependencies but does not itself remove change amplification.",
+        "Do not replace the figure with another generic A/B/C map or quantified comprehension claim."
+      ],
+      "priorMetadata": {
+        "id": "ch12-discover-dependency",
+        "chapter": "ch12",
+        "title": "文档让依赖可见，不让依赖消失",
+        "question": "注释怎样减少未知信息，却不自动减少要修改的代码？",
+        "answer": "设计说明把相关模块及理由显式连接起来，让修改者知道要看哪里；代码之间原有的依赖仍然存在。",
+        "summary": "作者指出文档主要帮助减轻认知负荷和未知的未知。A、B、C 是教学占位模块，不是书中真实系统，也不是量化效果实验。",
+        "alt": "没有设计说明时，修改者从模块A出发，不知道B、C也受影响；有说明后，可沿文档中的明确引用找到B、C。前后A、B、C之间的代码依赖保持不变。",
+        "kind": "knowledge-discovery",
+        "desktop": "/diagrams/ch12-discover-dependency.svg",
+        "mobile": "/diagrams/ch12-discover-dependency-mobile.svg",
+        "anchor": {
+          "section": "12.5",
+          "placement": "end"
+        },
+        "sources": [
+          {
+            "section": "12.5",
+            "epub": "OEBPS/part0016.xhtml#p25:e9ef790781",
+            "reason": "文档保存设计者无法用代码表达的知识，免去后人重新推导或猜测。"
+          },
+          {
+            "section": "12.5",
+            "epub": "OEBPS/part0016.xhtml#p30:1a1f57a606",
+            "reason": "文档针对认知负荷与未知的未知；图中依赖不因文档而消失，是对其作用边界的教学表达。"
+          },
+          {
+            "section": "12.5",
+            "epub": "OEBPS/part0016.xhtml#p31:98d3dec660",
+            "reason": "文档澄清依赖、补足缺失信息。A/B/C及引用布局是教学例，无实测改进数值。"
+          }
+        ],
+        "review": {
+          "decision": "revise",
+          "resolution": "已把代码依赖连线绕到问题标签和文档框之外，单独保留虚线发现路径，使依赖前后不变可见。",
+          "beforeDesktop": "/diagrams/ch12-discover-dependency-review-before.svg",
+          "beforeMobile": "/diagrams/ch12-discover-dependency-mobile-review-before.svg"
+        },
+        "status": "independently-reviewed"
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch12-discover-dependency.svg",
+          "sha256": "57b2fb533dabe26f4aae693d5e6d7d8b9c7b516b26bc453323d28b21489ab256",
+          "recoverableAt": "review/reader/archive/08-14-before-main/ch12-discover-dependency.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch12-discover-dependency-mobile.svg",
+          "sha256": "465b366dd815cd0ebd952581ba4d82d9639dac2a2a1f8c505f9c6dc5e20df971",
+          "recoverableAt": "review/reader/archive/08-14-before-main/ch12-discover-dependency-mobile.svg"
+        }
+      },
+      "action": "retired",
+      "actualChanges": [
+        "已从活动JSON数组移除该ID，已删除公开桌面/移动SVG两份，不以disabled状态保留。",
+        "不补入替代图以恢复数量；原书相关正文、代码、清单、交叉引用及原图均未修改。",
+        "中央备份之外的独有后续SVG版本已移到review/reader/archive/08-14-before-main，未继续公开提供。"
+      ],
+      "reviewResolution": {
+        "implementation": "retired-as-requested",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "This is not a measured before/after reader study. The retirement recommendation does not deny the source's claim that useful documentation can improve understanding."
+      ],
+      "issueResolutions": [
+        {
+          "id": "12-dependency-placeholder",
+          "implementation": "retired-as-requested",
+          "verification": "从活动元数据及public路径均确认不存在；不是宣称已修好旧图。"
+        },
+        {
+          "id": "12-dependency-occlusion",
+          "implementation": "retired-as-requested",
+          "verification": "从活动元数据及public路径均确认不存在；不是宣称已修好旧图。"
+        }
+      ]
+    },
+    {
+      "id": "ch13-padding-information",
+      "mainDecision": "keep",
+      "mainIssueIds": [],
+      "mainRequestedChanges": [],
+      "priorMetadata": {
+        "id": "ch13-padding-information",
+        "chapter": "ch13",
+        "title": "4 是多少，留在哪一边？",
+        "question": "为什么“文本的水平填充”没有解释 textHorizontalPadding？",
+        "answer": "它只是复述名称；有用的注释补上单位为像素，并明确每行左、右两侧分别留白。",
+        "summary": "尺寸线把两项缺失信息对应到具体几何位置。4像素来自原文；留白区域为便于辨认而放大，不按实际屏幕像素绘制。",
+        "alt": "原注释对单位和单侧双侧都留下问号；修订注释对应到文本左右两条独立尺寸线，每侧均标4px，明确不是两侧合计4px。",
+        "kind": "annotated-dimension",
+        "desktop": "/diagrams/ch13-padding-information.svg",
+        "mobile": "/diagrams/ch13-padding-information-mobile.svg",
+        "anchor": {
+          "section": "13.2",
+          "placement": "end"
+        },
+        "sources": [
+          {
+            "section": "13.2",
+            "epub": "OEBPS/part0017.xhtml#p49:d89461d329",
+            "reason": "原注释遗漏单位及留白位于一侧还是两侧。"
+          },
+          {
+            "section": "13.2",
+            "epub": "OEBPS/part0017.xhtml#p52:4c58df9c7c",
+            "reason": "修订注释明确左右两侧的空白。"
+          },
+          {
+            "section": "13.2",
+            "epub": "OEBPS/part0017.xhtml#p53:5e2c836232",
+            "reason": "单位为像素。"
+          },
+          {
+            "section": "13.2",
+            "epub": "OEBPS/part0017.xhtml#p55:c06f7433be",
+            "reason": "常量值4；放大的几何是教学示意，不是像素比例测量。"
+          }
+        ],
+        "review": {
+          "source": "review/reader/diagram-review-08-14.json",
+          "decision": "keep",
+          "stage": "MAIN-first-pass",
+          "implementation": "pending-implementation-or-readback",
+          "secondReview": "pending",
+          "accepted": false
+        },
+        "status": "awaiting-second-review",
+        "reviewHistory": [
+          {
+            "source": "earlier-local-review",
+            "recordedStatus": "independently-reviewed",
+            "decision": "keep",
+            "resolution": "两条尺寸线分别表示左右各4像素，保留非像素比例示意的说明。",
+            "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance."
+          }
+        ]
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch13-padding-information.svg",
+          "sha256": "31fcc6858eb83a6fe03ed44b76ef7c76b1316a2fd6def1fc9493bbc495f7284e",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch13-padding-information.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch13-padding-information-mobile.svg",
+          "sha256": "8f566670022c3a323c3e2131c25415606068e314bb5ce30ba67c69c3b9ed6605",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch13-padding-information-mobile.svg"
+        }
+      },
+      "action": "kept-with-post-review-marker-fix",
+      "actualChanges": [
+        "保留MAIN初审keep决定及两侧各4px的解释；不改变坐标、尺寸、文本、颜色、线宽或锚点。",
+        "按MAIN后续marked_path_issues发现，将桌面和移动版各一条包含两个M的复合尺寸路径拆为两条独立path；每条均保留marker-start及marker-end。",
+        "每个SVG现在有两条双端箭头尺寸线，共四个箭头端点；初审keep不覆盖后续发现的XML路径缺陷。"
+      ],
+      "reviewResolution": {
+        "implementation": "implemented-pending-independent-second-review",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "The white space is intentionally enlarged and is not a pixel measurement of the rendered example. The shortened old-comment quotation does not alter the missing unit/two-side information.",
+        "未运行构建、未修改Markdown或共享reader/test文件；繁体生成及独立整章验收由MAIN后续执行。"
+      ],
+      "issueResolutions": [],
+      "afterAnchor": {
+        "section": "13.2",
+        "placement": "end"
+      },
+      "beforeAnchor": {
+        "section": "13.2",
+        "placement": "end"
+      },
+      "afterAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch13-padding-information.svg",
+          "sha256": "6858dca88eed0abedb01e44b71fef8cc5ccba3da82e047b730161a431cf872c4",
+          "changedSinceMainImplementationStart": true
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch13-padding-information-mobile.svg",
+          "sha256": "efcb215d0ceaace1e28d5d1643b41f8453c010276fc3873d3d2b27bf694393c8",
+          "changedSinceMainImplementationStart": true
+        }
+      },
+      "followUps": [
+        {
+          "id": "13-padding-multipart-markers",
+          "source": "MAIN follow-up: marked_path_issues XML lint",
+          "originalMainDecision": "keep",
+          "implementation": "fixed",
+          "previousAction": "kept",
+          "previousAfterAssets": {
+            "desktop": {
+              "path": "docs/.vuepress/public/diagrams/ch13-padding-information.svg",
+              "sha256": "31fcc6858eb83a6fe03ed44b76ef7c76b1316a2fd6def1fc9493bbc495f7284e",
+              "changedSinceMainImplementationStart": false
+            },
+            "mobile": {
+              "path": "docs/.vuepress/public/diagrams/ch13-padding-information-mobile.svg",
+              "sha256": "8f566670022c3a323c3e2131c25415606068e314bb5ce30ba67c69c3b9ed6605",
+              "changedSinceMainImplementationStart": false
+            }
+          },
+          "pathSplits": {
+            "desktop": {
+              "before": "M79 309H143M535 309H599",
+              "after": [
+                "M79 309H143",
+                "M535 309H599"
+              ]
+            },
+            "mobile": {
+              "before": "M23 342H69M291 342H337",
+              "after": [
+                "M23 342H69",
+                "M291 342H337"
+              ]
+            }
+          },
+          "preservedAttributes": [
+            "stroke",
+            "stroke-width",
+            "marker-start",
+            "marker-end"
+          ],
+          "verification": {
+            "lintFunction": "review/reader/verify.py::marked_path_issues",
+            "ownedActiveAssetsChecked": 34,
+            "remainingIssues": 0,
+            "pathsPerTargetSvg": 2,
+            "markersPerDimensionPath": 2,
+            "currentRenders": 6,
+            "baselineRenders": 6,
+            "themes": [
+              "standalone",
+              "light",
+              "dark"
+            ],
+            "arrowheadEndpointChecks": 24,
+            "beforeOffAxisMarkerPixels": [
+              5,
+              0,
+              0,
+              5
+            ],
+            "afterOffAxisMarkerPixels": [
+              5,
+              5,
+              5,
+              5
+            ],
+            "pageErrors": 0,
+            "screenshotStorage": "memory only",
+            "scope": "Only marker endpoints and the new marked-path XML invariant; not independent chapter-context or comprehension acceptance."
+          },
+          "secondReview": "pending",
+          "accepted": false
+        }
+      ]
+    },
+    {
+      "id": "ch13-length-map",
+      "mainDecision": "keep",
+      "mainIssueIds": [],
+      "mainRequestedChanges": [],
+      "priorMetadata": {
+        "id": "ch13-length-map",
+        "chapter": "ch13",
+        "title": "一条映射记录与一个缺席条目",
+        "question": "怎样把变量注释写到无需追查所有用法就能理解？",
+        "answer": "说明键是含换行的字符数，值是该长度的行数；某长度没有条目，表示不存在这种长度的行。",
+        "summary": "教学数据 a\\n、bb\\n、cc\\n 映射成 {2:1, 3:2}。这里的长度不是像素宽度，缺席条目也不是缺失统计。",
+        "alt": "三行教学文本分别长度2、3、3，箭头按长度汇合成映射2到1、3到2；长度4没有任何输入行，因此不存储键4，而不是存储4到0。",
+        "kind": "data-to-map",
+        "desktop": "/diagrams/ch13-length-map.svg",
+        "mobile": "/diagrams/ch13-length-map-mobile.svg",
+        "anchor": {
+          "section": "13.3",
+          "placement": "end"
+        },
+        "sources": [
+          {
+            "section": "13.3",
+            "epub": "OEBPS/part0017.xhtml#p72:156d407aa2",
+            "reason": "旧lineWidths注释遗漏键值含义及单位。"
+          },
+          {
+            "section": "13.3",
+            "epub": "OEBPS/part0017.xhtml#p76:f9f9aac689",
+            "reason": "条目格式为length,count。"
+          },
+          {
+            "section": "13.3",
+            "epub": "OEBPS/part0017.xhtml#p77:065899d1a8",
+            "reason": "length为含换行的字符数；具体三行及计数是教学自拟。"
+          },
+          {
+            "section": "13.3",
+            "epub": "OEBPS/part0017.xhtml#p82:23aa83f202",
+            "reason": "应说明缺少条目的含义；原代码p79-p80明确无该长度行就没有对应条目。"
+          }
+        ],
+        "review": {
+          "source": "review/reader/diagram-review-08-14.json",
+          "decision": "keep",
+          "stage": "MAIN-first-pass",
+          "implementation": "pending-implementation-or-readback",
+          "secondReview": "pending",
+          "accepted": false
+        },
+        "status": "awaiting-second-review",
+        "reviewHistory": [
+          {
+            "source": "earlier-local-review",
+            "recordedStatus": "independently-reviewed",
+            "decision": "revise",
+            "resolution": "已将移动版描述中的比例式措辞改成键与计数的映射，数据和缺席条目语义不变。",
+            "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance.",
+            "snapshotMobile": "/tmp/aposd2e-viz-review-round1/assets/ch13-length-map-mobile.svg"
+          }
+        ]
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch13-length-map.svg",
+          "sha256": "0c7b5cddc21689073b8878679d754b44851591bfc60098fb510b7e868e6b2741",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch13-length-map.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch13-length-map-mobile.svg",
+          "sha256": "b5d5f2307a7e4aca89663fef1e13d19401016317b86c10445a793d994f177d19",
+          "recoverableAt": "docs/.vuepress/public/diagrams/ch13-length-map-mobile.svg"
+        }
+      },
+      "action": "kept",
+      "actualChanges": [
+        "保留MAIN的keep决定，不重画现有SVG；保留与报告兼容的后续有效修正。",
+        "更新当前权威与状态，保留此前本地审阅历史但不将其解释为MAIN或最终二审认可。"
+      ],
+      "reviewResolution": {
+        "implementation": "implemented-pending-independent-second-review",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "The broad metadata question is answered through this specific mapping, not every possible variable contract. The diagram correctly identifies its invented data and treats each displayed \\n as one newline character.",
+        "未运行构建、未修改Markdown或共享reader/test文件；繁体生成及独立整章验收由MAIN后续执行。"
+      ],
+      "issueResolutions": [],
+      "afterAnchor": {
+        "section": "13.3",
+        "placement": "end"
+      },
+      "beforeAnchor": {
+        "section": "13.3",
+        "placement": "end"
+      },
+      "afterAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch13-length-map.svg",
+          "sha256": "0c7b5cddc21689073b8878679d754b44851591bfc60098fb510b7e868e6b2741",
+          "changedSinceMainImplementationStart": false
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch13-length-map-mobile.svg",
+          "sha256": "b5d5f2307a7e4aca89663fef1e13d19401016317b86c10445a793d994f177d19",
+          "changedSinceMainImplementationStart": false
+        }
+      }
+    },
+    {
+      "id": "ch13-rpc-intent",
+      "mainDecision": "revise",
+      "mainIssueIds": [
+        "13-rpc-location",
+        "13-rpc-inference-link",
+        "13-rpc-candidate-encoding"
+      ],
+      "mainRequestedChanges": [
+        "Change the mobile subtitle to an unsent RPC destined for the server, matching desktop and the source.",
+        "Connect the high-level interpretation to short source predicate labels, using wording such as suggests/probably where the author is explaining an inference.",
+        "Show capacity with a small count/slot relationship or keep it as a clearly labeled constraint; do not invent a numerical MAX_PKHASHES_PERRPC for the drawing.",
+        "Make the remaining maxPos condition a visible unresolved gate before any append action. Preserve that the figure neither specifies loop order nor explains that condition's rationale.",
+        "Place the revised drawing next to the first RPC comment comparison, before the second unrelated RPC-processing example."
+      ],
+      "priorMetadata": {
+        "id": "ch13-rpc-intent",
+        "chapter": "ch13",
+        "title": "先看要装进哪个请求，再读条件",
+        "question": "高层注释怎样把几个局部判断连接成一个意图？",
+        "answer": "“尝试追加到发往目标服务器且尚未发出的 RPC”提供共同目的，帮助理解会话、状态和容量检查；它并未解释全部条件。",
+        "summary": "请求内容与服务器字母为教学示意。图特意保留 maxPos 检查的解释缺口，不把高层注释冒充完整算法说明。",
+        "alt": "当前键哈希尝试加入发往目标服务器的RPC。发错服务器和已发出请求不能接收；目标服务器上尚未发出且有容量的请求是候选，但仍须满足maxPos小于assignPos，原文高层注释没有解释该条件。",
+        "kind": "intent-and-constraints",
+        "desktop": "/diagrams/ch13-rpc-intent.svg",
+        "mobile": "/diagrams/ch13-rpc-intent-mobile.svg",
+        "anchor": {
+          "section": "13.4",
+          "placement": "end"
+        },
+        "sources": [
+          {
+            "section": "13.4",
+            "epub": "OEBPS/part0017.xhtml#p112:aa4ea17b1c",
+            "reason": "低层注释复述条件，未提供整段目的。"
+          },
+          {
+            "section": "13.4",
+            "epub": "OEBPS/part0017.xhtml#p114:7b82743463",
+            "reason": "修订注释描述将当前键哈希尝试追加到既有RPC的意图；完整句延续至p115。"
+          },
+          {
+            "section": "13.4",
+            "epub": "OEBPS/part0017.xhtml#p106:c361eb5fed",
+            "reason": "代码仍检查maxPos<assignPos；图不得把方向、状态和容量当成全部充分条件。"
+          },
+          {
+            "section": "13.4",
+            "epub": "OEBPS/part0017.xhtml#p107:faf82ddd9f",
+            "reason": "容量检查来自原代码；候选请求及服务器字母是教学示意。"
+          },
+          {
+            "section": "13.4",
+            "epub": "OEBPS/part0017.xhtml#p116:1a36ab00b4",
+            "reason": "作者明确指出高层注释能解释多数检查，唯一未解释的是maxPos；这直接支持图中保留的解释缺口。"
+          }
+        ],
+        "review": {
+          "source": "review/reader/diagram-review-08-14.json",
+          "decision": "revise",
+          "stage": "MAIN-first-pass",
+          "implementation": "pending-implementation-or-readback",
+          "secondReview": "pending",
+          "accepted": false
+        },
+        "status": "awaiting-second-review",
+        "reviewHistory": [
+          {
+            "source": "earlier-local-review",
+            "recordedStatus": "independently-reviewed",
+            "decision": "revise",
+            "resolution": "SVG保留；补入p116，直接支持作者指出maxPos仍未解释的判断。",
+            "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance."
+          }
+        ]
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch13-rpc-intent.svg",
+          "sha256": "0fa69fabb5ee01c2a4a155a0e7cb646a4691d18483963c7925a66b0d1604c765",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch13-rpc-intent.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch13-rpc-intent-mobile.svg",
+          "sha256": "1ab6fa523d1cd9bd3f36fe6b25a2c952b13755f45834d2825e5912cdf9112542",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch13-rpc-intent-mobile.svg"
+        }
+      },
+      "action": "revised",
+      "actualChanges": [
+        "两版改成发往目标服务器的既有待发送RPC，不再表述为目标服务器上的RPC。",
+        "把session相等、LOADING与numHashes容量谓词连接到作者很可能/暗示的解释，rpc明确仅为readRpc[i]的教学缩写。",
+        "用显式maxPos条件门连接选中供后续追加与不选中两个结果；三项已满足不再呈现为成功追加。",
+        "保留maxPos理由未被解释；容量上限不填数值，条件组合不表示短路判断或循环顺序。",
+        "移动到13.4第4个根级段落后；补充p104、p105、p108来源，更新title、answer、summary、alt。"
+      ],
+      "reviewResolution": {
+        "implementation": "implemented-pending-independent-second-review",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "A/B destinations and candidate layout are invented teaching devices, not observed RPC traffic. The supplied snippet and author explanation are the evidence; no RAMCloud implementation or runtime was investigated.",
+        "未运行构建、未修改Markdown或共享reader/test文件；繁体生成及独立整章验收由MAIN后续执行。"
+      ],
+      "issueResolutions": [
+        {
+          "id": "13-rpc-location",
+          "implementation": "implemented-in-this-pass",
+          "verification": "实施者来源/资产检查，不是独立二审结论。"
+        },
+        {
+          "id": "13-rpc-inference-link",
+          "implementation": "implemented-in-this-pass",
+          "verification": "实施者来源/资产检查，不是独立二审结论。"
+        },
+        {
+          "id": "13-rpc-candidate-encoding",
+          "implementation": "implemented-in-this-pass",
+          "verification": "实施者来源/资产检查，不是独立二审结论。"
+        }
+      ],
+      "afterAnchor": {
+        "section": "13.4",
+        "paragraph": 4
+      },
+      "beforeAnchor": {
+        "section": "13.4",
+        "placement": "end"
+      },
+      "afterAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch13-rpc-intent.svg",
+          "sha256": "6eb2f88445b3e25496b171dae16c37311b6dddd5091ebd88cdf6a5b0db366508",
+          "changedSinceMainImplementationStart": true
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch13-rpc-intent-mobile.svg",
+          "sha256": "3d5dc2cf4bcca80113d0364cb8fe91611192ce161ab22412341ce2a5b870c6fa",
+          "changedSinceMainImplementationStart": true
+        }
+      }
+    },
+    {
+      "id": "ch13-ready-contract",
+      "mainDecision": "revise",
+      "mainIssueIds": [
+        "13-ready-observation-time"
+      ],
+      "mainRequestedChanges": [
+        "Label the rows as the situation when this isReady call returns, after any work it performs, or put a small advance/evaluate step before the state-to-result table.",
+        "Keep the two true outcomes, NULL termination and false-may-block wording exactly qualified.",
+        "Retain the direct-or-via-getNext progress obligation without claiming every call necessarily produces an object or a fixed amount of progress.",
+        "Do not introduce the internal rule scheduler, DCFT states or an unsupported concurrency protocol."
+      ],
+      "priorMetadata": {
+        "id": "ch13-ready-contract",
+        "chapter": "ch13",
+        "title": "ready 不等于一定有对象",
+        "question": "isReady 返回 true，能保证下一次 getNext 得到对象吗？",
+        "answer": "不能。true 保证下一次 getNext 不阻塞：可能有对象，也可能已经结束；false 仅表示可能阻塞。",
+        "summary": "接口还必须说明推进义务：直接调用 isReady，或通过 getNext 间接调用，查询才会向前推进。内部规则如何调度不属于这个契约。",
+        "alt": "三种状态映射到可观察行为：有对象和查询结束都使isReady为true，getNext分别得到对象或NULL；尚需等待使isReady为false，getNext可能阻塞。调用箭头另外标明推进查询的副作用。",
+        "kind": "observable-state-contract",
+        "desktop": "/diagrams/ch13-ready-contract.svg",
+        "mobile": "/diagrams/ch13-ready-contract-mobile.svg",
+        "anchor": {
+          "section": "13.5",
+          "placement": "end"
+        },
+        "sources": [
+          {
+            "section": "13.5",
+            "epub": "OEBPS/part0017.xhtml#p263:1446c997c6",
+            "reason": "初稿混入实现且遗漏接口信息。"
+          },
+          {
+            "section": "13.5",
+            "epub": "OEBPS/part0017.xhtml#p268:b83514b38f",
+            "reason": "必须直接或经getNext间接调用isReady，才能推进查询。"
+          },
+          {
+            "section": "13.5",
+            "epub": "OEBPS/part0017.xhtml#p272:c15a306ea3",
+            "reason": "true保证下一次getNext不阻塞。"
+          },
+          {
+            "section": "13.5",
+            "epub": "OEBPS/part0017.xhtml#p273:647cc0a00b",
+            "reason": "true可对应有对象或查询结束；p274明确false意味着可能阻塞，而非必然阻塞。"
+          },
+          {
+            "section": "13.5",
+            "epub": "OEBPS/part0017.xhtml#p244:b6ce39a7bc",
+            "reason": "getNext的NULL返回由单方法契约描述，类注释只介绍高层用法。"
+          }
+        ],
+        "review": {
+          "source": "review/reader/diagram-review-08-14.json",
+          "decision": "revise",
+          "stage": "MAIN-first-pass",
+          "implementation": "pending-implementation-or-readback",
+          "secondReview": "pending",
+          "accepted": false
+        },
+        "status": "awaiting-second-review",
+        "reviewHistory": [
+          {
+            "source": "earlier-local-review",
+            "recordedStatus": "independently-reviewed",
+            "decision": "keep",
+            "resolution": "保留true含结束状态、false仅可能阻塞，以及直接或间接调用的推进义务。",
+            "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance."
+          }
+        ]
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch13-ready-contract.svg",
+          "sha256": "aaa775b678735237f86231bd9e9a825a1cd79f914e5e789cde48e898abea8b9d",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch13-ready-contract.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch13-ready-contract-mobile.svg",
+          "sha256": "c987757db71d1416112228aa11879c09808a0b6938a77c6d0c8386e4e4ab796c",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch13-ready-contract-mobile.svg"
+        }
+      },
+      "action": "revised",
+      "actualChanges": [
+        "表格和卡片明确表示本次isReady完成其工作并返回时的情况，而不是调用前状态。",
+        "桌面中列由isReady()改为返回值，避免把它画成无副作用的纯谓词调用。",
+        "保留对象/结束两种true、NULL终止与false仅可能阻塞；新增调用前没有对象不决定本次返回值的说明。",
+        "保留直接或经getNext间接调用的推进义务，不保证每次产生对象或固定进展。",
+        "同步summary、alt，补充承担实际工作的p267与NULL终止的p193直接来源。"
+      ],
+      "reviewResolution": {
+        "implementation": "implemented-pending-independent-second-review",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "This is a precision repair to a useful contract graphic, not a claim that it currently says false must block. No IndexLookup execution, race behavior or actual reader misconception was measured.",
+        "未运行构建、未修改Markdown或共享reader/test文件；繁体生成及独立整章验收由MAIN后续执行。"
+      ],
+      "issueResolutions": [
+        {
+          "id": "13-ready-observation-time",
+          "implementation": "implemented-in-this-pass",
+          "verification": "实施者来源/资产检查，不是独立二审结论。"
+        }
+      ],
+      "afterAnchor": {
+        "section": "13.5",
+        "placement": "end"
+      },
+      "beforeAnchor": {
+        "section": "13.5",
+        "placement": "end"
+      },
+      "afterAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch13-ready-contract.svg",
+          "sha256": "ec271825bc1dc169d31186107c881d21d1e508957c307bc2e11b116c94d930d1",
+          "changedSinceMainImplementationStart": true
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch13-ready-contract-mobile.svg",
+          "sha256": "69805786ec3586a88161844dc644f4061a5482179405a73d578eb8953a1f9492",
+          "changedSinceMainImplementationStart": true
+        }
+      }
+    },
+    {
+      "id": "ch13-status-discovery",
+      "mainDecision": "retire",
+      "mainIssueIds": [
+        "13-status-boxed-checklist",
+        "13-status-displaced"
+      ],
+      "mainRequestedChanges": [
+        "Retire this supplemental SVG pair; retain the existing enum code, seven-item comment and explanation of its placement.",
+        "Do not silently collapse the actual seven obligations in the source or lose the maximum-last and Java status-code-position conditions.",
+        "Keep the distinction between discoverability and automatic synchronization. No replacement diagram is required."
+      ],
+      "priorMetadata": {
+        "id": "ch13-status-discovery",
+        "chapter": "ch13",
+        "title": "把跨模块清单放在必经之处",
+        "question": "新增一个状态值时，怎样让维护者发现所有同步修改点？",
+        "answer": "在必定要编辑的 Status 枚举末尾放置注释，将状态值与消息、异常映射及 Java 绑定的更新连接起来。",
+        "summary": "图按责任分组展示原注释的七项更新，不表示自动同步。文档让跨文件义务可发现，并没有消除依赖。",
+        "alt": "新增状态值的必经位置是Status枚举末尾，清单从此分出四组连接：最大值、消息和符号表、C++异常类与映射、Java异常类映射及枚举；各组保留原注释七项更新的编号。",
+        "kind": "change-dependency-map",
+        "desktop": "/diagrams/ch13-status-discovery.svg",
+        "mobile": "/diagrams/ch13-status-discovery-mobile.svg",
+        "anchor": {
+          "section": "13.7",
+          "placement": "end"
+        },
+        "sources": [
+          {
+            "section": "13.7",
+            "epub": "OEBPS/part0017.xhtml#p290:09247b9d63",
+            "reason": "新增Status必须访问枚举声明，适合放置跨模块变更说明。"
+          },
+          {
+            "section": "13.7",
+            "epub": "OEBPS/part0017.xhtml#p301:9fb8fb0ebe",
+            "reason": "原清单第1项至p317第7项：最大值、消息/符号、C++异常/映射、Java异常/映射/枚举；图保留全部义务，并按责任分组。"
+          },
+          {
+            "section": "13.7",
+            "epub": "OEBPS/part0017.xhtml#p319:2254da773a",
+            "reason": "新值添加在列表末尾，所以注释也放在末尾，形成自然发现路径。"
+          }
+        ],
+        "review": {
+          "decision": "revise",
+          "resolution": "已恢复ClientException.h、ClientException::throwException、ClientException.java及Java静态异常类要求，保留七项更新。",
+          "beforeDesktop": "/diagrams/ch13-status-discovery-review-before.svg",
+          "beforeMobile": "/diagrams/ch13-status-discovery-mobile-review-before.svg"
+        },
+        "status": "independently-reviewed"
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch13-status-discovery.svg",
+          "sha256": "e455a2888b55f91fe7b9216a0c1bde95ac5887959b092f45b5f853e07bafc5e3",
+          "recoverableAt": "review/reader/archive/08-14-before-main/ch13-status-discovery.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch13-status-discovery-mobile.svg",
+          "sha256": "65cd2b929886830bc870b51fc31661a785ac58626a2851276c42538ef2703126",
+          "recoverableAt": "review/reader/archive/08-14-before-main/ch13-status-discovery-mobile.svg"
+        }
+      },
+      "action": "retired",
+      "actualChanges": [
+        "已从活动JSON数组移除该ID，已删除公开桌面/移动SVG两份，不以disabled状态保留。",
+        "不补入替代图以恢复数量；原书相关正文、代码、清单、交叉引用及原图均未修改。",
+        "中央备份之外的独有后续SVG版本已移到review/reader/archive/08-14-before-main，未继续公开提供。"
+      ],
+      "reviewResolution": {
+        "implementation": "retired-as-requested",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "The figure is not rejected for a missing numbered category: the broad seven-part inventory is present. Retirement concerns redundancy, discovery reasoning and placement."
+      ],
+      "issueResolutions": [
+        {
+          "id": "13-status-boxed-checklist",
+          "implementation": "retired-as-requested",
+          "verification": "从活动元数据及public路径均确认不存在；不是宣称已修好旧图。"
+        },
+        {
+          "id": "13-status-displaced",
+          "implementation": "retired-as-requested",
+          "verification": "从活动元数据及public路径均确认不存在；不是宣称已修好旧图。"
+        }
+      ]
+    },
+    {
+      "id": "ch14-block-domains",
+      "mainDecision": "keep",
+      "mainIssueIds": [],
+      "mainRequestedChanges": [],
+      "priorMetadata": {
+        "id": "ch14-block-domains",
+        "chapter": "ch14",
+        "title": "同一个数字，两个地址域",
+        "question": "为什么把逻辑块号叫作 block，会误伤另一块磁盘数据？",
+        "answer": "文件内索引和物理磁盘地址属于不同域；相同名称掩盖了跨域误用。不同名称可暴露错误，不同类型还能约束混用。",
+        "summary": "文件块2对应磁盘块9等数字为教学自拟，用于解释 Sprite 缺陷的机制，不是历史事故的实际块号或代码。",
+        "alt": "教学文件中逻辑块2经映射对应磁盘块9；错误路径把数值2直接当磁盘块号，清零无关的磁盘块2。修订路径以fileBlock与diskBlock区分，进一步可用不可混用的类型保护。",
+        "kind": "address-domain-trace",
+        "desktop": "/diagrams/ch14-block-domains.svg",
+        "mobile": "/diagrams/ch14-block-domains-mobile.svg",
+        "anchor": {
+          "section": "14.1",
+          "placement": "end"
+        },
+        "sources": [
+          {
+            "section": "14.1",
+            "epub": "OEBPS/part0018.xhtml#p6:ce75b5633d",
+            "reason": "Sprite将逻辑块号误作物理块号，导致无关块被清零。数字2和9、映射及清零路径均为教学自拟。"
+          },
+          {
+            "section": "14.1",
+            "epub": "OEBPS/part0018.xhtml#p7:8c78010958",
+            "reason": "fileBlock/diskBlock可避免名称误导；更进一步是定义不可互换的类型。名称本身不提供类型安全保证。"
+          }
+        ],
+        "review": {
+          "source": "review/reader/diagram-review-08-14.json",
+          "decision": "keep",
+          "stage": "MAIN-first-pass",
+          "implementation": "pending-implementation-or-readback",
+          "secondReview": "pending",
+          "accepted": false
+        },
+        "status": "awaiting-second-review",
+        "reviewHistory": [
+          {
+            "source": "earlier-local-review",
+            "recordedStatus": "independently-reviewed",
+            "decision": "keep",
+            "resolution": "正确映射与错误旁路指向不同物理块；保留教学块号及名称不等于类型安全的限定。",
+            "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance."
+          }
+        ]
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch14-block-domains.svg",
+          "sha256": "980be5da23dbad772532d29496b2669b4e82f38a0a7ca4203ee199ac6d9d12e2",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch14-block-domains.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch14-block-domains-mobile.svg",
+          "sha256": "45b487e8b8126fd8a83015a66dd78d6000747d072f3574d70f23c2ddc234bb1e",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch14-block-domains-mobile.svg"
+        }
+      },
+      "action": "kept",
+      "actualChanges": [
+        "保留MAIN的keep决定，不重画现有SVG；保留与报告兼容的后续有效修正。",
+        "更新当前权威与状态，保留此前本地审阅历史但不将其解释为MAIN或最终二审认可。"
+      ],
+      "reviewResolution": {
+        "implementation": "implemented-pending-independent-second-review",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "The numbers and mapping are explicitly invented teaching data. The graphic does not establish historical Sprite block values, actual bug code, or a guarantee that renaming alone prevents the error.",
+        "未运行构建、未修改Markdown或共享reader/test文件；繁体生成及独立整章验收由MAIN后续执行。"
+      ],
+      "issueResolutions": [],
+      "afterAnchor": {
+        "section": "14.1",
+        "placement": "end"
+      },
+      "beforeAnchor": {
+        "section": "14.1",
+        "placement": "end"
+      },
+      "afterAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch14-block-domains.svg",
+          "sha256": "980be5da23dbad772532d29496b2669b4e82f38a0a7ca4203ee199ac6d9d12e2",
+          "changedSinceMainImplementationStart": false
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch14-block-domains-mobile.svg",
+          "sha256": "45b487e8b8126fd8a83015a66dd78d6000747d072f3574d70f23c2ddc234bb1e",
+          "changedSinceMainImplementationStart": false
+        }
+      }
+    },
+    {
+      "id": "ch14-name-domains",
+      "mainDecision": "keep",
+      "mainIssueIds": [],
+      "mainRequestedChanges": [],
+      "priorMetadata": {
+        "id": "ch14-name-domains",
+        "chapter": "ch14",
+        "title": "名称的范围要与概念的范围吻合",
+        "question": "名称过于笼统和过于具体，会造成怎样不同的误读？",
+        "answer": "x 会让人想到多个坐标域，charIndex 将它收窄到行内字符索引；selection 又把任意文本范围误缩成界面选区，range 更贴合通用能力。",
+        "summary": "图中的集合表示可能解释或适用范围，不是频率、概率或语义距离的量化。精确不等于越具体越好。",
+        "alt": "上半图中x分叉到屏幕像素坐标与行内字符索引，charIndex只指后者。下半图中选区位于任意文本范围集合内部，delete实际覆盖整个范围集合，所以参数应叫range而非selection。",
+        "kind": "semantic-domain",
+        "desktop": "/diagrams/ch14-name-domains.svg",
+        "mobile": "/diagrams/ch14-name-domains-mobile.svg",
+        "anchor": {
+          "section": "14.3",
+          "placement": "end"
+        },
+        "sources": [
+          {
+            "section": "14.3",
+            "epub": "OEBPS/part0018.xhtml#p22:3429e964a8",
+            "reason": "x/y可被误解为屏幕像素，charIndex/lineIndex反映文件位置抽象。"
+          },
+          {
+            "section": "14.3",
+            "epub": "OEBPS/part0018.xhtml#p45:a323d4c80f",
+            "reason": "delete可删除任意范围，selection过窄，应使用range。集合布局为教学表达。"
+          }
+        ],
+        "review": {
+          "source": "review/reader/diagram-review-08-14.json",
+          "decision": "keep",
+          "stage": "MAIN-first-pass",
+          "implementation": "pending-implementation-or-readback",
+          "secondReview": "pending",
+          "accepted": false
+        },
+        "status": "awaiting-second-review",
+        "reviewHistory": [
+          {
+            "source": "earlier-local-review",
+            "recordedStatus": "independently-reviewed",
+            "decision": "keep",
+            "resolution": "解释域分叉及选区子集均有图形关系，不赋予集合大小定量含义。",
+            "authority": "Historical local review, superseded by MAIN first-pass decision; not second-pass acceptance."
+          }
+        ]
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch14-name-domains.svg",
+          "sha256": "46151f8fc29b22e93a25f91b2378ade986526d21e78040b79df8e399b9683024",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch14-name-domains.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch14-name-domains-mobile.svg",
+          "sha256": "dce1aace7b7703ae01382a81ff2b051d14208fc7eed25fde6156befe0aaae009",
+          "recoverableAt": "/tmp/aposd2e-viz-review-round1/assets/ch14-name-domains-mobile.svg"
+        }
+      },
+      "action": "kept",
+      "actualChanges": [
+        "保留MAIN的keep决定，不重画现有SVG；保留与报告兼容的后续有效修正。",
+        "更新当前权威与状态，保留此前本地审阅历史但不将其解释为MAIN或最终二审认可。"
+      ],
+      "reviewResolution": {
+        "implementation": "implemented-pending-independent-second-review",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "The set-like shapes are conceptual teaching notation, not measured probability, frequency, semantic distance or a literal collection implementation. The figure illustrates x only; it does not deny the source's companion lineIndex example.",
+        "未运行构建、未修改Markdown或共享reader/test文件；繁体生成及独立整章验收由MAIN后续执行。"
+      ],
+      "issueResolutions": [],
+      "afterAnchor": {
+        "section": "14.3",
+        "placement": "end"
+      },
+      "beforeAnchor": {
+        "section": "14.3",
+        "placement": "end"
+      },
+      "afterAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch14-name-domains.svg",
+          "sha256": "46151f8fc29b22e93a25f91b2378ade986526d21e78040b79df8e399b9683024",
+          "changedSinceMainImplementationStart": false
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch14-name-domains-mobile.svg",
+          "sha256": "dce1aace7b7703ae01382a81ff2b051d14208fc7eed25fde6156befe0aaae009",
+          "changedSinceMainImplementationStart": false
+        }
+      }
+    },
+    {
+      "id": "ch14-context-budget",
+      "mainDecision": "retire",
+      "mainIssueIds": [
+        "14-context-boxed-rules",
+        "14-context-copy-arrow"
+      ],
+      "mainRequestedChanges": [
+        "Retire the supplemental figure and retain the source's concrete loop/code examples and naming qualifications.",
+        "Do not turn the rule into always-long names, a fixed length threshold, or unconditional permission to use block inside every File class.",
+        "Retain the src/dst example as names for roles in data copying, not as a variable-assignment diagram. No replacement SVG is required."
+      ],
+      "priorMetadata": {
+        "id": "ch14-context-budget",
+        "chapter": "ch14",
+        "title": "上下文能省掉哪些词？",
+        "question": "什么时候 block 或 i 足够清楚，什么时候必须补回限定？",
+        "answer": "可见上下文只有一种含义时可省略重复信息；跨地址域或远离声明时需保留区分。相同用途采用共同词干，角色不同再加前缀。",
+        "summary": "短名称不是一律错误，长名称也不是一律更好。图中的伪代码是教学自拟，用完整可见的循环对比省略长代码后的远处使用；不设名称长度阈值，最终要看读者能否理解。",
+        "alt": "单一块类型的File类提供足够上下文，可用block；同时出现文件块与磁盘块时，需fileBlock/diskBlock。复制操作中的同类块使用srcFileBlock/dstFileBlock；短循环里的i由完整可见的使用范围解释，远处使用则需更具描述性的名称。",
+        "kind": "context-contrast",
+        "desktop": "/diagrams/ch14-context-budget.svg",
+        "mobile": "/diagrams/ch14-context-budget-mobile.svg",
+        "anchor": {
+          "section": "14.6",
+          "placement": "end"
+        },
+        "sources": [
+          {
+            "section": "14.4",
+            "epub": "OEBPS/part0018.xhtml#p51:06485baed2",
+            "reason": "共同名称必须对应足够窄且行为一致的用途。"
+          },
+          {
+            "section": "14.4",
+            "epub": "OEBPS/part0018.xhtml#p52:03d977f544",
+            "reason": "同类多个变量可添加src/dst前缀。"
+          },
+          {
+            "section": "14.5",
+            "epub": "OEBPS/part0018.xhtml#p57:86e1e90a93",
+            "reason": "File内可省去重复file前缀，但有多种块类型时例外。"
+          },
+          {
+            "section": "14.3",
+            "epub": "OEBPS/part0018.xhtml#p38:80ca530461",
+            "reason": "短小且完整可见的循环中i/j可接受。"
+          },
+          {
+            "section": "14.6",
+            "epub": "OEBPS/part0018.xhtml#p89:24cbe73305",
+            "reason": "可读性由读者判断，不按长短机械裁决。"
+          },
+          {
+            "section": "14.6",
+            "epub": "OEBPS/part0018.xhtml#p90:fec36f089e",
+            "reason": "声明到使用距离越大，越需要描述性名称；visitLine、locateLine及省略代码的片段为教学自拟，不是作者代码，也不是量化阈值。"
+          }
+        ],
+        "review": {
+          "decision": "revise",
+          "resolution": "已用完整短循环和省略长代码后的远处使用替换文字总结；新增代码明确标为教学伪代码。",
+          "beforeDesktop": "/diagrams/ch14-context-budget-review-before.svg",
+          "beforeMobile": "/diagrams/ch14-context-budget-mobile-review-before.svg"
+        },
+        "status": "independently-reviewed"
+      },
+      "priorMetadataAuthority": "Earlier local review only. Preserved as history, not MAIN acceptance.",
+      "beforeAssets": {
+        "desktop": {
+          "path": "docs/.vuepress/public/diagrams/ch14-context-budget.svg",
+          "sha256": "ec220165fe5d737a3d09cdd362169522855b383558ec85c5b466f38a8f166cc3",
+          "recoverableAt": "review/reader/archive/08-14-before-main/ch14-context-budget.svg"
+        },
+        "mobile": {
+          "path": "docs/.vuepress/public/diagrams/ch14-context-budget-mobile.svg",
+          "sha256": "eafd18126f88e52d6897f2e0ba73aebedf712380ac5eb9eafe4ee53e52faa857",
+          "recoverableAt": "review/reader/archive/08-14-before-main/ch14-context-budget-mobile.svg"
+        }
+      },
+      "action": "retired",
+      "actualChanges": [
+        "已从活动JSON数组移除该ID，已删除公开桌面/移动SVG两份，不以disabled状态保留。",
+        "不补入替代图以恢复数量；原书相关正文、代码、清单、交叉引用及原图均未修改。",
+        "中央备份之外的独有后续SVG版本已移到review/reader/archive/08-14-before-main，未继续公开提供。"
+      ],
+      "reviewResolution": {
+        "implementation": "retired-as-requested",
+        "secondReview": "pending",
+        "accepted": false
+      },
+      "boundaries": [
+        "The copy-arrow issue is a plausible interpretation risk, not observed reader behavior. Retirement is based principally on low added explanatory value, not a claim that the naming rules themselves are wrong."
+      ],
+      "issueResolutions": [
+        {
+          "id": "14-context-boxed-rules",
+          "implementation": "retired-as-requested",
+          "verification": "从活动元数据及public路径均确认不存在；不是宣称已修好旧图。"
+        },
+        {
+          "id": "14-context-copy-arrow",
+          "implementation": "retired-as-requested",
+          "verification": "从活动元数据及public路径均确认不存在；不是宣称已修好旧图。"
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "status": "implementation-checks-passed-not-independent-acceptance",
+    "metadataAndSourceChecks": {
+      "activeDiagrams": 17,
+      "svgAssets": 34,
+      "preciseSourceReferences": 57,
+      "paragraphAnchorLocaleChecks": 6,
+      "allAnchorResolutionsAcrossLocales": 34,
+      "protectedSourceFilesUnchanged": 34,
+      "archiveChecksums": "passed",
+      "retirementAndPublicBackupAbsence": "passed",
+      "sourceLocatorsAndSvgXmlLocalIdsSafetyColorFallbacks": "passed"
+    },
+    "teachingData": {
+      "input": "abcd\nefgh",
+      "removedInOrder": [
+        "c",
+        "d",
+        "\n",
+        "e",
+        "f"
+      ],
+      "states": [
+        "abd\nefgh",
+        "ab\nefgh",
+        "abefgh",
+        "abfgh",
+        "abgh"
+      ],
+      "range": [
+        2,
+        7
+      ],
+      "scope": "Teaching example arithmetic only, not production editor execution or performance testing."
+    },
+    "renderChecks": {
+      "engine": "installed Playwright with headless Chrome",
+      "browserPlugin": "not available",
+      "renders": 102,
+      "viewports": [
+        "1440x1000",
+        "390x844"
+      ],
+      "svgWidths": [
+        680,
+        360
+      ],
+      "themes": [
+        "standalone",
+        "light",
+        "dark"
+      ],
+      "textOverflow": 0,
+      "containerOverflow": 0,
+      "strokeTextCrossings": 0,
+      "pixelBlankFailures": 0,
+      "pageErrors": 0,
+      "screenshotHandling": "Captured and pixel-checked in memory; no screenshot/test/build artifacts written.",
+      "scope": "Asset-only geometry and pixel checks. No independent visual acceptance, reader captions, full chapter rhythm, modal or screen-reader verification.",
+      "supersededForAssetsByMarkerFollowUp": [
+        "docs/.vuepress/public/diagrams/ch13-padding-information.svg",
+        "docs/.vuepress/public/diagrams/ch13-padding-information-mobile.svg"
+      ],
+      "followUpNote": "原102次矩阵发生在尺寸线marker修复之前；两份变化资产的补充验证见postReviewMarkerChecks，不能把旧矩阵当作新箭头的验收。"
+    },
+    "notPerformed": [
+      "production build",
+      "test-file changes",
+      "shared reader edits",
+      "traditional-Chinese generation",
+      "full chapter/caption rendering",
+      "independent second pass",
+      "reader comprehension experiment"
+    ],
+    "postReviewMarkerChecks": {
+      "lintFunction": "review/reader/verify.py::marked_path_issues",
+      "ownedActiveAssetsChecked": 34,
+      "remainingIssues": 0,
+      "pathsPerTargetSvg": 2,
+      "markersPerDimensionPath": 2,
+      "currentRenders": 6,
+      "baselineRenders": 6,
+      "themes": [
+        "standalone",
+        "light",
+        "dark"
+      ],
+      "arrowheadEndpointChecks": 24,
+      "beforeOffAxisMarkerPixels": [
+        5,
+        0,
+        0,
+        5
+      ],
+      "afterOffAxisMarkerPixels": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "pageErrors": 0,
+      "screenshotStorage": "memory only",
+      "scope": "Only marker endpoints and the new marked-path XML invariant; not independent chapter-context or comprehension acceptance."
+    }
+  },
+  "paragraphAnchorEvidence": [
+    {
+      "id": "ch10-error-carrier",
+      "document": "docs/ch10.md",
+      "sourceSha256": "85b0b5441dfae7419080df2ec5e081da2589b8460d2ce630a3271ff5d5a1613f",
+      "anchor": {
+        "section": "10.7",
+        "paragraph": 10
+      },
+      "tokenInsertionIndex": 166,
+      "paragraphStartLine": 126,
+      "paragraphPrefix": "从封装和信息隐藏的角度看，上述异常聚合方式有很好的特性。顶层异常处理程序封装了如何生成错误响应的知识，却不了解具体错误，只使用异常中提供的错误消息。`getParameter` 方",
+      "method": "MarkdownIt root-level paragraph_close, level=0; blockquotes excluded, image paragraphs included."
+    },
+    {
+      "id": "ch10-error-carrier",
+      "document": "docs/zh-tw/ch10.md",
+      "sourceSha256": "494c9510cde1a7f909bd89df3acef502959d159dce767558fe11a76065135595",
+      "anchor": {
+        "section": "10.7",
+        "paragraph": 10
+      },
+      "tokenInsertionIndex": 166,
+      "paragraphStartLine": 126,
+      "paragraphPrefix": "從封裝和資訊隱藏的角度看，上述例外聚合方式有很好的特性。頂層例外處理常式封裝了如何生成錯誤響應的知識，卻不瞭解具體錯誤，只使用例外中提供的錯誤訊息。`getParameter` 方",
+      "method": "MarkdownIt root-level paragraph_close, level=0; blockquotes excluded, image paragraphs included."
+    },
+    {
+      "id": "ch11-interface-alternatives",
+      "document": "docs/ch11.md",
+      "sourceSha256": "6784dc4cd0df2611c5ac6192f3fd908d7f467878c5f1a26dcbe69a01dae0269f",
+      "anchor": {
+        "section": "intro",
+        "paragraph": 6
+      },
+      "tokenInsertionIndex": 38,
+      "paragraphStartLine": 17,
+      "paragraphPrefix": "有时所有的备选设计都不够理想。这时，看看能否提出其他方案，并以已有方案中发现的问题为出发点，探索新设计。如果你在设计文本类时只考虑了面向行和面向字符的方案，可能会发现两者都不太好用",
+      "method": "MarkdownIt root-level paragraph_close, level=0; blockquotes excluded, image paragraphs included."
+    },
+    {
+      "id": "ch11-interface-alternatives",
+      "document": "docs/zh-tw/ch11.md",
+      "sourceSha256": "bdab2ec732c55413839aa8ec6cefaae1b95145ebb5bfedeef39d5ae6568ea358",
+      "anchor": {
+        "section": "intro",
+        "paragraph": 6
+      },
+      "tokenInsertionIndex": 38,
+      "paragraphStartLine": 17,
+      "paragraphPrefix": "有時所有的備選設計都不夠理想。這時，看看能否提出其他方案，並以已有方案中發現的問題為出發點，探索新設計。如果你在設計文字類時只考慮了行導向和字元導向的方案，可能會發現兩者都不太好用",
+      "method": "MarkdownIt root-level paragraph_close, level=0; blockquotes excluded, image paragraphs included."
+    },
+    {
+      "id": "ch13-rpc-intent",
+      "document": "docs/ch13.md",
+      "sourceSha256": "df18a6157c327367375b45d0f0389f7d6aa9e927831f587de613282b23f9d731",
+      "anchor": {
+        "section": "13.4",
+        "paragraph": 4
+      },
+      "tokenInsertionIndex": 170,
+      "paragraphStartLine": 202,
+      "paragraphPrefix": "这段注释没有描述具体细节，而是在更高层级上说明代码的整体功能。有了这些信息，读者就能理解代码中几乎所有的操作：循环一定是在遍历所有现有的远程过程调用（RPC）；会话检查很可能用于判",
+      "method": "MarkdownIt root-level paragraph_close, level=0; blockquotes excluded, image paragraphs included."
+    },
+    {
+      "id": "ch13-rpc-intent",
+      "document": "docs/zh-tw/ch13.md",
+      "sourceSha256": "370a5c81fe1226022005c0876eb01e774d92769c6f74be3b08427ebbc5746faa",
+      "anchor": {
+        "section": "13.4",
+        "paragraph": 4
+      },
+      "tokenInsertionIndex": 170,
+      "paragraphStartLine": 202,
+      "paragraphPrefix": "這段註解沒有描述具體細節，而是在更高層級上說明程式碼的整體功能。有了這些資訊，讀者就能理解程式碼中幾乎所有的操作：迴圈一定是在遍歷所有現有的遠端過程呼叫（RPC）；會話檢查很可能用",
+      "method": "MarkdownIt root-level paragraph_close, level=0; blockquotes excluded, image paragraphs included."
+    }
+  ],
+  "secondPassFocus": [
+    "Render retained and replaced assets with actual chapter captions in desktop/mobile light/dark reader views.",
+    "Confirm new paragraph adjacency: ch10 error contract after 10.7 paragraph 10, ch11 comparison after intro paragraph 6, ch13 RPC after 13.4 paragraph 4.",
+    "Check independent A/B payload-to-response correspondence, RPC destination inference and maxPos gate, isReady return-time observation, and cursor absence state.",
+    "Confirm ch11 five-step deletion and retained-fragment merge at actual reader scale.",
+    "Generate TC later and verify visible labels, alt/desc and geometry without changing protected original book content.",
+    "Reassess explanatory value after retirement; do not restore a count target."
+  ]
+}

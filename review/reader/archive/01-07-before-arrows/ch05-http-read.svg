@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 578" role="img" aria-labelledby="ch05-http-read-title ch05-http-read-desc">
+  <title id="ch05-http-read-title">还没解析，怎么知道读完了？</title>
+  <desc id="ch05-http-read-desc">教学请求片段中的 Content-Length: 4 通过依赖虚线指向 a、=、1、2 四字节范围。K 是识别头部空行与解释长度的知识。被批评的方案中读取类和解析类各自有 K，前者先用 K 完成定界读取，后者再用 K 解析。合并方案将 K 留给一个模块。</desc>
+  <defs><marker id="ch05-http-read-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="680" height="578" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="24" y="34" font-size="20" font-weight="600">还没解析，怎么知道读完了？</text>
+    <text x="24" y="61" font-size="14" fill="var(--diagram-muted,#5c645d)">教学请求片段：仅讨论显式 Content-Length 定界</text>
+    <text x="24" y="110" font-family="ui-monospace,monospace">Content-Length: 4</text><text x="24" y="139" font-size="14">头部以空行结束</text>
+    <g fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-line,#aebbad)"><rect x="408" y="87" width="50" height="44"/><rect x="458" y="87" width="50" height="44"/><rect x="508" y="87" width="50" height="44"/><rect x="558" y="87" width="50" height="44"/></g>
+    <g font-family="ui-monospace,monospace" text-anchor="middle" font-size="19"><text x="433" y="116">a</text><text x="483" y="116">=</text><text x="533" y="116">1</text><text x="583" y="116">2</text></g>
+    <path d="M408 139V151H608V139" fill="none" stroke="var(--diagram-secondary,#2c6096)"/>
+    <path d="M218 106H357V151H398" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-dasharray="5 4" marker-end="url(#ch05-http-read-arrow)"/>
+    <text x="238" y="95" font-size="13">长度约束</text><text x="411" y="177" font-size="14">请求体共 4 个 ASCII 字节</text>
+    <text x="24" y="213" font-weight="600">K = 识别空行 + 解释长度；读取者已经需要 K</text>
+    <text x="24" y="250" font-weight="600">被批评的拆分类设计</text>
+    <rect x="24" y="267" width="280" height="98" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="40" y="296" font-weight="600">读取类：包含 K</text><text x="40" y="325">用 K 判断需要读完哪些字节</text><text x="40" y="352" font-size="14">返回请求字符串</text>
+    <rect x="376" y="267" width="280" height="98" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="392" y="296" font-weight="600">解析类：也包含 K</text><text x="392" y="325">再解释头部与请求体边界</text><text x="392" y="352" font-size="14">调用者还要安排先后</text>
+    <path d="M314 320H365" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-http-read-arrow)"/><text x="314" y="306" font-size="13">再解析</text>
+    <rect x="24" y="395" width="632" height="93" rx="4" fill="none" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="40" y="423" font-weight="600">合并后：一个模块保存 K</text>
+    <text x="40" y="457">调用接收请求</text><text x="232" y="457">K 定界并读取</text><text x="454" y="457">形成请求对象</text>
+    <path d="M145 451H217M334 451H439" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch05-http-read-arrow)"/>
+    <text x="24" y="519" font-size="14">实线是处理顺序，虚线是长度依赖；取得请求体可能需要多次读取。</text>
+    <text x="24" y="548" font-size="13" fill="var(--diagram-muted,#5c645d)">其他定界、校验与错误路径未画出；不是所有协议都应采用同一个类的通则。</text>
+  </g>
+</svg>

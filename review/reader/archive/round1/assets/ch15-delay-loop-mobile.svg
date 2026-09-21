@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 568" role="img" aria-labelledby="ch15-delay-loop-m-title ch15-delay-loop-m-desc">
+  <title id="ch15-delay-loop-m-title">越等越难补注释的循环</title>
+  <desc id="ch15-delay-loop-m-desc">上部顺时针循环连接推迟、未记录代码增加、补写变难与继续拖延；下部显示设计记忆随推迟变模糊，使后补注释遗漏理由。</desc>
+  <defs><marker id="ch15-delay-loop-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="568" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">为什么越等越难补注释？</text>
+    <text x="16" y="57" font-size="14">15.1 · 积压循环与信息损失</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch15-delay-loop-m-arrow)">
+      <path d="M156 119H204"/><path d="M272 157V215"/><path d="M204 253H156"/><path d="M88 215V157"/><path d="M180 344V382" stroke-dasharray="5 4"/><path d="M180 438V471"/>
+    </g>
+    <rect x="16" y="81" width="140" height="76" rx="5" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="86" y="126" text-anchor="middle">推迟写注释</text>
+    <rect x="204" y="81" width="140" height="76" rx="5" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="274" y="114" text-anchor="middle">未记录代码</text><text x="274" y="139" text-anchor="middle">继续增加</text>
+    <rect x="204" y="215" width="140" height="76" rx="5" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="274" y="248" text-anchor="middle">补写任务大</text><text x="274" y="273" text-anchor="middle">更不愿着手</text>
+    <rect x="16" y="215" width="140" height="76" rx="5" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)"/>
+    <text x="86" y="248" text-anchor="middle">先做下一项</text><text x="86" y="273" text-anchor="middle">继续往后拖</text>
+    <text x="180" y="190" text-anchor="middle" font-size="14">越积越难补</text>
+    <path d="M16 315H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="180" y="342" text-anchor="middle">推迟还有另一种损失</text>
+    <rect x="40" y="382" width="280" height="56" rx="5" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="180" y="416" text-anchor="middle">设计记忆逐渐模糊</text>
+    <text x="180" y="494" text-anchor="middle">后来对照代码补写</text>
+    <text x="180" y="520" text-anchor="middle" fill="var(--diagram-danger,#a03946)">易重复代码，漏掉设计理由</text>
+    <text x="16" y="552" font-size="14">定性因果示意，不代表时间或概率。</text>
+  </g>
+</svg>

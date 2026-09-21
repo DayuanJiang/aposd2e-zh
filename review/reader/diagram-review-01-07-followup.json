@@ -1,0 +1,376 @@
+{
+  "review": "Independent bounded ch01-ch07 arrow-repair follow-up",
+  "verdict": "accept_within_reviewed_scope",
+  "summary": {
+    "revisedIdsAccepted": 6,
+    "previouslyAcceptedIdsConfirmedUnchanged": 10,
+    "activeIdsAccepted": 16,
+    "retirementsStillConfirmed": 3,
+    "previouslyMissingHeadsVisuallyConfirmed": 11,
+    "svgFilesWithArrowRepairs": 9,
+    "changedSvgFilesTotal": 10,
+    "additionalChangedFile": "ch07-context-instances-mobile.svg has timing/legend clarification, not an arrowhead repair.",
+    "remainingIssues": [],
+    "conclusion": "All six targeted repairs pass. Every previously missing arrowhead is visible with the intended direction in both light and dark captures. The intentionally undirected Context B association remains undirected. HTTP entry wording and Context timing clarification also pass."
+  },
+  "reviewedVersion": {
+    "previousReport": {
+      "path": "review/reader/diagram-review-01-07-second.json",
+      "sha256": "53ee4380bfbf6c109645549721730ec479d2155998d14d71f84d134564ccb97a"
+    },
+    "writerHandoff": {
+      "path": "review/reader/revisions-01-07-followup.json",
+      "sha256": "a98da0880e73bc93eddff9d42d689ff280607a631ab8e9930397ec78493a7981",
+      "treatment": "Used to identify the intended scope, not as proof of successful rendering."
+    },
+    "beforeDirectory": "/tmp/aposd2e-01-07-before-arrows",
+    "beforeVerification": "All ten archived pre-change SVG files match the corresponding SHA-256 values in the second report. Read all ten complete diffs against the current files.",
+    "galleryDirectory": "/tmp/aposd2e-viz-round2-01-07-followup",
+    "galleryIndexSha256": "85b8555d0ec35300d0ea5d841c95424543462e5e1ea0bdb05fad598d5a0f8126",
+    "galleryReaderCssSha256": "ca7a2683e3df6247ae4b5207d428b6237736a375a69688a92e8f37314477c9f1",
+    "workspaceReaderCssMatchesGallery": true,
+    "insertionCodeSha256": "e89779196a8631c89c075e030d6e9fc33c6048890824e83a66a76d0f4b4e38a8",
+    "unchangedSourceVerification": "All seven chapter metadata files, seven simplified chapter Markdown files, seven supplied English originals and paragraph-insertion code retain the exact hashes recorded in the second report. The prior source-condition and placement judgments therefore carry forward; no new source-flow review was necessary.",
+    "assetVerification": "Independently computed all 32 current active SVG hashes and matched them to both theme entries in the new gallery index. Compared the ten previously accepted pairs byte-for-byte with their second-pass SVGs and gallery PNGs: all twenty SVGs and twenty PNGs are unchanged.",
+    "pngVerification": "PNG hashes below were independently computed to identify the actual files viewed or byte-compared. The supplied gallery index records SVG/CSS hashes, not PNG hashes.",
+    "pathConventions": {
+      "svg": "docs/.vuepress/public/diagrams/<id>.svg and <id>-mobile.svg",
+      "png": "galleryDirectory plus the recorded PNG filename",
+      "unchangedEvidence": "The exact second-report record for each ID remains the source of the carried-forward source and placement assessment."
+    }
+  },
+  "method": {
+    "currentSvgSourcesRead": 12,
+    "completeBeforeAfterDiffsRead": 10,
+    "galleryPngsViewedWithViewImage": 12,
+    "desktopMobileThemeStatesVisuallyRechecked": 24,
+    "unchangedAcceptedSvgFilesByteCompared": 20,
+    "unchangedAcceptedPngFilesByteCompared": 20,
+    "allActiveSvgIndexHashesVerified": 32,
+    "suppliedGeometryIndex": "All outside, overlap and container-candidate arrays are empty. This was corroborating layout evidence, not a substitute for inspecting arrowheads.",
+    "visualTest": "Inspected the actual triangular heads, their directions and target relationships in the six light/dark gallery pairs. Checked the paired control arrows and deliberately headless B association, not only marker attributes.",
+    "scope": "Closure of the second report's six targeted repairs and two optional wording clarifications. No fresh whole-book or integrated-reader review.",
+    "notPerformed": [
+      "No asset, metadata, Markdown or shared-reader edits.",
+      "No build, browser launch, new screenshot or independent rerender.",
+      "No full CSS-diff attribution audit or scrolling/transition interaction test.",
+      "No deployed-bundle, cache, Traditional-Chinese derivative or complete phone-layout acceptance.",
+      "No reader learning, retention or transfer experiment."
+    ]
+  },
+  "revisedIds": [
+    {
+      "id": "ch02-memory-owner",
+      "verdict": "accept",
+      "resolvedHeads": [
+        {
+          "layout": "desktop",
+          "endpointSvgUnits": [31, 308],
+          "direction": "down",
+          "lightVisible": true,
+          "darkVisible": true,
+          "meaning": "The original design's time axis now points down, matching the conditional redesign's axis."
+        }
+      ],
+      "actualViewEvidence": "Both desktop time-axis heads are visible. The two mobile time axes remain correctly directed and unchanged. No new head crosses a label or changes the responsibility-lane interpretation.",
+      "semanticCheck": "Allocation and use stay in their original lanes; only release changes owner. The safe-restructuring condition and warning that the lifecycle protocol is not proven remain unchanged.",
+      "placement": "Unchanged: after docs/ch02.md:33.",
+      "evidence": {
+        "desktopSha256": "44f789b633abe30dafb20e45eb4d90abdab88a76add8eff97dfef7147fcb4be9",
+        "mobileSha256": "b10ea4d99357e82704e54dfe42a2bb5885d9ef7fac6bf446764c0159fdcf7076",
+        "lightPng": "gallery-light-002.png",
+        "lightPngSha256": "907ae3ee3c390b5f89f38841adffe0974db49304ae5a7e541f7bc804d5c2acb2",
+        "darkPng": "gallery-dark-002.png",
+        "darkPngSha256": "080946f5467db3775b1cbc96eb1c515ede1d9e4ed7ee00a3a86c19051d0ec5bd"
+      },
+      "remainingIssues": [],
+      "requestedChanges": []
+    },
+    {
+      "id": "ch05-format-ownership",
+      "verdict": "accept",
+      "resolvedHeads": [
+        {
+          "layout": "desktop",
+          "endpointSvgUnits": [114, 177],
+          "direction": "down",
+          "lightVisible": true,
+          "darkVisible": true,
+          "meaning": "Reading phase calls the reader implementation."
+        },
+        {
+          "layout": "mobile",
+          "endpointSvgUnits": [150, 162],
+          "direction": "right",
+          "lightVisible": true,
+          "darkVisible": true,
+          "meaning": "Reading phase calls the reader implementation."
+        },
+        {
+          "layout": "mobile",
+          "endpointSvgUnits": [252, 205],
+          "direction": "up",
+          "lightVisible": true,
+          "darkVisible": true,
+          "meaning": "The K format-change event targets the reader as well as the writer."
+        }
+      ],
+      "actualViewEvidence": "The before panels now show both reader and writer invocation heads. Mobile's dashed K event visibly points upward to the reader and downward to the writer; the after panel still has one change target and two invocation paths.",
+      "semanticCheck": "Numbered application phases remain separate from calls. Solid invocation and dashed change-propagation semantics remain distinct. The actual-interface-hiding condition is unchanged.",
+      "placement": "Unchanged: after docs/ch05.md:45.",
+      "evidence": {
+        "desktopSha256": "e21eb55dbf1bdbfd2510c2dd765f1bd18a17541520ebe9617f93028c75c93754",
+        "mobileSha256": "8b4d2d309a4a8909abbc3860da8c02a35ec062e970ef1dd8cdf158f116165ae1",
+        "lightPng": "gallery-light-007.png",
+        "lightPngSha256": "585c84310b49f3050c0d5034b33adf0737d15c18256cd50b46c23572ece32c05",
+        "darkPng": "gallery-dark-007.png",
+        "darkPngSha256": "91ffe8b3130eb0ab6fdecf53f58f6875f88d1f6edde05d6c74a1a704043ebb6e"
+      },
+      "remainingIssues": [],
+      "requestedChanges": []
+    },
+    {
+      "id": "ch05-http-read",
+      "verdict": "accept",
+      "resolvedHeads": [
+        {
+          "layout": "desktop",
+          "endpointSvgUnits": [217, 451],
+          "direction": "right",
+          "lightVisible": true,
+          "darkVisible": true,
+          "meaning": "Receive-request entry proceeds to K-based framing and reading."
+        }
+      ],
+      "actualViewEvidence": "Both desktop merged-processing links have visible rightward heads. The first inside label now identifies a receive-request entry rather than an external caller action. Mobile remains byte-identical and preserves its textual sequence arrows.",
+      "semanticCheck": "The field-to-four-byte bracket, duplicated K in the rejected design, single K owner afterward, possible multiple reads and bounded HTTP scope remain intact. The optional entry-label concern is resolved without expanding the diagram.",
+      "placement": "Unchanged: after docs/ch05.md:65.",
+      "evidence": {
+        "desktopSha256": "0d541370097c0006086c309bc35c485862ef6fe1e9159bc289f1b46aafffbe89",
+        "mobileSha256": "381d2733a832fcfde3f24fdd7a9537120609ba13900241855d15b08c752ce635",
+        "lightPng": "gallery-light-008.png",
+        "lightPngSha256": "a84cad73916fccb6070906fa12e50794613279b2108f019505868c132e3cad34",
+        "darkPng": "gallery-dark-008.png",
+        "darkPngSha256": "54c2b15854a5c3783d41fe40782fc3b107da732a9902d9dc832cbed474a07ac9"
+      },
+      "remainingIssues": [],
+      "requestedChanges": []
+    },
+    {
+      "id": "ch06-history-boundary",
+      "verdict": "accept",
+      "resolvedHeads": [
+        {
+          "layout": "mobile",
+          "endpointSvgUnits": [202, 208],
+          "direction": "right",
+          "lightVisible": true,
+          "darkVisible": true,
+          "meaning": "A1 registration enters its History list slot."
+        },
+        {
+          "layout": "desktop",
+          "endpointSvgUnits": [380, 465],
+          "direction": "right",
+          "lightVisible": true,
+          "darkVisible": true,
+          "meaning": "The first undo invocation reaches the A2 implementation."
+        },
+        {
+          "layout": "mobile",
+          "endpointSvgUnits": [204, 438],
+          "direction": "right",
+          "lightVisible": true,
+          "darkVisible": true,
+          "meaning": "The first undo invocation reaches A2.undo()."
+        }
+      ],
+      "actualViewEvidence": "Mobile's short dashed A1 registration line now visibly terminates in a triangular head, matching A2. Both callback rows are directed in each layout. Registration enters History, while callback arrows terminate at the owning implementations.",
+      "semanticCheck": "Dashed registration remains distinct from solid invocation. A2-then-A1 order, F0/F1 fences, opaque state, neutral-example scope, forward redo and the source-typo/same-mechanism qualifications are unchanged.",
+      "placement": "Unchanged: after docs/ch06.md:151.",
+      "evidence": {
+        "desktopSha256": "ac9f34fe98ccc89f773ff7c08a098f525fa8ab92b2cd8a49d9b84a835338a4e6",
+        "mobileSha256": "bbd770953d7ca090492162d4648af909a6c604ab3fd1263eab0c7aa2bb2ab6cc",
+        "lightPng": "gallery-light-011.png",
+        "lightPngSha256": "c97ae81842244916b6b9b8fdb8faec196a4a251af6e2f54880aea1bf9318e5b6",
+        "darkPng": "gallery-dark-011.png",
+        "darkPngSha256": "3237963a2261cc2a2026f64d066224f61c71d5324db97f03d863418f0bbbd26d"
+      },
+      "remainingIssues": [],
+      "requestedChanges": []
+    },
+    {
+      "id": "ch07-dispatch-value",
+      "verdict": "accept",
+      "resolvedHeads": [
+        {
+          "layout": "desktop",
+          "endpointSvgUnits": [422, 336],
+          "direction": "down",
+          "lightVisible": true,
+          "darkVisible": true,
+          "meaning": "The matching S request selects the file handler."
+        },
+        {
+          "layout": "mobile",
+          "endpointSvgUnits": [88, 561],
+          "direction": "down",
+          "lightVisible": true,
+          "darkVisible": true,
+          "meaning": "The matching S request selects the file handler."
+        }
+      ],
+      "actualViewEvidence": "S and D branches now both have downward heads in both layouts/themes. Handler names and repeated handle(request) signatures remain visible beneath their own branches; neither new head obscures its input label.",
+      "semanticCheck": "S=/static/a.txt and D=/report retain their distinct destinations. The fixed-target example still explicitly assumes no additional work; fixed delegation alone is not labeled useless. The same-layer counterexample remains.",
+      "placement": "Unchanged: after docs/ch07.md:64.",
+      "evidence": {
+        "desktopSha256": "8675e659c2a251f572ed86dc6b9dbe0efbdcad43944be28df35d4dab077bdfb2",
+        "mobileSha256": "3bebeb4733c070a95f9e28edfb88a68438b92f4969d7a8d7087cd048b4c0b488",
+        "lightPng": "gallery-light-013.png",
+        "lightPngSha256": "77ab3b3d728cdd38d522da7f000c3a13ff8139a58f2e959dbcaa2a2290201fa7",
+        "darkPng": "gallery-dark-013.png",
+        "darkPngSha256": "e212a96bf8a9a5776513db83fb2abeb29dd53028c4f8560aad9b3e40cc747139"
+      },
+      "remainingIssues": [],
+      "requestedChanges": []
+    },
+    {
+      "id": "ch07-context-instances",
+      "verdict": "accept",
+      "resolvedHeads": [
+        {
+          "layout": "desktop",
+          "endpointSvgUnits": [163, 390],
+          "direction": "down",
+          "lightVisible": true,
+          "darkVisible": true,
+          "meaning": "Construction-time provision of ctxA reaches netA."
+        }
+      ],
+      "actualViewEvidence": "Both desktop constructor-delivery links now have downward heads. Mobile constructor arrows remain directed. The solid A lookup arrow is still distinct from the headless B association. The new timing explanation fits in both layouts and identifies the values as after step 2 with a step-3 lookup overlaid.",
+      "semanticCheck": "The table still shows shared-slot overwrite versus independent ctxA/ctxB values. Correct associations, distinct objects, sequential scope and nonautomatic immutability/thread safety are retained. Neither the arrow fix nor wording invents a B runtime read.",
+      "intentionalUndirectedAssociation": {
+        "desktopPath": "M517 479V520",
+        "mobilePath": "M164 648H206",
+        "sourceUnchanged": true,
+        "visuallyHeadlessInBothThemes": true
+      },
+      "placement": "Unchanged: after docs/ch07.md:109.",
+      "evidence": {
+        "desktopSha256": "0f605d03dd033e940958a666d5a6a2919df285c65665a5bb2de65b6696a55937",
+        "mobileSha256": "ebfd1f601d9bdb47448426c3406d6e09c8aa56cf14720dd2855e9df6c2f465ac",
+        "lightPng": "gallery-light-015.png",
+        "lightPngSha256": "dfba636be93756df44932f2944607eb3343704c28c72366e274c0f4ceec5a9fb",
+        "darkPng": "gallery-dark-015.png",
+        "darkPngSha256": "7b5b1f92b04082185f1d6ee7e365c361c21924d714886975a1ed71a959856cea"
+      },
+      "remainingIssues": [],
+      "requestedChanges": []
+    }
+  ],
+  "unchangedAcceptedIds": [
+    {
+      "id": "ch01-two-levers",
+      "verdict": "accept_carried_forward",
+      "desktopSha256": "18743dd680a4e3cb1417005e8f9248f0566148dbb8250fe7afe184ea88c8399b",
+      "mobileSha256": "c994e2fac33e0927800b8961a3f2c695b881024e17d68bf1d94084c9b144686e",
+      "lightPng": "gallery-light-000.png",
+      "darkPng": "gallery-dark-000.png",
+      "bothSvgAndBothPngBytesEqualSecondPass": true
+    },
+    {
+      "id": "ch02-weighted-work",
+      "verdict": "accept_carried_forward",
+      "desktopSha256": "8a42e5c5e0f60bc33702568c2aaecd4ee00a7287fb73d99b49f3e326bc49fb9b",
+      "mobileSha256": "eff9e05d8afbff8abdafea5ca38b9f1728666d699c50cd7e5cc05b653f3d3e9a",
+      "lightPng": "gallery-light-001.png",
+      "darkPng": "gallery-dark-001.png",
+      "bothSvgAndBothPngBytesEqualSecondPass": true
+    },
+    {
+      "id": "ch02-cause-symptom",
+      "verdict": "accept_carried_forward",
+      "desktopSha256": "43f9e4441163fb715cb9eaccbb39c3d2ec6c8d9ff6c51c8e4ccf2a19b08fd4ef",
+      "mobileSha256": "c0aa82dddd5a9c0034e62d2d0c21846984f33f352842206a0143e5d697d9553c",
+      "lightPng": "gallery-light-003.png",
+      "darkPng": "gallery-dark-003.png",
+      "bothSvgAndBothPngBytesEqualSecondPass": true
+    },
+    {
+      "id": "ch03-patch-cycle",
+      "verdict": "accept_carried_forward",
+      "desktopSha256": "aa51c64dc8a08c0f99e829424a362adcc68a687df011beeef9ec068cd422b315",
+      "mobileSha256": "e03d9f8dc738251efb06aa87f42211d11169cbb674d3147b7393ef6364edc709",
+      "lightPng": "gallery-light-004.png",
+      "darkPng": "gallery-dark-004.png",
+      "bothSvgAndBothPngBytesEqualSecondPass": true
+    },
+    {
+      "id": "ch04-abstraction-filter",
+      "verdict": "accept_carried_forward",
+      "desktopSha256": "61b1ad6cfc6ca5fae4790c0981e3ce2f6d9d9e1824a0ab0e3dc948534f72e401",
+      "mobileSha256": "81d6817536b240593af7d586a7f33be551ad55e48bef18064e493287370056c3",
+      "lightPng": "gallery-light-005.png",
+      "darkPng": "gallery-dark-005.png",
+      "bothSvgAndBothPngBytesEqualSecondPass": true
+    },
+    {
+      "id": "ch04-common-path",
+      "verdict": "accept_carried_forward",
+      "desktopSha256": "90720488677cb91de3a716ee556c177e382952ccc61576d2682f9ae5fb422829",
+      "mobileSha256": "8c3d6f36ed0908d68492f3b916a5eebdba62f2084a52b5238df9c496c7ed9220",
+      "lightPng": "gallery-light-006.png",
+      "darkPng": "gallery-dark-006.png",
+      "bothSvgAndBothPngBytesEqualSecondPass": true
+    },
+    {
+      "id": "ch05-parameter-boundary",
+      "verdict": "accept_carried_forward",
+      "desktopSha256": "3ec41179e034cf4cee716ef1b9057a09025d81dd9dff40818975b96fb04323e3",
+      "mobileSha256": "a52d7ddc3b85bdfc2187674a9c2c6a823f0dd238a608d00534fa29d65dcfc888",
+      "lightPng": "gallery-light-009.png",
+      "darkPng": "gallery-dark-009.png",
+      "bothSvgAndBothPngBytesEqualSecondPass": true
+    },
+    {
+      "id": "ch06-range-api",
+      "verdict": "accept_carried_forward",
+      "desktopSha256": "5da5e378557c0b3c21dfda5a9881a4574312bbd6ddb3a7a66ff1d659ea9c3207",
+      "mobileSha256": "915aa5fe8548dacdcfc507bcde988a2ae589210e93c63e6e06b7e0b68034f305",
+      "lightPng": "gallery-light-010.png",
+      "darkPng": "gallery-dark-010.png",
+      "bothSvgAndBothPngBytesEqualSecondPass": true
+    },
+    {
+      "id": "ch06-empty-selection",
+      "verdict": "accept_carried_forward",
+      "desktopSha256": "0a119997b010dadb641cc59a2494e187fb85d19be578d94ec47529cc5290684e",
+      "mobileSha256": "963cd80ee7062cadec10be253e27233822e8fd6a3d6daacb2b3ff728d6283fcc",
+      "lightPng": "gallery-light-012.png",
+      "darkPng": "gallery-dark-012.png",
+      "bothSvgAndBothPngBytesEqualSecondPass": true
+    },
+    {
+      "id": "ch07-line-boundary",
+      "verdict": "accept_carried_forward",
+      "desktopSha256": "b832217fa5a927d188350e7cc2789acccdddce20c7a111fe6daeff4bbd1d9bcb",
+      "mobileSha256": "39ef47db1c8525d8cfcf55228723877283031406bbe090ab1ec6e0ef4d362eb1",
+      "lightPng": "gallery-light-014.png",
+      "darkPng": "gallery-dark-014.png",
+      "bothSvgAndBothPngBytesEqualSecondPass": true
+    }
+  ],
+  "retirements": {
+    "ids": ["ch01-review-loop", "ch03-small-investments", "ch04-depth"],
+    "activeMetadataEntriesAbsent": true,
+    "sixSimplifiedSvgFilesAbsent": true,
+    "verdict": "retirement_confirmation_carried_forward",
+    "verification": "Rechecked absence from current chapter metadata and simplified public asset paths. No deployed or generated artifact cleanup is implied."
+  },
+  "limitations": [
+    "Acceptance is for the exact reviewed simplified SVGs, their gallery rendering and the preserved source conditions, not final integrated-reader release acceptance.",
+    "The ten unchanged pairs were not visually reopened: both their SVG bytes and both gallery PNG bytes exactly match the independently inspected second pass.",
+    "The new gallery and current stylesheet hashes match. This does not independently verify the claimed full scope of the stylesheet changes or their interactive effects.",
+    "No new issue was found within this bounded recheck. Diagram usefulness remains an explanatory-design judgment, not measured reader-learning evidence."
+  ]
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 624" role="img" aria-labelledby="ch02-weighted-work-m-title ch02-weighted-work-m-desc">
+  <title id="ch02-weighted-work-m-title">先简化最难的，还是常改的？</title>
+  <desc id="ch02-weighted-work-m-desc">固定权重的教学算例。A 为 2 乘 80%，B 为 8 乘 20%，各贡献 1.6，总和 3.2。分别简化一分后，改 A 得 2.4，改 B 得 3.0。不是工时预测。</desc>
+  <rect width="360" height="624" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)" font-size="15">
+    <text x="16" y="32" font-size="19" font-weight="600">先简化最难的，还是常改的？</text>
+    <text x="16" y="59" font-size="14" fill="var(--diagram-muted,#5c645d)">教学算例：假设两部分、权重固定</text>
+    <rect x="16" y="82" width="328" height="110" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="32" y="110" font-weight="600">A：经常接触</text>
+    <text x="32" y="139">局部复杂性 2 × 时间占比 80%</text><text x="32" y="169" font-weight="600">加权贡献 = 1.6</text>
+    <rect x="16" y="208" width="328" height="110" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)"/>
+    <text x="32" y="236" font-weight="600">B：较少接触</text>
+    <text x="32" y="265">局部复杂性 8 × 时间占比 20%</text><text x="32" y="295" font-weight="600">加权贡献 = 1.6</text>
+    <text x="16" y="347" font-weight="600">总和 3.2；两处的贡献相同。</text>
+    <path d="M16 365H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="396">若局部复杂性都能下降 1：</text>
+    <text x="16" y="428" fill="var(--diagram-primary,#0b6f5d)">改 A：1 × 80% + 8 × 20%</text>
+    <text x="16" y="456" font-weight="600">总和 2.4　下降 0.8</text>
+    <text x="16" y="500" fill="var(--diagram-secondary,#2c6096)">改 B：2 × 80% + 7 × 20%</text>
+    <text x="16" y="528" font-weight="600">总和 3.0　下降 0.2</text>
+    <text x="16" y="574" font-size="14" fill="var(--diagram-muted,#5c645d)">分值只是示意，不是工时预测。</text>
+    <text x="16" y="598" font-size="14" fill="var(--diagram-muted,#5c645d)">实际改进成本、时间权重也可能变化。</text>
+  </g>
+</svg>

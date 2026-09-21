@@ -1,0 +1,100 @@
+[
+  {
+    "id": "ch16-comment-scope",
+    "chapter": "ch16",
+    "title": "注释应覆盖多大范围？",
+    "question": "三阶段方法的所有说明都应该放在方法开头吗？",
+    "answer": "整体策略可放在开头；每个阶段的细节应紧贴该阶段，放在涵盖相关代码的最小范围内。离代码越远，说明越应抽象。",
+    "summary": "跨度线表示说明覆盖的代码范围。选候选、评分、选择并移除来自原文；灰色短线仅示意代码，不是实现。",
+    "alt": "整体策略的括线覆盖候选筛选、评分、选择并移除三个阶段；短括线分别覆盖本阶段的细节注释与代码。括线说明文档覆盖范围，不保证变更影响只限于相邻阶段。",
+    "kind": "scope-boundaries",
+    "desktop": "/diagrams/ch16-comment-scope.svg",
+    "mobile": "/diagrams/ch16-comment-scope-mobile.svg",
+    "anchor": {
+      "section": "16.2",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "16.2",
+        "epub": "OEBPS/part0020.xhtml#p13:74e8c3f392",
+        "reason": "注释靠近代码，修改时更容易看到并同步维护。"
+      },
+      {
+        "section": "16.2",
+        "epub": "OEBPS/part0020.xhtml#p15:f492854e87",
+        "reason": "细节说明放到涵盖有关代码的最小范围；方法开头仍可概述策略。"
+      },
+      {
+        "section": "16.2",
+        "epub": "OEBPS/part0020.xhtml#p17:52804d1ab1",
+        "reason": "三阶段实例的第一阶段是找候选；随后两行是评分、选择并移除。"
+      },
+      {
+        "section": "16.2",
+        "epub": "OEBPS/part0020.xhtml#p21:df361d6028",
+        "reason": "离代码越远，注释越应抽象。"
+      }
+    ],
+    "status": "content-reviewed",
+    "titleTw": "註解應覆蓋多大範圍？",
+    "questionTw": "三階段方法的所有說明都應該放在方法開頭嗎？",
+    "answerTw": "整體策略可放在開頭；每個階段的細節應緊貼該階段，放在涵蓋相關程式碼的最小範圍內。離程式碼越遠，說明越應抽象。",
+    "summaryTw": "跨度線表示說明覆蓋的程式碼範圍。選候選、評分、選擇並移除來自原文；灰色短線僅示意程式碼，不是實作。",
+    "altTw": "整體策略的括線覆蓋候選篩選、評分、選擇並移除三個階段；短括線分別覆蓋本階段的細節註解與程式碼。括線說明文件覆蓋範圍，不保證變更影響只限於相鄰階段。",
+    "desktopTw": "/diagrams/ch16-comment-scope-tw.svg",
+    "mobileTw": "/diagrams/ch16-comment-scope-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-15-21-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  },
+  {
+    "id": "ch16-single-source",
+    "chapter": "ch16",
+    "title": "说明复制与引用，失效方式不同",
+    "question": "为何到处复制同一段设计说明，比引用一处说明更危险？",
+    "answer": "复制要求同步更新每一份，漏改的副本仍可能看似可信。集中说明减少重复维护；当主说明被移动或删除时，沿旧引用查找会发现目标不存在。这不保证所有引用错误可见，也不保证主说明本身正确。",
+    "summary": "A/B/C、旧版/新版与 xyz 为教学占位。更新义务和读者查找使用不同线型；另画出主说明移走后的缺失目标。集中说明仍需随代码变化维护。",
+    "alt": "规则变化向 A/B/C 副本传播更新义务，C 漏改而仍显示旧内容。三个使用处的查找线汇入唯一说明。下面的第二状态中 xyz 位置为空，沿旧引用到达虚线空框后无法找到说明；这只演示目标移动或删除，不涵盖可读但过时的主说明。",
+    "kind": "change-propagation",
+    "desktop": "/diagrams/ch16-single-source.svg",
+    "mobile": "/diagrams/ch16-single-source-mobile.svg",
+    "anchor": {
+      "section": "16.4",
+      "placement": "end"
+    },
+    "sources": [
+      {
+        "section": "16.4",
+        "epub": "OEBPS/part0020.xhtml#p26:6cd00ff764",
+        "reason": "每个设计决策尽量记录一次，多个使用处可查变量声明等自然位置。"
+      },
+      {
+        "section": "16.4",
+        "epub": "OEBPS/part0020.xhtml#p27:1276783230",
+        "reason": "引用目标被移除后失效可见；未更新的重复文档可能没有任何失效迹象。A/B/C 和版本标签为教学自拟。"
+      }
+    ],
+    "status": "content-reviewed",
+    "titleTw": "說明複製與引用，失效方式不同",
+    "questionTw": "為何到處複製同一段設計說明，比引用一處說明更危險？",
+    "answerTw": "複製要求同步更新每一份，漏改的副本仍可能看似可信。集中說明減少重複維護；當主說明被移動或刪除時，沿舊引用查詢會發現目標不存在。這不保證所有引用錯誤可見，也不保證主說明本身正確。",
+    "summaryTw": "A/B/C、舊版/新版與 xyz 為教學佔位。更新義務和讀者查詢使用不同線型；另畫出主說明移走後的缺失目標。集中說明仍需隨程式碼變化維護。",
+    "altTw": "規則變化向 A/B/C 副本傳播更新義務，C 漏改而仍顯示舊內容。三個使用處的查詢線匯入唯一說明。下面的第二狀態中 xyz 位置為空，沿舊引用到達虛線空框後無法找到說明；這只演示目標移動或刪除，不涵蓋可讀但過時的主說明。",
+    "desktopTw": "/diagrams/ch16-single-source-tw.svg",
+    "mobileTw": "/diagrams/ch16-single-source-mobile-tw.svg",
+    "review": {
+      "source": "review/reader/diagram-review-15-21-second.json",
+      "decision": "keep",
+      "stage": "independent-follow-up",
+      "accepted": true,
+      "traditionalSource": "review/reader/traditional-reader-followup.json",
+      "boundary": "Explanatory-design and conversion review, not an empirical reader-learning result."
+    }
+  }
+]

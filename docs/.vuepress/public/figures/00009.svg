@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="79" height="33" viewBox="0 0 79 33" role="img" aria-labelledby="figure-00009-title figure-00009-desc">
+  <title id="figure-00009-title">C = sum over p of c_p t_p</title>
+  <desc id="figure-00009-desc">The system's total complexity C is the sum of each part's complexity c subscript p multiplied by the fraction of development time t subscript p spent on that part. The index p appears below the summation sign.</desc>
+  <rect width="79" height="33" fill="#fff"/>
+  <g fill="#000" font-family="'Times New Roman', Times, serif">
+    <text x="0" y="15" font-size="16" font-style="italic">C</text>
+    <text x="15" y="15" font-size="16">=</text>
+    <path d="M31 0.8H45V4H44L43.4 2.2H33.4L40.8 9.6L33.1 18H43.2L44.2 15.6H45V19.4H30.8V18L38.5 9.7L31 2Z"/>
+    <text x="36" y="29" font-size="12" font-style="italic">p</text>
+    <text x="49" y="15" font-size="16" font-style="italic">c<tspan dy="3.5" font-size="11">p</tspan></text>
+    <text x="65.5" y="15" font-size="16" font-style="italic">t<tspan dy="3.5" font-size="11">p</tspan></text>
+  </g>
+</svg>

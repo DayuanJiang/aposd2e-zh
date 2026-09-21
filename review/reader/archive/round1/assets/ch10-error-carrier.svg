@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 473" role="img" aria-labelledby="ch10-error-carrier-t ch10-error-carrier-d">
+  <title id="ch10-error-carrier-t">聚合错误处理，分开两种知识</title><desc id="ch10-error-carrier-d">正常请求直接生成正常响应。请求级错误检测点生成具体消息，借共同异常约定到顶层处理，顶层负责清理状态和生成错误响应。两路都继续下一请求，系统致命错误不在该路径中。</desc>
+  <defs><marker id="ch10-error-carrier-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="680" height="473" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">聚合错误处理，分开两种知识</text>
+    <rect x="24" y="79" width="170" height="48" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="63" y="109">处理当前请求</text>
+    <path d="M195 103H435" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch10-error-carrier-a)"/><text x="292" y="89">正常</text>
+    <rect x="442" y="79" width="186" height="48" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="487" y="109">正常响应</text>
+    <path d="M109 128V177" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch10-error-carrier-a)"/><text x="129" y="159" font-size="14">请求级错误</text>
+    <rect x="24" y="184" width="278" height="130" rx="4" fill="var(--diagram-warm-soft,#eae2cf)"/>
+    <text x="43" y="213" font-weight="600">检测点知道“哪里错了”</text><text x="43" y="241">缺少 quantity / 参数格式不符</text><text x="43" y="268">生成具体错误消息</text><text x="43" y="296" font-size="13">不需要懂 HTTP 错误响应语法</text>
+    <path d="M303 248H397" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch10-error-carrier-a)"/><text x="316" y="222" font-size="13">共同基类</text><text x="316" y="280" font-size="13">+ 消息</text>
+    <rect x="405" y="184" width="223" height="130" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <text x="423" y="213" font-weight="600">顶层知道“如何响应”</text><text x="423" y="242">清理当前请求的状态</text><text x="423" y="269">用消息生成错误响应</text><text x="423" y="296" font-size="13">无需识别每种错误的内部原因</text>
+    <g fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch10-error-carrier-a)"><path d="M517 315V365"/><path d="M629 103H650V345H565V365"/></g>
+    <rect x="405" y="373" width="223" height="43" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="458" y="401">处理下一请求</text>
+    <text x="24" y="359" font-size="14">新检测点只要遵守同一约定，</text><text x="24" y="384" font-size="14">就能复用顶层处理程序。</text>
+    <text x="24" y="448" font-size="13" fill="var(--diagram-muted,#58636b)">信息与生命周期示意；不规定清理和响应的内部先后。系统级致命错误须另行区分。</text>
+  </g>
+</svg>

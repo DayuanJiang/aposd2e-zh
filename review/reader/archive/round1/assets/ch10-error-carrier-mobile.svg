@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 705" role="img" aria-labelledby="ch10-error-carrier-m-t ch10-error-carrier-m-d">
+  <title id="ch10-error-carrier-m-t">聚合错误处理，分开两种知识</title><desc id="ch10-error-carrier-m-d">请求的正常路径沿右侧流向下一请求；错误路径通过检测点的具体消息及共同异常基类到顶层处理，清理状态生成响应后也继续下一请求。</desc>
+  <defs><marker id="ch10-error-carrier-m-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" fill="var(--diagram-muted,#58636b)"/></marker></defs>
+  <rect width="360" height="705" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="20" y="32" font-size="18" font-weight="600">聚合错误处理，分开两种知识</text>
+    <rect x="20" y="60" width="264" height="44" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/><text x="102" y="88">处理当前请求</text>
+    <path d="M284 82H328V582H292" fill="none" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch10-error-carrier-m-a)"/><text x="239" y="140" font-size="13">正常响应</text>
+    <path d="M152 105V172" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch10-error-carrier-m-a)"/><text x="20" y="143" font-size="14">请求级错误</text>
+    <rect x="20" y="180" width="280" height="124" rx="4" fill="var(--diagram-warm-soft,#eae2cf)"/>
+    <text x="38" y="208" font-weight="600">检测点：哪里错了？</text><text x="38" y="236">缺参数 / 格式不符</text><text x="38" y="263">生成具体错误消息</text><text x="38" y="289" font-size="13">不负责 HTTP 错误响应语法</text>
+    <path d="M152 305V379" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch10-error-carrier-m-a)"/><text x="170" y="341" font-size="14">共同基类 + 消息</text>
+    <rect x="20" y="387" width="280" height="126" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <text x="38" y="416" font-weight="600">顶层：如何响应？</text><text x="38" y="444">清理当前请求状态</text><text x="38" y="471">把消息写入错误响应</text><text x="38" y="497" font-size="13">不必理解每种错误的内部原因</text>
+    <path d="M152 514V552" stroke="var(--diagram-muted,#58636b)" stroke-width="1.5" marker-end="url(#ch10-error-carrier-m-a)"/>
+    <rect x="20" y="560" width="264" height="44" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="99" y="588">处理下一请求</text>
+    <text x="20" y="634" font-size="13">新检测点遵循同一约定，即可复用处理程序。</text>
+    <text x="20" y="659" font-size="13" fill="var(--diagram-muted,#58636b)">不规定清理和响应的内部先后。</text><text x="20" y="682" font-size="13" fill="var(--diagram-muted,#58636b)">系统级致命错误不属于这条恢复路径。</text>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 618" role="img" aria-labelledby="ch19-abstraction-increment-m-title ch19-abstraction-increment-m-desc">
+  <title id="ch19-abstraction-increment-m-title">所需抽象，而不是逐个功能补丁</title>
+  <desc id="ch19-abstraction-increment-m-desc">上部两个功能各接专用机制。下部甲乙需求汇入同一个稍通用核心。未来尚无需求的抽象在范围之外。功能甲乙为教学示例。</desc>
+  <defs><marker id="ch19-abstraction-increment-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="618" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">功能触发，抽象组织增量</text><text x="16" y="57" font-size="14">19.2 · 甲乙功能为教学示意</text>
+    <text x="16" y="95" font-weight="600">风险：专用机制逐项堆叠</text><text x="24" y="143">功能甲</text><text x="24" y="205">功能乙</text>
+    <g stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch19-abstraction-increment-m-arrow)"><path d="M94 137H170"/><path d="M94 199H170"/></g>
+    <g fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"><rect x="170" y="115" width="174" height="44" rx="4"/><rect x="170" y="177" width="174" height="44" rx="4"/></g>
+    <text x="257" y="143" text-anchor="middle">甲的专用机制</text><text x="257" y="205" text-anchor="middle">乙的专用机制</text>
+    <text x="16" y="252">下一项需求，又加特殊分支。</text><path d="M16 274H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="305" font-weight="600">建议：需求汇入同一核心</text><text x="60" y="347">功能甲</text><text x="246" y="347">功能乙</text>
+    <g fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch19-abstraction-increment-m-arrow)"><path d="M88 357V387H145V417"/><path d="M274 357V387H217V417"/></g>
+    <rect x="16" y="417" width="328" height="84" rx="5" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/><text x="180" y="448" text-anchor="middle">需求出现时，设计所需抽象</text><text x="180" y="478" text-anchor="middle">核心完整、稍具通用性</text>
+    <text x="16" y="535">尚无需求的未来抽象：可以推迟。</text><text x="16" y="574" font-size="14">上图是作者指出的风险，</text><text x="16" y="598" font-size="14">不是所有敏捷实践的必然结果。</text>
+  </g>
+</svg>

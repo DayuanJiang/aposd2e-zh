@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 818" role="img" aria-labelledby="ch07-context-instances-m-title ch07-context-instances-m-desc">
+  <title id="ch07-context-instances-m-title">不透傳之後，兩實例會串值嗎？</title>
+  <desc id="ch07-context-instances-m-desc">單行程教學順序為 A 寫、B 寫、A 讀。共享槽依次存 cert-A 和 cert-B，A 讀到 cert-B；獨立 Context A 保持 cert-A，B 保持 cert-B。構造者預先將正確引用寫入 netA.ctx 和 netB.ctx，A 執行時沿 ctxA 讀取 cert-A。不是隔離或執行緒安全保證。</desc>
+  <defs><marker id="ch07-context-instances-m-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="360" height="818" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="32" font-size="19" font-weight="600">不透傳之後，兩實例會串值嗎？</text>
+    <text x="16" y="58" font-size="13" fill="var(--diagram-muted,#5c645d)">教學：單行程、順序執行、兩個獨立 Context</text>
+    <text x="16" y="84" font-size="13">假設 netA/ctxA、netB/ctxB 關聯正確。</text>
+    <text x="16" y="123" font-weight="600">順序</text><text x="120" y="123" font-weight="600">共享槽</text><text x="231" y="123" font-weight="600">獨立 Context</text>
+    <path d="M16 138H344M16 211H344M16 284H344M16 357H344" stroke="var(--diagram-line,#aebbad)" />
+    <text x="16" y="165" font-size="14">1　A 寫</text><text x="16" y="191" font-size="14">cert-A</text><text x="120" y="182">cert-A</text><text x="231" y="166" font-size="13">A: cert-A</text><text x="231" y="191" font-size="13">B: 未設定</text>
+    <text x="16" y="238" font-size="14">2　B 寫</text><text x="16" y="264" font-size="14">cert-B</text><text x="120" y="255">cert-B</text><text x="231" y="239" font-size="13">A: cert-A</text><text x="231" y="264" font-size="13">B: cert-B</text>
+    <text x="16" y="314" font-size="14">3　A 讀</text><text x="120" y="326" font-weight="600" fill="var(--diagram-danger,#a03946)">cert-B</text><text x="231" y="311" font-size="14" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">讀到 cert-A</text><text x="231" y="340" font-size="13">B 仍為 cert-B</text>
+    <text x="16" y="382" font-weight="600">構造時儲存引用；再看步驟 3</text>
+    <text x="16" y="404" font-size="12">下圖 cert 值為步驟 2 完成之後。</text>
+    <text x="16" y="424" font-family="ui-monospace,monospace" font-size="14">new Net(ctxA)</text>
+    <path d="M79 434V454" stroke="var(--diagram-muted,#5c645d)" stroke-dasharray="5 4" marker-end="url(#ch07-context-instances-m-arrow)" /><text x="96" y="449" font-size="13">構造時</text>
+    <rect x="16" y="467" width="140" height="63" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" /><text x="29" y="492" font-weight="600">netA</text><text x="29" y="518" font-size="14">ctx = ctxA</text>
+    <rect x="216" y="467" width="128" height="63" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" /><text x="230" y="492">ctxA</text><text x="230" y="518">cert-A</text>
+    <path d="M164 506H206" stroke="var(--diagram-muted,#5c645d)" marker-end="url(#ch07-context-instances-m-arrow)" /><text x="162" y="492" font-size="13">3 讀</text>
+    <text x="16" y="566" font-family="ui-monospace,monospace" font-size="14">new Net(ctxB)</text>
+    <path d="M79 576V596" stroke="var(--diagram-muted,#5c645d)" stroke-dasharray="5 4" marker-end="url(#ch07-context-instances-m-arrow)" /><text x="96" y="591" font-size="13">構造時</text>
+    <rect x="16" y="609" width="140" height="63" rx="4" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" /><text x="29" y="634" font-weight="600">netB</text><text x="29" y="660" font-size="14">ctx = ctxB</text>
+    <rect x="216" y="609" width="128" height="63" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" /><text x="230" y="634">ctxB</text><text x="230" y="660">cert-B</text>
+    <path d="M164 648H206" stroke="var(--diagram-line,#aebbad)" /><text x="164" y="633" font-size="13">關聯</text>
+    <text x="16" y="702" font-size="13">虛線傳引用；實線箭頭查詢；無箭頭表關聯。</text>
+    <text x="16" y="733" font-size="13">網路物件只讀是本例假設，非型別保證。</text>
+    <text x="16" y="760" font-size="13">Context 不自動不可變；隱蔽依賴及</text><text x="16" y="782" font-size="13">共享可變狀態風險仍在，執行緒安全未證明。</text>
+    <text x="16" y="806" font-size="12" fill="var(--diagram-muted,#5c645d)">順序干擾例子，不是競態演示。</text>
+  </g>
+</svg>

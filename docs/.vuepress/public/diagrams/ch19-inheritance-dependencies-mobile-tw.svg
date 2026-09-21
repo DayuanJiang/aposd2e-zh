@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 741" role="img" aria-labelledby="ch19-inheritance-dependencies-m-title ch19-inheritance-dependencies-m-desc">
+  <title id="ch19-inheritance-dependencies-m-title">父類表示改變為何可能牽動子類</title>
+  <desc id="ch19-inheritance-dependencies-m-desc">教學例上半部顯示 head 從下標改成節點引用，子類 data[head] 的假設不再成立，虛線表示可能需複核。下半部是保持 peek 和 size 契約且隱藏表示的備選，不保證所有組合設計都能解耦，也不指定實例共享。</desc>
+  <defs><marker id="ch19-inheritance-dependencies-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)" /></marker></defs>
+  <rect width="360" height="741" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">表示改變，可能牽動哪些假設？</text><text x="16" y="57" font-size="14">19.1 · 自擬佇列 [A, B] 與 API</text>
+    <rect x="16" y="82" width="328" height="91" rx="4" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" />
+    <text x="32" y="110">父類 QueueBase 改了表示</text><text x="32" y="140" font-family="ui-monospace,monospace" font-size="14">head: index 0 → Node(A)</text><text x="32" y="161" font-size="14">head 不再是陣列下標</text>
+    <path d="M89 173V234" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ch19-inheritance-dependencies-m-arrow)" /><text x="110" y="210" font-size="14">此讀取點可能需要複核</text>
+    <rect x="16" y="234" width="328" height="70" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" /><text x="32" y="261">子類仍按下標取首項</text><text x="32" y="290" font-family="ui-monospace,monospace">return data[head]</text>
+    <path d="M16 329H344" stroke="var(--diagram-line,#aebbad)" />
+    <text x="16" y="360" font-weight="600">備選：本例把表示藏在 Queue 內</text><text x="16" y="391">呼叫者只用 peek() / size()</text>
+    <path d="M180 402V430" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch19-inheritance-dependencies-m-arrow)" />
+    <rect x="16" y="430" width="328" height="166" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="32" y="458">契約保持：peek() → 首項 A</text><text x="32" y="486">契約保持：size() → 項數 2</text>
+    <path d="M16 505H344" stroke="var(--diagram-primary,#0b6f5d)" />
+    <text x="32" y="533">內部表示：下標 → 節點</text><text x="32" y="560" font-size="14">前提：表示不外露，介面契約仍成立</text><text x="32" y="584" font-size="14">組合本身不保證這些條件。</text>
+    <text x="16" y="629">繼承體系內也可以隔離狀態。</text><text x="16" y="663" font-size="14">虛線是可能的修改複核範圍，實線是呼叫。</text><text x="16" y="689" font-size="14">這是型別/功能關係，不要求多個呼叫者</text><text x="16" y="714" font-size="14">共用同一輔助類實例。</text>
+  </g>
+</svg>

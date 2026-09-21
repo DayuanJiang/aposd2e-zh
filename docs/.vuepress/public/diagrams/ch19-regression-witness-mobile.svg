@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 749" role="img" aria-labelledby="ch19-regression-witness-m-title ch19-regression-witness-m-desc">
+  <title id="ch19-regression-witness-m-title">同一测试的缺陷版失败和修复版通过才形成回归证据</title>
+  <desc id="ch19-regression-witness-m-desc">自拟 last 错取倒数第二项，测试 T 对 A B C 期望 C。图中设定缺陷版返回 B 而修复版返回 C，并要求失败原因对应报告缺陷。只测修复版时可沿虚线将 T 补查缺陷版，此为译者说明而非作者原有步骤；没有执行测试。</desc>
+  <defs><marker id="ch19-regression-witness-m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--diagram-muted,#5c645d)"/></marker></defs>
+  <rect width="360" height="749" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16" fill="var(--diagram-ink,#303630)">
+    <text x="16" y="31" font-size="19" font-weight="600">缺的是旧版证据，不是顺序</text><text x="16" y="57" font-size="14">19.4 · last 错取末项的自拟例，未执行</text>
+    <text x="16" y="94" font-family="ui-monospace,monospace" font-size="16">T: last([A, B, C]) == C</text>
+    <text x="16" y="122" font-size="14">以下两版使用同一输入和断言</text>
+    <rect x="24" y="144" width="288" height="123" rx="4" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)"/>
+    <text x="40" y="174" font-weight="600">缺陷版本 + T</text><text x="40" y="204">返回 B ≠ 期望 C → 失败</text><text x="40" y="234" font-size="14">核对原因：错取倒数第二项，</text><text x="40" y="257" font-size="14">正是报告缺陷，不是无关报错。</text>
+    <path d="M168 267V310" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" marker-end="url(#ch19-regression-witness-m-arrow)"/><text x="188" y="296" font-size="14">与修复版配对</text>
+    <rect x="24" y="310" width="288" height="99" rx="4" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)"/>
+    <text x="40" y="340" font-weight="600">修复版本 + T</text><text x="40" y="370">返回 C = 期望 C → 通过</text><text x="40" y="396" font-size="14">支持覆盖这一条回归</text>
+    <text x="24" y="452">只有修复版通过，旧版尚未检查？</text><text x="24" y="480">把同一 T 放到缺陷版核对原因。</text>
+    <path d="M312 474H335V202H312" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ch19-regression-witness-m-arrow)"/>
+    <text x="24" y="511" font-size="14">虚线是译者补查说明，不限测试编写先后。</text>
+    <path d="M16 537H344" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="16" y="568">作者建议：修前先获得缺陷失败。</text><text x="16" y="600" font-size="14">后来编写的测试也可补查旧版；</text><text x="16" y="625" font-size="14">图中的 B/C 是教学设定，非执行结果。</text>
+    <text x="16" y="662" font-size="14">不能把环境等无关失败当作该回归证据。</text><text x="16" y="694" font-size="14">通过这一测试不证明全部正确、设计优良，</text><text x="16" y="719" font-size="14">也不保证没有其他缺陷。</text>
+  </g>
+</svg>

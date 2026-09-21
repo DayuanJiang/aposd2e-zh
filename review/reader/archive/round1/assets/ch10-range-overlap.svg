@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 433" role="img" aria-labelledby="ch10-range-overlap-t ch10-range-overlap-d">
+  <title id="ch10-range-overlap-t">用范围交集定义正常结果</title><desc id="ch10-range-overlap-d">教学字符串ABCDE，索引0到4。建议语义返回begin小于等于i且i小于end的现有字符。负2到2得到AB，3到8得到DE，4到2得到空结果。这不是现有Java或Python负索引规则。</desc>
+  <rect width="680" height="433" fill="var(--diagram-bg,#f5f7f8)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" fill="var(--diagram-ink,#263239)">
+    <text x="24" y="34" font-size="21" font-weight="600">用范围交集定义正常结果</text><text x="24" y="65">作者建议：只保留 begin ≤ i &lt; end 的现有字符</text>
+    <rect x="186" y="89" width="240" height="40" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <path d="M186 89V129M234 89V129M282 89V129M330 89V129M378 89V129M426 89V129" stroke="var(--diagram-line,#aebbad)"/>
+    <g font-family="monospace" font-size="20"><text x="203" y="117">A</text><text x="251" y="117">B</text><text x="299" y="117">C</text><text x="347" y="117">D</text><text x="395" y="117">E</text></g>
+    <path d="M90 146H570" stroke="var(--diagram-line,#aebbad)"/><g font-size="13"><text x="82" y="166">-2</text><text x="182" y="166">0</text><text x="278" y="166">2</text><text x="326" y="166">3</text><text x="374" y="166">4</text><text x="422" y="166">5</text><text x="566" y="166">8</text></g>
+    <path d="M186 145V344M426 145V344" stroke="var(--diagram-line,#aebbad)" stroke-dasharray="4 4"/>
+    <text x="24" y="204" font-size="14">[-2, 2)</text><rect x="90" y="187" width="192" height="31" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-dasharray="5 3"/><rect x="186" y="187" width="96" height="31" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="211" y="209">AB</text><text x="588" y="209">AB</text>
+    <text x="24" y="268" font-size="14">[3, 8)</text><rect x="330" y="251" width="240" height="31" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-dasharray="5 3"/><rect x="330" y="251" width="96" height="31" fill="var(--diagram-primary-soft,#d6e5dc)"/><text x="355" y="273">DE</text><text x="588" y="273">DE</text>
+    <text x="24" y="332" font-size="14">[4, 2)</text><text x="197" y="333" fill="var(--diagram-muted,#58636b)">没有 i 同时满足 i ≥ 4 且 i &lt; 2</text><text x="575" y="332">空结果</text>
+    <text x="547" y="164" font-size="13" transform="translate(36 -28)">结果</text>
+    <path d="M24 361H656" stroke="var(--diagram-line,#aebbad)"/>
+    <text x="24" y="386" font-size="13">虚框 = 请求范围；实色 = 与字符串相交的部分；右边界不包含。</text>
+    <text x="24" y="412" font-size="13" fill="var(--diagram-muted,#58636b)">教学数据；是作者建议的 API，不是 Java 现有行为，也不是 Python 负索引规则。</text>
+  </g>
+</svg>
