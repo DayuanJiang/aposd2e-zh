@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 603" role="img" aria-labelledby="ch05m-title ch05m-desc">
+  <title id="ch05m-title">模組裡該藏什麼，洩露了怎麼看出來？</title>
+  <desc id="ch05m-desc">本章概覽。模組裡該藏什麼，洩露了怎麼看出來？ 本章的主要部分：資訊洩露：同一設計決策出現在多個模組，改一處就得改多處；資訊隱藏：設計決策只在一個模組的實作裡，介面更簡單，改動只影響這一個模組。一句話：每個模組封裝一些設計決策，不讓別的模組看到；同一項知識出現在多處，就是洩露</desc>
+  <rect width="420" height="603" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <defs><marker id="ch05m-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)" /></marker></defs>
+    <text x="22.0" y="44.0" font-size="23" font-weight="600">模組裡該藏什麼，洩露了怎麼看出</text>
+    <text x="22.0" y="75.0" font-size="23" font-weight="600">來？</text>
+    <text x="22.0" y="111.0" font-size="13" fill="var(--diagram-muted,#5c645d)">每個模組應封裝一些設計決策，只放在實作裡；同一項知識出現</text>
+    <text x="22.0" y="131.0" font-size="13" fill="var(--diagram-muted,#5c645d)">在多個模組，就是洩露，改一處就得改多處</text>
+    <rect x="22.0" y="149.0" width="376.0" height="132.0" rx="9" fill="var(--diagram-danger-soft,#ead9dc)" />
+    <circle cx="50.0" cy="175.0" r="14" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" stroke-width="2" /><g transform="translate(42.0,167.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /><circle cx="12" cy="12" r="3" /></g>
+    <text x="74.0" y="180.0" font-size="18" font-weight="600">資訊洩露：同一知識散在多處</text>
+    <text x="74.0" y="205.0" font-size="15" fill="var(--diagram-muted,#5c645d)">讀檔案和寫檔案兩個類都懂同一種檔案格式；</text>
+    <text x="74.0" y="227.0" font-size="15" fill="var(--diagram-muted,#5c645d)">先讀請求、再解析請求，拆成兩個類；</text>
+    <text x="74.0" y="249.0" font-size="15" fill="var(--diagram-muted,#5c645d)">getParams 直接交出內部的參數對映；讓呼叫</text>
+    <text x="74.0" y="271.0" font-size="15" fill="var(--diagram-muted,#5c645d)">者自己填 HTTP 響應版本號</text>
+    <rect x="22.0" y="291.0" width="376.0" height="132.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <circle cx="50.0" cy="317.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,309.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></g>
+    <text x="74.0" y="322.0" font-size="18" font-weight="600">資訊隱藏：知識只在一處</text>
+    <text x="74.0" y="347.0" font-size="15" fill="var(--diagram-muted,#5c645d)">檔案格式的知識只放在一個類裡；讀取和解析</text>
+    <text x="74.0" y="369.0" font-size="15" fill="var(--diagram-muted,#5c645d)">合併成一個類，只需呼叫一個方法；</text>
+    <text x="74.0" y="391.0" font-size="15" fill="var(--diagram-muted,#5c645d)">getParameter 按名字取值，藏住內部表示；</text>
+    <text x="74.0" y="413.0" font-size="15" fill="var(--diagram-muted,#5c645d)">響應版本、日期標頭由 HTTP 類自動填好</text>
+    <text x="22.0" y="445.0" font-size="13" fill="var(--diagram-muted,#5c645d)">時間順序分解（按先做什麼後做什麼拆類）是洩露的常見原因；</text>
+    <text x="22.0" y="465.0" font-size="13" fill="var(--diagram-muted,#5c645d)">隱藏有限度，模組外部確實需要的資訊必須公開</text>
+    <rect x="22.0" y="491.0" width="376.0" height="90.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <text x="36.0" y="512.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
+    <text x="36.0" y="538.0" font-size="17" font-weight="600">每個模組封裝一些設計決策，不讓別的模組看</text>
+    <text x="36.0" y="564.0" font-size="17" font-weight="600">到；同一項知識出現在多處，就是洩露</text>
+  </g>
+</svg>

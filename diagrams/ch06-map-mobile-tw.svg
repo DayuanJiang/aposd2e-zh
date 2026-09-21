@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 820" role="img" aria-labelledby="ch06m-title ch06m-desc">
+  <title id="ch06m-title">介面要多通用才合適？</title>
+  <desc id="ch06m-desc">本章概覽。介面要多通用才合適？ 本章的主要部分：找最簡單的介面：滿足當前需求的最簡介面是什麼？方法能變少就更通用；數一數用途：每個方法用在幾種情況？只有一種用途是危險訊號；當前需求好用嗎：用起來要寫大量額外程式碼，就是通用過頭了；專用程式碼上移下移：退格鍵邏輯上移到介面層；裝置差異下移到驅動程式；消除特殊情況：沒有選區時用空選區表示，就不用到處檢查有沒有選區。一句話：適度通用：功能反映當前需求，介面不侷限於當前用途；專用程式碼與通用程式碼分開</desc>
+  <rect width="420" height="820" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <defs><marker id="ch06m-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)" /></marker></defs>
+    <text x="22.0" y="44.0" font-size="23" font-weight="600">介面要多通用才合適？</text>
+    <text x="22.0" y="80.0" font-size="13" fill="var(--diagram-muted,#5c645d)">文字編輯器的文字類：給退格鍵、刪除鍵各寫一個方法太專用；</text>
+    <text x="22.0" y="100.0" font-size="13" fill="var(--diagram-muted,#5c645d)">用 insert 和 delete 兩個通用方法反而更簡單</text>
+    <rect x="22.0" y="118.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <circle cx="50.0" cy="144.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,136.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4" /><path d="m3 7 2 2 4-4" /><path d="M13 6h8" /><path d="M13 12h8" /><path d="M13 18h8" /></g>
+    <text x="74.0" y="149.0" font-size="18" font-weight="600">找最簡單的介面</text>
+    <text x="74.0" y="174.0" font-size="15" fill="var(--diagram-muted,#5c645d)">滿足當前需求的最簡介面是什麼？方法能變少</text>
+    <text x="74.0" y="196.0" font-size="15" fill="var(--diagram-muted,#5c645d)">就更通用</text>
+    <path d="M210.0 208.0 L210.0 224.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch06m-arrow)" />
+    <rect x="22.0" y="232.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <circle cx="50.0" cy="258.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,250.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></g>
+    <text x="74.0" y="263.0" font-size="18" font-weight="600">數一數用途</text>
+    <text x="74.0" y="288.0" font-size="15" fill="var(--diagram-muted,#5c645d)">每個方法用在幾種情況？只有一種用途是危險</text>
+    <text x="74.0" y="310.0" font-size="15" fill="var(--diagram-muted,#5c645d)">訊號</text>
+    <path d="M210.0 322.0 L210.0 338.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch06m-arrow)" />
+    <rect x="22.0" y="346.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <circle cx="50.0" cy="372.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,364.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><polyline points="16 11 18 13 22 9" /></g>
+    <text x="74.0" y="377.0" font-size="18" font-weight="600">當前需求好用嗎</text>
+    <text x="74.0" y="402.0" font-size="15" fill="var(--diagram-muted,#5c645d)">用起來要寫大量額外程式碼，就是通用過頭了</text>
+    <path d="M210.0 414.0 L210.0 430.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch06m-arrow)" />
+    <rect x="22.0" y="438.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <circle cx="50.0" cy="464.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,456.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5" /><path d="M8 3H3v5" /><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3" /><path d="m15 9 6-6" /></g>
+    <text x="74.0" y="469.0" font-size="18" font-weight="600">專用程式碼上移下移</text>
+    <text x="74.0" y="494.0" font-size="15" fill="var(--diagram-muted,#5c645d)">退格鍵邏輯上移到介面層；裝置差異下移到驅</text>
+    <text x="74.0" y="516.0" font-size="15" fill="var(--diagram-muted,#5c645d)">動程式</text>
+    <path d="M210.0 528.0 L210.0 544.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch06m-arrow)" />
+    <rect x="22.0" y="552.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <circle cx="50.0" cy="578.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,570.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></g>
+    <text x="74.0" y="583.0" font-size="18" font-weight="600">消除特殊情況</text>
+    <text x="74.0" y="608.0" font-size="15" fill="var(--diagram-muted,#5c645d)">沒有選區時用空選區表示，就不用到處檢查有</text>
+    <text x="74.0" y="630.0" font-size="15" fill="var(--diagram-muted,#5c645d)">沒有選區</text>
+    <text x="22.0" y="662.0" font-size="13" fill="var(--diagram-muted,#5c645d)">作者教了幾輪課後發現，通用類幾乎總是優於專用類，程式碼還更</text>
+    <text x="22.0" y="682.0" font-size="13" fill="var(--diagram-muted,#5c645d)">少；History 類把撤銷的通用核心與專用操作分開就是例子</text>
+    <rect x="22.0" y="708.0" width="376.0" height="90.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <text x="36.0" y="729.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
+    <text x="36.0" y="755.0" font-size="17" font-weight="600">適度通用：功能反映當前需求，介面不侷限於</text>
+    <text x="36.0" y="781.0" font-size="17" font-weight="600">當前用途；專用程式碼與通用程式碼分開</text>
+  </g>
+</svg>

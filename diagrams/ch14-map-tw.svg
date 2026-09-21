@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 526" role="img" aria-labelledby="ch14-title ch14-desc">
+  <title id="ch14-title">怎樣為變數和方法選一個好名稱？</title>
+  <desc id="ch14-desc">本章概覽。怎樣為變數和方法選一個好名稱？ 本章的主要部分：精確：block 既指磁碟塊也指檔案塊，引出追查六個月的缺陷；fileBlock、diskBlock 就分得開；一致：同一種用途始終用同一個名稱，且這個名稱不用於別的用途；迴圈變數 i 總在外層，j 總在內層；去掉多餘的詞：fileObject 裡的 Object、匈牙利命名法的型別字首、File 類裡的 fileBlock，都沒有提供新資訊；起名難是危險訊號：想不出精確、直觀又不長的名稱，說明變數的定義或用途可能不清楚；也許它表示了多個事物，該拆開。一句話：好名稱讓讀者第一次遇到就能正確猜出它指什麼：精確、一致、沒有多餘的詞，起名困難就是設計的危險訊號</desc>
+  <rect width="960" height="526" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <defs><marker id="ch14-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)" /></marker></defs>
+    <text x="32.0" y="52.0" font-size="30" font-weight="600">怎樣為變數和方法選一個好名稱？</text>
+    <rect x="32.0" y="84.0" width="896.0" height="70.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <g transform="translate(52.0,105.0) scale(1.167)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></g>
+    <text x="94.0" y="114.0" font-size="20" font-weight="600">目標：讀者只看名稱，就能對它指的東西形成清晰的印象</text>
+    <text x="94.0" y="138.0" font-size="15" fill="var(--diagram-muted,#5c645d)">名稱本身就是一種文件；成千上萬個變數都選好名稱，系統的複雜性就會明顯不同</text>
+    <rect x="32.0" y="172.0" width="210.5" height="206.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)" />
+    <rect x="46.0" y="260" width="182.5" height="1" fill="var(--diagram-line,#aebbad)" />
+    <g transform="translate(46.0,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></g>
+    <text x="46.0" y="248.0" font-size="18" font-weight="600">精確</text>
+    <text x="46.0" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">block 既指磁碟塊也指檔案</text>
+    <text x="46.0" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">塊，引出追查六個月的缺</text>
+    <text x="46.0" y="326.0" font-size="15" fill="var(--diagram-muted,#5c645d)">陷；fileBlock、</text>
+    <text x="46.0" y="348.0" font-size="15" fill="var(--diagram-muted,#5c645d)">diskBlock 就分得開</text>
+    <rect x="260.5" y="172.0" width="210.5" height="206.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)" />
+    <rect x="274.5" y="260" width="182.5" height="1" fill="var(--diagram-line,#aebbad)" />
+    <g transform="translate(274.5,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4" /><path d="m3 7 2 2 4-4" /><path d="M13 6h8" /><path d="M13 12h8" /><path d="M13 18h8" /></g>
+    <text x="274.5" y="248.0" font-size="18" font-weight="600">一致</text>
+    <text x="274.5" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">同一種用途始終用同一個名</text>
+    <text x="274.5" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">稱，且這個名稱不用於別的</text>
+    <text x="274.5" y="326.0" font-size="15" fill="var(--diagram-muted,#5c645d)">用途；迴圈變數 i 總在外</text>
+    <text x="274.5" y="348.0" font-size="15" fill="var(--diagram-muted,#5c645d)">層，j 總在內層</text>
+    <rect x="489.0" y="172.0" width="210.5" height="206.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)" />
+    <rect x="503.0" y="260" width="182.5" height="1" fill="var(--diagram-line,#aebbad)" />
+    <g transform="translate(503.0,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18" /><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" /><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" /><line x1="10" x2="10" y1="11" y2="17" /><line x1="14" x2="14" y1="11" y2="17" /></g>
+    <text x="503.0" y="248.0" font-size="18" font-weight="600">去掉多餘的詞</text>
+    <text x="503.0" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">fileObject 裡的 Object、</text>
+    <text x="503.0" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">匈牙利命名法的型別字首、</text>
+    <text x="503.0" y="326.0" font-size="15" fill="var(--diagram-muted,#5c645d)">File 類裡的 fileBlock，</text>
+    <text x="503.0" y="348.0" font-size="15" fill="var(--diagram-muted,#5c645d)">都沒有提供新資訊</text>
+    <rect x="717.5" y="172.0" width="210.5" height="206.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)" />
+    <rect x="731.5" y="260" width="182.5" height="1" fill="var(--diagram-line,#aebbad)" />
+    <g transform="translate(731.5,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></g>
+    <text x="731.5" y="248.0" font-size="18" font-weight="600">起名難是危險訊號</text>
+    <text x="731.5" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">想不出精確、直觀又不長的</text>
+    <text x="731.5" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">名稱，說明變數的定義或用</text>
+    <text x="731.5" y="326.0" font-size="15" fill="var(--diagram-muted,#5c645d)">途可能不清楚；也許它表示</text>
+    <text x="731.5" y="348.0" font-size="15" fill="var(--diagram-muted,#5c645d)">了多個事物，該拆開</text>
+    <rect x="32.0" y="400.0" width="896.0" height="98.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <text x="50.0" y="421.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
+    <text x="50.0" y="451.0" font-size="21" font-weight="600">好名稱讓讀者第一次遇到就能正確猜出它指什麼：精確、一致、沒有多餘的詞，起名困難就</text>
+    <text x="50.0" y="481.0" font-size="21" font-weight="600">是設計的危險訊號</text>
+  </g>
+</svg>

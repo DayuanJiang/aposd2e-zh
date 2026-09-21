@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 754" role="img" aria-labelledby="ch08m-title ch08m-desc">
+  <title id="ch08m-title">绕不开的复杂性，该由谁来处理？</title>
+  <desc id="ch08m-desc">本章概览。绕不开的复杂性，该由谁来处理？ 本章的主要部分：发现绕不开的复杂性：文本按行存储，界面却要行中插入、跨行删除；网络协议要定重试间隔；先问一句：使用者能比我定得更好吗？用户知道哪些请求更紧迫，这种事才适合交给用户；多数时候自己解决：文本类内部拆行拼行；协议按实际响应时间算出重试间隔；参数尽量给默认值；别做过头：下沉的要和本类功能相关，且能简化接口；退格键放进文本类是信息泄露。一句话：与模块功能相关的复杂性，由模块内部处理：开发人员自己多费一点力气，让使用者少费一些力气</desc>
+  <rect width="420" height="754" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <defs><marker id="ch08m-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)"/></marker></defs>
+    <text x="22.0" y="44.0" font-size="23" font-weight="600">绕不开的复杂性，该由谁来处理？</text>
+    <text x="22.0" y="80.0" font-size="13" fill="var(--diagram-muted,#5c645d)">让模块的接口简单，比让它的实现简单更重要：大多数模块的使</text>
+    <text x="22.0" y="100.0" font-size="13" fill="var(--diagram-muted,#5c645d)">用者都比开发人员多</text>
+    <rect x="22.0" y="118.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <circle cx="50.0" cy="144.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(42.0,136.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></g>
+    <text x="74.0" y="149.0" font-size="18" font-weight="600">发现绕不开的复杂性</text>
+    <text x="74.0" y="174.0" font-size="15" fill="var(--diagram-muted,#5c645d)">文本按行存储，界面却要行中插入、跨行删</text>
+    <text x="74.0" y="196.0" font-size="15" fill="var(--diagram-muted,#5c645d)">除；网络协议要定重试间隔</text>
+    <path d="M210.0 208.0 L210.0 224.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch08m-arrow)"/>
+    <rect x="22.0" y="232.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <circle cx="50.0" cy="258.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(42.0,250.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10.5V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h12.5"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/><path d="M18 15.28c.2-.4.5-.8.9-1a2.1 2.1 0 0 1 2.6.4c.3.4.5.8.5 1.3 0 1.3-2 2-2 2"/><path d="M20 22v.01"/></g>
+    <text x="74.0" y="263.0" font-size="18" font-weight="600">先问一句</text>
+    <text x="74.0" y="288.0" font-size="15" fill="var(--diagram-muted,#5c645d)">使用者能比我定得更好吗？用户知道哪些请求</text>
+    <text x="74.0" y="310.0" font-size="15" fill="var(--diagram-muted,#5c645d)">更紧迫，这种事才适合交给用户</text>
+    <path d="M210.0 322.0 L210.0 338.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch08m-arrow)"/>
+    <rect x="22.0" y="346.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <circle cx="50.0" cy="372.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(42.0,364.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></g>
+    <text x="74.0" y="377.0" font-size="18" font-weight="600">多数时候自己解决</text>
+    <text x="74.0" y="402.0" font-size="15" fill="var(--diagram-muted,#5c645d)">文本类内部拆行拼行；协议按实际响应时间算</text>
+    <text x="74.0" y="424.0" font-size="15" fill="var(--diagram-muted,#5c645d)">出重试间隔；参数尽量给默认值</text>
+    <path d="M210.0 436.0 L210.0 452.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch08m-arrow)"/>
+    <rect x="22.0" y="460.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <circle cx="50.0" cy="486.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(42.0,478.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></g>
+    <text x="74.0" y="491.0" font-size="18" font-weight="600">别做过头</text>
+    <text x="74.0" y="516.0" font-size="15" fill="var(--diagram-muted,#5c645d)">下沉的要和本类功能相关，且能简化接口；退</text>
+    <text x="74.0" y="538.0" font-size="15" fill="var(--diagram-muted,#5c645d)">格键放进文本类是信息泄露</text>
+    <text x="22.0" y="570.0" font-size="13" fill="var(--diagram-muted,#5c645d)">抛异常让每个调用者处理、暴露配置参数让每个管理员去设，短</text>
+    <text x="22.0" y="590.0" font-size="13" fill="var(--diagram-muted,#5c645d)">期省事，却把一个人的问题变成了许多人的问题</text>
+    <rect x="22.0" y="616.0" width="376.0" height="116.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="36.0" y="637.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句话</text>
+    <text x="36.0" y="663.0" font-size="17" font-weight="600">与模块功能相关的复杂性，由模块内部处理：</text>
+    <text x="36.0" y="689.0" font-size="17" font-weight="600">开发人员自己多费一点力气，让使用者少费一</text>
+    <text x="36.0" y="715.0" font-size="17" font-weight="600">些力气</text>
+  </g>
+</svg>

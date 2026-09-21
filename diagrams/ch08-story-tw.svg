@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 719" role="img" aria-labelledby="ch08-story-title ch08-story-desc">
+  <title id="ch08-story-title">從把難題推給呼叫者，到模組自己多費一點力氣</title>
+  <desc id="ch08-story-desc">本章回顧。從把難題推給呼叫者，到模組自己多費一點力氣。起點：遇到難處理的情況，最省事的是拋例外，或者做成設定參數。拿不準就拋例外，定不了策略就做成設定參數。開發人員輕鬆了，但每個呼叫者都得處理那個例外，每個部署的管理員都得學那些參數：一個人的問題變成了許多人的問題。；例子：文字類按行提供介面，使用者介面只能自己拆行拼行。按鍵輸入要在一行中間插入一個字元，刪除所選區域會改動幾行的一部分。行導向的介面讓文字類的實作很簡單，卻把拆分和連線行的工作推給了每一處用到它的介面程式碼。；轉折：下沉複雜性：介面字元導向，拆行拼行封裝在文字類內部。介面能直接插入、刪除任意範圍的文字，文字類內部多做拆行拼行，整體複雜性下降。設定參數同理：網路協議按實際響應時間自己算重試間隔，條件變了還會自動調整。；界限：別做過頭：退格鍵的邏輯放進文字類，是資訊洩露。下沉要與類的現有功能密切相關，還要能簡化其他部分和類的介面。退格鍵屬於使用者介面的知識，與文字類的核心功能無關，放進去對高層程式碼幫助不大，反而造成資訊洩露。。這一章最想強調的：與模組功能相關的複雜性，應在模組內部處理；介面簡單比實作簡單更重要 前提是這份複雜性與類的功能密切相關，且能簡化介面；否則下沉反而造成資訊洩露</desc>
+  <rect width="960" height="719" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <text x="32.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顧</text>
+    <path d="M74 144 V 469" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" />
+    <text x="32.0" y="62.0" font-size="26" font-weight="600">從把難題推給呼叫者，到模組自己多費一點力氣</text>
+    <circle cx="74.0" cy="122.0" r="22" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2" /><g transform="translate(63.0,111.0) scale(0.917)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" /><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" /><path d="M12 2v2" /><path d="M12 22v-2" /><path d="m17 20.66-1-1.73" /><path d="M11 10.27 7 3.34" /><path d="m20.66 17-1.73-1" /><path d="m3.34 7 1.73 1" /><path d="M14 12h8" /><path d="M2 12h2" /><path d="m20.66 7-1.73 1" /><path d="m3.34 17 1.73-1" /><path d="m17 3.34-1 1.73" /><path d="m11 13.73-4 6.93" /></g>
+    <text x="118.0" y="110.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">起點</text>
+    <text x="118.0" y="134.0" font-size="19" font-weight="600">遇到難處理的情況，最省事的是拋例外，或者做成設定參數</text>
+    <text x="118.0" y="160.0" font-size="15">拿不準就拋例外，定不了策略就做成設定參數。開發人員輕鬆了，但每個呼叫者都得處理那個例外，每個部署的管理員都得</text>
+    <text x="118.0" y="183.0" font-size="15">學那些參數：一個人的問題變成了許多人的問題。</text>
+    <circle cx="74.0" cy="245.0" r="22" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2" /><g transform="translate(63.0,234.0) scale(0.917)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v4a2 2 0 0 0 2 2h4" /><path d="M10 9H8" /><path d="M16 13H8" /><path d="M16 17H8" /></g>
+    <text x="118.0" y="233.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">例子</text>
+    <text x="118.0" y="257.0" font-size="19" font-weight="600">文字類按行提供介面，使用者介面只能自己拆行拼行</text>
+    <text x="118.0" y="283.0" font-size="15">按鍵輸入要在一行中間插入一個字元，刪除所選區域會改動幾行的一部分。行導向的介面讓文字類的實作很簡單，卻把拆分</text>
+    <text x="118.0" y="306.0" font-size="15">和連線行的工作推給了每一處用到它的介面程式碼。</text>
+    <circle cx="74.0" cy="368.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,357.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /><path d="M12 22V12" /><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7" /><path d="m7.5 4.27 9 5.15" /></g>
+    <text x="118.0" y="356.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">轉折</text>
+    <text x="118.0" y="380.0" font-size="19" font-weight="600">下沉複雜性：介面字元導向，拆行拼行封裝在文字類內部</text>
+    <text x="118.0" y="406.0" font-size="15">介面能直接插入、刪除任意範圍的文字，文字類內部多做拆行拼行，整體複雜性下降。設定參數同理：網路協議按實際響應</text>
+    <text x="118.0" y="429.0" font-size="15">時間自己算重試間隔，條件變了還會自動調整。</text>
+    <circle cx="74.0" cy="491.0" r="22" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2" /><g transform="translate(63.0,480.0) scale(0.917)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="M7 21h10" /><path d="M12 3v18" /><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" /></g>
+    <text x="118.0" y="479.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">界限</text>
+    <text x="118.0" y="503.0" font-size="19" font-weight="600">別做過頭：退格鍵的邏輯放進文字類，是資訊洩露</text>
+    <text x="118.0" y="529.0" font-size="15">下沉要與類的現有功能密切相關，還要能簡化其他部分和類的介面。退格鍵屬於使用者介面的知識，與文字類的核心功能無</text>
+    <text x="118.0" y="552.0" font-size="15">關，放進去對高層程式碼幫助不大，反而造成資訊洩露。</text>
+    <rect x="32.0" y="590.0" width="896.0" height="101.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <g transform="translate(50.0,610.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
+    <text x="92.0" y="618.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">這一章最想強調的</text>
+    <text x="92.0" y="644.0" font-size="20" font-weight="600">與模組功能相關的複雜性，應在模組內部處理；介面簡單比實作簡單更重要</text>
+    <text x="92.0" y="670.0" font-size="15" fill="var(--diagram-muted,#5c645d)">前提是這份複雜性與類的功能密切相關，且能簡化介面；否則下沉反而造成資訊洩露</text>
+  </g>
+</svg>

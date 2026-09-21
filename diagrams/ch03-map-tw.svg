@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 454" role="img" aria-labelledby="ch03-title ch03-desc">
+  <title id="ch03-title">能工作的程式碼，為什麼還不夠？</title>
+  <desc id="ch03-desc">本章概覽。能工作的程式碼，為什麼還不夠？ 本章的主要部分：戰術式程式設計：只求儘快讓程式碼工作，每次添一點複雜性，很快一團糟；戰略式程式設計：把好設計當主要目標，持續投入 10% 到 20% 的時間。一句話：只求程式碼能跑會累積複雜性；持續投入 10% 到 20% 的時間做設計，幾個月後更快</desc>
+  <rect width="960" height="454" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <defs><marker id="ch03-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)" /></marker></defs>
+    <text x="32.0" y="52.0" font-size="30" font-weight="600">能工作的程式碼，為什麼還不夠？</text>
+    <text x="32.0" y="94.0" font-size="15" fill="var(--diagram-muted,#5c645d)">大多數程式設計師用戰術式思維寫程式碼：先讓它跑起來。作者主張換成戰略式：主要目標是好的設計，同時讓程式碼能工作</text>
+    <rect x="32.0" y="114.0" width="418.0" height="192.0" rx="12" fill="var(--diagram-danger-soft,#ead9dc)" />
+    <g transform="translate(52.0,132.0) scale(1.083)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" /></g>
+    <text x="88.0" y="152.0" font-size="20" font-weight="600">戰術式：先讓它跑起來</text>
+    <g transform="translate(52.0,176.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></g>
+    <text x="76.0" y="189.0" font-size="15">有截止期限，不花時間找最佳設計</text>
+    <g transform="translate(52.0,206.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></g>
+    <text x="76.0" y="219.0" font-size="15">加點複雜性、留個蹩腳實作，覺得沒什麼</text>
+    <g transform="translate(52.0,236.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></g>
+    <text x="76.0" y="249.0" font-size="15">問題出現後快速修補，補丁越打越多</text>
+    <g transform="translate(52.0,266.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></g>
+    <text x="76.0" y="279.0" font-size="15">戰術龍捲風：產出最快，留下的混亂要別人清理</text>
+    <rect x="510.0" y="114.0" width="418.0" height="192.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <g transform="translate(530.0,132.0) scale(1.083)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" /><circle cx="12" cy="12" r="10" /></g>
+    <text x="566.0" y="152.0" font-size="20" font-weight="600">戰略式：好設計是主要目標</text>
+    <g transform="translate(530.0,176.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></g>
+    <text x="554.0" y="189.0" font-size="15">能工作的程式碼是不夠的，最重要的是長期結構</text>
+    <g transform="translate(530.0,206.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></g>
+    <text x="554.0" y="219.0" font-size="15">主動投資：新類多比較幾種設計，寫好文件</text>
+    <g transform="translate(530.0,236.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></g>
+    <text x="554.0" y="249.0" font-size="15">被動投資：發現設計問題就真正修復</text>
+    <g transform="translate(530.0,266.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></g>
+    <text x="554.0" y="279.0" font-size="15">總開發時間的 10% 到 20% 用於投資</text>
+    <path d="M462.0 210.0 L498.0 210.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch03-arrow)" />
+    <text x="480.0" y="196.0" font-size="13" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">改為</text>
+    <text x="32.0" y="330.0" font-size="14" fill="var(--diagram-muted,#5c645d)">技術債：現在快一點，以後一直慢；作者估計 6 到 18 個月能收回投資，但他說明這只是個人意見，沒有資料支援</text>
+    <rect x="32.0" y="358.0" width="896.0" height="68.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <text x="50.0" y="379.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
+    <text x="50.0" y="409.0" font-size="21" font-weight="600">只求程式碼能跑會累積複雜性；持續投入 10% 到 20% 的時間做設計，幾個月後更快</text>
+  </g>
+</svg>

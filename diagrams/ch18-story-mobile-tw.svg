@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 1016" role="img" aria-labelledby="ch18-storym-title ch18-storym-desc">
+  <title id="ch18-storym-title">從一對叫 getKey 的回傳值，到讓讀者始終掌握所需資訊</title>
+  <desc id="ch18-storym-desc">本章回顧。從一對叫 getKey 的回傳值，到讓讀者始終掌握所需資訊。起點：方法用 Pair 回傳當前任期和一個布林值。呼叫者只能寫 result.getKey() 和 result.getValue()，這兩個名字說不出值的含義。寫的人省了幾分鐘，之後每個讀者都要去查。；問題：危險訊號：快速閱讀卻讀不懂，說明讀者缺了某條重要資訊。List 變數實際是 ArrayList；事件處理函式由事件模組間接呼叫，看不出何時執行；RaftClient 的建構函式開了新執行緒，main 回傳後行程仍在執行。；轉折：寫的時候多花幾分鐘，讀的人少花很多時間。為回傳值定義專門的類，元素就有了有意義的名字；讓宣告型別與分配型別一致；用空行分開程式碼塊，讓註解更醒目。如果讀你程式碼的人說它難懂，它就是難懂。；結論：三種方式讓讀者始終掌握所需資訊。最好的辦法是用抽象、消除特殊情況等設計手段，減少讀者需要知道的資訊；其次是遵循約定、符合預期，用讀者已有的知識；最後才是用好名稱和有針對性的註解直接補上資訊。。這一章最想強調的：軟體應設計得易於閱讀：寫程式碼的人多花幾分鐘，每個讀者都少花時間 事件驅動這類做法有時仍要用，這時用註解補上讀者缺少的資訊，例如說明處理函式何時會被呼叫</desc>
+  <rect width="420" height="1016" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <text x="22.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顧</text>
+    <path d="M40 168 V 656" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" />
+    <text x="22.0" y="62.0" font-size="21" font-weight="600">從一對叫 getKey 的回傳值，到讓讀者始</text>
+    <text x="22.0" y="90.0" font-size="21" font-weight="600">終掌握所需資訊</text>
+    <circle cx="40.0" cy="146.0" r="18" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(31.0,137.0) scale(0.750)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></g>
+    <text x="76.0" y="134.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起點</text>
+    <text x="76.0" y="158.0" font-size="18" font-weight="600">方法用 Pair 回傳當前任期和一個布林值</text>
+    <text x="76.0" y="184.0" font-size="15">呼叫者只能寫 result.getKey() 和</text>
+    <text x="76.0" y="207.0" font-size="15">result.getValue()，這兩個名字說不出值的含</text>
+    <text x="76.0" y="230.0" font-size="15">義。寫的人省了幾分鐘，之後每個讀者都要去查。</text>
+    <circle cx="40.0" cy="292.0" r="18" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2" /><g transform="translate(31.0,283.0) scale(0.750)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49" /><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242" /><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143" /><path d="m2 2 20 20" /></g>
+    <text x="76.0" y="280.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">問題</text>
+    <text x="76.0" y="304.0" font-size="18" font-weight="600">危險訊號：快速閱讀卻讀不懂，說明讀者</text>
+    <text x="76.0" y="328.0" font-size="18" font-weight="600">缺了某條重要資訊</text>
+    <text x="76.0" y="354.0" font-size="15">List 變數實際是 ArrayList；事件處理函式由</text>
+    <text x="76.0" y="377.0" font-size="15">事件模組間接呼叫，看不出何時執行；</text>
+    <text x="76.0" y="400.0" font-size="15">RaftClient 的建構函式開了新執行緒，main 回傳</text>
+    <text x="76.0" y="423.0" font-size="15">後行程仍在執行。</text>
+    <circle cx="40.0" cy="485.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(31.0,476.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></g>
+    <text x="76.0" y="473.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">轉折</text>
+    <text x="76.0" y="497.0" font-size="18" font-weight="600">寫的時候多花幾分鐘，讀的人少花很多時</text>
+    <text x="76.0" y="521.0" font-size="18" font-weight="600">間</text>
+    <text x="76.0" y="547.0" font-size="15">為回傳值定義專門的類，元素就有了有意義的名</text>
+    <text x="76.0" y="570.0" font-size="15">字；讓宣告型別與分配型別一致；用空行分開代</text>
+    <text x="76.0" y="593.0" font-size="15">碼塊，讓註解更醒目。如果讀你程式碼的人說它難</text>
+    <text x="76.0" y="616.0" font-size="15">懂，它就是難懂。</text>
+    <circle cx="40.0" cy="678.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(31.0,669.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4" /><path d="m3 7 2 2 4-4" /><path d="M13 6h8" /><path d="M13 12h8" /><path d="M13 18h8" /></g>
+    <text x="76.0" y="666.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">結論</text>
+    <text x="76.0" y="690.0" font-size="18" font-weight="600">三種方式讓讀者始終掌握所需資訊</text>
+    <text x="76.0" y="716.0" font-size="15">最好的辦法是用抽象、消除特殊情況等設計手段，</text>
+    <text x="76.0" y="739.0" font-size="15">減少讀者需要知道的資訊；其次是遵循約定、符</text>
+    <text x="76.0" y="762.0" font-size="15">合預期，用讀者已有的知識；最後才是用好名稱</text>
+    <text x="76.0" y="785.0" font-size="15">和有針對性的註解直接補上資訊。</text>
+    <rect x="22.0" y="823.0" width="376.0" height="165.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <g transform="translate(40.0,843.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
+    <text x="78.0" y="851.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">這一章最想強調的</text>
+    <text x="78.0" y="877.0" font-size="18" font-weight="600">軟體應設計得易於閱讀：寫程式碼的人多</text>
+    <text x="78.0" y="901.0" font-size="18" font-weight="600">花幾分鐘，每個讀者都少花時間</text>
+    <text x="78.0" y="925.0" font-size="14" fill="var(--diagram-muted,#5c645d)">事件驅動這類做法有時仍要用，這時用註解補上</text>
+    <text x="78.0" y="946.0" font-size="14" fill="var(--diagram-muted,#5c645d)">讀者缺少的資訊，例如說明處理函式何時會被調</text>
+    <text x="78.0" y="967.0" font-size="14" fill="var(--diagram-muted,#5c645d)">用</text>
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 651" role="img" aria-labelledby="ch18m-title ch18m-desc">
+  <title id="ch18m-title">什么让代码难理解，什么让它易理解？</title>
+  <desc id="ch18m-desc">本章概览。什么让代码难理解，什么让它易理解？ 本章的主要部分：难理解：通用容器 Pair、声明与分配类型不一致、事件驱动、不符合读者预期的行为；易理解：好名称、一致性、空格与空行、有针对性的注释。一句话：写代码时多花几分钟让它易读，读者就能快速读懂：靠好名称、一致性、空格和注释，避开通用容器等做法</desc>
+  <rect width="420" height="651" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <defs><marker id="ch18m-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)"/></marker></defs>
+    <text x="22.0" y="44.0" font-size="23" font-weight="600">什么让代码难理解，什么让它易理</text>
+    <text x="22.0" y="75.0" font-size="23" font-weight="600">解？</text>
+    <text x="22.0" y="111.0" font-size="13" fill="var(--diagram-muted,#5c645d)">代码是否易理解由读者判断：如果读你代码的人说它难懂，它就</text>
+    <text x="22.0" y="131.0" font-size="13" fill="var(--diagram-muted,#5c645d)">是难懂，无论你自己觉得多清晰</text>
+    <rect x="22.0" y="149.0" width="376.0" height="154.0" rx="9" fill="var(--diagram-danger-soft,#ead9dc)"/>
+    <circle cx="50.0" cy="175.0" r="14" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" stroke-width="2"/><g transform="translate(42.0,167.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></g>
+    <text x="74.0" y="180.0" font-size="18" font-weight="600">让读者缺少信息的做法</text>
+    <text x="74.0" y="205.0" font-size="15" fill="var(--diagram-muted,#5c645d)">用 Pair 返回两个值，只能叫 getKey、</text>
+    <text x="74.0" y="227.0" font-size="15" fill="var(--diagram-muted,#5c645d)">getValue；声明为 List，实际分配的是</text>
+    <text x="74.0" y="249.0" font-size="15" fill="var(--diagram-muted,#5c645d)">ArrayList；事件处理函数由谁调用，看代码</text>
+    <text x="74.0" y="271.0" font-size="15" fill="var(--diagram-muted,#5c645d)">看不出来；main 返回后，RaftClient 的线</text>
+    <text x="74.0" y="293.0" font-size="15" fill="var(--diagram-muted,#5c645d)">程仍在运行</text>
+    <rect x="22.0" y="313.0" width="376.0" height="132.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <circle cx="50.0" cy="339.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(42.0,331.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></g>
+    <text x="74.0" y="344.0" font-size="18" font-weight="600">把信息交给读者的做法</text>
+    <text x="74.0" y="369.0" font-size="15" fill="var(--diagram-muted,#5c645d)">精确的名称，读者不必通读代码去猜含义；一</text>
+    <text x="74.0" y="391.0" font-size="15" fill="var(--diagram-muted,#5c645d)">致的做法，见过一次就能立刻得出结论；空行</text>
+    <text x="74.0" y="413.0" font-size="15" fill="var(--diagram-muted,#5c645d)">分隔代码块，空格显出语句结构；注释补上读</text>
+    <text x="74.0" y="435.0" font-size="15" fill="var(--diagram-muted,#5c645d)">者缺少的信息，例如何时被调用</text>
+    <text x="22.0" y="467.0" font-size="13" fill="var(--diagram-muted,#5c645d)">为特定用途定义专门的类来代替 Pair；让声明类型与分配的类型</text>
+    <text x="22.0" y="487.0" font-size="13" fill="var(--diagram-muted,#5c645d)">一致；写代码时多花几分钟，读者少花很多时间</text>
+    <rect x="22.0" y="513.0" width="376.0" height="116.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="36.0" y="534.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句话</text>
+    <text x="36.0" y="560.0" font-size="17" font-weight="600">写代码时多花几分钟让它易读，读者就能快速</text>
+    <text x="36.0" y="586.0" font-size="17" font-weight="600">读懂：靠好名称、一致性、空格和注释，避开</text>
+    <text x="36.0" y="612.0" font-size="17" font-weight="600">通用容器等做法</text>
+  </g>
+</svg>

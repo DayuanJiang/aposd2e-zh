@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 484" role="img" aria-labelledby="ch07-title ch07-desc">
+  <title id="ch07-title">相邻两层的接口几乎一样，有什么问题？</title>
+  <desc id="ch07-desc">本章概览。相邻两层的接口几乎一样，有什么问题？ 本章的主要部分：只是转手调用：透传方法、层层包装的装饰器、照搬内部表示的接口、穿过多层的透传变量；每层不同的抽象：合并类或重新分配功能、把常用功能加进基础类、接口封装内部细节、上下文对象。一句话：每一层都要提供与上下层不同的抽象；只是转手调用下一层的方法、类或参数，增加了复杂性却没增加功能</desc>
+  <rect width="960" height="484" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <defs><marker id="ch07-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)"/></marker></defs>
+    <text x="32.0" y="52.0" font-size="30" font-weight="600">相邻两层的接口几乎一样，有什么问题？</text>
+    <text x="32.0" y="94.0" font-size="15" fill="var(--diagram-muted,#5c645d)">文件系统从文件到块缓存到设备驱动，每层抽象都不同；相邻两层抽象相似，是类划分有问题的危险信号</text>
+    <rect x="32.0" y="114.0" width="418.0" height="192.0" rx="12" fill="var(--diagram-danger-soft,#ead9dc)"/>
+    <g transform="translate(52.0,132.0) scale(1.083)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><line x1="3" x2="9" y1="12" y2="12"/><line x1="15" x2="21" y1="12" y2="12"/></g>
+    <text x="88.0" y="152.0" font-size="20" font-weight="600">相邻两层抽象相似（危险信号）</text>
+    <g transform="translate(52.0,176.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></g>
+    <text x="76.0" y="189.0" font-size="15">TextDocument 里 13 个方法只是转调 TextArea</text>
+    <g transform="translate(52.0,206.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></g>
+    <text x="76.0" y="219.0" font-size="15">为了加缓冲，单独包一层 BufferedInputStream</text>
+    <g transform="translate(52.0,236.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></g>
+    <text x="76.0" y="249.0" font-size="15">文本按行存储，接口也只给整行读写</text>
+    <g transform="translate(52.0,266.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></g>
+    <text x="76.0" y="279.0" font-size="15">证书参数穿过 main 到 m3 之间的每个方法</text>
+    <rect x="510.0" y="114.0" width="418.0" height="192.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <g transform="translate(530.0,132.0) scale(1.083)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></g>
+    <text x="566.0" y="152.0" font-size="20" font-weight="600">每一层提供不同的抽象</text>
+    <g transform="translate(530.0,176.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></g>
+    <text x="554.0" y="189.0" font-size="15">让调用者直接调用低层类、重新分配功能或合并类</text>
+    <g transform="translate(530.0,206.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></g>
+    <text x="554.0" y="219.0" font-size="15">缓冲几乎人人要用，直接加进基础类</text>
+    <g transform="translate(530.0,236.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></g>
+    <text x="554.0" y="249.0" font-size="15">接口面向字符，拆行拼行的细节封装在类里</text>
+    <g transform="translate(530.0,266.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></g>
+    <text x="554.0" y="279.0" font-size="15">全局状态放进上下文对象，只经构造函数传递</text>
+    <path d="M462.0 210.0 L498.0 210.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch07-arrow)"/>
+    <text x="480.0" y="196.0" font-size="13" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">重构</text>
+    <text x="32.0" y="330.0" font-size="14" fill="var(--diagram-muted,#5c645d)">签名相同不一定是坏事：分发器按 URL 挑选处理方法，同一接口的多种磁盘驱动程序，都提供了新功能</text>
+    <rect x="32.0" y="358.0" width="896.0" height="98.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="50.0" y="379.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句话</text>
+    <text x="50.0" y="409.0" font-size="21" font-weight="600">每一层都要提供与上下层不同的抽象；只是转手调用下一层的方法、类或参数，增加了复杂</text>
+    <text x="50.0" y="439.0" font-size="21" font-weight="600">性却没增加功能</text>
+  </g>
+</svg>

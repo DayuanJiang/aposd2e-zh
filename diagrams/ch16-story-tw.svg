@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 842" role="img" aria-labelledby="ch16-story-title ch16-story-desc">
+  <title id="ch16-story-title">從“最少改哪些程式碼”的心態，到每次修改都改善設計</title>
+  <desc id="ch16-story-desc">本章回顧。從“最少改哪些程式碼”的心態，到每次修改都改善設計。起點：修復缺陷或加功能時，典型心態是“最少需要改動哪些程式碼”。開發人員對要改的程式碼沒有把握，擔心改動越大風險越大。但每次最小改動都會加進一些特殊情況和依賴，設計就變差一點；系統每演進一步，問題就多積累一些。；主張：理想情況下，每次修改完成後，系統結構都應如同一開始就考慮了這次變更。面對變更先問現有設計是否仍然最佳，需要就重構。作者承認期限緊迫時，可能只能用兩小時的修補代替三個月的重構；但要問自己在當前限制下是否已做到最好。；位置：註解放在開發人員修改程式碼時最容易看到的地方。介面註解緊靠方法體，改方法時就能看到並更新；實作註解放到各階段程式碼正上方。變更的微妙原因若只寫在提交訊息裡，後人可能撤銷它而重新引入缺陷，所以要寫進程式碼。；去重：每個設計決策只記錄一次，其他地方用一句話指向它。影響多處的變數行為寫在宣告旁；找不到自然位置就集中到 designNotes 檔案，程式碼裡一句註解指過去。HTTP 協議、使用者手冊裡已有的內容，附上引用即可。；收尾：提交前檢查一遍變更；更高層級的註解更容易維護。提交之前，花幾分鐘確認文件準確反映了每項變更，也能順帶發現遺留的除錯程式碼。比程式碼更抽象的註解只在整體行為變化時才需要更新，最有用的註解往往也最容易維護。。這一章最想強調的：修改現有程式碼時也要戰略式思考：如果沒有讓設計變好，你就很可能正在讓它變壞 確保註解及時更新的最佳方法，是把它放在所描述的程式碼附近，並且每個設計決策只記錄一次</desc>
+  <rect width="960" height="842" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <text x="32.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顧</text>
+    <path d="M74 144 V 592" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" />
+    <text x="32.0" y="62.0" font-size="26" font-weight="600">從“最少改哪些程式碼”的心態，到每次修改都改善設計</text>
+    <circle cx="74.0" cy="122.0" r="22" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2" /><g transform="translate(63.0,111.0) scale(0.917)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9" /><path d="m18 15 4-4" /><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12 8.4V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5" /></g>
+    <text x="118.0" y="110.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">起點</text>
+    <text x="118.0" y="134.0" font-size="19" font-weight="600">修復缺陷或加功能時，典型心態是“最少需要改動哪些程式碼”</text>
+    <text x="118.0" y="160.0" font-size="15">開發人員對要改的程式碼沒有把握，擔心改動越大風險越大。但每次最小改動都會加進一些特殊情況和依賴，設計就變差一</text>
+    <text x="118.0" y="183.0" font-size="15">點；系統每演進一步，問題就多積累一些。</text>
+    <circle cx="74.0" cy="245.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,234.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" /><circle cx="12" cy="12" r="10" /></g>
+    <text x="118.0" y="233.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">主張</text>
+    <text x="118.0" y="257.0" font-size="19" font-weight="600">理想情況下，每次修改完成後，系統結構都應如同一開始就考慮了這次變更</text>
+    <text x="118.0" y="283.0" font-size="15">面對變更先問現有設計是否仍然最佳，需要就重構。作者承認期限緊迫時，可能只能用兩小時的修補代替三個月的重構；但</text>
+    <text x="118.0" y="306.0" font-size="15">要問自己在當前限制下是否已做到最好。</text>
+    <circle cx="74.0" cy="368.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,357.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9" /><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z" /></g>
+    <text x="118.0" y="356.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">位置</text>
+    <text x="118.0" y="380.0" font-size="19" font-weight="600">註解放在開發人員修改程式碼時最容易看到的地方</text>
+    <text x="118.0" y="406.0" font-size="15">介面註解緊靠方法體，改方法時就能看到並更新；實作註解放到各階段程式碼正上方。變更的微妙原因若只寫在提交訊息裡，</text>
+    <text x="118.0" y="429.0" font-size="15">後人可能撤銷它而重新引入缺陷，所以要寫進程式碼。</text>
+    <circle cx="74.0" cy="491.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,480.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13v8" /><path d="M12 3v3" /><path d="M18 6a2 2 0 0 1 1.387.56l2.307 2.22a1 1 0 0 1 0 1.44l-2.307 2.22A2 2 0 0 1 18 13H6a2 2 0 0 1-1.387-.56l-2.306-2.22a1 1 0 0 1 0-1.44l2.306-2.22A2 2 0 0 1 6 6z" /></g>
+    <text x="118.0" y="479.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">去重</text>
+    <text x="118.0" y="503.0" font-size="19" font-weight="600">每個設計決策只記錄一次，其他地方用一句話指向它</text>
+    <text x="118.0" y="529.0" font-size="15">影響多處的變數行為寫在宣告旁；找不到自然位置就集中到 designNotes 檔案，程式碼裡一句註解指過去。HTTP 協議、用</text>
+    <text x="118.0" y="552.0" font-size="15">戶手冊裡已有的內容，附上引用即可。</text>
+    <circle cx="74.0" cy="614.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,603.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4" /><path d="m3 7 2 2 4-4" /><path d="M13 6h8" /><path d="M13 12h8" /><path d="M13 18h8" /></g>
+    <text x="118.0" y="602.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">收尾</text>
+    <text x="118.0" y="626.0" font-size="19" font-weight="600">提交前檢查一遍變更；更高層級的註解更容易維護</text>
+    <text x="118.0" y="652.0" font-size="15">提交之前，花幾分鐘確認文件準確反映了每項變更，也能順帶發現遺留的除錯程式碼。比程式碼更抽象的註解只在整體行為變化</text>
+    <text x="118.0" y="675.0" font-size="15">時才需要更新，最有用的註解往往也最容易維護。</text>
+    <rect x="32.0" y="713.0" width="896.0" height="101.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <g transform="translate(50.0,733.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
+    <text x="92.0" y="741.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">這一章最想強調的</text>
+    <text x="92.0" y="767.0" font-size="20" font-weight="600">修改現有程式碼時也要戰略式思考：如果沒有讓設計變好，你就很可能正在讓它變壞</text>
+    <text x="92.0" y="793.0" font-size="15" fill="var(--diagram-muted,#5c645d)">確保註解及時更新的最佳方法，是把它放在所描述的程式碼附近，並且每個設計決策只記錄一次</text>
+  </g>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 719" role="img" aria-labelledby="ch04-story-title ch04-story-desc">
+  <title id="ch04-story-title">從 Java 讀檔案要三個物件，到 Unix 用五個系統呼叫做完全部檔案 I/O</title>
+  <desc id="ch04-story-desc">本章回顧。從 Java 讀檔案要三個物件，到 Unix 用五個系統呼叫做完全部檔案 I/O。起點：模組化設計：一次只面對一小塊複雜性。系統分成類、子系統、服務等模組，每個模組有介面和實作。理想是各模組完全獨立，但模組要互相呼叫，依賴不可避免；目標是讓依賴儘量少，介面比實作簡單得多。；問題：淺模組與多類症：小類多了介面就多。課程裡有個方法只是往表裡放一個空值，理解它的介面並不比讀實作簡單。Java 讀一個檔案要依次建三個物件，緩衝還得單獨請求，忘了就變慢。；轉折：最好的模組是深的：介面簡單，功能多。Unix 檔案 I/O 只有 open、read、write、lseek、close 五個呼叫，實作卻有幾十萬行。幾十年來實作大改，介面沒變。垃圾收集器甚至沒有介面，也在悄悄回收記憶體。；做法：讓常見情況儘可能簡單。幾乎所有檔案 I/O 都要緩衝，就應該預設提供，不需要的少數人再去關掉。Unix 把順序讀寫作為預設，只有隨機存取才需要了解 lseek。更多或更大的介面不一定更好。。這一章最想強調的：設計類時最重要的是讓它足夠深：常見用例介面簡單，功能卻豐富 連結串列這樣的淺類有時不可避免也有用，只是在管理複雜性上幫不了多少；小模組往往很淺</desc>
+  <rect width="960" height="719" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <text x="32.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顧</text>
+    <path d="M74 144 V 469" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" />
+    <text x="32.0" y="62.0" font-size="26" font-weight="600">從 Java 讀檔案要三個物件，到 Unix 用五個系統呼叫做完全部檔案 I/O</text>
+    <circle cx="74.0" cy="122.0" r="22" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(63.0,111.0) scale(0.917)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z" /><path d="m7 16.5-4.74-2.85" /><path d="m7 16.5 5-3" /><path d="M7 16.5v5.17" /><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z" /><path d="m17 16.5-5-3" /><path d="m17 16.5 4.74-2.85" /><path d="M17 16.5v5.17" /><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z" /><path d="M12 8 7.26 5.15" /><path d="m12 8 4.74-2.85" /><path d="M12 13.5V8" /></g>
+    <text x="118.0" y="110.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起點</text>
+    <text x="118.0" y="134.0" font-size="19" font-weight="600">模組化設計：一次只面對一小塊複雜性</text>
+    <text x="118.0" y="160.0" font-size="15">系統分成類、子系統、服務等模組，每個模組有介面和實作。理想是各模組完全獨立，但模組要互相呼叫，依賴不可避免；</text>
+    <text x="118.0" y="183.0" font-size="15">目標是讓依賴儘量少，介面比實作簡單得多。</text>
+    <circle cx="74.0" cy="245.0" r="22" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" stroke-width="2" /><g transform="translate(63.0,234.0) scale(0.917)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5" /><path d="M8 3H3v5" /><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3" /><path d="m15 9 6-6" /></g>
+    <text x="118.0" y="233.0" font-size="12" font-weight="600" fill="var(--diagram-danger,#a03946)">問題</text>
+    <text x="118.0" y="257.0" font-size="19" font-weight="600">淺模組與多類症：小類多了介面就多</text>
+    <text x="118.0" y="283.0" font-size="15">課程裡有個方法只是往表裡放一個空值，理解它的介面並不比讀實作簡單。Java 讀一個檔案要依次建三個物件，緩衝還得</text>
+    <text x="118.0" y="306.0" font-size="15">單獨請求，忘了就變慢。</text>
+    <circle cx="74.0" cy="368.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,357.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /></g>
+    <text x="118.0" y="356.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">轉折</text>
+    <text x="118.0" y="380.0" font-size="19" font-weight="600">最好的模組是深的：介面簡單，功能多</text>
+    <text x="118.0" y="406.0" font-size="15">Unix 檔案 I/O 只有 open、read、write、lseek、close 五個呼叫，實作卻有幾十萬行。幾十年來實作大改，介面沒變。</text>
+    <text x="118.0" y="429.0" font-size="15">垃圾收集器甚至沒有介面，也在悄悄回收記憶體。</text>
+    <circle cx="74.0" cy="491.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,480.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="6" ry="6" /><circle cx="16" cy="12" r="2" /></g>
+    <text x="118.0" y="479.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">做法</text>
+    <text x="118.0" y="503.0" font-size="19" font-weight="600">讓常見情況儘可能簡單</text>
+    <text x="118.0" y="529.0" font-size="15">幾乎所有檔案 I/O 都要緩衝，就應該預設提供，不需要的少數人再去關掉。Unix 把順序讀寫作為預設，只有隨機存取才需</text>
+    <text x="118.0" y="552.0" font-size="15">要了解 lseek。更多或更大的介面不一定更好。</text>
+    <rect x="32.0" y="590.0" width="896.0" height="101.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <g transform="translate(50.0,610.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
+    <text x="92.0" y="618.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">這一章最想強調的</text>
+    <text x="92.0" y="644.0" font-size="20" font-weight="600">設計類時最重要的是讓它足夠深：常見用例介面簡單，功能卻豐富</text>
+    <text x="92.0" y="670.0" font-size="15" fill="var(--diagram-muted,#5c645d)">連結串列這樣的淺類有時不可避免也有用，只是在管理複雜性上幫不了多少；小模組往往很淺</text>
+  </g>
+</svg>

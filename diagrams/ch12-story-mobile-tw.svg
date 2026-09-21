@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 1209" role="img" aria-labelledby="ch12-storym-title ch12-storym-desc">
+  <title id="ch12-storym-title">從四個不寫註解的藉口，到註解為什麼是抽象的基礎</title>
+  <desc id="ch12-storym-desc">本章回顧。從四個不寫註解的藉口，到註解為什麼是抽象的基礎。起點：很多生產程式碼幾乎沒有註解，開發人員有四個常見藉口。程式碼是自解釋的；沒有時間；註解容易過時併產生誤導；見過的註解都毫無價值。作者認為文件不足給開發帶來了巨大且不必要的拖累。；反駁：程式碼能表達的設計資訊很少，靠讀程式碼理解會拆出大量淺方法。提取子字串的方法有起始和結束兩個參數，只看宣告不知道結果是否包含結束位置。如果預期使用者讀實作，就會把方法拆得很短，產生大量淺方法，讀者仍要逐個讀懂。；算賬：時間和過時兩個藉口，算一算都不成立。鍵入程式碼的時間不到開發時間的 10%，即使註解和程式碼一樣多，也只多花約 10%。註解只在程式碼大改時才需大改，放在程式碼附近、避免重複，再加程式碼審查，就能保持更新。；主張：註解記錄設計者知道、卻無法用程式碼表達的資訊。沒有註解，方法唯一的抽象就是宣告，使用者必須讀程式碼，複雜性全部暴露出來。好註解提供修改程式碼所需的資訊，減輕認知負荷，也減少未知的未知。；回應：對“註解是一種失敗”這一觀點的回應。《程式碼整潔之道》主張把程式碼塊提取成方法，用方法名代替註解。作者認為這樣會得到冗長晦澀的名稱，每次呼叫都在重複文件；好註解提升程式碼價值，是定義抽象的基礎。。這一章最想強調的：註解的核心作用，是記錄設計者知道、卻無法在程式碼中表達的資訊 好的設計能減少對註解的需求，尤其是方法體中的註解，但註解並不代表失敗：程式碼和註解各有所長</desc>
+  <rect width="420" height="1209" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <text x="22.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顧</text>
+    <path d="M40 168 V 849" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" />
+    <text x="22.0" y="62.0" font-size="21" font-weight="600">從四個不寫註解的藉口，到註解為什麼</text>
+    <text x="22.0" y="90.0" font-size="21" font-weight="600">是抽象的基礎</text>
+    <circle cx="40.0" cy="146.0" r="18" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(31.0,137.0) scale(0.750)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></g>
+    <text x="76.0" y="134.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起點</text>
+    <text x="76.0" y="158.0" font-size="18" font-weight="600">很多生產程式碼幾乎沒有註解，開發人員有</text>
+    <text x="76.0" y="182.0" font-size="18" font-weight="600">四個常見藉口</text>
+    <text x="76.0" y="208.0" font-size="15">程式碼是自解釋的；沒有時間；註解容易過時併產</text>
+    <text x="76.0" y="231.0" font-size="15">生誤導；見過的註解都毫無價值。作者認為文件</text>
+    <text x="76.0" y="254.0" font-size="15">不足給開發帶來了巨大且不必要的拖累。</text>
+    <circle cx="40.0" cy="316.0" r="18" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2" /><g transform="translate(31.0,307.0) scale(0.750)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></g>
+    <text x="76.0" y="304.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">反駁</text>
+    <text x="76.0" y="328.0" font-size="18" font-weight="600">程式碼能表達的設計資訊很少，靠讀程式碼理</text>
+    <text x="76.0" y="352.0" font-size="18" font-weight="600">解會拆出大量淺方法</text>
+    <text x="76.0" y="378.0" font-size="15">提取子字串的方法有起始和結束兩個參數，只</text>
+    <text x="76.0" y="401.0" font-size="15">看宣告不知道結果是否包含結束位置。如果預期</text>
+    <text x="76.0" y="424.0" font-size="15">使用者讀實作，就會把方法拆得很短，產生大量</text>
+    <text x="76.0" y="447.0" font-size="15">淺方法，讀者仍要逐個讀懂。</text>
+    <circle cx="40.0" cy="509.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(31.0,500.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></g>
+    <text x="76.0" y="497.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">算賬</text>
+    <text x="76.0" y="521.0" font-size="18" font-weight="600">時間和過時兩個藉口，算一算都不成立</text>
+    <text x="76.0" y="547.0" font-size="15">鍵入程式碼的時間不到開發時間的 10%，即使註解</text>
+    <text x="76.0" y="570.0" font-size="15">和程式碼一樣多，也只多花約 10%。註解只在程式碼</text>
+    <text x="76.0" y="593.0" font-size="15">大改時才需大改，放在程式碼附近、避免重複，再</text>
+    <text x="76.0" y="616.0" font-size="15">加程式碼審查，就能保持更新。</text>
+    <circle cx="40.0" cy="678.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(31.0,669.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /></g>
+    <text x="76.0" y="666.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">主張</text>
+    <text x="76.0" y="690.0" font-size="18" font-weight="600">註解記錄設計者知道、卻無法用程式碼表達</text>
+    <text x="76.0" y="714.0" font-size="18" font-weight="600">的資訊</text>
+    <text x="76.0" y="740.0" font-size="15">沒有註解，方法唯一的抽象就是宣告，使用者必</text>
+    <text x="76.0" y="763.0" font-size="15">須讀程式碼，複雜性全部暴露出來。好註解提供修</text>
+    <text x="76.0" y="786.0" font-size="15">改程式碼所需的資訊，減輕認知負荷，也減少未知</text>
+    <text x="76.0" y="809.0" font-size="15">的未知。</text>
+    <circle cx="40.0" cy="871.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(31.0,862.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="M7 21h10" /><path d="M12 3v18" /><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" /></g>
+    <text x="76.0" y="859.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">回應</text>
+    <text x="76.0" y="883.0" font-size="18" font-weight="600">對“註解是一種失敗”這一觀點的回應</text>
+    <text x="76.0" y="909.0" font-size="15">《程式碼整潔之道》主張把程式碼塊提取成方法，用</text>
+    <text x="76.0" y="932.0" font-size="15">方法名代替註解。作者認為這樣會得到冗長晦澀</text>
+    <text x="76.0" y="955.0" font-size="15">的名稱，每次呼叫都在重複文件；好註解提升代</text>
+    <text x="76.0" y="978.0" font-size="15">碼價值，是定義抽象的基礎。</text>
+    <rect x="22.0" y="1016.0" width="376.0" height="165.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <g transform="translate(40.0,1036.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
+    <text x="78.0" y="1044.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">這一章最想強調的</text>
+    <text x="78.0" y="1070.0" font-size="18" font-weight="600">註解的核心作用，是記錄設計者知道、</text>
+    <text x="78.0" y="1094.0" font-size="18" font-weight="600">卻無法在程式碼中表達的資訊</text>
+    <text x="78.0" y="1118.0" font-size="14" fill="var(--diagram-muted,#5c645d)">好的設計能減少對註解的需求，尤其是方法體中</text>
+    <text x="78.0" y="1139.0" font-size="14" fill="var(--diagram-muted,#5c645d)">的註解，但註解並不代表失敗：程式碼和註解各有</text>
+    <text x="78.0" y="1160.0" font-size="14" fill="var(--diagram-muted,#5c645d)">所長</text>
+  </g>
+</svg>

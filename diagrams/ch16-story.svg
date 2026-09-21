@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 842" role="img" aria-labelledby="ch16-story-title ch16-story-desc">
+  <title id="ch16-story-title">从“最少改哪些代码”的心态，到每次修改都改善设计</title>
+  <desc id="ch16-story-desc">本章回顾。从“最少改哪些代码”的心态，到每次修改都改善设计。起点：修复缺陷或加功能时，典型心态是“最少需要改动哪些代码”。开发人员对要改的代码没有把握，担心改动越大风险越大。但每次最小改动都会加进一些特殊情况和依赖，设计就变差一点；系统每演进一步，问题就多积累一些。；主张：理想情况下，每次修改完成后，系统结构都应如同一开始就考虑了这次变更。面对变更先问现有设计是否仍然最佳，需要就重构。作者承认期限紧迫时，可能只能用两小时的修补代替三个月的重构；但要问自己在当前限制下是否已做到最好。；位置：注释放在开发人员修改代码时最容易看到的地方。接口注释紧靠方法体，改方法时就能看到并更新；实现注释放到各阶段代码正上方。变更的微妙原因若只写在提交消息里，后人可能撤销它而重新引入缺陷，所以要写进代码。；去重：每个设计决策只记录一次，其他地方用一句话指向它。影响多处的变量行为写在声明旁；找不到自然位置就集中到 designNotes 文件，代码里一句注释指过去。HTTP 协议、用户手册里已有的内容，附上引用即可。；收尾：提交前检查一遍变更；更高层级的注释更容易维护。提交之前，花几分钟确认文档准确反映了每项变更，也能顺带发现遗留的调试代码。比代码更抽象的注释只在整体行为变化时才需要更新，最有用的注释往往也最容易维护。。这一章最想强调的：修改现有代码时也要战略式思考：如果没有让设计变好，你就很可能正在让它变坏 确保注释及时更新的最佳方法，是把它放在所描述的代码附近，并且每个设计决策只记录一次</desc>
+  <rect width="960" height="842" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <text x="32.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顾</text>
+    <path d="M74 144 V 592" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2"/>
+    <text x="32.0" y="62.0" font-size="26" font-weight="600">从“最少改哪些代码”的心态，到每次修改都改善设计</text>
+    <circle cx="74.0" cy="122.0" r="22" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2"/><g transform="translate(63.0,111.0) scale(0.917)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12 8.4V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></g>
+    <text x="118.0" y="110.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">起点</text>
+    <text x="118.0" y="134.0" font-size="19" font-weight="600">修复缺陷或加功能时，典型心态是“最少需要改动哪些代码”</text>
+    <text x="118.0" y="160.0" font-size="15">开发人员对要改的代码没有把握，担心改动越大风险越大。但每次最小改动都会加进一些特殊情况和依赖，设计就变差一</text>
+    <text x="118.0" y="183.0" font-size="15">点；系统每演进一步，问题就多积累一些。</text>
+    <circle cx="74.0" cy="245.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(63.0,234.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/><circle cx="12" cy="12" r="10"/></g>
+    <text x="118.0" y="233.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">主张</text>
+    <text x="118.0" y="257.0" font-size="19" font-weight="600">理想情况下，每次修改完成后，系统结构都应如同一开始就考虑了这次变更</text>
+    <text x="118.0" y="283.0" font-size="15">面对变更先问现有设计是否仍然最佳，需要就重构。作者承认期限紧迫时，可能只能用两小时的修补代替三个月的重构；但</text>
+    <text x="118.0" y="306.0" font-size="15">要问自己在当前限制下是否已做到最好。</text>
+    <circle cx="74.0" cy="368.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(63.0,357.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></g>
+    <text x="118.0" y="356.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">位置</text>
+    <text x="118.0" y="380.0" font-size="19" font-weight="600">注释放在开发人员修改代码时最容易看到的地方</text>
+    <text x="118.0" y="406.0" font-size="15">接口注释紧靠方法体，改方法时就能看到并更新；实现注释放到各阶段代码正上方。变更的微妙原因若只写在提交消息里，</text>
+    <text x="118.0" y="429.0" font-size="15">后人可能撤销它而重新引入缺陷，所以要写进代码。</text>
+    <circle cx="74.0" cy="491.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(63.0,480.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13v8"/><path d="M12 3v3"/><path d="M18 6a2 2 0 0 1 1.387.56l2.307 2.22a1 1 0 0 1 0 1.44l-2.307 2.22A2 2 0 0 1 18 13H6a2 2 0 0 1-1.387-.56l-2.306-2.22a1 1 0 0 1 0-1.44l2.306-2.22A2 2 0 0 1 6 6z"/></g>
+    <text x="118.0" y="479.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">去重</text>
+    <text x="118.0" y="503.0" font-size="19" font-weight="600">每个设计决策只记录一次，其他地方用一句话指向它</text>
+    <text x="118.0" y="529.0" font-size="15">影响多处的变量行为写在声明旁；找不到自然位置就集中到 designNotes 文件，代码里一句注释指过去。HTTP 协议、用</text>
+    <text x="118.0" y="552.0" font-size="15">户手册里已有的内容，附上引用即可。</text>
+    <circle cx="74.0" cy="614.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(63.0,603.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></g>
+    <text x="118.0" y="602.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">收尾</text>
+    <text x="118.0" y="626.0" font-size="19" font-weight="600">提交前检查一遍变更；更高层级的注释更容易维护</text>
+    <text x="118.0" y="652.0" font-size="15">提交之前，花几分钟确认文档准确反映了每项变更，也能顺带发现遗留的调试代码。比代码更抽象的注释只在整体行为变化</text>
+    <text x="118.0" y="675.0" font-size="15">时才需要更新，最有用的注释往往也最容易维护。</text>
+    <rect x="32.0" y="713.0" width="896.0" height="101.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <g transform="translate(50.0,733.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g>
+    <text x="92.0" y="741.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">这一章最想强调的</text>
+    <text x="92.0" y="767.0" font-size="20" font-weight="600">修改现有代码时也要战略式思考：如果没有让设计变好，你就很可能正在让它变坏</text>
+    <text x="92.0" y="793.0" font-size="15" fill="var(--diagram-muted,#5c645d)">确保注释及时更新的最佳方法，是把它放在所描述的代码附近，并且每个设计决策只记录一次</text>
+  </g>
+</svg>

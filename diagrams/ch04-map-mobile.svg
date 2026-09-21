@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 742" role="img" aria-labelledby="ch04m-title ch04m-desc">
+  <title id="ch04m-title">什么样的模块算好模块？</title>
+  <desc id="ch04m-desc">本章概览。什么样的模块算好模块？ 本章的主要部分：功能：模块替你做了多少事；隐藏：多少细节不用你知道；常见情况要简单：顺序读写是默认；警惕多类症：小类多了接口就多。一句话：深模块：简单的接口后面藏着大量功能，例如 Unix 文件 I/O 只有五个系统调用</desc>
+  <rect width="420" height="742" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <defs><marker id="ch04m-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)"/></marker></defs>
+    <text x="22.0" y="44.0" font-size="23" font-weight="600">什么样的模块算好模块？</text>
+    <text x="22.0" y="82.0" font-size="16" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">两个变化的方向</text>
+    <rect x="22.0" y="98.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <circle cx="50.0" cy="124.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(42.0,116.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M12 2v2"/><path d="M12 22v-2"/><path d="m17 20.66-1-1.73"/><path d="M11 10.27 7 3.34"/><path d="m20.66 17-1.73-1"/><path d="m3.34 7 1.73 1"/><path d="M14 12h8"/><path d="M2 12h2"/><path d="m20.66 7-1.73 1"/><path d="m3.34 17 1.73-1"/><path d="m17 3.34-1 1.73"/><path d="m11 13.73-4 6.93"/></g>
+    <text x="74.0" y="129.0" font-size="18" font-weight="600">功能</text>
+    <text x="74.0" y="154.0" font-size="15" fill="var(--diagram-muted,#5c645d)">模块替你做了多少事</text>
+    <rect x="22.0" y="174.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <circle cx="50.0" cy="200.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(42.0,192.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></g>
+    <text x="74.0" y="205.0" font-size="18" font-weight="600">隐藏</text>
+    <text x="74.0" y="230.0" font-size="15" fill="var(--diagram-muted,#5c645d)">多少细节不用你知道</text>
+    <text x="22.0" y="264.0" font-size="16" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">从浅模块到深模块</text>
+    <rect x="22.0" y="280.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <circle cx="50.0" cy="306.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(42.0,298.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></g>
+    <text x="74.0" y="311.0" font-size="18" font-weight="600">浅模块</text>
+    <text x="74.0" y="336.0" font-size="15" fill="var(--diagram-muted,#5c645d)">接口和实现差不多复杂</text>
+    <path d="M210.0 348.0 L210.0 364.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch04m-arrow)"/>
+    <rect x="22.0" y="372.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <circle cx="50.0" cy="398.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(42.0,390.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="6" ry="6"/><circle cx="16" cy="12" r="2"/></g>
+    <text x="74.0" y="403.0" font-size="18" font-weight="600">深模块</text>
+    <text x="74.0" y="428.0" font-size="15" fill="var(--diagram-muted,#5c645d)">Unix 文件 I/O：五个系统调用背后是几十万</text>
+    <text x="74.0" y="450.0" font-size="15" fill="var(--diagram-muted,#5c645d)">行实现</text>
+    <rect x="22.0" y="470.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <circle cx="50.0" cy="496.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(42.0,488.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="6" ry="6"/><circle cx="16" cy="12" r="2"/></g>
+    <text x="74.0" y="501.0" font-size="18" font-weight="600">常见情况要简单</text>
+    <text x="74.0" y="526.0" font-size="15" fill="var(--diagram-muted,#5c645d)">顺序读写是默认</text>
+    <rect x="22.0" y="546.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <circle cx="50.0" cy="572.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(42.0,564.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></g>
+    <text x="74.0" y="577.0" font-size="18" font-weight="600">警惕多类症</text>
+    <text x="74.0" y="602.0" font-size="15" fill="var(--diagram-muted,#5c645d)">小类多了接口就多</text>
+    <rect x="22.0" y="630.0" width="376.0" height="90.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="36.0" y="651.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句话</text>
+    <text x="36.0" y="677.0" font-size="17" font-weight="600">深模块：简单的接口后面藏着大量功能，例如</text>
+    <text x="36.0" y="703.0" font-size="17" font-weight="600">Unix 文件 I/O 只有五个系统调用</text>
+  </g>
+</svg>

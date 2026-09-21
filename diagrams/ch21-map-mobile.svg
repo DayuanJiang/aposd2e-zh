@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 754" role="img" aria-labelledby="ch21m-title ch21m-desc">
+  <title id="ch21m-title">怎样分清什么重要、什么不重要？</title>
+  <desc id="ch21m-desc">本章概览。怎样分清什么重要、什么不重要？ 本章的主要部分：判断什么重要：看收益是否广泛：通用的插入删除接口解决很多问题，退格专用方法只解决一个；减少重要的事：构造对象时少要参数，提供默认值；异常在低层处理完，上层不必关心；强调重要的事：让它醒目、反复出现、处于核心地位，例如众多驱动都依赖的设备驱动接口；隐藏不重要的事：尽量隐藏，不让开发人员频繁接触，也不让它影响系统结构。一句话：看哪种做法收益更广；重要的事要少，并放在醒目、核心的位置；不重要的事藏起来，不让它影响结构</desc>
+  <rect width="420" height="754" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <defs><marker id="ch21m-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)"/></marker></defs>
+    <text x="22.0" y="44.0" font-size="23" font-weight="600">怎样分清什么重要、什么不重要？</text>
+    <text x="22.0" y="80.0" font-size="13" fill="var(--diagram-muted,#5c645d)">前面各章的抽象、命名、性能设计，核心都是这个区分：接口只</text>
+    <text x="22.0" y="100.0" font-size="13" fill="var(--diagram-muted,#5c645d)">留对使用者重要的信息，其余隐藏在实现里</text>
+    <rect x="22.0" y="118.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <circle cx="50.0" cy="144.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(42.0,136.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></g>
+    <text x="74.0" y="149.0" font-size="18" font-weight="600">判断什么重要</text>
+    <text x="74.0" y="174.0" font-size="15" fill="var(--diagram-muted,#5c645d)">看收益是否广泛：通用的插入删除接口解决很</text>
+    <text x="74.0" y="196.0" font-size="15" fill="var(--diagram-muted,#5c645d)">多问题，退格专用方法只解决一个</text>
+    <path d="M210.0 208.0 L210.0 224.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch21m-arrow)"/>
+    <rect x="22.0" y="232.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <circle cx="50.0" cy="258.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(42.0,250.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/></g>
+    <text x="74.0" y="263.0" font-size="18" font-weight="600">减少重要的事</text>
+    <text x="74.0" y="288.0" font-size="15" fill="var(--diagram-muted,#5c645d)">构造对象时少要参数，提供默认值；异常在低</text>
+    <text x="74.0" y="310.0" font-size="15" fill="var(--diagram-muted,#5c645d)">层处理完，上层不必关心</text>
+    <path d="M210.0 322.0 L210.0 338.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch21m-arrow)"/>
+    <rect x="22.0" y="346.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <circle cx="50.0" cy="372.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(42.0,364.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g>
+    <text x="74.0" y="377.0" font-size="18" font-weight="600">强调重要的事</text>
+    <text x="74.0" y="402.0" font-size="15" fill="var(--diagram-muted,#5c645d)">让它醒目、反复出现、处于核心地位，例如众</text>
+    <text x="74.0" y="424.0" font-size="15" fill="var(--diagram-muted,#5c645d)">多驱动都依赖的设备驱动接口</text>
+    <path d="M210.0 436.0 L210.0 452.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch21m-arrow)"/>
+    <rect x="22.0" y="460.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <circle cx="50.0" cy="486.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(42.0,478.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></g>
+    <text x="74.0" y="491.0" font-size="18" font-weight="600">隐藏不重要的事</text>
+    <text x="74.0" y="516.0" font-size="15" fill="var(--diagram-muted,#5c645d)">尽量隐藏，不让开发人员频繁接触，也不让它</text>
+    <text x="74.0" y="538.0" font-size="15" fill="var(--diagram-muted,#5c645d)">影响系统结构</text>
+    <text x="22.0" y="570.0" font-size="13" fill="var(--diagram-muted,#5c645d)">两类错误：把太多事看成重要，例如 Java I/O 迫使开发人员区分</text>
+    <text x="22.0" y="590.0" font-size="13" fill="var(--diagram-muted,#5c645d)">缓冲与非缓冲；漏掉重要的事，功能就会被反复实现</text>
+    <rect x="22.0" y="616.0" width="376.0" height="116.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="36.0" y="637.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句话</text>
+    <text x="36.0" y="663.0" font-size="17" font-weight="600">看哪种做法收益更广；重要的事要少，并放在</text>
+    <text x="36.0" y="689.0" font-size="17" font-weight="600">醒目、核心的位置；不重要的事藏起来，不让</text>
+    <text x="36.0" y="715.0" font-size="17" font-weight="600">它影响结构</text>
+  </g>
+</svg>

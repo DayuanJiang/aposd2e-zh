@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 478" role="img" aria-labelledby="ch20-title ch20-desc">
+  <title id="ch20-title">追求高效能，設計還能保持整潔嗎？</title>
+  <desc id="ch20-desc">本章概覽。追求高效能，設計還能保持整潔嗎？ 本章的主要部分：速度：常見操作執行得多快；整潔：程式碼多容易讀懂；先測量：找出耗時的少數位置；關鍵路徑：常見情況的最少程式碼。一句話：可以兼得：平時選自然高效的簡單設計；確實太慢時先測量，再圍繞關鍵路徑重新設計，讓它儘可能簡單</desc>
+  <rect width="960" height="478" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <defs><marker id="ch20-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)" /></marker></defs>
+    <text x="32.0" y="52.0" font-size="30" font-weight="600">追求高效能，設計還能保持整潔嗎？</text>
+    <path d="M120.0 296.0 L900.0 296.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch20-arrow)" />
+    <path d="M120.0 296.0 L120.0 92.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch20-arrow)" />
+    <g transform="translate(560.0,306.0) scale(0.917)" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4" /><path d="M3.34 19a10 10 0 1 1 17.32 0" /></g>
+    <text x="588.0" y="324.0" font-size="16" font-weight="600">速度：常見操作執行得多快</text>
+    <text x="134.0" y="316.0" font-size="13" fill="var(--diagram-muted,#5c645d)">慢</text>
+    <text x="850.0" y="316.0" font-size="13" fill="var(--diagram-muted,#5c645d)" text-anchor="end">快</text>
+    <g transform="translate(30.0,82.0) scale(0.917)" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /><circle cx="12" cy="12" r="3" /></g>
+    <text x="58.0" y="99.0" font-size="16" font-weight="600">整潔：程式碼多容易讀懂</text>
+    <text x="112.0" y="286.0" font-size="13" fill="var(--diagram-muted,#5c645d)" text-anchor="end">複雜</text>
+    <text x="112.0" y="126.0" font-size="13" fill="var(--diagram-muted,#5c645d)" text-anchor="end">簡單</text>
+    <circle cx="182.0" cy="256.0" r="24" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(168.0,242.0) scale(1.167)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /></g>
+    <text x="216.0" y="252.0" font-size="20" font-weight="600">舊 Buffer 程式碼</text>
+    <text x="216.0" y="274.0" font-size="15" fill="var(--diagram-muted,#5c645d)">三層淺方法，六次檢查</text>
+    <path d="M212 236 C 300 190, 340 176, 408 168" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#ch20-arrow)" />
+    <text x="298.0" y="226.0" font-size="13" fill="var(--diagram-muted,#5c645d)">圍繞關鍵路徑重構</text>
+    <rect x="420.0" y="108.0" width="470.0" height="176.0" rx="14" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <text x="444.0" y="142.0" font-size="22" font-weight="600">整潔又快的新程式碼</text>
+    <text x="444.0" y="166.0" font-size="15" fill="var(--diagram-muted,#5c645d)">新 Buffer 程式碼：一個方法，一次檢查，快一倍，程式碼少兩成</text>
+    <g transform="translate(446.0,200.0) scale(1.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2v2" /><path d="M5 2v2" /><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1" /><path d="M8 15a6 6 0 0 0 12 0v-3" /><circle cx="20" cy="10" r="2" /></g>
+    <text x="498.0" y="222.0" font-size="18" font-weight="600">先測量</text>
+    <text x="498.0" y="246.0" font-size="15" fill="var(--diagram-muted,#5c645d)">找出耗時的少數位置</text>
+    <g transform="translate(669.0,200.0) scale(1.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3" /><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15" /><circle cx="18" cy="5" r="3" /></g>
+    <text x="721.0" y="222.0" font-size="18" font-weight="600">關鍵路徑</text>
+    <text x="721.0" y="246.0" font-size="15" fill="var(--diagram-muted,#5c645d)">常見情況的最少程式碼</text>
+    <rect x="32.0" y="352.0" width="896.0" height="98.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <text x="50.0" y="373.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
+    <text x="50.0" y="403.0" font-size="21" font-weight="600">可以兼得：平時選自然高效的簡單設計；確實太慢時先測量，再圍繞關鍵路徑重新設計，讓</text>
+    <text x="50.0" y="433.0" font-size="21" font-weight="600">它儘可能簡單</text>
+  </g>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 1016" role="img" aria-labelledby="ch18-storym-title ch18-storym-desc">
+  <title id="ch18-storym-title">从一对叫 getKey 的返回值，到让读者始终掌握所需信息</title>
+  <desc id="ch18-storym-desc">本章回顾。从一对叫 getKey 的返回值，到让读者始终掌握所需信息。起点：方法用 Pair 返回当前任期和一个布尔值。调用者只能写 result.getKey() 和 result.getValue()，这两个名字说不出值的含义。写的人省了几分钟，之后每个读者都要去查。；问题：危险信号：快速阅读却读不懂，说明读者缺了某条重要信息。List 变量实际是 ArrayList；事件处理函数由事件模块间接调用，看不出何时执行；RaftClient 的构造函数开了新线程，main 返回后程序仍在运行。；转折：写的时候多花几分钟，读的人少花很多时间。为返回值定义专门的类，元素就有了有意义的名字；让声明类型与分配类型一致；用空行分开代码块，让注释更醒目。如果读你代码的人说它难懂，它就是难懂。；结论：三种方式让读者始终掌握所需信息。最好的办法是用抽象、消除特殊情况等设计手段，减少读者需要知道的信息；其次是遵循约定、符合预期，用读者已有的知识；最后才是用好名称和有针对性的注释直接补上信息。。这一章最想强调的：软件应设计得易于阅读：写代码的人多花几分钟，每个读者都少花时间 事件驱动这类做法有时仍要用，这时用注释补上读者缺少的信息，例如说明处理函数何时会被调用</desc>
+  <rect width="420" height="1016" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <text x="22.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顾</text>
+    <path d="M40 168 V 656" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2"/>
+    <text x="22.0" y="62.0" font-size="21" font-weight="600">从一对叫 getKey 的返回值，到让读者始</text>
+    <text x="22.0" y="90.0" font-size="21" font-weight="600">终掌握所需信息</text>
+    <circle cx="40.0" cy="146.0" r="18" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(31.0,137.0) scale(0.750)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></g>
+    <text x="76.0" y="134.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起点</text>
+    <text x="76.0" y="158.0" font-size="18" font-weight="600">方法用 Pair 返回当前任期和一个布尔值</text>
+    <text x="76.0" y="184.0" font-size="15">调用者只能写 result.getKey() 和</text>
+    <text x="76.0" y="207.0" font-size="15">result.getValue()，这两个名字说不出值的含</text>
+    <text x="76.0" y="230.0" font-size="15">义。写的人省了几分钟，之后每个读者都要去查。</text>
+    <circle cx="40.0" cy="292.0" r="18" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2"/><g transform="translate(31.0,283.0) scale(0.750)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></g>
+    <text x="76.0" y="280.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">问题</text>
+    <text x="76.0" y="304.0" font-size="18" font-weight="600">危险信号：快速阅读却读不懂，说明读者</text>
+    <text x="76.0" y="328.0" font-size="18" font-weight="600">缺了某条重要信息</text>
+    <text x="76.0" y="354.0" font-size="15">List 变量实际是 ArrayList；事件处理函数由</text>
+    <text x="76.0" y="377.0" font-size="15">事件模块间接调用，看不出何时执行；</text>
+    <text x="76.0" y="400.0" font-size="15">RaftClient 的构造函数开了新线程，main 返回</text>
+    <text x="76.0" y="423.0" font-size="15">后程序仍在运行。</text>
+    <circle cx="40.0" cy="485.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,476.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></g>
+    <text x="76.0" y="473.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">转折</text>
+    <text x="76.0" y="497.0" font-size="18" font-weight="600">写的时候多花几分钟，读的人少花很多时</text>
+    <text x="76.0" y="521.0" font-size="18" font-weight="600">间</text>
+    <text x="76.0" y="547.0" font-size="15">为返回值定义专门的类，元素就有了有意义的名</text>
+    <text x="76.0" y="570.0" font-size="15">字；让声明类型与分配类型一致；用空行分开代</text>
+    <text x="76.0" y="593.0" font-size="15">码块，让注释更醒目。如果读你代码的人说它难</text>
+    <text x="76.0" y="616.0" font-size="15">懂，它就是难懂。</text>
+    <circle cx="40.0" cy="678.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,669.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></g>
+    <text x="76.0" y="666.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">结论</text>
+    <text x="76.0" y="690.0" font-size="18" font-weight="600">三种方式让读者始终掌握所需信息</text>
+    <text x="76.0" y="716.0" font-size="15">最好的办法是用抽象、消除特殊情况等设计手段，</text>
+    <text x="76.0" y="739.0" font-size="15">减少读者需要知道的信息；其次是遵循约定、符</text>
+    <text x="76.0" y="762.0" font-size="15">合预期，用读者已有的知识；最后才是用好名称</text>
+    <text x="76.0" y="785.0" font-size="15">和有针对性的注释直接补上信息。</text>
+    <rect x="22.0" y="823.0" width="376.0" height="165.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <g transform="translate(40.0,843.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g>
+    <text x="78.0" y="851.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">这一章最想强调的</text>
+    <text x="78.0" y="877.0" font-size="18" font-weight="600">软件应设计得易于阅读：写代码的人多</text>
+    <text x="78.0" y="901.0" font-size="18" font-weight="600">花几分钟，每个读者都少花时间</text>
+    <text x="78.0" y="925.0" font-size="14" fill="var(--diagram-muted,#5c645d)">事件驱动这类做法有时仍要用，这时用注释补上</text>
+    <text x="78.0" y="946.0" font-size="14" fill="var(--diagram-muted,#5c645d)">读者缺少的信息，例如说明处理函数何时会被调</text>
+    <text x="78.0" y="967.0" font-size="14" fill="var(--diagram-muted,#5c645d)">用</text>
+  </g>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 842" role="img" aria-labelledby="ch19-story-title ch19-story-desc">
+  <title id="ch19-story-title">從繼承到 Getter：流行趨勢是否真的降低複雜性</title>
+  <desc id="ch19-story-desc">本章回顧。從繼承到 Getter：流行趨勢是否真的降低複雜性。起點：每種趨勢只問一個問題：它有助於降低複雜性嗎？。物件導向、敏捷、單元測試、測試驅動開發、設計模式、Getter 和 Setter，作者逐一用本書的原則評估。許多提案表面上聽起來不錯，深入研究後有些反而增加複雜性。；繼承：介面繼承降低複雜性，實作繼承要謹慎。同一個 I/O 介面既能讀寫磁碟檔案也能透過網路套接字通訊，實作越多介面越深。實作繼承讓父類和子類共享實例變數，改一個類要檢查整個類層次；先考慮用輔助類組合。；測試：單元測試讓開發人員敢於重構，作者堅決擁護。沒有測試套件，重大結構調整很危險，開發人員會避免重構。Tcl 把直譯器換成位元組碼編譯器時，現有單元測試發現了新引擎的大多數缺陷，alpha 版釋出後只發現一個。；風險：敏捷和測試驅動開發都容易變成戰術式程式設計。敏捷把注意力集中在功能上，推遲設計決策；測試驅動開發忙於讓下一個測試通過，沒有明確的時機做設計。增量開發是好主意，但增量應是抽象；只有修缺陷時先寫測試很合理。；過度：設計模式和 Getter/Setter：好方法也會被過度使用。適合的設計模式往往比自己從頭設計更整潔；如果自己的方案更整潔，就不要硬套。Getter 和 Setter 是只有一行的淺方法，讓類介面雜亂；最好一開始就避免公開實例變數。。這一章最想強調的：遇到新的開發範式，都從複雜性的角度審視：它真的有助於降低大型系統的複雜性嗎 許多提案表面上聽起來不錯，深入研究後有些反而增加複雜性；一種方法是好方法，並不意味著用得越多越好</desc>
+  <rect width="960" height="842" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <text x="32.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顧</text>
+    <path d="M74 144 V 592" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" />
+    <text x="32.0" y="62.0" font-size="26" font-weight="600">從繼承到 Getter：流行趨勢是否真的降低複雜性</text>
+    <circle cx="74.0" cy="122.0" r="22" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(63.0,111.0) scale(0.917)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" /><circle cx="12" cy="12" r="10" /></g>
+    <text x="118.0" y="110.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起點</text>
+    <text x="118.0" y="134.0" font-size="19" font-weight="600">每種趨勢只問一個問題：它有助於降低複雜性嗎？</text>
+    <text x="118.0" y="160.0" font-size="15">物件導向、敏捷、單元測試、測試驅動開發、設計模式、Getter 和 Setter，作者逐一用本書的原則評估。許多提案表面</text>
+    <text x="118.0" y="183.0" font-size="15">上聽起來不錯，深入研究後有些反而增加複雜性。</text>
+    <circle cx="74.0" cy="245.0" r="22" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2" /><g transform="translate(63.0,234.0) scale(0.917)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="6" y1="3" y2="15" /><circle cx="18" cy="6" r="3" /><circle cx="6" cy="18" r="3" /><path d="M18 9a9 9 0 0 1-9 9" /></g>
+    <text x="118.0" y="233.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">繼承</text>
+    <text x="118.0" y="257.0" font-size="19" font-weight="600">介面繼承降低複雜性，實作繼承要謹慎</text>
+    <text x="118.0" y="283.0" font-size="15">同一個 I/O 介面既能讀寫磁碟檔案也能透過網路套接字通訊，實作越多介面越深。實作繼承讓父類和子類共享實例變數，</text>
+    <text x="118.0" y="306.0" font-size="15">改一個類要檢查整個類層次；先考慮用輔助類組合。</text>
+    <circle cx="74.0" cy="368.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,357.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2v17.5c0 1.4-1.1 2.5-2.5 2.5c-1.4 0-2.5-1.1-2.5-2.5V2" /><path d="M8.5 2h7" /><path d="M14.5 16h-5" /></g>
+    <text x="118.0" y="356.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">測試</text>
+    <text x="118.0" y="380.0" font-size="19" font-weight="600">單元測試讓開發人員敢於重構，作者堅決擁護</text>
+    <text x="118.0" y="406.0" font-size="15">沒有測試套件，重大結構調整很危險，開發人員會避免重構。Tcl 把直譯器換成位元組碼編譯器時，現有單元測試發現了新引</text>
+    <text x="118.0" y="429.0" font-size="15">擎的大多數缺陷，alpha 版釋出後只發現一個。</text>
+    <circle cx="74.0" cy="491.0" r="22" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2" /><g transform="translate(63.0,480.0) scale(0.917)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></g>
+    <text x="118.0" y="479.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">風險</text>
+    <text x="118.0" y="503.0" font-size="19" font-weight="600">敏捷和測試驅動開發都容易變成戰術式程式設計</text>
+    <text x="118.0" y="529.0" font-size="15">敏捷把注意力集中在功能上，推遲設計決策；測試驅動開發忙於讓下一個測試通過，沒有明確的時機做設計。增量開發是好</text>
+    <text x="118.0" y="552.0" font-size="15">主意，但增量應是抽象；只有修缺陷時先寫測試很合理。</text>
+    <circle cx="74.0" cy="614.0" r="22" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2" /><g transform="translate(63.0,603.0) scale(0.917)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z" /><path d="m7 16.5-4.74-2.85" /><path d="m7 16.5 5-3" /><path d="M7 16.5v5.17" /><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z" /><path d="m17 16.5-5-3" /><path d="m17 16.5 4.74-2.85" /><path d="M17 16.5v5.17" /><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z" /><path d="M12 8 7.26 5.15" /><path d="m12 8 4.74-2.85" /><path d="M12 13.5V8" /></g>
+    <text x="118.0" y="602.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">過度</text>
+    <text x="118.0" y="626.0" font-size="19" font-weight="600">設計模式和 Getter/Setter：好方法也會被過度使用</text>
+    <text x="118.0" y="652.0" font-size="15">適合的設計模式往往比自己從頭設計更整潔；如果自己的方案更整潔，就不要硬套。Getter 和 Setter 是只有一行的淺方</text>
+    <text x="118.0" y="675.0" font-size="15">法，讓類介面雜亂；最好一開始就避免公開實例變數。</text>
+    <rect x="32.0" y="713.0" width="896.0" height="101.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <g transform="translate(50.0,733.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
+    <text x="92.0" y="741.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">這一章最想強調的</text>
+    <text x="92.0" y="767.0" font-size="20" font-weight="600">遇到新的開發範式，都從複雜性的角度審視：它真的有助於降低大型系統的複雜性嗎</text>
+    <text x="92.0" y="793.0" font-size="15" fill="var(--diagram-muted,#5c645d)">許多提案表面上聽起來不錯，深入研究後有些反而增加複雜性；一種方法是好方法，並不意味著用得越多越好</text>
+  </g>
+</svg>

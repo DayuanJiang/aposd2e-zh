@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 576" role="img" aria-labelledby="ch12m-title ch12m-desc">
+  <title id="ch12m-title">不写注释的四个借口，站得住吗？</title>
+  <desc id="ch12m-desc">本章概览。不写注释的四个借口，站得住吗？ 本章的主要部分：四个借口：代码自解释、没时间、注释会过时、见过的注释都没用；作者的回应：接口的含义只能靠注释说明；写注释最多多花约 10% 时间；放在代码附近就容易更新；写法可以学。一句话：四个借口都站不住：注释记录设计者知道、却无法用代码表达的信息，没有注释就无法隐藏复杂性</desc>
+  <rect width="420" height="576" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <defs><marker id="ch12m-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)"/></marker></defs>
+    <text x="22.0" y="44.0" font-size="23" font-weight="600">不写注释的四个借口，站得住吗？</text>
+    <text x="22.0" y="80.0" font-size="13" fill="var(--diagram-muted,#5c645d)">开发人员用四个借口解释为什么不写注释，这一章逐个回应，再</text>
+    <text x="22.0" y="100.0" font-size="13" fill="var(--diagram-muted,#5c645d)">说明好注释的价值</text>
+    <rect x="22.0" y="118.0" width="376.0" height="110.0" rx="9" fill="var(--diagram-danger-soft,#ead9dc)"/>
+    <circle cx="50.0" cy="144.0" r="14" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" stroke-width="2"/><g transform="translate(42.0,136.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></g>
+    <text x="74.0" y="149.0" font-size="18" font-weight="600">不写注释的四个借口</text>
+    <text x="74.0" y="174.0" font-size="15" fill="var(--diagram-muted,#5c645d)">好的代码是自解释的；我没有时间写注释；注</text>
+    <text x="74.0" y="196.0" font-size="15" fill="var(--diagram-muted,#5c645d)">释很容易过时，并会产生误导；我所看到的注</text>
+    <text x="74.0" y="218.0" font-size="15" fill="var(--diagram-muted,#5c645d)">释都毫无价值</text>
+    <rect x="22.0" y="238.0" width="376.0" height="132.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <circle cx="50.0" cy="264.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(42.0,256.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></g>
+    <text x="74.0" y="269.0" font-size="18" font-weight="600">作者的回应</text>
+    <text x="74.0" y="294.0" font-size="15" fill="var(--diagram-muted,#5c645d)">方法做什么、结果代表什么，只能靠注释说</text>
+    <text x="74.0" y="316.0" font-size="15" fill="var(--diagram-muted,#5c645d)">明；键入注释最多增加约 10% 的开发时间；放</text>
+    <text x="74.0" y="338.0" font-size="15" fill="var(--diagram-muted,#5c645d)">在代码附近、避免重复，注释就容易更新；掌</text>
+    <text x="74.0" y="360.0" font-size="15" fill="var(--diagram-muted,#5c645d)">握方法后，写出有用的注释并不难</text>
+    <text x="22.0" y="392.0" font-size="13" fill="var(--diagram-muted,#5c645d)">对《代码整洁之道》“注释是一种失败”的说法，作者认为好注</text>
+    <text x="22.0" y="412.0" font-size="13" fill="var(--diagram-muted,#5c645d)">释提升代码价值，是定义抽象的基础</text>
+    <rect x="22.0" y="438.0" width="376.0" height="116.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="36.0" y="459.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句话</text>
+    <text x="36.0" y="485.0" font-size="17" font-weight="600">四个借口都站不住：注释记录设计者知道、却</text>
+    <text x="36.0" y="511.0" font-size="17" font-weight="600">无法用代码表达的信息，没有注释就无法隐藏</text>
+    <text x="36.0" y="537.0" font-size="17" font-weight="600">复杂性</text>
+  </g>
+</svg>
