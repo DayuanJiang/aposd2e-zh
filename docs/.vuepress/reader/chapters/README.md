@@ -53,6 +53,10 @@
 
 `tone` 可选 `pri`（本章主张，绿）、`sec`（中性，蓝）、`warm`（提醒，棕）、`danger`（反例，红）。
 
+### 整图总量
+
+概览是读前地图，图上实际画出来的文字（question、answer、各 part 的 label 与 text、figure 里的说明；contrast 版式的 parts 只进无障碍描述，不计）合计不得超过 160 个汉字，脚本会检查。目标是一百二十字左右：每个 part 的 text 一句话、不超过 16 字，header 不超过 25 字，footer 通常省略，answer 不超过 40 字。
+
 ### 各版式的字数上限（汉字数，英文按半个字算）
 
 - `pipeline`：`label` ≤ 10；`text` 4 步时 ≤ 36，5 步时 ≤ 27；`header` ≤ 59；`footer` ≤ 64。

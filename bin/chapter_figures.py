@@ -588,12 +588,37 @@ def storyline(key, story, mobile):
 
 # ---------- entry points ----------
 
+MAP_VISIBLE_LIMIT = 160  # Chinese characters drawn on the desktop map; a pre-reading map, not a summary
+
+
+def visible_map_characters(chart):
+    """Count CJK characters actually drawn on the desktop map (contrast parts only feed the alt text)."""
+    texts = [chart["question"], chart["answer"]]
+    if chart["form"] != "contrast":
+        texts += [part["label"] + part["text"] for part in chart["parts"]]
+    for value in chart.get("figure", {}).values():
+        if isinstance(value, str):
+            texts.append(value)
+        elif isinstance(value, dict):
+            for name, inner in value.items():
+                if isinstance(inner, str) and name != "icon":
+                    texts.append(inner)
+                elif isinstance(inner, list):
+                    texts += [str(item) for item in inner]
+        elif isinstance(value, list):
+            texts += [str(item) for item in value]
+    return sum(len(re.findall(r"[\u4e00-\u9fff]", text)) for text in texts)
+
+
 def build(content):
     """Return ({relative asset path: svg text}, [reader entries]) for one chapter."""
     chart, story = content["map"], content["story"]
     key = f"ch{content['chapter']:02d}"
     if chart["form"] not in FORMS:
         raise ValueError(f"Unknown map form: {chart['form']}")
+    drawn = visible_map_characters(chart)
+    if drawn > MAP_VISIBLE_LIMIT:
+        raise ValueError(f"Opening map draws {drawn} Chinese characters; keep it under {MAP_VISIBLE_LIMIT} so it stays a pre-reading map")
     if not 3 <= len(story["acts"]) <= 6:
         raise ValueError("A storyline needs 3 to 6 acts")
     sources = content.get("sources") or []

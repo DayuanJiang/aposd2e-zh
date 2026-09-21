@@ -43,7 +43,7 @@
       "ch14-map: remove the fourth pillar (naming difficulty as a design red flag); the storyline keeps it.",
       "ch15-map: delete the footer instead of choosing between the two competing rewrites; the storyline's fourth act carries the 5% estimate with its premise.",
       "ch20-map / ch04-map mobile axes: fixed in the generator (region row uses its own icon, items follow under a heading), not in chapter data.",
-      "Opening maps were additionally shortened to about 120 to 160 Chinese characters because every map exceeded the pre-reading guideline; details removed from maps were not moved into storylines."
+      "Opening maps were additionally shortened because every map exceeded the pre-reading guideline; after revision each map draws 108 to 159 Chinese characters (question, answer, parts and figure texts; contrast parts feed only the alt text). The generator now rejects maps above 160 visible characters. Details removed from maps were not moved into storylines."
     ]
   },
   "application": {
@@ -55,139 +55,139 @@
   "chapters": {
     "ch01": {
       "form": "pillars",
-      "mapHan": 152,
       "acts": 4,
-      "limits": 0
+      "limits": 0,
+      "mapVisibleHan": 152
     },
     "ch02": {
       "form": "layers",
-      "mapHan": 122,
       "acts": 4,
-      "limits": 2
+      "limits": 2,
+      "mapVisibleHan": 122
     },
     "ch03": {
       "form": "contrast",
-      "mapHan": 187,
       "acts": 4,
-      "limits": 1
+      "limits": 1,
+      "mapVisibleHan": 147
     },
     "ch04": {
       "form": "axes",
-      "mapHan": 140,
       "acts": 4,
-      "limits": 1
+      "limits": 1,
+      "mapVisibleHan": 140
     },
     "ch05": {
       "form": "contrast",
-      "mapHan": 194,
       "acts": 4,
-      "limits": 1
+      "limits": 1,
+      "mapVisibleHan": 155
     },
     "ch06": {
       "form": "pillars",
-      "mapHan": 157,
       "acts": 5,
-      "limits": 1
+      "limits": 1,
+      "mapVisibleHan": 157
     },
     "ch07": {
       "form": "contrast",
-      "mapHan": 159,
       "acts": 4,
-      "limits": 2
+      "limits": 2,
+      "mapVisibleHan": 133
     },
     "ch08": {
       "form": "pipeline",
-      "mapHan": 155,
       "acts": 4,
-      "limits": 2
+      "limits": 2,
+      "mapVisibleHan": 155
     },
     "ch09": {
       "form": "pillars",
-      "mapHan": 157,
       "acts": 5,
-      "limits": 2
+      "limits": 2,
+      "mapVisibleHan": 157
     },
     "ch10": {
       "form": "layers",
-      "mapHan": 159,
       "acts": 5,
-      "limits": 3
+      "limits": 3,
+      "mapVisibleHan": 159
     },
     "ch11": {
       "form": "pipeline",
-      "mapHan": 157,
       "acts": 5,
-      "limits": 2
+      "limits": 2,
+      "mapVisibleHan": 157
     },
     "ch12": {
       "form": "contrast",
-      "mapHan": 159,
       "acts": 5,
-      "limits": 3
+      "limits": 3,
+      "mapVisibleHan": 129
     },
     "ch13": {
       "form": "layers",
-      "mapHan": 108,
       "acts": 4,
-      "limits": 3
+      "limits": 3,
+      "mapVisibleHan": 108
     },
     "ch14": {
       "form": "pillars",
-      "mapHan": 140,
       "acts": 4,
-      "limits": 4
+      "limits": 4,
+      "mapVisibleHan": 140
     },
     "ch15": {
       "form": "pipeline",
-      "mapHan": 133,
       "acts": 4,
-      "limits": 2
+      "limits": 2,
+      "mapVisibleHan": 133
     },
     "ch16": {
       "form": "cycle",
-      "mapHan": 144,
       "acts": 5,
-      "limits": 5
+      "limits": 5,
+      "mapVisibleHan": 144
     },
     "ch17": {
       "form": "pillars",
-      "mapHan": 153,
       "acts": 4,
-      "limits": 2
+      "limits": 2,
+      "mapVisibleHan": 153
     },
     "ch18": {
       "form": "contrast",
-      "mapHan": 159,
       "acts": 4,
-      "limits": 2
+      "limits": 2,
+      "mapVisibleHan": 140
     },
     "ch19": {
       "form": "socket",
-      "mapHan": 159,
       "acts": 5,
-      "limits": 3
+      "limits": 3,
+      "mapVisibleHan": 159
     },
     "ch20": {
       "form": "axes",
-      "mapHan": 145,
       "acts": 4,
-      "limits": 4
+      "limits": 4,
+      "mapVisibleHan": 145
     },
     "ch21": {
       "form": "pipeline",
-      "mapHan": 158,
       "acts": 4,
-      "limits": 3
+      "limits": 3,
+      "mapVisibleHan": 158
     },
     "ch22": {
       "form": "layers",
-      "mapHan": 157,
       "acts": 4,
-      "limits": 3
+      "limits": 3,
+      "mapVisibleHan": 157
     }
   },
   "verification": {
-    "generatorBudgetCheck": "uv run --with opencc==1.4.1 python3 bin/chapter_figures.py --check: up to date, 22 chapters, traditional widths included",
+    "generatorBudgetCheck": "uv run --with opencc==1.4.1 python3 bin/chapter_figures.py --check: up to date, 22 chapters, traditional widths and the 160-character visible-text cap included",
     "localizedAssets": "tools/localize.py --check: 222 files in sync",
     "staticChecks": "tools/verify.py --complete: 94 teaching diagrams, 388 SVG assets, 60 Python examples",
     "nodeTests": 16,
@@ -209,5 +209,6 @@
     "Explanatory-design judgment by agents; no real-reader comprehension test.",
     "Reviewers and editors are model agents with separated contexts, not professional human editors.",
     "Character-width estimation is approximate; the browser geometry pass covers the installed macOS Chrome fonts only."
-  ]
+  ],
+  "teammateReports": "Reviewer and editor reports were received after integration and cross-checked against the applied files; editors noted that the interim counting command skipped contrast items, so counts here use drawn text only. Two editor judgement calls were accepted: ch02 keeps the three symptom terms in its layer label (15 characters) as the reviewer proposed, and ch21 keeps the 9-character label 同时隐藏不重要的事 within the pipeline label budget."
 }

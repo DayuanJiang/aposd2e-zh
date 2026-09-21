@@ -48,8 +48,8 @@ the reader-visualization rules: no P1, 35 P2, 106 P3; 39 figures marked `revise`
 5 `keep`, none replaced or retired. The dominant problems were opening maps two to
 three times longer than the pre-reading guideline, chapter-introduced terms appearing
 in maps, and dropped hedges (通常、可能、约、尽量). Every proposed fix was accepted;
-editors applied 86 verbatim and 53 in shortened form while cutting all maps to 108 to
-194 Chinese characters. Two findings were fixed in the generator (axes mobile layout).
+editors applied 86 verbatim and 53 in shortened form while cutting every map to 108 to
+159 drawn Chinese characters; the generator now rejects maps above 160. Two findings were fixed in the generator (axes mobile layout).
 
 Verification after revision: generator budget check with traditional widths, 222
 localized assets in sync, `verify.py --complete` over 388 SVG assets, 16 node and 19
