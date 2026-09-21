@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 550" role="img" aria-labelledby="ch19-title ch19-desc">
   <title id="ch19-title">流行的開發趨勢真的降低複雜性嗎？</title>
-  <desc id="ch19-desc">本章概覽。流行的開發趨勢真的降低複雜性嗎？ 本章的主要部分：繼承：介面繼承好，實作繼承要謹慎；敏捷開發：增量開發是好主意，但增量應是抽象；單元測試：堅決擁護單元測試，不熱衷測試驅動開發；設計模式：適合時很好，硬套只會更複雜；Getter：與 Setter 都是淺方法，最好避免。一句話：介面繼承和單元測試有助於降低複雜性；實作繼承、敏捷、設計模式各有風險；測試驅動開發和 Getter/Setter 作者不推薦</desc>
+  <desc id="ch19-desc">本章概覽。流行的開發趨勢真的降低複雜性嗎？ 本章的主要部分：繼承：介面繼承好，實作繼承要謹慎；敏捷開發：增量開發是好主意，但增量應是抽象；單元測試：堅決擁護單元測試，不熱衷測試驅動開發；設計模式：適合時很好，硬套只會更複雜；Getter：與 Setter 都是淺方法，最好避免。一句話：介面繼承和單元測試有助於降低複雜性；實作繼承、敏捷、設計模式各有風險；作者不熱衷測試驅動開發，Getter/Setter 最好避免</desc>
   <rect width="960" height="550" fill="var(--diagram-bg,#e7eae6)" />
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <defs><marker id="ch19-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)" /></marker></defs>
@@ -33,7 +33,7 @@
     <text x="484.0" y="394.0" font-size="13" fill="var(--diagram-muted,#5c645d)">遇到新範式，先問它是否真的降低複雜性</text>
     <rect x="32.0" y="424.0" width="896.0" height="98.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
     <text x="50.0" y="445.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
-    <text x="50.0" y="475.0" font-size="21" font-weight="600">介面繼承和單元測試有助於降低複雜性；實作繼承、敏捷、設計模式各有風險；測試驅動開</text>
-    <text x="50.0" y="505.0" font-size="21" font-weight="600">發和 Getter/Setter 作者不推薦</text>
+    <text x="50.0" y="475.0" font-size="21" font-weight="600">介面繼承和單元測試有助於降低複雜性；實作繼承、敏捷、設計模式各有風險；作者不熱衷</text>
+    <text x="50.0" y="505.0" font-size="21" font-weight="600">測試驅動開發，Getter/Setter 最好避免</text>
   </g>
 </svg>

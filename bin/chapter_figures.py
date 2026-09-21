@@ -447,12 +447,13 @@ def layers_desktop(key, chart, body, top):
         body.append(icon(part["icon"], x + 18, ly + 18, 28, stroke))
         body.append(text(x + 60, ly + 28, fit(part["label"], 18, w - 80, "layer label"), "h18"))
         body.append(text(x + 60, ly + 50, fit(part["text"], 15, w - 80, f"layer text {part['label']}"), "c15"))
-    if fig.get("side"):
-        body.append(text(928, y + total + 2, fit(fig["side"], 13, 896, "layers side note"), "c13", "end"))
     y += total
+    if fig.get("side"):
+        # Sits on its own line under the bottom layer, right-aligned, so it never touches the box edge.
+        body.append(text(928, y + 22, fit(fig["side"], 13, 896, "layers side note"), "c13", "end")); y += 30
     if fig.get("footer"):
         body.append(text(32, y + 26, fit(fig["footer"], 14, 896, "layers footer"), "c14")); y += 32
-    return y + (16 if fig.get("side") else 0)
+    return y
 
 
 def layers_rows(chart):

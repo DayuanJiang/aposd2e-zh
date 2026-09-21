@@ -11,8 +11,8 @@
     <rect x="22.0" y="149.0" width="376.0" height="154.0" rx="9" fill="var(--diagram-danger-soft,#ead9dc)"/>
     <circle cx="50.0" cy="175.0" r="14" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" stroke-width="2"/><g transform="translate(42.0,167.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><line x1="3" x2="9" y1="12" y2="12"/><line x1="15" x2="21" y1="12" y2="12"/></g>
     <text x="74.0" y="180.0" font-size="18" font-weight="600">相邻两层抽象相似（危险信号）</text>
-    <text x="74.0" y="205.0" font-size="15" fill="var(--diagram-muted,#5c645d)">TextDocument 里 13 个方法只是转调</text>
-    <text x="74.0" y="227.0" font-size="15" fill="var(--diagram-muted,#5c645d)">TextArea；为了加缓冲，单独包一层</text>
+    <text x="74.0" y="205.0" font-size="15" fill="var(--diagram-muted,#5c645d)">TextDocument 15 个公有方法里 13 个是透</text>
+    <text x="74.0" y="227.0" font-size="15" fill="var(--diagram-muted,#5c645d)">传；为了加缓冲，单独包一层</text>
     <text x="74.0" y="249.0" font-size="15" fill="var(--diagram-muted,#5c645d)">BufferedInputStream；文本按行存储，接</text>
     <text x="74.0" y="271.0" font-size="15" fill="var(--diagram-muted,#5c645d)">口也只给整行读写；证书参数穿过 main 到 m3</text>
     <text x="74.0" y="293.0" font-size="15" fill="var(--diagram-muted,#5c645d)">之间的每个方法</text>

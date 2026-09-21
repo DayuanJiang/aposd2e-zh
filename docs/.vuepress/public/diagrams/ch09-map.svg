@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 522" role="img" aria-labelledby="ch09-title ch09-desc">
   <title id="ch09-title">两个功能放在一起实现，还是分开实现？</title>
-  <desc id="ch09-desc">本章概览。两个功能放在一起实现，还是分开实现？ 本章的主要部分：共享信息就组合：读 HTTP 请求的代码不解析标头就找不到结尾，与解析合在一个类里，代码更短；简化接口就组合：合并后中间传字符串的接口没了；文件流默认带缓冲，多数用户不必知道缓冲；组合来消除重复：几种数据包各写一遍同样的日志语句；提取成方法，或用 goto 让它只留一份；通用与专用分开：文本类提供通用操作；删除所选区域这类界面操作归界面模块，否则信息泄露；方法看深度：拆分多出接口。方法够深、签名简单，几百行也行；必须一起读才懂的是连体方法。一句话：依据是整个系统的复杂性：共享信息或能简化接口就组合，通用机制与专用代码分开，方法先求深再求短</desc>
+  <desc id="ch09-desc">本章概览。两个功能放在一起实现，还是分开实现？ 本章的主要部分：共享信息就组合：读 HTTP 请求的代码不解析标头就找不到结尾，与解析合在一个类里，代码更短；简化接口就组合：合并后中间传字符串的接口没了；若把缓冲合进文件流，多数用户不必知道缓冲；组合来消除重复：几种数据包各写一遍同样的日志语句；提取成方法，或用 goto 让它只留一份；通用与专用分开：文本类提供通用操作；删除所选区域这类界面操作归界面模块，否则信息泄露；方法看深度：拆分多出接口。方法够深、签名简单，几百行也行；必须一起读才懂的是连体方法。一句话：依据是整个系统的复杂性：共享信息或能简化接口就组合，通用机制与专用代码分开，方法先求深再求短</desc>
   <rect width="960" height="522" fill="var(--diagram-bg,#e7eae6)"/>
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <defs><marker id="ch09-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)"/></marker></defs>
@@ -22,9 +22,9 @@
     <g transform="translate(228.8,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></g>
     <text x="228.8" y="248.0" font-size="18" font-weight="600">简化接口就组合</text>
     <text x="228.8" y="282.0" font-size="14" fill="var(--diagram-muted,#5c645d)">合并后中间传字符串</text>
-    <text x="228.8" y="303.0" font-size="14" fill="var(--diagram-muted,#5c645d)">的接口没了；文件流</text>
-    <text x="228.8" y="324.0" font-size="14" fill="var(--diagram-muted,#5c645d)">默认带缓冲，多数用</text>
-    <text x="228.8" y="345.0" font-size="14" fill="var(--diagram-muted,#5c645d)">户不必知道缓冲</text>
+    <text x="228.8" y="303.0" font-size="14" fill="var(--diagram-muted,#5c645d)">的接口没了；若把缓</text>
+    <text x="228.8" y="324.0" font-size="14" fill="var(--diagram-muted,#5c645d)">冲合进文件流，多数</text>
+    <text x="228.8" y="345.0" font-size="14" fill="var(--diagram-muted,#5c645d)">用户不必知道缓冲</text>
     <rect x="397.6" y="172.0" width="164.8" height="202.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)"/>
     <rect x="411.6" y="260" width="136.8" height="1" fill="var(--diagram-line,#aebbad)"/>
     <g transform="translate(411.6,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 7.196 9.5 3.1 10.598"/><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"/><path d="m13.378 9.633 4.096 1.098 1.097-4.096"/></g>

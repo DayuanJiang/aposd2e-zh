@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 590" role="img" aria-labelledby="ch22-title ch22-desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 604" role="img" aria-labelledby="ch22-title ch22-desc">
   <title id="ch22-title">全書只討論一件事，是什麼？</title>
   <desc id="ch22-desc">本章概覽。全書只討論一件事，是什麼？ 本章的主要部分：複雜性的根本原因：依賴性：改一處要連帶改別處；模糊性：重要資訊不容易被看到；識別不必要複雜性的危險訊號：資訊洩露、不必要的錯誤情況、過於籠統的名稱；建立更簡單系統的通用思路：設計深而通用的類，透過定義來規避錯誤，把介面文件和實作文件分開；投資思維：早期多花一些時間做設計，回報很快到來：模組反覆被用，文件省下重讀的時間，技能越練越快。一句話：複雜性：找到它的根源，用危險訊號識別它，用深模組等思路減少它，並接受早期多投入的投資思維</desc>
-  <rect width="960" height="590" fill="var(--diagram-bg,#e7eae6)" />
+  <rect width="960" height="604" fill="var(--diagram-bg,#e7eae6)" />
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <defs><marker id="ch22-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)" /></marker></defs>
     <text x="32.0" y="52.0" font-size="30" font-weight="600">全書只討論一件事，是什麼？</text>
@@ -22,11 +22,11 @@
     <g transform="translate(50.0,348.0) scale(1.167)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1" /><rect x="2" y="16" width="6" height="6" rx="1" /><rect x="9" y="2" width="6" height="6" rx="1" /><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" /><path d="M12 12V8" /></g>
     <text x="92.0" y="358.0" font-size="18" font-weight="600">複雜性的根本原因</text>
     <text x="92.0" y="380.0" font-size="15" fill="var(--diagram-muted,#5c645d)">依賴性：改一處要連帶改別處；模糊性：重要資訊不容易被看到</text>
-    <text x="928.0" y="396.0" font-size="13" fill="var(--diagram-muted,#5c645d)" text-anchor="end">從下到上：先弄清複雜性從哪來，再學會識別它、減少它，最後是堅持投入的心態</text>
-    <text x="32.0" y="420.0" font-size="14" fill="var(--diagram-muted,#5c645d)">代價是專案早期要投入額外工作，學習設計技巧時進度也會慢一些；一旦掌握方法，好設計並不比草率的設計多花多少時間</text>
-    <rect x="32.0" y="464.0" width="896.0" height="98.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
-    <text x="50.0" y="485.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
-    <text x="50.0" y="515.0" font-size="21" font-weight="600">複雜性：找到它的根源，用危險訊號識別它，用深模組等思路減少它，並接受早期多投入的</text>
-    <text x="50.0" y="545.0" font-size="21" font-weight="600">投資思維</text>
+    <text x="928.0" y="416.0" font-size="13" fill="var(--diagram-muted,#5c645d)" text-anchor="end">從下到上：先弄清複雜性從哪來，再學會識別它、減少它，最後是堅持投入的心態</text>
+    <text x="32.0" y="450.0" font-size="14" fill="var(--diagram-muted,#5c645d)">代價是專案早期要投入額外工作，學習設計技巧時進度也會慢一些；一旦掌握方法，好設計並不比草率的設計多花多少時間</text>
+    <rect x="32.0" y="478.0" width="896.0" height="98.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <text x="50.0" y="499.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
+    <text x="50.0" y="529.0" font-size="21" font-weight="600">複雜性：找到它的根源，用危險訊號識別它，用深模組等思路減少它，並接受早期多投入的</text>
+    <text x="50.0" y="559.0" font-size="21" font-weight="600">投資思維</text>
   </g>
 </svg>

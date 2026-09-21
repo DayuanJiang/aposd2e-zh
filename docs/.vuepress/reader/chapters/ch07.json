@@ -32,7 +32,7 @@
         "title": "相邻两层抽象相似（危险信号）",
         "tone": "danger",
         "items": [
-          "TextDocument 里 13 个方法只是转调 TextArea",
+          "TextDocument 15 个公有方法里 13 个是透传",
           "为了加缓冲，单独包一层 BufferedInputStream",
           "文本按行存储，接口也只给整行读写",
           "证书参数穿过 main 到 m3 之间的每个方法"

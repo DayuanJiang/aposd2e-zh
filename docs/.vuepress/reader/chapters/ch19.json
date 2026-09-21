@@ -14,7 +14,7 @@
   "map": {
     "form": "socket",
     "question": "流行的开发趋势真的降低复杂性吗？",
-    "answer": "接口继承和单元测试有助于降低复杂性；实现继承、敏捷、设计模式各有风险；测试驱动开发和 Getter/Setter 作者不推荐",
+    "answer": "接口继承和单元测试有助于降低复杂性；实现继承、敏捷、设计模式各有风险；作者不热衷测试驱动开发，Getter/Setter 最好避免",
     "parts": [
       { "icon": "git-branch", "label": "继承", "text": "接口继承好，实现继承要谨慎" },
       { "icon": "refresh-cw", "label": "敏捷开发", "text": "增量开发是好主意，但增量应是抽象" },
