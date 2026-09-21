@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 752" role="img" aria-labelledby="ch19m-title ch19m-desc">
   <title id="ch19m-title">流行的开发趋势真的降低复杂性吗？</title>
-  <desc id="ch19m-desc">本章概览。流行的开发趋势真的降低复杂性吗？ 本章的主要部分：继承：接口继承好，实现继承要谨慎；敏捷开发：增量开发是好主意，但增量应是抽象；单元测试：坚决拥护单元测试，不热衷测试驱动开发；设计模式：适合时很好，硬套只会更复杂；Getter：与 Setter 都是浅方法，最好避免。一句话：接口继承和单元测试有助于降低复杂性；实现继承、敏捷、设计模式各有风险；测试驱动开发和 Getter/Setter 作者不推荐</desc>
+  <desc id="ch19m-desc">本章概览。流行的开发趋势真的降低复杂性吗？ 本章的主要部分：继承：接口继承好，实现继承要谨慎；敏捷开发：增量开发是好主意，但增量应是抽象；单元测试：坚决拥护单元测试，不热衷测试驱动开发；设计模式：适合时很好，硬套只会更复杂；Getter：与 Setter 都是浅方法，最好避免。一句话：接口继承和单元测试有助于降低复杂性；实现继承、敏捷、设计模式各有风险；作者不热衷测试驱动开发，Getter/Setter 最好避免</desc>
   <rect width="420" height="752" fill="var(--diagram-bg,#e7eae6)"/>
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <defs><marker id="ch19m-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)"/></marker></defs>
@@ -35,7 +35,7 @@
     <rect x="22.0" y="614.0" width="376.0" height="116.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)"/>
     <text x="36.0" y="635.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句话</text>
     <text x="36.0" y="661.0" font-size="17" font-weight="600">接口继承和单元测试有助于降低复杂性；实现</text>
-    <text x="36.0" y="687.0" font-size="17" font-weight="600">继承、敏捷、设计模式各有风险；测试驱动开</text>
-    <text x="36.0" y="713.0" font-size="17" font-weight="600">发和 Getter/Setter 作者不推荐</text>
+    <text x="36.0" y="687.0" font-size="17" font-weight="600">继承、敏捷、设计模式各有风险；作者不热衷</text>
+    <text x="36.0" y="713.0" font-size="17" font-weight="600">测试驱动开发，Getter/Setter 最好避免</text>
   </g>
 </svg>

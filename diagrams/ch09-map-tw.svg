@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 522" role="img" aria-labelledby="ch09-title ch09-desc">
   <title id="ch09-title">兩個功能放在一起實作，還是分開實作？</title>
-  <desc id="ch09-desc">本章概覽。兩個功能放在一起實作，還是分開實作？ 本章的主要部分：共享資訊就組合：讀 HTTP 請求的程式碼不解析標頭就找不到結尾，與解析合在一個類裡，程式碼更短；簡化介面就組合：合併後中間傳字串的介面沒了；檔案流預設帶緩衝，多數使用者不必知道緩衝；組合來消除重複：幾種資料包各寫一遍同樣的日誌語句；提取成方法，或用 goto 讓它只留一份；通用與專用分開：文字類提供通用操作；刪除所選區域這類介面操作歸介面模組，否則資訊洩露；方法看深度：拆分多出介面。方法夠深、簽名簡單，幾百行也行；必須一起讀才懂的是連體方法。一句話：依據是整個系統的複雜性：共享資訊或能簡化介面就組合，通用機制與專用程式碼分開，方法先求深再求短</desc>
+  <desc id="ch09-desc">本章概覽。兩個功能放在一起實作，還是分開實作？ 本章的主要部分：共享資訊就組合：讀 HTTP 請求的程式碼不解析標頭就找不到結尾，與解析合在一個類裡，程式碼更短；簡化介面就組合：合併後中間傳字串的介面沒了；若把緩衝合進檔案流，多數使用者不必知道緩衝；組合來消除重複：幾種資料包各寫一遍同樣的日誌語句；提取成方法，或用 goto 讓它只留一份；通用與專用分開：文字類提供通用操作；刪除所選區域這類介面操作歸介面模組，否則資訊洩露；方法看深度：拆分多出介面。方法夠深、簽名簡單，幾百行也行；必須一起讀才懂的是連體方法。一句話：依據是整個系統的複雜性：共享資訊或能簡化介面就組合，通用機制與專用程式碼分開，方法先求深再求短</desc>
   <rect width="960" height="522" fill="var(--diagram-bg,#e7eae6)" />
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <defs><marker id="ch09-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)" /></marker></defs>
@@ -22,9 +22,9 @@
     <g transform="translate(228.8,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-5" /><path d="M9 8V2" /><path d="M15 8V2" /><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z" /></g>
     <text x="228.8" y="248.0" font-size="18" font-weight="600">簡化介面就組合</text>
     <text x="228.8" y="282.0" font-size="14" fill="var(--diagram-muted,#5c645d)">合併後中間傳字串</text>
-    <text x="228.8" y="303.0" font-size="14" fill="var(--diagram-muted,#5c645d)">的介面沒了；檔案流</text>
-    <text x="228.8" y="324.0" font-size="14" fill="var(--diagram-muted,#5c645d)">預設帶緩衝，多數用</text>
-    <text x="228.8" y="345.0" font-size="14" fill="var(--diagram-muted,#5c645d)">戶不必知道緩衝</text>
+    <text x="228.8" y="303.0" font-size="14" fill="var(--diagram-muted,#5c645d)">的介面沒了；若把緩</text>
+    <text x="228.8" y="324.0" font-size="14" fill="var(--diagram-muted,#5c645d)">衝合進檔案流，多數</text>
+    <text x="228.8" y="345.0" font-size="14" fill="var(--diagram-muted,#5c645d)">使用者不必知道緩衝</text>
     <rect x="397.6" y="172.0" width="164.8" height="202.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)" />
     <rect x="411.6" y="260" width="136.8" height="1" fill="var(--diagram-line,#aebbad)" />
     <g transform="translate(411.6,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5" /><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12" /><path d="m14 16-3 3 3 3" /><path d="M8.293 13.596 7.196 9.5 3.1 10.598" /><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843" /><path d="m13.378 9.633 4.096 1.098 1.097-4.096" /></g>

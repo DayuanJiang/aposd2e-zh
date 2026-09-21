@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 590" role="img" aria-labelledby="ch22-title ch22-desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 604" role="img" aria-labelledby="ch22-title ch22-desc">
   <title id="ch22-title">全书只讨论一件事，是什么？</title>
   <desc id="ch22-desc">本章概览。全书只讨论一件事，是什么？ 本章的主要部分：复杂性的根本原因：依赖性：改一处要连带改别处；模糊性：重要信息不容易被看到；识别不必要复杂性的危险信号：信息泄露、不必要的错误情况、过于笼统的名称；创建更简单系统的通用思路：设计深而通用的类，通过定义来规避错误，把接口文档和实现文档分开；投资思维：早期多花一些时间做设计，回报很快到来：模块反复被用，文档省下重读的时间，技能越练越快。一句话：复杂性：找到它的根源，用危险信号识别它，用深模块等思路减少它，并接受早期多投入的投资思维</desc>
-  <rect width="960" height="590" fill="var(--diagram-bg,#e7eae6)"/>
+  <rect width="960" height="604" fill="var(--diagram-bg,#e7eae6)"/>
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <defs><marker id="ch22-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)"/></marker></defs>
     <text x="32.0" y="52.0" font-size="30" font-weight="600">全书只讨论一件事，是什么？</text>
@@ -22,11 +22,11 @@
     <g transform="translate(50.0,348.0) scale(1.167)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></g>
     <text x="92.0" y="358.0" font-size="18" font-weight="600">复杂性的根本原因</text>
     <text x="92.0" y="380.0" font-size="15" fill="var(--diagram-muted,#5c645d)">依赖性：改一处要连带改别处；模糊性：重要信息不容易被看到</text>
-    <text x="928.0" y="396.0" font-size="13" fill="var(--diagram-muted,#5c645d)" text-anchor="end">从下到上：先弄清复杂性从哪来，再学会识别它、减少它，最后是坚持投入的心态</text>
-    <text x="32.0" y="420.0" font-size="14" fill="var(--diagram-muted,#5c645d)">代价是项目早期要投入额外工作，学习设计技巧时进度也会慢一些；一旦掌握方法，好设计并不比草率的设计多花多少时间</text>
-    <rect x="32.0" y="464.0" width="896.0" height="98.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)"/>
-    <text x="50.0" y="485.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句话</text>
-    <text x="50.0" y="515.0" font-size="21" font-weight="600">复杂性：找到它的根源，用危险信号识别它，用深模块等思路减少它，并接受早期多投入的</text>
-    <text x="50.0" y="545.0" font-size="21" font-weight="600">投资思维</text>
+    <text x="928.0" y="416.0" font-size="13" fill="var(--diagram-muted,#5c645d)" text-anchor="end">从下到上：先弄清复杂性从哪来，再学会识别它、减少它，最后是坚持投入的心态</text>
+    <text x="32.0" y="450.0" font-size="14" fill="var(--diagram-muted,#5c645d)">代价是项目早期要投入额外工作，学习设计技巧时进度也会慢一些；一旦掌握方法，好设计并不比草率的设计多花多少时间</text>
+    <rect x="32.0" y="478.0" width="896.0" height="98.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="50.0" y="499.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句话</text>
+    <text x="50.0" y="529.0" font-size="21" font-weight="600">复杂性：找到它的根源，用危险信号识别它，用深模块等思路减少它，并接受早期多投入的</text>
+    <text x="50.0" y="559.0" font-size="21" font-weight="600">投资思维</text>
   </g>
 </svg>
