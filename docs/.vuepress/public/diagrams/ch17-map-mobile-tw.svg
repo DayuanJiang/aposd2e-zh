@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 846" role="img" aria-labelledby="ch17m-title ch17m-desc">
+  <title id="ch17m-title">一致性為什麼重要，怎麼保持？</title>
+  <desc id="ch17m-desc">本章概覽。一致性為什麼重要，怎麼保持？ 本章的主要部分：寫下約定：把編碼風格指南等全域約定寫下來，放在專案維基的顯著位置；不變條件這類區域性約定寫在程式碼裡；自動檢查：寫工具自動檢查違規，透過才能提交。作者用一個腳本攔下含回車符的檔案，行終止符問題就此解決；入鄉隨俗：在新檔案裡寫程式碼前，先看現有程式碼怎麼組織：駝峰還是蛇形命名，公有成員是否放在前面，照著做；不改舊約定：有更好的想法也不足以引入不一致，除非掌握了制定舊約定時沒有的新資訊，且值得更新所有舊用法。一句話：相似的事用相似做法，讀者理解了一處就能理解其他地方；靠文件、自動檢查和入鄉隨俗來保持</desc>
+  <rect width="420" height="846" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <defs><marker id="ch17m-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)" /></marker></defs>
+    <text x="22.0" y="44.0" font-size="23" font-weight="600">一致性為什麼重要，怎麼保持？</text>
+    <rect x="22.0" y="68.0" width="376.0" height="112.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <circle cx="50.0" cy="94.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,86.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></g>
+    <text x="74.0" y="99.0" font-size="18" font-weight="600">目標：相似的事採用相似做法，不同</text>
+    <text x="74.0" y="123.0" font-size="18" font-weight="600">的事採用不同做法</text>
+    <text x="74.0" y="148.0" font-size="15" fill="var(--diagram-muted,#5c645d)">理解了一處的做法，就能立即理解其他地方，</text>
+    <text x="74.0" y="170.0" font-size="15" fill="var(--diagram-muted,#5c645d)">還能減少基於錯誤假設的失誤</text>
+    <text x="22.0" y="204.0" font-size="16" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">靠什麼支撐</text>
+    <rect x="22.0" y="220.0" width="376.0" height="110.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)" />
+    <circle cx="50.0" cy="246.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(42.0,238.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v4a2 2 0 0 0 2 2h4" /><path d="M10 9H8" /><path d="M16 13H8" /><path d="M16 17H8" /></g>
+    <text x="74.0" y="251.0" font-size="18" font-weight="600">寫下約定</text>
+    <text x="74.0" y="276.0" font-size="15" fill="var(--diagram-muted,#5c645d)">把編碼風格指南等全域約定寫下來，放在專案</text>
+    <text x="74.0" y="298.0" font-size="15" fill="var(--diagram-muted,#5c645d)">維基的顯著位置；不變條件這類區域性約定寫在代</text>
+    <text x="74.0" y="320.0" font-size="15" fill="var(--diagram-muted,#5c645d)">碼裡</text>
+    <rect x="22.0" y="340.0" width="376.0" height="110.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)" />
+    <circle cx="50.0" cy="366.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(42.0,358.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></g>
+    <text x="74.0" y="371.0" font-size="18" font-weight="600">自動檢查</text>
+    <text x="74.0" y="396.0" font-size="15" fill="var(--diagram-muted,#5c645d)">寫工具自動檢查違規，透過才能提交。作者用</text>
+    <text x="74.0" y="418.0" font-size="15" fill="var(--diagram-muted,#5c645d)">一個腳本攔下含回車符的檔案，行終止符問題</text>
+    <text x="74.0" y="440.0" font-size="15" fill="var(--diagram-muted,#5c645d)">就此解決</text>
+    <rect x="22.0" y="460.0" width="376.0" height="110.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)" />
+    <circle cx="50.0" cy="486.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(42.0,478.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" /><circle cx="12" cy="12" r="10" /></g>
+    <text x="74.0" y="491.0" font-size="18" font-weight="600">入鄉隨俗</text>
+    <text x="74.0" y="516.0" font-size="15" fill="var(--diagram-muted,#5c645d)">在新檔案裡寫程式碼前，先看現有程式碼怎麼組</text>
+    <text x="74.0" y="538.0" font-size="15" fill="var(--diagram-muted,#5c645d)">織：駝峰還是蛇形命名，公有成員是否放在前</text>
+    <text x="74.0" y="560.0" font-size="15" fill="var(--diagram-muted,#5c645d)">面，照著做</text>
+    <rect x="22.0" y="580.0" width="376.0" height="110.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)" />
+    <circle cx="50.0" cy="606.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(42.0,598.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></g>
+    <text x="74.0" y="611.0" font-size="18" font-weight="600">不改舊約定</text>
+    <text x="74.0" y="636.0" font-size="15" fill="var(--diagram-muted,#5c645d)">有更好的想法也不足以引入不一致，除非掌握</text>
+    <text x="74.0" y="658.0" font-size="15" fill="var(--diagram-muted,#5c645d)">了制定舊約定時沒有的新資訊，且值得更新所</text>
+    <text x="74.0" y="680.0" font-size="15" fill="var(--diagram-muted,#5c645d)">有舊用法</text>
+    <rect x="22.0" y="708.0" width="376.0" height="116.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <text x="36.0" y="729.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
+    <text x="36.0" y="755.0" font-size="17" font-weight="600">相似的事用相似做法，讀者理解了一處就能理</text>
+    <text x="36.0" y="781.0" font-size="17" font-weight="600">解其他地方；靠文件、自動檢查和入鄉隨俗來</text>
+    <text x="36.0" y="807.0" font-size="17" font-weight="600">保持</text>
+  </g>
+</svg>

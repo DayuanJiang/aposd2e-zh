@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 842" role="img" aria-labelledby="ch10-story-title ch10-story-desc">
+  <title id="ch10-story-title">从 Tcl 中会报错的 unset 命令，到在定义上让错误消失</title>
+  <desc id="ch10-story-desc">本章回顾。从 Tcl 中会报错的 unset 命令，到在定义上让错误消失。起点：异常处理代码本来就难写、难测，还占了系统很大一部分。从文件读一组 tweet，光是 try-catch 样板就比正常代码多。处理代码还会引发新异常：重发的包也许只是延迟，对端又收到重复的包。这些代码很少运行，缺陷长期发现不了。；反思：作者自己的错误：Tcl 的 unset 在变量不存在时报错。本意是帮开发者发现缺陷，可 unset 最常见的用途是清理临时状态，操作中途中止时说不清建了哪些变量，大家只好用 catch 捕获后忽略。作者称这是 Tcl 设计中最大的错误之一。；转折：通过定义来规避错误：把 unset 定义成“确保变量不再存在”。Unix 删除正在使用的文件时先标记、让删除成功返回，所有进程关闭后再释放数据；Java 的 substring 若能自动调整越界索引，接口更简单，功能却更多，方法更深。；做法：规避不了的：在底层屏蔽，或传到顶层聚合，或者让程序崩溃。TCP 在内部重发丢包，NFS 客户端一直重试让应用挂起等待；Web 服务器让参数缺失的异常传到分发器统一生成错误响应；内存耗尽这类少见又难处理的错误，打印信息后中止。；界限：做过头了：屏蔽所有网络异常的模块，让应用程序无法知道消息是否丢失。处理异常和其他设计问题一样，要分清什么重要、什么不重要：不重要的信息尽量隐藏，调用者真正需要的信息必须暴露，即使这会让接口更复杂。。这一章最想强调的：减少必须处理异常的地方；最好的办法是重新定义语义，让错误条件消失 前提是模块外部用不到这些异常信息；作者认为减少代码缺陷的最好方法是简化软件</desc>
+  <rect width="960" height="842" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <text x="32.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顾</text>
+    <path d="M74 144 V 592" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2"/>
+    <text x="32.0" y="62.0" font-size="26" font-weight="600">从 Tcl 中会报错的 unset 命令，到在定义上让错误消失</text>
+    <circle cx="74.0" cy="122.0" r="22" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" stroke-width="2"/><g transform="translate(63.0,111.0) scale(0.917)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 2 1.88 1.88"/><path d="M14.12 3.88 16 2"/><path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v-9"/><path d="M6.53 9C4.6 8.8 3 7.1 3 5"/><path d="M6 13H2"/><path d="M3 21c0-2.1 1.7-3.9 3.8-4"/><path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"/><path d="M22 13h-4"/><path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"/></g>
+    <text x="118.0" y="110.0" font-size="12" font-weight="600" fill="var(--diagram-danger,#a03946)">起点</text>
+    <text x="118.0" y="134.0" font-size="19" font-weight="600">异常处理代码本来就难写、难测，还占了系统很大一部分</text>
+    <text x="118.0" y="160.0" font-size="15">从文件读一组 tweet，光是 try-catch 样板就比正常代码多。处理代码还会引发新异常：重发的包也许只是延迟，对端又</text>
+    <text x="118.0" y="183.0" font-size="15">收到重复的包。这些代码很少运行，缺陷长期发现不了。</text>
+    <circle cx="74.0" cy="245.0" r="22" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2"/><g transform="translate(63.0,234.0) scale(0.917)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></g>
+    <text x="118.0" y="233.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">反思</text>
+    <text x="118.0" y="257.0" font-size="19" font-weight="600">作者自己的错误：Tcl 的 unset 在变量不存在时报错</text>
+    <text x="118.0" y="283.0" font-size="15">本意是帮开发者发现缺陷，可 unset 最常见的用途是清理临时状态，操作中途中止时说不清建了哪些变量，大家只好用</text>
+    <text x="118.0" y="306.0" font-size="15">catch 捕获后忽略。作者称这是 Tcl 设计中最大的错误之一。</text>
+    <circle cx="74.0" cy="368.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(63.0,357.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></g>
+    <text x="118.0" y="356.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">转折</text>
+    <text x="118.0" y="380.0" font-size="19" font-weight="600">通过定义来规避错误：把 unset 定义成“确保变量不再存在”</text>
+    <text x="118.0" y="406.0" font-size="15">Unix 删除正在使用的文件时先标记、让删除成功返回，所有进程关闭后再释放数据；Java 的 substring 若能自动调整越</text>
+    <text x="118.0" y="429.0" font-size="15">界索引，接口更简单，功能却更多，方法更深。</text>
+    <circle cx="74.0" cy="491.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(63.0,480.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></g>
+    <text x="118.0" y="479.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">做法</text>
+    <text x="118.0" y="503.0" font-size="19" font-weight="600">规避不了的：在底层屏蔽，或传到顶层聚合，或者让程序崩溃</text>
+    <text x="118.0" y="529.0" font-size="15">TCP 在内部重发丢包，NFS 客户端一直重试让应用挂起等待；Web 服务器让参数缺失的异常传到分发器统一生成错误响应；</text>
+    <text x="118.0" y="552.0" font-size="15">内存耗尽这类少见又难处理的错误，打印信息后中止。</text>
+    <circle cx="74.0" cy="614.0" r="22" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2"/><g transform="translate(63.0,603.0) scale(0.917)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></g>
+    <text x="118.0" y="602.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">界限</text>
+    <text x="118.0" y="626.0" font-size="19" font-weight="600">做过头了：屏蔽所有网络异常的模块，让应用程序无法知道消息是否丢失</text>
+    <text x="118.0" y="652.0" font-size="15">处理异常和其他设计问题一样，要分清什么重要、什么不重要：不重要的信息尽量隐藏，调用者真正需要的信息必须暴露，</text>
+    <text x="118.0" y="675.0" font-size="15">即使这会让接口更复杂。</text>
+    <rect x="32.0" y="713.0" width="896.0" height="101.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <g transform="translate(50.0,733.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g>
+    <text x="92.0" y="741.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">这一章最想强调的</text>
+    <text x="92.0" y="767.0" font-size="20" font-weight="600">减少必须处理异常的地方；最好的办法是重新定义语义，让错误条件消失</text>
+    <text x="92.0" y="793.0" font-size="15" fill="var(--diagram-muted,#5c645d)">前提是模块外部用不到这些异常信息；作者认为减少代码缺陷的最好方法是简化软件</text>
+  </g>
+</svg>

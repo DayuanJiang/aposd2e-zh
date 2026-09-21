@@ -88,7 +88,7 @@ export function readerPlugin() {
           await app.writeTemp(`reader/search-${locale || 'zh'}.js`, `export default ${JSON.stringify(chapters)}`)
         }
         const diagramViews = viewFields(diagrams, [
-          'title', 'summary', 'alt', 'desktop', 'mobile',
+          'kind', 'title', 'summary', 'alt', 'desktop', 'mobile',
           'titleTw', 'summaryTw', 'altTw', 'desktopTw', 'mobileTw',
         ])
         await app.writeTemp('reader/diagrams.js', `export default ${JSON.stringify(diagramViews)}`)

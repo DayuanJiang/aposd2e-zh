@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 991" role="img" aria-labelledby="ch03-storym-title ch03-storym-desc">
+  <title id="ch03-storym-title">从“先让它跑起来”到“好设计是今天要做的事”</title>
+  <desc id="ch03-storym-desc">本章回顾。从“先让它跑起来”到“好设计是今天要做的事”。起点：战术式编程：先让功能跑起来。大多数程序员这样工作。为了更快完成当前任务，加一点复杂性、留一两处蹩脚实现，似乎都是合理的折衷。但每个任务都这样，复杂性就迅速累积。；代价：修补引来更多修补，很快一团糟。问题出现后，你告诉自己下个功能比重构更重要，于是快速修补，补丁又带来新问题。战术龙卷风产出最快，管理层视为英雄，留下的混乱却要别人清理。；转折：能工作的代码不够，目标是出色的设计。大多数代码都是在扩展现有代码时写的，最重要的工作是让未来的扩展更容易。主动投资：为新类多比较几种设计，写好文档。被动投资：发现设计问题就真正修复。；做法：持续小额投资，几个月后收回成本。一次设计整个系统是瀑布式，行不通。持续投入起初慢一点，几个月后开发速度反超，省下的时间足够支持后续投资。初创公司也一样，战术式未必能让首个产品更早发布。。这一章最想强调的：能工作的代码是不够的；把好设计当作今天要做的事，持续做小额投资 一旦开始把清理推迟到忙完这阵，就很容易一直拖下去；投资比例和回本时间是作者的估计，没有数据</desc>
+  <rect width="420" height="991" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <text x="22.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顾</text>
+    <path d="M40 168 V 631" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2"/>
+    <text x="22.0" y="62.0" font-size="21" font-weight="600">从“先让它跑起来”到“好设计是今天</text>
+    <text x="22.0" y="90.0" font-size="21" font-weight="600">要做的事”</text>
+    <circle cx="40.0" cy="146.0" r="18" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(31.0,137.0) scale(0.750)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></g>
+    <text x="76.0" y="134.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起点</text>
+    <text x="76.0" y="158.0" font-size="18" font-weight="600">战术式编程：先让功能跑起来</text>
+    <text x="76.0" y="184.0" font-size="15">大多数程序员这样工作。为了更快完成当前任务，</text>
+    <text x="76.0" y="207.0" font-size="15">加一点复杂性、留一两处蹩脚实现，似乎都是合</text>
+    <text x="76.0" y="230.0" font-size="15">理的折衷。但每个任务都这样，复杂性就迅速累</text>
+    <text x="76.0" y="253.0" font-size="15">积。</text>
+    <circle cx="40.0" cy="315.0" r="18" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" stroke-width="2"/><g transform="translate(31.0,306.0) scale(0.750)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18v-6a5 5 0 1 1 10 0v6"/><path d="M5 21a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z"/><path d="M21 12h1"/><path d="M18.5 4.5 18 5"/><path d="M2 12h1"/><path d="M12 2v1"/><path d="m4.929 4.929.707.707"/><path d="M12 12v6"/></g>
+    <text x="76.0" y="303.0" font-size="12" font-weight="600" fill="var(--diagram-danger,#a03946)">代价</text>
+    <text x="76.0" y="327.0" font-size="18" font-weight="600">修补引来更多修补，很快一团糟</text>
+    <text x="76.0" y="353.0" font-size="15">问题出现后，你告诉自己下个功能比重构更重要，</text>
+    <text x="76.0" y="376.0" font-size="15">于是快速修补，补丁又带来新问题。战术龙卷风</text>
+    <text x="76.0" y="399.0" font-size="15">产出最快，管理层视为英雄，留下的混乱却要别</text>
+    <text x="76.0" y="422.0" font-size="15">人清理。</text>
+    <circle cx="40.0" cy="484.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,475.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/><circle cx="12" cy="12" r="10"/></g>
+    <text x="76.0" y="472.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">转折</text>
+    <text x="76.0" y="496.0" font-size="18" font-weight="600">能工作的代码不够，目标是出色的设计</text>
+    <text x="76.0" y="522.0" font-size="15">大多数代码都是在扩展现有代码时写的，最重要</text>
+    <text x="76.0" y="545.0" font-size="15">的工作是让未来的扩展更容易。主动投资：为新</text>
+    <text x="76.0" y="568.0" font-size="15">类多比较几种设计，写好文档。被动投资：发现</text>
+    <text x="76.0" y="591.0" font-size="15">设计问题就真正修复。</text>
+    <circle cx="40.0" cy="653.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,644.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></g>
+    <text x="76.0" y="641.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">做法</text>
+    <text x="76.0" y="665.0" font-size="18" font-weight="600">持续小额投资，几个月后收回成本</text>
+    <text x="76.0" y="691.0" font-size="15">一次设计整个系统是瀑布式，行不通。持续投入</text>
+    <text x="76.0" y="714.0" font-size="15">起初慢一点，几个月后开发速度反超，省下的时</text>
+    <text x="76.0" y="737.0" font-size="15">间足够支持后续投资。初创公司也一样，战术式</text>
+    <text x="76.0" y="760.0" font-size="15">未必能让首个产品更早发布。</text>
+    <rect x="22.0" y="798.0" width="376.0" height="165.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <g transform="translate(40.0,818.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g>
+    <text x="78.0" y="826.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">这一章最想强调的</text>
+    <text x="78.0" y="852.0" font-size="18" font-weight="600">能工作的代码是不够的；把好设计当作</text>
+    <text x="78.0" y="876.0" font-size="18" font-weight="600">今天要做的事，持续做小额投资</text>
+    <text x="78.0" y="900.0" font-size="14" fill="var(--diagram-muted,#5c645d)">一旦开始把清理推迟到忙完这阵，就很容易一直</text>
+    <text x="78.0" y="921.0" font-size="14" fill="var(--diagram-muted,#5c645d)">拖下去；投资比例和回本时间是作者的估计，没</text>
+    <text x="78.0" y="942.0" font-size="14" fill="var(--diagram-muted,#5c645d)">有数据</text>
+  </g>
+</svg>

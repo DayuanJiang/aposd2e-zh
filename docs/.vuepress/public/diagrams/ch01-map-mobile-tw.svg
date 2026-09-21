@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 776" role="img" aria-labelledby="ch01m-title ch01m-desc">
+  <title id="ch01m-title">這本書要解決什麼問題？</title>
+  <desc id="ch01m-desc">本章概覽。這本書要解決什麼問題？ 本章的主要部分：認清複雜性：複雜性是什麼、為什麼重要；在程式碼審查中練習識別危險訊號，看別人的程式碼更容易看出問題；消除複雜性：讓程式碼更簡單、更易理解，例如消除特殊情況、一致地使用識別符號；封裝複雜性：模組化設計：把系統分成相對獨立的模組，開發一個模組時不必瞭解其他模組的細節；持續重新設計：軟體改起來容易，所以設計貫穿整個生命週期；初始設計幾乎從來都不是最佳設計。一句話：複雜性限制了我們能造多大的系統；全書講怎樣在整個開發過程中認清、消除和封裝它</desc>
+  <rect width="420" height="776" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <defs><marker id="ch01m-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)" /></marker></defs>
+    <text x="22.0" y="44.0" font-size="23" font-weight="600">這本書要解決什麼問題？</text>
+    <rect x="22.0" y="68.0" width="376.0" height="134.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <circle cx="50.0" cy="94.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,86.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></g>
+    <text x="74.0" y="99.0" font-size="18" font-weight="600">目標：在複雜性變得難以駕馭之前，</text>
+    <text x="74.0" y="123.0" font-size="18" font-weight="600">造出更大、功能更強的系統</text>
+    <text x="74.0" y="148.0" font-size="15" fill="var(--diagram-muted,#5c645d)">寫軟體最大的限制是我們理解系統的能力；復</text>
+    <text x="74.0" y="170.0" font-size="15" fill="var(--diagram-muted,#5c645d)">雜性隨功能增加不斷積累，光靠工具不夠，必</text>
+    <text x="74.0" y="192.0" font-size="15" fill="var(--diagram-muted,#5c645d)">須簡化軟體本身</text>
+    <text x="22.0" y="226.0" font-size="16" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">靠什麼支撐</text>
+    <rect x="22.0" y="242.0" width="376.0" height="110.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)" />
+    <circle cx="50.0" cy="268.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(42.0,260.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></g>
+    <text x="74.0" y="273.0" font-size="18" font-weight="600">認清複雜性</text>
+    <text x="74.0" y="298.0" font-size="15" fill="var(--diagram-muted,#5c645d)">複雜性是什麼、為什麼重要；在程式碼審查中練</text>
+    <text x="74.0" y="320.0" font-size="15" fill="var(--diagram-muted,#5c645d)">習識別危險訊號，看別人的程式碼更容易看出問</text>
+    <text x="74.0" y="342.0" font-size="15" fill="var(--diagram-muted,#5c645d)">題</text>
+    <rect x="22.0" y="362.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)" />
+    <circle cx="50.0" cy="388.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(42.0,380.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18" /><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" /><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" /><line x1="10" x2="10" y1="11" y2="17" /><line x1="14" x2="14" y1="11" y2="17" /></g>
+    <text x="74.0" y="393.0" font-size="18" font-weight="600">消除複雜性</text>
+    <text x="74.0" y="418.0" font-size="15" fill="var(--diagram-muted,#5c645d)">讓程式碼更簡單、更易理解，例如消除特殊情</text>
+    <text x="74.0" y="440.0" font-size="15" fill="var(--diagram-muted,#5c645d)">況、一致地使用識別符號</text>
+    <rect x="22.0" y="460.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)" />
+    <circle cx="50.0" cy="486.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(42.0,478.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z" /><path d="m7 16.5-4.74-2.85" /><path d="m7 16.5 5-3" /><path d="M7 16.5v5.17" /><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z" /><path d="m17 16.5-5-3" /><path d="m17 16.5 4.74-2.85" /><path d="M17 16.5v5.17" /><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z" /><path d="M12 8 7.26 5.15" /><path d="m12 8 4.74-2.85" /><path d="M12 13.5V8" /></g>
+    <text x="74.0" y="491.0" font-size="18" font-weight="600">封裝複雜性</text>
+    <text x="74.0" y="516.0" font-size="15" fill="var(--diagram-muted,#5c645d)">模組化設計：把系統分成相對獨立的模組，開</text>
+    <text x="74.0" y="538.0" font-size="15" fill="var(--diagram-muted,#5c645d)">發一個模組時不必瞭解其他模組的細節</text>
+    <rect x="22.0" y="558.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)" />
+    <circle cx="50.0" cy="584.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(42.0,576.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" /><path d="M21 3v5h-5" /><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" /><path d="M8 16H3v5" /></g>
+    <text x="74.0" y="589.0" font-size="18" font-weight="600">持續重新設計</text>
+    <text x="74.0" y="614.0" font-size="15" fill="var(--diagram-muted,#5c645d)">軟體改起來容易，所以設計貫穿整個生命周</text>
+    <text x="74.0" y="636.0" font-size="15" fill="var(--diagram-muted,#5c645d)">期；初始設計幾乎從來都不是最佳設計</text>
+    <rect x="22.0" y="664.0" width="376.0" height="90.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <text x="36.0" y="685.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
+    <text x="36.0" y="711.0" font-size="17" font-weight="600">複雜性限制了我們能造多大的系統；全書講怎</text>
+    <text x="36.0" y="737.0" font-size="17" font-weight="600">樣在整個開發過程中認清、消除和封裝它</text>
+  </g>
+</svg>

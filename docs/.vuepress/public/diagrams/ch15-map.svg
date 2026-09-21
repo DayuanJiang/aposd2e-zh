@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 444" role="img" aria-labelledby="ch15-title ch15-desc">
+  <title id="ch15-title">注释应该在什么时候写？</title>
+  <desc id="ch15-desc">本章概览。注释应该在什么时候写？ 本章的主要部分：类接口注释：先用注释写清这个类提供什么抽象；方法接口注释：为最重要的公有方法写接口注释和签名，方法体留空，反复修改到结构合理；实例变量：为最重要的实例变量写声明，同时写好注释；方法体：最后写方法体和需要的实现注释；新发现的方法也先写接口注释。一句话：在写代码之初就写：先写类和方法的接口注释，再写方法体，注释就成了设计过程的一部分</desc>
+  <rect width="960" height="444" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <defs><marker id="ch15-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)"/></marker></defs>
+    <text x="32.0" y="52.0" font-size="30" font-weight="600">注释应该在什么时候写？</text>
+    <text x="32.0" y="94.0" font-size="15" fill="var(--diagram-muted,#5c645d)">作者写一个新类的顺序。代码写完时注释也写完了，没有积压待补的注释</text>
+    <circle cx="134.2" cy="150.0" r="30" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(119.2,135.0) scale(1.250)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></g>
+    <text x="134.2" y="210.0" font-size="18" font-weight="600" text-anchor="middle">类接口注释</text>
+    <text x="134.2" y="236.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">先用注释写清这个类提供什</text>
+    <text x="134.2" y="258.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">么抽象</text>
+    <path d="M240.5 150.0 L258.5 150.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch15-arrow)"/>
+    <circle cx="364.8" cy="150.0" r="30" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(349.8,135.0) scale(1.250)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></g>
+    <text x="364.8" y="210.0" font-size="18" font-weight="600" text-anchor="middle">方法接口注释</text>
+    <text x="364.8" y="236.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">为最重要的公有方法写接口</text>
+    <text x="364.8" y="258.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">注释和签名，方法体留空，</text>
+    <text x="364.8" y="280.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">反复修改到结构合理</text>
+    <path d="M471.0 150.0 L489.0 150.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch15-arrow)"/>
+    <circle cx="595.2" cy="150.0" r="30" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(580.2,135.0) scale(1.250)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></g>
+    <text x="595.2" y="210.0" font-size="18" font-weight="600" text-anchor="middle">实例变量</text>
+    <text x="595.2" y="236.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">为最重要的实例变量写声明，</text>
+    <text x="595.2" y="258.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">同时写好注释</text>
+    <path d="M701.5 150.0 L719.5 150.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch15-arrow)"/>
+    <circle cx="825.8" cy="150.0" r="30" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(810.8,135.0) scale(1.250)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></g>
+    <text x="825.8" y="210.0" font-size="18" font-weight="600" text-anchor="middle">方法体</text>
+    <text x="825.8" y="236.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">最后写方法体和需要的实现</text>
+    <text x="825.8" y="258.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">注释；新发现的方法也先写</text>
+    <text x="825.8" y="280.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">接口注释</text>
+    <text x="32.0" y="316.0" font-size="14" fill="var(--diagram-muted,#5c645d)">好处：注释更准确；注释难写就是抽象不够好的危险信号；工作更有趣。写注释的时间很可能不超过开发总时间的 5%</text>
+    <rect x="32.0" y="348.0" width="896.0" height="68.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="50.0" y="369.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句话</text>
+    <text x="50.0" y="399.0" font-size="21" font-weight="600">在写代码之初就写：先写类和方法的接口注释，再写方法体，注释就成了设计过程的一部分</text>
+  </g>
+</svg>

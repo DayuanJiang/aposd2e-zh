@@ -5,6 +5,6 @@ node_modules/
 # vuepress@v1
 docs/.vuepress/dist/
 
-package-lock.json
 yarn.lock
 .history
+__pycache__/

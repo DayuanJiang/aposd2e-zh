@@ -270,3 +270,11 @@ body.reader-diagram-open { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) { .reader-app *, .reader-app *::before, .reader-app *::after { scroll-behavior: auto !important; transition: none !important; } }
 @media (prefers-reduced-motion: reduce) { :root .medium-zoom-image { transition: transform 1ms linear !important; } :root .medium-zoom-overlay { transition: opacity 1ms linear !important; } }
 @media print { .reader-topbar, .reader-sidebar, .reader-toc, .reader-settings, .reader-repo, .diagram-toolbar, .code-example-toolbar { display: none !important; } .book-reader .vp-page { padding: 0 !important; } }
+
+/* Continue-reading card on the introduction page, and labels for the generated chapter figures. */
+.book-reader .reader-resume { max-width: 680px; margin: 0 auto 28px; padding: 12px 16px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; border: 1px solid var(--reader-line); border-radius: 10px; background: var(--reader-rail); font: 13px/1.6 var(--reader-ui); color: var(--reader-muted); }
+.book-reader .reader-resume a { color: var(--reader-ink); text-decoration: none; }
+.book-reader .reader-resume .reader-resume-title { flex: 1; min-width: 0; font-weight: 600; }
+.book-reader .reader-resume .reader-resume-go { display: inline-flex; align-items: center; gap: 4px; color: var(--reader-accent); font-weight: 600; }
+.book-reader .reader-resume .reader-resume-go svg { width: 14px; height: 14px; }
+.chapter-guide[data-kind="chapter-map"] .guide-kind, .chapter-guide[data-kind="chapter-story"] .guide-kind { color: var(--reader-accent); font-weight: 600; }

@@ -4,7 +4,7 @@ const key = Symbol('aposd-reader')
 const storageKey = 'aposd-reader-preferences-v1'
 
 export function createReaderState() {
-  const preferences = reactive({ size: 19, theme: 'light', code: 'original', figures: 'svg' })
+  const preferences = reactive({ size: 19, theme: 'light', code: 'original', figures: 'svg', lastRoute: '' })
   let started = false
   const apply = () => {
     document.documentElement.dataset.readerTheme = preferences.theme
@@ -21,6 +21,7 @@ export function createReaderState() {
       if (['original', 'python'].includes(saved.code)) preferences.code = saved.code
       if (['original', 'svg'].includes(saved.figures)) preferences.figures = saved.figures
       if (Number.isFinite(saved.size)) preferences.size = Math.max(16, Math.min(22, Math.round(saved.size)))
+      if (typeof saved.lastRoute === 'string' && saved.lastRoute.startsWith('/')) preferences.lastRoute = saved.lastRoute
     } catch {}
     apply()
     watch(preferences, apply, { flush: 'post' })

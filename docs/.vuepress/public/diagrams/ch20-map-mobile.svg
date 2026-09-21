@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 768" role="img" aria-labelledby="ch20m-title ch20m-desc">
+  <title id="ch20m-title">追求高性能，设计还能保持整洁吗？</title>
+  <desc id="ch20m-desc">本章概览。追求高性能，设计还能保持整洁吗？ 本章的主要部分：速度：常见操作运行得多快；整洁：代码多容易读懂；先测量：找出耗时的少数位置；关键路径：常见情况的最少代码。一句话：可以兼得：平时选自然高效的简单设计；确实太慢时先测量，再围绕关键路径重新设计，让它尽可能简单</desc>
+  <rect width="420" height="768" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <defs><marker id="ch20m-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)"/></marker></defs>
+    <text x="22.0" y="44.0" font-size="23" font-weight="600">追求高性能，设计还能保持整洁吗？</text>
+    <text x="22.0" y="82.0" font-size="16" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">两个变化的方向</text>
+    <rect x="22.0" y="98.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <circle cx="50.0" cy="124.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(42.0,116.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></g>
+    <text x="74.0" y="129.0" font-size="18" font-weight="600">速度</text>
+    <text x="74.0" y="154.0" font-size="15" fill="var(--diagram-muted,#5c645d)">常见操作运行得多快</text>
+    <rect x="22.0" y="174.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <circle cx="50.0" cy="200.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(42.0,192.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></g>
+    <text x="74.0" y="205.0" font-size="18" font-weight="600">整洁</text>
+    <text x="74.0" y="230.0" font-size="15" fill="var(--diagram-muted,#5c645d)">代码多容易读懂</text>
+    <text x="22.0" y="264.0" font-size="16" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">从旧 Buffer 代码到整洁又快的新代码</text>
+    <rect x="22.0" y="280.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <circle cx="50.0" cy="306.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(42.0,298.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></g>
+    <text x="74.0" y="311.0" font-size="18" font-weight="600">旧 Buffer 代码</text>
+    <text x="74.0" y="336.0" font-size="15" fill="var(--diagram-muted,#5c645d)">三层浅方法，六次检查</text>
+    <path d="M210.0 348.0 L210.0 364.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch20m-arrow)"/>
+    <rect x="22.0" y="372.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <circle cx="50.0" cy="398.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(42.0,390.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></g>
+    <text x="74.0" y="403.0" font-size="18" font-weight="600">整洁又快的新代码</text>
+    <text x="74.0" y="428.0" font-size="15" fill="var(--diagram-muted,#5c645d)">新 Buffer 代码：一个方法，一次检查，快一</text>
+    <text x="74.0" y="450.0" font-size="15" fill="var(--diagram-muted,#5c645d)">倍，代码少两成</text>
+    <rect x="22.0" y="470.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <circle cx="50.0" cy="496.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(42.0,488.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></g>
+    <text x="74.0" y="501.0" font-size="18" font-weight="600">先测量</text>
+    <text x="74.0" y="526.0" font-size="15" fill="var(--diagram-muted,#5c645d)">找出耗时的少数位置</text>
+    <rect x="22.0" y="546.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <circle cx="50.0" cy="572.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(42.0,564.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></g>
+    <text x="74.0" y="577.0" font-size="18" font-weight="600">关键路径</text>
+    <text x="74.0" y="602.0" font-size="15" fill="var(--diagram-muted,#5c645d)">常见情况的最少代码</text>
+    <rect x="22.0" y="630.0" width="376.0" height="116.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="36.0" y="651.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句话</text>
+    <text x="36.0" y="677.0" font-size="17" font-weight="600">可以兼得：平时选自然高效的简单设计；确实</text>
+    <text x="36.0" y="703.0" font-size="17" font-weight="600">太慢时先测量，再围绕关键路径重新设计，让</text>
+    <text x="36.0" y="729.0" font-size="17" font-weight="600">它尽可能简单</text>
+  </g>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 1063" role="img" aria-labelledby="ch20-storym-title ch20-storym-desc">
+  <title id="ch20-storym-title">从又慢又复杂的 Buffer 代码，到快一倍且少两成代码</title>
+  <desc id="ch20-storym-desc">本章回顾。从又慢又复杂的 Buffer 代码，到快一倍且少两成代码。起点：平时开发时，该花多少心思在性能上？。逐条语句优化会拖慢开发；完全不管，系统可能慢 5 到 10 倍。作者的做法：了解哪些操作开销大，选自然高效又简单的方案，不需要有序就用哈希表，它比有序映射快得多。；问题：系统还是太慢？先测量，别凭直觉改。程序员对性能的直觉并不可靠，经验丰富的人也一样。先测量找出少数真正耗时的位置，同时建立基线；修改后再测一次，测不出差异就撤销修改，除非它让系统更简单。；做法：围绕关键路径设计：常见情况只做一次检查。先找根本性的改进，例如加缓存或换算法。找不到时，设想只为常见情况写一个方法，只含必须执行的最少代码；再找整洁的设计尽量接近它，开头一次检查排除所有特殊情况。；例子：Buffer 重构：一个方法、一次检查，快一倍，代码少 20%。旧的 alloc 经过三层浅方法，检查 6 个条件。新代码用一个变量 availableAppendBytes 覆盖三种特殊情况，只判断一次。追加 1 字节从 8.8 纳秒降到 4.75 纳秒，代码少了 20%。。这一章最想强调的：整洁的设计与高性能可以兼得：复杂的代码往往慢，因为它做了不必要或重复的工作 围绕关键路径重新设计是最后手段，不应经常采用；能加缓存或换算法这类根本性改进时，优先用它</desc>
+  <rect width="420" height="1063" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <text x="22.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顾</text>
+    <path d="M40 168 V 655" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2"/>
+    <text x="22.0" y="62.0" font-size="21" font-weight="600">从又慢又复杂的 Buffer 代码，到快一倍</text>
+    <text x="22.0" y="90.0" font-size="21" font-weight="600">且少两成代码</text>
+    <circle cx="40.0" cy="146.0" r="18" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(31.0,137.0) scale(0.750)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></g>
+    <text x="76.0" y="134.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起点</text>
+    <text x="76.0" y="158.0" font-size="18" font-weight="600">平时开发时，该花多少心思在性能上？</text>
+    <text x="76.0" y="184.0" font-size="15">逐条语句优化会拖慢开发；完全不管，系统可能</text>
+    <text x="76.0" y="207.0" font-size="15">慢 5 到 10 倍。作者的做法：了解哪些操作开销</text>
+    <text x="76.0" y="230.0" font-size="15">大，选自然高效又简单的方案，不需要有序就用</text>
+    <text x="76.0" y="253.0" font-size="15">哈希表，它比有序映射快得多。</text>
+    <circle cx="40.0" cy="315.0" r="18" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2"/><g transform="translate(31.0,306.0) scale(0.750)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></g>
+    <text x="76.0" y="303.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">问题</text>
+    <text x="76.0" y="327.0" font-size="18" font-weight="600">系统还是太慢？先测量，别凭直觉改</text>
+    <text x="76.0" y="353.0" font-size="15">程序员对性能的直觉并不可靠，经验丰富的人也</text>
+    <text x="76.0" y="376.0" font-size="15">一样。先测量找出少数真正耗时的位置，同时建</text>
+    <text x="76.0" y="399.0" font-size="15">立基线；修改后再测一次，测不出差异就撤销修</text>
+    <text x="76.0" y="422.0" font-size="15">改，除非它让系统更简单。</text>
+    <circle cx="40.0" cy="484.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,475.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></g>
+    <text x="76.0" y="472.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">做法</text>
+    <text x="76.0" y="496.0" font-size="18" font-weight="600">围绕关键路径设计：常见情况只做一次检</text>
+    <text x="76.0" y="520.0" font-size="18" font-weight="600">查</text>
+    <text x="76.0" y="546.0" font-size="15">先找根本性的改进，例如加缓存或换算法。找不</text>
+    <text x="76.0" y="569.0" font-size="15">到时，设想只为常见情况写一个方法，只含必须</text>
+    <text x="76.0" y="592.0" font-size="15">执行的最少代码；再找整洁的设计尽量接近它，</text>
+    <text x="76.0" y="615.0" font-size="15">开头一次检查排除所有特殊情况。</text>
+    <circle cx="40.0" cy="677.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,668.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></g>
+    <text x="76.0" y="665.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">例子</text>
+    <text x="76.0" y="689.0" font-size="18" font-weight="600">Buffer 重构：一个方法、一次检查，快</text>
+    <text x="76.0" y="713.0" font-size="18" font-weight="600">一倍，代码少 20%</text>
+    <text x="76.0" y="739.0" font-size="15">旧的 alloc 经过三层浅方法，检查 6 个条件。新</text>
+    <text x="76.0" y="762.0" font-size="15">代码用一个变量 availableAppendBytes 覆盖三</text>
+    <text x="76.0" y="785.0" font-size="15">种特殊情况，只判断一次。追加 1 字节从 8.8 纳</text>
+    <text x="76.0" y="808.0" font-size="15">秒降到 4.75 纳秒，代码少了 20%。</text>
+    <rect x="22.0" y="846.0" width="376.0" height="189.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <g transform="translate(40.0,866.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g>
+    <text x="78.0" y="874.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">这一章最想强调的</text>
+    <text x="78.0" y="900.0" font-size="18" font-weight="600">整洁的设计与高性能可以兼得：复杂的</text>
+    <text x="78.0" y="924.0" font-size="18" font-weight="600">代码往往慢，因为它做了不必要或重复</text>
+    <text x="78.0" y="948.0" font-size="18" font-weight="600">的工作</text>
+    <text x="78.0" y="972.0" font-size="14" fill="var(--diagram-muted,#5c645d)">围绕关键路径重新设计是最后手段，不应经常采</text>
+    <text x="78.0" y="993.0" font-size="14" fill="var(--diagram-muted,#5c645d)">用；能加缓存或换算法这类根本性改进时，优先</text>
+    <text x="78.0" y="1014.0" font-size="14" fill="var(--diagram-muted,#5c645d)">用它</text>
+  </g>
+</svg>

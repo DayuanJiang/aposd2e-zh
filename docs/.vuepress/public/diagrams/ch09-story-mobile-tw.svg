@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 1233" role="img" aria-labelledby="ch09-storym-title ch09-storym-desc">
+  <title id="ch09-storym-title">從“越小越簡單”的直覺，到按複雜性決定組合還是分開</title>
+  <desc id="ch09-storym-desc">本章回顧。從“越小越簡單”的直覺，到按複雜性決定組合還是分開。起點：把系統切成很多小元件，每個看起來都更簡單，但細分本身有代價。元件多了更難掌握和查詢，介面跟著變多；可能要額外程式碼管理多個物件；原本挨著的程式碼被分到不同類甚至不同檔案，看不到彼此的依賴；還可能出現重複。；判斷：四個相關的跡象：共享資訊、一起使用、概念重疊、不看一段就讀不懂另一段。讀取和解析 HTTP 請求都得懂請求格式，合併後代碼更短；檔案流預設帶緩衝，多數使用者不必知道它。“一起使用”要雙向成立：塊快取總要用雜湊表，雜湊表的用途卻多得多，應分開。；反例：兩次判斷失誤：游標和所選區域合成一個物件，日誌語句拆成單獨的類。游標和所選區域合成一個物件後，高層程式碼仍要分別操作，實作還多了一個布林值，分開更簡單。每條日誌只在一處呼叫，卻被拆成單行方法加大段註解，讀者要兩頭來回跳。；分歧：作者與《程式碼整潔之道》的分歧：方法該多短？。《程式碼整潔之道》主張函式應該非常短，十行都太長。作者同意短函式通常更易懂，但縮到幾十行後繼續縮，改善有限；函式太小會失去獨立性，成為必須一起讀的連體函式。；結論：拆或合，都以複雜性為依據。選擇能提供最好的資訊隱藏、最少的依賴和最深介面的結構。方法先做到夠深，再儘量縮短到易讀，不要為了長度犧牲深度。。這一章最想強調的：拆分或組合的依據是複雜性：最好的資訊隱藏、最少的依賴、最深的介面 作者不同意僅憑長度拆函式：先讓方法足夠深，再縮短到易於閱讀；重複程式碼和連體方法都是危險訊號</desc>
+  <rect width="420" height="1233" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <text x="22.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顧</text>
+    <path d="M40 168 V 896" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" />
+    <text x="22.0" y="62.0" font-size="21" font-weight="600">從“越小越簡單”的直覺，到按複雜性</text>
+    <text x="22.0" y="90.0" font-size="21" font-weight="600">決定組合還是分開</text>
+    <circle cx="40.0" cy="146.0" r="18" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(31.0,137.0) scale(0.750)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z" /><path d="m7 16.5-4.74-2.85" /><path d="m7 16.5 5-3" /><path d="M7 16.5v5.17" /><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z" /><path d="m17 16.5-5-3" /><path d="m17 16.5 4.74-2.85" /><path d="M17 16.5v5.17" /><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z" /><path d="M12 8 7.26 5.15" /><path d="m12 8 4.74-2.85" /><path d="M12 13.5V8" /></g>
+    <text x="76.0" y="134.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起點</text>
+    <text x="76.0" y="158.0" font-size="18" font-weight="600">把系統切成很多小元件，每個看起來都更</text>
+    <text x="76.0" y="182.0" font-size="18" font-weight="600">簡單，但細分本身有代價</text>
+    <text x="76.0" y="208.0" font-size="15">元件多了更難掌握和查詢，介面跟著變多；可能</text>
+    <text x="76.0" y="231.0" font-size="15">要額外程式碼管理多個物件；原本挨著的程式碼被分</text>
+    <text x="76.0" y="254.0" font-size="15">到不同類甚至不同檔案，看不到彼此的依賴；還</text>
+    <text x="76.0" y="277.0" font-size="15">可能出現重複。</text>
+    <circle cx="40.0" cy="339.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(31.0,330.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></g>
+    <text x="76.0" y="327.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">判斷</text>
+    <text x="76.0" y="351.0" font-size="18" font-weight="600">四個相關的跡象：共享資訊、一起使用、</text>
+    <text x="76.0" y="375.0" font-size="18" font-weight="600">概念重疊、不看一段就讀不懂另一段</text>
+    <text x="76.0" y="401.0" font-size="15">讀取和解析 HTTP 請求都得懂請求格式，合併後</text>
+    <text x="76.0" y="424.0" font-size="15">程式碼更短；檔案流預設帶緩衝，多數使用者不必知</text>
+    <text x="76.0" y="447.0" font-size="15">道它。“一起使用”要雙向成立：塊快取總要用</text>
+    <text x="76.0" y="470.0" font-size="15">雜湊表，雜湊表的用途卻多得多，應分開。</text>
+    <circle cx="40.0" cy="532.0" r="18" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" stroke-width="2" /><g transform="translate(31.0,523.0) scale(0.750)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></g>
+    <text x="76.0" y="520.0" font-size="12" font-weight="600" fill="var(--diagram-danger,#a03946)">反例</text>
+    <text x="76.0" y="544.0" font-size="18" font-weight="600">兩次判斷失誤：游標和所選區域合成一個</text>
+    <text x="76.0" y="568.0" font-size="18" font-weight="600">物件，日誌語句拆成單獨的類</text>
+    <text x="76.0" y="594.0" font-size="15">游標和所選區域合成一個物件後，高層程式碼仍要</text>
+    <text x="76.0" y="617.0" font-size="15">分別操作，實作還多了一個布林值，分開更簡單。</text>
+    <text x="76.0" y="640.0" font-size="15">每條日誌只在一處呼叫，卻被拆成單行方法加大</text>
+    <text x="76.0" y="663.0" font-size="15">段註解，讀者要兩頭來回跳。</text>
+    <circle cx="40.0" cy="725.0" r="18" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2" /><g transform="translate(31.0,716.0) scale(0.750)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14" /><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /></g>
+    <text x="76.0" y="713.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">分歧</text>
+    <text x="76.0" y="737.0" font-size="18" font-weight="600">作者與《程式碼整潔之道》的分歧：方法該</text>
+    <text x="76.0" y="761.0" font-size="18" font-weight="600">多短？</text>
+    <text x="76.0" y="787.0" font-size="15">《程式碼整潔之道》主張函式應該非常短，十行都</text>
+    <text x="76.0" y="810.0" font-size="15">太長。作者同意短函式通常更易懂，但縮到幾十</text>
+    <text x="76.0" y="833.0" font-size="15">行後繼續縮，改善有限；函式太小會失去獨立性，</text>
+    <text x="76.0" y="856.0" font-size="15">成為必須一起讀的連體函式。</text>
+    <circle cx="40.0" cy="918.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(31.0,909.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="M7 21h10" /><path d="M12 3v18" /><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" /></g>
+    <text x="76.0" y="906.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">結論</text>
+    <text x="76.0" y="930.0" font-size="18" font-weight="600">拆或合，都以複雜性為依據</text>
+    <text x="76.0" y="956.0" font-size="15">選擇能提供最好的資訊隱藏、最少的依賴和最深</text>
+    <text x="76.0" y="979.0" font-size="15">介面的結構。方法先做到夠深，再儘量縮短到易</text>
+    <text x="76.0" y="1002.0" font-size="15">讀，不要為了長度犧牲深度。</text>
+    <rect x="22.0" y="1040.0" width="376.0" height="165.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <g transform="translate(40.0,1060.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
+    <text x="78.0" y="1068.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">這一章最想強調的</text>
+    <text x="78.0" y="1094.0" font-size="18" font-weight="600">拆分或組合的依據是複雜性：最好的信</text>
+    <text x="78.0" y="1118.0" font-size="18" font-weight="600">息隱藏、最少的依賴、最深的介面</text>
+    <text x="78.0" y="1142.0" font-size="14" fill="var(--diagram-muted,#5c645d)">作者不同意僅憑長度拆函式：先讓方法足夠深，</text>
+    <text x="78.0" y="1163.0" font-size="14" fill="var(--diagram-muted,#5c645d)">再縮短到易於閱讀；重複程式碼和連體方法都是危</text>
+    <text x="78.0" y="1184.0" font-size="14" fill="var(--diagram-muted,#5c645d)">險訊號</text>
+  </g>
+</svg>

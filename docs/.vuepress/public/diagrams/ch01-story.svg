@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 719" role="img" aria-labelledby="ch01-story-title ch01-story-desc">
+  <title id="ch01-story-title">写软件不受物理定律约束，真正的限制是我们能理解多复杂的系统</title>
+  <desc id="ch01-story-desc">本章回顾。写软件不受物理定律约束，真正的限制是我们能理解多复杂的系统。起点：写软件几乎不受现实条件约束。写软件不像造桥，不受物理定律限制，脑中构想出的系统很可能就能实现。于是最大的限制变成了我们理解自己所造系统的能力。；问题：复杂性日积月累，拖慢开发、带来缺陷。程序不断演进、功能不断增加，组件之间产生微妙的依赖。复杂性减慢开发速度并导致缺陷，缺陷又进一步拖慢开发。好工具有帮助，但仅靠工具终究有限。；转折：两条路：消除复杂性，或封装复杂性。第一条路是消除复杂性，例如消除特殊情况、一致地使用标识符。第二条路是模块化设计：把系统分成相对独立的模块，开发一个模块时不必同时面对全部复杂性。；做法：增量开发意味着持续重新设计。瀑布式把设计集中在开始，问题要到实现推进很久后才显现，只能修修补补。增量开发在系统还小时就修正设计问题，所以要始终考虑设计，并在计划里为改进留出时间。。这一章最想强调的：降低复杂性是软件设计最重要的要素，开发人员应始终考虑复杂性 这些原则用来比较备选方案，每条都有例外，用过头会适得其反，要把握分寸</desc>
+  <rect width="960" height="719" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <text x="32.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顾</text>
+    <path d="M74 144 V 469" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2"/>
+    <text x="32.0" y="62.0" font-size="26" font-weight="600">写软件不受物理定律约束，真正的限制是我们能理解多复杂的系统</text>
+    <circle cx="74.0" cy="122.0" r="22" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(63.0,111.0) scale(0.917)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></g>
+    <text x="118.0" y="110.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起点</text>
+    <text x="118.0" y="134.0" font-size="19" font-weight="600">写软件几乎不受现实条件约束</text>
+    <text x="118.0" y="160.0" font-size="15">写软件不像造桥，不受物理定律限制，脑中构想出的系统很可能就能实现。于是最大的限制变成了我们理解自己所造系统的</text>
+    <text x="118.0" y="183.0" font-size="15">能力。</text>
+    <circle cx="74.0" cy="245.0" r="22" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2"/><g transform="translate(63.0,234.0) scale(0.917)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></g>
+    <text x="118.0" y="233.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">问题</text>
+    <text x="118.0" y="257.0" font-size="19" font-weight="600">复杂性日积月累，拖慢开发、带来缺陷</text>
+    <text x="118.0" y="283.0" font-size="15">程序不断演进、功能不断增加，组件之间产生微妙的依赖。复杂性减慢开发速度并导致缺陷，缺陷又进一步拖慢开发。好工</text>
+    <text x="118.0" y="306.0" font-size="15">具有帮助，但仅靠工具终究有限。</text>
+    <circle cx="74.0" cy="368.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(63.0,357.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"/><path d="m7 16.5-4.74-2.85"/><path d="m7 16.5 5-3"/><path d="M7 16.5v5.17"/><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"/><path d="m17 16.5-5-3"/><path d="m17 16.5 4.74-2.85"/><path d="M17 16.5v5.17"/><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"/><path d="M12 8 7.26 5.15"/><path d="m12 8 4.74-2.85"/><path d="M12 13.5V8"/></g>
+    <text x="118.0" y="356.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">转折</text>
+    <text x="118.0" y="380.0" font-size="19" font-weight="600">两条路：消除复杂性，或封装复杂性</text>
+    <text x="118.0" y="406.0" font-size="15">第一条路是消除复杂性，例如消除特殊情况、一致地使用标识符。第二条路是模块化设计：把系统分成相对独立的模块，开</text>
+    <text x="118.0" y="429.0" font-size="15">发一个模块时不必同时面对全部复杂性。</text>
+    <circle cx="74.0" cy="491.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(63.0,480.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></g>
+    <text x="118.0" y="479.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">做法</text>
+    <text x="118.0" y="503.0" font-size="19" font-weight="600">增量开发意味着持续重新设计</text>
+    <text x="118.0" y="529.0" font-size="15">瀑布式把设计集中在开始，问题要到实现推进很久后才显现，只能修修补补。增量开发在系统还小时就修正设计问题，所以</text>
+    <text x="118.0" y="552.0" font-size="15">要始终考虑设计，并在计划里为改进留出时间。</text>
+    <rect x="32.0" y="590.0" width="896.0" height="101.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <g transform="translate(50.0,610.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g>
+    <text x="92.0" y="618.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">这一章最想强调的</text>
+    <text x="92.0" y="644.0" font-size="20" font-weight="600">降低复杂性是软件设计最重要的要素，开发人员应始终考虑复杂性</text>
+    <text x="92.0" y="670.0" font-size="15" fill="var(--diagram-muted,#5c645d)">这些原则用来比较备选方案，每条都有例外，用过头会适得其反，要把握分寸</text>
+  </g>
+</svg>

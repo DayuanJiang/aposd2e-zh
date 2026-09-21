@@ -4,21 +4,54 @@ on:
   push:
     branches:
       - main
+  pull_request:
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  build-and-deploy:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install and Build   
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: astral-sh/setup-uv@v5
+      - name: Install dependencies
+        run: npm ci
+      - name: Traditional Chinese matches the simplified source
+        run: uv run --with opencc==1.4.1 python3 bin/zh-tw.py --check
+      - name: Generated files are up to date
         run: |
-          yarn install
-          yarn run build
-      - name: Deploy  
+          python3 bin/chapter_figures.py --check
+          uv run --with opencc==1.4.1 python3 tools/localize.py --check
+          python3 bin/glossary.py --check
+      - name: Reader content contracts
+        run: |
+          npm test
+          uv run --with opencc==1.4.1 python3 -m unittest discover -s tools -p 'test_*.py'
+          python3 tools/verify.py --complete
+      - name: Build
+        run: npm run build
+
+  deploy:
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install and build
+        run: |
+          npm ci
+          npm run build
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
           branch: gh-pages

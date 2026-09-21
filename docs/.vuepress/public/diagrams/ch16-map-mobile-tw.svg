@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 865" role="img" aria-labelledby="ch16m-title ch16m-desc">
+  <title id="ch16m-title">修改現有程式碼時，怎樣不讓複雜性積累？</title>
+  <desc id="ch16m-desc">本章概覽。修改現有程式碼時，怎樣不讓複雜性積累？ 本章的主要部分：重新審視設計：問自己：面對這次變更，現有設計是否仍然最佳？“最少改哪些程式碼”是戰術式思考；重構再修改：設計不再最佳就重構，讓結構如同一開始就考慮了這次變更；每次修改都找機會改進一點設計；同步更新註解：註解放在所描述程式碼附近，每個決策只記錄一次，變更原因寫進程式碼，後人未必會去查提交日誌；提交前檢查：提交前花幾分鐘看一遍全部變更，確認註解準確反映每項改動，順帶發現遺留的除錯程式碼。一句話：每次修改都保持戰略式思考，讓系統結構如同一開始就考慮了這次變更，並同步維護附近的註解</desc>
+  <rect width="420" height="865" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <defs><marker id="ch16m-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)" /></marker></defs>
+    <text x="22.0" y="44.0" font-size="23" font-weight="600">修改現有程式碼時，怎樣不讓複雜性積</text>
+    <text x="22.0" y="75.0" font-size="23" font-weight="600">累？</text>
+    <text x="22.0" y="111.0" font-size="13" fill="var(--diagram-muted,#5c645d)">系統靠一次次修改演進，演進中的變更對成熟系統設計的影響比</text>
+    <text x="22.0" y="131.0" font-size="13" fill="var(--diagram-muted,#5c645d)">最初構想更大，所以每次修改都要經過這幾步</text>
+    <rect x="22.0" y="149.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <circle cx="50.0" cy="175.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,167.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" /><circle cx="12" cy="12" r="10" /></g>
+    <text x="74.0" y="180.0" font-size="18" font-weight="600">重新審視設計</text>
+    <text x="74.0" y="205.0" font-size="15" fill="var(--diagram-muted,#5c645d)">問自己：面對這次變更，現有設計是否仍然最</text>
+    <text x="74.0" y="227.0" font-size="15" fill="var(--diagram-muted,#5c645d)">佳？“最少改哪些程式碼”是戰術式思考</text>
+    <path d="M210.0 239.0 L210.0 255.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch16m-arrow)" />
+    <rect x="22.0" y="263.0" width="376.0" height="110.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <circle cx="50.0" cy="289.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,281.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></g>
+    <text x="74.0" y="294.0" font-size="18" font-weight="600">重構再修改</text>
+    <text x="74.0" y="319.0" font-size="15" fill="var(--diagram-muted,#5c645d)">設計不再最佳就重構，讓結構如同一開始就考</text>
+    <text x="74.0" y="341.0" font-size="15" fill="var(--diagram-muted,#5c645d)">慮了這次變更；每次修改都找機會改進一點設</text>
+    <text x="74.0" y="363.0" font-size="15" fill="var(--diagram-muted,#5c645d)">計</text>
+    <path d="M210.0 375.0 L210.0 391.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch16m-arrow)" />
+    <rect x="22.0" y="399.0" width="376.0" height="110.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <circle cx="50.0" cy="425.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,417.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9" /><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z" /></g>
+    <text x="74.0" y="430.0" font-size="18" font-weight="600">同步更新註解</text>
+    <text x="74.0" y="455.0" font-size="15" fill="var(--diagram-muted,#5c645d)">註解放在所描述程式碼附近，每個決策只記錄一</text>
+    <text x="74.0" y="477.0" font-size="15" fill="var(--diagram-muted,#5c645d)">次，變更原因寫進程式碼，後人未必會去查提交</text>
+    <text x="74.0" y="499.0" font-size="15" fill="var(--diagram-muted,#5c645d)">日誌</text>
+    <path d="M210.0 511.0 L210.0 527.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch16m-arrow)" />
+    <rect x="22.0" y="535.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <circle cx="50.0" cy="561.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,553.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4" /><path d="m3 7 2 2 4-4" /><path d="M13 6h8" /><path d="M13 12h8" /><path d="M13 18h8" /></g>
+    <text x="74.0" y="566.0" font-size="18" font-weight="600">提交前檢查</text>
+    <text x="74.0" y="591.0" font-size="15" fill="var(--diagram-muted,#5c645d)">提交前花幾分鐘看一遍全部變更，確認註解準</text>
+    <text x="74.0" y="613.0" font-size="15" fill="var(--diagram-muted,#5c645d)">確反映每項改動，順帶發現遺留的除錯程式碼</text>
+    <path d="M210.0 625.0 L210.0 641.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch16m-arrow)" />
+    <text x="22.0" y="661.0" font-size="13" fill="var(--diagram-muted,#5c645d)">然後回到第一步，迴圈往復。投資思維有時會與截止日期衝突，</text>
+    <text x="22.0" y="681.0" font-size="13" fill="var(--diagram-muted,#5c645d)">作者也承認可能只能快速修補，但要問：在當前限制下，我是否</text>
+    <text x="22.0" y="701.0" font-size="13" fill="var(--diagram-muted,#5c645d)">已經做到了最好？</text>
+    <rect x="22.0" y="727.0" width="376.0" height="116.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <text x="36.0" y="748.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
+    <text x="36.0" y="774.0" font-size="17" font-weight="600">每次修改都保持戰略式思考，讓系統結構如同</text>
+    <text x="36.0" y="800.0" font-size="17" font-weight="600">一開始就考慮了這次變更，並同步維護附近的</text>
+    <text x="36.0" y="826.0" font-size="17" font-weight="600">註解</text>
+  </g>
+</svg>

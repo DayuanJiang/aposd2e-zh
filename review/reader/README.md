@@ -162,8 +162,8 @@ Python code. Generated traditional files must not be edited manually.
 Use the pinned Python environment described in `review/translation/README.md`.
 
 ```sh
-node --test review/reader/test_content.mjs
-python -m unittest discover -s review/reader -p 'test_*.py'
+npm test
+python -m unittest discover -s tools -p 'test_*.py'
 python review/reader/localize.py --check
 python review/reader/verify.py --complete --epub-blocks /path/to/original/blocks.json
 python review/translation/audit.py check

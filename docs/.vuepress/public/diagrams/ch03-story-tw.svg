@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 719" role="img" aria-labelledby="ch03-story-title ch03-story-desc">
+  <title id="ch03-story-title">從“先讓它跑起來”到“好設計是今天要做的事”</title>
+  <desc id="ch03-story-desc">本章回顧。從“先讓它跑起來”到“好設計是今天要做的事”。起點：戰術式程式設計：先讓功能跑起來。大多數程式設計師這樣工作。為了更快完成當前任務，加一點複雜性、留一兩處蹩腳實作，似乎都是合理的折衷。但每個任務都這樣，複雜性就迅速累積。；代價：修補引來更多修補，很快一團糟。問題出現後，你告訴自己下個功能比重構更重要，於是快速修補，補丁又帶來新問題。戰術龍捲風產出最快，管理層視為英雄，留下的混亂卻要別人清理。；轉折：能工作的程式碼不夠，目標是出色的設計。大多數程式碼都是在擴充現有程式碼時寫的，最重要的工作是讓未來的擴充更容易。主動投資：為新類多比較幾種設計，寫好文件。被動投資：發現設計問題就真正修復。；做法：持續小額投資，幾個月後收回成本。一次設計整個系統是瀑布式，行不通。持續投入起初慢一點，幾個月後開發速度反超，省下的時間足夠支援後續投資。初創公司也一樣，戰術式未必能讓首個產品更早釋出。。這一章最想強調的：能工作的程式碼是不夠的；把好設計當作今天要做的事，持續做小額投資 一旦開始把清理推遲到忙完這陣，就很容易一直拖下去；投資比例和回本時間是作者的估計，沒有資料</desc>
+  <rect width="960" height="719" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <text x="32.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顧</text>
+    <path d="M74 144 V 469" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" />
+    <text x="32.0" y="62.0" font-size="26" font-weight="600">從“先讓它跑起來”到“好設計是今天要做的事”</text>
+    <circle cx="74.0" cy="122.0" r="22" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(63.0,111.0) scale(0.917)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" /></g>
+    <text x="118.0" y="110.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起點</text>
+    <text x="118.0" y="134.0" font-size="19" font-weight="600">戰術式程式設計：先讓功能跑起來</text>
+    <text x="118.0" y="160.0" font-size="15">大多數程式設計師這樣工作。為了更快完成當前任務，加一點複雜性、留一兩處蹩腳實作，似乎都是合理的折衷。但每個任務都</text>
+    <text x="118.0" y="183.0" font-size="15">這樣，複雜性就迅速累積。</text>
+    <circle cx="74.0" cy="245.0" r="22" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" stroke-width="2" /><g transform="translate(63.0,234.0) scale(0.917)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18v-6a5 5 0 1 1 10 0v6" /><path d="M5 21a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z" /><path d="M21 12h1" /><path d="M18.5 4.5 18 5" /><path d="M2 12h1" /><path d="M12 2v1" /><path d="m4.929 4.929.707.707" /><path d="M12 12v6" /></g>
+    <text x="118.0" y="233.0" font-size="12" font-weight="600" fill="var(--diagram-danger,#a03946)">代價</text>
+    <text x="118.0" y="257.0" font-size="19" font-weight="600">修補引來更多修補，很快一團糟</text>
+    <text x="118.0" y="283.0" font-size="15">問題出現後，你告訴自己下個功能比重構更重要，於是快速修補，補丁又帶來新問題。戰術龍捲風產出最快，管理層視為英</text>
+    <text x="118.0" y="306.0" font-size="15">雄，留下的混亂卻要別人清理。</text>
+    <circle cx="74.0" cy="368.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,357.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" /><circle cx="12" cy="12" r="10" /></g>
+    <text x="118.0" y="356.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">轉折</text>
+    <text x="118.0" y="380.0" font-size="19" font-weight="600">能工作的程式碼不夠，目標是出色的設計</text>
+    <text x="118.0" y="406.0" font-size="15">大多數程式碼都是在擴充現有程式碼時寫的，最重要的工作是讓未來的擴充更容易。主動投資：為新類多比較幾種設計，寫好文</text>
+    <text x="118.0" y="429.0" font-size="15">檔。被動投資：發現設計問題就真正修復。</text>
+    <circle cx="74.0" cy="491.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,480.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></g>
+    <text x="118.0" y="479.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">做法</text>
+    <text x="118.0" y="503.0" font-size="19" font-weight="600">持續小額投資，幾個月後收回成本</text>
+    <text x="118.0" y="529.0" font-size="15">一次設計整個系統是瀑布式，行不通。持續投入起初慢一點，幾個月後開發速度反超，省下的時間足夠支援後續投資。初創</text>
+    <text x="118.0" y="552.0" font-size="15">公司也一樣，戰術式未必能讓首個產品更早釋出。</text>
+    <rect x="32.0" y="590.0" width="896.0" height="101.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <g transform="translate(50.0,610.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
+    <text x="92.0" y="618.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">這一章最想強調的</text>
+    <text x="92.0" y="644.0" font-size="20" font-weight="600">能工作的程式碼是不夠的；把好設計當作今天要做的事，持續做小額投資</text>
+    <text x="92.0" y="670.0" font-size="15" fill="var(--diagram-muted,#5c645d)">一旦開始把清理推遲到忙完這陣，就很容易一直拖下去；投資比例和回本時間是作者的估計，沒有資料</text>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 484" role="img" aria-labelledby="ch07-title ch07-desc">
+  <title id="ch07-title">相鄰兩層的介面幾乎一樣，有什麼問題？</title>
+  <desc id="ch07-desc">本章概覽。相鄰兩層的介面幾乎一樣，有什麼問題？ 本章的主要部分：只是轉手呼叫：透傳方法、層層包裝的裝飾器、照搬內部表示的介面、穿過多層的透傳變數；每層不同的抽象：合併類或重新分配功能、把常用功能加進基礎類、介面封裝內部細節、上下文物件。一句話：每一層都要提供與上下層不同的抽象；只是轉手呼叫下一層的方法、類或參數，增加了複雜性卻沒增加功能</desc>
+  <rect width="960" height="484" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <defs><marker id="ch07-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)" /></marker></defs>
+    <text x="32.0" y="52.0" font-size="30" font-weight="600">相鄰兩層的介面幾乎一樣，有什麼問題？</text>
+    <text x="32.0" y="94.0" font-size="15" fill="var(--diagram-muted,#5c645d)">檔案系統從檔案到塊快取到裝置驅動，每層抽象都不同；相鄰兩層抽象相似，是類劃分有問題的危險訊號</text>
+    <rect x="32.0" y="114.0" width="418.0" height="192.0" rx="12" fill="var(--diagram-danger-soft,#ead9dc)" />
+    <g transform="translate(52.0,132.0) scale(1.083)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3" /><line x1="3" x2="9" y1="12" y2="12" /><line x1="15" x2="21" y1="12" y2="12" /></g>
+    <text x="88.0" y="152.0" font-size="20" font-weight="600">相鄰兩層抽象相似（危險訊號）</text>
+    <g transform="translate(52.0,176.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></g>
+    <text x="76.0" y="189.0" font-size="15">TextDocument 裡 13 個方法只是轉調 TextArea</text>
+    <g transform="translate(52.0,206.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></g>
+    <text x="76.0" y="219.0" font-size="15">為了加緩衝，單獨包一層 BufferedInputStream</text>
+    <g transform="translate(52.0,236.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></g>
+    <text x="76.0" y="249.0" font-size="15">文字按行儲存，介面也只給整行讀寫</text>
+    <g transform="translate(52.0,266.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></g>
+    <text x="76.0" y="279.0" font-size="15">證書參數穿過 main 到 m3 之間的每個方法</text>
+    <rect x="510.0" y="114.0" width="418.0" height="192.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <g transform="translate(530.0,132.0) scale(1.083)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /></g>
+    <text x="566.0" y="152.0" font-size="20" font-weight="600">每一層提供不同的抽象</text>
+    <g transform="translate(530.0,176.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></g>
+    <text x="554.0" y="189.0" font-size="15">讓呼叫者直接呼叫低層類、重新分配功能或合併類</text>
+    <g transform="translate(530.0,206.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></g>
+    <text x="554.0" y="219.0" font-size="15">緩衝幾乎人人要用，直接加進基礎類</text>
+    <g transform="translate(530.0,236.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></g>
+    <text x="554.0" y="249.0" font-size="15">介面字元導向，拆行拼行的細節封裝在類裡</text>
+    <g transform="translate(530.0,266.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></g>
+    <text x="554.0" y="279.0" font-size="15">全域狀態放進上下文物件，只經建構函式傳遞</text>
+    <path d="M462.0 210.0 L498.0 210.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch07-arrow)" />
+    <text x="480.0" y="196.0" font-size="13" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">重構</text>
+    <text x="32.0" y="330.0" font-size="14" fill="var(--diagram-muted,#5c645d)">簽名相同不一定是壞事：分發器按 URL 挑選處理方法，同一介面的多種磁碟驅動程式，都提供了新功能</text>
+    <rect x="32.0" y="358.0" width="896.0" height="98.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <text x="50.0" y="379.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
+    <text x="50.0" y="409.0" font-size="21" font-weight="600">每一層都要提供與上下層不同的抽象；只是轉手呼叫下一層的方法、類或參數，增加了複雜</text>
+    <text x="50.0" y="439.0" font-size="21" font-weight="600">性卻沒增加功能</text>
+  </g>
+</svg>

@@ -4,7 +4,7 @@ import { RouterLink, useRoute, useRouter } from 'vue-router'
 import { onContentUpdated, usePageData } from 'vuepress/client'
 import DefaultLayout from '@vuepress/theme-default/layouts/Layout.vue'
 import { useHeaders } from '@theme/useHeaders'
-import { Menu, X, Type, Minus, Plus, Sun, Moon, List, Search, Languages, GitBranch } from '@lucide/vue'
+import { Menu, X, Type, Minus, Plus, Sun, Moon, List, Search, Languages, GitBranch, ArrowRight } from '@lucide/vue'
 import book from '@temp/reader/book'
 import { useReader } from './state'
 import { useReadingAnchor } from './anchor'
@@ -19,6 +19,17 @@ const locale = computed(() => page.value.reader?.locale || '')
 const english = computed(() => locale.value === 'en')
 const text = (zh: string, en: string, tw = zh) => english.value ? en : locale.value === 'zh-tw' ? tw : zh
 const chapters = computed(() => book[locale.value] || book[''])
+const everyChapter = Object.values(book).flat()
+const home = computed(() => chapters.value[0]?.path)
+const resume = computed(() => {
+  const target = preferences.lastRoute
+  if (!target || target === route.path) return undefined
+  return everyChapter.find((chapter) => chapter.path === target)
+})
+watch(() => route.path, (path) => {
+  const current = everyChapter.find((chapter) => chapter.path === path)
+  if (current && current.id !== 'README') preferences.lastRoute = path
+}, { immediate: true })
 const sidebarOpen = ref(false)
 const narrow = ref(false)
 const sidebarHidden = ref(false)
@@ -182,6 +193,13 @@ onBeforeUnmount(() => {
           </div>
           <div class="reader-progress" role="progressbar" :aria-label="text('阅读进度', 'Reading progress', '閱讀進度')" :aria-valuenow="Math.round(progress)" aria-valuemin="0" aria-valuemax="100"><span :style="{ transform: `scaleX(${progress / 100})` }" /></div>
         </header>
+      </template>
+      <template #page-top>
+        <div v-if="route.path === home && resume" class="reader-resume">
+          <span>{{ text('上次读到', 'Last read', '上次讀到') }}</span>
+          <RouterLink class="reader-resume-title" :to="resume.path">{{ resume.title }}</RouterLink>
+          <RouterLink class="reader-resume-go" :to="resume.path">{{ text('继续阅读', 'Continue reading', '繼續閱讀') }}<ArrowRight aria-hidden="true" /></RouterLink>
+        </div>
       </template>
       <template #sidebar>
         <aside id="reader-sidebar" ref="sidebar" class="reader-sidebar" :inert="narrow && !sidebarOpen" :aria-label="text('章节目录', 'Chapters', '章節目錄')">

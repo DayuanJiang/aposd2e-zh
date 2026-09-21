@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 719" role="img" aria-labelledby="ch05-story-title ch05-story-desc">
+  <title id="ch05-story-title">從先讀請求再解析的兩個類，到把 HTTP 的全部知識放進一個類</title>
+  <desc id="ch05-story-desc">本章回顧。從先讀請求再解析的兩個類，到把 HTTP 的全部知識放進一個類。起點：資訊隱藏：每個模組封裝一些設計決策。B 樹怎樣存資料、TCP 怎樣實作、JSON 怎樣解析，這些知識放在實作裡，介面看不到。好處有兩個：介面更簡單，使用者認知負荷更低；這項決策要改時，只動這一個模組。；問題：資訊洩露：同一項知識出現在多個模組。讀檔案和寫檔案兩個類都懂同一種檔案格式，格式一變兩個類都得改，這種後門洩露比介面洩露更隱蔽。常見原因是時間順序分解：按先做什麼、後做什麼來拆類。；例子：HTTP 專案裡學生做對和做淺的地方。先讀請求再解析，拆成兩個類，兩個類都得懂請求結構，合併成一個更好。回傳整個參數對映的方法太淺，應按名字回傳單個參數值。響應版本、日期標頭應由函式庫自動填好。；結論：按完成任務需要的知識來劃分模組。讓類稍大一些常能改善資訊隱藏：相關程式碼放在一起，介面的抽象層級更高。類內部同樣適用：每個私有方法藏一點資訊，實例變數儘量少地方用。。這一章最想強調的：設計模組時，專注於完成每個任務需要哪些知識，讓每個模組封裝其中幾項 隱藏有限度：模組外部確實需要的資訊（例如需要調整的效能參數）必須公開</desc>
+  <rect width="960" height="719" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <text x="32.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顧</text>
+    <path d="M74 144 V 469" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" />
+    <text x="32.0" y="62.0" font-size="26" font-weight="600">從先讀請求再解析的兩個類，到把 HTTP 的全部知識放進一個類</text>
+    <circle cx="74.0" cy="122.0" r="22" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(63.0,111.0) scale(0.917)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></g>
+    <text x="118.0" y="110.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起點</text>
+    <text x="118.0" y="134.0" font-size="19" font-weight="600">資訊隱藏：每個模組封裝一些設計決策</text>
+    <text x="118.0" y="160.0" font-size="15">B 樹怎樣存資料、TCP 怎樣實作、JSON 怎樣解析，這些知識放在實作裡，介面看不到。好處有兩個：介面更簡單，使用者</text>
+    <text x="118.0" y="183.0" font-size="15">認知負荷更低；這項決策要改時，只動這一個模組。</text>
+    <circle cx="74.0" cy="245.0" r="22" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" stroke-width="2" /><g transform="translate(63.0,234.0) scale(0.917)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /><circle cx="12" cy="12" r="3" /></g>
+    <text x="118.0" y="233.0" font-size="12" font-weight="600" fill="var(--diagram-danger,#a03946)">問題</text>
+    <text x="118.0" y="257.0" font-size="19" font-weight="600">資訊洩露：同一項知識出現在多個模組</text>
+    <text x="118.0" y="283.0" font-size="15">讀檔案和寫檔案兩個類都懂同一種檔案格式，格式一變兩個類都得改，這種後門洩露比介面洩露更隱蔽。常見原因是時間順</text>
+    <text x="118.0" y="306.0" font-size="15">序分解：按先做什麼、後做什麼來拆類。</text>
+    <circle cx="74.0" cy="368.0" r="22" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2" /><g transform="translate(63.0,357.0) scale(0.917)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2" /><rect width="20" height="8" x="2" y="14" rx="2" ry="2" /><line x1="6" x2="6.01" y1="6" y2="6" /><line x1="6" x2="6.01" y1="18" y2="18" /></g>
+    <text x="118.0" y="356.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">例子</text>
+    <text x="118.0" y="380.0" font-size="19" font-weight="600">HTTP 專案裡學生做對和做淺的地方</text>
+    <text x="118.0" y="406.0" font-size="15">先讀請求再解析，拆成兩個類，兩個類都得懂請求結構，合併成一個更好。回傳整個參數對映的方法太淺，應按名字回傳單</text>
+    <text x="118.0" y="429.0" font-size="15">個參數值。響應版本、日期標頭應由函式庫自動填好。</text>
+    <circle cx="74.0" cy="491.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,480.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z" /><path d="m7 16.5-4.74-2.85" /><path d="m7 16.5 5-3" /><path d="M7 16.5v5.17" /><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z" /><path d="m17 16.5-5-3" /><path d="m17 16.5 4.74-2.85" /><path d="M17 16.5v5.17" /><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z" /><path d="M12 8 7.26 5.15" /><path d="m12 8 4.74-2.85" /><path d="M12 13.5V8" /></g>
+    <text x="118.0" y="479.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">結論</text>
+    <text x="118.0" y="503.0" font-size="19" font-weight="600">按完成任務需要的知識來劃分模組</text>
+    <text x="118.0" y="529.0" font-size="15">讓類稍大一些常能改善資訊隱藏：相關程式碼放在一起，介面的抽象層級更高。類內部同樣適用：每個私有方法藏一點資訊，</text>
+    <text x="118.0" y="552.0" font-size="15">實例變數儘量少地方用。</text>
+    <rect x="32.0" y="590.0" width="896.0" height="101.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <g transform="translate(50.0,610.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
+    <text x="92.0" y="618.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">這一章最想強調的</text>
+    <text x="92.0" y="644.0" font-size="20" font-weight="600">設計模組時，專注於完成每個任務需要哪些知識，讓每個模組封裝其中幾項</text>
+    <text x="92.0" y="670.0" font-size="15" fill="var(--diagram-muted,#5c645d)">隱藏有限度：模組外部確實需要的資訊（例如需要調整的效能參數）必須公開</text>
+  </g>
+</svg>

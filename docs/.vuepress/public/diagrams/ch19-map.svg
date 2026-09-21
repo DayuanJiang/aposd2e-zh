@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 550" role="img" aria-labelledby="ch19-title ch19-desc">
+  <title id="ch19-title">流行的开发趋势真的降低复杂性吗？</title>
+  <desc id="ch19-desc">本章概览。流行的开发趋势真的降低复杂性吗？ 本章的主要部分：继承：接口继承好，实现继承要谨慎；敏捷开发：增量开发是好主意，但增量应是抽象；单元测试：坚决拥护单元测试，不热衷测试驱动开发；设计模式：适合时很好，硬套只会更复杂；Getter：与 Setter 都是浅方法，最好避免。一句话：接口继承和单元测试有助于降低复杂性；实现继承、敏捷、设计模式各有风险；测试驱动开发和 Getter/Setter 作者不推荐</desc>
+  <rect width="960" height="550" fill="var(--diagram-bg,#e7eae6)"/>
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <defs><marker id="ch19-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)"/></marker></defs>
+    <text x="32.0" y="52.0" font-size="30" font-weight="600">流行的开发趋势真的降低复杂性吗？</text>
+    <rect x="40.0" y="104.0" width="320.0" height="196.0" rx="14" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <text x="64.0" y="146.0" font-size="22" font-weight="600">本书的判断标准</text>
+    <text x="64.0" y="172.0" font-size="15" fill="var(--diagram-muted,#5c645d)">这个趋势能否降低大型系统的复杂性</text>
+    <g transform="translate(64.0,206.0) scale(2.333)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></g>
+    <rect x="338.0" y="168.0" width="52.0" height="68.0" rx="10" fill="var(--diagram-bg,#e7eae6)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/>
+    <rect x="352" y="186" width="8" height="20" rx="2" fill="var(--diagram-secondary,#2c6096)"/><rect x="368" y="186" width="8" height="20" rx="2" fill="var(--diagram-secondary,#2c6096)"/>
+    <text x="364.0" y="258.0" font-size="18" font-weight="600" text-anchor="middle">逐一审视</text>
+    <text x="364.0" y="280.0" font-size="13" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">每种趋势都用它检验</text>
+    <path d="M470.0 202.0 L400.0 202.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#ch19-arrow)"/>
+    <text x="484.0" y="122.0" font-size="15" fill="var(--diagram-muted,#5c645d)">过去几十年的几种流行趋势，作者的评价</text>
+    <g transform="translate(486.0,147.0) scale(1.167)" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></g>
+    <text x="528.0" y="168.0" font-size="18" font-weight="600">继承</text>
+    <text x="636.0" y="168.0" font-size="15" fill="var(--diagram-muted,#5c645d)">接口继承好，实现继承要谨慎</text>
+    <g transform="translate(486.0,195.0) scale(1.167)" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></g>
+    <text x="528.0" y="216.0" font-size="18" font-weight="600">敏捷开发</text>
+    <text x="636.0" y="216.0" font-size="15" fill="var(--diagram-muted,#5c645d)">增量开发是好主意，但增量应是抽象</text>
+    <g transform="translate(486.0,243.0) scale(1.167)" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2v17.5c0 1.4-1.1 2.5-2.5 2.5c-1.4 0-2.5-1.1-2.5-2.5V2"/><path d="M8.5 2h7"/><path d="M14.5 16h-5"/></g>
+    <text x="528.0" y="264.0" font-size="18" font-weight="600">单元测试</text>
+    <text x="636.0" y="264.0" font-size="15" fill="var(--diagram-muted,#5c645d)">坚决拥护单元测试，不热衷测试驱动开发</text>
+    <g transform="translate(486.0,291.0) scale(1.167)" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"/><path d="m7 16.5-4.74-2.85"/><path d="m7 16.5 5-3"/><path d="M7 16.5v5.17"/><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"/><path d="m17 16.5-5-3"/><path d="m17 16.5 4.74-2.85"/><path d="M17 16.5v5.17"/><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"/><path d="M12 8 7.26 5.15"/><path d="m12 8 4.74-2.85"/><path d="M12 13.5V8"/></g>
+    <text x="528.0" y="312.0" font-size="18" font-weight="600">设计模式</text>
+    <text x="636.0" y="312.0" font-size="15" fill="var(--diagram-muted,#5c645d)">适合时很好，硬套只会更复杂</text>
+    <g transform="translate(486.0,339.0) scale(1.167)" fill="none" stroke="var(--diagram-muted,#5c645d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="6" ry="6"/><circle cx="16" cy="12" r="2"/></g>
+    <text x="528.0" y="360.0" font-size="18" font-weight="600">Getter</text>
+    <text x="636.0" y="360.0" font-size="15" fill="var(--diagram-muted,#5c645d)">与 Setter 都是浅方法，最好避免</text>
+    <text x="484.0" y="394.0" font-size="13" fill="var(--diagram-muted,#5c645d)">遇到新范式，先问它是否真的降低复杂性</text>
+    <rect x="32.0" y="424.0" width="896.0" height="98.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="50.0" y="445.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句话</text>
+    <text x="50.0" y="475.0" font-size="21" font-weight="600">接口继承和单元测试有助于降低复杂性；实现继承、敏捷、设计模式各有风险；测试驱动开</text>
+    <text x="50.0" y="505.0" font-size="21" font-weight="600">发和 Getter/Setter 作者不推荐</text>
+  </g>
+</svg>

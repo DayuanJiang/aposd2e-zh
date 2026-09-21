@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 719" role="img" aria-labelledby="ch20-story-title ch20-story-desc">
+  <title id="ch20-story-title">從又慢又複雜的 Buffer 程式碼，到快一倍且少兩成程式碼</title>
+  <desc id="ch20-story-desc">本章回顧。從又慢又複雜的 Buffer 程式碼，到快一倍且少兩成程式碼。起點：平時開發時，該花多少心思在效能上？。逐條語句最佳化會拖慢開發；完全不管，系統可能慢 5 到 10 倍。作者的做法：瞭解哪些操作開銷大，選自然高效又簡單的方案，不需要有序就用雜湊表，它比有序對映快得多。；問題：系統還是太慢？先測量，別憑直覺改。程式設計師對效能的直覺並不可靠，經驗豐富的人也一樣。先測量找出少數真正耗時的位置，同時建立基線；修改後再測一次，測不出差異就撤銷修改，除非它讓系統更簡單。；做法：圍繞關鍵路徑設計：常見情況只做一次檢查。先找根本性的改進，例如加快取或換演算法。找不到時，設想只為常見情況寫一個方法，只含必須執行的最少程式碼；再找整潔的設計儘量接近它，開頭一次檢查排除所有特殊情況。；例子：Buffer 重構：一個方法、一次檢查，快一倍，程式碼少 20%。舊的 alloc 經過三層淺方法，檢查 6 個條件。新程式碼用一個變數 availableAppendBytes 覆蓋三種特殊情況，只判斷一次。追加 1 位元組從 8.8 納秒降到 4.75 納秒，程式碼少了 20%。。這一章最想強調的：整潔的設計與高效能可以兼得：複雜的程式碼往往慢，因為它做了不必要或重複的工作 圍繞關鍵路徑重新設計是最後手段，不應經常採用；能加快取或換演算法這類根本性改進時，優先用它</desc>
+  <rect width="960" height="719" fill="var(--diagram-bg,#e7eae6)" />
+  <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
+    <text x="32.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顧</text>
+    <path d="M74 144 V 469" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" />
+    <text x="32.0" y="62.0" font-size="26" font-weight="600">從又慢又複雜的 Buffer 程式碼，到快一倍且少兩成程式碼</text>
+    <circle cx="74.0" cy="122.0" r="22" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(63.0,111.0) scale(0.917)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4" /><path d="M3.34 19a10 10 0 1 1 17.32 0" /></g>
+    <text x="118.0" y="110.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起點</text>
+    <text x="118.0" y="134.0" font-size="19" font-weight="600">平時開發時，該花多少心思在效能上？</text>
+    <text x="118.0" y="160.0" font-size="15">逐條語句最佳化會拖慢開發；完全不管，系統可能慢 5 到 10 倍。作者的做法：瞭解哪些操作開銷大，選自然高效又簡單的方</text>
+    <text x="118.0" y="183.0" font-size="15">案，不需要有序就用雜湊表，它比有序對映快得多。</text>
+    <circle cx="74.0" cy="245.0" r="22" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2" /><g transform="translate(63.0,234.0) scale(0.917)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2v2" /><path d="M5 2v2" /><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1" /><path d="M8 15a6 6 0 0 0 12 0v-3" /><circle cx="20" cy="10" r="2" /></g>
+    <text x="118.0" y="233.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">問題</text>
+    <text x="118.0" y="257.0" font-size="19" font-weight="600">系統還是太慢？先測量，別憑直覺改</text>
+    <text x="118.0" y="283.0" font-size="15">程式設計師對效能的直覺並不可靠，經驗豐富的人也一樣。先測量找出少數真正耗時的位置，同時建立基線；修改後再測一次，</text>
+    <text x="118.0" y="306.0" font-size="15">測不出差異就撤銷修改，除非它讓系統更簡單。</text>
+    <circle cx="74.0" cy="368.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,357.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3" /><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15" /><circle cx="18" cy="5" r="3" /></g>
+    <text x="118.0" y="356.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">做法</text>
+    <text x="118.0" y="380.0" font-size="19" font-weight="600">圍繞關鍵路徑設計：常見情況只做一次檢查</text>
+    <text x="118.0" y="406.0" font-size="15">先找根本性的改進，例如加快取或換演算法。找不到時，設想只為常見情況寫一個方法，只含必須執行的最少程式碼；再找整潔</text>
+    <text x="118.0" y="429.0" font-size="15">的設計儘量接近它，開頭一次檢查排除所有特殊情況。</text>
+    <circle cx="74.0" cy="491.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,480.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" /></g>
+    <text x="118.0" y="479.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">例子</text>
+    <text x="118.0" y="503.0" font-size="19" font-weight="600">Buffer 重構：一個方法、一次檢查，快一倍，程式碼少 20%</text>
+    <text x="118.0" y="529.0" font-size="15">舊的 alloc 經過三層淺方法，檢查 6 個條件。新程式碼用一個變數 availableAppendBytes 覆蓋三種特殊情況，只判斷一</text>
+    <text x="118.0" y="552.0" font-size="15">次。追加 1 位元組從 8.8 納秒降到 4.75 納秒，程式碼少了 20%。</text>
+    <rect x="32.0" y="590.0" width="896.0" height="101.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <g transform="translate(50.0,610.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
+    <text x="92.0" y="618.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">這一章最想強調的</text>
+    <text x="92.0" y="644.0" font-size="20" font-weight="600">整潔的設計與高效能可以兼得：複雜的程式碼往往慢，因為它做了不必要或重複的工作</text>
+    <text x="92.0" y="670.0" font-size="15" fill="var(--diagram-muted,#5c645d)">圍繞關鍵路徑重新設計是最後手段，不應經常採用；能加快取或換演算法這類根本性改進時，優先用它</text>
+  </g>
+</svg>
