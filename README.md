@@ -157,7 +157,7 @@ npm ci
 npm test
 uv run --with opencc==1.4.1 python3 bin/zh-tw.py            # 重新生成繁体正文
 uv run --with opencc==1.4.1 python3 tools/localize.py       # 重新生成繁体图解与元数据
-python3 bin/chapter_figures.py --check
+uv run --with opencc==1.4.1 python3 bin/chapter_figures.py --check
 python3 bin/glossary.py --check
 python3 tools/verify.py --complete
 npm run build

@@ -26,7 +26,7 @@ jobs:
         run: uv run --with opencc==1.4.1 python3 bin/zh-tw.py --check
       - name: Generated files are up to date
         run: |
-          python3 bin/chapter_figures.py --check
+          uv run --with opencc==1.4.1 python3 bin/chapter_figures.py --check
           uv run --with opencc==1.4.1 python3 tools/localize.py --check
           python3 bin/glossary.py --check
       - name: Reader content contracts

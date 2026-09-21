@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 1209" role="img" aria-labelledby="ch12-storym-title ch12-storym-desc">
   <title id="ch12-storym-title">从四个不写注释的借口，到注释为什么是抽象的基础</title>
-  <desc id="ch12-storym-desc">本章回顾。从四个不写注释的借口，到注释为什么是抽象的基础。起点：很多生产代码几乎没有注释，开发人员有四个常见借口。代码是自解释的；没有时间；注释容易过时并产生误导；见过的注释都毫无价值。作者认为文档不足给开发带来了巨大且不必要的拖累。；反驳：代码能表达的设计信息很少，靠读代码理解会拆出大量浅方法。提取子字符串的方法有起始和结束两个参数，只看声明不知道结果是否包含结束位置。如果预期使用者读实现，就会把方法拆得很短，产生大量浅方法，读者仍要逐个读懂。；算账：时间和过时两个借口，算一算都不成立。键入代码的时间不到开发时间的 10%，即使注释和代码一样多，也只多花约 10%。注释只在代码大改时才需大改，放在代码附近、避免重复，再加代码审查，就能保持更新。；主张：注释记录设计者知道、却无法用代码表达的信息。没有注释，方法唯一的抽象就是声明，使用者必须读代码，复杂性全部暴露出来。好注释提供修改代码所需的信息，减轻认知负荷，也减少未知的未知。；回应：对“注释是一种失败”这一观点的回应。《代码整洁之道》主张把代码块提取成方法，用方法名代替注释。作者认为这样会得到冗长晦涩的名称，每次调用都在重复文档；好注释提升代码价值，是定义抽象的基础。。这一章最想强调的：注释的核心作用，是记录设计者知道、却无法在代码中表达的信息 好的设计能减少对注释的需求，尤其是方法体中的注释，但注释并不代表失败：代码和注释各有所长</desc>
+  <desc id="ch12-storym-desc">本章回顾。从四个不写注释的借口，到注释为什么是抽象的基础。起点：很多生产代码几乎没有注释，开发人员有四个常见借口。代码是自解释的；没有时间；注释容易过时并产生误导；见过的注释都毫无价值。作者认为文档不足给开发带来了巨大且不必要的拖累。；反驳：许多设计信息无法用代码表达，靠读代码理解会拆出大量浅方法。提取子字符串的方法有起始和结束两个参数，只看声明不知道结果是否包含结束位置。如果预期使用者读实现，就会把方法拆得很短，产生大量浅方法，读者仍可能要逐个读懂。；算账：时间和过时两个借口，算一算都不成立。键入代码不超过开发时间的 10%，写注释即使花同样时间也最多多花约 10%。注释有时会过时，但只在代码大改时才需大改；放在代码附近、避免重复，再加代码审查就不难更新。；主张：注释记录设计者知道、却无法用代码表达的信息。没有注释，方法唯一的抽象就是声明，使用者必须读代码，复杂性全部暴露出来。好注释提供修改代码所需的信息，减轻认知负荷，也减少未知的未知。；回应：对“注释是一种失败”这一观点的回应。《代码整洁之道》主张把代码块提取成方法，用方法名代替注释。作者认为这样会得到冗长晦涩的名称，每次调用都在重复文档；好注释提升代码价值，是定义抽象的基础。。这一章最想强调的：注释的核心作用，是记录设计者知道、却无法在代码中表达的信息 好的设计能减少对注释的需求，尤其是方法体中的注释，但注释并不代表失败：代码和注释各有所长</desc>
   <rect width="420" height="1209" fill="var(--diagram-bg,#e7eae6)"/>
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <text x="22.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顾</text>
@@ -9,48 +9,48 @@
     <text x="22.0" y="90.0" font-size="21" font-weight="600">是抽象的基础</text>
     <circle cx="40.0" cy="146.0" r="18" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(31.0,137.0) scale(0.750)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></g>
     <text x="76.0" y="134.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起点</text>
-    <text x="76.0" y="158.0" font-size="18" font-weight="600">很多生产代码几乎没有注释，开发人员有</text>
-    <text x="76.0" y="182.0" font-size="18" font-weight="600">四个常见借口</text>
-    <text x="76.0" y="208.0" font-size="15">代码是自解释的；没有时间；注释容易过时并产</text>
-    <text x="76.0" y="231.0" font-size="15">生误导；见过的注释都毫无价值。作者认为文档</text>
-    <text x="76.0" y="254.0" font-size="15">不足给开发带来了巨大且不必要的拖累。</text>
+    <text x="76.0" y="158.0" font-size="18" font-weight="600">很多生产代码几乎没有注释，开发人</text>
+    <text x="76.0" y="182.0" font-size="18" font-weight="600">员有四个常见借口</text>
+    <text x="76.0" y="208.0" font-size="15">代码是自解释的；没有时间；注释容易过时并</text>
+    <text x="76.0" y="231.0" font-size="15">产生误导；见过的注释都毫无价值。作者认为文</text>
+    <text x="76.0" y="254.0" font-size="15">档不足给开发带来了巨大且不必要的拖累。</text>
     <circle cx="40.0" cy="316.0" r="18" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2"/><g transform="translate(31.0,307.0) scale(0.750)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></g>
     <text x="76.0" y="304.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">反驳</text>
-    <text x="76.0" y="328.0" font-size="18" font-weight="600">代码能表达的设计信息很少，靠读代码理</text>
-    <text x="76.0" y="352.0" font-size="18" font-weight="600">解会拆出大量浅方法</text>
+    <text x="76.0" y="328.0" font-size="18" font-weight="600">许多设计信息无法用代码表达，靠读</text>
+    <text x="76.0" y="352.0" font-size="18" font-weight="600">代码理解会拆出大量浅方法</text>
     <text x="76.0" y="378.0" font-size="15">提取子字符串的方法有起始和结束两个参数，只</text>
     <text x="76.0" y="401.0" font-size="15">看声明不知道结果是否包含结束位置。如果预期</text>
     <text x="76.0" y="424.0" font-size="15">使用者读实现，就会把方法拆得很短，产生大量</text>
-    <text x="76.0" y="447.0" font-size="15">浅方法，读者仍要逐个读懂。</text>
+    <text x="76.0" y="447.0" font-size="15">浅方法，读者仍可能要逐个读懂。</text>
     <circle cx="40.0" cy="509.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,500.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></g>
     <text x="76.0" y="497.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">算账</text>
     <text x="76.0" y="521.0" font-size="18" font-weight="600">时间和过时两个借口，算一算都不成立</text>
-    <text x="76.0" y="547.0" font-size="15">键入代码的时间不到开发时间的 10%，即使注释</text>
-    <text x="76.0" y="570.0" font-size="15">和代码一样多，也只多花约 10%。注释只在代码</text>
-    <text x="76.0" y="593.0" font-size="15">大改时才需大改，放在代码附近、避免重复，再</text>
-    <text x="76.0" y="616.0" font-size="15">加代码审查，就能保持更新。</text>
+    <text x="76.0" y="547.0" font-size="15">键入代码不超过开发时间的 10%，写注释即使</text>
+    <text x="76.0" y="570.0" font-size="15">花同样时间也最多多花约 10%。注释有时会过</text>
+    <text x="76.0" y="593.0" font-size="15">时，但只在代码大改时才需大改；放在代码</text>
+    <text x="76.0" y="616.0" font-size="15">附近、避免重复，再加代码审查就不难更新。</text>
     <circle cx="40.0" cy="678.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,669.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></g>
     <text x="76.0" y="666.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">主张</text>
-    <text x="76.0" y="690.0" font-size="18" font-weight="600">注释记录设计者知道、却无法用代码表达</text>
-    <text x="76.0" y="714.0" font-size="18" font-weight="600">的信息</text>
+    <text x="76.0" y="690.0" font-size="18" font-weight="600">注释记录设计者知道、却无法用代码</text>
+    <text x="76.0" y="714.0" font-size="18" font-weight="600">表达的信息</text>
     <text x="76.0" y="740.0" font-size="15">没有注释，方法唯一的抽象就是声明，使用者必</text>
-    <text x="76.0" y="763.0" font-size="15">须读代码，复杂性全部暴露出来。好注释提供修</text>
-    <text x="76.0" y="786.0" font-size="15">改代码所需的信息，减轻认知负荷，也减少未知</text>
-    <text x="76.0" y="809.0" font-size="15">的未知。</text>
+    <text x="76.0" y="763.0" font-size="15">须读代码，复杂性全部暴露出来。好注释提供</text>
+    <text x="76.0" y="786.0" font-size="15">修改代码所需的信息，减轻认知负荷，也减少</text>
+    <text x="76.0" y="809.0" font-size="15">未知的未知。</text>
     <circle cx="40.0" cy="871.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,862.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></g>
     <text x="76.0" y="859.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">回应</text>
     <text x="76.0" y="883.0" font-size="18" font-weight="600">对“注释是一种失败”这一观点的回应</text>
-    <text x="76.0" y="909.0" font-size="15">《代码整洁之道》主张把代码块提取成方法，用</text>
-    <text x="76.0" y="932.0" font-size="15">方法名代替注释。作者认为这样会得到冗长晦涩</text>
-    <text x="76.0" y="955.0" font-size="15">的名称，每次调用都在重复文档；好注释提升代</text>
-    <text x="76.0" y="978.0" font-size="15">码价值，是定义抽象的基础。</text>
+    <text x="76.0" y="909.0" font-size="15">《代码整洁之道》主张把代码块提取成方</text>
+    <text x="76.0" y="932.0" font-size="15">法，用方法名代替注释。作者认为这样会得到冗</text>
+    <text x="76.0" y="955.0" font-size="15">长晦涩的名称，每次调用都在重复文档；好注释</text>
+    <text x="76.0" y="978.0" font-size="15">提升代码价值，是定义抽象的基础。</text>
     <rect x="22.0" y="1016.0" width="376.0" height="165.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
     <g transform="translate(40.0,1036.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g>
     <text x="78.0" y="1044.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">这一章最想强调的</text>
-    <text x="78.0" y="1070.0" font-size="18" font-weight="600">注释的核心作用，是记录设计者知道、</text>
-    <text x="78.0" y="1094.0" font-size="18" font-weight="600">却无法在代码中表达的信息</text>
+    <text x="78.0" y="1070.0" font-size="18" font-weight="600">注释的核心作用，是记录设计者知</text>
+    <text x="78.0" y="1094.0" font-size="18" font-weight="600">道、却无法在代码中表达的信息</text>
     <text x="78.0" y="1118.0" font-size="14" fill="var(--diagram-muted,#5c645d)">好的设计能减少对注释的需求，尤其是方法体中</text>
-    <text x="78.0" y="1139.0" font-size="14" fill="var(--diagram-muted,#5c645d)">的注释，但注释并不代表失败：代码和注释各有</text>
-    <text x="78.0" y="1160.0" font-size="14" fill="var(--diagram-muted,#5c645d)">所长</text>
+    <text x="78.0" y="1139.0" font-size="14" fill="var(--diagram-muted,#5c645d)">的注释，但注释并不代表失败：代码和注释各</text>
+    <text x="78.0" y="1160.0" font-size="14" fill="var(--diagram-muted,#5c645d)">有所长</text>
   </g>
 </svg>

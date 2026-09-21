@@ -25,6 +25,7 @@ import math
 import os
 from pathlib import Path
 import re
+import runpy
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTENT = ROOT / "docs/.vuepress/reader/chapters"
@@ -41,6 +42,19 @@ TONES = {
     "danger": ("var(--diagram-danger,#a03946)", "var(--diagram-danger-soft,#ead9dc)"),
 }
 FORMS = ("axes", "socket", "pipeline", "pillars", "contrast", "layers", "cycle")
+
+# tools/localize.py later converts every text node to traditional Chinese, which is often longer
+# ("代码" becomes "程式碼"). When OpenCC is available, budgets are checked against both versions.
+try:
+    import opencc
+    _conversion = runpy.run_path(str(ROOT / "bin/zh-tw.py"))
+    _rules = _conversion["load_rules"]()
+    _converter = opencc.OpenCC("s2twp.json")
+
+    def traditional(text):
+        return _conversion["apply_rules"](_converter.convert(text), _rules)
+except ImportError:  # pragma: no cover - CI runs this script with opencc installed
+    traditional = None
 
 # Text styles are emitted as presentation attributes: the reader rewrites the root class of every
 # inline SVG, so class-based <style> rules would not survive.
@@ -74,13 +88,23 @@ def width(text, size):
     return total * size
 
 
+def measure(text, size):
+    """Width of the wider of the simplified text and its traditional-Chinese rendering.
+
+    Browser glyphs run a little wider than the estimate for some CJK fonts, so a 3% margin is added;
+    a real-browser geometry pass (tools/browser.mjs --gallery) remains the final check.
+    """
+    widest = width(text, size) if traditional is None else max(width(text, size), width(traditional(text), size))
+    return widest * 1.03
+
+
 def wrap(text, size, max_width):
     """Greedy wrap that keeps Latin words together and never starts a line with closing punctuation."""
     tokens = re.findall(r"[A-Za-z0-9_./:+#-]+|\s|.", text)
     lines, current = [], ""
     for token in tokens:
         candidate = current + token
-        if width(candidate, size) <= max_width or (token in CLOSING and width(candidate, size) <= max_width + size / 2):
+        if measure(candidate, size) <= max_width or (token in CLOSING and measure(candidate, size) <= max_width + size / 2):
             current = candidate
         elif token in CLOSING and len(current) > 1:
             lines.append(current[:-1].rstrip())
@@ -93,7 +117,7 @@ def wrap(text, size, max_width):
 
 
 def fit(text, size, max_width, where):
-    if width(text, size) > max_width:
+    if measure(text, size) > max_width:
         raise ValueError(f"Text too wide for {where} (max about {int(max_width / size)} CJK chars): {text}")
     return text
 
@@ -269,7 +293,11 @@ def axes_rows(chart):
     rows += part_rows({"parts": chart["parts"][:2]})
     rows.append({"kind": "group", "label": f"从{fig['origin']['label']}到{fig['region']['label']}", "tone": "pri"})
     rows.append({"kind": "part", "icon": fig["origin"]["icon"], "label": fig["origin"]["label"], "text": fig["origin"]["text"], "tone": "sec", "arrow": True})
-    rows.append({"kind": "part", "icon": chart["parts"][2]["icon"], "label": fig["region"]["label"], "text": fig["region"]["text"], "tone": "pri"})
+    # The destination region gets its own icon (figure.region.icon, default "flag") instead of borrowing
+    # the first region item's, and its items follow under a heading so they read as what matters there,
+    # not as steps taken after arrival.
+    rows.append({"kind": "part", "icon": fig["region"].get("icon", "flag"), "label": fig["region"]["label"], "text": fig["region"]["text"], "tone": "pri"})
+    rows.append({"kind": "group", "label": fig.get("itemsLabel", "在这里要注意的事"), "tone": "pri"})
     rows += part_rows({"parts": chart["parts"][2:]}, tone="pri")
     return rows
 
@@ -590,12 +618,14 @@ def build(content):
          "title": chart["question"], "question": chart["question"], "answer": chart["answer"],
          "summary": map_caption, "alt": map_desc(chart),
          "desktop": f"/diagrams/{key}-map.svg", "mobile": f"/diagrams/{key}-map-mobile.svg",
-         "anchor": {"intro": True}, "sources": sources, "status": "generated"},
+         "anchor": {"intro": True}, "sources": sources, "status": "generated",
+         **({"limits": content["limits"]} if content.get("limits") else {})},
         {"id": f"{key}-story", "chapter": key, "kind": "chapter-story",
          "title": story["headline"], "question": story["headline"], "answer": story["emphasis"],
          "summary": story_caption, "alt": story_desc(story),
          "desktop": f"/diagrams/{key}-story.svg", "mobile": f"/diagrams/{key}-story-mobile.svg",
-         "anchor": {"end": True}, "sources": sources, "status": "generated"},
+         "anchor": {"end": True}, "sources": sources, "status": "generated",
+         **({"limits": content["limits"]} if content.get("limits") else {})},
     ]
     return assets, entries
 

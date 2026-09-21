@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 1235" role="img" aria-labelledby="ch11-storym-title ch11-storym-desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 1256" role="img" aria-labelledby="ch11-storym-title ch11-storym-desc">
   <title id="ch11-storym-title">从直接实现第一个想法，到给每个主要决策想两种以上方案</title>
-  <desc id="ch11-storym-desc">本章回顾。从直接实现第一个想法，到给每个主要决策想两种以上方案。起点：给文本编辑器设计文本类，最先想到的很可能是面向行的接口。设计很难，最初的想法不太可能就是最佳设计。文本类的接口至少有三种：按行、按单个字符、按任意范围操作。勾勒最重要的几个方法就够，方案之间差异越大，学到的越多。；比较：列出优缺点：按行和按字符的接口，都让高层软件做额外的工作。按行接口下，剪切粘贴跨行内容要界面自己拆行合并；按字符接口下，改多个字符要写循环，还可能慢很多，因为每个字符都要调用一次。还要比接口是否更简单、更通用。；转折：都不理想？以发现的问题为起点，再想新方案。两种方案都让高层软件自己做文本操作，这是危险信号：既然有了文本类，它就该处理所有文本操作。顺着这个问题找，就得到面向范围的接口。最佳选择也可能是几个方案的组合。；做法：每个主要决策都设计两次：接口一次，实现一次，更高层级也一样。实现阶段再比一轮：行的链表、固定大小的字符块、间隙缓冲区，这时最看重简单和性能。对一个类，这只要一两个小时，远少于实现的几天几周，而且会让你越来越会判断好坏设计。；提醒：聪明人反而更难接受设计两次。他们习惯了第一个想法就足够好，尝试多种设计好像就等于承认自己不聪明。作者的看法：大型软件系统的设计真的很难，没有人能靠第一次尝试就做好，这与是否聪明无关。。这一章最想强调的：在每个主要设计决策上都考虑多个方案，最初的想法很少是最好的 花的时间通常远少于实现；对一个类只需一两个小时，收益是明显更好的设计和更强的设计能力</desc>
-  <rect width="420" height="1235" fill="var(--diagram-bg,#e7eae6)"/>
+  <desc id="ch11-storym-desc">本章回顾。从直接实现第一个想法，到给每个主要决策想两种以上方案。起点：给文本编辑器设计文本类：别急着采用最先想到的方案。设计很难，最初的想法不太可能就是最佳设计。文本类的接口至少有三种：按行、按单个字符、按任意范围操作。勾勒最重要的几个方法就够，方案之间差异越大，学到的越多。；比较：列出优缺点：按行和按字符的接口，都让高层软件做额外的工作。按行接口下，剪切粘贴跨行内容要界面自己拆行合并；按字符接口下，改多个字符要写循环，还可能慢很多，因为每个字符都要调用一次。还要比接口是否更简单、更通用。；转折：都不理想？以发现的问题为起点，再想新方案。两种方案都让高层软件自己做文本操作，这是危险信号：既然有了文本类，它就该处理所有文本操作。顺着这个问题找，就得到面向范围的接口。最佳选择也可能是几个方案的组合。；做法：每个主要决策都设计两次：接口一次，实现一次，更高层级也一样。实现阶段再比一轮：行的链表、固定大小的字符块、间隙缓冲区，这时最看重简单和性能。对一个类，这可能只要一两个小时，远少于实现的几天几周，还能提高设计能力。；提醒：聪明人有时反而更难接受设计两次。他们习惯了第一个想法就足够好，尝试多种设计好像就等于承认自己不聪明。作者的看法：大型软件系统的设计真的很难，没有人能靠第一次尝试就做好，这与是否聪明无关。。这一章最想强调的：在每个主要设计决策上都考虑多个方案，最初的想法很少是最好的 花的时间远少于实现；对一个类可能只需一两个小时，很可能换来明显更好的设计，还能提高设计能力</desc>
+  <rect width="420" height="1256" fill="var(--diagram-bg,#e7eae6)"/>
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <text x="22.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顾</text>
     <path d="M40 168 V 896" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2"/>
@@ -9,49 +9,50 @@
     <text x="22.0" y="90.0" font-size="21" font-weight="600">决策想两种以上方案</text>
     <circle cx="40.0" cy="146.0" r="18" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(31.0,137.0) scale(0.750)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></g>
     <text x="76.0" y="134.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起点</text>
-    <text x="76.0" y="158.0" font-size="18" font-weight="600">给文本编辑器设计文本类，最先想到的很</text>
-    <text x="76.0" y="182.0" font-size="18" font-weight="600">可能是面向行的接口</text>
+    <text x="76.0" y="158.0" font-size="18" font-weight="600">给文本编辑器设计文本类：别急着采用</text>
+    <text x="76.0" y="182.0" font-size="18" font-weight="600">最先想到的方案</text>
     <text x="76.0" y="208.0" font-size="15">设计很难，最初的想法不太可能就是最佳设计。</text>
     <text x="76.0" y="231.0" font-size="15">文本类的接口至少有三种：按行、按单个字符、</text>
     <text x="76.0" y="254.0" font-size="15">按任意范围操作。勾勒最重要的几个方法就够，</text>
     <text x="76.0" y="277.0" font-size="15">方案之间差异越大，学到的越多。</text>
     <circle cx="40.0" cy="339.0" r="18" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(31.0,330.0) scale(0.750)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></g>
     <text x="76.0" y="327.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">比较</text>
-    <text x="76.0" y="351.0" font-size="18" font-weight="600">列出优缺点：按行和按字符的接口，都让</text>
-    <text x="76.0" y="375.0" font-size="18" font-weight="600">高层软件做额外的工作</text>
+    <text x="76.0" y="351.0" font-size="18" font-weight="600">列出优缺点：按行和按字符的接口，都</text>
+    <text x="76.0" y="375.0" font-size="18" font-weight="600">让高层软件做额外的工作</text>
     <text x="76.0" y="401.0" font-size="15">按行接口下，剪切粘贴跨行内容要界面自己拆行</text>
     <text x="76.0" y="424.0" font-size="15">合并；按字符接口下，改多个字符要写循环，还</text>
     <text x="76.0" y="447.0" font-size="15">可能慢很多，因为每个字符都要调用一次。还要</text>
     <text x="76.0" y="470.0" font-size="15">比接口是否更简单、更通用。</text>
     <circle cx="40.0" cy="532.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,523.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></g>
     <text x="76.0" y="520.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">转折</text>
-    <text x="76.0" y="544.0" font-size="18" font-weight="600">都不理想？以发现的问题为起点，再想新</text>
-    <text x="76.0" y="568.0" font-size="18" font-weight="600">方案</text>
+    <text x="76.0" y="544.0" font-size="18" font-weight="600">都不理想？以发现的问题为起点，再想</text>
+    <text x="76.0" y="568.0" font-size="18" font-weight="600">新方案</text>
     <text x="76.0" y="594.0" font-size="15">两种方案都让高层软件自己做文本操作，这是危</text>
     <text x="76.0" y="617.0" font-size="15">险信号：既然有了文本类，它就该处理所有文本</text>
-    <text x="76.0" y="640.0" font-size="15">操作。顺着这个问题找，就得到面向范围的接口。</text>
-    <text x="76.0" y="663.0" font-size="15">最佳选择也可能是几个方案的组合。</text>
+    <text x="76.0" y="640.0" font-size="15">操作。顺着这个问题找，就得到面向范围的接</text>
+    <text x="76.0" y="663.0" font-size="15">口。最佳选择也可能是几个方案的组合。</text>
     <circle cx="40.0" cy="725.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,716.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></g>
     <text x="76.0" y="713.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">做法</text>
-    <text x="76.0" y="737.0" font-size="18" font-weight="600">每个主要决策都设计两次：接口一次，实</text>
-    <text x="76.0" y="761.0" font-size="18" font-weight="600">现一次，更高层级也一样</text>
-    <text x="76.0" y="787.0" font-size="15">实现阶段再比一轮：行的链表、固定大小的字符</text>
-    <text x="76.0" y="810.0" font-size="15">块、间隙缓冲区，这时最看重简单和性能。对一</text>
-    <text x="76.0" y="833.0" font-size="15">个类，这只要一两个小时，远少于实现的几天几</text>
-    <text x="76.0" y="856.0" font-size="15">周，而且会让你越来越会判断好坏设计。</text>
+    <text x="76.0" y="737.0" font-size="18" font-weight="600">每个主要决策都设计两次：接口一次，</text>
+    <text x="76.0" y="761.0" font-size="18" font-weight="600">实现一次，更高层级也一样</text>
+    <text x="76.0" y="787.0" font-size="15">实现阶段再比一轮：行的链表、固定大小的</text>
+    <text x="76.0" y="810.0" font-size="15">字符块、间隙缓冲区，这时最看重简单和性能。</text>
+    <text x="76.0" y="833.0" font-size="15">对一个类，这可能只要一两个小时，远少于实现</text>
+    <text x="76.0" y="856.0" font-size="15">的几天几周，还能提高设计能力。</text>
     <circle cx="40.0" cy="918.0" r="18" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2"/><g transform="translate(31.0,909.0) scale(0.750)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></g>
     <text x="76.0" y="906.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">提醒</text>
-    <text x="76.0" y="930.0" font-size="18" font-weight="600">聪明人反而更难接受设计两次</text>
+    <text x="76.0" y="930.0" font-size="18" font-weight="600">聪明人有时反而更难接受设计两次</text>
     <text x="76.0" y="956.0" font-size="15">他们习惯了第一个想法就足够好，尝试多种设计</text>
     <text x="76.0" y="979.0" font-size="15">好像就等于承认自己不聪明。作者的看法：大型</text>
     <text x="76.0" y="1002.0" font-size="15">软件系统的设计真的很难，没有人能靠第一次尝</text>
     <text x="76.0" y="1025.0" font-size="15">试就做好，这与是否聪明无关。</text>
-    <rect x="22.0" y="1063.0" width="376.0" height="144.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <rect x="22.0" y="1063.0" width="376.0" height="165.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
     <g transform="translate(40.0,1083.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g>
     <text x="78.0" y="1091.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">这一章最想强调的</text>
     <text x="78.0" y="1117.0" font-size="18" font-weight="600">在每个主要设计决策上都考虑多个方</text>
     <text x="78.0" y="1141.0" font-size="18" font-weight="600">案，最初的想法很少是最好的</text>
-    <text x="78.0" y="1165.0" font-size="14" fill="var(--diagram-muted,#5c645d)">花的时间通常远少于实现；对一个类只需一两个</text>
-    <text x="78.0" y="1186.0" font-size="14" fill="var(--diagram-muted,#5c645d)">小时，收益是明显更好的设计和更强的设计能力</text>
+    <text x="78.0" y="1165.0" font-size="14" fill="var(--diagram-muted,#5c645d)">花的时间远少于实现；对一个类可能只需一两个</text>
+    <text x="78.0" y="1186.0" font-size="14" fill="var(--diagram-muted,#5c645d)">小时，很可能换来明显更好的设计，还能提高设</text>
+    <text x="78.0" y="1207.0" font-size="14" fill="var(--diagram-muted,#5c645d)">计能力</text>
   </g>
 </svg>

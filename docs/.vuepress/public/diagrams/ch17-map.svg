@@ -1,49 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 526" role="img" aria-labelledby="ch17-title ch17-desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 452" role="img" aria-labelledby="ch17-title ch17-desc">
   <title id="ch17-title">一致性为什么重要，怎么保持？</title>
-  <desc id="ch17-desc">本章概览。一致性为什么重要，怎么保持？ 本章的主要部分：写下约定：把编码风格指南等全局约定写下来，放在项目维基的显著位置；不变量这类局部约定写在代码里；自动检查：写工具自动检查违规，通过才能提交。作者用一个脚本拦下含回车符的文件，行终止符问题就此解决；入乡随俗：在新文件里写代码前，先看现有代码怎么组织：驼峰还是蛇形命名，公有成员是否放在前面，照着做；不改旧约定：有更好的想法也不足以引入不一致，除非掌握了制定旧约定时没有的新信息，且值得更新所有旧用法。一句话：相似的事用相似做法，读者理解了一处就能理解其他地方；靠文档、自动检查和入乡随俗来保持</desc>
-  <rect width="960" height="526" fill="var(--diagram-bg,#e7eae6)"/>
+  <desc id="ch17-desc">本章概览。一致性为什么重要，怎么保持？ 本章的主要部分：写下约定：全局约定写成文档，局部约定写进代码；自动检查：写工具自动检查，通过才能提交；入乡随俗：先看现有代码怎么做，照着做；不改旧约定：有更好的想法也不足以引入不一致。一句话：理解一处就能理解其他地方，失误更少；靠写下约定、自动检查、入乡随俗来保持</desc>
+  <rect width="960" height="452" fill="var(--diagram-bg,#e7eae6)"/>
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <defs><marker id="ch17-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)"/></marker></defs>
     <text x="32.0" y="52.0" font-size="30" font-weight="600">一致性为什么重要，怎么保持？</text>
     <rect x="32.0" y="84.0" width="896.0" height="70.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
     <g transform="translate(52.0,105.0) scale(1.167)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></g>
     <text x="94.0" y="114.0" font-size="20" font-weight="600">目标：相似的事采用相似做法，不同的事采用不同做法</text>
-    <text x="94.0" y="138.0" font-size="15" fill="var(--diagram-muted,#5c645d)">理解了一处的做法，就能立即理解其他地方，还能减少基于错误假设的失误</text>
-    <rect x="32.0" y="172.0" width="210.5" height="206.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <text x="94.0" y="138.0" font-size="15" fill="var(--diagram-muted,#5c645d)">已有知识可以复用，不必从头学习</text>
+    <rect x="32.0" y="172.0" width="210.5" height="162.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)"/>
     <rect x="46.0" y="260" width="182.5" height="1" fill="var(--diagram-line,#aebbad)"/>
     <g transform="translate(46.0,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></g>
     <text x="46.0" y="248.0" font-size="18" font-weight="600">写下约定</text>
-    <text x="46.0" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">把编码风格指南等全局约定</text>
-    <text x="46.0" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">写下来，放在项目维基的显</text>
-    <text x="46.0" y="326.0" font-size="15" fill="var(--diagram-muted,#5c645d)">著位置；不变量这类局部约</text>
-    <text x="46.0" y="348.0" font-size="15" fill="var(--diagram-muted,#5c645d)">定写在代码里</text>
-    <rect x="260.5" y="172.0" width="210.5" height="206.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <text x="46.0" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">全局约定写成文档，局</text>
+    <text x="46.0" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">部约定写进代码</text>
+    <rect x="260.5" y="172.0" width="210.5" height="162.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)"/>
     <rect x="274.5" y="260" width="182.5" height="1" fill="var(--diagram-line,#aebbad)"/>
     <g transform="translate(274.5,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></g>
     <text x="274.5" y="248.0" font-size="18" font-weight="600">自动检查</text>
-    <text x="274.5" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">写工具自动检查违规，通过</text>
-    <text x="274.5" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">才能提交。作者用一个脚本</text>
-    <text x="274.5" y="326.0" font-size="15" fill="var(--diagram-muted,#5c645d)">拦下含回车符的文件，行终</text>
-    <text x="274.5" y="348.0" font-size="15" fill="var(--diagram-muted,#5c645d)">止符问题就此解决</text>
-    <rect x="489.0" y="172.0" width="210.5" height="206.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <text x="274.5" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">写工具自动检查，通过才</text>
+    <text x="274.5" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">能提交</text>
+    <rect x="489.0" y="172.0" width="210.5" height="162.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)"/>
     <rect x="503.0" y="260" width="182.5" height="1" fill="var(--diagram-line,#aebbad)"/>
     <g transform="translate(503.0,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/><circle cx="12" cy="12" r="10"/></g>
     <text x="503.0" y="248.0" font-size="18" font-weight="600">入乡随俗</text>
-    <text x="503.0" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">在新文件里写代码前，先看</text>
-    <text x="503.0" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">现有代码怎么组织：驼峰还</text>
-    <text x="503.0" y="326.0" font-size="15" fill="var(--diagram-muted,#5c645d)">是蛇形命名，公有成员是否</text>
-    <text x="503.0" y="348.0" font-size="15" fill="var(--diagram-muted,#5c645d)">放在前面，照着做</text>
-    <rect x="717.5" y="172.0" width="210.5" height="206.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)"/>
+    <text x="503.0" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">先看现有代码怎么做，</text>
+    <text x="503.0" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">照着做</text>
+    <rect x="717.5" y="172.0" width="210.5" height="162.0" rx="10" fill="var(--diagram-secondary-soft,#dce4ed)"/>
     <rect x="731.5" y="260" width="182.5" height="1" fill="var(--diagram-line,#aebbad)"/>
     <g transform="translate(731.5,188.0) scale(1.333)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></g>
     <text x="731.5" y="248.0" font-size="18" font-weight="600">不改旧约定</text>
-    <text x="731.5" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">有更好的想法也不足以引入</text>
-    <text x="731.5" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">不一致，除非掌握了制定旧</text>
-    <text x="731.5" y="326.0" font-size="15" fill="var(--diagram-muted,#5c645d)">约定时没有的新信息，且值</text>
-    <text x="731.5" y="348.0" font-size="15" fill="var(--diagram-muted,#5c645d)">得更新所有旧用法</text>
-    <rect x="32.0" y="400.0" width="896.0" height="98.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)"/>
-    <text x="50.0" y="421.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句话</text>
-    <text x="50.0" y="451.0" font-size="21" font-weight="600">相似的事用相似做法，读者理解了一处就能理解其他地方；靠文档、自动检查和入乡随俗来</text>
-    <text x="50.0" y="481.0" font-size="21" font-weight="600">保持</text>
+    <text x="731.5" y="282.0" font-size="15" fill="var(--diagram-muted,#5c645d)">有更好的想法也不足以引</text>
+    <text x="731.5" y="304.0" font-size="15" fill="var(--diagram-muted,#5c645d)">入不一致</text>
+    <rect x="32.0" y="356.0" width="896.0" height="68.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="50.0" y="377.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句话</text>
+    <text x="50.0" y="407.0" font-size="21" font-weight="600">理解一处就能理解其他地方，失误更少；靠写下约定、自动检查、入乡随俗来保持</text>
   </g>
 </svg>

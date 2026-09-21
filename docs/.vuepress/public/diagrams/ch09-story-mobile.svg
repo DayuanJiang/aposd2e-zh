@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 1233" role="img" aria-labelledby="ch09-storym-title ch09-storym-desc">
   <title id="ch09-storym-title">从“越小越简单”的直觉，到按复杂性决定组合还是分开</title>
-  <desc id="ch09-storym-desc">本章回顾。从“越小越简单”的直觉，到按复杂性决定组合还是分开。起点：把系统切成很多小组件，每个看起来都更简单，但细分本身有代价。组件多了更难掌握和查找，接口跟着变多；可能要额外代码管理多个对象；原本挨着的代码被分到不同类甚至不同文件，看不到彼此的依赖；还可能出现重复。；判断：四个相关的迹象：共享信息、一起使用、概念重叠、不看一段就读不懂另一段。读取和解析 HTTP 请求都得懂请求格式，合并后代码更短；若把缓冲合进文件流，多数用户不必知道它。“一起使用”要双向成立：块缓存总要用哈希表，哈希表的用途却多得多，应分开。；反例：两次判断失误：光标和所选区域合成一个对象，日志语句拆成单独的类。光标和所选区域合成一个对象后，高层代码仍要分别操作，实现还多了一个布尔值，分开更简单。每条日志只在一处调用，却被拆成单行方法加大段注释，读者要两头来回跳。；分歧：作者与《代码整洁之道》的分歧：方法该多短？。《代码整洁之道》主张函数应该非常短，十行都太长。作者同意短函数通常更易懂，但缩到几十行后继续缩，改善有限；函数太小会失去独立性，成为必须一起读的连体函数。；结论：拆或合，都以复杂性为依据。选择能提供最好的信息隐藏、最少的依赖和最深接口的结构。方法先做到够深，再尽量缩短到易读，不要为了长度牺牲深度。。这一章最想强调的：拆分或组合的依据是复杂性：最好的信息隐藏、最少的依赖、最深的接口 作者不同意仅凭长度拆函数：先让方法足够深，再缩短到易于阅读；重复代码和连体方法都是危险信号</desc>
+  <desc id="ch09-storym-desc">本章回顾。从“越小越简单”的直觉，到按复杂性决定组合还是分开。起点：把系统切成很多小组件，每个看起来都更简单，但细分本身有代价。组件多了更难掌握和查找，接口跟着变多；可能要额外代码管理多个对象；原本挨着的代码被分到不同类甚至不同文件，看不到彼此的依赖；还可能出现重复。；判断：四个相关的迹象：共享信息、一起使用、概念重叠、不看一段就读不懂另一段。读取和解析 HTTP 请求都得懂请求格式，合并后代码更短；若把缓冲合进文件流，多数用户不必知道它。“一起使用”要双向成立：块缓存总要用哈希表，哈希表用途却多得多，应分开。；反例：两次判断失误：光标和所选区域合成一个对象，日志语句拆成单独的类。光标和所选区域合成一个对象后，高层代码仍要分别操作，实现还多了一个布尔值，分开更简单。每个日志方法只在一处调用，却是单行代码加大段注释，读者要两头来回跳。；分歧：作者与《代码整洁之道》的分歧：方法该多短？。《代码整洁之道》主张函数应该非常短，十行都太长。作者同意短函数通常更易懂，但缩到几十行后继续缩，改善有限；函数太小会失去独立性，成为必须一起读的连体函数。；结论：拆或合，都以复杂性为依据。选择能提供最好的信息隐藏、最少的依赖和最深接口的结构。方法先做到够深，再尽量缩短到易读，不要为了长度牺牲深度。。这一章最想强调的：拆分或组合的依据是复杂性：最好的信息隐藏、最少的依赖、最深的接口 作者不同意仅凭长度拆函数：先让方法足够深，再缩短到易于阅读；重复代码和连体方法都是危险信号</desc>
   <rect width="420" height="1233" fill="var(--diagram-bg,#e7eae6)"/>
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <text x="22.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顾</text>
@@ -9,36 +9,36 @@
     <text x="22.0" y="90.0" font-size="21" font-weight="600">决定组合还是分开</text>
     <circle cx="40.0" cy="146.0" r="18" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(31.0,137.0) scale(0.750)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"/><path d="m7 16.5-4.74-2.85"/><path d="m7 16.5 5-3"/><path d="M7 16.5v5.17"/><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"/><path d="m17 16.5-5-3"/><path d="m17 16.5 4.74-2.85"/><path d="M17 16.5v5.17"/><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"/><path d="M12 8 7.26 5.15"/><path d="m12 8 4.74-2.85"/><path d="M12 13.5V8"/></g>
     <text x="76.0" y="134.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起点</text>
-    <text x="76.0" y="158.0" font-size="18" font-weight="600">把系统切成很多小组件，每个看起来都更</text>
-    <text x="76.0" y="182.0" font-size="18" font-weight="600">简单，但细分本身有代价</text>
+    <text x="76.0" y="158.0" font-size="18" font-weight="600">把系统切成很多小组件，每个看起来都</text>
+    <text x="76.0" y="182.0" font-size="18" font-weight="600">更简单，但细分本身有代价</text>
     <text x="76.0" y="208.0" font-size="15">组件多了更难掌握和查找，接口跟着变多；可能</text>
-    <text x="76.0" y="231.0" font-size="15">要额外代码管理多个对象；原本挨着的代码被分</text>
-    <text x="76.0" y="254.0" font-size="15">到不同类甚至不同文件，看不到彼此的依赖；还</text>
-    <text x="76.0" y="277.0" font-size="15">可能出现重复。</text>
+    <text x="76.0" y="231.0" font-size="15">要额外代码管理多个对象；原本挨着的代码</text>
+    <text x="76.0" y="254.0" font-size="15">被分到不同类甚至不同文件，看不到彼此的依</text>
+    <text x="76.0" y="277.0" font-size="15">赖；还可能出现重复。</text>
     <circle cx="40.0" cy="339.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,330.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></g>
     <text x="76.0" y="327.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">判断</text>
     <text x="76.0" y="351.0" font-size="18" font-weight="600">四个相关的迹象：共享信息、一起使用、</text>
     <text x="76.0" y="375.0" font-size="18" font-weight="600">概念重叠、不看一段就读不懂另一段</text>
-    <text x="76.0" y="401.0" font-size="15">读取和解析 HTTP 请求都得懂请求格式，合并后</text>
-    <text x="76.0" y="424.0" font-size="15">代码更短；若把缓冲合进文件流，多数用户不必</text>
-    <text x="76.0" y="447.0" font-size="15">知道它。“一起使用”要双向成立：块缓存总要</text>
-    <text x="76.0" y="470.0" font-size="15">用哈希表，哈希表的用途却多得多，应分开。</text>
+    <text x="76.0" y="401.0" font-size="15">读取和解析 HTTP 请求都得懂请求格式，合并</text>
+    <text x="76.0" y="424.0" font-size="15">后代码更短；若把缓冲合进文件流，多数用户</text>
+    <text x="76.0" y="447.0" font-size="15">不必知道它。“一起使用”要双向成立：块缓存</text>
+    <text x="76.0" y="470.0" font-size="15">总要用哈希表，哈希表用途却多得多，应分开。</text>
     <circle cx="40.0" cy="532.0" r="18" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" stroke-width="2"/><g transform="translate(31.0,523.0) scale(0.750)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></g>
     <text x="76.0" y="520.0" font-size="12" font-weight="600" fill="var(--diagram-danger,#a03946)">反例</text>
-    <text x="76.0" y="544.0" font-size="18" font-weight="600">两次判断失误：光标和所选区域合成一个</text>
-    <text x="76.0" y="568.0" font-size="18" font-weight="600">对象，日志语句拆成单独的类</text>
-    <text x="76.0" y="594.0" font-size="15">光标和所选区域合成一个对象后，高层代码仍要</text>
-    <text x="76.0" y="617.0" font-size="15">分别操作，实现还多了一个布尔值，分开更简单。</text>
-    <text x="76.0" y="640.0" font-size="15">每条日志只在一处调用，却被拆成单行方法加大</text>
-    <text x="76.0" y="663.0" font-size="15">段注释，读者要两头来回跳。</text>
+    <text x="76.0" y="544.0" font-size="18" font-weight="600">两次判断失误：光标和所选区域合成一</text>
+    <text x="76.0" y="568.0" font-size="18" font-weight="600">个对象，日志语句拆成单独的类</text>
+    <text x="76.0" y="594.0" font-size="15">光标和所选区域合成一个对象后，高层代码仍</text>
+    <text x="76.0" y="617.0" font-size="15">要分别操作，实现还多了一个布尔值，分开更简</text>
+    <text x="76.0" y="640.0" font-size="15">单。每个日志方法只在一处调用，却是单行代</text>
+    <text x="76.0" y="663.0" font-size="15">码加大段注释，读者要两头来回跳。</text>
     <circle cx="40.0" cy="725.0" r="18" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2"/><g transform="translate(31.0,716.0) scale(0.750)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></g>
     <text x="76.0" y="713.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">分歧</text>
-    <text x="76.0" y="737.0" font-size="18" font-weight="600">作者与《代码整洁之道》的分歧：方法该</text>
-    <text x="76.0" y="761.0" font-size="18" font-weight="600">多短？</text>
-    <text x="76.0" y="787.0" font-size="15">《代码整洁之道》主张函数应该非常短，十行都</text>
-    <text x="76.0" y="810.0" font-size="15">太长。作者同意短函数通常更易懂，但缩到几十</text>
-    <text x="76.0" y="833.0" font-size="15">行后继续缩，改善有限；函数太小会失去独立性，</text>
-    <text x="76.0" y="856.0" font-size="15">成为必须一起读的连体函数。</text>
+    <text x="76.0" y="737.0" font-size="18" font-weight="600">作者与《代码整洁之道》的分歧：方</text>
+    <text x="76.0" y="761.0" font-size="18" font-weight="600">法该多短？</text>
+    <text x="76.0" y="787.0" font-size="15">《代码整洁之道》主张函数应该非常短，十行</text>
+    <text x="76.0" y="810.0" font-size="15">都太长。作者同意短函数通常更易懂，但缩到几</text>
+    <text x="76.0" y="833.0" font-size="15">十行后继续缩，改善有限；函数太小会失去独立</text>
+    <text x="76.0" y="856.0" font-size="15">性，成为必须一起读的连体函数。</text>
     <circle cx="40.0" cy="918.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,909.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></g>
     <text x="76.0" y="906.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">结论</text>
     <text x="76.0" y="930.0" font-size="18" font-weight="600">拆或合，都以复杂性为依据</text>
@@ -48,10 +48,10 @@
     <rect x="22.0" y="1040.0" width="376.0" height="165.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
     <g transform="translate(40.0,1060.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g>
     <text x="78.0" y="1068.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">这一章最想强调的</text>
-    <text x="78.0" y="1094.0" font-size="18" font-weight="600">拆分或组合的依据是复杂性：最好的信</text>
-    <text x="78.0" y="1118.0" font-size="18" font-weight="600">息隐藏、最少的依赖、最深的接口</text>
+    <text x="78.0" y="1094.0" font-size="18" font-weight="600">拆分或组合的依据是复杂性：最好的</text>
+    <text x="78.0" y="1118.0" font-size="18" font-weight="600">信息隐藏、最少的依赖、最深的接口</text>
     <text x="78.0" y="1142.0" font-size="14" fill="var(--diagram-muted,#5c645d)">作者不同意仅凭长度拆函数：先让方法足够深，</text>
-    <text x="78.0" y="1163.0" font-size="14" fill="var(--diagram-muted,#5c645d)">再缩短到易于阅读；重复代码和连体方法都是危</text>
-    <text x="78.0" y="1184.0" font-size="14" fill="var(--diagram-muted,#5c645d)">险信号</text>
+    <text x="78.0" y="1163.0" font-size="14" fill="var(--diagram-muted,#5c645d)">再缩短到易于阅读；重复代码和连体方法都是</text>
+    <text x="78.0" y="1184.0" font-size="14" fill="var(--diagram-muted,#5c645d)">危险信号</text>
   </g>
 </svg>

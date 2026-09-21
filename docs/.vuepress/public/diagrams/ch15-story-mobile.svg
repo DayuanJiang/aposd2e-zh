@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 1087" role="img" aria-labelledby="ch15-storym-title ch15-storym-desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 1111" role="img" aria-labelledby="ch15-storym-title ch15-storym-desc">
   <title id="ch15-storym-title">从拖到最后补的注释，到用注释检验设计</title>
-  <desc id="ch15-storym-desc">本章回顾。从拖到最后补的注释，到用注释检验设计。起点：几乎所有人都把注释推迟到编码和测试完成之后。理由是代码还在变，等稳定了再写。结果往往是拖到最后根本不写；即使回头补，心思已在下一个项目上，设计时的考虑也记不清了，写出来的多半只是在重复代码。；做法：作者的顺序：类接口注释、方法接口注释和签名、实例变量、方法体。方法体先留空，反复修改接口注释直到基本结构合理。写每个方法体之前先写它的接口注释，这样能专注于抽象和接口，代码写完时注释也写完了。；发现：注释是设计工具：方法需要很长的注释，就是抽象不够好的危险信号。注释是完整描述抽象的唯一方式。接口注释简短又完整，说明接口简单；接口注释必须描述实现的主要特性，说明方法是浅的。先写注释，就能在写实现之前检查和调整抽象。；算账：先写注释不贵，还可能更省时间，而且更有趣。键入代码和注释的时间不到开发总时间的 10%，注释很可能不到 5%，推迟只省下其中一小部分。先写注释让抽象在编码前更稳定，改动更少；作者也觉得这一阶段最有趣。。这一章最想强调的：编写注释的最佳时机是开发之初；先写注释，文档就成了设计过程的一部分 只有完整、清晰的注释才能反映复杂性；描述方法或变量的注释若很难写得简单而完整，设计可能有问题</desc>
-  <rect width="420" height="1087" fill="var(--diagram-bg,#e7eae6)"/>
+  <desc id="ch15-storym-desc">本章回顾。从拖到最后补的注释，到用注释检验设计。起点：作者见过的开发人员几乎都把注释推迟到编码和测试之后。理由是代码还在变，等稳定了再写。结果往往是拖到最后根本不写；即使回头补，心思已在下一个项目上，设计时的考虑也记不清了，写出来的多半只是在重复代码。；做法：作者的顺序：类接口注释、方法接口注释和签名、实例变量、方法体。方法体先留空，反复修改接口注释直到基本结构合理。写每个方法体之前先写它的接口注释，这样能专注于抽象和接口，代码写完时注释也写完了。；发现：注释是设计工具：方法需要很长的注释，就是抽象不够好的危险信号。注释是完整描述抽象的唯一方式。接口注释简短又完整，说明接口简单；接口注释必须描述实现的主要特性，说明方法是浅的。先写注释，就能在写实现之前检查和调整抽象。；算账：先写注释不贵，还可能更省时间，而且更有趣。键入代码和注释不太可能超过开发总时间的约 10%；即使一半代码行是注释，写注释也很可能不到 5%，推迟只省一小部分。先写注释让抽象更早稳定、改动更少；作者也觉得最有趣。。这一章最想强调的：编写注释的最佳时机是开发之初；先写注释，文档就成了设计过程的一部分 只有完整、清晰的注释才能反映复杂性；描述方法或变量的注释若很难写得简单而完整，设计可能有问题</desc>
+  <rect width="420" height="1111" fill="var(--diagram-bg,#e7eae6)"/>
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <text x="22.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顾</text>
     <path d="M40 168 V 703" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2"/>
@@ -9,20 +9,20 @@
     <text x="22.0" y="90.0" font-size="21" font-weight="600">计</text>
     <circle cx="40.0" cy="146.0" r="18" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" stroke-width="2"/><g transform="translate(31.0,137.0) scale(0.750)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></g>
     <text x="76.0" y="134.0" font-size="12" font-weight="600" fill="var(--diagram-danger,#a03946)">起点</text>
-    <text x="76.0" y="158.0" font-size="18" font-weight="600">几乎所有人都把注释推迟到编码和测试完</text>
-    <text x="76.0" y="182.0" font-size="18" font-weight="600">成之后</text>
-    <text x="76.0" y="208.0" font-size="15">理由是代码还在变，等稳定了再写。结果往往是</text>
-    <text x="76.0" y="231.0" font-size="15">拖到最后根本不写；即使回头补，心思已在下一</text>
-    <text x="76.0" y="254.0" font-size="15">个项目上，设计时的考虑也记不清了，写出来的</text>
-    <text x="76.0" y="277.0" font-size="15">多半只是在重复代码。</text>
+    <text x="76.0" y="158.0" font-size="18" font-weight="600">作者见过的开发人员几乎都把注释推迟</text>
+    <text x="76.0" y="182.0" font-size="18" font-weight="600">到编码和测试之后</text>
+    <text x="76.0" y="208.0" font-size="15">理由是代码还在变，等稳定了再写。结果往往</text>
+    <text x="76.0" y="231.0" font-size="15">是拖到最后根本不写；即使回头补，心思已在下</text>
+    <text x="76.0" y="254.0" font-size="15">一个项目上，设计时的考虑也记不清了，写出来</text>
+    <text x="76.0" y="277.0" font-size="15">的多半只是在重复代码。</text>
     <circle cx="40.0" cy="339.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,330.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></g>
     <text x="76.0" y="327.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">做法</text>
-    <text x="76.0" y="351.0" font-size="18" font-weight="600">作者的顺序：类接口注释、方法接口注释</text>
-    <text x="76.0" y="375.0" font-size="18" font-weight="600">和签名、实例变量、方法体</text>
+    <text x="76.0" y="351.0" font-size="18" font-weight="600">作者的顺序：类接口注释、方法接口注</text>
+    <text x="76.0" y="375.0" font-size="18" font-weight="600">释和签名、实例变量、方法体</text>
     <text x="76.0" y="401.0" font-size="15">方法体先留空，反复修改接口注释直到基本结构</text>
     <text x="76.0" y="424.0" font-size="15">合理。写每个方法体之前先写它的接口注释，这</text>
-    <text x="76.0" y="447.0" font-size="15">样能专注于抽象和接口，代码写完时注释也写完</text>
-    <text x="76.0" y="470.0" font-size="15">了。</text>
+    <text x="76.0" y="447.0" font-size="15">样能专注于抽象和接口，代码写完时注释也写</text>
+    <text x="76.0" y="470.0" font-size="15">完了。</text>
     <circle cx="40.0" cy="532.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,523.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></g>
     <text x="76.0" y="520.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">发现</text>
     <text x="76.0" y="544.0" font-size="18" font-weight="600">注释是设计工具：方法需要很长的注释，</text>
@@ -33,19 +33,20 @@
     <text x="76.0" y="663.0" font-size="15">在写实现之前检查和调整抽象。</text>
     <circle cx="40.0" cy="725.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,716.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></g>
     <text x="76.0" y="713.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">算账</text>
-    <text x="76.0" y="737.0" font-size="18" font-weight="600">先写注释不贵，还可能更省时间，而且更</text>
-    <text x="76.0" y="761.0" font-size="18" font-weight="600">有趣</text>
-    <text x="76.0" y="787.0" font-size="15">键入代码和注释的时间不到开发总时间的 10%，</text>
-    <text x="76.0" y="810.0" font-size="15">注释很可能不到 5%，推迟只省下其中一小部分。</text>
-    <text x="76.0" y="833.0" font-size="15">先写注释让抽象在编码前更稳定，改动更少；作</text>
-    <text x="76.0" y="856.0" font-size="15">者也觉得这一阶段最有趣。</text>
-    <rect x="22.0" y="894.0" width="376.0" height="165.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
+    <text x="76.0" y="737.0" font-size="18" font-weight="600">先写注释不贵，还可能更省时间，而且</text>
+    <text x="76.0" y="761.0" font-size="18" font-weight="600">更有趣</text>
+    <text x="76.0" y="787.0" font-size="15">键入代码和注释不太可能超过开发总时间的约</text>
+    <text x="76.0" y="810.0" font-size="15">10%；即使一半代码行是注释，写注释也很可</text>
+    <text x="76.0" y="833.0" font-size="15">能不到 5%，推迟只省一小部分。先写注释让抽</text>
+    <text x="76.0" y="856.0" font-size="15">象更早稳定、改动更少；作者也觉得最有趣。</text>
+    <rect x="22.0" y="894.0" width="376.0" height="189.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
     <g transform="translate(40.0,914.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g>
     <text x="78.0" y="922.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">这一章最想强调的</text>
-    <text x="78.0" y="948.0" font-size="18" font-weight="600">编写注释的最佳时机是开发之初；先写</text>
-    <text x="78.0" y="972.0" font-size="18" font-weight="600">注释，文档就成了设计过程的一部分</text>
-    <text x="78.0" y="996.0" font-size="14" fill="var(--diagram-muted,#5c645d)">只有完整、清晰的注释才能反映复杂性；描述方</text>
-    <text x="78.0" y="1017.0" font-size="14" fill="var(--diagram-muted,#5c645d)">法或变量的注释若很难写得简单而完整，设计可</text>
-    <text x="78.0" y="1038.0" font-size="14" fill="var(--diagram-muted,#5c645d)">能有问题</text>
+    <text x="78.0" y="948.0" font-size="18" font-weight="600">编写注释的最佳时机是开发之初；先</text>
+    <text x="78.0" y="972.0" font-size="18" font-weight="600">写注释，文档就成了设计过程的一部</text>
+    <text x="78.0" y="996.0" font-size="18" font-weight="600">分</text>
+    <text x="78.0" y="1020.0" font-size="14" fill="var(--diagram-muted,#5c645d)">只有完整、清晰的注释才能反映复杂性；描述方</text>
+    <text x="78.0" y="1041.0" font-size="14" fill="var(--diagram-muted,#5c645d)">法或变量的注释若很难写得简单而完整，设计可</text>
+    <text x="78.0" y="1062.0" font-size="14" fill="var(--diagram-muted,#5c645d)">能有问题</text>
   </g>
 </svg>

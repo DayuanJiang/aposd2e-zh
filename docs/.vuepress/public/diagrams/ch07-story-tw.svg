@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 719" role="img" aria-labelledby="ch07-story-title ch07-story-desc">
   <title id="ch07-story-title">從一個幾乎全是透傳方法的類，到每一層都提供不同的抽象</title>
-  <desc id="ch07-story-desc">本章回顧。從一個幾乎全是透傳方法的類，到每一層都提供不同的抽象。起點：學生的文字編輯器裡，一個類 15 個方法有 13 個只是轉調另一個類。TextDocument 的 insertString 只是把參數交給 TextArea 的同名方法。這樣的方法增加了介面卻沒有增加功能，還在兩個類之間建立了依賴：下層改簽名，上層也得改。；判斷：問一句：這兩個類各自負責什麼？。透傳方法說明兩個類的職責劃分不清：插入文字的介面在 TextDocument，實作卻全在 TextArea。介面和實作應放在同一個類裡。學生把三個類調整成兩個，透傳方法就消失了。；推廣：同樣的問題還會出現在裝飾器、類的介面與實作、透傳變數上。為加緩衝單獨包一層 BufferedInputStream，樣板多、方法淺；文字內部按行儲存，介面就照搬按行，類就不深；證書參數從 main 一路傳到 m3，中間方法都得知道它。；做法：讓每個設計元素都消除比它自身更多的複雜性。緩衝直接加進基礎類；介面字元導向，拆行拼行封裝在文字類內部；全域狀態放進上下文物件，只經建構函式傳遞。簽名相同也可以：分發器和同一介面的多種實作都提供了新功能。。這一章最想強調的：每個介面、參數或類都會增加複雜性，只有消除更多複雜性時才值得引入 透傳方法、層層包裝的裝飾器和透傳變數都沒透過這個檢驗；上下文物件也遠非理想，是作者目前找到的最好辦法</desc>
+  <desc id="ch07-story-desc">本章回顧。從一個幾乎全是透傳方法的類，到每一層都提供不同的抽象。起點：學生的文字編輯器裡，一個類 15 個方法有 13 個只是轉調另一個類。TextDocument 的 insertString 只是把參數交給 TextArea 的同名方法。這樣的方法增加了介面卻沒有增加功能，還在兩個類之間建立了依賴：下層改簽名，上層也得改。；判斷：問一句：這兩個類各自負責什麼？。透傳方法說明兩個類的職責劃分不清：插入文字的介面在 TextDocument，實作卻全在 TextArea。介面和實作應放在同一個類裡。學生把三個類調整成兩個，透傳方法就消失了。；推廣：同樣的問題還會出現在裝飾器、類的介面與實作、透傳變數上。為加緩衝單獨包一層 BufferedInputStream，樣板多、方法淺；文字內部按行儲存，介面就照搬按行，類就不深；證書參數從 main 一路傳到 m3，中間方法都得知道它。；做法：讓每個設計元素都消除比它自身更多的複雜性。緩衝直接加進基礎類；介面字元導向，拆行拼行封裝在文字類內部；全域狀態放進上下文物件，只經建構函式傳遞。簽名相同也可以：分發器和同一介面的多種實作都提供了新功能。。這一章最想強調的：每個介面、參數或類都會增加複雜性，只有消除更多複雜性時才值得引入 透傳方法、層層包裝的裝飾器和透傳變數多半通不過這個檢驗；上下文物件也遠非理想，是作者目前找到的最好辦法</desc>
   <rect width="960" height="719" fill="var(--diagram-bg,#e7eae6)" />
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <text x="32.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顧</text>
@@ -9,27 +9,27 @@
     <circle cx="74.0" cy="122.0" r="22" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(63.0,111.0) scale(0.917)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></g>
     <text x="118.0" y="110.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起點</text>
     <text x="118.0" y="134.0" font-size="19" font-weight="600">學生的文字編輯器裡，一個類 15 個方法有 13 個只是轉調另一個類</text>
-    <text x="118.0" y="160.0" font-size="15">TextDocument 的 insertString 只是把參數交給 TextArea 的同名方法。這樣的方法增加了介面卻沒有增加功能，還在</text>
-    <text x="118.0" y="183.0" font-size="15">兩個類之間建立了依賴：下層改簽名，上層也得改。</text>
+    <text x="118.0" y="160.0" font-size="15">TextDocument 的 insertString 只是把參數交給 TextArea 的同名方法。這樣的方法增加了介面卻沒有增加功能，還</text>
+    <text x="118.0" y="183.0" font-size="15">在兩個類之間建立了依賴：下層改簽名，上層也得改。</text>
     <circle cx="74.0" cy="245.0" r="22" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2" /><g transform="translate(63.0,234.0) scale(0.917)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></g>
     <text x="118.0" y="233.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">判斷</text>
     <text x="118.0" y="257.0" font-size="19" font-weight="600">問一句：這兩個類各自負責什麼？</text>
-    <text x="118.0" y="283.0" font-size="15">透傳方法說明兩個類的職責劃分不清：插入文字的介面在 TextDocument，實作卻全在 TextArea。介面和實作應放在同一</text>
-    <text x="118.0" y="306.0" font-size="15">個類裡。學生把三個類調整成兩個，透傳方法就消失了。</text>
-    <circle cx="74.0" cy="368.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,357.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /></g>
-    <text x="118.0" y="356.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">推廣</text>
+    <text x="118.0" y="283.0" font-size="15">透傳方法說明兩個類的職責劃分不清：插入文字的介面在 TextDocument，實作卻全在 TextArea。介面和實作應放在</text>
+    <text x="118.0" y="306.0" font-size="15">同一個類裡。學生把三個類調整成兩個，透傳方法就消失了。</text>
+    <circle cx="74.0" cy="368.0" r="22" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2" /><g transform="translate(63.0,357.0) scale(0.917)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /></g>
+    <text x="118.0" y="356.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">推廣</text>
     <text x="118.0" y="380.0" font-size="19" font-weight="600">同樣的問題還會出現在裝飾器、類的介面與實作、透傳變數上</text>
-    <text x="118.0" y="406.0" font-size="15">為加緩衝單獨包一層 BufferedInputStream，樣板多、方法淺；文字內部按行儲存，介面就照搬按行，類就不深；證書參</text>
-    <text x="118.0" y="429.0" font-size="15">數從 main 一路傳到 m3，中間方法都得知道它。</text>
+    <text x="118.0" y="406.0" font-size="15">為加緩衝單獨包一層 BufferedInputStream，樣板多、方法淺；文字內部按行儲存，介面就照搬按行，類就不深；證</text>
+    <text x="118.0" y="429.0" font-size="15">書參數從 main 一路傳到 m3，中間方法都得知道它。</text>
     <circle cx="74.0" cy="491.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,480.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></g>
     <text x="118.0" y="479.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">做法</text>
     <text x="118.0" y="503.0" font-size="19" font-weight="600">讓每個設計元素都消除比它自身更多的複雜性</text>
-    <text x="118.0" y="529.0" font-size="15">緩衝直接加進基礎類；介面字元導向，拆行拼行封裝在文字類內部；全域狀態放進上下文物件，只經建構函式傳遞。簽名相</text>
-    <text x="118.0" y="552.0" font-size="15">同也可以：分發器和同一介面的多種實作都提供了新功能。</text>
+    <text x="118.0" y="529.0" font-size="15">緩衝直接加進基礎類；介面字元導向，拆行拼行封裝在文字類內部；全域狀態放進上下文物件，只經建構函式傳遞。籤</text>
+    <text x="118.0" y="552.0" font-size="15">名相同也可以：分發器和同一介面的多種實作都提供了新功能。</text>
     <rect x="32.0" y="590.0" width="896.0" height="101.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
     <g transform="translate(50.0,610.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
     <text x="92.0" y="618.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">這一章最想強調的</text>
     <text x="92.0" y="644.0" font-size="20" font-weight="600">每個介面、參數或類都會增加複雜性，只有消除更多複雜性時才值得引入</text>
-    <text x="92.0" y="670.0" font-size="15" fill="var(--diagram-muted,#5c645d)">透傳方法、層層包裝的裝飾器和透傳變數都沒透過這個檢驗；上下文物件也遠非理想，是作者目前找到的最好辦法</text>
+    <text x="92.0" y="670.0" font-size="15" fill="var(--diagram-muted,#5c645d)">透傳方法、層層包裝的裝飾器和透傳變數多半通不過這個檢驗；上下文物件也遠非理想，是作者目前找到的最好辦法</text>
   </g>
 </svg>

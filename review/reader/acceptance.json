@@ -3,12 +3,13 @@
   "scope": {
     "originalContentImagesRecreated": 12,
     "cover": "original raster preserved",
-    "activeTeachingDiagrams": 50,
+    "activeTeachingDiagrams": 94,
     "chaptersCovered": 22,
-    "teachingSvgVariants": 200,
-    "totalActiveSvgAssets": 212,
-    "sourceLockedPythonAdaptations": 44,
-    "retiredDraftDiagrams": 12
+    "teachingSvgVariants": 376,
+    "totalActiveSvgAssets": 388,
+    "sourceLockedPythonAdaptations": 60,
+    "retiredDraftDiagrams": 12,
+    "chapterOpeningMapsAndClosingStorylines": 44
   },
   "contentEvidence": [
     "original-figure-review.json",
@@ -17,7 +18,12 @@
     "diagram-review-15-21-second.json",
     "diagram-review-22-followup.json",
     "traditional-reader-followup.json",
-    "python-review.md"
+    "python-review.md",
+    "chapter-figures-review.json",
+    "chapter-figures-review-01-06.json",
+    "chapter-figures-review-07-11.json",
+    "chapter-figures-review-12-16.json",
+    "chapter-figures-review-17-22.json"
   ],
   "verification": {
     "currentScSvgHashesMatchIndependentReviews": true,
@@ -33,12 +39,23 @@
     "productionPagesBuilt": 76,
     "wholeBookPageStatesPassed": 300,
     "finalScopedPageStatesPassed": 24,
-    "finalScopedChapters": ["ch13", "ch17"],
+    "finalScopedChapters": [
+      "ch13",
+      "ch17"
+    ],
     "finalInteractionSuite": "passed on Vite preview, including rendered B1 correction and mixed-language label",
     "resilienceSuite": "passed",
     "developmentDesktopMobileSmoke": "passed with no console errors",
     "productionAppAsset": "app-UgAVK0Am.js",
-    "productionStyleAsset": "style-j2a0B27N.css"
+    "productionStyleAsset": "style-j2a0B27N.css",
+    "chapterFiguresReview2026-09-21": {
+      "nodeTests": 16,
+      "readerPythonTests": 19,
+      "svgStaticChecks": 388,
+      "svgLightDarkGeometryCandidates": 0,
+      "productionPagesBuilt": 76,
+      "generatorBudgetCheckIncludesTraditionalWidths": true
+    }
   },
   "evidenceLocations": {
     "svgGallery": "/tmp/aposd2e-viz-accepted",
@@ -58,6 +75,7 @@
     "English pages remain the repository's public excerpts; the supplied complete EPUB was used locally for comparison.",
     "Original-vector fonts, stroke textures and tiny flag contours are approximations, not pixel-identical raster reconstructions.",
     "Remote links and authentication flows were not audited.",
-    "No commit, push or deployment was performed."
+    "Chapter opening maps and closing storylines are generated from per-chapter content data; their review is explanatory-design judgment recorded in chapter-figures-review.json.",
+    "Commits and deployment for the 2026-09-21 chapter-figure work were performed by the maintainer's session; earlier acceptance rounds were not committed by their reviewers."
   ]
 }

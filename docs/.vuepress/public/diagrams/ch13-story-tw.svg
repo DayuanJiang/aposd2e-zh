@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 719" role="img" aria-labelledby="ch13-story-title ch13-story-desc">
   <title id="ch13-story-title">從只會重複程式碼的註解，到描述程式碼裡看不出的資訊</title>
-  <desc id="ch13-story-desc">本章回顧。從只會重複程式碼的註解，到描述程式碼裡看不出的資訊。起點：許多註解在重複程式碼，讀者憑旁邊的程式碼就能寫出來。例如 // Add a horizontal scroll bar，或者介面註解只是把方法名和參數名拆成單字再拼成句子。這樣的註解沒有讓程式碼更易理解，也讓一些人認定註解毫無價值。；原則：有用的註解和程式碼的詳細程度不同：更低層級求精確，更高層級助理解。變數註解補上單位、邊界、空值含義、不變條件等細節。方法內部的註解省略細節，說明這段程式碼要做什麼、為什麼需要它，例如“把當前鍵雜湊追加到一個尚未傳送的 RPC”。；介面：介面註解定義抽象，與實作註解分開。IndexLookup 類的原註解寫了用到哪些 RPC 和私有設定參數，使用者並不需要知道；改寫後說明每個實例代表一次範圍查詢和怎樣呼叫它。介面註解若必須描述實作，這個方法就是淺的。；位置：實作註解說做什麼和為什麼；跨模組決策放在開發人員自然會看到的地方。每個主要程式碼塊前，用一句話說明它做什麼，修復缺陷的程式碼要說明為什麼。跨越多個類的決策，放在狀態列舉末尾這類必然會被看到的位置，或集中到 designNotes 檔案。。這一章最想強調的：註解應該描述從程式碼中不易看出的資訊；使用者只讀宣告和註解就能理解模組的抽象 哪些資訊不易看出，要站在第一次讀這段程式碼的人的角度判斷；審查者說難懂，那就是難懂</desc>
+  <desc id="ch13-story-desc">本章回顧。從只會重複程式碼的註解，到描述程式碼裡看不出的資訊。起點：許多註解在重複程式碼，讀者憑旁邊的程式碼就能寫出來。例如 // Add a horizontal scroll bar，或者介面註解只是把方法名和參數名拆成單字再拼成句子。這樣的註解沒有讓程式碼更易理解，也讓一些人認定註解毫無價值。；原則：有用的註解和程式碼的詳細程度不同：更低層級求精確，更高層級助理解。變數註解補上單位、邊界、空值含義、不變條件等細節。更高層級的註解省略細節，說明這段程式碼要做什麼、為什麼需要它，例如“把當前鍵雜湊追加到一個尚未傳送的 RPC”。；介面：介面註解定義抽象，與實作註解分開。IndexLookup 類的原註解寫了用到哪些 RPC 和私有設定參數，使用者不需要知道；改寫後說明每個實例代表一次範圍查詢及怎樣呼叫。介面註解若必須描述實作，這個類或方法就是淺的。；位置：實作註解說做什麼和為什麼；跨模組決策放在開發人員自然會看到的地方。較長方法的每個主要程式碼塊前說明它做什麼；修復缺陷的程式碼若目的不明顯，要說明為什麼。跨多個類的決策放在狀態列舉末尾這類必然會看到的位置，或集中到 designNotes 檔案。。這一章最想強調的：註解應該描述從程式碼中不易看出的資訊；使用者只讀宣告和註解就能理解模組的抽象 哪些資訊不易看出，要站在第一次讀這段程式碼的人的角度判斷；審查者說難懂，那就是難懂</desc>
   <rect width="960" height="719" fill="var(--diagram-bg,#e7eae6)" />
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <text x="32.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顧</text>
@@ -9,23 +9,23 @@
     <circle cx="74.0" cy="122.0" r="22" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" stroke-width="2" /><g transform="translate(63.0,111.0) scale(0.917)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></g>
     <text x="118.0" y="110.0" font-size="12" font-weight="600" fill="var(--diagram-danger,#a03946)">起點</text>
     <text x="118.0" y="134.0" font-size="19" font-weight="600">許多註解在重複程式碼，讀者憑旁邊的程式碼就能寫出來</text>
-    <text x="118.0" y="160.0" font-size="15">例如 // Add a horizontal scroll bar，或者介面註解只是把方法名和參數名拆成單字再拼成句子。這樣的註解沒有讓代</text>
-    <text x="118.0" y="183.0" font-size="15">碼更易理解，也讓一些人認定註解毫無價值。</text>
+    <text x="118.0" y="160.0" font-size="15">例如 // Add a horizontal scroll bar，或者介面註解只是把方法名和參數名拆成單字再拼成句子。這樣的註解沒有讓</text>
+    <text x="118.0" y="183.0" font-size="15">程式碼更易理解，也讓一些人認定註解毫無價值。</text>
     <circle cx="74.0" cy="245.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,234.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /></g>
     <text x="118.0" y="233.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">原則</text>
     <text x="118.0" y="257.0" font-size="19" font-weight="600">有用的註解和程式碼的詳細程度不同：更低層級求精確，更高層級助理解</text>
-    <text x="118.0" y="283.0" font-size="15">變數註解補上單位、邊界、空值含義、不變條件等細節。方法內部的註解省略細節，說明這段程式碼要做什麼、為什麼需要它，</text>
-    <text x="118.0" y="306.0" font-size="15">例如“把當前鍵雜湊追加到一個尚未傳送的 RPC”。</text>
+    <text x="118.0" y="283.0" font-size="15">變數註解補上單位、邊界、空值含義、不變條件等細節。更高層級的註解省略細節，說明這段程式碼要做什麼、為什麼</text>
+    <text x="118.0" y="306.0" font-size="15">需要它，例如“把當前鍵雜湊追加到一個尚未傳送的 RPC”。</text>
     <circle cx="74.0" cy="368.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,357.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /><path d="M12 22V12" /><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7" /><path d="m7.5 4.27 9 5.15" /></g>
     <text x="118.0" y="356.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">介面</text>
     <text x="118.0" y="380.0" font-size="19" font-weight="600">介面註解定義抽象，與實作註解分開</text>
-    <text x="118.0" y="406.0" font-size="15">IndexLookup 類的原註解寫了用到哪些 RPC 和私有設定參數，使用者並不需要知道；改寫後說明每個實例代表一次範圍查</text>
-    <text x="118.0" y="429.0" font-size="15">詢和怎樣呼叫它。介面註解若必須描述實作，這個方法就是淺的。</text>
+    <text x="118.0" y="406.0" font-size="15">IndexLookup 類的原註解寫了用到哪些 RPC 和私有設定參數，使用者不需要知道；改寫後說明每個實例代表一次範圍</text>
+    <text x="118.0" y="429.0" font-size="15">查詢及怎樣呼叫。介面註解若必須描述實作，這個類或方法就是淺的。</text>
     <circle cx="74.0" cy="491.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(63.0,480.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13v8" /><path d="M12 3v3" /><path d="M18 6a2 2 0 0 1 1.387.56l2.307 2.22a1 1 0 0 1 0 1.44l-2.307 2.22A2 2 0 0 1 18 13H6a2 2 0 0 1-1.387-.56l-2.306-2.22a1 1 0 0 1 0-1.44l2.306-2.22A2 2 0 0 1 6 6z" /></g>
     <text x="118.0" y="479.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">位置</text>
     <text x="118.0" y="503.0" font-size="19" font-weight="600">實作註解說做什麼和為什麼；跨模組決策放在開發人員自然會看到的地方</text>
-    <text x="118.0" y="529.0" font-size="15">每個主要程式碼塊前，用一句話說明它做什麼，修復缺陷的程式碼要說明為什麼。跨越多個類的決策，放在狀態列舉末尾這類必</text>
-    <text x="118.0" y="552.0" font-size="15">然會被看到的位置，或集中到 designNotes 檔案。</text>
+    <text x="118.0" y="529.0" font-size="15">較長方法的每個主要程式碼塊前說明它做什麼；修復缺陷的程式碼若目的不明顯，要說明為什麼。跨多個類的決策放在</text>
+    <text x="118.0" y="552.0" font-size="15">狀態列舉末尾這類必然會看到的位置，或集中到 designNotes 檔案。</text>
     <rect x="32.0" y="590.0" width="896.0" height="101.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)" />
     <g transform="translate(50.0,610.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
     <text x="92.0" y="618.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">這一章最想強調的</text>

@@ -3,7 +3,7 @@
 每章一个文件 `chNN.json`。运行 `python3 bin/chapter_figures.py --only chNN` 校验并生成该章的四张 SVG
 （概览桌面版、概览手机版、回顾桌面版、回顾手机版），同时把两条阅读器条目合并进
 `../diagrams/chapter-figures.json`。文字超出版式预算时脚本会报错并指出哪一段太长。
-繁体版由 `tools/localize.py` 之后统一生成，这里只写简体。
+繁体版由 `tools/localize.py` 之后统一生成，这里只写简体。繁体常比简体长（“代码”会变成“程式碼”），所以脚本按简繁两版中较宽者核对预算；请用 `uv run --with opencc==1.4.1 python3 bin/chapter_figures.py --only chNN` 运行，没有 opencc 时脚本只按简体核对。
 
 ## 顶层结构
 
@@ -49,7 +49,7 @@
 | `layers` | 分层，`parts` 从底层到顶层 | 2 到 4 | 可选 `header`、`footer`、`side`、`widths[]` |
 | `cycle` | 循环往复 | 3 到 5 | 可选 `header`、`footer` |
 | `socket` | 一个东西有一个“插口”，几种东西可以插进去 | 3 到 5 | `box: { icon, label, text }`、`socket: { label, text }`、`header`、`footer`，可选 `highlight`（下标）、`bracket: { from, label }` |
-| `axes` | 两个变化方向构成坐标，从一个起点走到一个区域 | 至少 3：前两项是横轴与纵轴，其余是区域内要做的事 | `xTicks[2]`、`yTicks[2]`、`origin: { icon, label, text }`、`arrow`、`region: { label, text }` |
+| `axes` | 两个变化方向构成坐标，从一个起点走到一个区域 | 至少 3：前两项是横轴与纵轴，其余是区域内的要点 | `xTicks[2]`、`yTicks[2]`、`origin: { icon, label, text }`、`arrow`、`region: { label, text, icon? }`，可选 `itemsLabel`（手机版区域要点的小标题，默认“在这里要注意的事”） |
 
 `tone` 可选 `pri`（本章主张，绿）、`sec`（中性，蓝）、`warm`（提醒，棕）、`danger`（反例，红）。
 
@@ -87,3 +87,12 @@
 - 每个判断都要能在本章正文里找到依据；作者带前提的建议，不能写成绝对规则。
 - 术语沿用正文译法（见 `review/translation/glossary.md`）：复杂性、深模块、信息隐藏、通用接口、透传方法、危险信号、通过定义来规避错误 等。
 - 标点用全角，句末可不加句号；不使用破折号。
+
+## 边界说明 `limits`（可选）
+
+审校者写给自己的边界说明（例如“图示不代表实测成本”“本例不证明全部情况”）不进图。需要记录时写在顶层 `limits` 数组里，
+生成脚本会把它原样带进阅读器元数据（`../diagrams/chapter-figures.json`），页面上不显示。
+
+```json
+{ "limits": ["概览中的步骤顺序是整理方式，正文未规定固定顺序"] }
+```

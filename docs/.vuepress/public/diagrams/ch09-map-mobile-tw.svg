@@ -1,48 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 909" role="img" aria-labelledby="ch09m-title ch09m-desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 705" role="img" aria-labelledby="ch09m-title ch09m-desc">
   <title id="ch09m-title">兩個功能放在一起實作，還是分開實作？</title>
-  <desc id="ch09m-desc">本章概覽。兩個功能放在一起實作，還是分開實作？ 本章的主要部分：共享資訊就組合：讀 HTTP 請求的程式碼不解析標頭就找不到結尾，與解析合在一個類裡，程式碼更短；簡化介面就組合：合併後中間傳字串的介面沒了；若把緩衝合進檔案流，多數使用者不必知道緩衝；組合來消除重複：幾種資料包各寫一遍同樣的日誌語句；提取成方法，或用 goto 讓它只留一份；通用與專用分開：文字類提供通用操作；刪除所選區域這類介面操作歸介面模組，否則資訊洩露；方法看深度：拆分多出介面。方法夠深、簽名簡單，幾百行也行；必須一起讀才懂的是連體方法。一句話：依據是整個系統的複雜性：共享資訊或能簡化介面就組合，通用機制與專用程式碼分開，方法先求深再求短</desc>
-  <rect width="420" height="909" fill="var(--diagram-bg,#e7eae6)" />
+  <desc id="ch09m-desc">本章概覽。兩個功能放在一起實作，還是分開實作？ 本章的主要部分：共享資訊就組合：兩段程式碼都要懂同一格式；簡化介面就組合：合併後中間介面消失；組合來消除重複：讓重複的程式碼只留一份；通用與專用分開：介面專用操作歸介面模組；方法看深度：夠深，幾百行也行。一句話：看整個系統的複雜性：共享資訊或簡化介面就組合，通用與專用分開，先求深再求短</desc>
+  <rect width="420" height="705" fill="var(--diagram-bg,#e7eae6)" />
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <defs><marker id="ch09m-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)" /></marker></defs>
-    <text x="22.0" y="44.0" font-size="23" font-weight="600">兩個功能放在一起實作，還是分開實</text>
-    <text x="22.0" y="75.0" font-size="23" font-weight="600">現？</text>
-    <rect x="22.0" y="99.0" width="376.0" height="134.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <text x="22.0" y="44.0" font-size="23" font-weight="600">兩個功能放在一起實作，還是分開</text>
+    <text x="22.0" y="75.0" font-size="23" font-weight="600">實作？</text>
+    <rect x="22.0" y="99.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
     <circle cx="50.0" cy="125.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,117.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></g>
-    <text x="74.0" y="130.0" font-size="18" font-weight="600">目標：整個系統的複雜性最低，資訊</text>
-    <text x="74.0" y="154.0" font-size="18" font-weight="600">隱藏最好、依賴最少、介面最深</text>
-    <text x="74.0" y="179.0" font-size="15" fill="var(--diagram-muted,#5c645d)">細分本身也有代價：元件更多、介面更多、需</text>
-    <text x="74.0" y="201.0" font-size="15" fill="var(--diagram-muted,#5c645d)">要額外的管理程式碼、相關程式碼被分散、還可能</text>
-    <text x="74.0" y="223.0" font-size="15" fill="var(--diagram-muted,#5c645d)">重複</text>
-    <text x="22.0" y="257.0" font-size="16" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">靠什麼支撐</text>
-    <rect x="22.0" y="273.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)" />
-    <circle cx="50.0" cy="299.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(42.0,291.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1" /><rect x="2" y="16" width="6" height="6" rx="1" /><rect x="9" y="2" width="6" height="6" rx="1" /><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" /><path d="M12 12V8" /></g>
-    <text x="74.0" y="304.0" font-size="18" font-weight="600">共享資訊就組合</text>
-    <text x="74.0" y="329.0" font-size="15" fill="var(--diagram-muted,#5c645d)">讀 HTTP 請求的程式碼不解析標頭就找不到結</text>
-    <text x="74.0" y="351.0" font-size="15" fill="var(--diagram-muted,#5c645d)">尾，與解析合在一個類裡，程式碼更短</text>
-    <rect x="22.0" y="371.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)" />
-    <circle cx="50.0" cy="397.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(42.0,389.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-5" /><path d="M9 8V2" /><path d="M15 8V2" /><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z" /></g>
-    <text x="74.0" y="402.0" font-size="18" font-weight="600">簡化介面就組合</text>
-    <text x="74.0" y="427.0" font-size="15" fill="var(--diagram-muted,#5c645d)">合併後中間傳字串的介面沒了；若把緩衝合</text>
-    <text x="74.0" y="449.0" font-size="15" fill="var(--diagram-muted,#5c645d)">進檔案流，多數使用者不必知道緩衝</text>
-    <rect x="22.0" y="469.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)" />
-    <circle cx="50.0" cy="495.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(42.0,487.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5" /><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12" /><path d="m14 16-3 3 3 3" /><path d="M8.293 13.596 7.196 9.5 3.1 10.598" /><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843" /><path d="m13.378 9.633 4.096 1.098 1.097-4.096" /></g>
-    <text x="74.0" y="500.0" font-size="18" font-weight="600">組合來消除重複</text>
-    <text x="74.0" y="525.0" font-size="15" fill="var(--diagram-muted,#5c645d)">幾種資料包各寫一遍同樣的日誌語句；提取成</text>
-    <text x="74.0" y="547.0" font-size="15" fill="var(--diagram-muted,#5c645d)">方法，或用 goto 讓它只留一份</text>
-    <rect x="22.0" y="567.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)" />
-    <circle cx="50.0" cy="593.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(42.0,585.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5" /><path d="M8 3H3v5" /><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3" /><path d="m15 9 6-6" /></g>
-    <text x="74.0" y="598.0" font-size="18" font-weight="600">通用與專用分開</text>
-    <text x="74.0" y="623.0" font-size="15" fill="var(--diagram-muted,#5c645d)">文字類提供通用操作；刪除所選區域這類介面</text>
-    <text x="74.0" y="645.0" font-size="15" fill="var(--diagram-muted,#5c645d)">操作歸介面模組，否則資訊洩露</text>
-    <rect x="22.0" y="665.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)" />
-    <circle cx="50.0" cy="691.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(42.0,683.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4" /><path d="M3.34 19a10 10 0 1 1 17.32 0" /></g>
-    <text x="74.0" y="696.0" font-size="18" font-weight="600">方法看深度</text>
-    <text x="74.0" y="721.0" font-size="15" fill="var(--diagram-muted,#5c645d)">拆分多出介面。方法夠深、簽名簡單，幾百行</text>
-    <text x="74.0" y="743.0" font-size="15" fill="var(--diagram-muted,#5c645d)">也行；必須一起讀才懂的是連體方法</text>
-    <rect x="22.0" y="771.0" width="376.0" height="116.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
-    <text x="36.0" y="792.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
-    <text x="36.0" y="818.0" font-size="17" font-weight="600">依據是整個系統的複雜性：共享資訊或能簡化</text>
-    <text x="36.0" y="844.0" font-size="17" font-weight="600">介面就組合，通用機制與專用程式碼分開，方法</text>
-    <text x="36.0" y="870.0" font-size="17" font-weight="600">先求深再求短</text>
+    <text x="74.0" y="130.0" font-size="18" font-weight="600">目標：整個系統的複雜性最低</text>
+    <text x="74.0" y="155.0" font-size="15" fill="var(--diagram-muted,#5c645d)">細分本身也有代價：元件、介面更多</text>
+    <text x="22.0" y="189.0" font-size="16" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">靠什麼支撐</text>
+    <rect x="22.0" y="205.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)" />
+    <circle cx="50.0" cy="231.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(42.0,223.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1" /><rect x="2" y="16" width="6" height="6" rx="1" /><rect x="9" y="2" width="6" height="6" rx="1" /><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" /><path d="M12 12V8" /></g>
+    <text x="74.0" y="236.0" font-size="18" font-weight="600">共享資訊就組合</text>
+    <text x="74.0" y="261.0" font-size="15" fill="var(--diagram-muted,#5c645d)">兩段程式碼都要懂同一格式</text>
+    <rect x="22.0" y="281.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)" />
+    <circle cx="50.0" cy="307.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(42.0,299.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-5" /><path d="M9 8V2" /><path d="M15 8V2" /><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z" /></g>
+    <text x="74.0" y="312.0" font-size="18" font-weight="600">簡化介面就組合</text>
+    <text x="74.0" y="337.0" font-size="15" fill="var(--diagram-muted,#5c645d)">合併後中間介面消失</text>
+    <rect x="22.0" y="357.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)" />
+    <circle cx="50.0" cy="383.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(42.0,375.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5" /><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12" /><path d="m14 16-3 3 3 3" /><path d="M8.293 13.596 7.196 9.5 3.1 10.598" /><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843" /><path d="m13.378 9.633 4.096 1.098 1.097-4.096" /></g>
+    <text x="74.0" y="388.0" font-size="18" font-weight="600">組合來消除重複</text>
+    <text x="74.0" y="413.0" font-size="15" fill="var(--diagram-muted,#5c645d)">讓重複的程式碼只留一份</text>
+    <rect x="22.0" y="433.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)" />
+    <circle cx="50.0" cy="459.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(42.0,451.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5" /><path d="M8 3H3v5" /><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3" /><path d="m15 9 6-6" /></g>
+    <text x="74.0" y="464.0" font-size="18" font-weight="600">通用與專用分開</text>
+    <text x="74.0" y="489.0" font-size="15" fill="var(--diagram-muted,#5c645d)">介面專用操作歸介面模組</text>
+    <rect x="22.0" y="509.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-secondary-soft,#dce4ed)" />
+    <circle cx="50.0" cy="535.0" r="14" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" /><g transform="translate(42.0,527.0) scale(0.667)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4" /><path d="M3.34 19a10 10 0 1 1 17.32 0" /></g>
+    <text x="74.0" y="540.0" font-size="18" font-weight="600">方法看深度</text>
+    <text x="74.0" y="565.0" font-size="15" fill="var(--diagram-muted,#5c645d)">夠深，幾百行也行</text>
+    <rect x="22.0" y="593.0" width="376.0" height="90.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <text x="36.0" y="614.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
+    <text x="36.0" y="640.0" font-size="17" font-weight="600">看整個系統的複雜性：共享資訊或簡化介面</text>
+    <text x="36.0" y="666.0" font-size="17" font-weight="600">就組合，通用與專用分開，先求深再求短</text>
   </g>
 </svg>

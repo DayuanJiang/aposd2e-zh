@@ -1,35 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 444" role="img" aria-labelledby="ch15-title ch15-desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 398" role="img" aria-labelledby="ch15-title ch15-desc">
   <title id="ch15-title">註解應該在什麼時候寫？</title>
-  <desc id="ch15-desc">本章概覽。註解應該在什麼時候寫？ 本章的主要部分：類介面註解：先用註解寫清這個類提供什麼抽象；方法介面註解：為最重要的公有方法寫介面註解和簽名，方法體留空，反覆修改到結構合理；實例變數：為最重要的實例變數寫宣告，同時寫好註解；方法體：最後寫方法體和需要的實作註解；新發現的方法也先寫介面註解。一句話：在寫程式碼之初就寫：先寫類和方法的介面註解，再寫方法體，註解就成了設計過程的一部分</desc>
-  <rect width="960" height="444" fill="var(--diagram-bg,#e7eae6)" />
+  <desc id="ch15-desc">本章概覽。註解應該在什麼時候寫？ 本章的主要部分：類介面註解：先用註解寫清這個類提供什麼抽象；方法介面註解和簽名：從最重要的公有方法開始，方法體留空；實例變數：為最重要的實例變數寫宣告和註解；方法體：最後寫方法體和需要的實作註解。一句話：在寫程式碼之初就寫：先寫介面註解，再寫方法體，註解就成了設計過程的一部分</desc>
+  <rect width="960" height="398" fill="var(--diagram-bg,#e7eae6)" />
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <defs><marker id="ch15-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)" /></marker></defs>
     <text x="32.0" y="52.0" font-size="30" font-weight="600">註解應該在什麼時候寫？</text>
-    <text x="32.0" y="94.0" font-size="15" fill="var(--diagram-muted,#5c645d)">作者寫一個新類的順序。程式碼寫完時註解也寫完了，沒有積壓待補的註解</text>
+    <text x="32.0" y="94.0" font-size="15" fill="var(--diagram-muted,#5c645d)">作者寫一個新類的順序</text>
     <circle cx="134.2" cy="150.0" r="30" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(119.2,135.0) scale(1.250)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /><path d="M12 22V12" /><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7" /><path d="m7.5 4.27 9 5.15" /></g>
     <text x="134.2" y="210.0" font-size="18" font-weight="600" text-anchor="middle">類介面註解</text>
     <text x="134.2" y="236.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">先用註解寫清這個類提供什</text>
     <text x="134.2" y="258.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">麼抽象</text>
     <path d="M240.5 150.0 L258.5 150.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch15-arrow)" />
     <circle cx="364.8" cy="150.0" r="30" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(349.8,135.0) scale(1.250)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v4a2 2 0 0 0 2 2h4" /><path d="M10 9H8" /><path d="M16 13H8" /><path d="M16 17H8" /></g>
-    <text x="364.8" y="210.0" font-size="18" font-weight="600" text-anchor="middle">方法介面註解</text>
-    <text x="364.8" y="236.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">為最重要的公有方法寫介面</text>
-    <text x="364.8" y="258.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">註解和簽名，方法體留空，</text>
-    <text x="364.8" y="280.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">反覆修改到結構合理</text>
+    <text x="364.8" y="210.0" font-size="18" font-weight="600" text-anchor="middle">方法介面註解和簽名</text>
+    <text x="364.8" y="236.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">從最重要的公有方法開始，</text>
+    <text x="364.8" y="258.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">方法體留空</text>
     <path d="M471.0 150.0 L489.0 150.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch15-arrow)" />
     <circle cx="595.2" cy="150.0" r="30" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(580.2,135.0) scale(1.250)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5V19A9 3 0 0 0 21 19V5" /><path d="M3 12A9 3 0 0 0 21 12" /></g>
     <text x="595.2" y="210.0" font-size="18" font-weight="600" text-anchor="middle">實例變數</text>
-    <text x="595.2" y="236.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">為最重要的實例變數寫宣告，</text>
-    <text x="595.2" y="258.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">同時寫好註解</text>
+    <text x="595.2" y="236.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">為最重要的實例變數寫宣告</text>
+    <text x="595.2" y="258.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">和註解</text>
     <path d="M701.5 150.0 L719.5 150.0" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2" marker-end="url(#ch15-arrow)" />
     <circle cx="825.8" cy="150.0" r="30" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(810.8,135.0) scale(1.250)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></g>
     <text x="825.8" y="210.0" font-size="18" font-weight="600" text-anchor="middle">方法體</text>
     <text x="825.8" y="236.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">最後寫方法體和需要的實作</text>
-    <text x="825.8" y="258.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">註解；新發現的方法也先寫</text>
-    <text x="825.8" y="280.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">介面註解</text>
-    <text x="32.0" y="316.0" font-size="14" fill="var(--diagram-muted,#5c645d)">好處：註解更準確；註解難寫就是抽象不夠好的危險訊號；工作更有趣。寫註解的時間很可能不超過開發總時間的 5%</text>
-    <rect x="32.0" y="348.0" width="896.0" height="68.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
-    <text x="50.0" y="369.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
-    <text x="50.0" y="399.0" font-size="21" font-weight="600">在寫程式碼之初就寫：先寫類和方法的介面註解，再寫方法體，註解就成了設計過程的一部分</text>
+    <text x="825.8" y="258.0" font-size="15" fill="var(--diagram-muted,#5c645d)" text-anchor="middle">註解</text>
+    <rect x="32.0" y="302.0" width="896.0" height="68.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <text x="50.0" y="323.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
+    <text x="50.0" y="353.0" font-size="21" font-weight="600">在寫程式碼之初就寫：先寫介面註解，再寫方法體，註解就成了設計過程的一部分</text>
   </g>
 </svg>

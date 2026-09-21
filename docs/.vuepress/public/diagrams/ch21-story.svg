@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 719" role="img" aria-labelledby="ch21-story-title ch21-story-desc">
   <title id="ch21-story-title">从一个接口该不该知道退格键，到什么是好品味</title>
-  <desc id="ch21-story-desc">本章回顾。从一个接口该不该知道退格键，到什么是好品味。起点：文本类需要知道用户按了退格键吗？。文本类只需要知道要删除一段字符；调用者是因为退格还是别的原因并不重要。通用的插入删除接口解决很多问题，专用的退格方法只解决一个：收益更广的做法，往往更重要。；问题：两类错误：把太多事看成重要，或漏掉真正重要的事。Java 的 I/O 接口迫使开发人员区分缓冲与非缓冲，而这个区别几乎从来不重要，结果是浅类。没认出重要的事，则会隐藏重要信息或缺少重要功能，开发人员只能反复实现。；做法：重要的事要少，而且醒目、重复、处于核心地位。先减少要关注的事：构造对象少要参数、给默认值，异常在低层处理完。真正重要的，放进接口文档、名称、常用参数，让它反复出现，并处于核心地位，例如设备驱动接口。；结论：看不出什么重要时，先假设，再从结果中学。先提出“我认为这是最重要的”，据此构建系统看效果。对了，想想当时有什么线索；错了也没关系，想想哪些线索本可以避免这个选择。区分重要与不重要的能力，就是“好品味”。。这一章最想强调的：围绕重要的事设计系统：重要的加以强调，不重要的尽可能隐藏 这个想法也适用于写文档和生活：先确定几件最重要的事，把精力尽可能放在上面</desc>
+  <desc id="ch21-story-desc">本章回顾。从一个接口该不该知道退格键，到什么是好品味。起点：文本类需要知道用户按了退格键吗？。文本类只需要知道要删除一段字符；调用者是因为退格还是别的原因并不重要。通用的插入删除接口解决很多问题，专用的退格方法只解决一个：收益更广的做法，往往更重要。；问题：两类错误：把太多事看成重要，或漏掉真正重要的事。Java 的 I/O 接口迫使开发人员区分缓冲与非缓冲，而这个区别几乎从来不重要，往往导致浅类。没认出重要的事，则会隐藏重要信息或缺少重要功能，开发人员只能反复实现。；做法：重要的事要少，而且醒目、重复、处于核心地位。先减少要关注的事：构造对象少要参数、给默认值，异常在低层处理完。真正重要的，放进接口文档、名称、常用参数，让它反复出现，并处于核心地位，例如设备驱动接口。；结论：看不出什么重要时，先假设，再从结果中学。先提出“我认为这是最重要的”，据此构建系统看效果。对了，想想当时有什么线索；错了也没关系，想想哪些线索本可以避免这个选择。区分重要与不重要的能力，就是“好品味”。。这一章最想强调的：围绕重要的事设计系统：重要的加以强调，不重要的尽可能隐藏 这个想法也适用于写文档和生活：先确定几件最重要的事，把精力尽可能放在上面</desc>
   <rect width="960" height="719" fill="var(--diagram-bg,#e7eae6)"/>
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <text x="32.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顾</text>
@@ -9,23 +9,23 @@
     <circle cx="74.0" cy="122.0" r="22" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(63.0,111.0) scale(0.917)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></g>
     <text x="118.0" y="110.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起点</text>
     <text x="118.0" y="134.0" font-size="19" font-weight="600">文本类需要知道用户按了退格键吗？</text>
-    <text x="118.0" y="160.0" font-size="15">文本类只需要知道要删除一段字符；调用者是因为退格还是别的原因并不重要。通用的插入删除接口解决很多问题，专用的</text>
-    <text x="118.0" y="183.0" font-size="15">退格方法只解决一个：收益更广的做法，往往更重要。</text>
+    <text x="118.0" y="160.0" font-size="15">文本类只需要知道要删除一段字符；调用者是因为退格还是别的原因并不重要。通用的插入删除接口解决很多问题，专</text>
+    <text x="118.0" y="183.0" font-size="15">用的退格方法只解决一个：收益更广的做法，往往更重要。</text>
     <circle cx="74.0" cy="245.0" r="22" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2"/><g transform="translate(63.0,234.0) scale(0.917)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></g>
     <text x="118.0" y="233.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">问题</text>
     <text x="118.0" y="257.0" font-size="19" font-weight="600">两类错误：把太多事看成重要，或漏掉真正重要的事</text>
-    <text x="118.0" y="283.0" font-size="15">Java 的 I/O 接口迫使开发人员区分缓冲与非缓冲，而这个区别几乎从来不重要，结果是浅类。没认出重要的事，则会隐藏</text>
-    <text x="118.0" y="306.0" font-size="15">重要信息或缺少重要功能，开发人员只能反复实现。</text>
+    <text x="118.0" y="283.0" font-size="15">Java 的 I/O 接口迫使开发人员区分缓冲与非缓冲，而这个区别几乎从来不重要，往往导致浅类。没认出重要的事，则</text>
+    <text x="118.0" y="306.0" font-size="15">会隐藏重要信息或缺少重要功能，开发人员只能反复实现。</text>
     <circle cx="74.0" cy="368.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(63.0,357.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g>
     <text x="118.0" y="356.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">做法</text>
     <text x="118.0" y="380.0" font-size="19" font-weight="600">重要的事要少，而且醒目、重复、处于核心地位</text>
-    <text x="118.0" y="406.0" font-size="15">先减少要关注的事：构造对象少要参数、给默认值，异常在低层处理完。真正重要的，放进接口文档、名称、常用参数，让</text>
-    <text x="118.0" y="429.0" font-size="15">它反复出现，并处于核心地位，例如设备驱动接口。</text>
+    <text x="118.0" y="406.0" font-size="15">先减少要关注的事：构造对象少要参数、给默认值，异常在低层处理完。真正重要的，放进接口文档、名称、常用参</text>
+    <text x="118.0" y="429.0" font-size="15">数，让它反复出现，并处于核心地位，例如设备驱动接口。</text>
     <circle cx="74.0" cy="491.0" r="22" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(63.0,480.0) scale(0.917)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></g>
     <text x="118.0" y="479.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">结论</text>
     <text x="118.0" y="503.0" font-size="19" font-weight="600">看不出什么重要时，先假设，再从结果中学</text>
-    <text x="118.0" y="529.0" font-size="15">先提出“我认为这是最重要的”，据此构建系统看效果。对了，想想当时有什么线索；错了也没关系，想想哪些线索本可以</text>
-    <text x="118.0" y="552.0" font-size="15">避免这个选择。区分重要与不重要的能力，就是“好品味”。</text>
+    <text x="118.0" y="529.0" font-size="15">先提出“我认为这是最重要的”，据此构建系统看效果。对了，想想当时有什么线索；错了也没关系，想想哪些线索本</text>
+    <text x="118.0" y="552.0" font-size="15">可以避免这个选择。区分重要与不重要的能力，就是“好品味”。</text>
     <rect x="32.0" y="590.0" width="896.0" height="101.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
     <g transform="translate(50.0,610.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g>
     <text x="92.0" y="618.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">这一章最想强调的</text>

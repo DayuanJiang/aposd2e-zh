@@ -1,57 +1,57 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 1280" role="img" aria-labelledby="ch19-storym-title ch19-storym-desc">
   <title id="ch19-storym-title">从继承到 Getter：流行趋势是否真的降低复杂性</title>
-  <desc id="ch19-storym-desc">本章回顾。从继承到 Getter：流行趋势是否真的降低复杂性。起点：每种趋势只问一个问题：它有助于降低复杂性吗？。面向对象、敏捷、单元测试、测试驱动开发、设计模式、Getter 和 Setter，作者逐一用本书的原则评估。许多提案表面上听起来不错，深入研究后有些反而增加复杂性。；继承：接口继承降低复杂性，实现继承要谨慎。同一个 I/O 接口既能读写磁盘文件也能通过网络套接字通信，实现越多接口越深。实现继承让父类和子类共享实例变量，改一个类要检查整个类层次；先考虑用辅助类组合。；测试：单元测试让开发人员敢于重构，作者坚决拥护。没有测试套件，重大结构调整很危险，开发人员会避免重构。Tcl 把解释器换成字节码编译器时，现有单元测试发现了新引擎的大多数缺陷，alpha 版发布后只发现一个。；风险：敏捷和测试驱动开发都容易变成战术式编程。敏捷把注意力集中在功能上，推迟设计决策；测试驱动开发忙于让下一个测试通过，没有明确的时机做设计。增量开发是好主意，但增量应是抽象；只有修缺陷时先写测试很合理。；过度：设计模式和 Getter/Setter：好方法也会被过度使用。适合的设计模式往往比自己从头设计更整洁；如果自己的方案更整洁，就不要硬套。Getter 和 Setter 是只有一行的浅方法，让类接口杂乱；最好一开始就避免公开实例变量。。这一章最想强调的：遇到新的开发范式，都从复杂性的角度审视：它真的有助于降低大型系统的复杂性吗 许多提案表面上听起来不错，深入研究后有些反而增加复杂性；一种方法是好方法，并不意味着用得越多越好</desc>
+  <desc id="ch19-storym-desc">本章回顾。从继承到 Getter：流行趋势是否真的降低复杂性。起点：每种趋势只问一个问题：它有助于降低复杂性吗？。面向对象、敏捷、单元测试、测试驱动开发、设计模式、Getter 和 Setter，作者逐一用本书的原则评估。许多提案表面上听起来不错，深入研究后有些反而增加复杂性。；继承：接口继承降低复杂性，实现继承要谨慎。同一个 I/O 接口既能读写磁盘文件也能通过网络套接字通信，实现越多接口越深。实现继承让父类和子类共享实例变量，改一处可能要连带检查其他类；先考虑用辅助类组合。；测试：单元测试让开发人员敢于重构，作者坚决拥护。没有测试套件，重大结构调整很危险，开发人员往往会避免重构。Tcl 把解释器换成字节码编译器时，现有单元测试非常有效地找出了新引擎的缺陷，alpha 版发布后只发现一个。；风险：敏捷和测试驱动开发都容易变成战术式编程。敏捷把注意力集中在功能上，推迟设计决策；测试驱动开发忙于让下一个测试通过，没有明确的时机做设计。增量开发通常是好主意，但增量应是抽象；修缺陷时先写测试则很合理。；过度：设计模式和 Getter、Setter：好方法也会被过度使用。适合的设计模式往往比自己从头设计更整洁；如果自己的方案更整洁，就不要硬套。Getter 和 Setter 是通常只有一行的浅方法，让类接口杂乱；最好一开始就避免公开实例变量。。这一章最想强调的：遇到新的开发范式，都从复杂性的角度审视：它真的有助于降低大型系统的复杂性吗 许多提案表面上听起来不错，深入研究后有些反而增加复杂性；一种方法是好方法，并不意味着用得越多越好</desc>
   <rect width="420" height="1280" fill="var(--diagram-bg,#e7eae6)"/>
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <text x="22.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顾</text>
     <path d="M40 168 V 872" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2"/>
-    <text x="22.0" y="62.0" font-size="21" font-weight="600">从继承到 Getter：流行趋势是否真的降</text>
-    <text x="22.0" y="90.0" font-size="21" font-weight="600">低复杂性</text>
+    <text x="22.0" y="62.0" font-size="21" font-weight="600">从继承到 Getter：流行趋势是否真的</text>
+    <text x="22.0" y="90.0" font-size="21" font-weight="600">降低复杂性</text>
     <circle cx="40.0" cy="146.0" r="18" fill="var(--diagram-secondary-soft,#dce4ed)" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2"/><g transform="translate(31.0,137.0) scale(0.750)" fill="none" stroke="var(--diagram-secondary,#2c6096)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/><circle cx="12" cy="12" r="10"/></g>
     <text x="76.0" y="134.0" font-size="12" font-weight="600" fill="var(--diagram-secondary,#2c6096)">起点</text>
-    <text x="76.0" y="158.0" font-size="18" font-weight="600">每种趋势只问一个问题：它有助于降低复</text>
-    <text x="76.0" y="182.0" font-size="18" font-weight="600">杂性吗？</text>
+    <text x="76.0" y="158.0" font-size="18" font-weight="600">每种趋势只问一个问题：它有助于降低</text>
+    <text x="76.0" y="182.0" font-size="18" font-weight="600">复杂性吗？</text>
     <text x="76.0" y="208.0" font-size="15">面向对象、敏捷、单元测试、测试驱动开发、设</text>
-    <text x="76.0" y="231.0" font-size="15">计模式、Getter 和 Setter，作者逐一用本书的</text>
-    <text x="76.0" y="254.0" font-size="15">原则评估。许多提案表面上听起来不错，深入研</text>
-    <text x="76.0" y="277.0" font-size="15">究后有些反而增加复杂性。</text>
+    <text x="76.0" y="231.0" font-size="15">计模式、Getter 和 Setter，作者逐一用本书</text>
+    <text x="76.0" y="254.0" font-size="15">的原则评估。许多提案表面上听起来不错，深入</text>
+    <text x="76.0" y="277.0" font-size="15">研究后有些反而增加复杂性。</text>
     <circle cx="40.0" cy="339.0" r="18" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2"/><g transform="translate(31.0,330.0) scale(0.750)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></g>
     <text x="76.0" y="327.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">继承</text>
     <text x="76.0" y="351.0" font-size="18" font-weight="600">接口继承降低复杂性，实现继承要谨慎</text>
-    <text x="76.0" y="377.0" font-size="15">同一个 I/O 接口既能读写磁盘文件也能通过网络</text>
-    <text x="76.0" y="400.0" font-size="15">套接字通信，实现越多接口越深。实现继承让父</text>
-    <text x="76.0" y="423.0" font-size="15">类和子类共享实例变量，改一个类要检查整个类</text>
-    <text x="76.0" y="446.0" font-size="15">层次；先考虑用辅助类组合。</text>
+    <text x="76.0" y="377.0" font-size="15">同一个 I/O 接口既能读写磁盘文件也能通过网</text>
+    <text x="76.0" y="400.0" font-size="15">络套接字通信，实现越多接口越深。实现继承让</text>
+    <text x="76.0" y="423.0" font-size="15">父类和子类共享实例变量，改一处可能要连带检</text>
+    <text x="76.0" y="446.0" font-size="15">查其他类；先考虑用辅助类组合。</text>
     <circle cx="40.0" cy="508.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,499.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2v17.5c0 1.4-1.1 2.5-2.5 2.5c-1.4 0-2.5-1.1-2.5-2.5V2"/><path d="M8.5 2h7"/><path d="M14.5 16h-5"/></g>
     <text x="76.0" y="496.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">测试</text>
-    <text x="76.0" y="520.0" font-size="18" font-weight="600">单元测试让开发人员敢于重构，作者坚决</text>
-    <text x="76.0" y="544.0" font-size="18" font-weight="600">拥护</text>
+    <text x="76.0" y="520.0" font-size="18" font-weight="600">单元测试让开发人员敢于重构，作者坚</text>
+    <text x="76.0" y="544.0" font-size="18" font-weight="600">决拥护</text>
     <text x="76.0" y="570.0" font-size="15">没有测试套件，重大结构调整很危险，开发人员</text>
-    <text x="76.0" y="593.0" font-size="15">会避免重构。Tcl 把解释器换成字节码编译器时，</text>
-    <text x="76.0" y="616.0" font-size="15">现有单元测试发现了新引擎的大多数缺陷，alpha</text>
-    <text x="76.0" y="639.0" font-size="15">版发布后只发现一个。</text>
+    <text x="76.0" y="593.0" font-size="15">往往会避免重构。Tcl 把解释器换成字节码编</text>
+    <text x="76.0" y="616.0" font-size="15">译器时，现有单元测试非常有效地找出了新引擎</text>
+    <text x="76.0" y="639.0" font-size="15">的缺陷，alpha 版发布后只发现一个。</text>
     <circle cx="40.0" cy="701.0" r="18" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2"/><g transform="translate(31.0,692.0) scale(0.750)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></g>
     <text x="76.0" y="689.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">风险</text>
-    <text x="76.0" y="713.0" font-size="18" font-weight="600">敏捷和测试驱动开发都容易变成战术式编</text>
-    <text x="76.0" y="737.0" font-size="18" font-weight="600">程</text>
+    <text x="76.0" y="713.0" font-size="18" font-weight="600">敏捷和测试驱动开发都容易变成战术式</text>
+    <text x="76.0" y="737.0" font-size="18" font-weight="600">编程</text>
     <text x="76.0" y="763.0" font-size="15">敏捷把注意力集中在功能上，推迟设计决策；测</text>
     <text x="76.0" y="786.0" font-size="15">试驱动开发忙于让下一个测试通过，没有明确的</text>
-    <text x="76.0" y="809.0" font-size="15">时机做设计。增量开发是好主意，但增量应是抽</text>
-    <text x="76.0" y="832.0" font-size="15">象；只有修缺陷时先写测试很合理。</text>
+    <text x="76.0" y="809.0" font-size="15">时机做设计。增量开发通常是好主意，但增量应</text>
+    <text x="76.0" y="832.0" font-size="15">是抽象；修缺陷时先写测试则很合理。</text>
     <circle cx="40.0" cy="894.0" r="18" fill="var(--diagram-warm-soft,#eae2cf)" stroke="var(--diagram-warm,#80531b)" stroke-width="2"/><g transform="translate(31.0,885.0) scale(0.750)" fill="none" stroke="var(--diagram-warm,#80531b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"/><path d="m7 16.5-4.74-2.85"/><path d="m7 16.5 5-3"/><path d="M7 16.5v5.17"/><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"/><path d="m17 16.5-5-3"/><path d="m17 16.5 4.74-2.85"/><path d="M17 16.5v5.17"/><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"/><path d="M12 8 7.26 5.15"/><path d="m12 8 4.74-2.85"/><path d="M12 13.5V8"/></g>
     <text x="76.0" y="882.0" font-size="12" font-weight="600" fill="var(--diagram-warm,#80531b)">过度</text>
-    <text x="76.0" y="906.0" font-size="18" font-weight="600">设计模式和 Getter/Setter：好方法也</text>
-    <text x="76.0" y="930.0" font-size="18" font-weight="600">会被过度使用</text>
+    <text x="76.0" y="906.0" font-size="18" font-weight="600">设计模式和 Getter、Setter：好方法</text>
+    <text x="76.0" y="930.0" font-size="18" font-weight="600">也会被过度使用</text>
     <text x="76.0" y="956.0" font-size="15">适合的设计模式往往比自己从头设计更整洁；如</text>
     <text x="76.0" y="979.0" font-size="15">果自己的方案更整洁，就不要硬套。Getter 和</text>
-    <text x="76.0" y="1002.0" font-size="15">Setter 是只有一行的浅方法，让类接口杂乱；最</text>
-    <text x="76.0" y="1025.0" font-size="15">好一开始就避免公开实例变量。</text>
+    <text x="76.0" y="1002.0" font-size="15">Setter 是通常只有一行的浅方法，让类接口杂</text>
+    <text x="76.0" y="1025.0" font-size="15">乱；最好一开始就避免公开实例变量。</text>
     <rect x="22.0" y="1063.0" width="376.0" height="189.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
     <g transform="translate(40.0,1083.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g>
     <text x="78.0" y="1091.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">这一章最想强调的</text>
-    <text x="78.0" y="1117.0" font-size="18" font-weight="600">遇到新的开发范式，都从复杂性的角度</text>
-    <text x="78.0" y="1141.0" font-size="18" font-weight="600">审视：它真的有助于降低大型系统的复</text>
-    <text x="78.0" y="1165.0" font-size="18" font-weight="600">杂性吗</text>
+    <text x="78.0" y="1117.0" font-size="18" font-weight="600">遇到新的开发范式，都从复杂性的角</text>
+    <text x="78.0" y="1141.0" font-size="18" font-weight="600">度审视：它真的有助于降低大型系统</text>
+    <text x="78.0" y="1165.0" font-size="18" font-weight="600">的复杂性吗</text>
     <text x="78.0" y="1189.0" font-size="14" fill="var(--diagram-muted,#5c645d)">许多提案表面上听起来不错，深入研究后有些反</text>
     <text x="78.0" y="1210.0" font-size="14" fill="var(--diagram-muted,#5c645d)">而增加复杂性；一种方法是好方法，并不意味着</text>
     <text x="78.0" y="1231.0" font-size="14" fill="var(--diagram-muted,#5c645d)">用得越多越好</text>

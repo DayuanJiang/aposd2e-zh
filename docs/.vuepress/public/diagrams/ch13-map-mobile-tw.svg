@@ -1,35 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 656" role="img" aria-labelledby="ch13m-title ch13m-desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 446" role="img" aria-labelledby="ch13m-title ch13m-desc">
   <title id="ch13m-title">註解應該描述什麼資訊？</title>
-  <desc id="ch13m-desc">本章概覽。註解應該描述什麼資訊？ 本章的主要部分：更低層級：提高精確度：補上宣告沒說的細節：單位是畫素還是字元、範圍是否包含邊界、空值代表什麼、誰負責釋放資源；與程式碼同一層級：重複程式碼：讀者從旁邊程式碼就能看出的資訊，例如“新增水平捲軸”，或者只是重複方法名裡的詞；更高層級：增強直覺：省略細節，說明這段程式碼要做什麼、為什麼需要它，例如“把當前鍵雜湊追加到一個尚未傳送的 RPC”。一句話：描述從程式碼中不易看出的資訊：要麼比程式碼更詳細以求精確，要麼比程式碼更抽象以幫助理解</desc>
-  <rect width="420" height="656" fill="var(--diagram-bg,#e7eae6)" />
+  <desc id="ch13m-desc">本章概覽。註解應該描述什麼資訊？ 本章的主要部分：比程式碼更詳細：提高精確度，補上單位、邊界、空值等細節；與程式碼同一層級：只是重複程式碼，例如“新增水平捲軸”；比程式碼更抽象：省略細節，說明程式碼要做什麼和為什麼。一句話：描述從程式碼中不易看出的資訊：比程式碼更詳細以求精確，或更抽象以幫助理解</desc>
+  <rect width="420" height="446" fill="var(--diagram-bg,#e7eae6)" />
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <defs><marker id="ch13m-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L9 5L1 9Z" fill="var(--diagram-line,#aebbad)" /></marker></defs>
     <text x="22.0" y="44.0" font-size="23" font-weight="600">註解應該描述什麼資訊？</text>
-    <text x="22.0" y="80.0" font-size="13" fill="var(--diagram-muted,#5c645d)">註解靠提供與程式碼不同詳細程度的資訊來補充程式碼；和程式碼處在</text>
-    <text x="22.0" y="100.0" font-size="13" fill="var(--diagram-muted,#5c645d)">同一詳細程度的註解，多半在重複程式碼</text>
-    <text x="22.0" y="132.0" font-size="16" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">從上到下</text>
-    <rect x="22.0" y="148.0" width="376.0" height="110.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
-    <circle cx="50.0" cy="174.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,166.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></g>
-    <text x="74.0" y="179.0" font-size="18" font-weight="600">更高層級：增強直覺</text>
-    <text x="74.0" y="204.0" font-size="15" fill="var(--diagram-muted,#5c645d)">省略細節，說明這段程式碼要做什麼、為什麼需</text>
-    <text x="74.0" y="226.0" font-size="15" fill="var(--diagram-muted,#5c645d)">要它，例如“把當前鍵雜湊追加到一個尚未發</text>
-    <text x="74.0" y="248.0" font-size="15" fill="var(--diagram-muted,#5c645d)">送的 RPC”</text>
-    <rect x="22.0" y="268.0" width="376.0" height="88.0" rx="9" fill="var(--diagram-danger-soft,#ead9dc)" />
-    <circle cx="50.0" cy="294.0" r="14" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" stroke-width="2" /><g transform="translate(42.0,286.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></g>
-    <text x="74.0" y="299.0" font-size="18" font-weight="600">與程式碼同一層級：重複程式碼</text>
-    <text x="74.0" y="324.0" font-size="15" fill="var(--diagram-muted,#5c645d)">讀者從旁邊程式碼就能看出的資訊，例如“新增</text>
-    <text x="74.0" y="346.0" font-size="15" fill="var(--diagram-muted,#5c645d)">水平捲軸”，或者只是重複方法名裡的詞</text>
-    <rect x="22.0" y="366.0" width="376.0" height="110.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
-    <circle cx="50.0" cy="392.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,384.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3" /><path d="M3 7V5a2 2 0 0 1 2-2h2" /><path d="M17 3h2a2 2 0 0 1 2 2v2" /><path d="M21 17v2a2 2 0 0 1-2 2h-2" /><path d="M7 21H5a2 2 0 0 1-2-2v-2" /></g>
-    <text x="74.0" y="397.0" font-size="18" font-weight="600">更低層級：提高精確度</text>
-    <text x="74.0" y="422.0" font-size="15" fill="var(--diagram-muted,#5c645d)">補上宣告沒說的細節：單位是畫素還是字元、</text>
-    <text x="74.0" y="444.0" font-size="15" fill="var(--diagram-muted,#5c645d)">範圍是否包含邊界、空值代表什麼、誰負責釋</text>
-    <text x="74.0" y="466.0" font-size="15" fill="var(--diagram-muted,#5c645d)">放資源</text>
-    <text x="22.0" y="498.0" font-size="13" fill="var(--diagram-muted,#5c645d)">介面註解描述抽象，與實作註解分開；跨模組決策放在開發人員</text>
-    <text x="22.0" y="518.0" font-size="13" fill="var(--diagram-muted,#5c645d)">自然會看到的位置，例如狀態列舉旁或 designNotes 檔案</text>
-    <rect x="22.0" y="544.0" width="376.0" height="90.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
-    <text x="36.0" y="565.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
-    <text x="36.0" y="591.0" font-size="17" font-weight="600">描述從程式碼中不易看出的資訊：要麼比程式碼更</text>
-    <text x="36.0" y="617.0" font-size="17" font-weight="600">詳細以求精確，要麼比程式碼更抽象以幫助理解</text>
+    <text x="22.0" y="82.0" font-size="16" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">從上到下</text>
+    <rect x="22.0" y="98.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <circle cx="50.0" cy="124.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,116.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></g>
+    <text x="74.0" y="129.0" font-size="18" font-weight="600">比程式碼更抽象</text>
+    <text x="74.0" y="154.0" font-size="15" fill="var(--diagram-muted,#5c645d)">省略細節，說明程式碼要做什麼和為什麼</text>
+    <rect x="22.0" y="174.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-danger-soft,#ead9dc)" />
+    <circle cx="50.0" cy="200.0" r="14" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" stroke-width="2" /><g transform="translate(42.0,192.0) scale(0.667)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></g>
+    <text x="74.0" y="205.0" font-size="18" font-weight="600">與程式碼同一層級</text>
+    <text x="74.0" y="230.0" font-size="15" fill="var(--diagram-muted,#5c645d)">只是重複程式碼，例如“新增水平捲軸”</text>
+    <rect x="22.0" y="250.0" width="376.0" height="66.0" rx="9" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <circle cx="50.0" cy="276.0" r="14" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" /><g transform="translate(42.0,268.0) scale(0.667)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3" /><path d="M3 7V5a2 2 0 0 1 2-2h2" /><path d="M17 3h2a2 2 0 0 1 2 2v2" /><path d="M21 17v2a2 2 0 0 1-2 2h-2" /><path d="M7 21H5a2 2 0 0 1-2-2v-2" /></g>
+    <text x="74.0" y="281.0" font-size="18" font-weight="600">比程式碼更詳細</text>
+    <text x="74.0" y="306.0" font-size="15" fill="var(--diagram-muted,#5c645d)">提高精確度，補上單位、邊界、空值等細節</text>
+    <rect x="22.0" y="334.0" width="376.0" height="90.0" rx="10" fill="var(--diagram-primary-soft,#d6e5dc)" />
+    <text x="36.0" y="355.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">一句話</text>
+    <text x="36.0" y="381.0" font-size="17" font-weight="600">描述從程式碼中不易看出的資訊：比程式碼</text>
+    <text x="36.0" y="407.0" font-size="17" font-weight="600">更詳細以求精確，或更抽象以幫助理解</text>
   </g>
 </svg>

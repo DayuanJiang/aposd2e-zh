@@ -1,50 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 1066" role="img" aria-labelledby="ch13-storym-title ch13-storym-desc">
   <title id="ch13-storym-title">从只会重复代码的注释，到描述代码里看不出的信息</title>
-  <desc id="ch13-storym-desc">本章回顾。从只会重复代码的注释，到描述代码里看不出的信息。起点：许多注释在重复代码，读者凭旁边的代码就能写出来。例如 // Add a horizontal scroll bar，或者接口注释只是把方法名和参数名拆成单词再拼成句子。这样的注释没有让代码更易理解，也让一些人认定注释毫无价值。；原则：有用的注释和代码的详细程度不同：更低层级求精确，更高层级助理解。变量注释补上单位、边界、空值含义、不变量等细节。方法内部的注释省略细节，说明这段代码要做什么、为什么需要它，例如“把当前键哈希追加到一个尚未发送的 RPC”。；接口：接口注释定义抽象，与实现注释分开。IndexLookup 类的原注释写了用到哪些 RPC 和私有配置参数，使用者并不需要知道；改写后说明每个实例代表一次范围查询和怎样调用它。接口注释若必须描述实现，这个方法就是浅的。；位置：实现注释说做什么和为什么；跨模块决策放在开发人员自然会看到的地方。每个主要代码块前，用一句话说明它做什么，修复缺陷的代码要说明为什么。跨越多个类的决策，放在状态枚举末尾这类必然会被看到的位置，或集中到 designNotes 文件。。这一章最想强调的：注释应该描述从代码中不易看出的信息；使用者只读声明和注释就能理解模块的抽象 哪些信息不易看出，要站在第一次读这段代码的人的角度判断；审查者说难懂，那就是难懂</desc>
+  <desc id="ch13-storym-desc">本章回顾。从只会重复代码的注释，到描述代码里看不出的信息。起点：许多注释在重复代码，读者凭旁边的代码就能写出来。例如 // Add a horizontal scroll bar，或者接口注释只是把方法名和参数名拆成单词再拼成句子。这样的注释没有让代码更易理解，也让一些人认定注释毫无价值。；原则：有用的注释和代码的详细程度不同：更低层级求精确，更高层级助理解。变量注释补上单位、边界、空值含义、不变量等细节。更高层级的注释省略细节，说明这段代码要做什么、为什么需要它，例如“把当前键哈希追加到一个尚未发送的 RPC”。；接口：接口注释定义抽象，与实现注释分开。IndexLookup 类的原注释写了用到哪些 RPC 和私有配置参数，使用者不需要知道；改写后说明每个实例代表一次范围查询及怎样调用。接口注释若必须描述实现，这个类或方法就是浅的。；位置：实现注释说做什么和为什么；跨模块决策放在开发人员自然会看到的地方。较长方法的每个主要代码块前说明它做什么；修复缺陷的代码若目的不明显，要说明为什么。跨多个类的决策放在状态枚举末尾这类必然会看到的位置，或集中到 designNotes 文件。。这一章最想强调的：注释应该描述从代码中不易看出的信息；使用者只读声明和注释就能理解模块的抽象 哪些信息不易看出，要站在第一次读这段代码的人的角度判断；审查者说难懂，那就是难懂</desc>
   <rect width="420" height="1066" fill="var(--diagram-bg,#e7eae6)"/>
   <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="var(--diagram-ink,#303630)">
     <text x="22.0" y="30.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">本章回顾</text>
     <path d="M40 168 V 679" fill="none" stroke="var(--diagram-line,#aebbad)" stroke-width="2"/>
-    <text x="22.0" y="62.0" font-size="21" font-weight="600">从只会重复代码的注释，到描述代码里</text>
-    <text x="22.0" y="90.0" font-size="21" font-weight="600">看不出的信息</text>
+    <text x="22.0" y="62.0" font-size="21" font-weight="600">从只会重复代码的注释，到描述代</text>
+    <text x="22.0" y="90.0" font-size="21" font-weight="600">码里看不出的信息</text>
     <circle cx="40.0" cy="146.0" r="18" fill="var(--diagram-danger-soft,#ead9dc)" stroke="var(--diagram-danger,#a03946)" stroke-width="2"/><g transform="translate(31.0,137.0) scale(0.750)" fill="none" stroke="var(--diagram-danger,#a03946)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></g>
     <text x="76.0" y="134.0" font-size="12" font-weight="600" fill="var(--diagram-danger,#a03946)">起点</text>
-    <text x="76.0" y="158.0" font-size="18" font-weight="600">许多注释在重复代码，读者凭旁边的代码</text>
-    <text x="76.0" y="182.0" font-size="18" font-weight="600">就能写出来</text>
-    <text x="76.0" y="208.0" font-size="15">例如 // Add a horizontal scroll bar，或者接</text>
-    <text x="76.0" y="231.0" font-size="15">口注释只是把方法名和参数名拆成单词再拼成句</text>
-    <text x="76.0" y="254.0" font-size="15">子。这样的注释没有让代码更易理解，也让一些</text>
-    <text x="76.0" y="277.0" font-size="15">人认定注释毫无价值。</text>
+    <text x="76.0" y="158.0" font-size="18" font-weight="600">许多注释在重复代码，读者凭旁边的</text>
+    <text x="76.0" y="182.0" font-size="18" font-weight="600">代码就能写出来</text>
+    <text x="76.0" y="208.0" font-size="15">例如 // Add a horizontal scroll bar，或者</text>
+    <text x="76.0" y="231.0" font-size="15">接口注释只是把方法名和参数名拆成单词再拼成</text>
+    <text x="76.0" y="254.0" font-size="15">句子。这样的注释没有让代码更易理解，也让</text>
+    <text x="76.0" y="277.0" font-size="15">一些人认定注释毫无价值。</text>
     <circle cx="40.0" cy="339.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,330.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></g>
     <text x="76.0" y="327.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">原则</text>
-    <text x="76.0" y="351.0" font-size="18" font-weight="600">有用的注释和代码的详细程度不同：更低</text>
-    <text x="76.0" y="375.0" font-size="18" font-weight="600">层级求精确，更高层级助理解</text>
-    <text x="76.0" y="401.0" font-size="15">变量注释补上单位、边界、空值含义、不变量等</text>
-    <text x="76.0" y="424.0" font-size="15">细节。方法内部的注释省略细节，说明这段代码</text>
-    <text x="76.0" y="447.0" font-size="15">要做什么、为什么需要它，例如“把当前键哈希</text>
-    <text x="76.0" y="470.0" font-size="15">追加到一个尚未发送的 RPC”。</text>
+    <text x="76.0" y="351.0" font-size="18" font-weight="600">有用的注释和代码的详细程度不同：</text>
+    <text x="76.0" y="375.0" font-size="18" font-weight="600">更低层级求精确，更高层级助理解</text>
+    <text x="76.0" y="401.0" font-size="15">变量注释补上单位、边界、空值含义、不变量</text>
+    <text x="76.0" y="424.0" font-size="15">等细节。更高层级的注释省略细节，说明这段代</text>
+    <text x="76.0" y="447.0" font-size="15">码要做什么、为什么需要它，例如“把当前键哈</text>
+    <text x="76.0" y="470.0" font-size="15">希追加到一个尚未发送的 RPC”。</text>
     <circle cx="40.0" cy="532.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,523.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></g>
     <text x="76.0" y="520.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">接口</text>
     <text x="76.0" y="544.0" font-size="18" font-weight="600">接口注释定义抽象，与实现注释分开</text>
     <text x="76.0" y="570.0" font-size="15">IndexLookup 类的原注释写了用到哪些 RPC 和</text>
-    <text x="76.0" y="593.0" font-size="15">私有配置参数，使用者并不需要知道；改写后说</text>
-    <text x="76.0" y="616.0" font-size="15">明每个实例代表一次范围查询和怎样调用它。接</text>
-    <text x="76.0" y="639.0" font-size="15">口注释若必须描述实现，这个方法就是浅的。</text>
+    <text x="76.0" y="593.0" font-size="15">私有配置参数，使用者不需要知道；改写后说明</text>
+    <text x="76.0" y="616.0" font-size="15">每个实例代表一次范围查询及怎样调用。接口注</text>
+    <text x="76.0" y="639.0" font-size="15">释若必须描述实现，这个类或方法就是浅的。</text>
     <circle cx="40.0" cy="701.0" r="18" fill="var(--diagram-primary-soft,#d6e5dc)" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2"/><g transform="translate(31.0,692.0) scale(0.750)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13v8"/><path d="M12 3v3"/><path d="M18 6a2 2 0 0 1 1.387.56l2.307 2.22a1 1 0 0 1 0 1.44l-2.307 2.22A2 2 0 0 1 18 13H6a2 2 0 0 1-1.387-.56l-2.306-2.22a1 1 0 0 1 0-1.44l2.306-2.22A2 2 0 0 1 6 6z"/></g>
     <text x="76.0" y="689.0" font-size="12" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">位置</text>
-    <text x="76.0" y="713.0" font-size="18" font-weight="600">实现注释说做什么和为什么；跨模块决策</text>
-    <text x="76.0" y="737.0" font-size="18" font-weight="600">放在开发人员自然会看到的地方</text>
-    <text x="76.0" y="763.0" font-size="15">每个主要代码块前，用一句话说明它做什么，修</text>
-    <text x="76.0" y="786.0" font-size="15">复缺陷的代码要说明为什么。跨越多个类的决策，</text>
-    <text x="76.0" y="809.0" font-size="15">放在状态枚举末尾这类必然会被看到的位置，或</text>
-    <text x="76.0" y="832.0" font-size="15">集中到 designNotes 文件。</text>
+    <text x="76.0" y="713.0" font-size="18" font-weight="600">实现注释说做什么和为什么；跨模块决</text>
+    <text x="76.0" y="737.0" font-size="18" font-weight="600">策放在开发人员自然会看到的地方</text>
+    <text x="76.0" y="763.0" font-size="15">较长方法的每个主要代码块前说明它做什么；</text>
+    <text x="76.0" y="786.0" font-size="15">修复缺陷的代码若目的不明显，要说明为什</text>
+    <text x="76.0" y="809.0" font-size="15">么。跨多个类的决策放在状态枚举末尾这类必然</text>
+    <text x="76.0" y="832.0" font-size="15">会看到的位置，或集中到 designNotes 文件。</text>
     <rect x="22.0" y="870.0" width="376.0" height="168.0" rx="12" fill="var(--diagram-primary-soft,#d6e5dc)"/>
     <g transform="translate(40.0,890.0) scale(1.000)" fill="none" stroke="var(--diagram-primary,#0b6f5d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g>
     <text x="78.0" y="898.0" font-size="13" font-weight="600" fill="var(--diagram-primary,#0b6f5d)">这一章最想强调的</text>
-    <text x="78.0" y="924.0" font-size="18" font-weight="600">注释应该描述从代码中不易看出的信</text>
-    <text x="78.0" y="948.0" font-size="18" font-weight="600">息；使用者只读声明和注释就能理解模</text>
-    <text x="78.0" y="972.0" font-size="18" font-weight="600">块的抽象</text>
-    <text x="78.0" y="996.0" font-size="14" fill="var(--diagram-muted,#5c645d)">哪些信息不易看出，要站在第一次读这段代码的</text>
-    <text x="78.0" y="1017.0" font-size="14" fill="var(--diagram-muted,#5c645d)">人的角度判断；审查者说难懂，那就是难懂</text>
+    <text x="78.0" y="924.0" font-size="18" font-weight="600">注释应该描述从代码中不易看出的</text>
+    <text x="78.0" y="948.0" font-size="18" font-weight="600">信息；使用者只读声明和注释就能理</text>
+    <text x="78.0" y="972.0" font-size="18" font-weight="600">解模块的抽象</text>
+    <text x="78.0" y="996.0" font-size="14" fill="var(--diagram-muted,#5c645d)">哪些信息不易看出，要站在第一次读这段代码</text>
+    <text x="78.0" y="1017.0" font-size="14" fill="var(--diagram-muted,#5c645d)">的人的角度判断；审查者说难懂，那就是难懂</text>
   </g>
 </svg>
